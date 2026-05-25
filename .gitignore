@@ -1,0 +1,9 @@
+.omo/
+.opencode/
+.sisyphus/
+opencode-workspace.code-workspace
+graphify-out/cost.json
+graphify-out/graph.html
+graphify-out/GRAPH_REPORT.md
+graphify-out/graph.json
+graphify-out/.graphify_detect.json
