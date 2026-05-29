@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>REFRIGER CHARGING MACHINE — PLC Standard Program Design Report</title>
+<style>
+  @page { size: A3 portrait; margin: 5mm; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Malgun Gothic', 'Segoe UI', sans-serif;
+    font-size: 7.2pt; line-height: 1.22; color: #1a1a1a; background: #fff;
+    width: 297mm; min-height: 420mm; padding: 4mm 5mm;
+  }
+  h1 { font-size: 10pt; text-align: center; margin-bottom: 1mm; letter-spacing: 0.5pt; }
+  h2 { font-size: 7.5pt; border-bottom: 1.5px solid #333; margin: 2mm 0 0.8mm; padding-bottom: 0.2mm; }
+  h3 { font-size: 6.8pt; margin: 1mm 0 0.3mm; }
+  .sub { text-align: center; font-size: 6pt; color: #666; margin-bottom: 2mm; }
+  .g2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5mm; }
+  .g3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5mm; }
+  .card { border: 0.5px solid #ccc; border-radius: 2px; padding: 1.2mm; background: #fafafa; }
+  table { width: 100%; border-collapse: collapse; font-size: 5.5pt; }
+  th, td { border: 0.3px solid #bbb; padding: 0.5mm 0.7mm; text-align: left; vertical-align: top; }
+  th { background: #e8e8e8; font-weight: 600; white-space: nowrap; }
+  td { background: #fff; }
+  .tag { display: inline-block; padding: 0.2mm 0.8mm; border-radius: 1.5px; font-size: 5pt; font-weight: 600; }
+  .tag-s { background: #d4edda; color: #155724; }
+  .tag-a { background: #fff3cd; color: #856404; }
+  .tag-e { background: #cce5ff; color: #004085; }
+  .tag-c { background: #f8d7da; color: #721c24; }
+  .tag-ok { background: #d4edda; color: #155724; }
+  .tag-ng { background: #f8d7da; color: #721c24; }
+  .t0 { background: #e2e3e5; color: #333; }
+  .t1 { background: #d1ecf1; color: #0c5460; }
+  .t2 { background: #fff3cd; color: #856404; }
+  .t3 { background: #fce4d6; color: #c43d00; }
+  .sf { display: flex; align-items: center; justify-content: center; gap: 0; font-size: 4.8pt; font-weight: 600; margin: 0.3mm 0; flex-wrap: wrap; }
+  .ss { border: 1px solid #555; padding: 0.5mm 0.7mm; text-align: center; border-radius: 2px; min-width: 13mm; font-size: 4.8pt; }
+  .ss.idle { background: #e8f5e9; border-color: #4caf50; }
+  .ss.vac  { background: #e3f2fd; border-color: #2196f3; }
+  .ss.inj  { background: #fff3e0; border-color: #ff9800; }
+  .ss.comp { background: #e8f5e9; border-color: #4caf50; }
+  .ss.oil  { background: #fce4ec; border-color: #e91e63; }
+  .sa { font-size: 6pt; padding: 0 0.2mm; color: #666; }
+  .sc { font-size: 4.5pt; color: #888; text-align: center; margin-top: 0.1mm; }
+  .ab { border: 1px dashed #dc3545; padding: 1mm; background: #fff5f5; border-radius: 2px; }
+  .nb { font-size: 5pt; background: #fffbea; border: 0.5px solid #ffc107; padding: 0.8mm; margin-top: 0.8mm; border-radius: 2px; }
+</style>
+</head>
+<body>
+
+<h1>REFRIGER CHARGING MACHINE — PLC Standard Program Design</h1>
+<div class="sub">Target: Mitsubishi Q03UDV | 1L/1G ~ 2L/4G | Gun Type 0/1/2/3 | FAST+NORMAL 동시 Open | Line별 Parameter</div>
+
+<!-- ROW 1: CONFIG + GUN TYPE + LINE -->
+<div class="g3" style="margin-bottom:1.5mm">
+  <div class="card">
+    <h3>System Config (D330~D339)</h3>
+    <table>
+      <tr><th>Config</th><th>Line</th><th>Gun/Line</th><th>Total</th></tr>
+      <tr><td>1L/1G</td><td>1</td><td>1</td><td>1</td></tr>
+      <tr><td>1L/2G</td><td>1</td><td>2</td><td>2</td></tr>
+      <tr><td>2L/2G</td><td>2</td><td>1</td><td>2</td></tr>
+      <tr><td>2L/4G</td><td>2</td><td>2</td><td>4</td></tr>
+    </table>
+    <div style="font-size:5pt;margin-top:0.3mm">D330=LineCnt(1/2) D332=Gun/Line(1/2) D334=TotalGun(RO) <b>CJ skip L1 if D330=1</b></div>
+  </div>
+  <div class="card">
+    <h3>Gun Type (D62/D76/D90/D104)</h3>
+    <table>
+      <tr><th>T</th><th>Sol</th><th>Name</th><th>Sequence</th></tr>
+      <tr><td><span class="tag t0">0</span></td><td>1</td><td>1-Sol Refrig</td><td>RF_Sol ON→목표→OFF</td></tr>
+      <tr><td><span class="tag t1">1</span></td><td>2</td><td>RF FAST+NORMAL</td><td>FAST+NORMAL 동시ON→FAST OFF→NORMAL 완료</td></tr>
+      <tr><td><span class="tag t2">2</span></td><td>2</td><td>Oil 1+RF 1</td><td>Oil_Sol→RF_Sol 순차</td></tr>
+      <tr><td><span class="tag t3">3</span></td><td>4</td><td>Oil+RF FAST+NORMAL</td><td>Oil F+N→RF F+N (각 FAST OFF)</td></tr>
+    </table>
+    <div style="font-size:5pt;color:#c00;margin-top:0.2mm"><b>Same Line: 1 Gun active</b> | <b>FAST+NORMAL 동시 Open → FAST 먼저 Close</b></div>
+  </div>
+  <div class="card">
+    <h3>Line Independence</h3>
+    <table>
+      <tr><th></th><th>Line 0</th><th>Line 1</th></tr>
+      <tr><td>Parameter</td><td>D0~D29</td><td>D30~D59</td></tr>
+      <tr><td>Model#</td><td>D0</td><td>D30</td></tr>
+      <tr><td>Step M</td><td>M10~M1A</td><td>M20~M2A</td></tr>
+      <tr><td>Interlock M</td><td>M130~M139</td><td>M140~M149</td></tr>
+      <tr><td>Vac/Inj M</td><td>M150~M169</td><td>M170~M189</td></tr>
+      <tr><td>START/STOP</td><td>M59/M60</td><td>M61/M62</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- ROW 2: PROCESS TABLE -->
+<h2>1. PROCESS SPECIFICATION</h2>
+
+<table>
+  <tr><th style="width:11mm">Process</th><th style="width:30mm">Solenoid</th><th style="width:38mm">Finish Condition</th><th style="width:32mm">Alarm</th><th style="width:15mm">Timer</th><th>Note</th></tr>
+
+  <tr>
+    <td><b>GUN VACUUM</b></td>
+    <td>
+      <b>LINE VACUUM SOL</b> (Y11/Y21) ON<br>
+      LINE STEM SOL OFF
+    </td>
+    <td>
+      Time Over → <span class="tag tag-ok">FINISH</span><br>
+      (T0 ≥ D2 or D32)
+    </td>
+    <td><span class="tag tag-ok">NO ALARM</span></td>
+    <td>T0</td>
+    <td>Gun Coupler Sensor 감시</td>
+  </tr>
+  <tr>
+    <td><b>UNIT VACUUM</b></td>
+    <td>
+      <b>LINE VACUUM SOL</b> ON<br>
+      <b>LINE STEM SOL</b> (Y12/Y22) ON
+    </td>
+    <td>
+      Time Over AND Vac ≤ Set → <span class="tag tag-ok">FINISH</span><br>
+      (T1 ≥ D4/D34, Vac ≤ D22/D50)
+    </td>
+    <td>
+      Vac > Setting → <span class="tag tag-ng">NG ALARM</span><br>
+      <span class="tag tag-c">OPERATION STOP</span>
+    </td>
+    <td>T1</td>
+    <td>Gun Coupler Sensor 감시</td>
+  </tr>
+  <tr>
+    <td><b>VACUUM CHECK</b></td>
+    <td>
+      LINE VACUUM SOL <b>OFF</b><br>
+      LINE STEM SOL <b>OFF</b>
+    </td>
+    <td>
+      Time Over AND Vac ≤ Set → <span class="tag tag-ok">FINISH</span><br>
+      (T2 ≥ D6/D36, Vac ≤ D24/D52)
+    </td>
+    <td>
+      Vac > Setting → <span class="tag tag-ng">NG ALARM</span><br>
+      <span class="tag tag-c">OPERATION STOP</span>
+    </td>
+    <td>T2</td>
+    <td>Gun Coupler Sensor 감시</td>
+  </tr>
+  <tr>
+    <td><b>REFRIGER CHARGING</b></td>
+    <td>
+      <b>FAST SOL + NORMAL SOL 동시 ON</b><br>
+      FAST 중단량 → FAST SOL OFF<br>
+      목표량 → NORMAL SOL OFF
+    </td>
+    <td>
+      적산 ≥ 목표 − Tolerance → <span class="tag tag-ok">FINISH</span><br>
+      (적산 ≥ Target − D26/D54)
+    </td>
+    <td>
+      |실주입 − 목표| > Tolerance → <span class="tag tag-ng">NG ALARM</span><br>
+      <span class="tag tag-c">OPERATION STOP</span>
+    </td>
+    <td>T4</td>
+    <td>Gun Coupler Sensor 감시<br>Oil도 동일 패턴 (T5, D28/D56)</td>
+  </tr>
+  <tr>
+    <td><b>EXHAUST (DEAD ZONE)</b></td>
+    <td>
+      <b>EXHAUST SOL</b> (Y1B/Y2B) ON
+    </td>
+    <td>
+      Time Over → <span class="tag tag-ok">FINISH</span><br>
+      (T3 ≥ D8/D38)
+    </td>
+    <td><span class="tag tag-ok">NO ALARM</span></td>
+    <td>T3</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><b>GUN COUPLER</b><br>(전 공정)</td>
+    <td colspan="2">
+      <b>X04/X0A (L0), X14/X1A (L1)</b><br>
+      OFF 감지 시 → <span class="tag tag-c">IMMEDIATE ALARM</span>
+    </td>
+    <td>
+      <span class="tag tag-ng">NG ALARM</span><br>
+      <span class="tag tag-c">OPERATION STOP<br>INTERLOCK</span>
+    </td>
+    <td>—</td>
+    <td>All Solenoid OFF<br>IDLE 복귀</td>
+  </tr>
+</table>
+
+<!-- ROW 3: START + ALARM + END -->
+<div class="g2" style="margin-top:1.5mm">
+  <div>
+    <h3>START CONDITION (per Line)</h3>
+    <table>
+      <tr><td>IDLE 상태 (L0:M10, L1:M20)</td><td>AND NOT EMG Stop (M90)</td></tr>
+      <tr><td>AND NOT Any Alarm Latch</td><td>AND Safety OK (M131/M141)</td></tr>
+      <tr><td>AND Gun Coupler ON (M134/M144)</td><td>AND Pressure Normal (M133/M143)</td></tr>
+      <tr><td>AND Refrig Supply OK (M135/M145)</td><td>AND Interlock OK or NOT USE</td></tr>
+      <tr><td colspan="2" style="background:#fffbea"><span class="tag tag-s">START</span> → PC Write→Working Copy (BMOV) → PRECHECK</td></tr>
+    </table>
+  </div>
+  <div>
+    <h3>END CONDITION (per Line)</h3>
+    <table>
+      <tr><td>EXHAUST Time Over (T3 ≥ D8/D38)</td><td>→ COMPLETE (M18/M28)</td></tr>
+      <tr><td>주입횟수 +1 (D118)</td><td>사용량 적산 (D310~D311)</td></tr>
+      <tr><td>CycleDone SET (M38/M48)</td><td>PC Write Area 0 Clear (FMOV K0)</td></tr>
+      <tr><td colspan="2" style="background:#e8f5e9"><span class="tag tag-e">END</span> → Auto: IDLE 복귀 / Manual: START 대기</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- ROW 4: SEQUENCE FLOW -->
+<h2>2. MAIN SEQUENCE FLOW (per Line)</h2>
+
+<div class="sf" style="flex-wrap:wrap;margin-bottom:0.5mm">
+  <div><div class="ss idle">IDLE<br><small>M10/M20</small></div><div class="sc"><span class="tag tag-s">START</span></div></div>
+  <div class="sa">→</div>
+  <div><div class="ss vac">PRECHECK<br><small>M11/M21</small></div></div>
+  <div class="sa">→</div>
+  <div><div class="ss vac">GUN VAC<br><small>M12/M22</small></div><div class="sc">T0 • <span class="tag tag-ok">OK</span></div></div>
+  <div class="sa">→</div>
+  <div><div class="ss vac">UNIT VAC<br><small>M13/M23</small></div><div class="sc">T1 • <span class="tag tag-ng">NG</span> if Vac>Set</div></div>
+  <div class="sa">→</div>
+  <div><div class="ss vac">VAC CHECK<br><small>M14/M24</small></div><div class="sc">T2 • <span class="tag tag-ng">NG</span> if Vac>Set</div></div>
+</div>
+
+<div style="text-align:center;font-size:5pt;color:#888">▼ Gun Type Branch ▼</div>
+
+<div style="border:0.5px dashed #999;padding:0.8mm;margin-bottom:0.8mm;border-radius:2px">
+  <span class="tag t0">T0</span><span class="tag t1">T1</span> REFRIGER CHARGING
+  <div class="sf">
+    <div><div class="ss inj">FAST INJ<div style="font-size:4pt">F+N ON</div><small>M15/M25</small></div><div class="sc">T4 • 적산≥Tgt−D10/D40<br>→ FAST OFF</div></div>
+    <div class="sa">→</div>
+    <div><div class="ss inj">NORMAL INJ<div style="font-size:4pt">N only</div><small>M16/M26</small></div><div class="sc">적산≥Tgt−D26/D54<br>→ FINISH<br><span class="tag tag-ng">NG</span> if |실−목|>Tol</div></div>
+    <div class="sa">→</div>
+    <div><div class="ss vac">EXHAUST<br><small>M17/M27</small></div><div class="sc">T3 • <span class="tag tag-ok">OK</span></div></div>
+    <div class="sa">→</div>
+    <div><div class="ss comp">COMPLETE<br><small>M18/M28</small></div><div class="sc"><span class="tag tag-e">END</span></div></div>
+  </div>
+</div>
+
+<div style="border:0.5px dashed #999;padding:0.8mm;margin-bottom:0.8mm;border-radius:2px">
+  <span class="tag t2">T2</span> Oil 1-Sol + Refrig 1-Sol &nbsp;|&nbsp; <span class="tag t3">T3</span> Oil+Refrig FAST+NORMAL (4-Sol)
+  <div class="sf">
+    <div><div class="ss oil">OIL FAST<br><small>M19/M29</small></div><div class="sc">T5 • T3:F+N ON<br>→ FAST OFF</div></div>
+    <div class="sa">→</div>
+    <div><div class="ss oil">OIL NORM<br><small>M1A/M2A</small></div><div class="sc">적산≥OilVol−D28/D56<br><span class="tag tag-ng">NG</span> if |실−목|>Tol</div></div>
+    <div class="sa">→</div>
+    <div><div class="ss inj">RF FAST<br><small>M15/M25</small></div><div class="sc">T4 • F+N ON<br>→ FAST OFF</div></div>
+    <div class="sa">→</div>
+    <div><div class="ss inj">RF NORM<br><small>M16/M26</small></div><div class="sc">적산≥Tgt−D26/D54<br><span class="tag tag-ng">NG</span> if |실−목|>Tol</div></div>
+    <div class="sa">→</div>
+    <div><div class="ss vac">EXHAUST<br><small>M17/M27</small></div></div>
+    <div class="sa">→</div>
+    <div><div class="ss comp">COMP<br><small>M18/M28</small></div></div>
+  </div>
+</div>
+
+<div class="nb">
+  <b>GUN COUPLER SENSOR</b>: 전 공정에서 X04/X0A(L0) 또는 X14/X1A(L1) OFF 시 <span class="tag tag-c">즉시 ALARM + OPERATION STOP</span>. ALL Solenoid OFF, IDLE 복귀.
+  <b>±Tolerance</b>: 실주입량과 목표량 차이가 D26(Refrig) / D28(Oil) 초과 시 <span class="tag tag-ng">NG ALARM / STOP</span>.
+</div>
+
+<!-- ROW 5: DEVICE MAP -->
+<h2>3. DEVICE MAP</h2>
+
+<div class="g2" style="gap:1mm">
+  <div>
+    <h3>M (Internal Relay)</h3>
+    <table>
+      <tr><th>Range</th><th>Group</th><th>Key</th></tr>
+      <tr><td>M0~M9</td><td>System</td><td>M0=ON, M2=InitDone</td></tr>
+      <tr><td>M10~M1A</td><td>Step L0</td><td>M10=Idle, M12=GunVac, M15=RF FAST, M19=Oil</td></tr>
+      <tr><td>M20~M2A</td><td>Step L1</td><td>M20=Idle, M22=GunVac, M25=RF FAST, M29=Oil</td></tr>
+      <tr><td>M30~M49</td><td>Done/Fail</td><td>L0:M30~M39, L1:M40~M49</td></tr>
+      <tr><td>M50~M84</td><td>HMI+Line</td><td>M50=Line0Sel, M59=START L0, M61=START L1</td></tr>
+      <tr><td>M90~M109</td><td>Global Alarm</td><td>M90=EMG, M91=Safety, M101=Bombe</td></tr>
+      <tr><td>M110~M129</td><td>Line Alarm</td><td>M110~M118(L0), M120~M128(L1)</td></tr>
+      <tr><td>M130~M149</td><td>Interlock</td><td>M131=SafetyOK, M134=GunCoupler L0, M144=GunCoupler L1</td></tr>
+      <tr><td>M150~M169</td><td>Vac/Inj L0</td><td>M150=LINE VAC SOL, M151=LINE STEM SOL, M152=EXHAUST SOL, M154=RF FAST, M155=RF NORMAL, M156=Oil FAST, M157=Oil NORMAL</td></tr>
+      <tr><td>M170~M189</td><td>Vac/Inj L1</td><td>M170=LINE VAC SOL, M171=LINE STEM SOL, M172=EXHAUST SOL</td></tr>
+      <tr><td>M190~M199</td><td>Comm</td><td>M193=L0 WorkValid, M194=L1 WorkValid</td></tr>
+    </table>
+  </div>
+  <div>
+    <h3>D (Data Register / Even)</h3>
+    <table>
+      <tr><th>Range</th><th>Group</th><th>Key</th></tr>
+      <tr><td>D0~D29</td><td>Param L0</td><td>D0=<b>L0 Model#</b>, D2=GunVacT, D4=UnitVacT, D6=VacChkT, D8=ExhT, D10=RF FAST Stop, D12=Oil FAST Stop, D18=PrsH, D22=VacSet, D24=VacChkSet, D26=RF Tol, D28=Oil Tol</td></tr>
+      <tr><td>D30~D59</td><td>Param L1</td><td>D30=<b>L1 Model#</b>, 동일 구조 (D330≥2)</td></tr>
+      <tr><td>D60~D115</td><td>User×4Gun<br>14w/Gun</td><td>D60=Base G0, D62=Type, D64=RF Vol(32), D72=Oil Vol(32)</td></tr>
+      <tr><td>D116~D149</td><td>Display</td><td>D116=Usage(32), D120=Model#, D122=GunType, D128=RF Set(32), D130=RF Act(32), D132=Oil Set(32)</td></tr>
+      <tr><td>D150~D179</td><td>Analog×2</td><td>D150=Prs L0 Raw, D160=Vac L0 EU(32), D162=Prs L1 Raw, D172=Vac L1 EU(32)</td></tr>
+      <tr><td>D180~D219</td><td>Calc×2</td><td>D180=Acc L0, D182=Pstart L0, D200=Acc L1, D202=Pstart L1</td></tr>
+      <tr><td>D220~D299</td><td>Comm×2</td><td>D220=L0 PC Wr, D240=L0 Work, D260=L1 PC Wr, D280=L1 Work</td></tr>
+      <tr><td>D310~D329</td><td>SPC</td><td>D310=Total Usage(32), D312=Total Count(32)</td></tr>
+      <tr><td>D330~D339</td><td>Config</td><td>D330=LineCnt, D332=Gun/Line, D334=TotalGun</td></tr>
+    </table>
+  </div>
+</div>
+
+<div class="g2" style="margin-top:1mm;gap:1mm">
+  <div>
+    <h3>T (Timer) / X (Input)</h3>
+    <div class="g2" style="gap:0.5mm">
+      <table>
+        <tr><th>T</th><th>용도</th><th>T</th><th>용도</th></tr>
+        <tr><td>T0</td><td>Gun Vac</td><td>T5</td><td>Oil Inj</td></tr>
+        <tr><td>T1</td><td>Unit Vac</td><td>T6</td><td>RF Timeout</td></tr>
+        <tr><td>T2</td><td>Vac Check</td><td>T7</td><td>Oil Timeout</td></tr>
+        <tr><td>T3</td><td>Exhaust</td><td>T8~11</td><td>Alarm Delay</td></tr>
+        <tr><td>T4</td><td>RF Inj</td><td>T12~15</td><td>Utility</td></tr>
+      </table>
+      <table>
+        <tr><th>L0</th><th>Signal</th><th>L1</th><th>Signal</th></tr>
+        <tr><td>X00/X01</td><td>START/STOP</td><td>X10/X11</td><td>START/STOP</td></tr>
+        <tr><td>X02</td><td>EMG Stop</td><td>X03</td><td>Safety Reset</td></tr>
+        <tr><td>X04/X0A</td><td>Gun0/Gun1</td><td>X14/X1A</td><td>Gun0/Gun1</td></tr>
+        <tr><td>X05</td><td>Vac Pump FB</td><td>X15</td><td>Vac Pump FB</td></tr>
+        <tr><td>X08</td><td>Door Guard</td><td>X18</td><td>Door Guard</td></tr>
+      </table>
+    </div>
+  </div>
+  <div>
+    <h3>Y (Output)</h3>
+    <table>
+      <tr><th>L0</th><th>Signal</th><th>L1</th><th>Signal</th></tr>
+      <tr><td>Y10</td><td>Vac Pump</td><td>Y20</td><td>Vac Pump</td></tr>
+      <tr><td>Y11</td><td><b>LINE VAC SOL</b></td><td>Y21</td><td><b>LINE VAC SOL</b></td></tr>
+      <tr><td>Y12</td><td><b>LINE STEM SOL</b></td><td>Y22</td><td><b>LINE STEM SOL</b></td></tr>
+      <tr><td>Y13~Y16</td><td>G0: RF FAST, RF NORM, Oil FAST, Oil NORM</td><td>Y23~Y26</td><td>G0: RF FAST, RF NORM, Oil FAST, Oil NORM</td></tr>
+      <tr><td>Y17~Y1A</td><td>G1: RF FAST, RF NORM, Oil FAST, Oil NORM</td><td>Y27~Y2A</td><td>G1: RF FAST, RF NORM, Oil FAST, Oil NORM</td></tr>
+      <tr><td>Y1B</td><td><b>EXHAUST SOL</b></td><td>Y2B</td><td><b>EXHAUST SOL</b></td></tr>
+      <tr><td colspan="4" style="text-align:center;background:#eee"><b>Global: Y30=Buzzer, Y31=Lamp G, Y32=Lamp R, Y33=Lamp Y, Y34=SafetyAck</b></td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- ROW 6: MODULES + DATA FLOW -->
+<h2>4. CSV MODULES &amp; DATA FLOW</h2>
+<div class="g2">
+  <div>
+    <h3>11-POU Module Responsibilities</h3>
+    <table style="font-size:5pt">
+      <tr><th>CSV</th><th>Function</th><th>Key</th></tr>
+      <tr><td>idata</td><td>Init, X→M mapping</td><td>CJ skip L1 if D330=1</td></tr>
+      <tr><td>gmes</td><td>Sequence, Mode, Cycle</td><td>Step M10~M2A, BMOV/FMOV, CJ</td></tr>
+      <tr><td>setting</td><td>Param HMI↔PLC</td><td>D0~D59(Line), D60~D115(User)</td></tr>
+      <tr><td>gunvac</td><td>Gun Vacuum</td><td>LINE VAC SOL, T0</td></tr>
+      <tr><td>unitvac</td><td>Unit Vacuum</td><td>LINE VAC+STEM SOL, T1, Vac≤Set</td></tr>
+      <tr><td>vacchec</td><td>Vac Check / Leak</td><td>All SOL OFF, T2, ΔP</td></tr>
+      <tr><td>refinj</td><td>Injection (4-Type)</td><td>FAST+NORMAL SOL, T4/T5, CJ(Type)</td></tr>
+      <tr><td>alarm</td><td>Alarm + Output</td><td>M90~M128, Y30~Y33</td></tr>
+      <tr><td>ad</td><td>Analog Scaling</td><td>D150~D179 → EU</td></tr>
+      <tr><td>485</td><td>Barcode/SCAN</td><td>D220~D299, M190~M194</td></tr>
+      <tr><td>spc</td><td>Statistics (Σ)</td><td>D310~D329, CycleDone trigger</td></tr>
+    </table>
+  </div>
+  <div>
+    <h3>Signal Flow</h3>
+    <table style="font-size:5pt">
+      <tr><th>From</th><th>→ To</th><th>Data</th></tr>
+      <tr><td>HMI Button</td><td>→ PLC M</td><td>M50~M72 (PULSE/ALT)</td></tr>
+      <tr><td>PLC D</td><td>→ HMI Display</td><td>D0~D149 (Param/Display/AD)</td></tr>
+      <tr><td>Field DI</td><td>→ PLC X</td><td>X00~X1F (PB, Sensor, GunCoupler)</td></tr>
+      <tr><td>PLC M Valves</td><td>→ Field DO</td><td>Y10~Y2B (Pump, VAC SOL, STEM SOL, FAST/NORM, EXHAUST)</td></tr>
+      <tr><td>PC</td><td>→ PLC D</td><td>D220~D239 L0 / D260~D279 L1</td></tr>
+      <tr><td>PLC</td><td>→ PC (Clear Chk)</td><td>D220,D260=0 → Next Write OK</td></tr>
+      <tr><td>AI 4~20mA</td><td>→ D150~D179</td><td>Pressure, Temp, Vacuum ×2 Line</td></tr>
+      <tr><td>HSC Pulse</td><td>→ D124~D125</td><td>Flow Meter → Charging Pulse</td></tr>
+    </table>
+  </div>
+</div>
+
+<div style="margin-top:2mm;padding-top:0.5mm;border-top:1px solid #ccc;font-size:4.5pt;color:#999;text-align:center">
+  REF Project — Standard PLC Program for Refrigerant Charging Machine | MC_26074 Independent | GX Works2 IL CSV Format | Gun Type 0/1/2/3 | FAST+NORMAL Simultaneous Open | Line별 Parameter | Gun Coupler Interlock | 2026-05-28
+</div>
+
+</body>
+</html>
