@@ -2,6 +2,7 @@
 
 > **Domain**: Factory Automation / Refrigerant Charging Equipment  
 > **Platform**: HMI + PLC (Mitsubishi)  
+> **HMI Model**: LS IXP2-1200 (1024×768, XGA)  
 > **Rule**: Hardware or HMI button is ON only when pressed (momentary).
 
 ---
@@ -133,5 +134,37 @@ POWER ON
     │
     ├── [USER SETTING SCREEN]    ← Per-gun settings
     ├── [PARAMETER SETTING SCREEN] ← System parameters
-    └── [ALARM SCREEN]           ← Alarm display & reset
+     └── [ALARM SCREEN]           ← Alarm display & reset
 ```
+
+---
+
+## 7. Explosion-Proof / Non-Explosion-Proof Configuration
+
+The REFRIGER CHARGING MACHINE supports two enclosure types per model:
+
+| Type | Enclosure | Door Limit Sensor | Behavior |
+|------|-----------|-------------------|----------|
+| 방폭 (Explosion-Proof) | Pressurized / flameproof | Left + Right DOOR | DOOR OPEN → ALARM |
+| 비방폭 (Non-Explosion-Proof) | Standard industrial | Not equipped | N/A |
+
+### 7-1. Door Limit Sensor (방폭 전용)
+
+- **Left DOOR** and **Right DOOR** each have a LIMIT SENSOR.
+- Sensor state: CLOSED (normal) / OPEN (alarm condition).
+- Detection triggers an **ALARM**, displayed on the ALARM SCREEN and logged.
+- The alarm is **non-latching** — clears when DOOR is closed + ALARM RESET.
+
+### 7-2. Current Behavior
+
+- **ACTION**: None. DOOR OPEN does NOT trigger an emergency stop or interlock.
+- The machine continues normal operation while the alarm is active.
+- This is a **design choice** to avoid unnecessary production stops during maintenance access.
+
+### 7-3. Mapping
+
+| Signal | Device | Type |
+|--------|--------|------|
+| LEFT DOOR LIMIT SENSOR | X-input (방폭 only) | NC contact |
+| RIGHT DOOR LIMIT SENSOR | X-input (방폭 only) | NC contact |
+| DOOR OPEN ALARM | M-relay latch | Alarm flag |
