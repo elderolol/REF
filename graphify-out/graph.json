@@ -442,6 +442,1545 @@
   },
   "nodes": [
     {
+      "label": "AGENTS.md",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L1",
+      "id": "agents_md",
+      "community": 28,
+      "norm_label": "agents.md"
+    },
+    {
+      "label": "Communication",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L1",
+      "id": "ref_agents_communication",
+      "community": 28,
+      "norm_label": "communication"
+    },
+    {
+      "label": "graphify",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L6",
+      "id": "ref_agents_graphify",
+      "community": 28,
+      "norm_label": "graphify"
+    },
+    {
+      "label": "GX_WORKS2_IL_Spec.md",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L1",
+      "id": "notes_gx_works2_il_spec_md",
+      "community": 9,
+      "norm_label": "gx_works2_il_spec.md"
+    },
+    {
+      "label": "GX-Works2 Instruction List (IL) CSV Export \u2014 Strict Format Specification",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L1",
+      "id": "notes_gx_works2_il_spec_gx_works2_instruction_list_il_csv_export_strict_format_specification",
+      "community": 9,
+      "norm_label": "gx-works2 instruction list (il) csv export \u2014 strict format specification"
+    },
+    {
+      "label": "1. File Encoding and BOM",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L7",
+      "id": "notes_gx_works2_il_spec_1_file_encoding_and_bom",
+      "community": 9,
+      "norm_label": "1. file encoding and bom"
+    },
+    {
+      "label": "2. Overall File Structure (order is fixed, NO blank rows)",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L20",
+      "id": "notes_gx_works2_il_spec_2_overall_file_structure_order_is_fixed_no_blank_rows",
+      "community": 9,
+      "norm_label": "2. overall file structure (order is fixed, no blank rows)"
+    },
+    {
+      "label": "code:block1 ([Row 1]   Program name (title)        \u2190 see \u00a73-1)",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L22",
+      "id": "notes_gx_works2_il_spec_codeblock_1",
+      "community": 9,
+      "norm_label": "code:block1 ([row 1]   program name (title)        \u2190 see \u00a73-1)"
+    },
+    {
+      "label": "3. Detailed Rules for Each Row",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L36",
+      "id": "notes_gx_works2_il_spec_3_detailed_rules_for_each_row",
+      "community": 9,
+      "norm_label": "3. detailed rules for each row"
+    },
+    {
+      "label": "3-1. Row 1 \u2014 Program Name (title) record",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L38",
+      "id": "notes_gx_works2_il_spec_3_1_row_1_program_name_title_record",
+      "community": 9,
+      "norm_label": "3-1. row 1 \u2014 program name (title) record"
+    },
+    {
+      "label": "3-2. Row 2 \u2014 PLC Information record",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L53",
+      "id": "notes_gx_works2_il_spec_3_2_row_2_plc_information_record",
+      "community": 9,
+      "norm_label": "3-2. row 2 \u2014 plc information record"
+    },
+    {
+      "label": "code:block2 (\"PLC Information:<TAB>\"\"QCPU (Q mode) Q03UDV\"\"\")",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L58",
+      "id": "notes_gx_works2_il_spec_codeblock_2",
+      "community": 9,
+      "norm_label": "code:block2 (\"plc information:<tab>\"\"qcpu (q mode) q03udv\"\"\")"
+    },
+    {
+      "label": "3-3. Row 3 \u2014 Column header record (exactly 7 fields)",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L73",
+      "id": "notes_gx_works2_il_spec_3_3_row_3_column_header_record_exactly_7_fields",
+      "community": 9,
+      "norm_label": "3-3. row 3 \u2014 column header record (exactly 7 fields)"
+    },
+    {
+      "label": "code:block3 (\"Step No.<TAB>\"\"Line Statement\"\"<TAB>\"\"Instruction\"\"<TAB>\"\"I)",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L76",
+      "id": "notes_gx_works2_il_spec_codeblock_3",
+      "community": 9,
+      "norm_label": "code:block3 (\"step no.<tab>\"\"line statement\"\"<tab>\"\"instruction\"\"<tab>\"\"i)"
+    },
+    {
+      "label": "4. Universal Quoting Model (the most error-prone part)",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L99",
+      "id": "notes_gx_works2_il_spec_4_universal_quoting_model_the_most_error_prone_part",
+      "community": 9,
+      "norm_label": "4. universal quoting model (the most error-prone part)"
+    },
+    {
+      "label": "4-1. Rule",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L103",
+      "id": "notes_gx_works2_il_spec_4_1_rule",
+      "community": 9,
+      "norm_label": "4-1. rule"
+    },
+    {
+      "label": "4-2. Worked example \u2014 Type B row `LD M1000` at step 0",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L122",
+      "id": "notes_gx_works2_il_spec_4_2_worked_example_type_b_row_ld_m1000_at_step_0",
+      "community": 9,
+      "norm_label": "4-2. worked example \u2014 type b row `ld m1000` at step 0"
+    },
+    {
+      "label": "code:block4 (\"0<TAB>\"\"\"\"<TAB>\"\"LD\"\"<TAB>\"\"M1000\"\"<TAB>\"\"\"\"<TAB>\"\"\"\"<TAB>\")",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L137",
+      "id": "notes_gx_works2_il_spec_codeblock_4",
+      "community": 9,
+      "norm_label": "code:block4 (\"0<tab>\"\"\"\"<tab>\"\"ld\"\"<tab>\"\"m1000\"\"<tab>\"\"\"\"<tab>\"\"\"\"<tab>\")"
+    },
+    {
+      "label": "4-3. Parsing algorithm (recommended)",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L143",
+      "id": "notes_gx_works2_il_spec_4_3_parsing_algorithm_recommended",
+      "community": 9,
+      "norm_label": "4-3. parsing algorithm (recommended)"
+    },
+    {
+      "label": "code:python (def decode_record(raw: str) -> list[str]:)",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L145",
+      "id": "notes_gx_works2_il_spec_codeblock_5",
+      "community": 9,
+      "norm_label": "code:python (def decode_record(raw: str) -> list[str]:)"
+    },
+    {
+      "label": "4-4. Generating (encoding) algorithm",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L169",
+      "id": "notes_gx_works2_il_spec_4_4_generating_encoding_algorithm",
+      "community": 9,
+      "norm_label": "4-4. generating (encoding) algorithm"
+    },
+    {
+      "label": "code:python (def encode_record(fields: list[str]) -> str:)",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L171",
+      "id": "notes_gx_works2_il_spec_codeblock_6",
+      "community": 9,
+      "norm_label": "code:python (def encode_record(fields: list[str]) -> str:)"
+    },
+    {
+      "label": "5. Three Types of Data Rows",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L184",
+      "id": "notes_gx_works2_il_spec_5_three_types_of_data_rows",
+      "community": 27,
+      "norm_label": "5. three types of data rows"
+    },
+    {
+      "label": "5-1. Type A \u2014 Label / Line Statement row",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L188",
+      "id": "notes_gx_works2_il_spec_5_1_type_a_label_line_statement_row",
+      "community": 27,
+      "norm_label": "5-1. type a \u2014 label / line statement row"
+    },
+    {
+      "label": "code:block7 ([90,   \"<<<<< Q64RD Card Converting Setup Program >>>>>>>\", )",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L195",
+      "id": "notes_gx_works2_il_spec_codeblock_7",
+      "community": 27,
+      "norm_label": "code:block7 ([90,   \"<<<<< q64rd card converting setup program >>>>>>>\", )"
+    },
+    {
+      "label": "5-2. Type B \u2014 Instruction row (head of an instruction, with step number)",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L205",
+      "id": "notes_gx_works2_il_spec_5_2_type_b_instruction_row_head_of_an_instruction_with_step_number",
+      "community": 27,
+      "norm_label": "5-2. type b \u2014 instruction row (head of an instruction, with step number)"
+    },
+    {
+      "label": "code:block8 ([0,    \"\", \"LD\",   \"M1000\", \"\", \"\", \"\"])",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L212",
+      "id": "notes_gx_works2_il_spec_codeblock_8",
+      "community": 27,
+      "norm_label": "code:block8 ([0,    \"\", \"ld\",   \"m1000\", \"\", \"\", \"\"])"
+    },
+    {
+      "label": "5-3. Type C \u2014 Continuation row (extra operands of the preceding instruction)",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L221",
+      "id": "notes_gx_works2_il_spec_5_3_type_c_continuation_row_extra_operands_of_the_preceding_instruction",
+      "community": 27,
+      "norm_label": "5-3. type c \u2014 continuation row (extra operands of the preceding instruction)"
+    },
+    {
+      "label": "code:block9 (Row B: [1,  \"\", \"MOVP\", \"K0\", \"\", \"\", \"\"])",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L228",
+      "id": "notes_gx_works2_il_spec_codeblock_9",
+      "community": 27,
+      "norm_label": "code:block9 (row b: [1,  \"\", \"movp\", \"k0\", \"\", \"\", \"\"])"
+    },
+    {
+      "label": "code:block10 (Row B: [17, \"\", \"LD=\",  \"K1\", \"\", \"\", \"\"])",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L234",
+      "id": "notes_gx_works2_il_spec_codeblock_10",
+      "community": 27,
+      "norm_label": "code:block10 (row b: [17, \"\", \"ld=\",  \"k1\", \"\", \"\", \"\"])"
+    },
+    {
+      "label": "6. Instruction Mnemonics",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L247",
+      "id": "notes_gx_works2_il_spec_6_instruction_mnemonics",
+      "community": 9,
+      "norm_label": "6. instruction mnemonics"
+    },
+    {
+      "label": "6-1. Sequence Instructions (confirmed in MAIN.csv + MELSEC manual)",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L251",
+      "id": "notes_gx_works2_il_spec_6_1_sequence_instructions_confirmed_in_main_csv_melsec_manual",
+      "community": 9,
+      "norm_label": "6-1. sequence instructions (confirmed in main.csv + melsec manual)"
+    },
+    {
+      "label": "Contact Instructions (Load / AND / OR)",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L253",
+      "id": "notes_gx_works2_il_spec_contact_instructions_load_and_or",
+      "community": 9,
+      "norm_label": "contact instructions (load / and / or)"
+    },
+    {
+      "label": "Association Instructions",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L276",
+      "id": "notes_gx_works2_il_spec_association_instructions",
+      "community": 9,
+      "norm_label": "association instructions"
+    },
+    {
+      "label": "Output Instructions",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L287",
+      "id": "notes_gx_works2_il_spec_output_instructions",
+      "community": 9,
+      "norm_label": "output instructions"
+    },
+    {
+      "label": "Shift / Master Control / Termination",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L298",
+      "id": "notes_gx_works2_il_spec_shift_master_control_termination",
+      "community": 9,
+      "norm_label": "shift / master control / termination"
+    },
+    {
+      "label": "6-2. Basic Instructions (confirmed in MAIN.csv + MELSEC manual)",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L314",
+      "id": "notes_gx_works2_il_spec_6_2_basic_instructions_confirmed_in_main_csv_melsec_manual",
+      "community": 9,
+      "norm_label": "6-2. basic instructions (confirmed in main.csv + melsec manual)"
+    },
+    {
+      "label": "Comparison Instructions",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L316",
+      "id": "notes_gx_works2_il_spec_comparison_instructions",
+      "community": 9,
+      "norm_label": "comparison instructions"
+    },
+    {
+      "label": "Transfer / Arithmetic / Conversion Instructions",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L336",
+      "id": "notes_gx_works2_il_spec_transfer_arithmetic_conversion_instructions",
+      "community": 9,
+      "norm_label": "transfer / arithmetic / conversion instructions"
+    },
+    {
+      "label": "Program Control Instructions",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L375",
+      "id": "notes_gx_works2_il_spec_program_control_instructions",
+      "community": 9,
+      "norm_label": "program control instructions"
+    },
+    {
+      "label": "6-3. Notation Rules",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L384",
+      "id": "notes_gx_works2_il_spec_6_3_notation_rules",
+      "community": 9,
+      "norm_label": "6-3. notation rules"
+    },
+    {
+      "label": "7. Device / Operand Notation",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L401",
+      "id": "notes_gx_works2_il_spec_7_device_operand_notation",
+      "community": 9,
+      "norm_label": "7. device / operand notation"
+    },
+    {
+      "label": "7-1. Observed device prefixes",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L403",
+      "id": "notes_gx_works2_il_spec_7_1_observed_device_prefixes",
+      "community": 9,
+      "norm_label": "7-1. observed device prefixes"
+    },
+    {
+      "label": "7-2. Notation rules",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L407",
+      "id": "notes_gx_works2_il_spec_7_2_notation_rules",
+      "community": 9,
+      "norm_label": "7-2. notation rules"
+    },
+    {
+      "label": "8. Step No. Rules",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L418",
+      "id": "notes_gx_works2_il_spec_8_step_no_rules",
+      "community": 9,
+      "norm_label": "8. step no. rules"
+    },
+    {
+      "label": "9. END Instruction",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L427",
+      "id": "notes_gx_works2_il_spec_9_end_instruction",
+      "community": 9,
+      "norm_label": "9. end instruction"
+    },
+    {
+      "label": "code:block11 (\"4373<TAB>\"\"\"\"<TAB>\"\"END\"\"<TAB>\"\"\"\"<TAB>\"\"\"\"<TAB>\"\"\"\"<TAB>\"\")",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L432",
+      "id": "notes_gx_works2_il_spec_codeblock_11",
+      "community": 9,
+      "norm_label": "code:block11 (\"4373<tab>\"\"\"\"<tab>\"\"end\"\"<tab>\"\"\"\"<tab>\"\"\"\"<tab>\"\"\"\"<tab>\"\")"
+    },
+    {
+      "label": "10. Field Content Constraints",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L443",
+      "id": "notes_gx_works2_il_spec_10_field_content_constraints",
+      "community": 9,
+      "norm_label": "10. field content constraints"
+    },
+    {
+      "label": "11. Rung Composition Rules",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L451",
+      "id": "notes_gx_works2_il_spec_11_rung_composition_rules",
+      "community": 26,
+      "norm_label": "11. rung composition rules"
+    },
+    {
+      "label": "11-1. Rung boundary identification",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L455",
+      "id": "notes_gx_works2_il_spec_11_1_rung_boundary_identification",
+      "community": 26,
+      "norm_label": "11-1. rung boundary identification"
+    },
+    {
+      "label": "11-2. Rung internal structure (canonical order)",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L469",
+      "id": "notes_gx_works2_il_spec_11_2_rung_internal_structure_canonical_order",
+      "community": 26,
+      "norm_label": "11-2. rung internal structure (canonical order)"
+    },
+    {
+      "label": "code:block12 ([1] Load                  \u2014 LD / LDI / LDP / LDF            )",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L473",
+      "id": "notes_gx_works2_il_spec_codeblock_12",
+      "community": 26,
+      "norm_label": "code:block12 ([1] load                  \u2014 ld / ldi / ldp / ldf            )"
+    },
+    {
+      "label": "11-3. Rung composition patterns",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L498",
+      "id": "notes_gx_works2_il_spec_11_3_rung_composition_patterns",
+      "community": 26,
+      "norm_label": "11-3. rung composition patterns"
+    },
+    {
+      "label": "code:block13 (LD   M1000)",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L501",
+      "id": "notes_gx_works2_il_spec_codeblock_13",
+      "community": 26,
+      "norm_label": "code:block13 (ld   m1000)"
+    },
+    {
+      "label": "code:block14 (LD=  K1  D4          \u2190 (Type B: LD= K1  +  Type C: D4))",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L507",
+      "id": "notes_gx_works2_il_spec_codeblock_14",
+      "community": 26,
+      "norm_label": "code:block14 (ld=  k1  d4          \u2190 (type b: ld= k1  +  type c: d4))"
+    },
+    {
+      "label": "code:block15 (LD   L31)",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L517",
+      "id": "notes_gx_works2_il_spec_codeblock_15",
+      "community": 26,
+      "norm_label": "code:block15 (ld   l31)"
+    },
+    {
+      "label": "code:block16 (LD   <cond>)",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L524",
+      "id": "notes_gx_works2_il_spec_codeblock_16",
+      "community": 26,
+      "norm_label": "code:block16 (ld   <cond>)"
+    },
+    {
+      "label": "code:block17 (LD   SM400)",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L537",
+      "id": "notes_gx_works2_il_spec_codeblock_17",
+      "community": 26,
+      "norm_label": "code:block17 (ld   sm400)"
+    },
+    {
+      "label": "11-4. Rung-boundary decision table",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L542",
+      "id": "notes_gx_works2_il_spec_11_4_rung_boundary_decision_table",
+      "community": 26,
+      "norm_label": "11-4. rung-boundary decision table"
+    },
+    {
+      "label": "11-5. Constraints summary",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L551",
+      "id": "notes_gx_works2_il_spec_11_5_constraints_summary",
+      "community": 26,
+      "norm_label": "11-5. constraints summary"
+    },
+    {
+      "label": "code:block18 (- Every rung starts with exactly one load instruction (LD / )",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L553",
+      "id": "notes_gx_works2_il_spec_codeblock_18",
+      "community": 26,
+      "norm_label": "code:block18 (- every rung starts with exactly one load instruction (ld / )"
+    },
+    {
+      "label": "12. Checklist for Generating or Modifying This Format",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L566",
+      "id": "notes_gx_works2_il_spec_12_checklist_for_generating_or_modifying_this_format",
+      "community": 9,
+      "norm_label": "12. checklist for generating or modifying this format"
+    },
+    {
+      "label": "code:block19 ([ ] Encoding: UTF-16 LE with BOM (FF FE))",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L568",
+      "id": "notes_gx_works2_il_spec_codeblock_19",
+      "community": 9,
+      "norm_label": "code:block19 ([ ] encoding: utf-16 le with bom (ff fe))"
+    },
+    {
+      "label": "13. Parsing Notes (LLM-Specific)",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L600",
+      "id": "notes_gx_works2_il_spec_13_parsing_notes_llm_specific",
+      "community": 9,
+      "norm_label": "13. parsing notes (llm-specific)"
+    },
+    {
+      "label": "14. Official Manual Reference & List Mode Format",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L626",
+      "id": "notes_gx_works2_il_spec_14_official_manual_reference_list_mode_format",
+      "community": 9,
+      "norm_label": "14. official manual reference & list mode format"
+    },
+    {
+      "label": "List Mode (IL) Column Mapping",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L630",
+      "id": "notes_gx_works2_il_spec_list_mode_il_column_mapping",
+      "community": 9,
+      "norm_label": "list mode (il) column mapping"
+    },
+    {
+      "label": "code:block20 ([List Mode])",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L634",
+      "id": "notes_gx_works2_il_spec_codeblock_20",
+      "community": 9,
+      "norm_label": "code:block20 ([list mode])"
+    },
+    {
+      "label": "Extended Instruction Set",
+      "file_type": "document",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L654",
+      "id": "notes_gx_works2_il_spec_extended_instruction_set",
+      "community": 9,
+      "norm_label": "extended instruction set"
+    },
+    {
+      "label": "PLC_PROGRAM_STRUCTURE.md",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L1",
+      "id": "notes_plc_program_structure_md",
+      "community": 22,
+      "norm_label": "plc_program_structure.md"
+    },
+    {
+      "label": "REFRIGER CHARGING MACHINE \u2014 PLC Program Structure Design",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L1",
+      "id": "notes_plc_program_structure_refriger_charging_machine_plc_program_structure_design",
+      "community": 22,
+      "norm_label": "refriger charging machine \u2014 plc program structure design"
+    },
+    {
+      "label": "0. \uc2dc\uc2a4\ud15c \uad6c\uc131 (System Configuration)",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L10",
+      "id": "notes_plc_program_structure_0_\uc2dc\uc2a4\ud15c_\uad6c\uc131_system_configuration",
+      "community": 22,
+      "norm_label": "0. \u1109\u1175\u1109\u1173\u1110\u1166\u11b7 \u1100\u116e\u1109\u1165\u11bc (system configuration)"
+    },
+    {
+      "label": "0-1. \uc9c0\uc6d0 \uad6c\uc131",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L12",
+      "id": "notes_plc_program_structure_0_1_\uc9c0\uc6d0_\uad6c\uc131",
+      "community": 22,
+      "norm_label": "0-1. \u110c\u1175\u110b\u116f\u11ab \u1100\u116e\u1109\u1165\u11bc"
+    },
+    {
+      "label": "0-2. \uad6c\uc131 \ud30c\ub77c\ubbf8\ud130 (PLC D-Register)",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L21",
+      "id": "notes_plc_program_structure_0_2_\uad6c\uc131_\ud30c\ub77c\ubbf8\ud130_plc_d_register",
+      "community": 22,
+      "norm_label": "0-2. \u1100\u116e\u1109\u1165\u11bc \u1111\u1161\u1105\u1161\u1106\u1175\u1110\u1165 (plc d-register)"
+    },
+    {
+      "label": "0-3. Line / Gun \uac1c\ub150",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L31",
+      "id": "notes_plc_program_structure_0_3_line_gun_\uac1c\ub150",
+      "community": 22,
+      "norm_label": "0-3. line / gun \u1100\u1162\u1102\u1167\u11b7"
+    },
+    {
+      "label": "code:block1 (Line 0 \u2500\u2500\u252c\u2500\u2500 Gun 0 (Type A or B) \u2500\u2500\u2510)",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L33",
+      "id": "notes_plc_program_structure_codeblock_1",
+      "community": 22,
+      "norm_label": "code:block1 (line 0 \u2500\u2500\u252c\u2500\u2500 gun 0 (type a or b) \u2500\u2500\u2510)"
+    },
+    {
+      "label": "0-4. Gun Type",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L47",
+      "id": "notes_plc_program_structure_0_4_gun_type",
+      "community": 22,
+      "norm_label": "0-4. gun type"
+    },
+    {
+      "label": "0-5. Gun Index \uacf5\uc2dd",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L58",
+      "id": "notes_plc_program_structure_0_5_gun_index_\uacf5\uc2dd",
+      "community": 22,
+      "norm_label": "0-5. gun index \u1100\u1169\u11bc\u1109\u1175\u11a8"
+    },
+    {
+      "label": "0-5. Gun Index \uacf5\uc2dd",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L60",
+      "id": "notes_plc_program_structure_0_5_gun_index_\uacf5\uc2dd_60",
+      "community": 22,
+      "norm_label": "0-5. gun index \u1100\u1169\u11bc\u1109\u1175\u11a8"
+    },
+    {
+      "label": "code:block2 (Gun Global Index = Line \u00d7 GunPerLine(D230) + GunLocal)",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L62",
+      "id": "notes_plc_program_structure_codeblock_2",
+      "community": 22,
+      "norm_label": "code:block2 (gun global index = line \u00d7 gunperline(d230) + gunlocal)"
+    },
+    {
+      "label": "1. I/O \uc694\uad6c\uc0ac\ud56d \ubd84\uc11d (HMI \u2192 PLC \uc2e0\ud638 \ub9e4\ud551)",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L73",
+      "id": "notes_plc_program_structure_1_i_o_\uc694\uad6c\uc0ac\ud56d_\ubd84\uc11d_hmi_plc_\uc2e0\ud638_\ub9e4\ud551",
+      "community": 22,
+      "norm_label": "1. i/o \u110b\u116d\u1100\u116e\u1109\u1161\u1112\u1161\u11bc \u1107\u116e\u11ab\u1109\u1165\u11a8 (hmi \u2192 plc \u1109\u1175\u11ab\u1112\u1169 \u1106\u1162\u1111\u1175\u11bc)"
+    },
+    {
+      "label": "1-1. HMI Button \u2192 PLC \ub0b4\ubd80 \ub9b4\ub808\uc774 (M, \ud478\uc2dc=ON)",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L75",
+      "id": "notes_plc_program_structure_1_1_hmi_button_plc_\ub0b4\ubd80_\ub9b4\ub808\uc774_m_\ud478\uc2dc_on",
+      "community": 22,
+      "norm_label": "1-1. hmi button \u2192 plc \u1102\u1162\u1107\u116e \u1105\u1175\u11af\u1105\u1166\u110b\u1175 (m, \u1111\u116e\u1109\u1175=on)"
+    },
+    {
+      "label": "1-2. \ubb3c\ub9ac\uc801 I/O \ucd94\uc815 (2 Line \uae30\uc900)",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L107",
+      "id": "notes_plc_program_structure_1_2_\ubb3c\ub9ac\uc801_i_o_\ucd94\uc815_2_line_\uae30\uc900",
+      "community": 22,
+      "norm_label": "1-2. \u1106\u116e\u11af\u1105\u1175\u110c\u1165\u11a8 i/o \u110e\u116e\u110c\u1165\u11bc (2 line \u1100\u1175\u110c\u116e\u11ab)"
+    },
+    {
+      "label": "1-3. Safety PLC \uc778\ud130\ud398\uc774\uc2a4",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L120",
+      "id": "notes_plc_program_structure_1_3_safety_plc_\uc778\ud130\ud398\uc774\uc2a4",
+      "community": 22,
+      "norm_label": "1-3. safety plc \u110b\u1175\u11ab\u1110\u1165\u1111\u1166\u110b\u1175\u1109\u1173"
+    },
+    {
+      "label": "2. POU (Program Organization Unit) \ubaa8\ub4c8 \uad6c\uc870",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L131",
+      "id": "notes_plc_program_structure_2_pou_program_organization_unit_\ubaa8\ub4c8_\uad6c\uc870",
+      "community": 22,
+      "norm_label": "2. pou (program organization unit) \u1106\u1169\u1103\u1172\u11af \u1100\u116e\u110c\u1169"
+    },
+    {
+      "label": "code:block3 (REF/)",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L133",
+      "id": "notes_plc_program_structure_codeblock_3",
+      "community": 22,
+      "norm_label": "code:block3 (ref/)"
+    },
+    {
+      "label": "2-1. \ubaa8\ub4c8\ubcc4 \ucc45\uc784",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L148",
+      "id": "notes_plc_program_structure_2_1_\ubaa8\ub4c8\ubcc4_\ucc45\uc784",
+      "community": 22,
+      "norm_label": "2-1. \u1106\u1169\u1103\u1172\u11af\u1107\u1167\u11af \u110e\u1162\u11a8\u110b\u1175\u11b7"
+    },
+    {
+      "label": "3. \ub514\ubc14\uc774\uc2a4 \ub9f5 (Device Map)",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L166",
+      "id": "notes_plc_program_structure_3_\ub514\ubc14\uc774\uc2a4_\ub9f5_device_map",
+      "community": 25,
+      "norm_label": "3. \u1103\u1175\u1107\u1161\u110b\u1175\u1109\u1173 \u1106\u1162\u11b8 (device map)"
+    },
+    {
+      "label": "3-1. M (Internal Relay) \u2014 Bit Device (0~)",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L173",
+      "id": "notes_plc_program_structure_3_1_m_internal_relay_bit_device_0",
+      "community": 25,
+      "norm_label": "3-1. m (internal relay) \u2014 bit device (0~)"
+    },
+    {
+      "label": "3-2. D (Data Register) \u2014 Word Device (\uc9dd\uc218 \uc8fc\uc18c)",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L328",
+      "id": "notes_plc_program_structure_3_2_d_data_register_word_device_\uc9dd\uc218_\uc8fc\uc18c",
+      "community": 25,
+      "norm_label": "3-2. d (data register) \u2014 word device (\u110d\u1161\u11a8\u1109\u116e \u110c\u116e\u1109\u1169)"
+    },
+    {
+      "label": "Parameter Settings \u2014 Line 0 (D0~D29)",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L333",
+      "id": "notes_plc_program_structure_parameter_settings_line_0_d0_d29",
+      "community": 25,
+      "norm_label": "parameter settings \u2014 line 0 (d0~d29)"
+    },
+    {
+      "label": "Parameter Settings \u2014 Line 1 (D30~D59, D228\u22652)",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L353",
+      "id": "notes_plc_program_structure_parameter_settings_line_1_d30_d59_d228_2",
+      "community": 25,
+      "norm_label": "parameter settings \u2014 line 1 (d30~d59, d228\u22652)"
+    },
+    {
+      "label": "User Settings (Gun\ub2f9 14 words, \ucd5c\ub300 4 Gun = 56 words)",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L368",
+      "id": "notes_plc_program_structure_user_settings_gun\ub2f9_14_words_\ucd5c\ub300_4_gun_56_words",
+      "community": 25,
+      "norm_label": "user settings (gun\u1103\u1161\u11bc 14 words, \u110e\u116c\u1103\u1162 4 gun = 56 words)"
+    },
+    {
+      "label": "Operation Display (HMI Read) \u2014 \ud604\uc7ac \uc120\ud0dd Line/Gun \uae30\uc900",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L386",
+      "id": "notes_plc_program_structure_operation_display_hmi_read_\ud604\uc7ac_\uc120\ud0dd_line_gun_\uae30\uc900",
+      "community": 25,
+      "norm_label": "operation display (hmi read) \u2014 \u1112\u1167\u11ab\u110c\u1162 \u1109\u1165\u11ab\u1110\u1162\u11a8 line/gun \u1100\u1175\u110c\u116e\u11ab"
+    },
+    {
+      "label": "Analog (Line 0 / Line 1)",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L408",
+      "id": "notes_plc_program_structure_analog_line_0_line_1",
+      "community": 25,
+      "norm_label": "analog (line 0 / line 1)"
+    },
+    {
+      "label": "Calculation Work (Line 0 / Line 1)",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L426",
+      "id": "notes_plc_program_structure_calculation_work_line_0_line_1",
+      "community": 25,
+      "norm_label": "calculation work (line 0 / line 1)"
+    },
+    {
+      "label": "Communication",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L436",
+      "id": "notes_plc_program_structure_communication",
+      "community": 25,
+      "norm_label": "communication"
+    },
+    {
+      "label": "SPC (Statistics) \u2014 \uc804 Line \ud569\uc0b0",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L446",
+      "id": "notes_plc_program_structure_spc_statistics_\uc804_line_\ud569\uc0b0",
+      "community": 25,
+      "norm_label": "spc (statistics) \u2014 \u110c\u1165\u11ab line \u1112\u1161\u11b8\u1109\u1161\u11ab"
+    },
+    {
+      "label": "System Configuration",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L457",
+      "id": "notes_plc_program_structure_system_configuration",
+      "community": 25,
+      "norm_label": "system configuration"
+    },
+    {
+      "label": "3-3. T (Timer) \u2014 100ms \uc124\uc815",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L468",
+      "id": "notes_plc_program_structure_3_3_t_timer_100ms_\uc124\uc815",
+      "community": 25,
+      "norm_label": "3-3. t (timer) \u2014 100ms \u1109\u1165\u11af\u110c\u1165\u11bc"
+    },
+    {
+      "label": "3-4. X (Digital Input) \u2014 Hex Address",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L490",
+      "id": "notes_plc_program_structure_3_4_x_digital_input_hex_address",
+      "community": 25,
+      "norm_label": "3-4. x (digital input) \u2014 hex address"
+    },
+    {
+      "label": "3-5. Y (Digital Output) \u2014 Hex Address",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L518",
+      "id": "notes_plc_program_structure_3_5_y_digital_output_hex_address",
+      "community": 25,
+      "norm_label": "3-5. y (digital output) \u2014 hex address"
+    },
+    {
+      "label": "4. \uba54\uc778 \uc2dc\ud000\uc2a4 \uc124\uacc4 (Step Control)",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L561",
+      "id": "notes_plc_program_structure_4_\uba54\uc778_\uc2dc\ud000\uc2a4_\uc124\uacc4_step_control",
+      "community": 22,
+      "norm_label": "4. \u1106\u1166\u110b\u1175\u11ab \u1109\u1175\u110f\u116f\u11ab\u1109\u1173 \u1109\u1165\u11af\u1100\u1168 (step control)"
+    },
+    {
+      "label": "4-1. \uc2dc\ud000\uc2a4 \uc0c1\ud0dc \ucc9c\uc774\ub3c4 (Line 0 \uae30\uc900, Line 1\uc740 M-relay +10 offset)",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L565",
+      "id": "notes_plc_program_structure_4_1_\uc2dc\ud000\uc2a4_\uc0c1\ud0dc_\ucc9c\uc774\ub3c4_line_0_\uae30\uc900_line_1\uc740_m_relay_10_offset",
+      "community": 22,
+      "norm_label": "4-1. \u1109\u1175\u110f\u116f\u11ab\u1109\u1173 \u1109\u1161\u11bc\u1110\u1162 \u110e\u1165\u11ab\u110b\u1175\u1103\u1169 (line 0 \u1100\u1175\u110c\u116e\u11ab, line 1\u110b\u1173\u11ab m-relay +10 offset)"
+    },
+    {
+      "label": "code:block4 (\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510)",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L567",
+      "id": "notes_plc_program_structure_codeblock_4",
+      "community": 22,
+      "norm_label": "code:block4 (\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510)"
+    },
+    {
+      "label": "4-2. Gun \uc120\ud0dd\uacfc \uc2dc\ud000\uc2a4 \uc5f0\ub3d9",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L603",
+      "id": "notes_plc_program_structure_4_2_gun_\uc120\ud0dd\uacfc_\uc2dc\ud000\uc2a4_\uc5f0\ub3d9",
+      "community": 22,
+      "norm_label": "4-2. gun \u1109\u1165\u11ab\u1110\u1162\u11a8\u1100\u116a \u1109\u1175\u110f\u116f\u11ab\u1109\u1173 \u110b\u1167\u11ab\u1103\u1169\u11bc"
+    },
+    {
+      "label": "code:block5 ([Line \ub0b4 Gun \uc120\ud0dd] (D230\u22652 \uad6c\uc131\uc5d0\uc11c HMI Gun Select\ub85c \ud65c\uc131 Gun \uacb0\uc815))",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L605",
+      "id": "notes_plc_program_structure_codeblock_5",
+      "community": 22,
+      "norm_label": "code:block5 ([line \u1102\u1162 gun \u1109\u1165\u11ab\u1110\u1162\u11a8] (d230\u22652 \u1100\u116e\u1109\u1165\u11bc\u110b\u1166\u1109\u1165 hmi gun select\u1105\u1169 \u1112\u116a\u11af\u1109\u1165\u11bc gun \u1100\u1167\u11af\u110c\u1165\u11bc))"
+    },
+    {
+      "label": "4-3. \uc2a4\ud15d \uc0c1\uc138 \uc815\uc758 (Line 0 / Line 1 \uacf5\ud1b5)",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L623",
+      "id": "notes_plc_program_structure_4_3_\uc2a4\ud15d_\uc0c1\uc138_\uc815\uc758_line_0_line_1_\uacf5\ud1b5",
+      "community": 22,
+      "norm_label": "4-3. \u1109\u1173\u1110\u1166\u11b8 \u1109\u1161\u11bc\u1109\u1166 \u110c\u1165\u11bc\u110b\u1174 (line 0 / line 1 \u1100\u1169\u11bc\u1110\u1169\u11bc)"
+    },
+    {
+      "label": "4-4. \uc2dc\ud000\uc2a4 \uc2e4\ud328 \ucc98\ub9ac",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L642",
+      "id": "notes_plc_program_structure_4_4_\uc2dc\ud000\uc2a4_\uc2e4\ud328_\ucc98\ub9ac",
+      "community": 22,
+      "norm_label": "4-4. \u1109\u1175\u110f\u116f\u11ab\u1109\u1173 \u1109\u1175\u11af\u1111\u1162 \u110e\u1165\u1105\u1175"
+    },
+    {
+      "label": "5. \uc9c4\uacf5 \uc2dc\ud000\uc2a4 \uc0c1\uc138 (gunvac.csv / unitvac.csv)",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L657",
+      "id": "notes_plc_program_structure_5_\uc9c4\uacf5_\uc2dc\ud000\uc2a4_\uc0c1\uc138_gunvac_csv_unitvac_csv",
+      "community": 21,
+      "norm_label": "5. \u110c\u1175\u11ab\u1100\u1169\u11bc \u1109\u1175\u110f\u116f\u11ab\u1109\u1173 \u1109\u1161\u11bc\u1109\u1166 (gunvac.csv / unitvac.csv)"
+    },
+    {
+      "label": "5-1. Solenoid \ub3d9\uc791 \uc694\uc57d",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L662",
+      "id": "notes_plc_program_structure_5_1_solenoid_\ub3d9\uc791_\uc694\uc57d",
+      "community": 21,
+      "norm_label": "5-1. solenoid \u1103\u1169\u11bc\u110c\u1161\u11a8 \u110b\u116d\u110b\u1163\u11a8"
+    },
+    {
+      "label": "5-2. GUN VACUUM",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L670",
+      "id": "notes_plc_program_structure_5_2_gun_vacuum",
+      "community": 21,
+      "norm_label": "5-2. gun vacuum"
+    },
+    {
+      "label": "code:block6 ([\uc9c4\uc785] M12/M22 ON)",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L672",
+      "id": "notes_plc_program_structure_codeblock_6",
+      "community": 21,
+      "norm_label": "code:block6 ([\u110c\u1175\u11ab\u110b\u1175\u11b8] m12/m22 on)"
+    },
+    {
+      "label": "5-3. UNIT VACUUM",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L685",
+      "id": "notes_plc_program_structure_5_3_unit_vacuum",
+      "community": 21,
+      "norm_label": "5-3. unit vacuum"
+    },
+    {
+      "label": "code:block7 ([\uc9c4\uc785] M13/M23 ON)",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L687",
+      "id": "notes_plc_program_structure_codeblock_7",
+      "community": 21,
+      "norm_label": "code:block7 ([\u110c\u1175\u11ab\u110b\u1175\u11b8] m13/m23 on)"
+    },
+    {
+      "label": "5-4. VACUUM CHECK",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L704",
+      "id": "notes_plc_program_structure_5_4_vacuum_check",
+      "community": 21,
+      "norm_label": "5-4. vacuum check"
+    },
+    {
+      "label": "code:block8 ([\uc9c4\uc785] M14/M24 ON)",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L706",
+      "id": "notes_plc_program_structure_codeblock_8",
+      "community": 21,
+      "norm_label": "code:block8 ([\u110c\u1175\u11ab\u110b\u1175\u11b8] m14/m24 on)"
+    },
+    {
+      "label": "code:block9",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L736",
+      "id": "notes_plc_program_structure_codeblock_9",
+      "community": 21,
+      "norm_label": "code:block9"
+    },
+    {
+      "label": "code:block10",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L755",
+      "id": "notes_plc_program_structure_codeblock_10",
+      "community": 21,
+      "norm_label": "code:block10"
+    },
+    {
+      "label": "code:block11",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L779",
+      "id": "notes_plc_program_structure_codeblock_11",
+      "community": 21,
+      "norm_label": "code:block11"
+    },
+    {
+      "label": "code:block12",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L800",
+      "id": "notes_plc_program_structure_codeblock_12",
+      "community": 21,
+      "norm_label": "code:block12"
+    },
+    {
+      "label": "code:block13",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L810",
+      "id": "notes_plc_program_structure_codeblock_13",
+      "community": 21,
+      "norm_label": "code:block13"
+    },
+    {
+      "label": "code:block14",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L823",
+      "id": "notes_plc_program_structure_codeblock_14",
+      "community": 21,
+      "norm_label": "code:block14"
+    },
+    {
+      "label": "code:block15",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L830",
+      "id": "notes_plc_program_structure_codeblock_15",
+      "community": 21,
+      "norm_label": "code:block15"
+    },
+    {
+      "label": "code:block16",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L845",
+      "id": "notes_plc_program_structure_codeblock_16",
+      "community": 21,
+      "norm_label": "code:block16"
+    },
+    {
+      "label": "code:block17",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L857",
+      "id": "notes_plc_program_structure_codeblock_17",
+      "community": 21,
+      "norm_label": "code:block17"
+    },
+    {
+      "label": "code:block18",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L869",
+      "id": "notes_plc_program_structure_codeblock_18",
+      "community": 21,
+      "norm_label": "code:block18"
+    },
+    {
+      "label": "code:block19",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L920",
+      "id": "notes_plc_program_structure_codeblock_19",
+      "community": 21,
+      "norm_label": "code:block19"
+    },
+    {
+      "label": "code:block20",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L958",
+      "id": "notes_plc_program_structure_codeblock_20",
+      "community": 21,
+      "norm_label": "code:block20"
+    },
+    {
+      "label": "code:block21",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L988",
+      "id": "notes_plc_program_structure_codeblock_21",
+      "community": 21,
+      "norm_label": "code:block21"
+    },
+    {
+      "label": "code:block22",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L1008",
+      "id": "notes_plc_program_structure_codeblock_22",
+      "community": 21,
+      "norm_label": "code:block22"
+    },
+    {
+      "label": "code:block23",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L1030",
+      "id": "notes_plc_program_structure_codeblock_23",
+      "community": 21,
+      "norm_label": "code:block23"
+    },
+    {
+      "label": "code:block24",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L1053",
+      "id": "notes_plc_program_structure_codeblock_24",
+      "community": 21,
+      "norm_label": "code:block24"
+    },
+    {
+      "label": "code:block25",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L1084",
+      "id": "notes_plc_program_structure_codeblock_25",
+      "community": 21,
+      "norm_label": "code:block25"
+    },
+    {
+      "label": "code:block26",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L1097",
+      "id": "notes_plc_program_structure_codeblock_26",
+      "community": 21,
+      "norm_label": "code:block26"
+    },
+    {
+      "label": "REFRIGER_CHARGING_MACHINE.md",
+      "file_type": "document",
+      "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
+      "source_location": "L1",
+      "id": "notes_refriger_charging_machine_md",
+      "community": 24,
+      "norm_label": "refriger_charging_machine.md"
+    },
+    {
+      "label": "REFRIGER CHARGING MACHINE \u2014 HMI Specification",
+      "file_type": "document",
+      "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
+      "source_location": "L1",
+      "id": "notes_refriger_charging_machine_refriger_charging_machine_hmi_specification",
+      "community": 24,
+      "norm_label": "refriger charging machine \u2014 hmi specification"
+    },
+    {
+      "label": "1. Operation Screen",
+      "file_type": "document",
+      "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
+      "source_location": "L10",
+      "id": "notes_refriger_charging_machine_1_operation_screen",
+      "community": 24,
+      "norm_label": "1. operation screen"
+    },
+    {
+      "label": "1-1. Display Items",
+      "file_type": "document",
+      "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
+      "source_location": "L12",
+      "id": "notes_refriger_charging_machine_1_1_display_items",
+      "community": 24,
+      "norm_label": "1-1. display items"
+    },
+    {
+      "label": "1-2. Labels",
+      "file_type": "document",
+      "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
+      "source_location": "L28",
+      "id": "notes_refriger_charging_machine_1_2_labels",
+      "community": 24,
+      "norm_label": "1-2. labels"
+    },
+    {
+      "label": "1-3. Buttons",
+      "file_type": "document",
+      "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
+      "source_location": "L50",
+      "id": "notes_refriger_charging_machine_1_3_buttons",
+      "community": 24,
+      "norm_label": "1-3. buttons"
+    },
+    {
+      "label": "2. Parameter Setting Screen",
+      "file_type": "document",
+      "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
+      "source_location": "L76",
+      "id": "notes_refriger_charging_machine_2_parameter_setting_screen",
+      "community": 24,
+      "norm_label": "2. parameter setting screen"
+    },
+    {
+      "label": "3. User Setting Screen \u2014 Per Injection Gun",
+      "file_type": "document",
+      "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
+      "source_location": "L97",
+      "id": "notes_refriger_charging_machine_3_user_setting_screen_per_injection_gun",
+      "community": 24,
+      "norm_label": "3. user setting screen \u2014 per injection gun"
+    },
+    {
+      "label": "4. Safety PLC Reset",
+      "file_type": "document",
+      "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
+      "source_location": "L111",
+      "id": "notes_refriger_charging_machine_4_safety_plc_reset",
+      "community": 24,
+      "norm_label": "4. safety plc reset"
+    },
+    {
+      "label": "5. Vacuum Pump Operation",
+      "file_type": "document",
+      "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
+      "source_location": "L120",
+      "id": "notes_refriger_charging_machine_5_vacuum_pump_operation",
+      "community": 24,
+      "norm_label": "5. vacuum pump operation"
+    },
+    {
+      "label": "6. Screen Flow (Conceptual)",
+      "file_type": "document",
+      "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
+      "source_location": "L127",
+      "id": "notes_refriger_charging_machine_6_screen_flow_conceptual",
+      "community": 24,
+      "norm_label": "6. screen flow (conceptual)"
+    },
+    {
+      "label": "code:block1 (POWER ON)",
+      "file_type": "document",
+      "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
+      "source_location": "L129",
+      "id": "notes_refriger_charging_machine_codeblock_1",
+      "community": 24,
+      "norm_label": "code:block1 (power on)"
+    },
+    {
+      "label": "7. Explosion-Proof / Non-Explosion-Proof Configuration",
+      "file_type": "document",
+      "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
+      "source_location": "L142",
+      "id": "notes_refriger_charging_machine_7_explosion_proof_non_explosion_proof_configuration",
+      "community": 24,
+      "norm_label": "7. explosion-proof / non-explosion-proof configuration"
+    },
+    {
+      "label": "7-1. Door Limit Sensor (\ubc29\ud3ed \uc804\uc6a9)",
+      "file_type": "document",
+      "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
+      "source_location": "L151",
+      "id": "notes_refriger_charging_machine_7_1_door_limit_sensor_\ubc29\ud3ed_\uc804\uc6a9",
+      "community": 24,
+      "norm_label": "7-1. door limit sensor (\u1107\u1161\u11bc\u1111\u1169\u11a8 \u110c\u1165\u11ab\u110b\u116d\u11bc)"
+    },
+    {
+      "label": "7-2. Current Behavior",
+      "file_type": "document",
+      "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
+      "source_location": "L158",
+      "id": "notes_refriger_charging_machine_7_2_current_behavior",
+      "community": 24,
+      "norm_label": "7-2. current behavior"
+    },
+    {
+      "label": "7-3. Mapping",
+      "file_type": "document",
+      "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
+      "source_location": "L164",
+      "id": "notes_refriger_charging_machine_7_3_mapping",
+      "community": 24,
+      "norm_label": "7-3. mapping"
+    },
+    {
+      "label": "REF_DOCUMENT.md",
+      "file_type": "document",
+      "source_file": "Notes/REF_DOCUMENT.md",
+      "source_location": "L1",
+      "id": "notes_ref_document_md",
+      "community": 23,
+      "norm_label": "ref_document.md"
+    },
+    {
+      "label": "REF \u2014 GX Works2 PLC IL CSV Processing",
+      "file_type": "document",
+      "source_file": "Notes/REF_DOCUMENT.md",
+      "source_location": "L1",
+      "id": "notes_ref_document_ref_gx_works2_plc_il_csv_processing",
+      "community": 23,
+      "norm_label": "ref \u2014 gx works2 plc il csv processing"
+    },
+    {
+      "label": "Overview",
+      "file_type": "document",
+      "source_file": "Notes/REF_DOCUMENT.md",
+      "source_location": "L9",
+      "id": "notes_ref_document_overview",
+      "community": 23,
+      "norm_label": "overview"
+    },
+    {
+      "label": "Target CSV Files",
+      "file_type": "document",
+      "source_file": "Notes/REF_DOCUMENT.md",
+      "source_location": "L17",
+      "id": "notes_ref_document_target_csv_files",
+      "community": 23,
+      "norm_label": "target csv files"
+    },
+    {
+      "label": "Main Program",
+      "file_type": "document",
+      "source_file": "Notes/REF_DOCUMENT.md",
+      "source_location": "L19",
+      "id": "notes_ref_document_main_program",
+      "community": 23,
+      "norm_label": "main program"
+    },
+    {
+      "label": "Functional Modules",
+      "file_type": "document",
+      "source_file": "Notes/REF_DOCUMENT.md",
+      "source_location": "L25",
+      "id": "notes_ref_document_functional_modules",
+      "community": 23,
+      "norm_label": "functional modules"
+    },
+    {
+      "label": "Key Technical Constraints",
+      "file_type": "document",
+      "source_file": "Notes/REF_DOCUMENT.md",
+      "source_location": "L43",
+      "id": "notes_ref_document_key_technical_constraints",
+      "community": 23,
+      "norm_label": "key technical constraints"
+    },
+    {
+      "label": "File Format (GX Works2 IL CSV)",
+      "file_type": "document",
+      "source_file": "Notes/REF_DOCUMENT.md",
+      "source_location": "L45",
+      "id": "notes_ref_document_file_format_gx_works2_il_csv",
+      "community": 23,
+      "norm_label": "file format (gx works2 il csv)"
+    },
+    {
+      "label": "Non-compliance Consequence",
+      "file_type": "document",
+      "source_file": "Notes/REF_DOCUMENT.md",
+      "source_location": "L57",
+      "id": "notes_ref_document_non_compliance_consequence",
+      "community": 23,
+      "norm_label": "non-compliance consequence"
+    },
+    {
+      "label": "Directory Structure",
+      "file_type": "document",
+      "source_file": "Notes/REF_DOCUMENT.md",
+      "source_location": "L62",
+      "id": "notes_ref_document_directory_structure",
+      "community": 23,
+      "norm_label": "directory structure"
+    },
+    {
+      "label": "code:block1 (REF/)",
+      "file_type": "document",
+      "source_file": "Notes/REF_DOCUMENT.md",
+      "source_location": "L64",
+      "id": "notes_ref_document_codeblock_1",
+      "community": 23,
+      "norm_label": "code:block1 (ref/)"
+    },
+    {
+      "label": "External Reference",
+      "file_type": "document",
+      "source_file": "Notes/REF_DOCUMENT.md",
+      "source_location": "L76",
+      "id": "notes_ref_document_external_reference",
+      "community": 23,
+      "norm_label": "external reference"
+    },
+    {
+      "label": "Development Rules",
+      "file_type": "document",
+      "source_file": "Notes/REF_DOCUMENT.md",
+      "source_location": "L82",
+      "id": "notes_ref_document_development_rules",
+      "community": 23,
+      "norm_label": "development rules"
+    },
+    {
+      "label": "Reference Data",
+      "file_type": "document",
+      "source_file": "Notes/REF_DOCUMENT.md",
+      "source_location": "L90",
+      "id": "notes_ref_document_reference_data",
+      "community": 23,
+      "norm_label": "reference data"
+    },
+    {
+      "label": "Source Materials",
+      "file_type": "document",
+      "source_file": "Notes/REF_DOCUMENT.md",
+      "source_location": "L92",
+      "id": "notes_ref_document_source_materials",
+      "community": 23,
+      "norm_label": "source materials"
+    },
+    {
+      "label": "Hex Prefix Evidence (MAIN.csv)",
+      "file_type": "document",
+      "source_file": "Notes/REF_DOCUMENT.md",
+      "source_location": "L104",
+      "id": "notes_ref_document_hex_prefix_evidence_main_csv",
+      "community": 23,
+      "norm_label": "hex prefix evidence (main.csv)"
+    },
+    {
+      "label": "code:block2 (FF FE  4D 00 43 00 5F 00 \u2026      \u2190 BOM, then \"MC_...\" in UTF-)",
+      "file_type": "document",
+      "source_file": "Notes/REF_DOCUMENT.md",
+      "source_location": "L106",
+      "id": "notes_ref_document_codeblock_2",
+      "community": 23,
+      "norm_label": "code:block2 (ff fe  4d 00 43 00 5f 00 ...      \u2190 bom, then \"mc_...\" in utf-)"
+    },
+    {
+      "label": "Verified Counts (MAIN.csv)",
+      "file_type": "document",
+      "source_file": "Notes/REF_DOCUMENT.md",
+      "source_location": "L112",
+      "id": "notes_ref_document_verified_counts_main_csv",
+      "community": 23,
+      "norm_label": "verified counts (main.csv)"
+    },
+    {
+      "label": "Mnemonic Frequency (MAIN.csv)",
+      "file_type": "document",
+      "source_file": "Notes/REF_DOCUMENT.md",
+      "source_location": "L120",
+      "id": "notes_ref_document_mnemonic_frequency_main_csv",
+      "community": 23,
+      "norm_label": "mnemonic frequency (main.csv)"
+    },
+    {
+      "label": "Device Prefix Frequency (MAIN.csv)",
+      "file_type": "document",
+      "source_file": "Notes/REF_DOCUMENT.md",
+      "source_location": "L177",
+      "id": "notes_ref_document_device_prefix_frequency_main_csv",
+      "community": 23,
+      "norm_label": "device prefix frequency (main.csv)"
+    },
+    {
+      "label": "Additional Device Types (not in MAIN.csv)",
+      "file_type": "document",
+      "source_file": "Notes/REF_DOCUMENT.md",
+      "source_location": "L190",
+      "id": "notes_ref_document_additional_device_types_not_in_main_csv",
+      "community": 23,
+      "norm_label": "additional device types (not in main.csv)"
+    },
+    {
       "label": "REFRIGER CHARGING MACHINE",
       "file_type": "document",
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
@@ -3304,7 +4843,7 @@
       "attributes": {
         "position": "right"
       },
-      "community": 9,
+      "community": 3,
       "norm_label": "line 2",
       "id": "n2l2g_line2"
     },
@@ -3318,7 +4857,7 @@
         "refrigerant": "R290",
         "box_color": "red"
       },
-      "community": 9,
+      "community": 3,
       "norm_label": "line 2 refrigerant type: r290",
       "id": "n2l2g_line2_refrigerant"
     },
@@ -3332,7 +4871,7 @@
         "unit": "kg",
         "sample_value": "1234.5"
       },
-      "community": 9,
+      "community": 3,
       "norm_label": "\u1105\u1161\u110b\u1175\u11ab2 \u1102\u1162\u11bc\u1106\u1162\u1109\u1161\u110b\u116d\u11bc\u1105\u1163\u11bc (line 2 refrigerant usage)",
       "id": "n2l2g_line2_refrigerant_usage"
     },
@@ -3345,7 +4884,7 @@
       "attributes": {
         "gun_id": "B"
       },
-      "community": 9,
+      "community": 3,
       "norm_label": "\u110c\u116e\u110b\u1175\u11b8\u1100\u1165\u11ab b (injection gun b)",
       "id": "n2l2g_line2_gun_b"
     },
@@ -3358,7 +4897,7 @@
       "attributes": {
         "sample_value": "12345"
       },
-      "community": 9,
+      "community": 3,
       "norm_label": "line 2 \u1109\u1162\u11bc\u1109\u1161\u11ab\u1105\u1163\u11bc (production quantity)",
       "id": "n2l2g_line2_production_qty"
     },
@@ -3371,7 +4910,7 @@
       "attributes": {
         "color": "green"
       },
-      "community": 9,
+      "community": 3,
       "norm_label": "line 2 \u1109\u1162\u11bc\u1109\u1161\u11ab\u1105\u1163\u11bc \u1105\u1175\u1109\u1166\u11ba (production quantity reset)",
       "id": "n2l2g_line2_production_reset"
     },
@@ -3384,7 +4923,7 @@
       "attributes": {
         "sample_value": "123"
       },
-      "community": 9,
+      "community": 3,
       "norm_label": "line 2 \u110c\u116e\u110b\u1175\u11b8 \u1106\u1169\u1103\u1166\u11af (injection model)",
       "id": "n2l2g_line2_injection_model"
     },
@@ -3398,7 +4937,7 @@
         "unit": "g",
         "sample_value": "12345"
       },
-      "community": 9,
+      "community": 3,
       "norm_label": "line 2 \u110c\u116e\u110b\u1175\u11b8 \u1109\u1165\u11af\u110c\u1165\u11bc\u1105\u1163\u11bc (injection set amount)",
       "id": "n2l2g_line2_injection_set_amount"
     },
@@ -3411,7 +4950,7 @@
       "attributes": {
         "sample_value": "123456"
       },
-      "community": 9,
+      "community": 3,
       "norm_label": "line 2 \u110e\u1161\u110c\u1175\u11bc \u1111\u1165\u11af\u1109\u1173 (charging pulse)",
       "id": "n2l2g_line2_charging_pulse"
     },
@@ -3425,7 +4964,7 @@
         "state": "OFF",
         "button_color": "red"
       },
-      "community": 9,
+      "community": 3,
       "norm_label": "line 2 \u110c\u1175\u11ab\u1100\u1169\u11bc \u1111\u1165\u11b7\u1111\u1173 (vacuum pump)",
       "id": "n2l2g_line2_vacuum_pump"
     },
@@ -3439,7 +4978,7 @@
         "unit": "g",
         "sample_value": "12345"
       },
-      "community": 9,
+      "community": 3,
       "norm_label": "line 2 \u1102\u1162\u11bc\u1106\u1162 \u110c\u116e\u110b\u1175\u11b8\u1105\u1163\u11bc (refrigerant injection amount)",
       "id": "n2l2g_line2_refrigerant_injection_amount"
     },
@@ -3453,7 +4992,7 @@
         "unit": "s",
         "sample_value": "123.4"
       },
-      "community": 9,
+      "community": 3,
       "norm_label": "line 2 \u110c\u116e\u110b\u1175\u11b8 \u1109\u1175\u1100\u1161\u11ab (injection time)",
       "id": "n2l2g_line2_injection_time"
     },
@@ -3467,7 +5006,7 @@
         "unit": "Torr",
         "sample_value": "123.456"
       },
-      "community": 9,
+      "community": 3,
       "norm_label": "line 2 \u110c\u1175\u11ab\u1100\u1169\u11bc\u1103\u1169 torr (vacuum degree)",
       "id": "n2l2g_line2_vacuum_degree"
     },
@@ -3480,7 +5019,7 @@
       "attributes": {
         "sample_value": "-1234"
       },
-      "community": 9,
+      "community": 3,
       "norm_label": "line 2 \u1109\u1173\u110f\u1162\u11ab \u110c\u1165\u11bc\u1107\u1169 (scan information)",
       "id": "n2l2g_line2_scan_info"
     },
@@ -3493,7 +5032,7 @@
       "attributes": {
         "color": "green"
       },
-      "community": 9,
+      "community": 3,
       "norm_label": "line 2 \u1107\u1161\u110f\u1169\u1103\u1173 \u1109\u1161\u110b\u116d\u11bc (barcode use)",
       "id": "n2l2g_line2_barcode_use"
     },
@@ -3508,7 +5047,7 @@
         "sample_value": "12.3",
         "refrigerant": "R290"
       },
-      "community": 9,
+      "community": 3,
       "norm_label": "line 2 \u110b\u1161\u11b8\u1105\u1167\u11a8 (pressure)",
       "id": "n2l2g_line2_pressure"
     },
@@ -3522,7 +5061,7 @@
         "unit": "\u2103",
         "sample_value": "12.3"
       },
-      "community": 9,
+      "community": 3,
       "norm_label": "line 2 \u110b\u1169\u11ab\u1103\u1169 (temperature)",
       "id": "n2l2g_line2_temperature"
     },
@@ -4880,6 +6419,1666 @@
     }
   ],
   "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "agents_md",
+      "target": "ref_agents_communication",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "ref_agents_communication",
+      "target": "ref_agents_graphify",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_md",
+      "target": "notes_gx_works2_il_spec_gx_works2_instruction_list_il_csv_export_strict_format_specification",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_gx_works2_instruction_list_il_csv_export_strict_format_specification",
+      "target": "notes_gx_works2_il_spec_1_file_encoding_and_bom",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_gx_works2_instruction_list_il_csv_export_strict_format_specification",
+      "target": "notes_gx_works2_il_spec_2_overall_file_structure_order_is_fixed_no_blank_rows",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_gx_works2_instruction_list_il_csv_export_strict_format_specification",
+      "target": "notes_gx_works2_il_spec_3_detailed_rules_for_each_row",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L99",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_gx_works2_instruction_list_il_csv_export_strict_format_specification",
+      "target": "notes_gx_works2_il_spec_4_universal_quoting_model_the_most_error_prone_part",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L184",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_gx_works2_instruction_list_il_csv_export_strict_format_specification",
+      "target": "notes_gx_works2_il_spec_5_three_types_of_data_rows",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L247",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_gx_works2_instruction_list_il_csv_export_strict_format_specification",
+      "target": "notes_gx_works2_il_spec_6_instruction_mnemonics",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L401",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_gx_works2_instruction_list_il_csv_export_strict_format_specification",
+      "target": "notes_gx_works2_il_spec_7_device_operand_notation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L418",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_gx_works2_instruction_list_il_csv_export_strict_format_specification",
+      "target": "notes_gx_works2_il_spec_8_step_no_rules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L427",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_gx_works2_instruction_list_il_csv_export_strict_format_specification",
+      "target": "notes_gx_works2_il_spec_9_end_instruction",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L443",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_gx_works2_instruction_list_il_csv_export_strict_format_specification",
+      "target": "notes_gx_works2_il_spec_10_field_content_constraints",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L451",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_gx_works2_instruction_list_il_csv_export_strict_format_specification",
+      "target": "notes_gx_works2_il_spec_11_rung_composition_rules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L566",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_gx_works2_instruction_list_il_csv_export_strict_format_specification",
+      "target": "notes_gx_works2_il_spec_12_checklist_for_generating_or_modifying_this_format",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L600",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_gx_works2_instruction_list_il_csv_export_strict_format_specification",
+      "target": "notes_gx_works2_il_spec_13_parsing_notes_llm_specific",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L626",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_gx_works2_instruction_list_il_csv_export_strict_format_specification",
+      "target": "notes_gx_works2_il_spec_14_official_manual_reference_list_mode_format",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_2_overall_file_structure_order_is_fixed_no_blank_rows",
+      "target": "notes_gx_works2_il_spec_codeblock_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_3_detailed_rules_for_each_row",
+      "target": "notes_gx_works2_il_spec_3_1_row_1_program_name_title_record",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_3_detailed_rules_for_each_row",
+      "target": "notes_gx_works2_il_spec_3_2_row_2_plc_information_record",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L73",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_3_detailed_rules_for_each_row",
+      "target": "notes_gx_works2_il_spec_3_3_row_3_column_header_record_exactly_7_fields",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L58",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_3_2_row_2_plc_information_record",
+      "target": "notes_gx_works2_il_spec_codeblock_2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L76",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_3_3_row_3_column_header_record_exactly_7_fields",
+      "target": "notes_gx_works2_il_spec_codeblock_3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L103",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_4_universal_quoting_model_the_most_error_prone_part",
+      "target": "notes_gx_works2_il_spec_4_1_rule",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L122",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_4_universal_quoting_model_the_most_error_prone_part",
+      "target": "notes_gx_works2_il_spec_4_2_worked_example_type_b_row_ld_m1000_at_step_0",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L143",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_4_universal_quoting_model_the_most_error_prone_part",
+      "target": "notes_gx_works2_il_spec_4_3_parsing_algorithm_recommended",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L169",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_4_universal_quoting_model_the_most_error_prone_part",
+      "target": "notes_gx_works2_il_spec_4_4_generating_encoding_algorithm",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L137",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_4_2_worked_example_type_b_row_ld_m1000_at_step_0",
+      "target": "notes_gx_works2_il_spec_codeblock_4",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L145",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_4_3_parsing_algorithm_recommended",
+      "target": "notes_gx_works2_il_spec_codeblock_5",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L171",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_4_4_generating_encoding_algorithm",
+      "target": "notes_gx_works2_il_spec_codeblock_6",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L188",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_5_three_types_of_data_rows",
+      "target": "notes_gx_works2_il_spec_5_1_type_a_label_line_statement_row",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L205",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_5_three_types_of_data_rows",
+      "target": "notes_gx_works2_il_spec_5_2_type_b_instruction_row_head_of_an_instruction_with_step_number",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L221",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_5_three_types_of_data_rows",
+      "target": "notes_gx_works2_il_spec_5_3_type_c_continuation_row_extra_operands_of_the_preceding_instruction",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L195",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_5_1_type_a_label_line_statement_row",
+      "target": "notes_gx_works2_il_spec_codeblock_7",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L212",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_5_2_type_b_instruction_row_head_of_an_instruction_with_step_number",
+      "target": "notes_gx_works2_il_spec_codeblock_8",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L228",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_5_3_type_c_continuation_row_extra_operands_of_the_preceding_instruction",
+      "target": "notes_gx_works2_il_spec_codeblock_9",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L234",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_5_3_type_c_continuation_row_extra_operands_of_the_preceding_instruction",
+      "target": "notes_gx_works2_il_spec_codeblock_10",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L251",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_6_instruction_mnemonics",
+      "target": "notes_gx_works2_il_spec_6_1_sequence_instructions_confirmed_in_main_csv_melsec_manual",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L314",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_6_instruction_mnemonics",
+      "target": "notes_gx_works2_il_spec_6_2_basic_instructions_confirmed_in_main_csv_melsec_manual",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L384",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_6_instruction_mnemonics",
+      "target": "notes_gx_works2_il_spec_6_3_notation_rules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L253",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_6_1_sequence_instructions_confirmed_in_main_csv_melsec_manual",
+      "target": "notes_gx_works2_il_spec_contact_instructions_load_and_or",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L276",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_6_1_sequence_instructions_confirmed_in_main_csv_melsec_manual",
+      "target": "notes_gx_works2_il_spec_association_instructions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L287",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_6_1_sequence_instructions_confirmed_in_main_csv_melsec_manual",
+      "target": "notes_gx_works2_il_spec_output_instructions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L298",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_6_1_sequence_instructions_confirmed_in_main_csv_melsec_manual",
+      "target": "notes_gx_works2_il_spec_shift_master_control_termination",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L316",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_6_2_basic_instructions_confirmed_in_main_csv_melsec_manual",
+      "target": "notes_gx_works2_il_spec_comparison_instructions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L336",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_6_2_basic_instructions_confirmed_in_main_csv_melsec_manual",
+      "target": "notes_gx_works2_il_spec_transfer_arithmetic_conversion_instructions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L375",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_6_2_basic_instructions_confirmed_in_main_csv_melsec_manual",
+      "target": "notes_gx_works2_il_spec_program_control_instructions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L403",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_7_device_operand_notation",
+      "target": "notes_gx_works2_il_spec_7_1_observed_device_prefixes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L407",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_7_device_operand_notation",
+      "target": "notes_gx_works2_il_spec_7_2_notation_rules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L432",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_9_end_instruction",
+      "target": "notes_gx_works2_il_spec_codeblock_11",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L455",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_11_rung_composition_rules",
+      "target": "notes_gx_works2_il_spec_11_1_rung_boundary_identification",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L469",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_11_rung_composition_rules",
+      "target": "notes_gx_works2_il_spec_11_2_rung_internal_structure_canonical_order",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L498",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_11_rung_composition_rules",
+      "target": "notes_gx_works2_il_spec_11_3_rung_composition_patterns",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L542",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_11_rung_composition_rules",
+      "target": "notes_gx_works2_il_spec_11_4_rung_boundary_decision_table",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L551",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_11_rung_composition_rules",
+      "target": "notes_gx_works2_il_spec_11_5_constraints_summary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L473",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_11_2_rung_internal_structure_canonical_order",
+      "target": "notes_gx_works2_il_spec_codeblock_12",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L501",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_11_3_rung_composition_patterns",
+      "target": "notes_gx_works2_il_spec_codeblock_13",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L507",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_11_3_rung_composition_patterns",
+      "target": "notes_gx_works2_il_spec_codeblock_14",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L517",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_11_3_rung_composition_patterns",
+      "target": "notes_gx_works2_il_spec_codeblock_15",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L524",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_11_3_rung_composition_patterns",
+      "target": "notes_gx_works2_il_spec_codeblock_16",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L537",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_11_3_rung_composition_patterns",
+      "target": "notes_gx_works2_il_spec_codeblock_17",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L553",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_11_5_constraints_summary",
+      "target": "notes_gx_works2_il_spec_codeblock_18",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L568",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_12_checklist_for_generating_or_modifying_this_format",
+      "target": "notes_gx_works2_il_spec_codeblock_19",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L630",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_14_official_manual_reference_list_mode_format",
+      "target": "notes_gx_works2_il_spec_list_mode_il_column_mapping",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L654",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_14_official_manual_reference_list_mode_format",
+      "target": "notes_gx_works2_il_spec_extended_instruction_set",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/GX_WORKS2_IL_Spec.md",
+      "source_location": "L634",
+      "weight": 1.0,
+      "source": "notes_gx_works2_il_spec_list_mode_il_column_mapping",
+      "target": "notes_gx_works2_il_spec_codeblock_20",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_md",
+      "target": "notes_plc_program_structure_refriger_charging_machine_plc_program_structure_design",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_refriger_charging_machine_plc_program_structure_design",
+      "target": "notes_plc_program_structure_0_\uc2dc\uc2a4\ud15c_\uad6c\uc131_system_configuration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L73",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_refriger_charging_machine_plc_program_structure_design",
+      "target": "notes_plc_program_structure_1_i_o_\uc694\uad6c\uc0ac\ud56d_\ubd84\uc11d_hmi_plc_\uc2e0\ud638_\ub9e4\ud551",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L131",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_refriger_charging_machine_plc_program_structure_design",
+      "target": "notes_plc_program_structure_2_pou_program_organization_unit_\ubaa8\ub4c8_\uad6c\uc870",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L166",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_refriger_charging_machine_plc_program_structure_design",
+      "target": "notes_plc_program_structure_3_\ub514\ubc14\uc774\uc2a4_\ub9f5_device_map",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L561",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_refriger_charging_machine_plc_program_structure_design",
+      "target": "notes_plc_program_structure_4_\uba54\uc778_\uc2dc\ud000\uc2a4_\uc124\uacc4_step_control",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L657",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_refriger_charging_machine_plc_program_structure_design",
+      "target": "notes_plc_program_structure_5_\uc9c4\uacf5_\uc2dc\ud000\uc2a4_\uc0c1\uc138_gunvac_csv_unitvac_csv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_0_\uc2dc\uc2a4\ud15c_\uad6c\uc131_system_configuration",
+      "target": "notes_plc_program_structure_0_1_\uc9c0\uc6d0_\uad6c\uc131",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_0_\uc2dc\uc2a4\ud15c_\uad6c\uc131_system_configuration",
+      "target": "notes_plc_program_structure_0_2_\uad6c\uc131_\ud30c\ub77c\ubbf8\ud130_plc_d_register",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_0_\uc2dc\uc2a4\ud15c_\uad6c\uc131_system_configuration",
+      "target": "notes_plc_program_structure_0_3_line_gun_\uac1c\ub150",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_0_\uc2dc\uc2a4\ud15c_\uad6c\uc131_system_configuration",
+      "target": "notes_plc_program_structure_0_4_gun_type",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L58",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_0_\uc2dc\uc2a4\ud15c_\uad6c\uc131_system_configuration",
+      "target": "notes_plc_program_structure_0_5_gun_index_\uacf5\uc2dd",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_0_\uc2dc\uc2a4\ud15c_\uad6c\uc131_system_configuration",
+      "target": "notes_plc_program_structure_0_5_gun_index_\uacf5\uc2dd_60",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_0_3_line_gun_\uac1c\ub150",
+      "target": "notes_plc_program_structure_codeblock_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_0_5_gun_index_\uacf5\uc2dd_60",
+      "target": "notes_plc_program_structure_codeblock_2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L75",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_1_i_o_\uc694\uad6c\uc0ac\ud56d_\ubd84\uc11d_hmi_plc_\uc2e0\ud638_\ub9e4\ud551",
+      "target": "notes_plc_program_structure_1_1_hmi_button_plc_\ub0b4\ubd80_\ub9b4\ub808\uc774_m_\ud478\uc2dc_on",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L107",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_1_i_o_\uc694\uad6c\uc0ac\ud56d_\ubd84\uc11d_hmi_plc_\uc2e0\ud638_\ub9e4\ud551",
+      "target": "notes_plc_program_structure_1_2_\ubb3c\ub9ac\uc801_i_o_\ucd94\uc815_2_line_\uae30\uc900",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L120",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_1_i_o_\uc694\uad6c\uc0ac\ud56d_\ubd84\uc11d_hmi_plc_\uc2e0\ud638_\ub9e4\ud551",
+      "target": "notes_plc_program_structure_1_3_safety_plc_\uc778\ud130\ud398\uc774\uc2a4",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L133",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_2_pou_program_organization_unit_\ubaa8\ub4c8_\uad6c\uc870",
+      "target": "notes_plc_program_structure_codeblock_3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L148",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_2_pou_program_organization_unit_\ubaa8\ub4c8_\uad6c\uc870",
+      "target": "notes_plc_program_structure_2_1_\ubaa8\ub4c8\ubcc4_\ucc45\uc784",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L173",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_3_\ub514\ubc14\uc774\uc2a4_\ub9f5_device_map",
+      "target": "notes_plc_program_structure_3_1_m_internal_relay_bit_device_0",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L328",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_3_\ub514\ubc14\uc774\uc2a4_\ub9f5_device_map",
+      "target": "notes_plc_program_structure_3_2_d_data_register_word_device_\uc9dd\uc218_\uc8fc\uc18c",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L468",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_3_\ub514\ubc14\uc774\uc2a4_\ub9f5_device_map",
+      "target": "notes_plc_program_structure_3_3_t_timer_100ms_\uc124\uc815",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L490",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_3_\ub514\ubc14\uc774\uc2a4_\ub9f5_device_map",
+      "target": "notes_plc_program_structure_3_4_x_digital_input_hex_address",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L518",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_3_\ub514\ubc14\uc774\uc2a4_\ub9f5_device_map",
+      "target": "notes_plc_program_structure_3_5_y_digital_output_hex_address",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L333",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_3_2_d_data_register_word_device_\uc9dd\uc218_\uc8fc\uc18c",
+      "target": "notes_plc_program_structure_parameter_settings_line_0_d0_d29",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L353",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_3_2_d_data_register_word_device_\uc9dd\uc218_\uc8fc\uc18c",
+      "target": "notes_plc_program_structure_parameter_settings_line_1_d30_d59_d228_2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L368",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_3_2_d_data_register_word_device_\uc9dd\uc218_\uc8fc\uc18c",
+      "target": "notes_plc_program_structure_user_settings_gun\ub2f9_14_words_\ucd5c\ub300_4_gun_56_words",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L386",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_3_2_d_data_register_word_device_\uc9dd\uc218_\uc8fc\uc18c",
+      "target": "notes_plc_program_structure_operation_display_hmi_read_\ud604\uc7ac_\uc120\ud0dd_line_gun_\uae30\uc900",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L408",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_3_2_d_data_register_word_device_\uc9dd\uc218_\uc8fc\uc18c",
+      "target": "notes_plc_program_structure_analog_line_0_line_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L426",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_3_2_d_data_register_word_device_\uc9dd\uc218_\uc8fc\uc18c",
+      "target": "notes_plc_program_structure_calculation_work_line_0_line_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L436",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_3_2_d_data_register_word_device_\uc9dd\uc218_\uc8fc\uc18c",
+      "target": "notes_plc_program_structure_communication",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L446",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_3_2_d_data_register_word_device_\uc9dd\uc218_\uc8fc\uc18c",
+      "target": "notes_plc_program_structure_spc_statistics_\uc804_line_\ud569\uc0b0",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L457",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_3_2_d_data_register_word_device_\uc9dd\uc218_\uc8fc\uc18c",
+      "target": "notes_plc_program_structure_system_configuration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L565",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_4_\uba54\uc778_\uc2dc\ud000\uc2a4_\uc124\uacc4_step_control",
+      "target": "notes_plc_program_structure_4_1_\uc2dc\ud000\uc2a4_\uc0c1\ud0dc_\ucc9c\uc774\ub3c4_line_0_\uae30\uc900_line_1\uc740_m_relay_10_offset",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L603",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_4_\uba54\uc778_\uc2dc\ud000\uc2a4_\uc124\uacc4_step_control",
+      "target": "notes_plc_program_structure_4_2_gun_\uc120\ud0dd\uacfc_\uc2dc\ud000\uc2a4_\uc5f0\ub3d9",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L623",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_4_\uba54\uc778_\uc2dc\ud000\uc2a4_\uc124\uacc4_step_control",
+      "target": "notes_plc_program_structure_4_3_\uc2a4\ud15d_\uc0c1\uc138_\uc815\uc758_line_0_line_1_\uacf5\ud1b5",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L642",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_4_\uba54\uc778_\uc2dc\ud000\uc2a4_\uc124\uacc4_step_control",
+      "target": "notes_plc_program_structure_4_4_\uc2dc\ud000\uc2a4_\uc2e4\ud328_\ucc98\ub9ac",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L567",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_4_1_\uc2dc\ud000\uc2a4_\uc0c1\ud0dc_\ucc9c\uc774\ub3c4_line_0_\uae30\uc900_line_1\uc740_m_relay_10_offset",
+      "target": "notes_plc_program_structure_codeblock_4",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L605",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_4_2_gun_\uc120\ud0dd\uacfc_\uc2dc\ud000\uc2a4_\uc5f0\ub3d9",
+      "target": "notes_plc_program_structure_codeblock_5",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L662",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_5_\uc9c4\uacf5_\uc2dc\ud000\uc2a4_\uc0c1\uc138_gunvac_csv_unitvac_csv",
+      "target": "notes_plc_program_structure_5_1_solenoid_\ub3d9\uc791_\uc694\uc57d",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L670",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_5_\uc9c4\uacf5_\uc2dc\ud000\uc2a4_\uc0c1\uc138_gunvac_csv_unitvac_csv",
+      "target": "notes_plc_program_structure_5_2_gun_vacuum",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L685",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_5_\uc9c4\uacf5_\uc2dc\ud000\uc2a4_\uc0c1\uc138_gunvac_csv_unitvac_csv",
+      "target": "notes_plc_program_structure_5_3_unit_vacuum",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L704",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_5_\uc9c4\uacf5_\uc2dc\ud000\uc2a4_\uc0c1\uc138_gunvac_csv_unitvac_csv",
+      "target": "notes_plc_program_structure_5_4_vacuum_check",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L672",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_5_2_gun_vacuum",
+      "target": "notes_plc_program_structure_codeblock_6",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L687",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_5_3_unit_vacuum",
+      "target": "notes_plc_program_structure_codeblock_7",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L706",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_5_4_vacuum_check",
+      "target": "notes_plc_program_structure_codeblock_8",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L736",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_5_4_vacuum_check",
+      "target": "notes_plc_program_structure_codeblock_9",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L755",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_5_4_vacuum_check",
+      "target": "notes_plc_program_structure_codeblock_10",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L779",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_5_4_vacuum_check",
+      "target": "notes_plc_program_structure_codeblock_11",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L800",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_5_4_vacuum_check",
+      "target": "notes_plc_program_structure_codeblock_12",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L810",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_5_4_vacuum_check",
+      "target": "notes_plc_program_structure_codeblock_13",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L823",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_5_4_vacuum_check",
+      "target": "notes_plc_program_structure_codeblock_14",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L830",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_5_4_vacuum_check",
+      "target": "notes_plc_program_structure_codeblock_15",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L845",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_5_4_vacuum_check",
+      "target": "notes_plc_program_structure_codeblock_16",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L857",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_5_4_vacuum_check",
+      "target": "notes_plc_program_structure_codeblock_17",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L869",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_5_4_vacuum_check",
+      "target": "notes_plc_program_structure_codeblock_18",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L920",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_5_4_vacuum_check",
+      "target": "notes_plc_program_structure_codeblock_19",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L958",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_5_4_vacuum_check",
+      "target": "notes_plc_program_structure_codeblock_20",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L988",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_5_4_vacuum_check",
+      "target": "notes_plc_program_structure_codeblock_21",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L1008",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_5_4_vacuum_check",
+      "target": "notes_plc_program_structure_codeblock_22",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L1030",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_5_4_vacuum_check",
+      "target": "notes_plc_program_structure_codeblock_23",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L1053",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_5_4_vacuum_check",
+      "target": "notes_plc_program_structure_codeblock_24",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L1084",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_5_4_vacuum_check",
+      "target": "notes_plc_program_structure_codeblock_25",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L1097",
+      "weight": 1.0,
+      "source": "notes_plc_program_structure_5_4_vacuum_check",
+      "target": "notes_plc_program_structure_codeblock_26",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "notes_refriger_charging_machine_md",
+      "target": "notes_refriger_charging_machine_refriger_charging_machine_hmi_specification",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "notes_refriger_charging_machine_refriger_charging_machine_hmi_specification",
+      "target": "notes_refriger_charging_machine_1_operation_screen",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
+      "source_location": "L76",
+      "weight": 1.0,
+      "source": "notes_refriger_charging_machine_refriger_charging_machine_hmi_specification",
+      "target": "notes_refriger_charging_machine_2_parameter_setting_screen",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
+      "source_location": "L97",
+      "weight": 1.0,
+      "source": "notes_refriger_charging_machine_refriger_charging_machine_hmi_specification",
+      "target": "notes_refriger_charging_machine_3_user_setting_screen_per_injection_gun",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
+      "source_location": "L111",
+      "weight": 1.0,
+      "source": "notes_refriger_charging_machine_refriger_charging_machine_hmi_specification",
+      "target": "notes_refriger_charging_machine_4_safety_plc_reset",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
+      "source_location": "L120",
+      "weight": 1.0,
+      "source": "notes_refriger_charging_machine_refriger_charging_machine_hmi_specification",
+      "target": "notes_refriger_charging_machine_5_vacuum_pump_operation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
+      "source_location": "L127",
+      "weight": 1.0,
+      "source": "notes_refriger_charging_machine_refriger_charging_machine_hmi_specification",
+      "target": "notes_refriger_charging_machine_6_screen_flow_conceptual",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
+      "source_location": "L142",
+      "weight": 1.0,
+      "source": "notes_refriger_charging_machine_refriger_charging_machine_hmi_specification",
+      "target": "notes_refriger_charging_machine_7_explosion_proof_non_explosion_proof_configuration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "notes_refriger_charging_machine_1_operation_screen",
+      "target": "notes_refriger_charging_machine_1_1_display_items",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "notes_refriger_charging_machine_1_operation_screen",
+      "target": "notes_refriger_charging_machine_1_2_labels",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "notes_refriger_charging_machine_1_operation_screen",
+      "target": "notes_refriger_charging_machine_1_3_buttons",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
+      "source_location": "L129",
+      "weight": 1.0,
+      "source": "notes_refriger_charging_machine_6_screen_flow_conceptual",
+      "target": "notes_refriger_charging_machine_codeblock_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
+      "source_location": "L151",
+      "weight": 1.0,
+      "source": "notes_refriger_charging_machine_7_explosion_proof_non_explosion_proof_configuration",
+      "target": "notes_refriger_charging_machine_7_1_door_limit_sensor_\ubc29\ud3ed_\uc804\uc6a9",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
+      "source_location": "L158",
+      "weight": 1.0,
+      "source": "notes_refriger_charging_machine_7_explosion_proof_non_explosion_proof_configuration",
+      "target": "notes_refriger_charging_machine_7_2_current_behavior",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
+      "source_location": "L164",
+      "weight": 1.0,
+      "source": "notes_refriger_charging_machine_7_explosion_proof_non_explosion_proof_configuration",
+      "target": "notes_refriger_charging_machine_7_3_mapping",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/REF_DOCUMENT.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "notes_ref_document_md",
+      "target": "notes_ref_document_ref_gx_works2_plc_il_csv_processing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/REF_DOCUMENT.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "notes_ref_document_ref_gx_works2_plc_il_csv_processing",
+      "target": "notes_ref_document_overview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/REF_DOCUMENT.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "notes_ref_document_ref_gx_works2_plc_il_csv_processing",
+      "target": "notes_ref_document_target_csv_files",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/REF_DOCUMENT.md",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "notes_ref_document_ref_gx_works2_plc_il_csv_processing",
+      "target": "notes_ref_document_key_technical_constraints",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/REF_DOCUMENT.md",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "notes_ref_document_ref_gx_works2_plc_il_csv_processing",
+      "target": "notes_ref_document_directory_structure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/REF_DOCUMENT.md",
+      "source_location": "L82",
+      "weight": 1.0,
+      "source": "notes_ref_document_ref_gx_works2_plc_il_csv_processing",
+      "target": "notes_ref_document_development_rules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/REF_DOCUMENT.md",
+      "source_location": "L90",
+      "weight": 1.0,
+      "source": "notes_ref_document_ref_gx_works2_plc_il_csv_processing",
+      "target": "notes_ref_document_reference_data",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/REF_DOCUMENT.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "notes_ref_document_target_csv_files",
+      "target": "notes_ref_document_main_program",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/REF_DOCUMENT.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "notes_ref_document_target_csv_files",
+      "target": "notes_ref_document_functional_modules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/REF_DOCUMENT.md",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "notes_ref_document_key_technical_constraints",
+      "target": "notes_ref_document_file_format_gx_works2_il_csv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/REF_DOCUMENT.md",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "notes_ref_document_key_technical_constraints",
+      "target": "notes_ref_document_non_compliance_consequence",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/REF_DOCUMENT.md",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "notes_ref_document_directory_structure",
+      "target": "notes_ref_document_codeblock_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/REF_DOCUMENT.md",
+      "source_location": "L76",
+      "weight": 1.0,
+      "source": "notes_ref_document_directory_structure",
+      "target": "notes_ref_document_external_reference",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/REF_DOCUMENT.md",
+      "source_location": "L92",
+      "weight": 1.0,
+      "source": "notes_ref_document_reference_data",
+      "target": "notes_ref_document_source_materials",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/REF_DOCUMENT.md",
+      "source_location": "L104",
+      "weight": 1.0,
+      "source": "notes_ref_document_reference_data",
+      "target": "notes_ref_document_hex_prefix_evidence_main_csv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/REF_DOCUMENT.md",
+      "source_location": "L112",
+      "weight": 1.0,
+      "source": "notes_ref_document_reference_data",
+      "target": "notes_ref_document_verified_counts_main_csv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/REF_DOCUMENT.md",
+      "source_location": "L120",
+      "weight": 1.0,
+      "source": "notes_ref_document_reference_data",
+      "target": "notes_ref_document_mnemonic_frequency_main_csv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/REF_DOCUMENT.md",
+      "source_location": "L177",
+      "weight": 1.0,
+      "source": "notes_ref_document_reference_data",
+      "target": "notes_ref_document_device_prefix_frequency_main_csv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/REF_DOCUMENT.md",
+      "source_location": "L190",
+      "weight": 1.0,
+      "source": "notes_ref_document_reference_data",
+      "target": "notes_ref_document_additional_device_types_not_in_main_csv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Notes/REF_DOCUMENT.md",
+      "source_location": "L106",
+      "weight": 1.0,
+      "source": "notes_ref_document_hex_prefix_evidence_main_csv",
+      "target": "notes_ref_document_codeblock_2",
+      "confidence_score": 1.0
+    },
     {
       "relation": "designs",
       "confidence": "EXTRACTED",
@@ -9011,5 +12210,5 @@
       ]
     }
   ],
-  "built_at_commit": "33138e2ac185d194066bab81433d9f581c1ee699"
+  "built_at_commit": "e47309265851a7f427e09c8c22b96b544f4577c9"
 }

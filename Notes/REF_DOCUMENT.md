@@ -16,6 +16,14 @@ The core specification (`Notes/GX_WORKS2_IL_Spec.md`) was reverse-engineered fro
 
 ## Target CSV Files
 
+### Main Program
+
+| File | Description |
+|---|---|
+| `main.csv` | Project-wide master program — orchestrates all individual functional modules. Contains the overall control flow, initialization, and global logic for the entire system. |
+
+### Functional Modules
+
 | File | Description |
 |---|---|
 | `gunvac.csv` | Gun vacuum control |
@@ -85,7 +93,7 @@ REF/
 
 | Source | Description |
 |---|---|
-| `F:\WorkSpace\MC_26074_DS\MAIN.csv` | Reverse-engineered PLC export (3,607 lines). Primary source for format rules. |
+| `F:\WorkSpace\MC_26074_DS\MAIN.csv` | Original PLC export (3,607 lines). Reverse-engineered for format rules. Now being reconstructed as the project's `main.csv`. |
 | `F:\WorkSpace\MC_26074_DS\L1_MAIN.csv`, `L2_MAIN.csv` | Additional partial-exports confirming format variants. |
 | `Notes/MELSEC_QL_Programming_Manual(Common_Instruction).pdf` | Mitsubishi official manual (1,096 pages). Documents the complete MELSEC-Q/L instruction set and List Mode (IL) format. Used to validate and extend the spec. |
 

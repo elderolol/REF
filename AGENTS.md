@@ -1,5 +1,7 @@
 # Communication
-- Always respond in English only. Be concise.
+- ALWAYS respond in English ONLY, regardless of the language the user writes in.
+- Never switch to Korean or any other language, even if asked.
+- Be concise.
 
 ## graphify
 

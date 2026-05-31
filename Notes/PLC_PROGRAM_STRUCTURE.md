@@ -9,14 +9,24 @@
 
 ## 0. 시스템 구성 (System Configuration)
 
-### 0-1. 지원 구성
+### 0-1. 지원 구성 (Variations)
 
-| 구성 | Line 수 | Gun/Line | Total Gun |
-|---|---|---|---|
-| 1L/1G | 1 | 1 | 1 |
-| 1L/2G | 1 | 2 | 2 |
-| 2L/2G | 2 | 1 | 2 |
-| 2L/4G | 2 | 2 | 4 |
+각 구성은 **냉매만 (Refrigerant Only)** 또는 **냉매+오일 (Refrigerant + Oil)** 2가지 모드로 구분됨.
+
+| Variation | Line | Gun/Line | Total Gun | Mode |
+|---|---|---|---|---|
+| **1L1G-REF** | 1 | 1 | 1 | Refrigerant Only |
+| **1L1G-REF+OIL** | 1 | 1 | 1 | Refrigerant + Oil |
+| **1L2G-REF** | 1 | 2 | 2 | Refrigerant Only |
+| **1L2G-REF+OIL** | 1 | 2 | 2 | Refrigerant + Oil |
+| **2L2G-REF** | 2 | 1 | 2 | Refrigerant Only |
+| **2L2G-REF+OIL** | 2 | 1 | 2 | Refrigerant + Oil |
+| **2L4G-REF** | 2 | 2 | 4 | Refrigerant Only |
+| **2L4G-REF+OIL** | 2 | 2 | 4 | Refrigerant + Oil |
+
+> **냉매만**: 냉매 주입 솔레노이드만 사용.
+> **냉매+오일**: 오일 주입 솔레노이드 추가. 오일 → 냉매 순차 주입.
+> **모든 Variation 단일 표준 프로그램으로 동작. D228, D230 파라미터로 구성 결정.
 
 ### 0-2. 구성 파라미터 (PLC D-Register)
 
@@ -31,42 +41,42 @@
 ### 0-3. Line / Gun 개념
 
 ```
-Line 0 ──┬── Gun 0 (Type A or B) ──┐
-         │                          ├── 진공계통(공유), 한 번에 1 Gun만 사용
-         └── Gun 1 (Type A or B) ──┘
+Line 1 ──┬── Gun A ──┐
+         │           ├── 진공계통(공유), 한 번에 1 Gun만 사용
+         └── Gun B ──┘
 
-Line 1 ──┬── Gun 0 (Type A or B) ──┐
-         │                          ├── 진공계통(공유), 한 번에 1 Gun만 사용
-         └── Gun 1 (Type A or B) ──┘
+Line 2 ──┬── Gun A ──┐
+         │           ├── 진공계통(공유), 한 번에 1 Gun만 사용
+         └── Gun B ──┘
 ```
 
 - **Line**: 독립된 진공 펌프 + 진공 배관 + 유닛. Line 간 완전 독립 운전.
 - **Gun**: 동일 Line 내 진공계 공유, **동시 사용 불가**. HMI로 작업 건 선택.
-- **D230=2**: 동일 Line에 2개의 Gun 장착 (서로 다른 Type 가능). 작업 시 1개 선택.
+- **2 Gun/Line**: 동일 Line에 Gun A, Gun B 장착 (서로 다른 Type 가능). 작업 시 1개 선택.
 
 ### 0-4. Gun Type
 
-| Type | 명칭 | 솔레노이드 구성 | 주입 시퀀스 |
-|---|---|---|---|
-| **0** | 1-Solenoid Refrig | Refrig 기본 1개 = **1 Sol** | Refrig_Sol ON → 목표량 → OFF |
-| **1** | Refrig H+L (2-Sol) | Refrig 고속 1개 + Refrig 저속 1개 = **2 Sol** | **RF_H + RF_L 동시 ON** → 고속정지 도달 → RF_H OFF, RF_L로 최종 목표 |
-| **2** | Oil 1-Sol + Refrig 1-Sol | Oil 1개 + Refrig 1개 = **2 Sol** | Oil_Sol ON → 목표 → OFF → Refrig_Sol ON → 목표 → OFF |
-| **3** | Oil H+L + Refrig H+L | Oil H+L + Refrig H+L = **4 Sol** | **Oil_H+Oil_L 동시 ON** → Oil고속정지 → Oil_H OFF, Oil_L로 완료 → **RF_H+RF_L 동시 ON** → RF고속정지 → RF_H OFF, RF_L로 완료 |
+> **모든 Type에 냉매만 / 냉매+오일 조합이 적용됨.**
+
+| Type | 명칭 | 솔레노이드 (냉매만) | 솔레노이드 (냉매+오일) | 주입 시퀀스 |
+|---|---|---|---|---|
+| **Type 0** | 1-Sol | Refrig 1개 = **1 Sol** | Oil 1개 + Refrig 1개 = **2 Sol** | Refrig_Sol ON → 목표량 → OFF (오일 포함 시 Oil → Refrig 순차) |
+| **Type 1** | H+L (2-Sol) | Refrig H 1개 + Refrig L 1개 = **2 Sol** | Oil H 1개 + Oil L 1개 + Refrig H 1개 + Refrig L 1개 = **4 Sol** | **H+L 동시 ON** → 고속정지 도달 → H OFF, L로 최종 목표 (오일→냉매 순차) |
 
 > **고속+저속 동시 Open**: 주입 시작 시 고속·저속 솔레노이드가 함께 열리고, 고속 중단 설정량 도달 시 고속만 닫히며 저속으로 최종 목표량까지 주입. 오일/냉매 동일한 패턴.
-
-### 0-5. Gun Index 공식
+>
+> **냉매+오일 조합**: 오일 주입이 먼저 완료된 후 냉매 주입이 시작됨. 각 주입은 독립적인 목표량을 가짐.
 
 ### 0-5. Gun Index 공식
 
 ```
 Gun Global Index = Line × GunPerLine(D230) + GunLocal
-  - Line ∈ {0, 1}
-  - GunLocal ∈ {0, 1}
-  - 예: Line1 Gun0 → 1×2+0 = 2 (Global Gun 2)
+  - Line ∈ {0, 1}     (Line 1 → 0, Line 2 → 1)
+  - GunLocal ∈ {0, 1} (Gun A → 0, Gun B → 1)
+  - 예: Line 2 Gun B → 1×2+1 = 3 (Global Gun 3)
 ```
 
-> D230=2 구성에서도 **동일 Line내 1개 Gun만 활성**. HMI Gun Select로 작업 건 결정.
+> 2 Gun/Line 구성에서도 **동일 Line내 1개 Gun만 활성**. HMI Gun Select로 작업 건 결정.
 
 ---
 
@@ -84,8 +94,8 @@ Gun Global Index = Line × GunPerLine(D230) + GunLocal
 | USER SETTING SCREEN | M45 | PULSE | 사용자 설정 화면 이동 |
 | PARAMETER SETTING SCREEN | M46 | PULSE | 파라미터 설정 화면 이동 |
 | ALARM SCREEN | M47 | PULSE | 알람 화면 이동 |
-| **GUN SELECT 0** (현재 Line내) | M48 | ALT | 현재 선택 Line의 Gun 0 선택 |
-| **GUN SELECT 1** (현재 Line내) | M49 | ALT | 현재 선택 Line의 Gun 1 선택 |
+| **GUN SELECT A** (현재 Line내) | M48 | ALT | 현재 선택 Line의 Gun A 선택 |
+| **GUN SELECT B** (현재 Line내) | M49 | ALT | 현재 선택 Line의 Gun B 선택 |
 | NUMBER OF INJECTIONS RESET | M50 | PULSE | 현재 선택 Line/Gun 주입 횟수 리셋 |
 | MODEL SELECT | M51 | PULSE | 주입 모델 선택 (현재 Gun) |
 | VACUUM PUMP ON/OFF | M52 | ALT | 진공 펌프 수동 ON/OFF (현재 Line) |
@@ -101,7 +111,7 @@ Gun Global Index = Line × GunPerLine(D230) + GunLocal
 | **STOP (Line 1)** | M62 | PULSE | Line 1 사이클 정지 |
 
 > **Line Select**: M40/M41로 활성 Line을 선택. D228 값에 따라 1 Line 구성 시 Line 1 버튼 비활성.  
-> **Gun Select**: M48/M49는 현재 선택된 Line 내에서 Gun 선택. D230 값에 따라 1 Gun/Line 구성 시 Gun 1 버튼 비활성.  
+> **Gun Select**: M48/M49는 현재 선택된 Line 내에서 Gun 선택. D230 값에 따라 1 Gun/Line 구성 시 Gun B 버튼 비활성.  
 > **Line Current**: PLC 내부에서 현재 HMI 제어 대상 Line을 M-register로 유지 (M200=Line0 Active, M201=Line1 Active).
 
 ### 1-2. 물리적 I/O 추정 (2 Line 기준)
@@ -381,7 +391,7 @@ REF/
 
 > **Gun Type (D32, D46, D60, D74)**: 0=1-Sol, 1=Refrig H+L(2Sol), 2=Oil+Refrig 1Sol(2Sol), 3=Oil+Refrig H+L(4Sol)  
 > **Oil Volume**: Type≠2 이면 0 (무시). Type=2 이면 유효.  
-> D228=1 일 때 Gun 2,3 미사용. D230=1 일 때 Gun 1,3 미사용.
+> D228=1 일 때 Line 2의 Gun A,B 미사용. D230=1 일 때 Gun B 미사용 (Gun A만 사용).
 
 #### Operation Display (HMI Read) — 현재 선택 Line/Gun 기준
 
@@ -495,24 +505,24 @@ REF/
 | **X01** | L0 | STOP_PB L0 | Line 0 정지 푸시버튼 (NC) |
 | **X02** | Global | EMG_STOP | 비상정지 (NC) |
 | **X03** | Global | SAFETY_RESET_PB | 안전 리셋 |
-| **X04** | L0 | GUN0_SENSOR L0 | Line 0 Gun 0 장착 |
+| **X04** | L0 | GUN_A_SENSOR L0 | Line 0 Gun A 장착 |
 | **X05** | L0 | VAC_PUMP_FB L0 | Line 0 진공 펌프 FB |
 | **X06** | L0 | PRESSURE_HIGH L0 | Line 0 압력 상한 |
 | **X07** | L0 | PRESSURE_LOW L0 | Line 0 압력 하한 |
 | **X08** | L0 | DOOR_GUARD L0 | Line 0 도어 인터락 |
 | **X09** | L0 | REFRIG_SUPPLY L0 | Line 0 냉매 공급 |
-| **X0A** | L0 | GUN1_SENSOR L0 | Line 0 Gun 1 장착 (D230≥2) |
+| **X0A** | L0 | GUN_B_SENSOR L0 | Line 0 Gun B 장착 (D230≥2) |
 | **X0B~X0F** | L0 | SPARE | 예비 |
 | | | | |
 | **X10** | L1 | START_PB L1 | Line 1 시작 (D228≥2) |
 | **X11** | L1 | STOP_PB L1 | Line 1 정지 |
-| **X14** | L1 | GUN0_SENSOR L1 | Line 1 Gun 0 장착 |
+| **X14** | L1 | GUN_A_SENSOR L1 | Line 1 Gun A 장착 |
 | **X15** | L1 | VAC_PUMP_FB L1 | Line 1 진공 펌프 FB |
 | **X16** | L1 | PRESSURE_HIGH L1 | Line 1 압력 상한 |
 | **X17** | L1 | PRESSURE_LOW L1 | Line 1 압력 하한 |
 | **X18** | L1 | DOOR_GUARD L1 | Line 1 도어 인터락 |
 | **X19** | L1 | REFRIG_SUPPLY L1 | Line 1 냉매 공급 |
-| **X1A** | L1 | GUN1_SENSOR L1 | Line 1 Gun 1 장착 (D230≥2) |
+| **X1A** | L1 | GUN_B_SENSOR L1 | Line 1 Gun B 장착 (D230≥2) |
 | **X1B~X1F** | L1 | SPARE | 예비 |
 
 ### 3-5. Y (Digital Output) — Hex Address
@@ -1088,7 +1098,7 @@ HMI Write → M50~M72 → PLC → Line Select(M80/M81) → Active Line 결정
 Line 0: M10~M18 Step → M130~M135 Interlock → M150~M156 Control → Y10~Y1A Actuator
 Line 1: M20~M28 Step → M140~M145 Interlock → M160~M166 Control → Y1B~Y2x Actuator
 D228=1 이면 Line 1 로직 Skip (M800 조건 분기)
-D230=1 이면 Gun 1 로직 Skip (1 Gun/Line 모드)
+D230=1 이면 Gun B 로직 Skip (1 Gun/Line 모드)
 PC Write → D190~D209(L0) / D230~D249(L1) → START → Working Area → Cycle 사용
 Cycle Complete → Write Area 0 Clear → PC 확인 후 다음 Write
 AI Raw → ad.csv → Line별 EU → vacchec / alarm / gmes
