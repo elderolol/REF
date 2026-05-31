@@ -1093,7 +1093,7 @@
       "label": "0-2. \uad6c\uc131 \ud30c\ub77c\ubbf8\ud130 (PLC D-Register)",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
-      "source_location": "L31",
+      "source_location": "L25",
       "id": "notes_plc_program_structure_0_2_\uad6c\uc131_\ud30c\ub77c\ubbf8\ud130_plc_d_register",
       "community": 22,
       "norm_label": "0-2. \u1100\u116e\u1109\u1165\u11bc \u1111\u1161\u1105\u1161\u1106\u1175\u1110\u1165 (plc d-register)"
@@ -1102,7 +1102,7 @@
       "label": "0-3. Line / Gun \uac1c\ub150",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
-      "source_location": "L41",
+      "source_location": "L36",
       "id": "notes_plc_program_structure_0_3_line_gun_\uac1c\ub150",
       "community": 22,
       "norm_label": "0-3. line / gun \u1100\u1162\u1102\u1167\u11b7"
@@ -1111,7 +1111,7 @@
       "label": "code:block1 (Line 1 \u2500\u2500\u252c\u2500\u2500 Gun A \u2500\u2500\u2510)",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
-      "source_location": "L43",
+      "source_location": "L38",
       "id": "notes_plc_program_structure_codeblock_1",
       "community": 22,
       "norm_label": "code:block1 (line 1 \u2500\u2500\u252c\u2500\u2500 gun a \u2500\u2500\u2510)"
@@ -1120,7 +1120,7 @@
       "label": "0-4. Gun Type",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
-      "source_location": "L57",
+      "source_location": "L52",
       "id": "notes_plc_program_structure_0_4_gun_type",
       "community": 22,
       "norm_label": "0-4. gun type"
@@ -1318,7 +1318,7 @@
       "label": "3-3. T (Timer) \u2014 100ms \uc124\uc815",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
-      "source_location": "L478",
+      "source_location": "L479",
       "id": "notes_plc_program_structure_3_3_t_timer_100ms_\uc124\uc815",
       "community": 25,
       "norm_label": "3-3. t (timer) \u2014 100ms \u1109\u1165\u11af\u110c\u1165\u11bc"
@@ -1327,7 +1327,7 @@
       "label": "3-4. X (Digital Input) \u2014 Hex Address",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
-      "source_location": "L500",
+      "source_location": "L501",
       "id": "notes_plc_program_structure_3_4_x_digital_input_hex_address",
       "community": 25,
       "norm_label": "3-4. x (digital input) \u2014 hex address"
@@ -1336,7 +1336,7 @@
       "label": "3-5. Y (Digital Output) \u2014 Hex Address",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
-      "source_location": "L528",
+      "source_location": "L529",
       "id": "notes_plc_program_structure_3_5_y_digital_output_hex_address",
       "community": 25,
       "norm_label": "3-5. y (digital output) \u2014 hex address"
@@ -1345,7 +1345,7 @@
       "label": "4. \uba54\uc778 \uc2dc\ud000\uc2a4 \uc124\uacc4 (Step Control)",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
-      "source_location": "L571",
+      "source_location": "L574",
       "id": "notes_plc_program_structure_4_\uba54\uc778_\uc2dc\ud000\uc2a4_\uc124\uacc4_step_control",
       "community": 22,
       "norm_label": "4. \u1106\u1166\u110b\u1175\u11ab \u1109\u1175\u110f\u116f\u11ab\u1109\u1173 \u1109\u1165\u11af\u1100\u1168 (step control)"
@@ -1354,7 +1354,7 @@
       "label": "4-1. \uc2dc\ud000\uc2a4 \uc0c1\ud0dc \ucc9c\uc774\ub3c4 (Line 0 \uae30\uc900, Line 1\uc740 M-relay +10 offset)",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
-      "source_location": "L575",
+      "source_location": "L578",
       "id": "notes_plc_program_structure_4_1_\uc2dc\ud000\uc2a4_\uc0c1\ud0dc_\ucc9c\uc774\ub3c4_line_0_\uae30\uc900_line_1\uc740_m_relay_10_offset",
       "community": 22,
       "norm_label": "4-1. \u1109\u1175\u110f\u116f\u11ab\u1109\u1173 \u1109\u1161\u11bc\u1110\u1162 \u110e\u1165\u11ab\u110b\u1175\u1103\u1169 (line 0 \u1100\u1175\u110c\u116e\u11ab, line 1\u110b\u1173\u11ab m-relay +10 offset)"
@@ -1363,7 +1363,7 @@
       "label": "code:block4 (\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510)",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
-      "source_location": "L577",
+      "source_location": "L580",
       "id": "notes_plc_program_structure_codeblock_4",
       "community": 22,
       "norm_label": "code:block4 (\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510)"
@@ -1372,7 +1372,7 @@
       "label": "4-2. Gun \uc120\ud0dd\uacfc \uc2dc\ud000\uc2a4 \uc5f0\ub3d9",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
-      "source_location": "L613",
+      "source_location": "L616",
       "id": "notes_plc_program_structure_4_2_gun_\uc120\ud0dd\uacfc_\uc2dc\ud000\uc2a4_\uc5f0\ub3d9",
       "community": 22,
       "norm_label": "4-2. gun \u1109\u1165\u11ab\u1110\u1162\u11a8\u1100\u116a \u1109\u1175\u110f\u116f\u11ab\u1109\u1173 \u110b\u1167\u11ab\u1103\u1169\u11bc"
@@ -1381,7 +1381,7 @@
       "label": "code:block5 ([Line \ub0b4 Gun \uc120\ud0dd] (D230\u22652 \uad6c\uc131\uc5d0\uc11c HMI Gun Select\ub85c \ud65c\uc131 Gun \uacb0\uc815))",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
-      "source_location": "L615",
+      "source_location": "L618",
       "id": "notes_plc_program_structure_codeblock_5",
       "community": 22,
       "norm_label": "code:block5 ([line \u1102\u1162 gun \u1109\u1165\u11ab\u1110\u1162\u11a8] (d230\u22652 \u1100\u116e\u1109\u1165\u11bc\u110b\u1166\u1109\u1165 hmi gun select\u1105\u1169 \u1112\u116a\u11af\u1109\u1165\u11bc gun \u1100\u1167\u11af\u110c\u1165\u11bc))"
@@ -1390,7 +1390,7 @@
       "label": "4-3. \uc2a4\ud15d \uc0c1\uc138 \uc815\uc758 (Line 0 / Line 1 \uacf5\ud1b5)",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
-      "source_location": "L633",
+      "source_location": "L636",
       "id": "notes_plc_program_structure_4_3_\uc2a4\ud15d_\uc0c1\uc138_\uc815\uc758_line_0_line_1_\uacf5\ud1b5",
       "community": 22,
       "norm_label": "4-3. \u1109\u1173\u1110\u1166\u11b8 \u1109\u1161\u11bc\u1109\u1166 \u110c\u1165\u11bc\u110b\u1174 (line 0 / line 1 \u1100\u1169\u11bc\u1110\u1169\u11bc)"
@@ -1399,7 +1399,7 @@
       "label": "4-4. \uc2dc\ud000\uc2a4 \uc2e4\ud328 \ucc98\ub9ac",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
-      "source_location": "L652",
+      "source_location": "L655",
       "id": "notes_plc_program_structure_4_4_\uc2dc\ud000\uc2a4_\uc2e4\ud328_\ucc98\ub9ac",
       "community": 22,
       "norm_label": "4-4. \u1109\u1175\u110f\u116f\u11ab\u1109\u1173 \u1109\u1175\u11af\u1111\u1162 \u110e\u1165\u1105\u1175"
@@ -1408,7 +1408,7 @@
       "label": "5. \uc9c4\uacf5 \uc2dc\ud000\uc2a4 \uc0c1\uc138 (gunvac.csv / unitvac.csv)",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
-      "source_location": "L667",
+      "source_location": "L670",
       "id": "notes_plc_program_structure_5_\uc9c4\uacf5_\uc2dc\ud000\uc2a4_\uc0c1\uc138_gunvac_csv_unitvac_csv",
       "community": 21,
       "norm_label": "5. \u110c\u1175\u11ab\u1100\u1169\u11bc \u1109\u1175\u110f\u116f\u11ab\u1109\u1173 \u1109\u1161\u11bc\u1109\u1166 (gunvac.csv / unitvac.csv)"
@@ -1417,7 +1417,7 @@
       "label": "5-1. Solenoid \ub3d9\uc791 \uc694\uc57d",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
-      "source_location": "L672",
+      "source_location": "L675",
       "id": "notes_plc_program_structure_5_1_solenoid_\ub3d9\uc791_\uc694\uc57d",
       "community": 21,
       "norm_label": "5-1. solenoid \u1103\u1169\u11bc\u110c\u1161\u11a8 \u110b\u116d\u110b\u1163\u11a8"
@@ -1426,7 +1426,7 @@
       "label": "5-2. GUN VACUUM",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
-      "source_location": "L680",
+      "source_location": "L683",
       "id": "notes_plc_program_structure_5_2_gun_vacuum",
       "community": 21,
       "norm_label": "5-2. gun vacuum"
@@ -1435,7 +1435,7 @@
       "label": "code:block6 ([\uc9c4\uc785] M12/M22 ON)",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
-      "source_location": "L682",
+      "source_location": "L685",
       "id": "notes_plc_program_structure_codeblock_6",
       "community": 21,
       "norm_label": "code:block6 ([\u110c\u1175\u11ab\u110b\u1175\u11b8] m12/m22 on)"
@@ -1444,7 +1444,7 @@
       "label": "5-3. UNIT VACUUM",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
-      "source_location": "L695",
+      "source_location": "L698",
       "id": "notes_plc_program_structure_5_3_unit_vacuum",
       "community": 21,
       "norm_label": "5-3. unit vacuum"
@@ -1453,7 +1453,7 @@
       "label": "code:block7 ([\uc9c4\uc785] M13/M23 ON)",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
-      "source_location": "L697",
+      "source_location": "L700",
       "id": "notes_plc_program_structure_codeblock_7",
       "community": 21,
       "norm_label": "code:block7 ([\u110c\u1175\u11ab\u110b\u1175\u11b8] m13/m23 on)"
@@ -1462,7 +1462,7 @@
       "label": "5-4. VACUUM CHECK",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
-      "source_location": "L714",
+      "source_location": "L717",
       "id": "notes_plc_program_structure_5_4_vacuum_check",
       "community": 21,
       "norm_label": "5-4. vacuum check"
@@ -1471,7 +1471,7 @@
       "label": "code:block8 ([\uc9c4\uc785] M14/M24 ON)",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
-      "source_location": "L716",
+      "source_location": "L719",
       "id": "notes_plc_program_structure_codeblock_8",
       "community": 21,
       "norm_label": "code:block8 ([\u110c\u1175\u11ab\u110b\u1175\u11b8] m14/m24 on)"
@@ -1480,7 +1480,7 @@
       "label": "code:block9",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
-      "source_location": "L746",
+      "source_location": "L749",
       "id": "notes_plc_program_structure_codeblock_9",
       "community": 21,
       "norm_label": "code:block9"
@@ -1489,7 +1489,7 @@
       "label": "code:block10",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
-      "source_location": "L765",
+      "source_location": "L768",
       "id": "notes_plc_program_structure_codeblock_10",
       "community": 21,
       "norm_label": "code:block10"
@@ -1498,7 +1498,7 @@
       "label": "code:block11",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
-      "source_location": "L789",
+      "source_location": "L808",
       "id": "notes_plc_program_structure_codeblock_11",
       "community": 21,
       "norm_label": "code:block11"
@@ -1507,7 +1507,7 @@
       "label": "code:block12",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
-      "source_location": "L810",
+      "source_location": "L848",
       "id": "notes_plc_program_structure_codeblock_12",
       "community": 21,
       "norm_label": "code:block12"
@@ -1516,7 +1516,7 @@
       "label": "code:block13",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
-      "source_location": "L820",
+      "source_location": "L855",
       "id": "notes_plc_program_structure_codeblock_13",
       "community": 21,
       "norm_label": "code:block13"
@@ -1525,7 +1525,7 @@
       "label": "code:block14",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
-      "source_location": "L833",
+      "source_location": "L870",
       "id": "notes_plc_program_structure_codeblock_14",
       "community": 21,
       "norm_label": "code:block14"
@@ -1534,7 +1534,7 @@
       "label": "code:block15",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
-      "source_location": "L840",
+      "source_location": "L882",
       "id": "notes_plc_program_structure_codeblock_15",
       "community": 21,
       "norm_label": "code:block15"
@@ -1543,7 +1543,7 @@
       "label": "code:block16",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
-      "source_location": "L855",
+      "source_location": "L894",
       "id": "notes_plc_program_structure_codeblock_16",
       "community": 21,
       "norm_label": "code:block16"
@@ -1552,7 +1552,7 @@
       "label": "code:block17",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
-      "source_location": "L867",
+      "source_location": "L945",
       "id": "notes_plc_program_structure_codeblock_17",
       "community": 21,
       "norm_label": "code:block17"
@@ -1561,7 +1561,7 @@
       "label": "code:block18",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
-      "source_location": "L879",
+      "source_location": "L983",
       "id": "notes_plc_program_structure_codeblock_18",
       "community": 21,
       "norm_label": "code:block18"
@@ -1570,7 +1570,7 @@
       "label": "code:block19",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
-      "source_location": "L930",
+      "source_location": "L1013",
       "id": "notes_plc_program_structure_codeblock_19",
       "community": 21,
       "norm_label": "code:block19"
@@ -1579,7 +1579,7 @@
       "label": "code:block20",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
-      "source_location": "L968",
+      "source_location": "L1033",
       "id": "notes_plc_program_structure_codeblock_20",
       "community": 21,
       "norm_label": "code:block20"
@@ -1588,7 +1588,7 @@
       "label": "code:block21",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
-      "source_location": "L998",
+      "source_location": "L1055",
       "id": "notes_plc_program_structure_codeblock_21",
       "community": 21,
       "norm_label": "code:block21"
@@ -1597,7 +1597,7 @@
       "label": "code:block22",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
-      "source_location": "L1018",
+      "source_location": "L1078",
       "id": "notes_plc_program_structure_codeblock_22",
       "community": 21,
       "norm_label": "code:block22"
@@ -1606,7 +1606,7 @@
       "label": "code:block23",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
-      "source_location": "L1040",
+      "source_location": "L1109",
       "id": "notes_plc_program_structure_codeblock_23",
       "community": 21,
       "norm_label": "code:block23"
@@ -1615,28 +1615,10 @@
       "label": "code:block24",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
-      "source_location": "L1063",
+      "source_location": "L1122",
       "id": "notes_plc_program_structure_codeblock_24",
       "community": 21,
       "norm_label": "code:block24"
-    },
-    {
-      "label": "code:block25",
-      "file_type": "document",
-      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
-      "source_location": "L1094",
-      "id": "notes_plc_program_structure_codeblock_25",
-      "community": 21,
-      "norm_label": "code:block25"
-    },
-    {
-      "label": "code:block26",
-      "file_type": "document",
-      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
-      "source_location": "L1107",
-      "id": "notes_plc_program_structure_codeblock_26",
-      "community": 21,
-      "norm_label": "code:block26"
     },
     {
       "label": "REFRIGER_CHARGING_MACHINE.md",
@@ -1970,6 +1952,24 @@
       "id": "notes_ref_document_additional_device_types_not_in_main_csv",
       "community": 23,
       "norm_label": "additional device types (not in main.csv)"
+    },
+    {
+      "label": "code:block25",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L1094",
+      "community": 21,
+      "norm_label": "code:block25",
+      "id": "notes_plc_program_structure_codeblock_25"
+    },
+    {
+      "label": "code:block26",
+      "file_type": "document",
+      "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
+      "source_location": "L1107",
+      "community": 21,
+      "norm_label": "code:block26",
+      "id": "notes_plc_program_structure_codeblock_26"
     },
     {
       "label": "0-1. \uc9c0\uc6d0 \uad6c\uc131",
@@ -7164,9 +7164,9 @@
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "notes_plc_program_structure_0_\uc2dc\uc2a4\ud15c_\uad6c\uc131_system_configuration",
-      "target": "notes_plc_program_structure_0_1_\uc9c0\uc6d0_\uad6c\uc131_variations",
-      "confidence_score": 1.0
+      "target": "notes_plc_program_structure_0_1_\uc9c0\uc6d0_\uad6c\uc131_variations"
     },
     {
       "relation": "contains",
@@ -7244,9 +7244,9 @@
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L72",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "notes_plc_program_structure_0_5_gun_index_\uacf5\uc2dd",
-      "target": "notes_plc_program_structure_codeblock_2",
-      "confidence_score": 1.0
+      "target": "notes_plc_program_structure_codeblock_2"
     },
     {
       "relation": "contains",
@@ -12239,5 +12239,5 @@
       ]
     }
   ],
-  "built_at_commit": "706af0ac743bfb59b72abe57fc47b8f95d02c3b6"
+  "built_at_commit": "c3bdb1b8aaab125efef7aab664767f9a7f5f0ed9"
 }
