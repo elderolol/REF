@@ -37,7 +37,7 @@
 | D28 / D56 | Oil Injection Tolerance (±g) |
 | D8 / D38 | Gas Exhaust Time (0.1 sec) |
 | D276 | Oil Mode (0=REF Only, 1=REF+OIL) |
-| HSC | Flow Meter Pulse (고속카운터) |
+| HSC | Flow Meter Pulse (고속카운터, 별도 채널) |
 | M304~M305 | Gun Coupler Sensors L0 |
 | M314~M315 | Gun Coupler Sensors L1 |
 | M60~M63 | Injection Active Flags (1 per Gun) |

@@ -8,8 +8,8 @@
 
 ## 1. Purpose
 
-- 전역 누계 데이터 관리 (냉매 총 사용량, 주입 횟수, 펄스 누계)
-- 최근 실주입량 / 설정량 기록
+- 라인별 누계 데이터 관리 (냉매 총 사용량, 주입 횟수, 펄스 누계)
+- 최근 실주입량 / 설정량 기록 (라인별)
 - 봄베 알람 조건 감시
 
 ---
@@ -34,11 +34,16 @@
 
 | Device | Width | Description |
 |:------:|:----:|-------------|
-| D280~D281 | **32-bit** | Refrigerant Total Usage (Kg) |
-| D282~D283 | **32-bit** | Total Injection Count |
-| D284~D285 | **32-bit** | Total Pulse Count |
-| D286~D287 | **32-bit** | Last Actual Injection Volume (g) |
-| D288~D289 | **32-bit** | Last Setting Injection Volume (g) |
+| D280~D281 | **32-bit** | L0 Refrigerant Total Usage (Kg) |
+| D282~D283 | **32-bit** | L0 Total Injection Count |
+| D284~D285 | **32-bit** | L0 Total Pulse Count |
+| D286~D287 | **32-bit** | L0 Last Actual Injection Volume (g) |
+| D288~D289 | **32-bit** | L0 Last Setting Injection Volume (g) |
+| D290~D291 | **32-bit** | L1 Refrigerant Total Usage (Kg) |
+| D292~D293 | **32-bit** | L1 Total Injection Count |
+| D294~D295 | **32-bit** | L1 Total Pulse Count |
+| D296~D297 | **32-bit** | L1 Last Actual Injection Volume (g) |
+| D298~D299 | **32-bit** | L1 Last Setting Injection Volume (g) |
 | D88 | 16-bit | Number of Injections (HMI Display) |
 | L4B | — | Refriger Bombe Low Alarm Flag |
 
@@ -46,34 +51,42 @@
 
 ## 4. Logic
 
-### 4-1. Total Usage Accumulation
+### 4-1. L0 Total Usage Accumulation
 
 ```
 L18 (L0 Cycle Done) Rising Edge
     │
-    ├── D280~D281 (Total Usage) += D130 (Actual Inj Volume)
-    ├── D282~D283 (Total Count) += 1
-    ├── D284~D285 (Total Pulse) += D124
-    ├── D286~D287 = D130 (Last Actual Volume)
-    └── D288~D289 = D128 (Last Setting Volume)
-
-// L1 동일
-L28 (L1 Cycle Done) Rising Edge
-    └── 동일한 로직
+    ├── D280~D281 (L0 Total Usage) += D130 (Actual Inj Volume)
+    ├── D282~D283 (L0 Total Count) += 1
+    ├── D284~D285 (L0 Total Pulse) += D124
+    ├── D286~D287 = D130 (L0 Last Actual Volume)
+    └── D288~D289 = D128 (L0 Last Setting Volume)
 ```
 
-### 4-2. Display Mirror
+### 4-2. L1 Total Usage Accumulation
+
+```
+L28 (L1 Cycle Done) Rising Edge
+    │
+    ├── D290~D291 (L1 Total Usage) += D130 (Actual Inj Volume)
+    ├── D292~D293 (L1 Total Count) += 1
+    ├── D294~D295 (L1 Total Pulse) += D124
+    ├── D296~D297 = D130 (L1 Last Actual Volume)
+    └── D298~D299 = D128 (L1 Last Setting Volume)
+```
+
+### 4-3. Display Mirror
 
 ```
 D88 (Number of Injections) = D282~D283 (하위 16-bit)
 ```
 
-### 4-3. Bombe Alarm Check
+### 4-4. Bombe Alarm Check
 
 ```
-// 매 Update 시 Bombe 사용량 확인
-LDD>= D280~D281    // Total Usage ≥ Bombe Setting?
-    D14             // Bombe Alarm Setting
+// 매 Update 시 Bombe 사용량 확인 (L0 + L1 합)
+LDD>= D280~D281 + D290~D291    // Total Usage ≥ Bombe Setting?
+        D14                     // Bombe Alarm Setting
     → SET L4B (Refriger Bombe Low Alarm)
 ```
 

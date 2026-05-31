@@ -323,7 +323,7 @@
 | D230~D249 | Barcode Write Area — Line 1 | Y (래치) |
 | D250~D269 | Barcode Working Area — Line 1 | Y (래치) |
 | D270~D279 | 예비 | Y (래치) |
-| D280~D299 | SPC 누계 데이터 | Y (래치) |
+| D280~D299 | SPC 누계 데이터 (L0/L1 분리) | Y (래치) |
 | D300~ | 비래치 영역 (임시/스크래치) | N |
 
 ### 3-2. Parameter Settings — Line 0 (D0~D29)
@@ -331,9 +331,9 @@
 | Addr | Width | 항목 | Unit | Note |
 |:----:|:-----:|------|:----:|------|
 | **D0** | 16 | L0 Model Number | — | Line 0 현재 작업 모델# |
-| **D2** | 16 | Gun Vacuum Time | 0.1 sec | |
-| **D4** | 16 | Unit Vacuum Time | 0.1 sec | |
-| **D6** | 16 | Vacuum Check Time | 0.1 sec | |
+| **D2** | **32** | Gun Vacuum Time | 0.1 sec | |
+| **D4** | **32** | Unit Vacuum Time | 0.1 sec | |
+| **D6** | **32** | Vacuum Check Time | 0.1 sec | |
 | **D8** | 16 | Gas Exhaust Time | 0.1 sec | |
 | **D10** | 16 | Refrig High-Speed Inj Stop | g | |
 | **D12** | 16 | Oil High-Speed Inj Stop | g | D234=1 + Type 1 |
@@ -351,9 +351,9 @@
 | Addr | Width | 항목 | Addr | Width | 항목 |
 |:----:|:-----:|------|:----:|:-----:|------|
 | **D30** | 16 | L1 Model Number | **D46** | 16 | Pressure High Limit |
-| **D32** | 16 | Gun Vacuum Time | **D48** | 16 | Pressure Low Limit |
-| **D34** | 16 | Unit Vacuum Time | **D50** | **32** | Unit Vacuum Setting |
-| **D36** | 16 | Vacuum Check Time | **D52** | **32** | Vacuum Check Setting |
+| **D32** | **32** | Gun Vacuum Time | **D48** | 16 | Pressure Low Limit |
+| **D34** | **32** | Unit Vacuum Time | **D50** | **32** | Unit Vacuum Setting |
+| **D36** | **32** | Vacuum Check Time | **D52** | **32** | Vacuum Check Setting |
 | **D38** | 16 | Gas Exhaust Time | **D54** | 16 | Refrig Injection Tolerance |
 | **D40** | 16 | Refrig H-Speed Stop | **D56** | 16 | Oil Injection Tolerance |
 | **D42** | 16 | Oil H-Speed Stop | **D58~D59** | — | 예비 |
@@ -402,13 +402,13 @@
 | D152 | 16 | L0 CH0 EU | ad.csv or 485.csv | 변환값 (공통 출력) |
 | D154 | 16 | L0 CH1 AD Raw | ad.csv | 0~4000 |
 | D156 | 16 | L0 CH1 EU | ad.csv or 485.csv | 변환값 (공통 출력) |
-| D158 | 16 | L0 CH2 AD Raw | ad.csv | 0~4000 |
+| D158 | **32** | L0 CH2 AD Raw | ad.csv | 0~4000 |
 | D160 | **32** | L0 CH2 EU | ad.csv or 485.csv | 변환값 (공통 출력) |
 | D162 | 16 | L1 CH0 AD Raw | ad.csv | 0~4000 (D270≥2) |
 | D164 | 16 | L1 CH0 EU | ad.csv or 485.csv | |
 | D166 | 16 | L1 CH1 AD Raw | ad.csv | |
 | D168 | 16 | L1 CH1 EU | ad.csv or 485.csv | |
-| D170 | 16 | L1 CH2 AD Raw | ad.csv | |
+| D170 | **32** | L1 CH2 AD Raw | ad.csv | |
 | D172 | **32** | L1 CH2 EU | ad.csv or 485.csv | |
 | D174~D179 | — | 예비 | — | |
 
@@ -453,18 +453,49 @@
 > **D270/D272 변경 시 PLC STOP 후 다운로드 필요.**  
 > **D276는 운전 중 변경 가능 (모드 전환).**
 
-### 3-9. SPC 누계 (D280~D299)
+### 3-9. SPC 누계 — Line 0 (D280~D289)
 
 | Addr | Width | 항목 | Update Trigger |
 |:----:|:-----:|------|:-------------:|
-| D280~D281 | 32 | 냉매 총 사용량 (Kg) | 모든 Line Cycle Complete |
-| D282~D283 | 32 | 총 주입 횟수 | 모든 Line Cycle Complete |
-| D284~D285 | 32 | 총 펄스 카운트 | 매 주입 시 적산 |
-| D286~D287 | 32 | 최근 실주입량 (g) | 마지막 Cycle Complete |
-| D288~D289 | 32 | 최근 설정 주입량 (g) | 마지막 Cycle Complete |
-| D290~D299 | — | 예비 | |
+| D280~D281 | 32 | L0 냉매 총 사용량 (Kg) | L0 Cycle Complete |
+| D282~D283 | 32 | L0 총 주입 횟수 | L0 Cycle Complete |
+| D284~D285 | 32 | L0 총 펄스 카운트 | L0 매 주입 시 적산 |
+| D286~D287 | 32 | L0 최근 실주입량 (g) | L0 마지막 Cycle Complete |
+| D288~D289 | 32 | L0 최근 설정 주입량 (g) | L0 마지막 Cycle Complete |
 
-### 3-10. PC Communication Area — Line 1 (D6980~D7239)
+### 3-10. SPC 누계 — Line 1 (D290~D299)
+
+| Addr | Width | 항목 | Update Trigger |
+|:----:|:-----:|------|:-------------:|
+| D290~D291 | 32 | L1 냉매 총 사용량 (Kg) | L1 Cycle Complete |
+| D292~D293 | 32 | L1 총 주입 횟수 | L1 Cycle Complete |
+| D294~D295 | 32 | L1 총 펄스 카운트 | L1 매 주입 시 적산 |
+| D296~D297 | 32 | L1 최근 실주입량 (g) | L1 마지막 Cycle Complete |
+| D298~D299 | 32 | L1 최근 설정 주입량 (g) | L1 마지막 Cycle Complete |
+
+### 3-11. HSC Parameters (D310~D31F)
+
+> Flow Meter 펄스 카운팅용 HSC(고속카운터) 파라미터.  
+> Non-retentive (전원 ON 시 0 초기화).
+
+| Addr | Width | 항목 | Note |
+|:----:|:-----:|------|------|
+| **D310** | 16 | HSC Channel | HSC 채널 어드레스 (QCPU 설정에 따름) |
+| **D312** | **32** | L0 Flow Scale Factor | 펄스→부피 변환 계수 (g/pulse) |
+| **D314** | **32** | L0 Current HSC Pulse | 현재 펄스 카운트 (실시간) |
+| **D316** | **32** | L0 Accumulated Pulse | 적산 펄스 (주입량 계산용) |
+| **D318** | 16 | HSC Channel L1 | D270≥2 시 사용 |
+| **D31A** | **32** | L1 Flow Scale Factor | |
+| **D31C** | **32** | L1 Current HSC Pulse | |
+| **D31E** | **32** | L1 Accumulated Pulse | |
+
+### 3-12. SPC Data Logging
+
+> 별도의 로깅 D 레지스터 없음. **D7020~D7219** (L1) 및 **D8020~D8219** (L2) PC 통신 영역에 직접 기록.  
+> Gun Vac / Unit Vac / Vac Check 동작 중 자동 모드에서 **0.08초마다** 2 words 씩 쉬프트하며 기록.  
+> 4초 = 50 data points → 50 entries × 32-bit = 100 words (기존 200 words 영역 내 충분).
+
+### 3-13. PC Communication Area — Line 1 (D6980~D7239)
 
 > **PC ↔ PLC 데이터 교환 영역.** 이 영역은 기존 설비와의 호환성을 위해 유지.
 > PC가 Ethernet으로 직접 Read/Write 하는 주소.
@@ -494,7 +525,7 @@
 | D7020~D7219 | 200 words | PLC → PC | Vacuum SPC Data (100개 × 32-bit, Torr/10000) |
 | D7220~D7239 | 20 words | PLC → PC | Barcode (40 Text) |
 
-### 3-11. PC Communication Area — Line 2 (D7860~D8239)
+### 3-14. PC Communication Area — Line 2 (D7860~D8239)
 
 | Addr | Width | Direction | 항목 |
 |:----:|:-----:|:---------:|------|
@@ -521,7 +552,7 @@
 | D8020~D8219 | 200 words | PLC → PC | Vacuum SPC Data (100개 × 32-bit) |
 | D8220~D8239 | 20 words | PLC → PC | Barcode (40 Text) |
 
-### 3-12. Device Range 요약
+### 3-15. Device Range 요약
 
 | Device | Range | 용도 | Retentive |
 |:------:|:-----:|------|:---------:|
@@ -534,7 +565,8 @@
 | **M** | M500~M50F | Communication Flags | N |
 | **M** | M600~ | 예비 | N |
 | **D** | D0~D299 | 파라미터 / 설정 / 누계 / 통신 | Y (전체 래치) |
-| **D** | D300~D6979 | Scratch / Temp / 예비 | N |
+| **D** | D300~D32F | HSC Parameters (D310~D31F) | N |
+| **D** | D330~D6979 | Scratch / Temp / 예비 | N |
 | **D** | D6980~D7239 | PC Communication Area — Line 1 | N |
 | **D** | D7860~D8239 | PC Communication Area — Line 2 | N |
 | **T** | T0~T31 | Timer (100ms base) | — |

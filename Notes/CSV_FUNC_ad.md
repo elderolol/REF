@@ -22,10 +22,10 @@
 |:------:|-------------|
 | D150 | L0 CH0 AD Raw (0~4000) — 예: Pressure |
 | D154 | L0 CH1 AD Raw (0~4000) — 예: Temperature |
-| D158 | L0 CH2 AD Raw (0~4000) — 예: Vacuum |
+| D158 | L0 CH2 AD Raw (0~4000) — 예: Vacuum (32-bit) |
 | D162 | L1 CH0 AD Raw (0~4000, D270≥2) |
 | D166 | L1 CH1 AD Raw (0~4000) |
-| D170 | L1 CH2 AD Raw (0~4000) |
+| D170 | L1 CH2 AD Raw (0~4000) — Vacuum (32-bit) |
 | HSC | Flow Meter Pulse (고속카운터, 별도 채널) |
 
 > 실제 CH 할당은 하드웨어 구성에 따름. 위는 예시.
