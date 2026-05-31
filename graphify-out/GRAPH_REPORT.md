@@ -1,16 +1,16 @@
 # Graph Report - REF  (2026-05-31)
 
 ## Corpus Check
-- 5 files · ~53,015 words
+- 5 files · ~55,256 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 514 nodes · 616 edges · 29 communities (22 shown, 7 thin omitted)
+- 515 nodes · 618 edges · 29 communities (22 shown, 7 thin omitted)
 - Extraction: 76% EXTRACTED · 24% INFERRED · 0% AMBIGUOUS · INFERRED: 146 edges (avg confidence: 0.88)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `e4730926`
+- Built from commit: `706af0ac`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -164,7 +164,7 @@ Nodes (26): 5-1. Solenoid 동작 요약, 5-2. GUN VACUUM, 5-3. UNIT VACUUM, 5-4.
 
 ### Community 22 - "Community 22"
 Cohesion: 0.08
-Nodes (24): 0-1. 지원 구성, 0-2. 구성 파라미터 (PLC D-Register), 0-3. Line / Gun 개념, 0-4. Gun Type, 0-5. Gun Index 공식, 0-5. Gun Index 공식, 0. 시스템 구성 (System Configuration), 1-1. HMI Button → PLC 내부 릴레이 (M, 푸시=ON) (+16 more)
+Nodes (25): 0-1. 지원 구성, 0-1. 지원 구성 (Variations), 0-2. 구성 파라미터 (PLC D-Register), 0-3. Line / Gun 개념, 0-4. Gun Type, 0-5. Gun Index 공식, 0-5. Gun Index 공식, 0. 시스템 구성 (System Configuration) (+17 more)
 
 ### Community 23 - "Community 23"
 Cohesion: 0.10
@@ -193,7 +193,7 @@ Nodes (8): 5-1. Type A — Label / Line Statement row, 5-2. Type B — Instructi
    · relation: safety_override
 
 ## Knowledge Gaps
-- **238 isolated node(s):** `graphify`, `1. File Encoding and BOM`, `code:block1 ([Row 1]   Program name (title)        ← see §3-1)`, `3-1. Row 1 — Program Name (title) record`, `code:block2 ("PLC Information:<TAB>""QCPU (Q mode) Q03UDV""")` (+233 more)
+- **237 isolated node(s):** `graphify`, `1. File Encoding and BOM`, `code:block1 ([Row 1]   Program name (title)        ← see §3-1)`, `3-1. Row 1 — Program Name (title) record`, `code:block2 ("PLC Information:<TAB>""QCPU (Q mode) Q03UDV""")` (+232 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **7 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -209,8 +209,8 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `REFRIGER CHARGING MACHINE — PLC Program Structure Design` connect `Community 22` to `Community 25`, `Community 21`?**
   _High betweenness centrality (0.012) - this node is a cross-community bridge._
 - **Why does `5. 진공 시퀀스 상세 (gunvac.csv / unitvac.csv)` connect `Community 21` to `Community 22`?**
-  _High betweenness centrality (0.008) - this node is a cross-community bridge._
+  _High betweenness centrality (0.009) - this node is a cross-community bridge._
 - **Are the 3 inferred relationships involving `REFRIGER_CHARGING_MACHINE_1LINE2GUN` (e.g. with `UNIT_PASS` and `INTERLOCK_NOT_USED`) actually correct?**
   _`REFRIGER_CHARGING_MACHINE_1LINE2GUN` has 3 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `graphify`, `1. File Encoding and BOM`, `code:block1 ([Row 1]   Program name (title)        ← see §3-1)` to the rest of the system?**
-  _246 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _245 weakly-connected nodes found - possible documentation gaps or missing edges._

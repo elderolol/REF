@@ -11,22 +11,16 @@
 
 ### 0-1. 지원 구성 (Variations)
 
-각 구성은 **냉매만 (Refrigerant Only)** 또는 **냉매+오일 (Refrigerant + Oil)** 2가지 모드로 구분됨.
+| Variation | Line | Gun/Line | Total Gun |
+|-----------|:----:|:--------:|:---------:|
+| **1L1G** | 1 | 1 | 1 |
+| **1L2G** | 1 | 2 | 2 |
+| **2L2G** | 2 | 1 | 2 |
+| **2L4G** | 2 | 2 | 4 |
 
-| Variation | Line | Gun/Line | Total Gun | Mode |
-|---|---|---|---|---|
-| **1L1G-REF** | 1 | 1 | 1 | Refrigerant Only |
-| **1L1G-REF+OIL** | 1 | 1 | 1 | Refrigerant + Oil |
-| **1L2G-REF** | 1 | 2 | 2 | Refrigerant Only |
-| **1L2G-REF+OIL** | 1 | 2 | 2 | Refrigerant + Oil |
-| **2L2G-REF** | 2 | 1 | 2 | Refrigerant Only |
-| **2L2G-REF+OIL** | 2 | 1 | 2 | Refrigerant + Oil |
-| **2L4G-REF** | 2 | 2 | 4 | Refrigerant Only |
-| **2L4G-REF+OIL** | 2 | 2 | 4 | Refrigerant + Oil |
-
-> **냉매만**: 냉매 주입 솔레노이드만 사용.
-> **냉매+오일**: 오일 주입 솔레노이드 추가. 오일 → 냉매 순차 주입.
-> **모든 Variation 단일 표준 프로그램으로 동작. D228, D230 파라미터로 구성 결정.
+> **모든 Variation 단일 표준 프로그램으로 동작. D228, D230 파라미터로 구성 결정.**
+> **REF/REF+OIL 모드는 D234 파라미터로 전환. D234=0 → Refrigerant Only, D234=1 → Refrigerant + Oil.**
+> **REF+OIL 시 오일은 Gun Type과 동일한 Solenoid 구조를 가짐 (미러링). 오일 → 냉매 순차 주입.**
 
 ### 0-2. 구성 파라미터 (PLC D-Register)
 
@@ -35,8 +29,9 @@
 | **D228** | Line Count | 1~2 | 운전 라인 수. 1이면 Line 1 미사용 |
 | **D230** | Gun Per Line | 1~2 | 라인당 건 수 |
 | **D232** | Total Gun (= D228 × D230) | 1~4 | PLC 연산, Read-Only |
+| **D234** | Oil Mode | 0~1 | **0=REF Only, 1=REF+OIL** (오일은 Gun Type과 동일 Sol 구조) |
 
-> 구성 변경 시 PLC STOP 후 다운로드. 운전 중 변경 불가.
+> 구성(D228/D230) 변경 시 PLC STOP 후 다운로드. D234는 운전 중 변경 가능 (모드 전환).
 
 ### 0-3. Line / Gun 개념
 
@@ -56,16 +51,21 @@ Line 2 ──┬── Gun A ──┐
 
 ### 0-4. Gun Type
 
-> **모든 Type에 냉매만 / 냉매+오일 조합이 적용됨.**
+> **Gun Type은 Refrigerant의 Solenoid 구조만 정의. Oil Mode(D234=1) 시 동일한 구조가 Oil에도 적용됨 (미러링).**
 
-| Type | 명칭 | 솔레노이드 (냉매만) | 솔레노이드 (냉매+오일) | 주입 시퀀스 |
-|---|---|---|---|---|
-| **Type 0** | 1-Sol | Refrig 1개 = **1 Sol** | Oil 1개 + Refrig 1개 = **2 Sol** | Refrig_Sol ON → 목표량 → OFF (오일 포함 시 Oil → Refrig 순차) |
-| **Type 1** | H+L (2-Sol) | Refrig H 1개 + Refrig L 1개 = **2 Sol** | Oil H 1개 + Oil L 1개 + Refrig H 1개 + Refrig L 1개 = **4 Sol** | **H+L 동시 ON** → 고속정지 도달 → H OFF, L로 최종 목표 (오일→냉매 순차) |
+| Type | 명칭 | Refrig Sol 구조 | Sol Count (D234=0) | Sol Count (D234=1) |
+|:----:|------|:---------------:|:------------------:|:------------------:|
+| **0** | 1-Sol (Base) | Base 1개 | Refrig 1개 = **1 Sol** | Oil 1 + Refrig 1 = **2 Sol** |
+| **1** | H+L (Fast+Normal) | Fast 1 + Normal 1 | Refrig H+L = **2 Sol** | Oil H+L + Refrig H+L = **4 Sol** |
 
-> **고속+저속 동시 Open**: 주입 시작 시 고속·저속 솔레노이드가 함께 열리고, 고속 중단 설정량 도달 시 고속만 닫히며 저속으로 최종 목표량까지 주입. 오일/냉매 동일한 패턴.
->
-> **냉매+오일 조합**: 오일 주입이 먼저 완료된 후 냉매 주입이 시작됨. 각 주입은 독립적인 목표량을 가짐.
+| Type | 주입 시퀀스 (REF Only) | 주입 시퀀스 (REF+OIL) |
+|:----:|----------------------|----------------------|
+| **0** | `Base_Sol ON → 목표량 → OFF` | `Oil_Sol ON → Oil목표 → OFF → Refrig_Sol ON → 목표 → OFF` |
+| **1** | `H+L 동시 ON → 고속중단 → H OFF, L로 목표` | `Oil_H+L ON → Oil고속중단 → Oil H OFF, Oil L로 완료 → Refrig_H+L ON → Refrig고속중단 → H OFF, L로 목표` |
+
+> **고속+저속 동시 Open**: 고속·저속 솔레노이드가 함께 열리고, 고속 중단 설정량 도달 시 고속만 닫히며 저속으로 최종 목표량까지 주입.
+> **오일→냉매 순차**: 오일 주입이 먼저 완료된 후 냉매 주입 시작. 각 주입은 독립적인 목표량을 가짐.
+> **Gun Type은 Gun별 설정 (D32/D46/D60/D74). 동일 Line 내 Gun A/B가 서로 다른 Type 가능.**
 
 ### 0-5. Gun Index 공식
 
@@ -120,8 +120,8 @@ Gun Global Index = Line × GunPerLine(D230) + GunLocal
 |---|---|---|---|
 | **DI L0** | 16점 | X00~X0F | Start PB, Stop PB, Safety Reset, EMG, Gun Sensor×2, Vac Pump FB, Door, Pressure SW×2, Supply OK |
 | **DI L1** | 16점 | X10~X1F | (D228≥2) Start, Stop, Gun Sensor×2, Vac Pump FB, Door, Pressure SW×2, Supply OK |
-| **DO L0** | 16점 | Y10~Y1F | Vac Pump, Gun Vac V, Unit Vac V, High Inj V×2, Low Inj V×2, Gas Exhaust V, Buzzer, Lamp G/R/Y |
-| **DO L1** | 16점 | Y20~Y2F | (D228≥2) Vac Pump, Gun Vac V, Unit Vac V, High Inj V×2, Low Inj V×2, Gas Exhaust V |
+| **DO L0** | 16점 | Y10~Y1F | Vac Pump, Gun Vac V, Unit Vac V, Inj V (Base)×2, Inj V (Fast)×2, Inj V (Normal)×2, Gas Exhaust V, Buzzer, Lamp G/R/Y |
+| **DO L1** | 16점 | Y20~Y2F | (D228≥2) Vac Pump, Gun Vac V, Unit Vac V, Inj V (Base)×2, Inj V (Fast)×2, Inj V (Normal)×2, Gas Exhaust V |
 | **AI L0** | 3ch | D120~D131 | Pressure, Temperature, Vacuum (각 Raw+EU) |
 | **AI L1** | 3ch | D132~D143 | (D228≥2) Pressure, Temperature, Vacuum |
 | **HSC** | 2ch | — | Flow Meter Pulse × 2 Line |
@@ -294,15 +294,15 @@ REF/
 | **M152** | Vac L0 | **EXHAUST SOL** (Gas Exhaust / Dead Zone) |
 | **M153** | Vac L0 | Vacuum Pump Run |
 | | | |
-| **M154** | Inj L0 G0 | **REFRIG FAST SOL** (Type0: 단일솔) |
-| **M155** | Inj L0 G0 | **REFRIG NORMAL SOL** (Type1/3) |
-| **M156** | Inj L0 G0 | **OIL FAST SOL** (Type3) / Oil Sol (Type2) |
-| **M157** | Inj L0 G0 | **OIL NORMAL SOL** (Type3) |
+| **M154** | Inj L0 G0 | **REFRIG BASE/FAST SOL** (Type0: Base, Type1: Fast) |
+| **M155** | Inj L0 G0 | **REFRIG NORMAL SOL** (Type1만) |
+| **M156** | Inj L0 G0 | **OIL BASE/FAST SOL** (D234=1 + Type0: Base, Type1: Fast) |
+| **M157** | Inj L0 G0 | **OIL NORMAL SOL** (D234=1 + Type1만) |
 | **M158** | Inj L0 G0 | Injection Active |
 | | | |
-| **M159** | Inj L0 G1 | REFRIG FAST SOL |
+| **M159** | Inj L0 G1 | REFRIG BASE/FAST SOL |
 | **M160** | Inj L0 G1 | REFRIG NORMAL SOL |
-| **M161** | Inj L0 G1 | OIL FAST SOL |
+| **M161** | Inj L0 G1 | OIL BASE/FAST SOL |
 | **M162** | Inj L0 G1 | OIL NORMAL SOL |
 | **M163** | Inj L0 G1 | Injection Active |
 | **M164~M169** | — | 예비 |
@@ -313,15 +313,15 @@ REF/
 | **M172** | Vac L1 | **EXHAUST SOL** |
 | **M173** | Vac L1 | Vacuum Pump Run |
 | | | |
-| **M174** | Inj L1 G0 | REFRIG FAST SOL |
+| **M174** | Inj L1 G0 | REFRIG BASE/FAST SOL |
 | **M175** | Inj L1 G0 | REFRIG NORMAL SOL |
-| **M176** | Inj L1 G0 | OIL FAST SOL |
+| **M176** | Inj L1 G0 | OIL BASE/FAST SOL |
 | **M177** | Inj L1 G0 | OIL NORMAL SOL |
 | **M178** | Inj L1 G0 | Injection Active |
 | | | |
-| **M179** | Inj L1 G1 | REFRIG FAST SOL |
+| **M179** | Inj L1 G1 | REFRIG BASE/FAST SOL |
 | **M180** | Inj L1 G1 | REFRIG NORMAL SOL |
-| **M181** | Inj L1 G1 | OIL FAST SOL |
+| **M181** | Inj L1 G1 | OIL BASE/FAST SOL |
 | **M182** | Inj L1 G1 | OIL NORMAL SOL |
 | **M183** | Inj L1 G1 | Injection Active |
 | **M184~M189** | — | 예비 |
@@ -350,7 +350,7 @@ REF/
 | **D6** | 16 | Vacuum Check Time | 0.1 sec | |
 | **D8** | 16 | Gas Exhaust Time | 0.1 sec | |
 | **D10** | 16 | Refrig High-Speed Inj Stop | g | |
-| **D12** | 16 | **Oil High-Speed Inj Stop** | g | Type 2,3 |
+| **D12** | 16 | **Oil High-Speed Inj Stop** | g | D234=1 + Type 1 |
 | **D14** | **32** | Refriger Bombe Alarm Setting | Kg | Global |
 | **D16** | **32** | Refriger Gas Used Amount | Kg | Global |
 | **D18** | 16 | Pressure High Limit | kgf/㎠ | |
@@ -358,7 +358,7 @@ REF/
 | **D22** | **32** | Unit Vacuum Setting Value | Torr | |
 | **D24** | **32** | Vacuum Check Setting Value | Torr | |
 | **D26** | 16 | **Refrig Injection Tolerance** | ±g | |
-| **D28** | 16 | **Oil Injection Tolerance** | ±g | Type 2,3 |
+| **D28** | 16 | **Oil Injection Tolerance** | ±g | D234=1 |
 
 #### Parameter Settings — Line 1 (D30~D59, D228≥2)
 
@@ -389,8 +389,8 @@ REF/
 
 > **Model#는 Line Parameter(D0/D30)에서 관리. User Setting의 Model#는 Gun별 Preset 매핑용.**
 
-> **Gun Type (D32, D46, D60, D74)**: 0=1-Sol, 1=Refrig H+L(2Sol), 2=Oil+Refrig 1Sol(2Sol), 3=Oil+Refrig H+L(4Sol)  
-> **Oil Volume**: Type≠2 이면 0 (무시). Type=2 이면 유효.  
+> **Gun Type (D32, D46, D60, D74)**: 0=1-Sol(Base), 1=H+L(Fast+Normal)  
+> **Oil Volume**: D234=0 이면 0 (무시). D234=1 이면 유효.  
 > D228=1 일 때 Line 2의 Gun A,B 미사용. D230=1 일 때 Gun B 미사용 (Gun A만 사용).
 
 #### Operation Display (HMI Read) — 현재 선택 Line/Gun 기준
@@ -400,7 +400,7 @@ REF/
 | **D86** | **32** | Refrigerant Usage | Kg | 전체 누계 |
 | **D88** | 16 | Number of Injections | — | 현재 Gun 기준 |
 | **D90** | 16 | Injection Model | — | 현재 Gun 모델# |
-| **D92** | 16 | **Current Gun Type** | — | 0=Refrig, 1=Oil+Refrig |
+| **D92** | 16 | **Current Gun Type** | — | 0=1-Sol(Base), 1=H+L(Fast+Normal) |
 | **D94** | **32** | Charging Pulse | — | 현재 Line Flow Meter |
 | **D96** | 16 | Injection Time | 0.1 sec | 현재 주입 경과 |
 | **D98** | **32** | Injection Setting Amount (Refrig) | g | 현재 Gun 냉매 목표 |
@@ -471,7 +471,8 @@ REF/
 | **D228** | 16 | Line Count (1 or 2) | 1 |
 | **D230** | 16 | Gun Per Line (1 or 2) | 1 |
 | **D232** | 16 | Total Gun (= D228 × D230, Read-Only) | 1 |
-| **D234~D239** | — | 예비 | |
+| **D234** | 16 | **Oil Mode (0=REF Only, 1=REF+OIL)** | 0 |
+| **D236~D239** | — | 예비 | |
 
 > **D Map 총괄**: D0~D299 사용 (짝수 주소 기준). 향후 확장은 D300부터.
 
@@ -484,7 +485,7 @@ REF/
 | **T2** | 진공 | Vac Check Timer |
 | **T3** | 진공 | Gas Exhaust Timer |
 | **T4** | 주입 | Refrig High-Speed Injection Timer |
-| **T5** | 주입 | **Oil High-Speed Injection Timer** (Type 2) |
+| **T5** | 주입 | **Oil High-Speed Injection Timer** (D234=1 + Type 1) |
 | **T6** | 주입 | Injection Timeout (Refrig) |
 | **T7** | 주입 | Injection Timeout (Oil) |
 | **T8** | 알람 | Pressure Alarm Delay |
@@ -527,20 +528,22 @@ REF/
 
 ### 3-5. Y (Digital Output) — Hex Address
 
-> Gun Type별 사용 솔레노이드: Type0=기본1개, Type1=기본+저속2개, Type2=오일(H+L)+냉매(H+L)=4개
+> **Gun Type 0 (1-Sol)**: REFRIG 1개 + (D234=1) OIL 1개  
+> **Gun Type 1 (H+L)**: REFRIG H+L 2개 + (D234=1) OIL H+L 2개  
+> **D234=0이면 OIL 관련 SOL 미사용.**
 
-| Addr | Line | Gun | Signal | Used by Type |
+| Addr | Line | Gun | Signal | Used by |
 |---|---|---|---|---|
 | **Y10** | L0 | 공용 | VAC_PUMP_RUN | All |
 | **Y11** | L0 | 공용 | **LINE VACUUM SOL** | All |
 | **Y12** | L0 | 공용 | **LINE STEM SOL** | All (Unit Vac 시 ON) |
-| **Y13** | L0 | G0 | REFRIG FAST SOL (or SINGLE) | Type0→단일, Type1/3→FAST |
-| **Y14** | L0 | G0 | REFRIG NORMAL SOL | Type1/3 |
-| **Y15** | L0 | G0 | OIL FAST SOL | Type3 / Type2 Oil Sol |
-| **Y16** | L0 | G0 | OIL NORMAL SOL | Type3 |
-| **Y17** | L0 | G1 | REFRIG FAST SOL (or SINGLE) | |
+| **Y13** | L0 | G0 | **REFRIG BASE/FAST SOL** | Type0→Base, Type1→Fast |
+| **Y14** | L0 | G0 | **REFRIG NORMAL SOL** | Type1만 |
+| **Y15** | L0 | G0 | **OIL BASE/FAST SOL** | D234=1 + Type0→Base, Type1→Fast |
+| **Y16** | L0 | G0 | **OIL NORMAL SOL** | D234=1 + Type1만 |
+| **Y17** | L0 | G1 | REFRIG BASE/FAST SOL | |
 | **Y18** | L0 | G1 | REFRIG NORMAL SOL | |
-| **Y19** | L0 | G1 | OIL FAST SOL | |
+| **Y19** | L0 | G1 | OIL BASE/FAST SOL | |
 | **Y1A** | L0 | G1 | OIL NORMAL SOL | |
 | **Y1B** | L0 | 공용 | **EXHAUST SOL** | All |
 | **Y1C~Y1F** | — | — | SPARE | |
@@ -548,13 +551,13 @@ REF/
 | **Y20** | L1 | 공용 | VAC_PUMP_RUN | D228≥2 |
 | **Y21** | L1 | 공용 | **LINE VACUUM SOL** | |
 | **Y22** | L1 | 공용 | **LINE STEM SOL** | |
-| **Y23** | L1 | G0 | REFRIG FAST SOL | |
+| **Y23** | L1 | G0 | REFRIG BASE/FAST SOL | |
 | **Y24** | L1 | G0 | REFRIG NORMAL SOL | |
-| **Y25** | L1 | G0 | OIL FAST SOL | |
+| **Y25** | L1 | G0 | OIL BASE/FAST SOL | |
 | **Y26** | L1 | G0 | OIL NORMAL SOL | |
-| **Y27** | L1 | G1 | REFRIG FAST SOL | |
+| **Y27** | L1 | G1 | REFRIG BASE/FAST SOL | |
 | **Y28** | L1 | G1 | REFRIG NORMAL SOL | |
-| **Y29** | L1 | G1 | OIL FAST SOL | |
+| **Y29** | L1 | G1 | OIL BASE/FAST SOL | |
 | **Y2A** | L1 | G1 | OIL NORMAL SOL | |
 | **Y2B** | L1 | 공용 | **EXHAUST SOL** | |
 | **Y2C~Y2F** | — | — | SPARE | |
@@ -614,20 +617,20 @@ REF/
 
 ```
 [Line 내 Gun 선택] (D230≥2 구성에서 HMI Gun Select로 활성 Gun 결정)
-    선택된 Gun의 Type(D32, D46, D60, D74)에 따라 주입 시퀀스 분기:
+    선택된 Gun의 Type(D32/D46/D60/D74)과 D234(Oil Mode)에 따라 주입 시퀀스 분기:
 
-    Type 0 (1-Sol):
-        VAC CHECK OK → INJECTION (단일솔 ON→목표량→OFF) → GAS EXHAUST → COMPLETE
+    Type 0 (1-Sol) + D234=0 (REF Only):
+        VAC CHECK OK → Refrig_Sol ON → 목표량 → OFF → GAS EXHAUST → COMPLETE
 
-    Type 1 (Refrig H+L, 2-Sol):
-        VAC CHECK OK → RF_H + RF_L 동시 ON → RF고속정지(D8) 도달 → RF_H OFF, RF_L로 최종목표 → GAS EXHAUST → COMPLETE
+    Type 0 (1-Sol) + D234=1 (REF+OIL):
+        VAC CHECK OK → Oil_Sol ON → Oil목표 → OFF → Refrig_Sol ON → Refrig목표 → OFF → GAS EXHAUST → COMPLETE
 
-    Type 2 (Oil 1+Refrig 1, 2-Sol):
-        VAC CHECK OK → Oil_Sol ON → Oil목표 도달 → Oil_Sol OFF → Refrig_Sol ON → Refrig목표 도달 → Refrig_Sol OFF → GAS EXHAUST → COMPLETE
+    Type 1 (H+L) + D234=0 (REF Only):
+        VAC CHECK OK → RF_H + RF_L 동시 ON → RF고속정지 도달 → RF_H OFF, RF_L로 최종목표 → GAS EXHAUST → COMPLETE
 
-    Type 3 (Oil+Refrig H+L, 4-Sol):
-        VAC CHECK OK → Oil_H+Oil_L 동시 ON → Oil고속정지(D10) → Oil_H OFF, Oil_L로 Oil완료 →
-        RF_H+RF_L 동시 ON → RF고속정지(D8) → RF_H OFF, RF_L로 RF완료 → GAS EXHAUST → COMPLETE
+    Type 1 (H+L) + D234=1 (REF+OIL):
+        VAC CHECK OK → Oil_H + Oil_L 동시 ON → Oil고속정지 → Oil_H OFF, Oil_L로 Oil완료 →
+        RF_H + RF_L 동시 ON → RF고속정지 → RF_H OFF, RF_L로 RF완료 → GAS EXHAUST → COMPLETE
 ```
 
 ### 4-3. 스텝 상세 정의 (Line 0 / Line 1 공통)
@@ -639,9 +642,9 @@ REF/
 | **GUN VAC** | M12 | M22 | PRECHECK OK | **LINE VAC SOL** ON, T0, **Gun Coupler 감시** | T0 ≥ D2 → Done (NO ALARM) | D2+10s |
 | **UNIT VAC** | M13 | M23 | GUN VAC Done | **LINE VAC SOL + LINE STEM SOL** ON, T1, Vacuum EU 감시 | T1 ≥ D4 AND Vac ≤ D22 → Done | D4+10s |
 | **VAC CHECK** | M14 | M24 | UNIT VAC Done | **모든 Vac SOL OFF**, T2, P_start | T2 ≥ D6 AND Vac ≤ D24 → Done | D6+5s |
-| **OIL FAST INJ** | M19 | M29 | VAC CHECK OK AND Type=3 | **OIL FAST+NORMAL 동시 ON**, T5 | 적산 ≥ OilVol−D12 → FAST OFF | |
-| **OIL NORMAL INJ** | M1A | M2A | OIL FAST Done | OIL NORMAL ON | 적산 ≥ OilVol−D28 → |실주입−목표| ≤ D28 확인 | |
-| **REFRIG FAST INJ** | M15 | M25 | VAC CHECK OK or OIL 완료 | Type1/3: **REFRIG FAST+NORMAL 동시 ON** | 적산 ≥ 목표−D10 → FAST OFF | D10/유량+10s |
+| **OIL FAST INJ** | M19 | M29 | VAC CHECK OK AND D234=1 | **OIL FAST+NORMAL 동시 ON** (Type 0: Base만), T5 | 적산 ≥ OilVol−D12 → FAST OFF (Type 1) / OilVol−D28 → Base OFF (Type 0) | |
+| **OIL NORMAL INJ** | M1A | M2A | OIL FAST Done (Type 1) | OIL NORMAL ON | 적산 ≥ OilVol−D28 → |실주입−목표| ≤ D28 확인 | |
+| **REFRIG FAST INJ** | M15 | M25 | VAC CHECK OK or OIL 완료 | Type 1: **REFRIG FAST+NORMAL 동시 ON** / Type 0: REFRIG BASE ON | 적산 ≥ 목표−D10 → FAST OFF (Type 1) / 목표→OFF (Type 0) | D10/유량+10s |
 | **REFRIG NORMAL INJ** | M16 | M26 | FAST → D10 도달 | REFRIG NORMAL ON | 적산 ≥ 목표−D26 → |실주입−목표| ≤ D26 확인 | |
 | **EXHAUST** | M17 | M27 | INJ Done | **EXHAUST SOL** ON, T3 | T3 ≥ D8 → FINISH (NO ALARM) | D8+5s |
 | **COMPLETE** | M18 | M28 | EXHAUST Done | 주입횟수+1, 사용량 적산, CycleDone SET, PC Write 0 Clear | Auto→IDLE | — |
@@ -768,29 +771,46 @@ REF/
 
 ## 6. 주입 시퀀스 상세 (refinj.csv)
 
-> **공통**: FAST SOL + NORMAL SOL **동시 ON**. FAST 중단량 도달 → FAST OFF, NORMAL로 최종 목표까지. 실주입량 ±Tolerance 초과 → NG ALARM / STOP.
+> **공통**: Type 1은 FAST SOL + NORMAL SOL 동시 ON. FAST 중단량 도달 → FAST OFF, NORMAL로 최종 목표까지.  
+> **D234=1(REF+OIL)** 시 오일 주입이 먼저 완료된 후 냉매 주입 시작. 각 주입은 독립적인 목표량을 가짐.  
+> **실주입량 ±Tolerance 초과 → NG ALARM / STOP.**
 
-### 6-1. Type 0 — 1-Sol Refrig
+### 6-1. Type 0 — 1-Sol (Base)
 
 ```
+[D234=0 — REF Only]
 [진입] M15/M25 ON
-    ├── REFRIG SOL(L0: M154, L1: M174) ON  // FAST SOL 단독 사용
+    ├── REFRIG BASE SOL(L0: M154, L1: M174) ON
     ├── InjectionActive(L0: M158, L1: M178) ON, T4 START
     ├── 적산(L0: D180~D181, L1: D200~D201)
     │
     ├── [완료] 적산 ≥ (RefrigVol + 보정 − D26)
-    │   ├── REFRIG SOL OFF, InjDone(L0: M36, L1: M46) ON
+    │   ├── REFRIG BASE SOL OFF, InjDone(L0: M36, L1: M46) ON
     │   │
-    │   └── [실주입량 ±Tolerance Check] |실주입량 − 목표| > D26 → **NG ALARM**
-    │       └── L0: M37 ON, Alarm M115  /  L1: M47 ON, Alarm M125
-    │       └── OPERATION STOP → GAS EXHAUST 후 IDLE
+    │   └── [±Tolerance] |실주입량 − 목표| > D26 → **NG ALARM**
+    │       └── L0: M37 ON / L1: M47 ON → GAS EXHAUST 후 IDLE
     │
     └── [FAIL] T4 타임아웃 → InjFail, Alarm M113/M123
+
+[D234=1 — REF+OIL]
+[Phase 1 — OIL] M19/M29 ON
+    ├── OIL BASE SOL(L0: M156, L1: M176) ON           ← Oil Base Sol (Type 0 mirror)
+    ├── T5 START, 적산 (OilVol 기준)
+    │
+    ├── [완료] 적산 ≥ (OilVol − D28)
+    │   ├── OIL BASE SOL OFF
+    │   └── |실주입량 − Oil목표| > D28 → **NG ALARM**
+    │
+    └── [FAIL] T5 타임아웃 → InjFail
+
+[Phase 2 — REFRIG] M15/M25 ON
+    └── (Phase 1 Oil 완료 후, 상기 REF Only와 동일 패턴)
 ```
 
-### 6-2. Type 1 — Refrig FAST + NORMAL (2-Sol)
+### 6-2. Type 1 — H+L (Fast + Normal)
 
 ```
+[D234=0 — REF Only]
 [진입] M15/M25 ON
     ├── REFRIG FAST SOL(L0: M154, L1: M174) ON AND REFRIG NORMAL SOL(L0: M155, L1: M175) ON  ← 동시 ON
     ├── InjectionActive(L0: M158, L1: M178) ON, T4 START
@@ -804,39 +824,34 @@ REF/
     ├── [완료] 적산 ≥ (목표 − D26)
     │   ├── REFRIG NORMAL SOL OFF, InjDone(L0: M36, L1: M46) ON
     │   │
-    │   └── [±Tolerance Check] |실주입량 − 목표| > D26 → **NG ALARM / STOP**
+    │   └── [±Tolerance] |실주입량 − 목표| > D26 → **NG ALARM / STOP**
     │
     └── [FAIL] T4 타임아웃 → InjFail
-```
 
-### 6-3. Type 2 — Oil 1-Sol + Refrig 1-Sol
-
-```
+[D234=1 — REF+OIL]
 [Phase 1 — OIL] M19/M29 ON
-    └── (Type 0과 동일 패턴, Oil Sol로 오일 주입 후 D28 Tolerance 체크)
-
-[Phase 2 — REFRIG] M15/M25 ON
-    └── (Type 0과 동일 패턴)
-```
-
-### 6-4. Type 3 — Oil FAST+NORMAL + Refrig FAST+NORMAL
-
-```
-[Phase 1 — OIL] M19/M29 ON
-    ├── OIL FAST SOL(L0: M156, L1: M176) ON AND OIL NORMAL SOL(L0: M157, L1: M177) ON
-    ├── T5 START, 적산
-    ├── 적산 ≥ (OilVol − D12) → OIL FAST OFF, NORMAL 유지
-    ├── 적산 ≥ (OilVol − D28) → OIL NORMAL OFF, |실주입−목표| > D28 → NG ALARM
+    ├── OIL FAST SOL(L0: M156, L1: M176) ON AND OIL NORMAL SOL(L0: M157, L1: M177) ON  ← 동시 ON
+    ├── T5 START, 적산 (OilVol 기준)
     │
+    ├── [FAST STOP] 적산 ≥ (OilVol − D12)
+    │   ├── OIL FAST SOL OFF
+    │   └── OIL NORMAL SOL ON 유지
+    │
+    ├── [완료] 적산 ≥ (OilVol − D28)
+    │   ├── OIL NORMAL SOL OFF
+    │   └── |실주입량 − Oil목표| > D28 → **NG ALARM**
+    │
+    └── [FAIL] T5 타임아웃 → InjFail
+
 [Phase 2 — REFRIG] M15/M25 ON
-    └── (Type 1과 동일 패턴)
+    └── (Phase 1 Oil 완료 후, 상기 REF Only Type 1과 동일 패턴)
 ```
 
-### 6-5. 보정 로직 (Active Gun G, Base=D60+G×14)
+### 6-3. 보정 로직 (Active Gun G, Base=D60+G×14)
 
 ```
 실제 목표(Refrig) = RefrigVol(D64+G×14) + Corr(D66+G×14) + HMI_Cal(D68+G×14) + Batch(D70+G×14)
-실제 목표(Oil)    = OilVol(D72+G×14)                                          // Type 2,3
+실제 목표(Oil)    = OilVol(D72+G×14)                                          // D234=1
 ```
 
 ---
