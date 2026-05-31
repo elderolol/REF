@@ -49,7 +49,7 @@
 <body>
 
 <h1>REFRIGER CHARGING MACHINE — PLC Standard Program Design</h1>
-<div class="sub">Target: Mitsubishi Q03UDV | 1L/1G ~ 2L/4G | Gun Type 0/1/2/3 | FAST+NORMAL 동시 Open | Line별 Parameter</div>
+<div class="sub">Target: Mitsubishi Q03UDV | 1L/1G ~ 2L/4G | Gun Type 0/1 | D234 Oil Mode | FAST+NORMAL 동시 Open | Line별 Parameter</div>
 
 <!-- ROW 1: CONFIG + GUN TYPE + LINE -->
 <div class="g3" style="margin-bottom:1.5mm">
@@ -65,15 +65,13 @@
     <div style="font-size:5pt;margin-top:0.3mm">D330=LineCnt(1/2) D332=Gun/Line(1/2) D334=TotalGun(RO) <b>CJ skip L1 if D330=1</b></div>
   </div>
   <div class="card">
-    <h3>Gun Type (D62/D76/D90/D104)</h3>
+    <h3>Gun Type (D62/D76/D90/D104) + D234 Oil Mode</h3>
     <table>
-      <tr><th>T</th><th>Sol</th><th>Name</th><th>Sequence</th></tr>
-      <tr><td><span class="tag t0">0</span></td><td>1</td><td>1-Sol Refrig</td><td>RF_Sol ON→목표→OFF</td></tr>
-      <tr><td><span class="tag t1">1</span></td><td>2</td><td>RF FAST+NORMAL</td><td>FAST+NORMAL 동시ON→FAST OFF→NORMAL 완료</td></tr>
-      <tr><td><span class="tag t2">2</span></td><td>2</td><td>Oil 1+RF 1</td><td>Oil_Sol→RF_Sol 순차</td></tr>
-      <tr><td><span class="tag t3">3</span></td><td>4</td><td>Oil+RF FAST+NORMAL</td><td>Oil F+N→RF F+N (각 FAST OFF)</td></tr>
+      <tr><th>T</th><th>Sol</th><th>Name</th><th>Sequence (D234=0)</th><th>D234=1 (+Oil)</th></tr>
+      <tr><td><span class="tag t0">0</span></td><td>1→2</td><td>1-Sol Base</td><td>RF_Sol ON→목표→OFF</td><td>Oil→RF 순차 (각 1-Sol)</td></tr>
+      <tr><td><span class="tag t1">1</span></td><td>2→4</td><td>FAST+NORMAL</td><td>F+N 동시ON→F OFF→N완료</td><td>Oil F+N→RF F+N (Oil 먼저)</td></tr>
     </table>
-    <div style="font-size:5pt;color:#c00;margin-top:0.2mm"><b>Same Line: 1 Gun active</b> | <b>FAST+NORMAL 동시 Open → FAST 먼저 Close</b></div>
+    <div style="font-size:5pt;color:#c00;margin-top:0.2mm"><b>D234=0 REF Only, D234=1 REF+OIL (Oil은 Type과 동일 Sol 구조)</b></div>
   </div>
   <div class="card">
     <h3>Line Independence</h3>
@@ -376,7 +374,7 @@
 </div>
 
 <div style="margin-top:2mm;padding-top:0.5mm;border-top:1px solid #ccc;font-size:4.5pt;color:#999;text-align:center">
-  REF Project — Standard PLC Program for Refrigerant Charging Machine | MC_26074 Independent | GX Works2 IL CSV Format | Gun Type 0/1/2/3 | FAST+NORMAL Simultaneous Open | Line별 Parameter | Gun Coupler Interlock | 2026-05-28
+  REF Project — Standard PLC Program for Refrigerant Charging Machine | MC_26074 Independent | GX Works2 IL CSV Format | Gun Type 0/1 + D234 Oil Mode | FAST+NORMAL Simultaneous Open | Line별 Parameter | Gun Coupler Interlock | 2026-05-31
 </div>
 
 </body>
