@@ -446,1519 +446,1519 @@
       "file_type": "document",
       "source_file": "AGENTS.md",
       "source_location": "L1",
-      "id": "agents_md",
-      "community": 28,
-      "norm_label": "agents.md"
+      "community": 23,
+      "norm_label": "agents.md",
+      "id": "agents_md"
     },
     {
       "label": "Communication",
       "file_type": "document",
       "source_file": "AGENTS.md",
       "source_location": "L1",
-      "id": "ref_agents_communication",
-      "community": 28,
-      "norm_label": "communication"
+      "community": 23,
+      "norm_label": "communication",
+      "id": "ref_agents_communication"
     },
     {
       "label": "graphify",
       "file_type": "document",
       "source_file": "AGENTS.md",
       "source_location": "L6",
-      "id": "ref_agents_graphify",
-      "community": 28,
-      "norm_label": "graphify"
+      "community": 23,
+      "norm_label": "graphify",
+      "id": "ref_agents_graphify"
     },
     {
       "label": "GX_WORKS2_IL_Spec.md",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L1",
-      "id": "notes_gx_works2_il_spec_md",
-      "community": 9,
-      "norm_label": "gx_works2_il_spec.md"
+      "community": 2,
+      "norm_label": "gx_works2_il_spec.md",
+      "id": "notes_gx_works2_il_spec_md"
     },
     {
       "label": "GX-Works2 Instruction List (IL) CSV Export \u2014 Strict Format Specification",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L1",
-      "id": "notes_gx_works2_il_spec_gx_works2_instruction_list_il_csv_export_strict_format_specification",
-      "community": 9,
-      "norm_label": "gx-works2 instruction list (il) csv export \u2014 strict format specification"
+      "community": 2,
+      "norm_label": "gx-works2 instruction list (il) csv export \u2014 strict format specification",
+      "id": "notes_gx_works2_il_spec_gx_works2_instruction_list_il_csv_export_strict_format_specification"
     },
     {
       "label": "1. File Encoding and BOM",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L7",
-      "id": "notes_gx_works2_il_spec_1_file_encoding_and_bom",
-      "community": 9,
-      "norm_label": "1. file encoding and bom"
+      "community": 2,
+      "norm_label": "1. file encoding and bom",
+      "id": "notes_gx_works2_il_spec_1_file_encoding_and_bom"
     },
     {
       "label": "2. Overall File Structure (order is fixed, NO blank rows)",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L20",
-      "id": "notes_gx_works2_il_spec_2_overall_file_structure_order_is_fixed_no_blank_rows",
-      "community": 9,
-      "norm_label": "2. overall file structure (order is fixed, no blank rows)"
+      "community": 2,
+      "norm_label": "2. overall file structure (order is fixed, no blank rows)",
+      "id": "notes_gx_works2_il_spec_2_overall_file_structure_order_is_fixed_no_blank_rows"
     },
     {
       "label": "code:block1 ([Row 1]   Program name (title)        \u2190 see \u00a73-1)",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L22",
-      "id": "notes_gx_works2_il_spec_codeblock_1",
-      "community": 9,
-      "norm_label": "code:block1 ([row 1]   program name (title)        \u2190 see \u00a73-1)"
+      "community": 2,
+      "norm_label": "code:block1 ([row 1]   program name (title)        \u2190 see \u00a73-1)",
+      "id": "notes_gx_works2_il_spec_codeblock_1"
     },
     {
       "label": "3. Detailed Rules for Each Row",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L36",
-      "id": "notes_gx_works2_il_spec_3_detailed_rules_for_each_row",
-      "community": 9,
-      "norm_label": "3. detailed rules for each row"
+      "community": 2,
+      "norm_label": "3. detailed rules for each row",
+      "id": "notes_gx_works2_il_spec_3_detailed_rules_for_each_row"
     },
     {
       "label": "3-1. Row 1 \u2014 Program Name (title) record",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L38",
-      "id": "notes_gx_works2_il_spec_3_1_row_1_program_name_title_record",
-      "community": 9,
-      "norm_label": "3-1. row 1 \u2014 program name (title) record"
+      "community": 2,
+      "norm_label": "3-1. row 1 \u2014 program name (title) record",
+      "id": "notes_gx_works2_il_spec_3_1_row_1_program_name_title_record"
     },
     {
       "label": "3-2. Row 2 \u2014 PLC Information record",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L53",
-      "id": "notes_gx_works2_il_spec_3_2_row_2_plc_information_record",
-      "community": 9,
-      "norm_label": "3-2. row 2 \u2014 plc information record"
+      "community": 2,
+      "norm_label": "3-2. row 2 \u2014 plc information record",
+      "id": "notes_gx_works2_il_spec_3_2_row_2_plc_information_record"
     },
     {
       "label": "code:block2 (\"PLC Information:<TAB>\"\"QCPU (Q mode) Q03UDV\"\"\")",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L58",
-      "id": "notes_gx_works2_il_spec_codeblock_2",
-      "community": 9,
-      "norm_label": "code:block2 (\"plc information:<tab>\"\"qcpu (q mode) q03udv\"\"\")"
+      "community": 2,
+      "norm_label": "code:block2 (\"plc information:<tab>\"\"qcpu (q mode) q03udv\"\"\")",
+      "id": "notes_gx_works2_il_spec_codeblock_2"
     },
     {
       "label": "3-3. Row 3 \u2014 Column header record (exactly 7 fields)",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L73",
-      "id": "notes_gx_works2_il_spec_3_3_row_3_column_header_record_exactly_7_fields",
-      "community": 9,
-      "norm_label": "3-3. row 3 \u2014 column header record (exactly 7 fields)"
+      "community": 2,
+      "norm_label": "3-3. row 3 \u2014 column header record (exactly 7 fields)",
+      "id": "notes_gx_works2_il_spec_3_3_row_3_column_header_record_exactly_7_fields"
     },
     {
       "label": "code:block3 (\"Step No.<TAB>\"\"Line Statement\"\"<TAB>\"\"Instruction\"\"<TAB>\"\"I)",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L76",
-      "id": "notes_gx_works2_il_spec_codeblock_3",
-      "community": 9,
-      "norm_label": "code:block3 (\"step no.<tab>\"\"line statement\"\"<tab>\"\"instruction\"\"<tab>\"\"i)"
+      "community": 2,
+      "norm_label": "code:block3 (\"step no.<tab>\"\"line statement\"\"<tab>\"\"instruction\"\"<tab>\"\"i)",
+      "id": "notes_gx_works2_il_spec_codeblock_3"
     },
     {
       "label": "4. Universal Quoting Model (the most error-prone part)",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L99",
-      "id": "notes_gx_works2_il_spec_4_universal_quoting_model_the_most_error_prone_part",
-      "community": 9,
-      "norm_label": "4. universal quoting model (the most error-prone part)"
+      "community": 2,
+      "norm_label": "4. universal quoting model (the most error-prone part)",
+      "id": "notes_gx_works2_il_spec_4_universal_quoting_model_the_most_error_prone_part"
     },
     {
       "label": "4-1. Rule",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L103",
-      "id": "notes_gx_works2_il_spec_4_1_rule",
-      "community": 9,
-      "norm_label": "4-1. rule"
+      "community": 2,
+      "norm_label": "4-1. rule",
+      "id": "notes_gx_works2_il_spec_4_1_rule"
     },
     {
       "label": "4-2. Worked example \u2014 Type B row `LD M1000` at step 0",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L122",
-      "id": "notes_gx_works2_il_spec_4_2_worked_example_type_b_row_ld_m1000_at_step_0",
-      "community": 9,
-      "norm_label": "4-2. worked example \u2014 type b row `ld m1000` at step 0"
+      "community": 2,
+      "norm_label": "4-2. worked example \u2014 type b row `ld m1000` at step 0",
+      "id": "notes_gx_works2_il_spec_4_2_worked_example_type_b_row_ld_m1000_at_step_0"
     },
     {
       "label": "code:block4 (\"0<TAB>\"\"\"\"<TAB>\"\"LD\"\"<TAB>\"\"M1000\"\"<TAB>\"\"\"\"<TAB>\"\"\"\"<TAB>\")",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L137",
-      "id": "notes_gx_works2_il_spec_codeblock_4",
-      "community": 9,
-      "norm_label": "code:block4 (\"0<tab>\"\"\"\"<tab>\"\"ld\"\"<tab>\"\"m1000\"\"<tab>\"\"\"\"<tab>\"\"\"\"<tab>\")"
+      "community": 2,
+      "norm_label": "code:block4 (\"0<tab>\"\"\"\"<tab>\"\"ld\"\"<tab>\"\"m1000\"\"<tab>\"\"\"\"<tab>\"\"\"\"<tab>\")",
+      "id": "notes_gx_works2_il_spec_codeblock_4"
     },
     {
       "label": "4-3. Parsing algorithm (recommended)",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L143",
-      "id": "notes_gx_works2_il_spec_4_3_parsing_algorithm_recommended",
-      "community": 9,
-      "norm_label": "4-3. parsing algorithm (recommended)"
+      "community": 2,
+      "norm_label": "4-3. parsing algorithm (recommended)",
+      "id": "notes_gx_works2_il_spec_4_3_parsing_algorithm_recommended"
     },
     {
       "label": "code:python (def decode_record(raw: str) -> list[str]:)",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L145",
-      "id": "notes_gx_works2_il_spec_codeblock_5",
-      "community": 9,
-      "norm_label": "code:python (def decode_record(raw: str) -> list[str]:)"
+      "community": 2,
+      "norm_label": "code:python (def decode_record(raw: str) -> list[str]:)",
+      "id": "notes_gx_works2_il_spec_codeblock_5"
     },
     {
       "label": "4-4. Generating (encoding) algorithm",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L169",
-      "id": "notes_gx_works2_il_spec_4_4_generating_encoding_algorithm",
-      "community": 9,
-      "norm_label": "4-4. generating (encoding) algorithm"
+      "community": 2,
+      "norm_label": "4-4. generating (encoding) algorithm",
+      "id": "notes_gx_works2_il_spec_4_4_generating_encoding_algorithm"
     },
     {
       "label": "code:python (def encode_record(fields: list[str]) -> str:)",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L171",
-      "id": "notes_gx_works2_il_spec_codeblock_6",
-      "community": 9,
-      "norm_label": "code:python (def encode_record(fields: list[str]) -> str:)"
+      "community": 2,
+      "norm_label": "code:python (def encode_record(fields: list[str]) -> str:)",
+      "id": "notes_gx_works2_il_spec_codeblock_6"
     },
     {
       "label": "5. Three Types of Data Rows",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L184",
-      "id": "notes_gx_works2_il_spec_5_three_types_of_data_rows",
-      "community": 27,
-      "norm_label": "5. three types of data rows"
+      "community": 18,
+      "norm_label": "5. three types of data rows",
+      "id": "notes_gx_works2_il_spec_5_three_types_of_data_rows"
     },
     {
       "label": "5-1. Type A \u2014 Label / Line Statement row",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L188",
-      "id": "notes_gx_works2_il_spec_5_1_type_a_label_line_statement_row",
-      "community": 27,
-      "norm_label": "5-1. type a \u2014 label / line statement row"
+      "community": 18,
+      "norm_label": "5-1. type a \u2014 label / line statement row",
+      "id": "notes_gx_works2_il_spec_5_1_type_a_label_line_statement_row"
     },
     {
       "label": "code:block7 ([90,   \"<<<<< Q64RD Card Converting Setup Program >>>>>>>\", )",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L195",
-      "id": "notes_gx_works2_il_spec_codeblock_7",
-      "community": 27,
-      "norm_label": "code:block7 ([90,   \"<<<<< q64rd card converting setup program >>>>>>>\", )"
+      "community": 18,
+      "norm_label": "code:block7 ([90,   \"<<<<< q64rd card converting setup program >>>>>>>\", )",
+      "id": "notes_gx_works2_il_spec_codeblock_7"
     },
     {
       "label": "5-2. Type B \u2014 Instruction row (head of an instruction, with step number)",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L205",
-      "id": "notes_gx_works2_il_spec_5_2_type_b_instruction_row_head_of_an_instruction_with_step_number",
-      "community": 27,
-      "norm_label": "5-2. type b \u2014 instruction row (head of an instruction, with step number)"
+      "community": 18,
+      "norm_label": "5-2. type b \u2014 instruction row (head of an instruction, with step number)",
+      "id": "notes_gx_works2_il_spec_5_2_type_b_instruction_row_head_of_an_instruction_with_step_number"
     },
     {
       "label": "code:block8 ([0,    \"\", \"LD\",   \"M1000\", \"\", \"\", \"\"])",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L212",
-      "id": "notes_gx_works2_il_spec_codeblock_8",
-      "community": 27,
-      "norm_label": "code:block8 ([0,    \"\", \"ld\",   \"m1000\", \"\", \"\", \"\"])"
+      "community": 18,
+      "norm_label": "code:block8 ([0,    \"\", \"ld\",   \"m1000\", \"\", \"\", \"\"])",
+      "id": "notes_gx_works2_il_spec_codeblock_8"
     },
     {
       "label": "5-3. Type C \u2014 Continuation row (extra operands of the preceding instruction)",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L221",
-      "id": "notes_gx_works2_il_spec_5_3_type_c_continuation_row_extra_operands_of_the_preceding_instruction",
-      "community": 27,
-      "norm_label": "5-3. type c \u2014 continuation row (extra operands of the preceding instruction)"
+      "community": 18,
+      "norm_label": "5-3. type c \u2014 continuation row (extra operands of the preceding instruction)",
+      "id": "notes_gx_works2_il_spec_5_3_type_c_continuation_row_extra_operands_of_the_preceding_instruction"
     },
     {
       "label": "code:block9 (Row B: [1,  \"\", \"MOVP\", \"K0\", \"\", \"\", \"\"])",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L228",
-      "id": "notes_gx_works2_il_spec_codeblock_9",
-      "community": 27,
-      "norm_label": "code:block9 (row b: [1,  \"\", \"movp\", \"k0\", \"\", \"\", \"\"])"
+      "community": 18,
+      "norm_label": "code:block9 (row b: [1,  \"\", \"movp\", \"k0\", \"\", \"\", \"\"])",
+      "id": "notes_gx_works2_il_spec_codeblock_9"
     },
     {
       "label": "code:block10 (Row B: [17, \"\", \"LD=\",  \"K1\", \"\", \"\", \"\"])",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L234",
-      "id": "notes_gx_works2_il_spec_codeblock_10",
-      "community": 27,
-      "norm_label": "code:block10 (row b: [17, \"\", \"ld=\",  \"k1\", \"\", \"\", \"\"])"
+      "community": 18,
+      "norm_label": "code:block10 (row b: [17, \"\", \"ld=\",  \"k1\", \"\", \"\", \"\"])",
+      "id": "notes_gx_works2_il_spec_codeblock_10"
     },
     {
       "label": "6. Instruction Mnemonics",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L247",
-      "id": "notes_gx_works2_il_spec_6_instruction_mnemonics",
-      "community": 9,
-      "norm_label": "6. instruction mnemonics"
+      "community": 2,
+      "norm_label": "6. instruction mnemonics",
+      "id": "notes_gx_works2_il_spec_6_instruction_mnemonics"
     },
     {
       "label": "6-1. Sequence Instructions (confirmed in MAIN.csv + MELSEC manual)",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L251",
-      "id": "notes_gx_works2_il_spec_6_1_sequence_instructions_confirmed_in_main_csv_melsec_manual",
-      "community": 9,
-      "norm_label": "6-1. sequence instructions (confirmed in main.csv + melsec manual)"
+      "community": 2,
+      "norm_label": "6-1. sequence instructions (confirmed in main.csv + melsec manual)",
+      "id": "notes_gx_works2_il_spec_6_1_sequence_instructions_confirmed_in_main_csv_melsec_manual"
     },
     {
       "label": "Contact Instructions (Load / AND / OR)",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L253",
-      "id": "notes_gx_works2_il_spec_contact_instructions_load_and_or",
-      "community": 9,
-      "norm_label": "contact instructions (load / and / or)"
+      "community": 2,
+      "norm_label": "contact instructions (load / and / or)",
+      "id": "notes_gx_works2_il_spec_contact_instructions_load_and_or"
     },
     {
       "label": "Association Instructions",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L276",
-      "id": "notes_gx_works2_il_spec_association_instructions",
-      "community": 9,
-      "norm_label": "association instructions"
+      "community": 2,
+      "norm_label": "association instructions",
+      "id": "notes_gx_works2_il_spec_association_instructions"
     },
     {
       "label": "Output Instructions",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L287",
-      "id": "notes_gx_works2_il_spec_output_instructions",
-      "community": 9,
-      "norm_label": "output instructions"
+      "community": 2,
+      "norm_label": "output instructions",
+      "id": "notes_gx_works2_il_spec_output_instructions"
     },
     {
       "label": "Shift / Master Control / Termination",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L298",
-      "id": "notes_gx_works2_il_spec_shift_master_control_termination",
-      "community": 9,
-      "norm_label": "shift / master control / termination"
+      "community": 2,
+      "norm_label": "shift / master control / termination",
+      "id": "notes_gx_works2_il_spec_shift_master_control_termination"
     },
     {
       "label": "6-2. Basic Instructions (confirmed in MAIN.csv + MELSEC manual)",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L314",
-      "id": "notes_gx_works2_il_spec_6_2_basic_instructions_confirmed_in_main_csv_melsec_manual",
-      "community": 9,
-      "norm_label": "6-2. basic instructions (confirmed in main.csv + melsec manual)"
+      "community": 2,
+      "norm_label": "6-2. basic instructions (confirmed in main.csv + melsec manual)",
+      "id": "notes_gx_works2_il_spec_6_2_basic_instructions_confirmed_in_main_csv_melsec_manual"
     },
     {
       "label": "Comparison Instructions",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L316",
-      "id": "notes_gx_works2_il_spec_comparison_instructions",
-      "community": 9,
-      "norm_label": "comparison instructions"
+      "community": 2,
+      "norm_label": "comparison instructions",
+      "id": "notes_gx_works2_il_spec_comparison_instructions"
     },
     {
       "label": "Transfer / Arithmetic / Conversion Instructions",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L336",
-      "id": "notes_gx_works2_il_spec_transfer_arithmetic_conversion_instructions",
-      "community": 9,
-      "norm_label": "transfer / arithmetic / conversion instructions"
+      "community": 2,
+      "norm_label": "transfer / arithmetic / conversion instructions",
+      "id": "notes_gx_works2_il_spec_transfer_arithmetic_conversion_instructions"
     },
     {
       "label": "Program Control Instructions",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L375",
-      "id": "notes_gx_works2_il_spec_program_control_instructions",
-      "community": 9,
-      "norm_label": "program control instructions"
+      "community": 2,
+      "norm_label": "program control instructions",
+      "id": "notes_gx_works2_il_spec_program_control_instructions"
     },
     {
       "label": "6-3. Notation Rules",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L384",
-      "id": "notes_gx_works2_il_spec_6_3_notation_rules",
-      "community": 9,
-      "norm_label": "6-3. notation rules"
+      "community": 2,
+      "norm_label": "6-3. notation rules",
+      "id": "notes_gx_works2_il_spec_6_3_notation_rules"
     },
     {
       "label": "7. Device / Operand Notation",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L401",
-      "id": "notes_gx_works2_il_spec_7_device_operand_notation",
-      "community": 9,
-      "norm_label": "7. device / operand notation"
+      "community": 2,
+      "norm_label": "7. device / operand notation",
+      "id": "notes_gx_works2_il_spec_7_device_operand_notation"
     },
     {
       "label": "7-1. Observed device prefixes",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L403",
-      "id": "notes_gx_works2_il_spec_7_1_observed_device_prefixes",
-      "community": 9,
-      "norm_label": "7-1. observed device prefixes"
+      "community": 2,
+      "norm_label": "7-1. observed device prefixes",
+      "id": "notes_gx_works2_il_spec_7_1_observed_device_prefixes"
     },
     {
       "label": "7-2. Notation rules",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L407",
-      "id": "notes_gx_works2_il_spec_7_2_notation_rules",
-      "community": 9,
-      "norm_label": "7-2. notation rules"
+      "community": 2,
+      "norm_label": "7-2. notation rules",
+      "id": "notes_gx_works2_il_spec_7_2_notation_rules"
     },
     {
       "label": "8. Step No. Rules",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L418",
-      "id": "notes_gx_works2_il_spec_8_step_no_rules",
-      "community": 9,
-      "norm_label": "8. step no. rules"
+      "community": 2,
+      "norm_label": "8. step no. rules",
+      "id": "notes_gx_works2_il_spec_8_step_no_rules"
     },
     {
       "label": "9. END Instruction",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L427",
-      "id": "notes_gx_works2_il_spec_9_end_instruction",
-      "community": 9,
-      "norm_label": "9. end instruction"
+      "community": 2,
+      "norm_label": "9. end instruction",
+      "id": "notes_gx_works2_il_spec_9_end_instruction"
     },
     {
       "label": "code:block11 (\"4373<TAB>\"\"\"\"<TAB>\"\"END\"\"<TAB>\"\"\"\"<TAB>\"\"\"\"<TAB>\"\"\"\"<TAB>\"\")",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L432",
-      "id": "notes_gx_works2_il_spec_codeblock_11",
-      "community": 9,
-      "norm_label": "code:block11 (\"4373<tab>\"\"\"\"<tab>\"\"end\"\"<tab>\"\"\"\"<tab>\"\"\"\"<tab>\"\"\"\"<tab>\"\")"
+      "community": 2,
+      "norm_label": "code:block11 (\"4373<tab>\"\"\"\"<tab>\"\"end\"\"<tab>\"\"\"\"<tab>\"\"\"\"<tab>\"\"\"\"<tab>\"\")",
+      "id": "notes_gx_works2_il_spec_codeblock_11"
     },
     {
       "label": "10. Field Content Constraints",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L443",
-      "id": "notes_gx_works2_il_spec_10_field_content_constraints",
-      "community": 9,
-      "norm_label": "10. field content constraints"
+      "community": 2,
+      "norm_label": "10. field content constraints",
+      "id": "notes_gx_works2_il_spec_10_field_content_constraints"
     },
     {
       "label": "11. Rung Composition Rules",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L451",
-      "id": "notes_gx_works2_il_spec_11_rung_composition_rules",
-      "community": 26,
-      "norm_label": "11. rung composition rules"
+      "community": 15,
+      "norm_label": "11. rung composition rules",
+      "id": "notes_gx_works2_il_spec_11_rung_composition_rules"
     },
     {
       "label": "11-1. Rung boundary identification",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L455",
-      "id": "notes_gx_works2_il_spec_11_1_rung_boundary_identification",
-      "community": 26,
-      "norm_label": "11-1. rung boundary identification"
+      "community": 15,
+      "norm_label": "11-1. rung boundary identification",
+      "id": "notes_gx_works2_il_spec_11_1_rung_boundary_identification"
     },
     {
       "label": "11-2. Rung internal structure (canonical order)",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L469",
-      "id": "notes_gx_works2_il_spec_11_2_rung_internal_structure_canonical_order",
-      "community": 26,
-      "norm_label": "11-2. rung internal structure (canonical order)"
+      "community": 15,
+      "norm_label": "11-2. rung internal structure (canonical order)",
+      "id": "notes_gx_works2_il_spec_11_2_rung_internal_structure_canonical_order"
     },
     {
       "label": "code:block12 ([1] Load                  \u2014 LD / LDI / LDP / LDF            )",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L473",
-      "id": "notes_gx_works2_il_spec_codeblock_12",
-      "community": 26,
-      "norm_label": "code:block12 ([1] load                  \u2014 ld / ldi / ldp / ldf            )"
+      "community": 15,
+      "norm_label": "code:block12 ([1] load                  \u2014 ld / ldi / ldp / ldf            )",
+      "id": "notes_gx_works2_il_spec_codeblock_12"
     },
     {
       "label": "11-3. Rung composition patterns",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L498",
-      "id": "notes_gx_works2_il_spec_11_3_rung_composition_patterns",
-      "community": 26,
-      "norm_label": "11-3. rung composition patterns"
+      "community": 15,
+      "norm_label": "11-3. rung composition patterns",
+      "id": "notes_gx_works2_il_spec_11_3_rung_composition_patterns"
     },
     {
       "label": "code:block13 (LD   M1000)",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L501",
-      "id": "notes_gx_works2_il_spec_codeblock_13",
-      "community": 26,
-      "norm_label": "code:block13 (ld   m1000)"
+      "community": 15,
+      "norm_label": "code:block13 (ld   m1000)",
+      "id": "notes_gx_works2_il_spec_codeblock_13"
     },
     {
       "label": "code:block14 (LD=  K1  D4          \u2190 (Type B: LD= K1  +  Type C: D4))",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L507",
-      "id": "notes_gx_works2_il_spec_codeblock_14",
-      "community": 26,
-      "norm_label": "code:block14 (ld=  k1  d4          \u2190 (type b: ld= k1  +  type c: d4))"
+      "community": 15,
+      "norm_label": "code:block14 (ld=  k1  d4          \u2190 (type b: ld= k1  +  type c: d4))",
+      "id": "notes_gx_works2_il_spec_codeblock_14"
     },
     {
       "label": "code:block15 (LD   L31)",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L517",
-      "id": "notes_gx_works2_il_spec_codeblock_15",
-      "community": 26,
-      "norm_label": "code:block15 (ld   l31)"
+      "community": 15,
+      "norm_label": "code:block15 (ld   l31)",
+      "id": "notes_gx_works2_il_spec_codeblock_15"
     },
     {
       "label": "code:block16 (LD   <cond>)",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L524",
-      "id": "notes_gx_works2_il_spec_codeblock_16",
-      "community": 26,
-      "norm_label": "code:block16 (ld   <cond>)"
+      "community": 15,
+      "norm_label": "code:block16 (ld   <cond>)",
+      "id": "notes_gx_works2_il_spec_codeblock_16"
     },
     {
       "label": "code:block17 (LD   SM400)",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L537",
-      "id": "notes_gx_works2_il_spec_codeblock_17",
-      "community": 26,
-      "norm_label": "code:block17 (ld   sm400)"
+      "community": 15,
+      "norm_label": "code:block17 (ld   sm400)",
+      "id": "notes_gx_works2_il_spec_codeblock_17"
     },
     {
       "label": "11-4. Rung-boundary decision table",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L542",
-      "id": "notes_gx_works2_il_spec_11_4_rung_boundary_decision_table",
-      "community": 26,
-      "norm_label": "11-4. rung-boundary decision table"
+      "community": 15,
+      "norm_label": "11-4. rung-boundary decision table",
+      "id": "notes_gx_works2_il_spec_11_4_rung_boundary_decision_table"
     },
     {
       "label": "11-5. Constraints summary",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L551",
-      "id": "notes_gx_works2_il_spec_11_5_constraints_summary",
-      "community": 26,
-      "norm_label": "11-5. constraints summary"
+      "community": 15,
+      "norm_label": "11-5. constraints summary",
+      "id": "notes_gx_works2_il_spec_11_5_constraints_summary"
     },
     {
       "label": "code:block18 (- Every rung starts with exactly one load instruction (LD / )",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L553",
-      "id": "notes_gx_works2_il_spec_codeblock_18",
-      "community": 26,
-      "norm_label": "code:block18 (- every rung starts with exactly one load instruction (ld / )"
+      "community": 15,
+      "norm_label": "code:block18 (- every rung starts with exactly one load instruction (ld / )",
+      "id": "notes_gx_works2_il_spec_codeblock_18"
     },
     {
       "label": "12. Checklist for Generating or Modifying This Format",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L566",
-      "id": "notes_gx_works2_il_spec_12_checklist_for_generating_or_modifying_this_format",
-      "community": 9,
-      "norm_label": "12. checklist for generating or modifying this format"
+      "community": 2,
+      "norm_label": "12. checklist for generating or modifying this format",
+      "id": "notes_gx_works2_il_spec_12_checklist_for_generating_or_modifying_this_format"
     },
     {
       "label": "code:block19 ([ ] Encoding: UTF-16 LE with BOM (FF FE))",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L568",
-      "id": "notes_gx_works2_il_spec_codeblock_19",
-      "community": 9,
-      "norm_label": "code:block19 ([ ] encoding: utf-16 le with bom (ff fe))"
+      "community": 2,
+      "norm_label": "code:block19 ([ ] encoding: utf-16 le with bom (ff fe))",
+      "id": "notes_gx_works2_il_spec_codeblock_19"
     },
     {
       "label": "13. Parsing Notes (LLM-Specific)",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L600",
-      "id": "notes_gx_works2_il_spec_13_parsing_notes_llm_specific",
-      "community": 9,
-      "norm_label": "13. parsing notes (llm-specific)"
+      "community": 2,
+      "norm_label": "13. parsing notes (llm-specific)",
+      "id": "notes_gx_works2_il_spec_13_parsing_notes_llm_specific"
     },
     {
       "label": "14. Official Manual Reference & List Mode Format",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L626",
-      "id": "notes_gx_works2_il_spec_14_official_manual_reference_list_mode_format",
-      "community": 9,
-      "norm_label": "14. official manual reference & list mode format"
+      "community": 2,
+      "norm_label": "14. official manual reference & list mode format",
+      "id": "notes_gx_works2_il_spec_14_official_manual_reference_list_mode_format"
     },
     {
       "label": "List Mode (IL) Column Mapping",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L630",
-      "id": "notes_gx_works2_il_spec_list_mode_il_column_mapping",
-      "community": 9,
-      "norm_label": "list mode (il) column mapping"
+      "community": 2,
+      "norm_label": "list mode (il) column mapping",
+      "id": "notes_gx_works2_il_spec_list_mode_il_column_mapping"
     },
     {
       "label": "code:block20 ([List Mode])",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L634",
-      "id": "notes_gx_works2_il_spec_codeblock_20",
-      "community": 9,
-      "norm_label": "code:block20 ([list mode])"
+      "community": 2,
+      "norm_label": "code:block20 ([list mode])",
+      "id": "notes_gx_works2_il_spec_codeblock_20"
     },
     {
       "label": "Extended Instruction Set",
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L654",
-      "id": "notes_gx_works2_il_spec_extended_instruction_set",
-      "community": 9,
-      "norm_label": "extended instruction set"
+      "community": 2,
+      "norm_label": "extended instruction set",
+      "id": "notes_gx_works2_il_spec_extended_instruction_set"
     },
     {
       "label": "PLC_PROGRAM_STRUCTURE.md",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L1",
-      "id": "notes_plc_program_structure_md",
-      "community": 22,
-      "norm_label": "plc_program_structure.md"
+      "community": 7,
+      "norm_label": "plc_program_structure.md",
+      "id": "notes_plc_program_structure_md"
     },
     {
       "label": "REFRIGER CHARGING MACHINE \u2014 PLC Program Structure Design",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L1",
-      "id": "notes_plc_program_structure_refriger_charging_machine_plc_program_structure_design",
-      "community": 22,
-      "norm_label": "refriger charging machine \u2014 plc program structure design"
+      "community": 7,
+      "norm_label": "refriger charging machine \u2014 plc program structure design",
+      "id": "notes_plc_program_structure_refriger_charging_machine_plc_program_structure_design"
     },
     {
       "label": "0. \uc2dc\uc2a4\ud15c \uad6c\uc131 (System Configuration)",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L10",
-      "id": "notes_plc_program_structure_0_\uc2dc\uc2a4\ud15c_\uad6c\uc131_system_configuration",
-      "community": 22,
-      "norm_label": "0. \u1109\u1175\u1109\u1173\u1110\u1166\u11b7 \u1100\u116e\u1109\u1165\u11bc (system configuration)"
+      "community": 7,
+      "norm_label": "0. \u1109\u1175\u1109\u1173\u1110\u1166\u11b7 \u1100\u116e\u1109\u1165\u11bc (system configuration)",
+      "id": "notes_plc_program_structure_0_\uc2dc\uc2a4\ud15c_\uad6c\uc131_system_configuration"
     },
     {
       "label": "0-1. \uc9c0\uc6d0 \uad6c\uc131 (Variations)",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L12",
-      "id": "notes_plc_program_structure_0_1_\uc9c0\uc6d0_\uad6c\uc131_variations",
-      "community": 22,
-      "norm_label": "0-1. \u110c\u1175\u110b\u116f\u11ab \u1100\u116e\u1109\u1165\u11bc (variations)"
+      "community": 7,
+      "norm_label": "0-1. \u110c\u1175\u110b\u116f\u11ab \u1100\u116e\u1109\u1165\u11bc (variations)",
+      "id": "notes_plc_program_structure_0_1_\uc9c0\uc6d0_\uad6c\uc131_variations"
     },
     {
       "label": "0-2. \uad6c\uc131 \ud30c\ub77c\ubbf8\ud130 (PLC D-Register)",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L25",
-      "id": "notes_plc_program_structure_0_2_\uad6c\uc131_\ud30c\ub77c\ubbf8\ud130_plc_d_register",
-      "community": 22,
-      "norm_label": "0-2. \u1100\u116e\u1109\u1165\u11bc \u1111\u1161\u1105\u1161\u1106\u1175\u1110\u1165 (plc d-register)"
+      "community": 7,
+      "norm_label": "0-2. \u1100\u116e\u1109\u1165\u11bc \u1111\u1161\u1105\u1161\u1106\u1175\u1110\u1165 (plc d-register)",
+      "id": "notes_plc_program_structure_0_2_\uad6c\uc131_\ud30c\ub77c\ubbf8\ud130_plc_d_register"
     },
     {
       "label": "0-3. Line / Gun \uac1c\ub150",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L36",
-      "id": "notes_plc_program_structure_0_3_line_gun_\uac1c\ub150",
-      "community": 22,
-      "norm_label": "0-3. line / gun \u1100\u1162\u1102\u1167\u11b7"
+      "community": 7,
+      "norm_label": "0-3. line / gun \u1100\u1162\u1102\u1167\u11b7",
+      "id": "notes_plc_program_structure_0_3_line_gun_\uac1c\ub150"
     },
     {
       "label": "code:block1 (Line 1 \u2500\u2500\u252c\u2500\u2500 Gun A \u2500\u2500\u2510)",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L38",
-      "id": "notes_plc_program_structure_codeblock_1",
-      "community": 22,
-      "norm_label": "code:block1 (line 1 \u2500\u2500\u252c\u2500\u2500 gun a \u2500\u2500\u2510)"
+      "community": 7,
+      "norm_label": "code:block1 (line 1 \u2500\u2500\u252c\u2500\u2500 gun a \u2500\u2500\u2510)",
+      "id": "notes_plc_program_structure_codeblock_1"
     },
     {
       "label": "0-4. Gun Type",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L52",
-      "id": "notes_plc_program_structure_0_4_gun_type",
-      "community": 22,
-      "norm_label": "0-4. gun type"
+      "community": 7,
+      "norm_label": "0-4. gun type",
+      "id": "notes_plc_program_structure_0_4_gun_type"
     },
     {
       "label": "0-5. Gun Index \uacf5\uc2dd",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L70",
-      "id": "notes_plc_program_structure_0_5_gun_index_\uacf5\uc2dd",
-      "community": 22,
-      "norm_label": "0-5. gun index \u1100\u1169\u11bc\u1109\u1175\u11a8"
+      "community": 7,
+      "norm_label": "0-5. gun index \u1100\u1169\u11bc\u1109\u1175\u11a8",
+      "id": "notes_plc_program_structure_0_5_gun_index_\uacf5\uc2dd"
     },
     {
       "label": "code:block2 (Gun Global Index = Line \u00d7 GunPerLine(D230) + GunLocal)",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L72",
-      "id": "notes_plc_program_structure_codeblock_2",
-      "community": 22,
-      "norm_label": "code:block2 (gun global index = line \u00d7 gunperline(d230) + gunlocal)"
+      "community": 7,
+      "norm_label": "code:block2 (gun global index = line \u00d7 gunperline(d230) + gunlocal)",
+      "id": "notes_plc_program_structure_codeblock_2"
     },
     {
       "label": "1. I/O \uc694\uad6c\uc0ac\ud56d \ubd84\uc11d (HMI \u2192 PLC \uc2e0\ud638 \ub9e4\ud551)",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L83",
-      "id": "notes_plc_program_structure_1_i_o_\uc694\uad6c\uc0ac\ud56d_\ubd84\uc11d_hmi_plc_\uc2e0\ud638_\ub9e4\ud551",
-      "community": 22,
-      "norm_label": "1. i/o \u110b\u116d\u1100\u116e\u1109\u1161\u1112\u1161\u11bc \u1107\u116e\u11ab\u1109\u1165\u11a8 (hmi \u2192 plc \u1109\u1175\u11ab\u1112\u1169 \u1106\u1162\u1111\u1175\u11bc)"
+      "community": 7,
+      "norm_label": "1. i/o \u110b\u116d\u1100\u116e\u1109\u1161\u1112\u1161\u11bc \u1107\u116e\u11ab\u1109\u1165\u11a8 (hmi \u2192 plc \u1109\u1175\u11ab\u1112\u1169 \u1106\u1162\u1111\u1175\u11bc)",
+      "id": "notes_plc_program_structure_1_i_o_\uc694\uad6c\uc0ac\ud56d_\ubd84\uc11d_hmi_plc_\uc2e0\ud638_\ub9e4\ud551"
     },
     {
       "label": "1-1. HMI Button \u2192 PLC \ub0b4\ubd80 \ub9b4\ub808\uc774 (M, \ud478\uc2dc=ON)",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L85",
-      "id": "notes_plc_program_structure_1_1_hmi_button_plc_\ub0b4\ubd80_\ub9b4\ub808\uc774_m_\ud478\uc2dc_on",
-      "community": 22,
-      "norm_label": "1-1. hmi button \u2192 plc \u1102\u1162\u1107\u116e \u1105\u1175\u11af\u1105\u1166\u110b\u1175 (m, \u1111\u116e\u1109\u1175=on)"
+      "community": 7,
+      "norm_label": "1-1. hmi button \u2192 plc \u1102\u1162\u1107\u116e \u1105\u1175\u11af\u1105\u1166\u110b\u1175 (m, \u1111\u116e\u1109\u1175=on)",
+      "id": "notes_plc_program_structure_1_1_hmi_button_plc_\ub0b4\ubd80_\ub9b4\ub808\uc774_m_\ud478\uc2dc_on"
     },
     {
       "label": "1-2. \ubb3c\ub9ac\uc801 I/O \ucd94\uc815 (2 Line \uae30\uc900)",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L117",
-      "id": "notes_plc_program_structure_1_2_\ubb3c\ub9ac\uc801_i_o_\ucd94\uc815_2_line_\uae30\uc900",
-      "community": 22,
-      "norm_label": "1-2. \u1106\u116e\u11af\u1105\u1175\u110c\u1165\u11a8 i/o \u110e\u116e\u110c\u1165\u11bc (2 line \u1100\u1175\u110c\u116e\u11ab)"
+      "community": 7,
+      "norm_label": "1-2. \u1106\u116e\u11af\u1105\u1175\u110c\u1165\u11a8 i/o \u110e\u116e\u110c\u1165\u11bc (2 line \u1100\u1175\u110c\u116e\u11ab)",
+      "id": "notes_plc_program_structure_1_2_\ubb3c\ub9ac\uc801_i_o_\ucd94\uc815_2_line_\uae30\uc900"
     },
     {
       "label": "1-3. Safety PLC \uc778\ud130\ud398\uc774\uc2a4",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L130",
-      "id": "notes_plc_program_structure_1_3_safety_plc_\uc778\ud130\ud398\uc774\uc2a4",
-      "community": 22,
-      "norm_label": "1-3. safety plc \u110b\u1175\u11ab\u1110\u1165\u1111\u1166\u110b\u1175\u1109\u1173"
+      "community": 7,
+      "norm_label": "1-3. safety plc \u110b\u1175\u11ab\u1110\u1165\u1111\u1166\u110b\u1175\u1109\u1173",
+      "id": "notes_plc_program_structure_1_3_safety_plc_\uc778\ud130\ud398\uc774\uc2a4"
     },
     {
       "label": "2. POU (Program Organization Unit) \ubaa8\ub4c8 \uad6c\uc870",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L141",
-      "id": "notes_plc_program_structure_2_pou_program_organization_unit_\ubaa8\ub4c8_\uad6c\uc870",
-      "community": 22,
-      "norm_label": "2. pou (program organization unit) \u1106\u1169\u1103\u1172\u11af \u1100\u116e\u110c\u1169"
+      "community": 7,
+      "norm_label": "2. pou (program organization unit) \u1106\u1169\u1103\u1172\u11af \u1100\u116e\u110c\u1169",
+      "id": "notes_plc_program_structure_2_pou_program_organization_unit_\ubaa8\ub4c8_\uad6c\uc870"
     },
     {
       "label": "code:block3 (REF/)",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L143",
-      "id": "notes_plc_program_structure_codeblock_3",
-      "community": 22,
-      "norm_label": "code:block3 (ref/)"
+      "community": 7,
+      "norm_label": "code:block3 (ref/)",
+      "id": "notes_plc_program_structure_codeblock_3"
     },
     {
       "label": "2-1. \ubaa8\ub4c8\ubcc4 \ucc45\uc784",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L158",
-      "id": "notes_plc_program_structure_2_1_\ubaa8\ub4c8\ubcc4_\ucc45\uc784",
-      "community": 22,
-      "norm_label": "2-1. \u1106\u1169\u1103\u1172\u11af\u1107\u1167\u11af \u110e\u1162\u11a8\u110b\u1175\u11b7"
+      "community": 7,
+      "norm_label": "2-1. \u1106\u1169\u1103\u1172\u11af\u1107\u1167\u11af \u110e\u1162\u11a8\u110b\u1175\u11b7",
+      "id": "notes_plc_program_structure_2_1_\ubaa8\ub4c8\ubcc4_\ucc45\uc784"
     },
     {
       "label": "3. \ub514\ubc14\uc774\uc2a4 \ub9f5 (Device Map)",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L176",
-      "id": "notes_plc_program_structure_3_\ub514\ubc14\uc774\uc2a4_\ub9f5_device_map",
-      "community": 25,
-      "norm_label": "3. \u1103\u1175\u1107\u1161\u110b\u1175\u1109\u1173 \u1106\u1162\u11b8 (device map)"
+      "community": 14,
+      "norm_label": "3. \u1103\u1175\u1107\u1161\u110b\u1175\u1109\u1173 \u1106\u1162\u11b8 (device map)",
+      "id": "notes_plc_program_structure_3_\ub514\ubc14\uc774\uc2a4_\ub9f5_device_map"
     },
     {
       "label": "3-1. M (Internal Relay) \u2014 Bit Device (0~)",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L183",
-      "id": "notes_plc_program_structure_3_1_m_internal_relay_bit_device_0",
-      "community": 25,
-      "norm_label": "3-1. m (internal relay) \u2014 bit device (0~)"
+      "community": 14,
+      "norm_label": "3-1. m (internal relay) \u2014 bit device (0~)",
+      "id": "notes_plc_program_structure_3_1_m_internal_relay_bit_device_0"
     },
     {
       "label": "3-2. D (Data Register) \u2014 Word Device (\uc9dd\uc218 \uc8fc\uc18c)",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L338",
-      "id": "notes_plc_program_structure_3_2_d_data_register_word_device_\uc9dd\uc218_\uc8fc\uc18c",
-      "community": 25,
-      "norm_label": "3-2. d (data register) \u2014 word device (\u110d\u1161\u11a8\u1109\u116e \u110c\u116e\u1109\u1169)"
+      "community": 14,
+      "norm_label": "3-2. d (data register) \u2014 word device (\u110d\u1161\u11a8\u1109\u116e \u110c\u116e\u1109\u1169)",
+      "id": "notes_plc_program_structure_3_2_d_data_register_word_device_\uc9dd\uc218_\uc8fc\uc18c"
     },
     {
       "label": "Parameter Settings \u2014 Line 0 (D0~D29)",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L343",
-      "id": "notes_plc_program_structure_parameter_settings_line_0_d0_d29",
-      "community": 25,
-      "norm_label": "parameter settings \u2014 line 0 (d0~d29)"
+      "community": 14,
+      "norm_label": "parameter settings \u2014 line 0 (d0~d29)",
+      "id": "notes_plc_program_structure_parameter_settings_line_0_d0_d29"
     },
     {
       "label": "Parameter Settings \u2014 Line 1 (D30~D59, D228\u22652)",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L363",
-      "id": "notes_plc_program_structure_parameter_settings_line_1_d30_d59_d228_2",
-      "community": 25,
-      "norm_label": "parameter settings \u2014 line 1 (d30~d59, d228\u22652)"
+      "community": 14,
+      "norm_label": "parameter settings \u2014 line 1 (d30~d59, d228\u22652)",
+      "id": "notes_plc_program_structure_parameter_settings_line_1_d30_d59_d228_2"
     },
     {
       "label": "User Settings (Gun\ub2f9 14 words, \ucd5c\ub300 4 Gun = 56 words)",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L378",
-      "id": "notes_plc_program_structure_user_settings_gun\ub2f9_14_words_\ucd5c\ub300_4_gun_56_words",
-      "community": 25,
-      "norm_label": "user settings (gun\u1103\u1161\u11bc 14 words, \u110e\u116c\u1103\u1162 4 gun = 56 words)"
+      "community": 14,
+      "norm_label": "user settings (gun\u1103\u1161\u11bc 14 words, \u110e\u116c\u1103\u1162 4 gun = 56 words)",
+      "id": "notes_plc_program_structure_user_settings_gun\ub2f9_14_words_\ucd5c\ub300_4_gun_56_words"
     },
     {
       "label": "Operation Display (HMI Read) \u2014 \ud604\uc7ac \uc120\ud0dd Line/Gun \uae30\uc900",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L396",
-      "id": "notes_plc_program_structure_operation_display_hmi_read_\ud604\uc7ac_\uc120\ud0dd_line_gun_\uae30\uc900",
-      "community": 25,
-      "norm_label": "operation display (hmi read) \u2014 \u1112\u1167\u11ab\u110c\u1162 \u1109\u1165\u11ab\u1110\u1162\u11a8 line/gun \u1100\u1175\u110c\u116e\u11ab"
+      "community": 14,
+      "norm_label": "operation display (hmi read) \u2014 \u1112\u1167\u11ab\u110c\u1162 \u1109\u1165\u11ab\u1110\u1162\u11a8 line/gun \u1100\u1175\u110c\u116e\u11ab",
+      "id": "notes_plc_program_structure_operation_display_hmi_read_\ud604\uc7ac_\uc120\ud0dd_line_gun_\uae30\uc900"
     },
     {
       "label": "Analog (Line 0 / Line 1)",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L418",
-      "id": "notes_plc_program_structure_analog_line_0_line_1",
-      "community": 25,
-      "norm_label": "analog (line 0 / line 1)"
+      "community": 14,
+      "norm_label": "analog (line 0 / line 1)",
+      "id": "notes_plc_program_structure_analog_line_0_line_1"
     },
     {
       "label": "Calculation Work (Line 0 / Line 1)",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L436",
-      "id": "notes_plc_program_structure_calculation_work_line_0_line_1",
-      "community": 25,
-      "norm_label": "calculation work (line 0 / line 1)"
+      "community": 14,
+      "norm_label": "calculation work (line 0 / line 1)",
+      "id": "notes_plc_program_structure_calculation_work_line_0_line_1"
     },
     {
       "label": "Communication",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L446",
-      "id": "notes_plc_program_structure_communication",
-      "community": 25,
-      "norm_label": "communication"
+      "community": 14,
+      "norm_label": "communication",
+      "id": "notes_plc_program_structure_communication"
     },
     {
       "label": "SPC (Statistics) \u2014 \uc804 Line \ud569\uc0b0",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L456",
-      "id": "notes_plc_program_structure_spc_statistics_\uc804_line_\ud569\uc0b0",
-      "community": 25,
-      "norm_label": "spc (statistics) \u2014 \u110c\u1165\u11ab line \u1112\u1161\u11b8\u1109\u1161\u11ab"
+      "community": 14,
+      "norm_label": "spc (statistics) \u2014 \u110c\u1165\u11ab line \u1112\u1161\u11b8\u1109\u1161\u11ab",
+      "id": "notes_plc_program_structure_spc_statistics_\uc804_line_\ud569\uc0b0"
     },
     {
       "label": "System Configuration",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L467",
-      "id": "notes_plc_program_structure_system_configuration",
-      "community": 25,
-      "norm_label": "system configuration"
+      "community": 14,
+      "norm_label": "system configuration",
+      "id": "notes_plc_program_structure_system_configuration"
     },
     {
       "label": "3-3. T (Timer) \u2014 100ms \uc124\uc815",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L479",
-      "id": "notes_plc_program_structure_3_3_t_timer_100ms_\uc124\uc815",
-      "community": 25,
-      "norm_label": "3-3. t (timer) \u2014 100ms \u1109\u1165\u11af\u110c\u1165\u11bc"
+      "community": 14,
+      "norm_label": "3-3. t (timer) \u2014 100ms \u1109\u1165\u11af\u110c\u1165\u11bc",
+      "id": "notes_plc_program_structure_3_3_t_timer_100ms_\uc124\uc815"
     },
     {
       "label": "3-4. X (Digital Input) \u2014 Hex Address",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L501",
-      "id": "notes_plc_program_structure_3_4_x_digital_input_hex_address",
-      "community": 25,
-      "norm_label": "3-4. x (digital input) \u2014 hex address"
+      "community": 14,
+      "norm_label": "3-4. x (digital input) \u2014 hex address",
+      "id": "notes_plc_program_structure_3_4_x_digital_input_hex_address"
     },
     {
       "label": "3-5. Y (Digital Output) \u2014 Hex Address",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L529",
-      "id": "notes_plc_program_structure_3_5_y_digital_output_hex_address",
-      "community": 25,
-      "norm_label": "3-5. y (digital output) \u2014 hex address"
+      "community": 14,
+      "norm_label": "3-5. y (digital output) \u2014 hex address",
+      "id": "notes_plc_program_structure_3_5_y_digital_output_hex_address"
     },
     {
       "label": "4. \uba54\uc778 \uc2dc\ud000\uc2a4 \uc124\uacc4 (Step Control)",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L574",
-      "id": "notes_plc_program_structure_4_\uba54\uc778_\uc2dc\ud000\uc2a4_\uc124\uacc4_step_control",
-      "community": 22,
-      "norm_label": "4. \u1106\u1166\u110b\u1175\u11ab \u1109\u1175\u110f\u116f\u11ab\u1109\u1173 \u1109\u1165\u11af\u1100\u1168 (step control)"
+      "community": 7,
+      "norm_label": "4. \u1106\u1166\u110b\u1175\u11ab \u1109\u1175\u110f\u116f\u11ab\u1109\u1173 \u1109\u1165\u11af\u1100\u1168 (step control)",
+      "id": "notes_plc_program_structure_4_\uba54\uc778_\uc2dc\ud000\uc2a4_\uc124\uacc4_step_control"
     },
     {
       "label": "4-1. \uc2dc\ud000\uc2a4 \uc0c1\ud0dc \ucc9c\uc774\ub3c4 (Line 0 \uae30\uc900, Line 1\uc740 M-relay +10 offset)",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L578",
-      "id": "notes_plc_program_structure_4_1_\uc2dc\ud000\uc2a4_\uc0c1\ud0dc_\ucc9c\uc774\ub3c4_line_0_\uae30\uc900_line_1\uc740_m_relay_10_offset",
-      "community": 22,
-      "norm_label": "4-1. \u1109\u1175\u110f\u116f\u11ab\u1109\u1173 \u1109\u1161\u11bc\u1110\u1162 \u110e\u1165\u11ab\u110b\u1175\u1103\u1169 (line 0 \u1100\u1175\u110c\u116e\u11ab, line 1\u110b\u1173\u11ab m-relay +10 offset)"
+      "community": 7,
+      "norm_label": "4-1. \u1109\u1175\u110f\u116f\u11ab\u1109\u1173 \u1109\u1161\u11bc\u1110\u1162 \u110e\u1165\u11ab\u110b\u1175\u1103\u1169 (line 0 \u1100\u1175\u110c\u116e\u11ab, line 1\u110b\u1173\u11ab m-relay +10 offset)",
+      "id": "notes_plc_program_structure_4_1_\uc2dc\ud000\uc2a4_\uc0c1\ud0dc_\ucc9c\uc774\ub3c4_line_0_\uae30\uc900_line_1\uc740_m_relay_10_offset"
     },
     {
       "label": "code:block4 (\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510)",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L580",
-      "id": "notes_plc_program_structure_codeblock_4",
-      "community": 22,
-      "norm_label": "code:block4 (\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510)"
+      "community": 7,
+      "norm_label": "code:block4 (\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510)",
+      "id": "notes_plc_program_structure_codeblock_4"
     },
     {
       "label": "4-2. Gun \uc120\ud0dd\uacfc \uc2dc\ud000\uc2a4 \uc5f0\ub3d9",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L616",
-      "id": "notes_plc_program_structure_4_2_gun_\uc120\ud0dd\uacfc_\uc2dc\ud000\uc2a4_\uc5f0\ub3d9",
-      "community": 22,
-      "norm_label": "4-2. gun \u1109\u1165\u11ab\u1110\u1162\u11a8\u1100\u116a \u1109\u1175\u110f\u116f\u11ab\u1109\u1173 \u110b\u1167\u11ab\u1103\u1169\u11bc"
+      "community": 7,
+      "norm_label": "4-2. gun \u1109\u1165\u11ab\u1110\u1162\u11a8\u1100\u116a \u1109\u1175\u110f\u116f\u11ab\u1109\u1173 \u110b\u1167\u11ab\u1103\u1169\u11bc",
+      "id": "notes_plc_program_structure_4_2_gun_\uc120\ud0dd\uacfc_\uc2dc\ud000\uc2a4_\uc5f0\ub3d9"
     },
     {
       "label": "code:block5 ([Line \ub0b4 Gun \uc120\ud0dd] (D230\u22652 \uad6c\uc131\uc5d0\uc11c HMI Gun Select\ub85c \ud65c\uc131 Gun \uacb0\uc815))",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L618",
-      "id": "notes_plc_program_structure_codeblock_5",
-      "community": 22,
-      "norm_label": "code:block5 ([line \u1102\u1162 gun \u1109\u1165\u11ab\u1110\u1162\u11a8] (d230\u22652 \u1100\u116e\u1109\u1165\u11bc\u110b\u1166\u1109\u1165 hmi gun select\u1105\u1169 \u1112\u116a\u11af\u1109\u1165\u11bc gun \u1100\u1167\u11af\u110c\u1165\u11bc))"
+      "community": 7,
+      "norm_label": "code:block5 ([line \u1102\u1162 gun \u1109\u1165\u11ab\u1110\u1162\u11a8] (d230\u22652 \u1100\u116e\u1109\u1165\u11bc\u110b\u1166\u1109\u1165 hmi gun select\u1105\u1169 \u1112\u116a\u11af\u1109\u1165\u11bc gun \u1100\u1167\u11af\u110c\u1165\u11bc))",
+      "id": "notes_plc_program_structure_codeblock_5"
     },
     {
       "label": "4-3. \uc2a4\ud15d \uc0c1\uc138 \uc815\uc758 (Line 0 / Line 1 \uacf5\ud1b5)",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L636",
-      "id": "notes_plc_program_structure_4_3_\uc2a4\ud15d_\uc0c1\uc138_\uc815\uc758_line_0_line_1_\uacf5\ud1b5",
-      "community": 22,
-      "norm_label": "4-3. \u1109\u1173\u1110\u1166\u11b8 \u1109\u1161\u11bc\u1109\u1166 \u110c\u1165\u11bc\u110b\u1174 (line 0 / line 1 \u1100\u1169\u11bc\u1110\u1169\u11bc)"
+      "community": 7,
+      "norm_label": "4-3. \u1109\u1173\u1110\u1166\u11b8 \u1109\u1161\u11bc\u1109\u1166 \u110c\u1165\u11bc\u110b\u1174 (line 0 / line 1 \u1100\u1169\u11bc\u1110\u1169\u11bc)",
+      "id": "notes_plc_program_structure_4_3_\uc2a4\ud15d_\uc0c1\uc138_\uc815\uc758_line_0_line_1_\uacf5\ud1b5"
     },
     {
       "label": "4-4. \uc2dc\ud000\uc2a4 \uc2e4\ud328 \ucc98\ub9ac",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L655",
-      "id": "notes_plc_program_structure_4_4_\uc2dc\ud000\uc2a4_\uc2e4\ud328_\ucc98\ub9ac",
-      "community": 22,
-      "norm_label": "4-4. \u1109\u1175\u110f\u116f\u11ab\u1109\u1173 \u1109\u1175\u11af\u1111\u1162 \u110e\u1165\u1105\u1175"
+      "community": 7,
+      "norm_label": "4-4. \u1109\u1175\u110f\u116f\u11ab\u1109\u1173 \u1109\u1175\u11af\u1111\u1162 \u110e\u1165\u1105\u1175",
+      "id": "notes_plc_program_structure_4_4_\uc2dc\ud000\uc2a4_\uc2e4\ud328_\ucc98\ub9ac"
     },
     {
       "label": "5. \uc9c4\uacf5 \uc2dc\ud000\uc2a4 \uc0c1\uc138 (gunvac.csv / unitvac.csv)",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L670",
-      "id": "notes_plc_program_structure_5_\uc9c4\uacf5_\uc2dc\ud000\uc2a4_\uc0c1\uc138_gunvac_csv_unitvac_csv",
-      "community": 21,
-      "norm_label": "5. \u110c\u1175\u11ab\u1100\u1169\u11bc \u1109\u1175\u110f\u116f\u11ab\u1109\u1173 \u1109\u1161\u11bc\u1109\u1166 (gunvac.csv / unitvac.csv)"
+      "community": 8,
+      "norm_label": "5. \u110c\u1175\u11ab\u1100\u1169\u11bc \u1109\u1175\u110f\u116f\u11ab\u1109\u1173 \u1109\u1161\u11bc\u1109\u1166 (gunvac.csv / unitvac.csv)",
+      "id": "notes_plc_program_structure_5_\uc9c4\uacf5_\uc2dc\ud000\uc2a4_\uc0c1\uc138_gunvac_csv_unitvac_csv"
     },
     {
       "label": "5-1. Solenoid \ub3d9\uc791 \uc694\uc57d",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L675",
-      "id": "notes_plc_program_structure_5_1_solenoid_\ub3d9\uc791_\uc694\uc57d",
-      "community": 21,
-      "norm_label": "5-1. solenoid \u1103\u1169\u11bc\u110c\u1161\u11a8 \u110b\u116d\u110b\u1163\u11a8"
+      "community": 8,
+      "norm_label": "5-1. solenoid \u1103\u1169\u11bc\u110c\u1161\u11a8 \u110b\u116d\u110b\u1163\u11a8",
+      "id": "notes_plc_program_structure_5_1_solenoid_\ub3d9\uc791_\uc694\uc57d"
     },
     {
       "label": "5-2. GUN VACUUM",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L683",
-      "id": "notes_plc_program_structure_5_2_gun_vacuum",
-      "community": 21,
-      "norm_label": "5-2. gun vacuum"
+      "community": 8,
+      "norm_label": "5-2. gun vacuum",
+      "id": "notes_plc_program_structure_5_2_gun_vacuum"
     },
     {
       "label": "code:block6 ([\uc9c4\uc785] M12/M22 ON)",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L685",
-      "id": "notes_plc_program_structure_codeblock_6",
-      "community": 21,
-      "norm_label": "code:block6 ([\u110c\u1175\u11ab\u110b\u1175\u11b8] m12/m22 on)"
+      "community": 8,
+      "norm_label": "code:block6 ([\u110c\u1175\u11ab\u110b\u1175\u11b8] m12/m22 on)",
+      "id": "notes_plc_program_structure_codeblock_6"
     },
     {
       "label": "5-3. UNIT VACUUM",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L698",
-      "id": "notes_plc_program_structure_5_3_unit_vacuum",
-      "community": 21,
-      "norm_label": "5-3. unit vacuum"
+      "community": 8,
+      "norm_label": "5-3. unit vacuum",
+      "id": "notes_plc_program_structure_5_3_unit_vacuum"
     },
     {
       "label": "code:block7 ([\uc9c4\uc785] M13/M23 ON)",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L700",
-      "id": "notes_plc_program_structure_codeblock_7",
-      "community": 21,
-      "norm_label": "code:block7 ([\u110c\u1175\u11ab\u110b\u1175\u11b8] m13/m23 on)"
+      "community": 8,
+      "norm_label": "code:block7 ([\u110c\u1175\u11ab\u110b\u1175\u11b8] m13/m23 on)",
+      "id": "notes_plc_program_structure_codeblock_7"
     },
     {
       "label": "5-4. VACUUM CHECK",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L717",
-      "id": "notes_plc_program_structure_5_4_vacuum_check",
-      "community": 21,
-      "norm_label": "5-4. vacuum check"
+      "community": 8,
+      "norm_label": "5-4. vacuum check",
+      "id": "notes_plc_program_structure_5_4_vacuum_check"
     },
     {
       "label": "code:block8 ([\uc9c4\uc785] M14/M24 ON)",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L719",
-      "id": "notes_plc_program_structure_codeblock_8",
-      "community": 21,
-      "norm_label": "code:block8 ([\u110c\u1175\u11ab\u110b\u1175\u11b8] m14/m24 on)"
+      "community": 8,
+      "norm_label": "code:block8 ([\u110c\u1175\u11ab\u110b\u1175\u11b8] m14/m24 on)",
+      "id": "notes_plc_program_structure_codeblock_8"
     },
     {
       "label": "code:block9",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L749",
-      "id": "notes_plc_program_structure_codeblock_9",
-      "community": 21,
-      "norm_label": "code:block9"
+      "community": 8,
+      "norm_label": "code:block9",
+      "id": "notes_plc_program_structure_codeblock_9"
     },
     {
       "label": "code:block10",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L768",
-      "id": "notes_plc_program_structure_codeblock_10",
-      "community": 21,
-      "norm_label": "code:block10"
+      "community": 8,
+      "norm_label": "code:block10",
+      "id": "notes_plc_program_structure_codeblock_10"
     },
     {
       "label": "code:block11",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L808",
-      "id": "notes_plc_program_structure_codeblock_11",
-      "community": 21,
-      "norm_label": "code:block11"
+      "community": 8,
+      "norm_label": "code:block11",
+      "id": "notes_plc_program_structure_codeblock_11"
     },
     {
       "label": "code:block12",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L848",
-      "id": "notes_plc_program_structure_codeblock_12",
-      "community": 21,
-      "norm_label": "code:block12"
+      "community": 8,
+      "norm_label": "code:block12",
+      "id": "notes_plc_program_structure_codeblock_12"
     },
     {
       "label": "code:block13",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L855",
-      "id": "notes_plc_program_structure_codeblock_13",
-      "community": 21,
-      "norm_label": "code:block13"
+      "community": 8,
+      "norm_label": "code:block13",
+      "id": "notes_plc_program_structure_codeblock_13"
     },
     {
       "label": "code:block14",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L870",
-      "id": "notes_plc_program_structure_codeblock_14",
-      "community": 21,
-      "norm_label": "code:block14"
+      "community": 8,
+      "norm_label": "code:block14",
+      "id": "notes_plc_program_structure_codeblock_14"
     },
     {
       "label": "code:block15",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L882",
-      "id": "notes_plc_program_structure_codeblock_15",
-      "community": 21,
-      "norm_label": "code:block15"
+      "community": 8,
+      "norm_label": "code:block15",
+      "id": "notes_plc_program_structure_codeblock_15"
     },
     {
       "label": "code:block16",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L894",
-      "id": "notes_plc_program_structure_codeblock_16",
-      "community": 21,
-      "norm_label": "code:block16"
+      "community": 8,
+      "norm_label": "code:block16",
+      "id": "notes_plc_program_structure_codeblock_16"
     },
     {
       "label": "code:block17",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L945",
-      "id": "notes_plc_program_structure_codeblock_17",
-      "community": 21,
-      "norm_label": "code:block17"
+      "community": 8,
+      "norm_label": "code:block17",
+      "id": "notes_plc_program_structure_codeblock_17"
     },
     {
       "label": "code:block18",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L983",
-      "id": "notes_plc_program_structure_codeblock_18",
-      "community": 21,
-      "norm_label": "code:block18"
+      "community": 8,
+      "norm_label": "code:block18",
+      "id": "notes_plc_program_structure_codeblock_18"
     },
     {
       "label": "code:block19",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L1013",
-      "id": "notes_plc_program_structure_codeblock_19",
-      "community": 21,
-      "norm_label": "code:block19"
+      "community": 8,
+      "norm_label": "code:block19",
+      "id": "notes_plc_program_structure_codeblock_19"
     },
     {
       "label": "code:block20",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L1033",
-      "id": "notes_plc_program_structure_codeblock_20",
-      "community": 21,
-      "norm_label": "code:block20"
+      "community": 8,
+      "norm_label": "code:block20",
+      "id": "notes_plc_program_structure_codeblock_20"
     },
     {
       "label": "code:block21",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L1055",
-      "id": "notes_plc_program_structure_codeblock_21",
-      "community": 21,
-      "norm_label": "code:block21"
+      "community": 8,
+      "norm_label": "code:block21",
+      "id": "notes_plc_program_structure_codeblock_21"
     },
     {
       "label": "code:block22",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L1078",
-      "id": "notes_plc_program_structure_codeblock_22",
-      "community": 21,
-      "norm_label": "code:block22"
+      "community": 8,
+      "norm_label": "code:block22",
+      "id": "notes_plc_program_structure_codeblock_22"
     },
     {
       "label": "code:block23",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L1109",
-      "id": "notes_plc_program_structure_codeblock_23",
-      "community": 21,
-      "norm_label": "code:block23"
+      "community": 8,
+      "norm_label": "code:block23",
+      "id": "notes_plc_program_structure_codeblock_23"
     },
     {
       "label": "code:block24",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L1122",
-      "id": "notes_plc_program_structure_codeblock_24",
-      "community": 21,
-      "norm_label": "code:block24"
+      "community": 8,
+      "norm_label": "code:block24",
+      "id": "notes_plc_program_structure_codeblock_24"
     },
     {
       "label": "REFRIGER_CHARGING_MACHINE.md",
       "file_type": "document",
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
       "source_location": "L1",
-      "id": "notes_refriger_charging_machine_md",
-      "community": 24,
-      "norm_label": "refriger_charging_machine.md"
+      "community": 13,
+      "norm_label": "refriger_charging_machine.md",
+      "id": "notes_refriger_charging_machine_md"
     },
     {
       "label": "REFRIGER CHARGING MACHINE \u2014 HMI Specification",
       "file_type": "document",
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
       "source_location": "L1",
-      "id": "notes_refriger_charging_machine_refriger_charging_machine_hmi_specification",
-      "community": 24,
-      "norm_label": "refriger charging machine \u2014 hmi specification"
+      "community": 13,
+      "norm_label": "refriger charging machine \u2014 hmi specification",
+      "id": "notes_refriger_charging_machine_refriger_charging_machine_hmi_specification"
     },
     {
       "label": "1. Operation Screen",
       "file_type": "document",
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
       "source_location": "L10",
-      "id": "notes_refriger_charging_machine_1_operation_screen",
-      "community": 24,
-      "norm_label": "1. operation screen"
+      "community": 13,
+      "norm_label": "1. operation screen",
+      "id": "notes_refriger_charging_machine_1_operation_screen"
     },
     {
       "label": "1-1. Display Items",
       "file_type": "document",
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
       "source_location": "L12",
-      "id": "notes_refriger_charging_machine_1_1_display_items",
-      "community": 24,
-      "norm_label": "1-1. display items"
+      "community": 13,
+      "norm_label": "1-1. display items",
+      "id": "notes_refriger_charging_machine_1_1_display_items"
     },
     {
       "label": "1-2. Labels",
       "file_type": "document",
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
       "source_location": "L28",
-      "id": "notes_refriger_charging_machine_1_2_labels",
-      "community": 24,
-      "norm_label": "1-2. labels"
+      "community": 13,
+      "norm_label": "1-2. labels",
+      "id": "notes_refriger_charging_machine_1_2_labels"
     },
     {
       "label": "1-3. Buttons",
       "file_type": "document",
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
       "source_location": "L50",
-      "id": "notes_refriger_charging_machine_1_3_buttons",
-      "community": 24,
-      "norm_label": "1-3. buttons"
+      "community": 13,
+      "norm_label": "1-3. buttons",
+      "id": "notes_refriger_charging_machine_1_3_buttons"
     },
     {
       "label": "2. Parameter Setting Screen",
       "file_type": "document",
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
       "source_location": "L76",
-      "id": "notes_refriger_charging_machine_2_parameter_setting_screen",
-      "community": 24,
-      "norm_label": "2. parameter setting screen"
+      "community": 13,
+      "norm_label": "2. parameter setting screen",
+      "id": "notes_refriger_charging_machine_2_parameter_setting_screen"
     },
     {
       "label": "3. User Setting Screen \u2014 Per Injection Gun",
       "file_type": "document",
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
       "source_location": "L97",
-      "id": "notes_refriger_charging_machine_3_user_setting_screen_per_injection_gun",
-      "community": 24,
-      "norm_label": "3. user setting screen \u2014 per injection gun"
+      "community": 13,
+      "norm_label": "3. user setting screen \u2014 per injection gun",
+      "id": "notes_refriger_charging_machine_3_user_setting_screen_per_injection_gun"
     },
     {
       "label": "4. Safety PLC Reset",
       "file_type": "document",
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
       "source_location": "L111",
-      "id": "notes_refriger_charging_machine_4_safety_plc_reset",
-      "community": 24,
-      "norm_label": "4. safety plc reset"
+      "community": 13,
+      "norm_label": "4. safety plc reset",
+      "id": "notes_refriger_charging_machine_4_safety_plc_reset"
     },
     {
       "label": "5. Vacuum Pump Operation",
       "file_type": "document",
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
       "source_location": "L120",
-      "id": "notes_refriger_charging_machine_5_vacuum_pump_operation",
-      "community": 24,
-      "norm_label": "5. vacuum pump operation"
+      "community": 13,
+      "norm_label": "5. vacuum pump operation",
+      "id": "notes_refriger_charging_machine_5_vacuum_pump_operation"
     },
     {
       "label": "6. Screen Flow (Conceptual)",
       "file_type": "document",
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
       "source_location": "L127",
-      "id": "notes_refriger_charging_machine_6_screen_flow_conceptual",
-      "community": 24,
-      "norm_label": "6. screen flow (conceptual)"
+      "community": 13,
+      "norm_label": "6. screen flow (conceptual)",
+      "id": "notes_refriger_charging_machine_6_screen_flow_conceptual"
     },
     {
       "label": "code:block1 (POWER ON)",
       "file_type": "document",
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
       "source_location": "L129",
-      "id": "notes_refriger_charging_machine_codeblock_1",
-      "community": 24,
-      "norm_label": "code:block1 (power on)"
+      "community": 13,
+      "norm_label": "code:block1 (power on)",
+      "id": "notes_refriger_charging_machine_codeblock_1"
     },
     {
       "label": "7. Explosion-Proof / Non-Explosion-Proof Configuration",
       "file_type": "document",
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
       "source_location": "L142",
-      "id": "notes_refriger_charging_machine_7_explosion_proof_non_explosion_proof_configuration",
-      "community": 24,
-      "norm_label": "7. explosion-proof / non-explosion-proof configuration"
+      "community": 13,
+      "norm_label": "7. explosion-proof / non-explosion-proof configuration",
+      "id": "notes_refriger_charging_machine_7_explosion_proof_non_explosion_proof_configuration"
     },
     {
       "label": "7-1. Door Limit Sensor (\ubc29\ud3ed \uc804\uc6a9)",
       "file_type": "document",
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
       "source_location": "L151",
-      "id": "notes_refriger_charging_machine_7_1_door_limit_sensor_\ubc29\ud3ed_\uc804\uc6a9",
-      "community": 24,
-      "norm_label": "7-1. door limit sensor (\u1107\u1161\u11bc\u1111\u1169\u11a8 \u110c\u1165\u11ab\u110b\u116d\u11bc)"
+      "community": 13,
+      "norm_label": "7-1. door limit sensor (\u1107\u1161\u11bc\u1111\u1169\u11a8 \u110c\u1165\u11ab\u110b\u116d\u11bc)",
+      "id": "notes_refriger_charging_machine_7_1_door_limit_sensor_\ubc29\ud3ed_\uc804\uc6a9"
     },
     {
       "label": "7-2. Current Behavior",
       "file_type": "document",
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
       "source_location": "L158",
-      "id": "notes_refriger_charging_machine_7_2_current_behavior",
-      "community": 24,
-      "norm_label": "7-2. current behavior"
+      "community": 13,
+      "norm_label": "7-2. current behavior",
+      "id": "notes_refriger_charging_machine_7_2_current_behavior"
     },
     {
       "label": "7-3. Mapping",
       "file_type": "document",
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
       "source_location": "L164",
-      "id": "notes_refriger_charging_machine_7_3_mapping",
-      "community": 24,
-      "norm_label": "7-3. mapping"
+      "community": 13,
+      "norm_label": "7-3. mapping",
+      "id": "notes_refriger_charging_machine_7_3_mapping"
     },
     {
       "label": "REF_DOCUMENT.md",
       "file_type": "document",
       "source_file": "Notes/REF_DOCUMENT.md",
       "source_location": "L1",
-      "id": "notes_ref_document_md",
-      "community": 23,
-      "norm_label": "ref_document.md"
+      "community": 11,
+      "norm_label": "ref_document.md",
+      "id": "notes_ref_document_md"
     },
     {
       "label": "REF \u2014 GX Works2 PLC IL CSV Processing",
       "file_type": "document",
       "source_file": "Notes/REF_DOCUMENT.md",
       "source_location": "L1",
-      "id": "notes_ref_document_ref_gx_works2_plc_il_csv_processing",
-      "community": 23,
-      "norm_label": "ref \u2014 gx works2 plc il csv processing"
+      "community": 11,
+      "norm_label": "ref \u2014 gx works2 plc il csv processing",
+      "id": "notes_ref_document_ref_gx_works2_plc_il_csv_processing"
     },
     {
       "label": "Overview",
       "file_type": "document",
       "source_file": "Notes/REF_DOCUMENT.md",
       "source_location": "L9",
-      "id": "notes_ref_document_overview",
-      "community": 23,
-      "norm_label": "overview"
+      "community": 11,
+      "norm_label": "overview",
+      "id": "notes_ref_document_overview"
     },
     {
       "label": "Target CSV Files",
       "file_type": "document",
       "source_file": "Notes/REF_DOCUMENT.md",
       "source_location": "L17",
-      "id": "notes_ref_document_target_csv_files",
-      "community": 23,
-      "norm_label": "target csv files"
+      "community": 11,
+      "norm_label": "target csv files",
+      "id": "notes_ref_document_target_csv_files"
     },
     {
       "label": "Main Program",
       "file_type": "document",
       "source_file": "Notes/REF_DOCUMENT.md",
       "source_location": "L19",
-      "id": "notes_ref_document_main_program",
-      "community": 23,
-      "norm_label": "main program"
+      "community": 11,
+      "norm_label": "main program",
+      "id": "notes_ref_document_main_program"
     },
     {
       "label": "Functional Modules",
       "file_type": "document",
       "source_file": "Notes/REF_DOCUMENT.md",
       "source_location": "L25",
-      "id": "notes_ref_document_functional_modules",
-      "community": 23,
-      "norm_label": "functional modules"
+      "community": 11,
+      "norm_label": "functional modules",
+      "id": "notes_ref_document_functional_modules"
     },
     {
       "label": "Key Technical Constraints",
       "file_type": "document",
       "source_file": "Notes/REF_DOCUMENT.md",
       "source_location": "L43",
-      "id": "notes_ref_document_key_technical_constraints",
-      "community": 23,
-      "norm_label": "key technical constraints"
+      "community": 11,
+      "norm_label": "key technical constraints",
+      "id": "notes_ref_document_key_technical_constraints"
     },
     {
       "label": "File Format (GX Works2 IL CSV)",
       "file_type": "document",
       "source_file": "Notes/REF_DOCUMENT.md",
       "source_location": "L45",
-      "id": "notes_ref_document_file_format_gx_works2_il_csv",
-      "community": 23,
-      "norm_label": "file format (gx works2 il csv)"
+      "community": 11,
+      "norm_label": "file format (gx works2 il csv)",
+      "id": "notes_ref_document_file_format_gx_works2_il_csv"
     },
     {
       "label": "Non-compliance Consequence",
       "file_type": "document",
       "source_file": "Notes/REF_DOCUMENT.md",
       "source_location": "L57",
-      "id": "notes_ref_document_non_compliance_consequence",
-      "community": 23,
-      "norm_label": "non-compliance consequence"
+      "community": 11,
+      "norm_label": "non-compliance consequence",
+      "id": "notes_ref_document_non_compliance_consequence"
     },
     {
       "label": "Directory Structure",
       "file_type": "document",
       "source_file": "Notes/REF_DOCUMENT.md",
       "source_location": "L62",
-      "id": "notes_ref_document_directory_structure",
-      "community": 23,
-      "norm_label": "directory structure"
+      "community": 11,
+      "norm_label": "directory structure",
+      "id": "notes_ref_document_directory_structure"
     },
     {
       "label": "code:block1 (REF/)",
       "file_type": "document",
       "source_file": "Notes/REF_DOCUMENT.md",
       "source_location": "L64",
-      "id": "notes_ref_document_codeblock_1",
-      "community": 23,
-      "norm_label": "code:block1 (ref/)"
+      "community": 11,
+      "norm_label": "code:block1 (ref/)",
+      "id": "notes_ref_document_codeblock_1"
     },
     {
       "label": "External Reference",
       "file_type": "document",
       "source_file": "Notes/REF_DOCUMENT.md",
       "source_location": "L76",
-      "id": "notes_ref_document_external_reference",
-      "community": 23,
-      "norm_label": "external reference"
+      "community": 11,
+      "norm_label": "external reference",
+      "id": "notes_ref_document_external_reference"
     },
     {
       "label": "Development Rules",
       "file_type": "document",
       "source_file": "Notes/REF_DOCUMENT.md",
       "source_location": "L82",
-      "id": "notes_ref_document_development_rules",
-      "community": 23,
-      "norm_label": "development rules"
+      "community": 11,
+      "norm_label": "development rules",
+      "id": "notes_ref_document_development_rules"
     },
     {
       "label": "Reference Data",
       "file_type": "document",
       "source_file": "Notes/REF_DOCUMENT.md",
       "source_location": "L90",
-      "id": "notes_ref_document_reference_data",
-      "community": 23,
-      "norm_label": "reference data"
+      "community": 11,
+      "norm_label": "reference data",
+      "id": "notes_ref_document_reference_data"
     },
     {
       "label": "Source Materials",
       "file_type": "document",
       "source_file": "Notes/REF_DOCUMENT.md",
       "source_location": "L92",
-      "id": "notes_ref_document_source_materials",
-      "community": 23,
-      "norm_label": "source materials"
+      "community": 11,
+      "norm_label": "source materials",
+      "id": "notes_ref_document_source_materials"
     },
     {
       "label": "Hex Prefix Evidence (MAIN.csv)",
       "file_type": "document",
       "source_file": "Notes/REF_DOCUMENT.md",
       "source_location": "L104",
-      "id": "notes_ref_document_hex_prefix_evidence_main_csv",
-      "community": 23,
-      "norm_label": "hex prefix evidence (main.csv)"
+      "community": 11,
+      "norm_label": "hex prefix evidence (main.csv)",
+      "id": "notes_ref_document_hex_prefix_evidence_main_csv"
     },
     {
       "label": "code:block2 (FF FE  4D 00 43 00 5F 00 \u2026      \u2190 BOM, then \"MC_...\" in UTF-)",
       "file_type": "document",
       "source_file": "Notes/REF_DOCUMENT.md",
       "source_location": "L106",
-      "id": "notes_ref_document_codeblock_2",
-      "community": 23,
-      "norm_label": "code:block2 (ff fe  4d 00 43 00 5f 00 ...      \u2190 bom, then \"mc_...\" in utf-)"
+      "community": 11,
+      "norm_label": "code:block2 (ff fe  4d 00 43 00 5f 00 ...      \u2190 bom, then \"mc_...\" in utf-)",
+      "id": "notes_ref_document_codeblock_2"
     },
     {
       "label": "Verified Counts (MAIN.csv)",
       "file_type": "document",
       "source_file": "Notes/REF_DOCUMENT.md",
       "source_location": "L112",
-      "id": "notes_ref_document_verified_counts_main_csv",
-      "community": 23,
-      "norm_label": "verified counts (main.csv)"
+      "community": 11,
+      "norm_label": "verified counts (main.csv)",
+      "id": "notes_ref_document_verified_counts_main_csv"
     },
     {
       "label": "Mnemonic Frequency (MAIN.csv)",
       "file_type": "document",
       "source_file": "Notes/REF_DOCUMENT.md",
       "source_location": "L120",
-      "id": "notes_ref_document_mnemonic_frequency_main_csv",
-      "community": 23,
-      "norm_label": "mnemonic frequency (main.csv)"
+      "community": 11,
+      "norm_label": "mnemonic frequency (main.csv)",
+      "id": "notes_ref_document_mnemonic_frequency_main_csv"
     },
     {
       "label": "Device Prefix Frequency (MAIN.csv)",
       "file_type": "document",
       "source_file": "Notes/REF_DOCUMENT.md",
       "source_location": "L177",
-      "id": "notes_ref_document_device_prefix_frequency_main_csv",
-      "community": 23,
-      "norm_label": "device prefix frequency (main.csv)"
+      "community": 11,
+      "norm_label": "device prefix frequency (main.csv)",
+      "id": "notes_ref_document_device_prefix_frequency_main_csv"
     },
     {
       "label": "Additional Device Types (not in MAIN.csv)",
       "file_type": "document",
       "source_file": "Notes/REF_DOCUMENT.md",
       "source_location": "L190",
-      "id": "notes_ref_document_additional_device_types_not_in_main_csv",
-      "community": 23,
-      "norm_label": "additional device types (not in main.csv)"
+      "community": 11,
+      "norm_label": "additional device types (not in main.csv)",
+      "id": "notes_ref_document_additional_device_types_not_in_main_csv"
     },
     {
       "label": "code:block25",
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L1094",
-      "community": 21,
+      "community": 8,
       "norm_label": "code:block25",
       "id": "notes_plc_program_structure_codeblock_25"
     },
@@ -1967,7 +1967,7 @@
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L1107",
-      "community": 21,
+      "community": 8,
       "norm_label": "code:block26",
       "id": "notes_plc_program_structure_codeblock_26"
     },
@@ -1976,7 +1976,7 @@
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L12",
-      "community": 22,
+      "community": 7,
       "norm_label": "0-1. \u110c\u1175\u110b\u116f\u11ab \u1100\u116e\u1109\u1165\u11bc",
       "id": "notes_plc_program_structure_0_1_\uc9c0\uc6d0_\uad6c\uc131"
     },
@@ -1985,7 +1985,7 @@
       "file_type": "document",
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "L60",
-      "community": 22,
+      "community": 7,
       "norm_label": "0-5. gun index \u1100\u1169\u11bc\u1109\u1175\u11a8",
       "id": "notes_plc_program_structure_0_5_gun_index_\uacf5\uc2dd_60"
     },
@@ -1998,7 +1998,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 4,
       "norm_label": "refriger charging machine",
       "id": "refriger_charging_machine"
     },
@@ -2011,7 +2011,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 4,
       "norm_label": "mitsubishi q03udv plc",
       "id": "mitsubishi_q03udv"
     },
@@ -2024,7 +2024,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 11,
+      "community": 17,
       "norm_label": "gx works2 il csv format specification",
       "id": "gx_works2_il_csv_format"
     },
@@ -2037,7 +2037,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 4,
       "norm_label": "plc program structure design",
       "id": "plc_program_structure"
     },
@@ -2050,7 +2050,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 4,
       "norm_label": "hmi specification for refriger charging machine",
       "id": "hmi_specification"
     },
@@ -2063,7 +2063,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 11,
+      "community": 17,
       "norm_label": "ref project documentation",
       "id": "ref_project_documentation"
     },
@@ -2076,7 +2076,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 4,
       "norm_label": "a3 design report \u2014 plc standard program",
       "id": "design_report_a3"
     },
@@ -2089,7 +2089,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 11,
+      "community": 17,
       "norm_label": "melsec-q/l programming manual (common instruction)",
       "id": "melsec_ql_programming_manual"
     },
@@ -2102,7 +2102,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 11,
+      "community": 17,
       "norm_label": "main.csv reference export (3607 lines)",
       "id": "main_csv_reference"
     },
@@ -2115,7 +2115,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 4,
       "norm_label": "mc_26074 reference project",
       "id": "mc_26074_project"
     },
@@ -2128,7 +2128,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 4,
       "norm_label": "gun type classification (0=1-sol, 1=refrig h+l, 2=oil+refrig h+l)",
       "id": "gun_type_system"
     },
@@ -2142,7 +2142,7 @@
       "author": null,
       "contributor": null,
       "rationale": "Line 0 and Line 1 operate fully independently with dedicated vacuum pumps and plumbing. Each line has its own step M-relays and interlock signals. Only Emergency Stop and Safety Fault affect both lines globally. This design allows a single program to support 1L/1G through 2L/4G configurations without code duplication.",
-      "community": 2,
+      "community": 4,
       "norm_label": "line independence design principle",
       "id": "line_independence_design"
     },
@@ -2156,7 +2156,7 @@
       "author": null,
       "contributor": null,
       "rationale": "Goal: a single standard program that works across 1L/1G, 1L/2G, 2L/2G, 2L/4G configurations. Configuration parameters D228 (Line Count) and D230 (Gun/Line) enable or disable Line 1 and Gun 1 logic via CJ (conditional jump) instructions. This avoids maintaining separate programs per configuration, reducing maintenance burden and testing effort.",
-      "community": 2,
+      "community": 4,
       "norm_label": "single program for all configurations (1l/1g ~ 2l/4g)",
       "id": "single_program_multi_config_rationale"
     },
@@ -2169,7 +2169,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 4,
       "norm_label": "11-module pou (program organization unit) structure",
       "id": "pou_module_structure"
     },
@@ -2182,7 +2182,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 4,
       "norm_label": "step sequence control (idle\u2192precheck\u2192gun vac\u2192unit vac\u2192vac check\u2192injection\u2192gas exhaust\u2192complete)",
       "id": "step_sequence_control"
     },
@@ -2195,7 +2195,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 4,
       "norm_label": "m (internal relay) device map",
       "id": "device_map_m_relay"
     },
@@ -2208,7 +2208,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 4,
       "norm_label": "d (data register) device map",
       "id": "device_map_d_register"
     },
@@ -2221,7 +2221,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 4,
       "norm_label": "alarm detection and handling system",
       "id": "alarm_system"
     },
@@ -2234,7 +2234,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 4,
       "norm_label": "interlock design (per-line safety conditions)",
       "id": "interlock_design"
     },
@@ -2247,7 +2247,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 4,
       "norm_label": "barcode pc\u2194plc data flow (write area \u2192 working area \u2192 clear)",
       "id": "barcode_communication_flow"
     },
@@ -2260,7 +2260,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 4,
       "norm_label": "safety plc integration interface",
       "id": "safety_plc_integration"
     },
@@ -2273,7 +2273,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 4,
       "norm_label": "spc statistics module (cumulative usage, count, pulse)",
       "id": "spc_statistics"
     },
@@ -2286,7 +2286,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 4,
       "norm_label": "analog input processing (ai raw \u2192 eu scaling)",
       "id": "analog_processing"
     },
@@ -2299,7 +2299,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 4,
       "norm_label": "vacuum control sequence (gun vac, unit vac, vac check/leak test)",
       "id": "vacuum_sequence"
     },
@@ -2312,7 +2312,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 4,
       "norm_label": "injection control sequence (type 0/1/2 branching)",
       "id": "injection_sequence"
     },
@@ -2325,7 +2325,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 4,
       "norm_label": "system configuration parameters d228/d230/d232",
       "id": "config_parameters_d228_d230_d232"
     },
@@ -2338,7 +2338,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 4,
       "norm_label": "gun global index formula (line\u00d7gunperline+gunlocal)",
       "id": "gun_global_index_formula"
     },
@@ -2351,7 +2351,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 4,
       "norm_label": "injection volume correction logic (refrigvol + corr + hmi_cal + batch)",
       "id": "correction_logic_injection"
     },
@@ -2364,7 +2364,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 4,
       "norm_label": "pulse-to-injection-volume conversion",
       "id": "pulse_to_injection_volume"
     },
@@ -2377,7 +2377,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 4,
       "norm_label": "refrigerant bombe low alarm (d14~d15 \u2265 d12~d13)",
       "id": "refriger_bombe_alarm"
     },
@@ -2390,7 +2390,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 11,
+      "community": 17,
       "norm_label": "wrapped-tsv quoting model (outer wrapping + doubled inner quotes)",
       "id": "wrapped_tsv_format"
     },
@@ -2403,7 +2403,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 11,
+      "community": 17,
       "norm_label": "universal quoting model (3-layer escaping convention)",
       "id": "universal_quoting_model"
     },
@@ -2416,7 +2416,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 11,
+      "community": 17,
       "norm_label": "utf-16 le encoding with bom constraint",
       "id": "utf16_le_encoding_rule"
     },
@@ -2429,7 +2429,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 11,
+      "community": 17,
       "norm_label": "row type classification (type a=label, b=instruction, c=continuation)",
       "id": "row_type_classification"
     },
@@ -2442,7 +2442,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 11,
+      "community": 17,
       "norm_label": "il instruction mnemonics catalog (46 distinct, sequence + basic)",
       "id": "instruction_mnemonics_catalog"
     },
@@ -2455,7 +2455,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 11,
+      "community": 17,
       "norm_label": "ladder rung composition rules (ld\u2192and/or\u2192out, mps/mpp pairing)",
       "id": "rung_composition_rules"
     },
@@ -2468,7 +2468,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 11,
+      "community": 17,
       "norm_label": "device/operand notation rules (x/y hex, m/d decimal, constants k/h/e)",
       "id": "device_notation_rules"
     },
@@ -2481,7 +2481,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 4,
       "norm_label": "hmi button \u2192 plc m-register mapping (23 buttons)",
       "id": "hmi_button_map"
     },
@@ -2494,7 +2494,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 4,
       "norm_label": "physical i/o estimate (di\u00d732, do\u00d732, ai\u00d76ch, hsc\u00d72, rs-485)",
       "id": "physical_io_estimate"
     },
@@ -2507,7 +2507,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 4,
       "norm_label": "hmi screen navigation flow (operation\u2192user setting / parameter / alarm)",
       "id": "hmi_screen_flow"
     },
@@ -2520,7 +2520,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 4,
       "norm_label": "csv module responsibilities map (idata, gmes, setting, gunvac, unitvac, vacchec, refinj, alarm, ad, 485, spc)",
       "id": "csv_module_responsibilities"
     },
@@ -2533,7 +2533,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 4,
       "norm_label": "global alarm actions (emg stop, safety plc fault \u2192 all out off, latch)",
       "id": "global_alarm_actions"
     },
@@ -2546,7 +2546,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 4,
       "norm_label": "per-line alarm instances (m110~m118 l0, m120~m128 l1)",
       "id": "line_instance_alarm"
     },
@@ -2559,7 +2559,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 4,
       "norm_label": "system signal flow (hmi\u2194plc\u2194field i/o, pc\u2194plc barcode)",
       "id": "signal_flow_data_flow"
     },
@@ -2572,7 +2572,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 11,
+      "community": 17,
       "norm_label": "graphify knowledge graph tool",
       "id": "graphify_knowledge_graph"
     },
@@ -2585,7 +2585,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 4,
       "norm_label": "pc write \u2192 working copy \u2192 cycle complete \u2192 0 clear handshake protocol",
       "id": "pc_write_clear_handshake"
     },
@@ -2598,7 +2598,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 4,
       "norm_label": "emergency stop logic (m90 latch, all out off)",
       "id": "emergency_stop_logic"
     },
@@ -2607,7 +2607,7 @@
       "file_type": "code",
       "source_file": "package.json",
       "source_location": "L1",
-      "community": 15,
+      "community": 22,
       "norm_label": "package.json",
       "id": "package_json"
     },
@@ -2616,7 +2616,7 @@
       "file_type": "code",
       "source_file": "package.json",
       "source_location": "L2",
-      "community": 15,
+      "community": 22,
       "norm_label": "dependencies",
       "id": "opencode_package_dependencies"
     },
@@ -2625,7 +2625,7 @@
       "file_type": "code",
       "source_file": "package.json",
       "source_location": "L3",
-      "community": 15,
+      "community": 22,
       "norm_label": "@opencode-ai/plugin",
       "id": "opencode_package_dependencies_opencode_ai_plugin"
     },
@@ -2638,7 +2638,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 18,
+      "community": 26,
       "norm_label": "@opencode-ai/plugin v1.15.11",
       "id": "pkg_opencode_ai_plugin"
     },
@@ -2651,7 +2651,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 18,
+      "community": 26,
       "norm_label": ".opencode project configuration",
       "id": "cfg_opencode_project"
     },
@@ -2664,7 +2664,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 19,
+      "community": 27,
       "norm_label": "opencode project memory block",
       "id": "mem_opencode_project"
     },
@@ -2678,7 +2678,7 @@
       "author": null,
       "contributor": null,
       "rationale": "Single standard PLC program supporting all configurations (1L/1G, 1L/2G, 2L/2G, 2L/4G). Design prioritizes a unified codebase over per-configuration variants.",
-      "community": 13,
+      "community": 20,
       "norm_label": "refriger charging machine system",
       "id": "sys_refriger_charging_machine"
     },
@@ -2691,7 +2691,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 13,
+      "community": 20,
       "norm_label": "plc program structure design document",
       "id": "doc_plc_program_structure"
     },
@@ -2704,7 +2704,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 13,
+      "community": 20,
       "norm_label": "refriger charging machine plc standard program design report (a3)",
       "id": "doc_design_report_a3"
     },
@@ -2717,7 +2717,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 13,
+      "community": 20,
       "norm_label": "melsec q/l programming manual (common instruction)",
       "id": "doc_melsec_ql_manual"
     },
@@ -2730,7 +2730,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 13,
+      "community": 20,
       "norm_label": "refriger_charging_machine.md hmi specification",
       "id": "doc_hmi_spec"
     },
@@ -2743,7 +2743,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 13,
+      "community": 20,
       "norm_label": "gx works2 il csv format specification",
       "id": "doc_gx_works2_il_spec"
     },
@@ -2756,7 +2756,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 13,
+      "community": 20,
       "norm_label": "mitsubishi qcpu q03udv (q mode)",
       "id": "hw_mitsubishi_q03udv"
     },
@@ -2770,7 +2770,7 @@
       "author": null,
       "contributor": null,
       "rationale": "Flexible configuration via D228 (LineCount), D230 (GunPerLine), D232 (TotalGun=RO). Configuration change requires PLC STOP and download; cannot change during operation.",
-      "community": 12,
+      "community": 19,
       "norm_label": "line/gun system configuration (supports 1l/1g ~ 2l/4g)",
       "id": "conc_system_configuration"
     },
@@ -2784,7 +2784,7 @@
       "author": null,
       "contributor": null,
       "rationale": "Line 0 and Line 1 run completely independent sequences with dedicated step M-relays, vacuum systems, and parameters. Only EMG Stop / Safety Fault cause global stop across lines. Enables simultaneous yet decoupled multi-line operation.",
-      "community": 12,
+      "community": 19,
       "norm_label": "line independence principle",
       "id": "conc_line_independence"
     },
@@ -2798,7 +2798,7 @@
       "author": null,
       "contributor": null,
       "rationale": "Within a single Line, all guns share the same vacuum pump/piping/unit. Only 1 gun can be active at a time per line. Gun selection via HMI.",
-      "community": 12,
+      "community": 19,
       "norm_label": "vacuum system sharing within line",
       "id": "conc_vacuum_sharing"
     },
@@ -2812,7 +2812,7 @@
       "author": null,
       "contributor": null,
       "rationale": "Four solenoid configurations support different refrigerant/oil injection strategies: Type0=1-Sol Refrig, Type1=Refrig FAST+NORMAL (2-Sol), Type2=Oil+Refrig sequential (2-Sol), Type3=Oil+Refrig both FAST+NORMAL (4-Sol). Type per-gun supports mixed configurations on same line.",
-      "community": 14,
+      "community": 21,
       "norm_label": "gun type definitions (type 0-3)",
       "id": "conc_gun_type_definitions"
     },
@@ -2826,7 +2826,7 @@
       "author": null,
       "contributor": null,
       "rationale": "At injection start, both FAST and NORMAL solenoids open together for rapid fill. When an intermediate stop-point is reached, FAST closes and only NORMAL continues to final target for precision. Same pattern applies to both Oil and Refriger.",
-      "community": 14,
+      "community": 21,
       "norm_label": "fast+normal simultaneous open injection",
       "id": "conc_dual_speed_open"
     },
@@ -2840,7 +2840,7 @@
       "author": null,
       "contributor": null,
       "rationale": "Gun Global Index = Line \u00d7 GunPerLine(D230) + GunLocal. Provides a flat addressing scheme (0-3) for up to 4 guns regardless of line/gun layout, simplifying register offset calculations for user settings.",
-      "community": 14,
+      "community": 21,
       "norm_label": "gun global index formula",
       "id": "conc_gun_index_formula"
     },
@@ -2853,7 +2853,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 8,
+      "community": 12,
       "norm_label": "hmi button \u2192 plc internal relay mapping",
       "id": "conc_hmibutton_plc_mapping"
     },
@@ -2867,7 +2867,7 @@
       "author": null,
       "contributor": null,
       "rationale": "Program decomposed into 11 independent CSV modules (IL format): idata (init/mapping), gmes (main sequence), setting (parameters), gunvac, unitvac, vacchec, refinj, alarm, ad (analog), 485 (RS-485 comm), spc (statistics). Execution conditions vary: always-ON for idata/gmes/setting/alarm/ad/485, step-gated for gunvac/unitvac/vacchec/refinj, cycle-complete for spc.",
-      "community": 16,
+      "community": 24,
       "norm_label": "11-pou program organization unit module structure",
       "id": "conc_pou_module_structure"
     },
@@ -2880,7 +2880,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 8,
+      "community": 12,
       "norm_label": "m (internal relay) device map",
       "id": "conc_device_map_m_relay"
     },
@@ -2894,7 +2894,7 @@
       "author": null,
       "contributor": null,
       "rationale": "All D-register items allocated at even addresses; Dn+1 reserved for every 16-bit item to prepare for future 32-bit expansion. Parameter registers split per line (L0=D0-D29, L1=D30-D59), user settings per gun (D60-D115), analog data (D120-D149), calculation work (D150-D189), communication (D190-D269), SPC (D280-D299), system config (D228-D239).",
-      "community": 12,
+      "community": 19,
       "norm_label": "d (data register) device map (even-address rule)",
       "id": "conc_device_map_d_register"
     },
@@ -2907,7 +2907,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 20,
+      "community": 28,
       "norm_label": "t (timer) device map (100ms base)",
       "id": "conc_device_map_t_timer"
     },
@@ -2920,7 +2920,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 8,
+      "community": 12,
       "norm_label": "x (digital input) device map",
       "id": "conc_device_map_x_input"
     },
@@ -2933,7 +2933,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 8,
+      "community": 12,
       "norm_label": "y (digital output) device map",
       "id": "conc_device_map_y_output"
     },
@@ -2947,7 +2947,7 @@
       "author": null,
       "contributor": null,
       "rationale": "Each Line follows: IDLE \u2192 PRECHECK \u2192 GUN VAC \u2192 UNIT VAC \u2192 VAC CHECK \u2192 INJECTION (Type-branched) \u2192 GAS EXHAUST \u2192 COMPLETE \u2192 IDLE. Line 0 uses M10-M1A steps, Line 1 uses M20-M2A. EMP/Safety fault forces ALARM state from any step.",
-      "community": 8,
+      "community": 12,
       "norm_label": "main sequence step control (per line)",
       "id": "conc_main_sequence_control"
     },
@@ -2961,7 +2961,7 @@
       "author": null,
       "contributor": null,
       "rationale": "After VAC CHECK, injection sequence forks based on active Gun Type: Type0 = single solenoid ON\u2192target\u2192OFF; Type1 = FAST+NORMAL simultaneous\u2192FAST cutoff\u2192NORMAL final; Type2 = Oil sequential\u2192Refrig sequential; Type3 = Oil FAST+NORMAL\u2192Refrig FAST+NORMAL.",
-      "community": 14,
+      "community": 21,
       "norm_label": "gun selection-based injection sequence branching",
       "id": "conc_gun_selection_branching"
     },
@@ -2974,7 +2974,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 8,
+      "community": 12,
       "norm_label": "state transition diagram per line",
       "id": "conc_state_transition_diagram"
     },
@@ -2988,7 +2988,7 @@
       "author": null,
       "contributor": null,
       "rationale": "START requires: IDLE state, no EMG Stop, no alarm latch, Safety OK, Gun Coupler ON, Pressure Normal, Refrig Supply OK, Interlock OK or DISABLED. On START: PC Write area copied to Working Copy via BMOV, then transition to PRECHECK.",
-      "community": 8,
+      "community": 12,
       "norm_label": "start condition per line",
       "id": "conc_start_condition"
     },
@@ -3002,7 +3002,7 @@
       "author": null,
       "contributor": null,
       "rationale": "Cycle completes when EXHAUST time expires; increments injection count, accumulates usage; sets CycleDone; clears PC Write area via FMOV K0. Auto mode returns to IDLE; Manual mode awaits next START.",
-      "community": 17,
+      "community": 25,
       "norm_label": "end condition per line",
       "id": "conc_end_condition"
     },
@@ -3015,7 +3015,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 8,
+      "community": 12,
       "norm_label": "process specification table (gun vacuum, unit vacuum, vac check, refriger charging, exhaust)",
       "id": "conc_process_specification"
     },
@@ -3028,7 +3028,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 8,
+      "community": 12,
       "norm_label": "signal flow diagram (hmi\u2194plc\u2194field i/o\u2194pc)",
       "id": "conc_signal_flow"
     },
@@ -3042,7 +3042,7 @@
       "author": null,
       "contributor": null,
       "rationale": "Safety PLC communicates via: Safety Healthy \u2192 M131/M141, Safety Reset Request \u2192 X03, Main\u2192Safety Reset Ack \u2192 Y1C, Emergency Stop Active \u2192 M90. Separation of safety and main logic for functional safety compliance.",
-      "community": 8,
+      "community": 12,
       "norm_label": "safety plc interface",
       "id": "conc_safety_plc_interface"
     },
@@ -3056,7 +3056,7 @@
       "author": null,
       "contributor": null,
       "rationale": "Per-line interlock relays (M130-M149): Safety OK, Vacuum Pump Run FB, Gun Coupler, Pressure Normal, Refrig Supply OK. Interlock can be toggled USE/NOT USE via HMI (M42). All interlocks must be satisfied for START condition.",
-      "community": 8,
+      "community": 12,
       "norm_label": "interlock system (per line)",
       "id": "conc_interlock_system"
     },
@@ -3070,7 +3070,7 @@
       "author": null,
       "contributor": null,
       "rationale": "Actual injection volume compared against target \u00b1 tolerance (D26 for Refrig, D28 for Oil). If |actual - target| > tolerance \u2192 NG ALARM + OPERATION STOP. Ensures precise dispensing quality control.",
-      "community": 8,
+      "community": 12,
       "norm_label": "injection tolerance check mechanism",
       "id": "conc_tolerance_check"
     },
@@ -3084,7 +3084,7 @@
       "author": null,
       "contributor": null,
       "rationale": "Gun Coupler Sensor (X04/X0A for L0, X14/X1A for L1) monitored during ALL processes. OFF detection triggers immediate ALARM + OPERATION STOP, all solenoids OFF, return to IDLE. Prevents operation with disconnected gun.",
-      "community": 8,
+      "community": 12,
       "norm_label": "gun coupler sensor interlock",
       "id": "conc_gun_coupler_interlock"
     },
@@ -3098,7 +3098,7 @@
       "author": null,
       "contributor": null,
       "rationale": "PC writes job data to D190-D209 (L0) / D230-D249 (L1). On START, BMOV copies to Working Area (D210-D229 L0 / D250-D269 L1). Cycle completion clears PC Write area (FMOV K0). Write area at 0 signals PC that next write is permitted.",
-      "community": 8,
+      "community": 12,
       "norm_label": "pc\u2194plc communication interface (pc write/working area)",
       "id": "conc_pc_communication"
     },
@@ -3112,7 +3112,7 @@
       "author": null,
       "contributor": null,
       "rationale": "Three analog channels per line: Pressure, Temperature, Vacuum (4-20mA \u2192 0-4000 raw \u2192 EU). Per-line EU values stored in dedicated D-register ranges.",
-      "community": 12,
+      "community": 19,
       "norm_label": "analog input processing (ad\u2192eu scaling)",
       "id": "conc_analog_processing"
     },
@@ -3126,7 +3126,7 @@
       "author": null,
       "contributor": null,
       "rationale": "Aggregate statistics across all lines: Refriger Total Usage (32-bit Kg), Total Injection Count (32-bit), Total Charging Pulse (32-bit), Last Actual Volume / Setting Amount. Updated on cycle completion.",
-      "community": 17,
+      "community": 25,
       "norm_label": "spc statistics tracking",
       "id": "conc_spc_statistics"
     },
@@ -3140,7 +3140,7 @@
       "author": null,
       "contributor": null,
       "rationale": "RS-485 channel handles barcode reader and SCAN injection data. Time-division or channel-separated. Communication status tracked via M190-M199 flags.",
-      "community": 8,
+      "community": 12,
       "norm_label": "rs-485 communication (barcode/scan)",
       "id": "conc_rs485_communication"
     },
@@ -3154,7 +3154,7 @@
       "author": null,
       "contributor": null,
       "rationale": "Main sequence steps (M10-M1A/M20-M2A) each represent a discrete SoC. Done/Fail relays (M30-M49) provide step-completion signaling to parent sequence controller (gmes). Enables modular, composable cycle logic.",
-      "community": 8,
+      "community": 12,
       "norm_label": "soc (state-of-cycle) split into sub-states",
       "id": "conc_soc_split"
     },
@@ -3168,7 +3168,7 @@
       "author": null,
       "contributor": null,
       "rationale": "Global alarms (M90-M109): EMG Stop, Safety Fault, Vacuum Timeout, Leak, Injection Over/Under, Pressure/Temperature abnormal, Bombe Low, Barcode/SCAN fail. Per-line alarm instances (M110-M129). Alarm latch, buzzer output (Y30), lamp outputs (Y31-Y33). ALARM RESET via HMI M43.",
-      "community": 8,
+      "community": 12,
       "norm_label": "error/alarm handling system",
       "id": "conc_error_handling"
     },
@@ -3181,7 +3181,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 12,
+      "community": 19,
       "norm_label": "system configuration registers (d330-d339)",
       "id": "conc_config_registers_d330"
     },
@@ -3194,7 +3194,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 14,
+      "community": 21,
       "norm_label": "gun type per gun registers (d62/d76/d90/d104)",
       "id": "conc_gun_type_registers"
     },
@@ -3207,7 +3207,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 12,
+      "community": 19,
       "norm_label": "per-line parameter register layout (d0-d29 l0, d30-d59 l1)",
       "id": "conc_line_register_layout"
     },
@@ -3220,7 +3220,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 16,
+      "community": 24,
       "norm_label": "11-pou csv module data flow overview",
       "id": "conc_csv_module_data_flow"
     },
@@ -3233,7 +3233,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 8,
+      "community": 12,
       "norm_label": "main sequence flow diagram (a3 visual)",
       "id": "conc_main_sequence_flow_diagram"
     },
@@ -3246,7 +3246,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 9,
       "norm_label": "refriger charging machine",
       "id": "project_refriger_charging_machine"
     },
@@ -3259,7 +3259,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 9,
       "norm_label": "\u1107\u1161\u11bc\u1111\u1169\u11a8 explosion-proof type",
       "id": "project_explosion_proof_type"
     },
@@ -3272,7 +3272,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 9,
       "norm_label": "\u1107\u1175\u1107\u1161\u11bc\u1111\u1169\u11a8 non-explosion-proof type",
       "id": "project_non_explosion_proof_type"
     },
@@ -3285,7 +3285,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 9,
       "norm_label": "door limit sensor (\u110c\u116a/\u110b\u116e, \u1107\u1161\u11bc\u1111\u1169\u11a8 \u110c\u1165\u11ab\u110b\u116d\u11bc)",
       "id": "project_door_limit_sensor"
     },
@@ -3298,7 +3298,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 9,
       "norm_label": "door open alarm",
       "id": "project_door_open_alarm"
     },
@@ -3311,7 +3311,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 9,
       "norm_label": "alarm-only design \u2014 no interlock, no emergency stop",
       "id": "project_alarm_no_action_design"
     },
@@ -3324,7 +3324,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 9,
       "norm_label": "refriger charging machine \u2014 hmi specification",
       "id": "recm_hmi_specification"
     },
@@ -3337,7 +3337,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 9,
       "norm_label": "mitsubishi hmi + plc platform",
       "id": "recm_mitsubishi_platform"
     },
@@ -3350,7 +3350,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 9,
       "norm_label": "momentary button rule (on only when pressed)",
       "id": "recm_momentary_button_rule"
     },
@@ -3363,7 +3363,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 9,
       "norm_label": "operation screen",
       "id": "recm_operation_screen"
     },
@@ -3376,7 +3376,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 9,
       "norm_label": "parameter setting screen",
       "id": "recm_parameter_setting_screen"
     },
@@ -3389,7 +3389,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 9,
       "norm_label": "user setting screen (per injection gun)",
       "id": "recm_user_setting_screen"
     },
@@ -3402,7 +3402,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 9,
       "norm_label": "alarm screen",
       "id": "recm_alarm_screen"
     },
@@ -3415,7 +3415,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 9,
       "norm_label": "safety plc reset (hard + soft)",
       "id": "recm_safety_plc_reset"
     },
@@ -3428,7 +3428,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 9,
       "norm_label": "vacuum pump operation",
       "id": "recm_vacuum_pump_control"
     },
@@ -3441,7 +3441,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 9,
       "norm_label": "screen flow architecture",
       "id": "recm_screen_flow"
     },
@@ -3454,7 +3454,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 9,
       "norm_label": "\u00a77 explosion-proof configuration",
       "id": "recm_explosion_proof_config"
     },
@@ -3467,7 +3467,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 9,
       "norm_label": "non-explosion-proof configuration (\u1107\u1175\u1107\u1161\u11bc\u1111\u1169\u11a8)",
       "id": "recm_non_explosion_proof_config"
     },
@@ -3480,7 +3480,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 9,
       "norm_label": "door limit sensor subsystem (\u1107\u1161\u11bc\u1111\u1169\u11a8 \u110c\u1165\u11ab\u110b\u116d\u11bc)",
       "id": "recm_door_limit_sensor_system"
     },
@@ -3493,7 +3493,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 9,
       "norm_label": "left door limit sensor (x-input, nc contact)",
       "id": "recm_left_door_sensor"
     },
@@ -3506,7 +3506,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 9,
       "norm_label": "right door limit sensor (x-input, nc contact)",
       "id": "recm_right_door_sensor"
     },
@@ -3519,7 +3519,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 9,
       "norm_label": "door open alarm (m-relay latch)",
       "id": "recm_door_open_alarm_relay"
     },
@@ -3532,7 +3532,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 9,
       "norm_label": "design choice: alarm without emergency stop or interlock",
       "id": "recm_alarm_without_interlock_rationale"
     },
@@ -3545,7 +3545,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 9,
       "norm_label": "non-latching alarm behavior",
       "id": "recm_non_latching_alarm"
     },
@@ -3554,7 +3554,7 @@
       "file_type": "document",
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
       "rationale": "Refrigerant charging equipment for factory automation; supports explosion-proof and non-explosion-proof enclosure types per model",
-      "community": 7,
+      "community": 10,
       "norm_label": "refriger charging machine",
       "id": "N01"
     },
@@ -3563,7 +3563,7 @@
       "file_type": "document",
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
       "rationale": "HMI hardware: 1024x768 XGA resolution, LS Electric brand; provides touchscreen interface for machine control and monitoring",
-      "community": 7,
+      "community": 10,
       "norm_label": "ls ixp2-1200 hmi",
       "id": "N02"
     },
@@ -3572,7 +3572,7 @@
       "file_type": "document",
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
       "rationale": "Programmable Logic Controller paired with HMI; stores configuration parameters and executes control logic for the charging machine",
-      "community": 7,
+      "community": 10,
       "norm_label": "mitsubishi plc",
       "id": "N03"
     },
@@ -3581,7 +3581,7 @@
       "file_type": "document",
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
       "rationale": "Main HMI screen; entry point on power-on; displays 11 data items (refrigerant usage, vacuum level, temperature, pressure, etc.) and hosts 19 control buttons including START, STOP, and process triggers",
-      "community": 7,
+      "community": 10,
       "norm_label": "operation screen",
       "id": "N04"
     },
@@ -3590,7 +3590,7 @@
       "file_type": "document",
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
       "rationale": "Screen for configuring 12 system parameters (vacuum times, alarm thresholds, pressure limits, injection tolerance); reads from PLC and writes user modifications back to PLC",
-      "community": 7,
+      "community": 10,
       "norm_label": "parameter setting screen",
       "id": "N05"
     },
@@ -3599,7 +3599,7 @@
       "file_type": "document",
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
       "rationale": "Per-injection-gun configuration screen with 5 settings (injection model, volume, calibration values, batch correction); reads from PLC and writes user modifications back to PLC",
-      "community": 7,
+      "community": 10,
       "norm_label": "user setting screen",
       "id": "N06"
     },
@@ -3608,7 +3608,7 @@
       "file_type": "document",
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
       "rationale": "Screen for displaying and acknowledging alarms including DOOR OPEN alarm; accessible via ALARM SCREEN navigation button",
-      "community": 7,
+      "community": 10,
       "norm_label": "alarm screen",
       "id": "N07"
     },
@@ -3617,7 +3617,7 @@
       "file_type": "document",
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
       "rationale": "Navigation hierarchy: POWER ON leads to Operation Screen, which branches to User Setting Screen, Parameter Setting Screen, and Alarm Screen",
-      "community": 7,
+      "community": 10,
       "norm_label": "screen navigation flow",
       "id": "N08"
     },
@@ -3626,7 +3626,7 @@
       "file_type": "document",
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
       "rationale": "Global design rule: hardware and HMI buttons are ON only when pressed (momentary action), not latching; applies to all buttons including vacuum pump and process triggers",
-      "community": 7,
+      "community": 10,
       "norm_label": "momentary button rule",
       "id": "N09"
     },
@@ -3635,7 +3635,7 @@
       "file_type": "document",
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
       "rationale": "Toggle button on Operation Screen to enable or disable the interlock safety mechanism",
-      "community": 7,
+      "community": 10,
       "norm_label": "interlock use/not use toggle",
       "id": "N10"
     },
@@ -3644,7 +3644,7 @@
       "file_type": "document",
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
       "rationale": "Toggle button on Operation Screen switching between manual and automatic operation modes",
-      "community": 7,
+      "community": 10,
       "norm_label": "manual/auto mode toggle",
       "id": "N11"
     },
@@ -3653,7 +3653,7 @@
       "file_type": "document",
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
       "rationale": "11 real-time data items shown on Operation Screen: Refrigerant Usage (32-bit Kg), Number of Injections (16-bit), Injection Model (16-bit), Charging Pulse (32-bit), Injection Time (16-bit sec), Injection Setting Amount (32-bit g), Actual Injection Volume (32-bit g), SCAN Injection Volume (16-bit g), Current Vacuum Level (32-bit Torr), Temperature (16-bit C), Pressure (16-bit kgf/cm2)",
-      "community": 7,
+      "community": 10,
       "norm_label": "hmi display data items",
       "id": "N12"
     },
@@ -3662,7 +3662,7 @@
       "file_type": "document",
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
       "rationale": "Per-injection-line vacuum pump controlled by momentary HMI button; individual control per line; triggered from Operation Screen",
-      "community": 7,
+      "community": 10,
       "norm_label": "vacuum pump operation",
       "id": "N13"
     },
@@ -3671,7 +3671,7 @@
       "file_type": "document",
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
       "rationale": "Injection sequence triggered by REFRIGER INJECTION button on Operation Screen; uses configured injection parameters from User Setting and Parameter Setting screens",
-      "community": 7,
+      "community": 10,
       "norm_label": "refrigerant injection process",
       "id": "N14"
     },
@@ -3680,7 +3680,7 @@
       "file_type": "document",
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
       "rationale": "Two reset methods: Hard Reset via physical RESET push button and Soft Reset via any HMI RESET button; both act on the Mitsubishi PLC",
-      "community": 7,
+      "community": 10,
       "norm_label": "safety plc reset",
       "id": "N15"
     },
@@ -3689,7 +3689,7 @@
       "file_type": "document",
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
       "rationale": "Pressurized/flameproof enclosure variant; equipped with Left Door and Right Door limit sensors using NC contacts mapped to X-inputs; DOOR OPEN triggers alarm but no emergency stop",
-      "community": 7,
+      "community": 10,
       "norm_label": "explosion-proof enclosure type",
       "id": "N16"
     },
@@ -3698,7 +3698,7 @@
       "file_type": "document",
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
       "rationale": "Standard industrial enclosure variant; no door limit sensors equipped; no door-open alarm functionality",
-      "community": 7,
+      "community": 10,
       "norm_label": "non-explosion-proof enclosure type",
       "id": "N17"
     },
@@ -3707,7 +3707,7 @@
       "file_type": "document",
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
       "rationale": "NC contact X-input sensor on left door for explosion-proof type only; OPEN state triggers a DOOR OPEN alarm via M-relay latch",
-      "community": 7,
+      "community": 10,
       "norm_label": "left door limit sensor",
       "id": "N18"
     },
@@ -3716,7 +3716,7 @@
       "file_type": "document",
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
       "rationale": "NC contact X-input sensor on right door for explosion-proof type only; OPEN state triggers a DOOR OPEN alarm via M-relay latch",
-      "community": 7,
+      "community": 10,
       "norm_label": "right door limit sensor",
       "id": "N19"
     },
@@ -3725,7 +3725,7 @@
       "file_type": "document",
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
       "rationale": "M-relay latch alarm flag triggered when either left or right door limit sensor detects open state; displayed on Alarm Screen; non-latching behavior",
-      "community": 7,
+      "community": 10,
       "norm_label": "door open alarm",
       "id": "N20"
     },
@@ -3734,7 +3734,7 @@
       "file_type": "rationale",
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
       "rationale": "Inferred design behavior: DOOR OPEN alarm is non-latching \u2014 it clears automatically when the door is closed and ALARM RESET is pressed, without requiring separate acknowledgment or manual clearing",
-      "community": 7,
+      "community": 10,
       "norm_label": "door alarm non-latching behavior",
       "id": "N21"
     },
@@ -3743,7 +3743,7 @@
       "file_type": "rationale",
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
       "rationale": "Inferred design decision: DOOR OPEN does NOT trigger emergency stop or interlock; the machine continues normal operation while the alarm is active; rationale inferred as avoiding unnecessary production stops during maintenance access",
-      "community": 7,
+      "community": 10,
       "norm_label": "no emergency stop on door open",
       "id": "N22"
     },
@@ -3752,7 +3752,7 @@
       "file_type": "rationale",
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
       "rationale": "Inferred architectural pattern: both Parameter Setting and User Setting screens follow a consistent read-modify-write cycle \u2014 read configuration values from PLC, display to user, accept user modifications, then write updated values back to PLC",
-      "community": 7,
+      "community": 10,
       "norm_label": "plc read-write parameter pattern",
       "id": "N23"
     },
@@ -3766,7 +3766,7 @@
       "author": null,
       "contributor": null,
       "norm_label": "1-line 1-gun machine configuration",
-      "community": 10,
+      "community": 16,
       "id": "recm_1line1gun_config"
     },
     {
@@ -3779,7 +3779,7 @@
       "author": null,
       "contributor": null,
       "norm_label": "operation screen - 1 line 1 gun variant",
-      "community": 10,
+      "community": 16,
       "id": "recm_1line1gun_operation_screen"
     },
     {
@@ -3792,7 +3792,7 @@
       "author": null,
       "contributor": null,
       "norm_label": "hmi top control bar (unit pass, interlock, alarm reset, buzzer stop, navigation)",
-      "community": 10,
+      "community": 16,
       "id": "recm_hmi_top_control_bar"
     },
     {
@@ -3805,7 +3805,7 @@
       "author": null,
       "contributor": null,
       "norm_label": "hmi bottom action bar (manual mode, gun exhaust, product exhaust, vacuum check, refriger injection, start, stop)",
-      "community": 10,
+      "community": 16,
       "id": "recm_hmi_bottom_action_bar"
     },
     {
@@ -3818,7 +3818,7 @@
       "author": null,
       "contributor": null,
       "norm_label": "r134a refrigerant",
-      "community": 10,
+      "community": 16,
       "id": "recm_refrigerant_r134a"
     },
     {
@@ -3831,7 +3831,7 @@
       "author": null,
       "contributor": null,
       "norm_label": "line 1 refrigerant usage display (kg)",
-      "community": 10,
+      "community": 16,
       "id": "recm_line1_refrigerant_usage"
     },
     {
@@ -3844,7 +3844,7 @@
       "author": null,
       "contributor": null,
       "norm_label": "injection gun a",
-      "community": 10,
+      "community": 16,
       "id": "recm_injection_gun_a"
     },
     {
@@ -3857,7 +3857,7 @@
       "author": null,
       "contributor": null,
       "norm_label": "production quantity counter with reset",
-      "community": 10,
+      "community": 16,
       "id": "recm_hmi_production_counter"
     },
     {
@@ -3870,7 +3870,7 @@
       "author": null,
       "contributor": null,
       "norm_label": "injection parameters display group (model, set amount, charging pulse, vacuum pump, actual amount, injection time)",
-      "community": 10,
+      "community": 16,
       "id": "recm_hmi_injection_parameters"
     },
     {
@@ -3883,7 +3883,7 @@
       "author": null,
       "contributor": null,
       "norm_label": "real-time sensor readouts group (vacuum torr, scan info, pressure kgf/cm2, temperature \u00b0c)",
-      "community": 10,
+      "community": 16,
       "id": "recm_hmi_sensor_readouts"
     },
     {
@@ -3896,7 +3896,7 @@
       "author": null,
       "contributor": null,
       "norm_label": "navigation buttons (injection amount setting, operation setting, alarm screen)",
-      "community": 10,
+      "community": 16,
       "id": "recm_hmi_navigation_buttons"
     },
     {
@@ -3909,7 +3909,7 @@
       "author": null,
       "contributor": null,
       "norm_label": "operation screen color scheme (red=stop/alert, green=ok/reset, blue=action, purple=navigation)",
-      "community": 10,
+      "community": 16,
       "id": "recm_operation_screen_colorscheme"
     },
     {
@@ -3920,7 +3920,7 @@
       "description": "REFRIGER CHARGING MACHINE with 1 Line \u00d7 2 Gun (A/B) configuration. HMI touchscreen panel shown.",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "community": 1,
+      "community": 3,
       "norm_label": "refriger_charging_machine_1line2gun",
       "id": "chunk03:machine:1line2gun"
     },
@@ -3932,7 +3932,7 @@
       "description": "\uc6b4\uc804 \ud654\uba74 (Operation Screen) - Currently active main screen (highlighted blue).",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "community": 1,
+      "community": 3,
       "norm_label": "operation_screen",
       "id": "chunk03:hmi:operation_screen"
     },
@@ -3944,7 +3944,7 @@
       "description": "\uc8fc\uc785\ub7c9 \uc124\uc815\ud654\uba74 (Injection Amount Setting Screen) - Purple button.",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "community": 1,
+      "community": 3,
       "norm_label": "injection_setting_screen",
       "id": "chunk03:hmi:injection_setting_screen"
     },
@@ -3956,7 +3956,7 @@
       "description": "\uc6b4\uc804 \uc124\uc815\ud654\uba74 (Operation Setting Screen) - Purple button.",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "community": 1,
+      "community": 3,
       "norm_label": "operation_setting_screen",
       "id": "chunk03:hmi:operation_setting_screen"
     },
@@ -3968,7 +3968,7 @@
       "description": "\uc54c\ub78c \ud654\uba74 (Alarm Screen) - Purple button.",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "community": 1,
+      "community": 3,
       "norm_label": "alarm_screen",
       "id": "chunk03:hmi:alarm_screen"
     },
@@ -3981,7 +3981,7 @@
       "description": "\uc720\ub2db \ud328\uc2a4 (Unit Pass) button - Red.",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "community": 1,
+      "community": 3,
       "norm_label": "unit_pass",
       "id": "chunk03:ctrl:unit_pass"
     },
@@ -3994,7 +3994,7 @@
       "description": "\uc778\ud130\ub77d \ubbf8\uc0ac\uc6a9 (Interlock Not Used) indicator - Red. Interlock is disabled/bypassed.",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "community": 1,
+      "community": 3,
       "norm_label": "interlock_not_used",
       "id": "chunk03:ctrl:interlock_not_used"
     },
@@ -4007,7 +4007,7 @@
       "description": "\uc54c\ub78c \ub9ac\uc14b (Alarm Reset) button - Green.",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "community": 1,
+      "community": 3,
       "norm_label": "alarm_reset",
       "id": "chunk03:ctrl:alarm_reset"
     },
@@ -4020,7 +4020,7 @@
       "description": "\ubd80\uc800 \uc815\uc9c0 (Buzzer Stop) button - Green.",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "community": 1,
+      "community": 3,
       "norm_label": "buzzer_stop",
       "id": "chunk03:ctrl:buzzer_stop"
     },
@@ -4034,7 +4034,7 @@
       "display_name": "\ub0c9\ub9e4 \uc885\ub958",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "community": 1,
+      "community": 3,
       "norm_label": "refrigerant_type",
       "id": "chunk03:param:refrigerant_type"
     },
@@ -4048,7 +4048,7 @@
       "display_name": "\ub77c\uc7781 \ub0c9\ub9e4\uc0ac\uc6a9\ub7c9",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "community": 1,
+      "community": 3,
       "norm_label": "line1_refrigerant_usage",
       "id": "chunk03:param:line1_refrigerant_usage"
     },
@@ -4062,7 +4062,7 @@
       "description": "\uc8fc\uc785\uac74 \uc120\ud0dd \u2192 \uc8fc\uc785\uac74 A (Injection Gun A selection button) - Blue.",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "community": 1,
+      "community": 3,
       "norm_label": "injection_gun_a",
       "id": "chunk03:param:injection_gun_a"
     },
@@ -4076,7 +4076,7 @@
       "description": "\uc8fc\uc785\uac74 \uc120\ud0dd \u2192 \uc8fc\uc785\uac74 B (Injection Gun B selection button) - Blue.",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "community": 1,
+      "community": 3,
       "norm_label": "injection_gun_b",
       "id": "chunk03:param:injection_gun_b"
     },
@@ -4089,7 +4089,7 @@
       "display_name": "\uc0dd\uc0b0\ub7c9",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "community": 1,
+      "community": 3,
       "norm_label": "production_quantity",
       "id": "chunk03:param:production_quantity"
     },
@@ -4103,7 +4103,7 @@
       "description": "\uc0dd\uc0b0\ub7c9 \ub9ac\uc14b (Production Quantity Reset) button - Green.",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "community": 1,
+      "community": 3,
       "norm_label": "production_reset",
       "id": "chunk03:ctrl:production_reset"
     },
@@ -4116,7 +4116,7 @@
       "display_name": "\uc8fc\uc785 \ubaa8\ub378",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "community": 1,
+      "community": 3,
       "norm_label": "injection_model",
       "id": "chunk03:param:injection_model"
     },
@@ -4130,7 +4130,7 @@
       "display_name": "\uc8fc\uc785 \uc124\uc815\ub7c9",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "community": 1,
+      "community": 3,
       "norm_label": "injection_set_amount",
       "id": "chunk03:param:injection_set_amount"
     },
@@ -4143,7 +4143,7 @@
       "display_name": "\ucc28\uc9d5 \ud384\uc2a4",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "community": 1,
+      "community": 3,
       "norm_label": "charging_pulse",
       "id": "chunk03:param:charging_pulse"
     },
@@ -4158,7 +4158,7 @@
       "description": "\uc9c4\uacf5 \ud38c\ud504 (Vacuum Pump) status - OFF (Red).",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "community": 1,
+      "community": 3,
       "norm_label": "vacuum_pump",
       "id": "chunk03:ctrl:vacuum_pump"
     },
@@ -4173,7 +4173,7 @@
       "display_name": "\ub0c9\ub9e4 \uc8fc\uc785\ub7c9",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "community": 1,
+      "community": 3,
       "norm_label": "refrigerant_injection_amount",
       "id": "chunk03:param:refrigerant_injection_amount"
     },
@@ -4187,7 +4187,7 @@
       "display_name": "\uc8fc\uc785 \uc2dc\uac04",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "community": 1,
+      "community": 3,
       "norm_label": "injection_time",
       "id": "chunk03:param:injection_time"
     },
@@ -4203,7 +4203,7 @@
       "description": "\uc9c4\uacf5\ub3c4 (Vacuum Degree) - Red text, possibly indicating alarm/critical state.",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "community": 1,
+      "community": 3,
       "norm_label": "vacuum_degree",
       "id": "chunk03:param:vacuum_degree"
     },
@@ -4216,7 +4216,7 @@
       "display_name": "\uc2a4\uce94 \uc815\ubcf4",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "community": 1,
+      "community": 3,
       "norm_label": "scan_information",
       "id": "chunk03:param:scan_information"
     },
@@ -4231,7 +4231,7 @@
       "display_name": "\uc555\ub825",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "community": 1,
+      "community": 3,
       "norm_label": "pressure_r134a",
       "id": "chunk03:param:pressure"
     },
@@ -4245,7 +4245,7 @@
       "display_name": "\uc628\ub3c4",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "community": 1,
+      "community": 3,
       "norm_label": "temperature",
       "id": "chunk03:param:temperature"
     },
@@ -4259,7 +4259,7 @@
       "description": "\ubc14\ucf54\ub4dc \uc0ac\uc6a9 (Barcode Use) toggle button - Green.",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "community": 1,
+      "community": 3,
       "norm_label": "barcode_use",
       "id": "chunk03:ctrl:barcode_use"
     },
@@ -4272,7 +4272,7 @@
       "display_name": "\uc218\ub3d9 \ubaa8\ub4dc",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "community": 1,
+      "community": 3,
       "norm_label": "manual_mode",
       "id": "chunk03:ctrl:manual_mode"
     },
@@ -4285,7 +4285,7 @@
       "display_name": "\uac74 \ubc30\uae30",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "community": 1,
+      "community": 3,
       "norm_label": "gun_exhaust",
       "id": "chunk03:ctrl:gun_exhaust"
     },
@@ -4298,7 +4298,7 @@
       "display_name": "\uc81c\ud488 \ubc30\uae30",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "community": 1,
+      "community": 3,
       "norm_label": "product_exhaust",
       "id": "chunk03:ctrl:product_exhaust"
     },
@@ -4311,7 +4311,7 @@
       "display_name": "\uc9c4\uacf5 \uccb4\ud06c",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "community": 1,
+      "community": 3,
       "norm_label": "vacuum_check",
       "id": "chunk03:ctrl:vacuum_check"
     },
@@ -4324,7 +4324,7 @@
       "display_name": "\ub0c9\ub9e4 \uc8fc\uc785",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "community": 1,
+      "community": 3,
       "norm_label": "refrigerant_injection",
       "id": "chunk03:ctrl:refrigerant_injection"
     },
@@ -4337,7 +4337,7 @@
       "display_name": "\uc2dc\uc791",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "community": 1,
+      "community": 3,
       "norm_label": "start",
       "id": "chunk03:ctrl:start"
     },
@@ -4350,7 +4350,7 @@
       "display_name": "\uc815\uc9c0",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "community": 1,
+      "community": 3,
       "norm_label": "stop",
       "id": "chunk03:ctrl:stop"
     },
@@ -4362,7 +4362,7 @@
       "description": "Refrigerant type: R134a (1,1,1,2-Tetrafluoroethane).",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "community": 1,
+      "community": 3,
       "norm_label": "r134a",
       "id": "chunk03:refrigerant:R134a"
     },
@@ -4374,7 +4374,7 @@
       "description": "Production Line 1 in 1LINE2GUN configuration.",
       "confidence": "INFERRED",
       "confidence_score": 0.95,
-      "community": 1,
+      "community": 3,
       "norm_label": "line_1",
       "id": "chunk03:line:line1"
     },
@@ -4387,7 +4387,7 @@
       "description": "\uc8fc\uc785\uac74 \uc120\ud0dd (Injection Gun Selection) group - toggles between Gun A and Gun B.",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "community": 1,
+      "community": 3,
       "norm_label": "injection_gun_selection",
       "id": "chunk03:gun_selection:gun_selector"
     },
@@ -4402,7 +4402,7 @@
         "lines": 2,
         "guns_per_line": 1
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "refriger charging machine",
       "id": "n2l2g_machine"
     },
@@ -4412,7 +4412,7 @@
       "file_type": "image",
       "source_file": "Notes/2LINE2GUN.png",
       "description": "Main HMI operation screen for the 2LINE2GUN charging machine",
-      "community": 3,
+      "community": 0,
       "norm_label": "\u110b\u116e\u11ab\u110c\u1165\u11ab \u1112\u116a\u1106\u1167\u11ab (operation screen)",
       "id": "n2l2g_hmi"
     },
@@ -4426,7 +4426,7 @@
         "color": "red",
         "position": "left"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "\u110b\u1172\u1102\u1175\u11ba \u1111\u1162\u1109\u1173 (unit pass) left",
       "id": "n2l2g_unit_pass_left"
     },
@@ -4440,7 +4440,7 @@
         "color": "red",
         "position": "right"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "\u110b\u1172\u1102\u1175\u11ba \u1111\u1162\u1109\u1173 (unit pass) right",
       "id": "n2l2g_unit_pass_right"
     },
@@ -4453,7 +4453,7 @@
       "attributes": {
         "color": "red"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "\u110b\u1175\u11ab\u1110\u1165\u1105\u1161\u11a8 \u1106\u1175\u1109\u1161\u110b\u116d\u11bc (interlock not used)",
       "id": "n2l2g_interlock_not_used"
     },
@@ -4467,7 +4467,7 @@
         "color": "red",
         "position": "left"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "\u110b\u1161\u11af\u1105\u1161\u11b7 \u1105\u1175\u1109\u1166\u11ba (alarm reset) left",
       "id": "n2l2g_alarm_reset_left"
     },
@@ -4481,7 +4481,7 @@
         "color": "red",
         "position": "right"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "\u110b\u1161\u11af\u1105\u1161\u11b7 \u1105\u1175\u1109\u1166\u11ba (alarm reset) right",
       "id": "n2l2g_alarm_reset_right"
     },
@@ -4495,7 +4495,7 @@
         "color": "green",
         "position": "left"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "\u1107\u116e\u110c\u1165 \u110c\u1165\u11bc\u110c\u1175 (buzzer stop) left",
       "id": "n2l2g_buzzer_stop_left"
     },
@@ -4509,7 +4509,7 @@
         "color": "green",
         "position": "right"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "\u1107\u116e\u110c\u1165 \u110c\u1165\u11bc\u110c\u1175 (buzzer stop) right",
       "id": "n2l2g_buzzer_stop_right"
     },
@@ -4522,7 +4522,7 @@
       "attributes": {
         "color": "purple"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "\u110c\u116e\u110b\u1175\u11b8\u1105\u1163\u11bc \u1109\u1165\u11af\u110c\u1165\u11bc\u1112\u116a\u1106\u1167\u11ab (injection amount setting screen)",
       "id": "n2l2g_nav_injection_amount_setting"
     },
@@ -4535,7 +4535,7 @@
       "attributes": {
         "color": "purple"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "\u110b\u116e\u11ab\u110c\u1165\u11ab \u1109\u1165\u11af\u110c\u1165\u11bc\u1112\u116a\u1106\u1167\u11ab (operation setting screen)",
       "id": "n2l2g_nav_operation_setting"
     },
@@ -4548,7 +4548,7 @@
       "attributes": {
         "color": "purple"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "\u110b\u1161\u11af\u1105\u1161\u11b7 \u1112\u116a\u1106\u1167\u11ab (alarm screen)",
       "id": "n2l2g_nav_alarm_screen"
     },
@@ -4562,7 +4562,7 @@
         "unit": "Kwh",
         "sample_value": "123.45"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "system power (kwh)",
       "id": "n2l2g_sys_power"
     },
@@ -4576,7 +4576,7 @@
         "unit": "V",
         "sample_value": "-123.4"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "system voltage (v)",
       "id": "n2l2g_sys_voltage"
     },
@@ -4590,7 +4590,7 @@
         "unit": "A",
         "sample_value": "-123.4"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "system current (a)",
       "id": "n2l2g_sys_current"
     },
@@ -4604,7 +4604,7 @@
         "unit": "Hz",
         "sample_value": "-123.4"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "system frequency (hz)",
       "id": "n2l2g_sys_frequency"
     },
@@ -4617,7 +4617,7 @@
       "attributes": {
         "position": "left"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "line 1",
       "id": "n2l2g_line1"
     },
@@ -4631,7 +4631,7 @@
         "refrigerant": "R134a",
         "box_color": "green"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "line 1 refrigerant type: r134a",
       "id": "n2l2g_line1_refrigerant"
     },
@@ -4645,7 +4645,7 @@
         "unit": "kg",
         "sample_value": "1234.5"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "\u1105\u1161\u110b\u1175\u11ab1 \u1102\u1162\u11bc\u1106\u1162\u1109\u1161\u110b\u116d\u11bc\u1105\u1163\u11bc (line 1 refrigerant usage)",
       "id": "n2l2g_line1_refrigerant_usage"
     },
@@ -4659,7 +4659,7 @@
         "gun_id": "A",
         "button_color": "blue"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "\u110c\u116e\u110b\u1175\u11b8\u1100\u1165\u11ab a (injection gun a)",
       "id": "n2l2g_line1_gun_a"
     },
@@ -4672,7 +4672,7 @@
       "attributes": {
         "sample_value": "12345"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "line 1 \u1109\u1162\u11bc\u1109\u1161\u11ab\u1105\u1163\u11bc (production quantity)",
       "id": "n2l2g_line1_production_qty"
     },
@@ -4685,7 +4685,7 @@
       "attributes": {
         "color": "green"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "line 1 \u1109\u1162\u11bc\u1109\u1161\u11ab\u1105\u1163\u11bc \u1105\u1175\u1109\u1166\u11ba (production quantity reset)",
       "id": "n2l2g_line1_production_reset"
     },
@@ -4699,7 +4699,7 @@
         "sample_value": "123",
         "box_color": "blue"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "line 1 \u110c\u116e\u110b\u1175\u11b8 \u1106\u1169\u1103\u1166\u11af (injection model)",
       "id": "n2l2g_line1_injection_model"
     },
@@ -4713,7 +4713,7 @@
         "unit": "g",
         "sample_value": "12345"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "line 1 \u110c\u116e\u110b\u1175\u11b8 \u1109\u1165\u11af\u110c\u1165\u11bc\u1105\u1163\u11bc (injection set amount)",
       "id": "n2l2g_line1_injection_set_amount"
     },
@@ -4726,7 +4726,7 @@
       "attributes": {
         "sample_value": "123456"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "line 1 \u110e\u1161\u110c\u1175\u11bc \u1111\u1165\u11af\u1109\u1173 (charging pulse)",
       "id": "n2l2g_line1_charging_pulse"
     },
@@ -4740,7 +4740,7 @@
         "state": "OFF",
         "button_color": "red"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "line 1 \u110c\u1175\u11ab\u1100\u1169\u11bc \u1111\u1165\u11b7\u1111\u1173 (vacuum pump)",
       "id": "n2l2g_line1_vacuum_pump"
     },
@@ -4755,7 +4755,7 @@
         "sample_value": "12345",
         "label_color": "yellow"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "line 1 \u1102\u1162\u11bc\u1106\u1162 \u110c\u116e\u110b\u1175\u11b8\u1105\u1163\u11bc (refrigerant injection amount)",
       "id": "n2l2g_line1_refrigerant_injection_amount"
     },
@@ -4769,7 +4769,7 @@
         "unit": "s",
         "sample_value": "123.4"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "line 1 \u110c\u116e\u110b\u1175\u11b8 \u1109\u1175\u1100\u1161\u11ab (injection time)",
       "id": "n2l2g_line1_injection_time"
     },
@@ -4784,7 +4784,7 @@
         "sample_value": "123.456",
         "value_color": "red"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "line 1 \u110c\u1175\u11ab\u1100\u1169\u11bc\u1103\u1169 torr (vacuum degree)",
       "id": "n2l2g_line1_vacuum_degree"
     },
@@ -4797,7 +4797,7 @@
       "attributes": {
         "sample_value": "-1234"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "line 1 \u1109\u1173\u110f\u1162\u11ab \u110c\u1165\u11bc\u1107\u1169 (scan information)",
       "id": "n2l2g_line1_scan_info"
     },
@@ -4810,7 +4810,7 @@
       "attributes": {
         "color": "green"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "line 1 \u1107\u1161\u110f\u1169\u1103\u1173 \u1109\u1161\u110b\u116d\u11bc (barcode use)",
       "id": "n2l2g_line1_barcode_use"
     },
@@ -4825,7 +4825,7 @@
         "sample_value": "12.3",
         "refrigerant": "R134a"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "line 1 \u110b\u1161\u11b8\u1105\u1167\u11a8 (pressure)",
       "id": "n2l2g_line1_pressure"
     },
@@ -4839,7 +4839,7 @@
         "unit": "\u2103",
         "sample_value": "12.3"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "line 1 \u110b\u1169\u11ab\u1103\u1169 (temperature)",
       "id": "n2l2g_line1_temperature"
     },
@@ -4852,7 +4852,7 @@
       "attributes": {
         "position": "right"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "line 2",
       "id": "n2l2g_line2"
     },
@@ -4866,7 +4866,7 @@
         "refrigerant": "R290",
         "box_color": "red"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "line 2 refrigerant type: r290",
       "id": "n2l2g_line2_refrigerant"
     },
@@ -4880,7 +4880,7 @@
         "unit": "kg",
         "sample_value": "1234.5"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "\u1105\u1161\u110b\u1175\u11ab2 \u1102\u1162\u11bc\u1106\u1162\u1109\u1161\u110b\u116d\u11bc\u1105\u1163\u11bc (line 2 refrigerant usage)",
       "id": "n2l2g_line2_refrigerant_usage"
     },
@@ -4893,7 +4893,7 @@
       "attributes": {
         "gun_id": "B"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "\u110c\u116e\u110b\u1175\u11b8\u1100\u1165\u11ab b (injection gun b)",
       "id": "n2l2g_line2_gun_b"
     },
@@ -4906,7 +4906,7 @@
       "attributes": {
         "sample_value": "12345"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "line 2 \u1109\u1162\u11bc\u1109\u1161\u11ab\u1105\u1163\u11bc (production quantity)",
       "id": "n2l2g_line2_production_qty"
     },
@@ -4919,7 +4919,7 @@
       "attributes": {
         "color": "green"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "line 2 \u1109\u1162\u11bc\u1109\u1161\u11ab\u1105\u1163\u11bc \u1105\u1175\u1109\u1166\u11ba (production quantity reset)",
       "id": "n2l2g_line2_production_reset"
     },
@@ -4932,7 +4932,7 @@
       "attributes": {
         "sample_value": "123"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "line 2 \u110c\u116e\u110b\u1175\u11b8 \u1106\u1169\u1103\u1166\u11af (injection model)",
       "id": "n2l2g_line2_injection_model"
     },
@@ -4946,7 +4946,7 @@
         "unit": "g",
         "sample_value": "12345"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "line 2 \u110c\u116e\u110b\u1175\u11b8 \u1109\u1165\u11af\u110c\u1165\u11bc\u1105\u1163\u11bc (injection set amount)",
       "id": "n2l2g_line2_injection_set_amount"
     },
@@ -4959,7 +4959,7 @@
       "attributes": {
         "sample_value": "123456"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "line 2 \u110e\u1161\u110c\u1175\u11bc \u1111\u1165\u11af\u1109\u1173 (charging pulse)",
       "id": "n2l2g_line2_charging_pulse"
     },
@@ -4973,7 +4973,7 @@
         "state": "OFF",
         "button_color": "red"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "line 2 \u110c\u1175\u11ab\u1100\u1169\u11bc \u1111\u1165\u11b7\u1111\u1173 (vacuum pump)",
       "id": "n2l2g_line2_vacuum_pump"
     },
@@ -4987,7 +4987,7 @@
         "unit": "g",
         "sample_value": "12345"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "line 2 \u1102\u1162\u11bc\u1106\u1162 \u110c\u116e\u110b\u1175\u11b8\u1105\u1163\u11bc (refrigerant injection amount)",
       "id": "n2l2g_line2_refrigerant_injection_amount"
     },
@@ -5001,7 +5001,7 @@
         "unit": "s",
         "sample_value": "123.4"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "line 2 \u110c\u116e\u110b\u1175\u11b8 \u1109\u1175\u1100\u1161\u11ab (injection time)",
       "id": "n2l2g_line2_injection_time"
     },
@@ -5015,7 +5015,7 @@
         "unit": "Torr",
         "sample_value": "123.456"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "line 2 \u110c\u1175\u11ab\u1100\u1169\u11bc\u1103\u1169 torr (vacuum degree)",
       "id": "n2l2g_line2_vacuum_degree"
     },
@@ -5028,7 +5028,7 @@
       "attributes": {
         "sample_value": "-1234"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "line 2 \u1109\u1173\u110f\u1162\u11ab \u110c\u1165\u11bc\u1107\u1169 (scan information)",
       "id": "n2l2g_line2_scan_info"
     },
@@ -5041,7 +5041,7 @@
       "attributes": {
         "color": "green"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "line 2 \u1107\u1161\u110f\u1169\u1103\u1173 \u1109\u1161\u110b\u116d\u11bc (barcode use)",
       "id": "n2l2g_line2_barcode_use"
     },
@@ -5056,7 +5056,7 @@
         "sample_value": "12.3",
         "refrigerant": "R290"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "line 2 \u110b\u1161\u11b8\u1105\u1167\u11a8 (pressure)",
       "id": "n2l2g_line2_pressure"
     },
@@ -5070,7 +5070,7 @@
         "unit": "\u2103",
         "sample_value": "12.3"
       },
-      "community": 3,
+      "community": 0,
       "norm_label": "line 2 \u110b\u1169\u11ab\u1103\u1169 (temperature)",
       "id": "n2l2g_line2_temperature"
     },
@@ -5082,7 +5082,7 @@
       "description": "HMI operation screen for REFRIGER CHARGING MACHINE, Unit 2 (2\ud638\uae30), 2 Line \u00d7 2 Gun configuration with Oil injection. Date displayed: 2026/05/29.",
       "language": "ko",
       "confidence_score": 1.0,
-      "community": 0,
+      "community": 1,
       "norm_label": "2line2gun_oil operation screen (unit 2)",
       "id": "2LINE2GUN_OIL_HMI"
     },
@@ -5094,7 +5094,7 @@
       "file_type": "image",
       "language": "ko",
       "confidence_score": 1.0,
-      "community": 0,
+      "community": 1,
       "norm_label": "\u110e\u1161\u110c\u1175\u11bc\u1100\u1175 \u1107\u1169\u110c\u1165\u11bc\u1109\u1161\u110b\u116d\u11bc (charger calibration use)",
       "id": "NAV_CALIBRATION"
     },
@@ -5105,7 +5105,7 @@
       "file_type": "image",
       "language": "ko",
       "confidence_score": 1.0,
-      "community": 0,
+      "community": 1,
       "norm_label": "\u1102\u1162\u11bc\u1106\u1162\u1100\u1168\u1105\u1163\u11bc (refrigerant measurement)",
       "id": "NAV_REFRIGERANT_MEASURE"
     },
@@ -5117,7 +5117,7 @@
       "file_type": "image",
       "language": "ko",
       "confidence_score": 1.0,
-      "community": 0,
+      "community": 1,
       "norm_label": "4way v/v \u110c\u1165\u11ab\u110b\u116f\u11ab off (4-way valve power off)",
       "id": "NAV_4WAY_VALVE_POWER"
     },
@@ -5128,7 +5128,7 @@
       "file_type": "image",
       "language": "ko",
       "confidence_score": 1.0,
-      "community": 0,
+      "community": 1,
       "norm_label": "\u110c\u116e\u110b\u1175\u11b8\u1105\u1163\u11bc \u110c\u1165\u11bc\u1107\u1169 (injection amount info)",
       "id": "NAV_INJECTION_INFO"
     },
@@ -5139,7 +5139,7 @@
       "file_type": "image",
       "language": "ko",
       "confidence_score": 1.0,
-      "community": 0,
+      "community": 1,
       "norm_label": "\u110c\u116e\u110b\u1175\u11b8\u1105\u1163\u11bc \u1109\u1166\u11ba\u1110\u1175\u11bc (injection amount setting)",
       "id": "NAV_INJECTION_SETTING"
     },
@@ -5150,7 +5150,7 @@
       "file_type": "image",
       "language": "ko",
       "confidence_score": 1.0,
-      "community": 0,
+      "community": 1,
       "norm_label": "\u1111\u1161\u1105\u1161\u1106\u1166\u1110\u1165 \u1109\u1166\u11ba\u1110\u1175\u11bc (parameter setting)",
       "id": "NAV_PARAMETER_SETTING"
     },
@@ -5161,7 +5161,7 @@
       "file_type": "image",
       "language": "ko",
       "confidence_score": 1.0,
-      "community": 0,
+      "community": 1,
       "norm_label": "\u110b\u1161\u11af\u1105\u1161\u11b7 \u1109\u1173\u110f\u1173\u1105\u1175\u11ab (alarm screen)",
       "id": "NAV_ALARM_SCREEN"
     },
@@ -5172,7 +5172,7 @@
       "file_type": "image",
       "language": "ko",
       "confidence_score": 1.0,
-      "community": 0,
+      "community": 1,
       "norm_label": "\u1107\u116e\u110c\u1167 \u110c\u1165\u11bc\u110c\u1175 (buzzer stop)",
       "id": "NAV_BUZZER_STOP"
     },
@@ -5183,7 +5183,7 @@
       "file_type": "image",
       "language": "ko",
       "confidence_score": 1.0,
-      "community": 0,
+      "community": 1,
       "norm_label": "\u110b\u1161\u11af\u1105\u1161\u11b7 \u1105\u1175\u1109\u1166\u11ba (alarm reset)",
       "id": "NAV_ALARM_RESET"
     },
@@ -5194,7 +5194,7 @@
       "file_type": "image",
       "language": "ko",
       "confidence_score": 1.0,
-      "community": 0,
+      "community": 1,
       "norm_label": "\u110f\u1165\u11ab\u1107\u1166\u110b\u1165 \u110b\u1175\u11ab\u1110\u1165\u1105\u1169\u11a8 (conveyor interlock)",
       "id": "CONFIG_CONVEYOR_INTERLOCK"
     },
@@ -5206,7 +5206,7 @@
       "file_type": "image",
       "language": "ko",
       "confidence_score": 1.0,
-      "community": 0,
+      "community": 1,
       "norm_label": "\u110f\u1165\u11ab\u1107\u1166\u110b\u1165 \u110b\u1175\u11ab\u1110\u1165\u1105\u1169\u11a8 \u1109\u1161\u110b\u116d\u11bc (conveyor interlock use)",
       "id": "CONFIG_CONVEYOR_USE"
     },
@@ -5217,7 +5217,7 @@
       "file_type": "image",
       "language": "ko",
       "confidence_score": 1.0,
-      "community": 0,
+      "community": 1,
       "norm_label": "\u1100\u1165\u11ab \u1109\u1165\u11ab\u1110\u1162\u11a8 (gun selection)",
       "id": "CONFIG_GUN_SELECTION"
     },
@@ -5228,7 +5228,7 @@
       "file_type": "image",
       "refrigerant_type": "R410A",
       "confidence_score": 1.0,
-      "community": 0,
+      "community": 1,
       "norm_label": "r410a\u1100\u1165\u11ab (r410a gun)",
       "id": "CONFIG_GUN_R410A"
     },
@@ -5239,7 +5239,7 @@
       "file_type": "image",
       "refrigerant_type": "R32",
       "confidence_score": 1.0,
-      "community": 0,
+      "community": 1,
       "norm_label": "r32\u1100\u1165\u11ab (r32 gun)",
       "id": "CONFIG_GUN_R32"
     },
@@ -5250,7 +5250,7 @@
       "file_type": "image",
       "language": "ko",
       "confidence_score": 1.0,
-      "community": 0,
+      "community": 1,
       "norm_label": "\u110b\u1169\u110b\u1175\u11af/\u1102\u1162\u11bc\u1106\u1162 \u1109\u1165\u11ab\u1110\u1162\u11a8 (oil/refrigerant selection)",
       "id": "CONFIG_OIL_REFRIGERANT_SELECTION"
     },
@@ -5261,7 +5261,7 @@
       "source_file": "Notes/2LINE2GUN_OIL.png",
       "file_type": "image",
       "confidence_score": 1.0,
-      "community": 0,
+      "community": 1,
       "norm_label": "\u1102\u1162\u11bc\u1106\u1162 \u1109\u1165\u11ab\u1110\u1162\u11a8 \u1112\u116a\u11af\u1109\u1165\u11bc (refrigerant selected active)",
       "id": "CONFIG_REFRIGERANT_ACTIVE"
     },
@@ -5272,7 +5272,7 @@
       "file_type": "image",
       "language": "ko",
       "confidence_score": 1.0,
-      "community": 0,
+      "community": 1,
       "norm_label": "\u1106\u1169\u1103\u1166\u11af \u1109\u1165\u11ab\u1110\u1162\u11a8 (model selection)",
       "id": "CONFIG_MODEL_SELECTION"
     },
@@ -5284,7 +5284,7 @@
       "source_file": "Notes/2LINE2GUN_OIL.png",
       "file_type": "image",
       "confidence_score": 1.0,
-      "community": 0,
+      "community": 1,
       "norm_label": "\u1106\u1169\u1103\u1166\u11af \u1107\u1165\u11ab\u1112\u1169: 123 (model number: 123)",
       "id": "CONFIG_MODEL_VALUE"
     },
@@ -5295,7 +5295,7 @@
       "file_type": "image",
       "language": "ko",
       "confidence_score": 1.0,
-      "community": 0,
+      "community": 1,
       "norm_label": "\u110b\u1169\u110b\u1175\u11af \u1109\u1165\u11af\u110c\u1165\u11bc (oil settings)",
       "id": "OIL_SETTINGS"
     },
@@ -5308,7 +5308,7 @@
       "source_file": "Notes/2LINE2GUN_OIL.png",
       "file_type": "image",
       "confidence_score": 1.0,
-      "community": 0,
+      "community": 1,
       "norm_label": "\u110b\u1169\u110b\u1175\u11af\u1109\u1165\u11af\u110c\u1165\u11bc\u1105\u1163\u11bc (oil set amount)",
       "id": "OIL_SET_AMOUNT"
     },
@@ -5322,7 +5322,7 @@
       "source_file": "Notes/2LINE2GUN_OIL.png",
       "file_type": "image",
       "confidence_score": 1.0,
-      "community": 0,
+      "community": 1,
       "norm_label": "\u110b\u1169\u110b\u1175\u11af \u110c\u116e\u110b\u1175\u11b8\u1105\u1163\u11bc (oil injection amount)",
       "id": "OIL_INJECTION_AMOUNT"
     },
@@ -5337,7 +5337,7 @@
       "source_file": "Notes/2LINE2GUN_OIL.png",
       "file_type": "image",
       "confidence_score": 0.85,
-      "community": 0,
+      "community": 1,
       "norm_label": "\u110b\u1169\u110b\u1175\u11af \u1107\u1161 \u1100\u1173\u1105\u1162\u1111\u1173 (oil bar graph)",
       "id": "OIL_BAR_GRAPH"
     },
@@ -5348,7 +5348,7 @@
       "file_type": "image",
       "language": "ko",
       "confidence_score": 1.0,
-      "community": 0,
+      "community": 1,
       "norm_label": "\u1102\u1162\u11bc\u1106\u1162 \u1109\u1165\u11af\u110c\u1165\u11bc (refrigerant settings)",
       "id": "REFRIGERANT_SETTINGS"
     },
@@ -5361,7 +5361,7 @@
       "source_file": "Notes/2LINE2GUN_OIL.png",
       "file_type": "image",
       "confidence_score": 1.0,
-      "community": 0,
+      "community": 1,
       "norm_label": "\u1102\u1162\u11bc\u1106\u1162\u1109\u1165\u11af\u110c\u1165\u11bc\u1105\u1163\u11bc (refrigerant set amount)",
       "id": "REFRIGERANT_SET_AMOUNT"
     },
@@ -5374,7 +5374,7 @@
       "file_type": "image",
       "language": "ko",
       "confidence_score": 1.0,
-      "community": 0,
+      "community": 1,
       "norm_label": "\u110c\u1161\u1103\u1169\u11bc\u1109\u1173\u1110\u1162\u11b8 (auto step)",
       "id": "AUTO_STEP"
     },
@@ -5388,7 +5388,7 @@
       "source_file": "Notes/2LINE2GUN_OIL.png",
       "file_type": "image",
       "confidence_score": 1.0,
-      "community": 0,
+      "community": 1,
       "norm_label": "\u1102\u1162\u11bc\u1106\u1162 \u110c\u116e\u110b\u1175\u11b8\u1105\u1163\u11bc (refrigerant injection amount)",
       "id": "REFRIGERANT_INJECTION_AMOUNT"
     },
@@ -5403,7 +5403,7 @@
       "source_file": "Notes/2LINE2GUN_OIL.png",
       "file_type": "image",
       "confidence_score": 0.85,
-      "community": 0,
+      "community": 1,
       "norm_label": "\u1102\u1162\u11bc\u1106\u1162 \u1107\u1161 \u1100\u1173\u1105\u1162\u1111\u1173 (refrigerant bar graph)",
       "id": "REFRIGERANT_BAR_GRAPH"
     },
@@ -5415,7 +5415,7 @@
       "file_type": "image",
       "language": "ko",
       "confidence_score": 1.0,
-      "community": 0,
+      "community": 1,
       "norm_label": "\u1109\u1173\u110f\u1162\u1102\u1165 \u1106\u1175\u1109\u1161\u110b\u116d\u11bc (scanner not used)",
       "id": "SCANNER_STATUS"
     },
@@ -5426,7 +5426,7 @@
       "file_type": "image",
       "language": "ko",
       "confidence_score": 1.0,
-      "community": 0,
+      "community": 1,
       "norm_label": "\u1109\u1173\u110f\u1162\u11ab \u1105\u1175\u1109\u1166\u11ba (scan reset)",
       "id": "SCAN_RESET"
     },
@@ -5441,7 +5441,7 @@
       "file_type": "image",
       "language": "ko",
       "confidence_score": 1.0,
-      "community": 0,
+      "community": 1,
       "norm_label": "\u1112\u1167\u11ab\u110c\u1162 \u110c\u1175\u11ab\u1100\u1169\u11bc\u1103\u1169 (current vacuum)",
       "id": "VACUUM_DISPLAY"
     },
@@ -5456,7 +5456,7 @@
       "file_type": "image",
       "language": "ko",
       "confidence_score": 1.0,
-      "community": 0,
+      "community": 1,
       "norm_label": "r32 \u110b\u1161\u11b8\u1105\u1167\u11a8 (r32 pressure)",
       "id": "PRESSURE_R32"
     },
@@ -5471,7 +5471,7 @@
       "file_type": "image",
       "language": "ko",
       "confidence_score": 1.0,
-      "community": 0,
+      "community": 1,
       "norm_label": "r410a \u110b\u1161\u11b8\u1105\u1167\u11a8 (r410a pressure)",
       "id": "PRESSURE_R410A"
     },
@@ -5485,7 +5485,7 @@
       "source_file": "Notes/2LINE2GUN_OIL.png",
       "file_type": "image",
       "confidence_score": 1.0,
-      "community": 0,
+      "community": 1,
       "norm_label": "oil \u110b\u1161\u11b8\u1105\u1167\u11a8 (oil pressure)",
       "id": "PRESSURE_OIL"
     },
@@ -5497,7 +5497,7 @@
       "file_type": "image",
       "language": "ko",
       "confidence_score": 1.0,
-      "community": 0,
+      "community": 1,
       "norm_label": "\u110f\u1161\u110b\u116e\u11ab\u1110\u1165 (counter)",
       "id": "COUNTER"
     },
@@ -5508,7 +5508,7 @@
       "file_type": "image",
       "language": "ko",
       "confidence_score": 1.0,
-      "community": 0,
+      "community": 1,
       "norm_label": "\u110f\u1161\u110b\u116e\u11ab\u1110\u1165 \u1105\u1175\u1109\u1166\u11ba (counter reset)",
       "id": "COUNTER_RESET"
     },
@@ -5522,7 +5522,7 @@
       "file_type": "image",
       "language": "ko",
       "confidence_score": 1.0,
-      "community": 0,
+      "community": 1,
       "norm_label": "\u110e\u1161\u110c\u1175\u11bc\u1109\u1175\u1100\u1161\u11ab (charging time)",
       "id": "CHARGING_TIME"
     },
@@ -5533,7 +5533,7 @@
       "file_type": "image",
       "language": "ko",
       "confidence_score": 1.0,
-      "community": 0,
+      "community": 1,
       "norm_label": "\u1109\u116e\u1103\u1169\u11bc \u1106\u1169\u1103\u1173 (manual mode)",
       "id": "CTRL_MANUAL_MODE"
     },
@@ -5544,7 +5544,7 @@
       "file_type": "image",
       "language": "ko",
       "confidence_score": 1.0,
-      "community": 0,
+      "community": 1,
       "norm_label": "\u1100\u1165\u11ab\u1107\u1162\u1100\u1175 (gun exhaust)",
       "id": "CTRL_GUN_EXHAUST"
     },
@@ -5555,7 +5555,7 @@
       "file_type": "image",
       "language": "ko",
       "confidence_score": 1.0,
-      "community": 0,
+      "community": 1,
       "norm_label": "\u110c\u1166\u1111\u116e\u11b7 \u1107\u1162\u1100\u1175 (product exhaust)",
       "id": "CTRL_PRODUCT_EXHAUST"
     },
@@ -5566,7 +5566,7 @@
       "file_type": "image",
       "language": "ko",
       "confidence_score": 1.0,
-      "community": 0,
+      "community": 1,
       "norm_label": "\u110c\u1175\u11ab\u1100\u1169\u11bc \u110e\u1166\u110f\u1173 (vacuum check)",
       "id": "CTRL_VACUUM_CHECK"
     },
@@ -5577,7 +5577,7 @@
       "file_type": "image",
       "language": "ko",
       "confidence_score": 1.0,
-      "community": 0,
+      "community": 1,
       "norm_label": "\u110b\u1169\u110b\u1175\u11af \u110c\u116e\u110b\u1175\u11b8 (oil injection)",
       "id": "CTRL_OIL_INJECTION"
     },
@@ -5588,7 +5588,7 @@
       "file_type": "image",
       "language": "ko",
       "confidence_score": 1.0,
-      "community": 0,
+      "community": 1,
       "norm_label": "\u1102\u1162\u11bc\u1106\u1162 \u110c\u116e\u110b\u1175\u11b8 (refrigerant injection)",
       "id": "CTRL_REFRIGERANT_INJECTION"
     },
@@ -5599,7 +5599,7 @@
       "file_type": "image",
       "language": "ko",
       "confidence_score": 1.0,
-      "community": 0,
+      "community": 1,
       "norm_label": "\u1109\u1175\u110c\u1161\u11a8 (start)",
       "id": "CTRL_START"
     },
@@ -5611,7 +5611,7 @@
       "file_type": "image",
       "language": "ko",
       "confidence_score": 1.0,
-      "community": 0,
+      "community": 1,
       "norm_label": "\u110c\u1165\u11bc\u110c\u1175 (stop)",
       "id": "CTRL_STOP"
     },
@@ -5622,7 +5622,7 @@
       "file_type": "image",
       "language": "ko",
       "confidence_score": 1.0,
-      "community": 0,
+      "community": 1,
       "norm_label": "\u110b\u116e\u11ab\u110c\u1165\u11ab \u1112\u116a\u1106\u1167\u11ab 2\u1112\u1169\u1100\u1175 (operation screen unit 2)",
       "id": "UNIT_2_ID"
     },
@@ -5637,7 +5637,7 @@
         "total_guns": 4,
         "layout": "2LINE \u00d7 4GUN"
       },
-      "community": 4,
+      "community": 5,
       "norm_label": "refriger charging machine - 2line4gun configuration",
       "id": "2LINE4GUN_MACHINE"
     },
@@ -5647,7 +5647,7 @@
       "description": "Main operation screen of the HMI touch panel. Displays real-time process data for both lines and provides operator controls.",
       "file_type": "image",
       "source_file": "Notes/2LINE4GUN.png",
-      "community": 4,
+      "community": 5,
       "norm_label": "\u110b\u116e\u11ab\u110c\u1165\u11ab \u1112\u116a\u1106\u1167\u11ab (operation screen)",
       "id": "OP_SCREEN"
     },
@@ -5661,7 +5661,7 @@
         "refrigerant": "R134a",
         "gun_count": 2
       },
-      "community": 4,
+      "community": 5,
       "norm_label": "line 1 (\u1105\u1161\u110b\u1175\u11ab1)",
       "id": "LINE1"
     },
@@ -5675,7 +5675,7 @@
         "refrigerant": "R290",
         "gun_count": 2
       },
-      "community": 5,
+      "community": 6,
       "norm_label": "line 2 (\u1105\u1161\u110b\u1175\u11ab2)",
       "id": "LINE2"
     },
@@ -5689,7 +5689,7 @@
         "line": "Line 1",
         "refrigerant": "R134a"
       },
-      "community": 4,
+      "community": 5,
       "norm_label": "\u110c\u116e\u110b\u1175\u11b8\u1100\u1165\u11ab a (injection gun a)",
       "id": "GUN_A"
     },
@@ -5703,7 +5703,7 @@
         "line": "Line 1",
         "refrigerant": "R134a"
       },
-      "community": 4,
+      "community": 5,
       "norm_label": "\u110c\u116e\u110b\u1175\u11b8\u1100\u1165\u11ab b (injection gun b)",
       "id": "GUN_B"
     },
@@ -5717,7 +5717,7 @@
         "line": "Line 2",
         "refrigerant": "R290"
       },
-      "community": 5,
+      "community": 6,
       "norm_label": "\u110c\u116e\u110b\u1175\u11b8\u1100\u1165\u11ab c (injection gun c)",
       "id": "GUN_C"
     },
@@ -5731,7 +5731,7 @@
         "line": "Line 2",
         "refrigerant": "R290"
       },
-      "community": 5,
+      "community": 6,
       "norm_label": "\u110c\u116e\u110b\u1175\u11b8\u1100\u1165\u11ab d (injection gun d)",
       "id": "GUN_D"
     },
@@ -5746,7 +5746,7 @@
         "pressure_unit": "kgf/cm\u00b2",
         "temperature_unit": "\u2103"
       },
-      "community": 4,
+      "community": 5,
       "norm_label": "r134a refrigerant",
       "id": "REFRIG_R134A"
     },
@@ -5761,7 +5761,7 @@
         "pressure_unit": "kgf/cm\u00b2",
         "temperature_unit": "\u2103"
       },
-      "community": 5,
+      "community": 6,
       "norm_label": "r290 refrigerant",
       "id": "REFRIG_R290"
     },
@@ -5775,7 +5775,7 @@
         "line": "Line 1",
         "state": "OFF"
       },
-      "community": 4,
+      "community": 5,
       "norm_label": "line 1 vacuum pump (\u110c\u1175\u11ab\u1100\u1169\u11bc \u1111\u1165\u11b7\u1111\u1173)",
       "id": "VACUUM_PUMP_L1"
     },
@@ -5789,7 +5789,7 @@
         "line": "Line 2",
         "state": "OFF"
       },
-      "community": 5,
+      "community": 6,
       "norm_label": "line 2 vacuum pump (\u110c\u1175\u11ab\u1100\u1169\u11bc \u1111\u1165\u11b7\u1111\u1173)",
       "id": "VACUUM_PUMP_L2"
     },
@@ -5803,7 +5803,7 @@
         "color": "red",
         "position": "top-left and top-right"
       },
-      "community": 4,
+      "community": 5,
       "norm_label": "\u110b\u1172\u1102\u1175\u11ba \u1111\u1162\u1109\u1173 (unit pass) button",
       "id": "UNIT_PASS_BTN"
     },
@@ -5817,7 +5817,7 @@
         "color": "red",
         "position": "top-left"
       },
-      "community": 4,
+      "community": 5,
       "norm_label": "\u110b\u1175\u11ab\u1110\u1165\u1105\u1161\u11a8 \u1106\u1175\u1109\u1161\u110b\u116d\u11bc (interlock not used) button",
       "id": "INTERLOCK_NOT_USED_BTN"
     },
@@ -5831,7 +5831,7 @@
         "color": "red",
         "position": "second row left, second row right"
       },
-      "community": 4,
+      "community": 5,
       "norm_label": "\u110b\u1161\u11af\u1105\u1161\u11b7 \u1105\u1175\u1109\u1166\u11ba (alarm reset) button",
       "id": "ALARM_RESET_BTN"
     },
@@ -5845,7 +5845,7 @@
         "color": "green",
         "position": "second row left, second row right"
       },
-      "community": 4,
+      "community": 5,
       "norm_label": "\u1107\u116e\u110c\u1165 \u110c\u1165\u11bc\u110c\u1175 (buzzer stop) button",
       "id": "BUZZER_STOP_BTN"
     },
@@ -5859,7 +5859,7 @@
         "color": "purple",
         "position": "center second row"
       },
-      "community": 4,
+      "community": 5,
       "norm_label": "\u110c\u116e\u110b\u1175\u11b8\u1105\u1163\u11bc \u1109\u1165\u11af\u110c\u1165\u11bc\u1112\u116a\u1106\u1167\u11ab (injection amount setting screen) button",
       "id": "INJ_AMOUNT_SETTING_BTN"
     },
@@ -5873,7 +5873,7 @@
         "color": "purple",
         "position": "center second row"
       },
-      "community": 4,
+      "community": 5,
       "norm_label": "\u110b\u116e\u11ab\u110c\u1165\u11ab \u1109\u1165\u11af\u110c\u1165\u11bc\u1112\u116a\u1106\u1167\u11ab (operation setting screen) button",
       "id": "OP_SETTING_BTN"
     },
@@ -5887,7 +5887,7 @@
         "color": "purple",
         "position": "center second row"
       },
-      "community": 4,
+      "community": 5,
       "norm_label": "\u110b\u1161\u11af\u1105\u1161\u11b7 \u1112\u116a\u1106\u1167\u11ab (alarm screen) button",
       "id": "ALARM_SCREEN_BTN"
     },
@@ -5906,7 +5906,7 @@
         ],
         "position": "center-right second row"
       },
-      "community": 4,
+      "community": 5,
       "norm_label": "power monitor (kwh, v, a, hz)",
       "id": "POWER_MONITOR"
     },
@@ -5920,7 +5920,7 @@
         "line": "Line 1",
         "unit": "kg"
       },
-      "community": 4,
+      "community": 5,
       "norm_label": "line 1 \u1102\u1162\u11bc\u1106\u1162\u1109\u1161\u110b\u116d\u11bc\u1105\u1163\u11bc (refrigerant usage)",
       "id": "L1_REFRIG_USAGE"
     },
@@ -5934,7 +5934,7 @@
         "line": "Line 2",
         "unit": "kg"
       },
-      "community": 5,
+      "community": 6,
       "norm_label": "line 2 \u1102\u1162\u11bc\u1106\u1162\u1109\u1161\u110b\u116d\u11bc\u1105\u1163\u11bc (refrigerant usage)",
       "id": "L2_REFRIG_USAGE"
     },
@@ -5947,7 +5947,7 @@
       "properties": {
         "line": "Line 1"
       },
-      "community": 4,
+      "community": 5,
       "norm_label": "line 1 \u1109\u1162\u11bc\u1109\u1161\u11ab\u1105\u1163\u11bc (production quantity)",
       "id": "L1_PRODUCT_CNT"
     },
@@ -5960,7 +5960,7 @@
       "properties": {
         "line": "Line 2"
       },
-      "community": 5,
+      "community": 6,
       "norm_label": "line 2 \u1109\u1162\u11bc\u1109\u1161\u11ab\u1105\u1163\u11bc (production quantity)",
       "id": "L2_PRODUCT_CNT"
     },
@@ -5973,7 +5973,7 @@
       "properties": {
         "line": "Line 1"
       },
-      "community": 4,
+      "community": 5,
       "norm_label": "line 1 \u110c\u116e\u110b\u1175\u11b8 \u1106\u1169\u1103\u1166\u11af (injection model)",
       "id": "L1_INJ_MODEL"
     },
@@ -5986,7 +5986,7 @@
       "properties": {
         "line": "Line 2"
       },
-      "community": 5,
+      "community": 6,
       "norm_label": "line 2 \u110c\u116e\u110b\u1175\u11b8 \u1106\u1169\u1103\u1166\u11af (injection model)",
       "id": "L2_INJ_MODEL"
     },
@@ -6000,7 +6000,7 @@
         "line": "Line 1",
         "unit": "g"
       },
-      "community": 4,
+      "community": 5,
       "norm_label": "line 1 \u110c\u116e\u110b\u1175\u11b8 \u1109\u1165\u11af\u110c\u1165\u11bc\u1105\u1163\u11bc (injection setting amount)",
       "id": "L1_INJ_SET_AMOUNT"
     },
@@ -6014,7 +6014,7 @@
         "line": "Line 2",
         "unit": "g"
       },
-      "community": 5,
+      "community": 6,
       "norm_label": "line 2 \u110c\u116e\u110b\u1175\u11b8 \u1109\u1165\u11af\u110c\u1165\u11bc\u1105\u1163\u11bc (injection setting amount)",
       "id": "L2_INJ_SET_AMOUNT"
     },
@@ -6027,7 +6027,7 @@
       "properties": {
         "line": "Line 1"
       },
-      "community": 4,
+      "community": 5,
       "norm_label": "line 1 \u110e\u1161\u110c\u1175\u11bc \u1111\u1165\u11af\u1109\u1173 (charging pulse)",
       "id": "L1_CHARGING_PULSE"
     },
@@ -6040,7 +6040,7 @@
       "properties": {
         "line": "Line 2"
       },
-      "community": 5,
+      "community": 6,
       "norm_label": "line 2 \u110e\u1161\u110c\u1175\u11bc \u1111\u1165\u11af\u1109\u1173 (charging pulse)",
       "id": "L2_CHARGING_PULSE"
     },
@@ -6054,7 +6054,7 @@
         "line": "Line 1",
         "unit": "g"
       },
-      "community": 4,
+      "community": 5,
       "norm_label": "line 1 \u1102\u1162\u11bc\u1106\u1162 \u110c\u116e\u110b\u1175\u11b8\u1105\u1163\u11bc (actual refrigerant injection amount)",
       "id": "L1_INJ_AMOUNT"
     },
@@ -6068,7 +6068,7 @@
         "line": "Line 2",
         "unit": "g"
       },
-      "community": 5,
+      "community": 6,
       "norm_label": "line 2 \u1102\u1162\u11bc\u1106\u1162 \u110c\u116e\u110b\u1175\u11b8\u1105\u1163\u11bc (actual refrigerant injection amount)",
       "id": "L2_INJ_AMOUNT"
     },
@@ -6082,7 +6082,7 @@
         "line": "Line 1",
         "unit": "s"
       },
-      "community": 4,
+      "community": 5,
       "norm_label": "line 1 \u110c\u116e\u110b\u1175\u11b8 \u1109\u1175\u1100\u1161\u11ab (injection time)",
       "id": "L1_INJ_TIME"
     },
@@ -6096,7 +6096,7 @@
         "line": "Line 2",
         "unit": "s"
       },
-      "community": 5,
+      "community": 6,
       "norm_label": "line 2 \u110c\u116e\u110b\u1175\u11b8 \u1109\u1175\u1100\u1161\u11ab (injection time)",
       "id": "L2_INJ_TIME"
     },
@@ -6111,7 +6111,7 @@
         "unit": "Torr",
         "text_color": "red"
       },
-      "community": 4,
+      "community": 5,
       "norm_label": "line 1 \u110c\u1175\u11ab\u1100\u1169\u11bc\u1103\u1169 (vacuum degree)",
       "id": "L1_VACUUM_DEGREE"
     },
@@ -6125,7 +6125,7 @@
         "line": "Line 2",
         "unit": "Torr"
       },
-      "community": 5,
+      "community": 6,
       "norm_label": "line 2 \u110c\u1175\u11ab\u1100\u1169\u11bc\u1103\u1169 (vacuum degree)",
       "id": "L2_VACUUM_DEGREE"
     },
@@ -6138,7 +6138,7 @@
       "properties": {
         "line": "Line 1"
       },
-      "community": 4,
+      "community": 5,
       "norm_label": "line 1 \u1109\u1173\u110f\u1162\u11ab \u110c\u1165\u11bc\u1107\u1169 (scan information)",
       "id": "L1_SCAN_INFO"
     },
@@ -6151,7 +6151,7 @@
       "properties": {
         "line": "Line 2"
       },
-      "community": 5,
+      "community": 6,
       "norm_label": "line 2 \u1109\u1173\u110f\u1162\u11ab \u110c\u1165\u11bc\u1107\u1169 (scan information)",
       "id": "L2_SCAN_INFO"
     },
@@ -6165,7 +6165,7 @@
         "line": "Line 1",
         "color": "green"
       },
-      "community": 4,
+      "community": 5,
       "norm_label": "line 1 \u1107\u1161\u110f\u1169\u1103\u1173 \u1109\u1161\u110b\u116d\u11bc (barcode use) button",
       "id": "L1_BARCODE_BTN"
     },
@@ -6179,7 +6179,7 @@
         "line": "Line 2",
         "color": "green"
       },
-      "community": 5,
+      "community": 6,
       "norm_label": "line 2 \u1107\u1161\u110f\u1169\u1103\u1173 \u1109\u1161\u110b\u116d\u11bc (barcode use) button",
       "id": "L2_BARCODE_BTN"
     },
@@ -6193,7 +6193,7 @@
         "line": "Line 1",
         "color": "green"
       },
-      "community": 4,
+      "community": 5,
       "norm_label": "line 1 \u1109\u1162\u11bc\u1109\u1161\u11ab\u1105\u1163\u11bc \u1105\u1175\u1109\u1166\u11ba (production quantity reset) button",
       "id": "L1_PRODUCT_RST_BTN"
     },
@@ -6207,7 +6207,7 @@
         "line": "Line 2",
         "color": "green"
       },
-      "community": 5,
+      "community": 6,
       "norm_label": "line 2 \u1109\u1162\u11bc\u1109\u1161\u11ab\u1105\u1163\u11bc \u1105\u1175\u1109\u1166\u11ba (production quantity reset) button",
       "id": "L2_PRODUCT_RST_BTN"
     },
@@ -6220,7 +6220,7 @@
       "properties": {
         "line": "Line 2"
       },
-      "community": 5,
+      "community": 6,
       "norm_label": "line 2 \u1109\u116e\u1103\u1169\u11bc \u1106\u1169\u1103\u1173 (manual mode) button",
       "id": "L2_MANUAL_MODE_BTN"
     },
@@ -6233,7 +6233,7 @@
       "properties": {
         "line": "Line 2"
       },
-      "community": 5,
+      "community": 6,
       "norm_label": "line 2 \u1100\u1165\u11ab \u1107\u1162\u1100\u1175 (gun exhaust) button",
       "id": "L2_GUN_EXHAUST_BTN"
     },
@@ -6246,7 +6246,7 @@
       "properties": {
         "line": "Line 2"
       },
-      "community": 5,
+      "community": 6,
       "norm_label": "line 2 \u110c\u1166\u1111\u116e\u11b7 \u1107\u1162\u1100\u1175 (product exhaust) button",
       "id": "L2_PRODUCT_EXHAUST_BTN"
     },
@@ -6259,7 +6259,7 @@
       "properties": {
         "line": "Line 2"
       },
-      "community": 5,
+      "community": 6,
       "norm_label": "line 2 \u110c\u1175\u11ab\u1100\u1169\u11bc \u110e\u1166\u110f\u1173 (vacuum check) button",
       "id": "L2_VACUUM_CHECK_BTN"
     },
@@ -6272,7 +6272,7 @@
       "properties": {
         "line": "Line 2"
       },
-      "community": 5,
+      "community": 6,
       "norm_label": "line 2 \u1102\u1162\u11bc\u1106\u1162 \u110c\u116e\u110b\u1175\u11b8 (refrigerant injection) button",
       "id": "L2_REFRIG_INJ_BTN"
     },
@@ -6285,7 +6285,7 @@
       "properties": {
         "line": "Line 2"
       },
-      "community": 5,
+      "community": 6,
       "norm_label": "line 2 \u1109\u1175\u110c\u1161\u11a8 (start) button",
       "id": "L2_START_BTN"
     },
@@ -6298,7 +6298,7 @@
       "properties": {
         "line": "Line 2"
       },
-      "community": 5,
+      "community": 6,
       "norm_label": "line 2 \u110c\u1165\u11bc\u110c\u1175 (stop) button",
       "id": "L2_STOP_BTN"
     },
@@ -6313,7 +6313,7 @@
         "refrigerant": "R134a",
         "unit": "kgf/cm\u00b2"
       },
-      "community": 4,
+      "community": 5,
       "norm_label": "line 1 r134a \u110b\u1161\u11b8\u1105\u1167\u11a8 (pressure)",
       "id": "L1_R134A_PRESSURE"
     },
@@ -6328,7 +6328,7 @@
         "refrigerant": "R134a",
         "unit": "\u2103"
       },
-      "community": 4,
+      "community": 5,
       "norm_label": "line 1 r134a \u110b\u1169\u11ab\u1103\u1169 (temperature)",
       "id": "L1_R134A_TEMP"
     },
@@ -6343,7 +6343,7 @@
         "refrigerant": "R290",
         "unit": "kgf/cm\u00b2"
       },
-      "community": 5,
+      "community": 6,
       "norm_label": "line 2 r290 \u110b\u1161\u11b8\u1105\u1167\u11a8 (pressure)",
       "id": "L2_R290_PRESSURE"
     },
@@ -6358,7 +6358,7 @@
         "refrigerant": "R290",
         "unit": "\u2103"
       },
-      "community": 5,
+      "community": 6,
       "norm_label": "line 2 r290 \u110b\u1169\u11ab\u1103\u1169 (temperature)",
       "id": "L2_R290_TEMP"
     },
@@ -6376,7 +6376,7 @@
           "B"
         ]
       },
-      "community": 4,
+      "community": 5,
       "norm_label": "line 1 \u110c\u116e\u110b\u1175\u11b8\u1100\u1165\u11ab \u1109\u1165\u11ab\u1110\u1162\u11a8 (injection gun selection)",
       "id": "L1_INJ_COND_SEL"
     },
@@ -6394,7 +6394,7 @@
           "D"
         ]
       },
-      "community": 5,
+      "community": 6,
       "norm_label": "line 2 \u110c\u116e\u110b\u1175\u11b8\u1100\u1165\u11ab \u1109\u1165\u11ab\u1110\u1162\u11a8 (injection gun selection)",
       "id": "L2_INJ_COND_SEL"
     },
@@ -6408,7 +6408,7 @@
         "color": "purple",
         "button_count": 3
       },
-      "community": 4,
+      "community": 5,
       "norm_label": "navigation buttons group",
       "id": "NAV_BUTTONS"
     },
@@ -6422,7 +6422,7 @@
         "line": "Line 2",
         "button_count": 7
       },
-      "community": 5,
+      "community": 6,
       "norm_label": "line 2 manual control group",
       "id": "L2_MANUAL_CONTROLS"
     }
@@ -7255,8 +7255,8 @@
       "source_location": "L62",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "notes_plc_program_structure_0_5_gun_index_\uacf5\uc2dd_60",
-      "target": "notes_plc_program_structure_codeblock_2"
+      "source": "notes_plc_program_structure_codeblock_2",
+      "target": "notes_plc_program_structure_0_5_gun_index_\uacf5\uc2dd_60"
     },
     {
       "relation": "contains",
@@ -12239,5 +12239,5 @@
       ]
     }
   ],
-  "built_at_commit": "c3bdb1b8aaab125efef7aab664767f9a7f5f0ed9"
+  "built_at_commit": "05f53ff07066050dc69e3e7c5396042275cc3e28"
 }
