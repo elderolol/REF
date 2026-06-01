@@ -1,0 +1,26 @@
+[MODULE]
+NAME=output_interlock
+PARENT=alarm
+DESC=Output Interlock — 알람 발생 중 출력 강제 차단
+
+[INTERLOCK_RULES]
+RULE,TRIGGER,TARGET,EFFECT
+IL00,L40 OR L41,M30~M4F (All Solenoid Coil Images),Force RST in same scan
+IL01,L40 OR L41,M10~M28 (All Step Bits),Force RST → IDLE
+IL02,L40 OR L41,All Timers (T0~T99),Force RST
+IL03,L40 OR L41,gmes.csv Step Bits,연동 RST
+IL04,L42 OR L43 OR L44,L0/L1 GunVac/UnitVac Outputs,해당 Line Output 차단
+IL05,L45 OR L46 OR L47,L0/L1 Injection Valve,Injection Solenoid 차단
+IL06,L48 OR L49,L0/L1 Pressure-related Outputs,해당 Line Output 차단
+IL07,L4A,Heater/Cooler Outputs,Temperature 제어 차단
+IL08,L4B,Refriger Supply Valve,Refriger 주입 차단
+IL09,L4C,L0/L1 Barcode Reader Enable,Barcode Read 중단
+IL0A,L4D,SCAN Communication Device,SCAN 통신 차단
+IL0B,L4E,None (Alarm Only),No Interlock — Machine continues operation
+
+[PRIORITY]
+LEVEL,LATCH,RECOVERY
+1 - Immediate,L40,Source 해소 + ALARM RESET
+2 - Immediate,L41,Source 해소 + ALARM RESET
+3 - Per-Line,L42~L4D,Source 해소 + ALARM RESET
+4 - Informational,L4E,Door Close + ALARM RESET

@@ -1,0 +1,150 @@
+[MODULE]
+NAME=alarm
+DESC=Alarm Management — Latch, Buzzer/Lamp Control, Alarm Reset, Output Interlock
+EXEC=ALWAYS
+PLC=Mitsubishi Q03UDV
+
+[INPUTS]
+DEVICE,SOURCE,DESC
+M303,input.csv,EMG_STOP (NC Open = EMG)
+M30B,input.csv,SAFETY_PLC_HEALTHY
+L11,gunvac.csv,GunVac Fail L0
+L21,gunvac.csv,GunVac Fail L1
+L13,unitvac.csv,UnitVac Fail L0
+L23,unitvac.csv,UnitVac Fail L1
+L15,vacchec.csv,Vacuum Leak L0
+L25,vacchec.csv,Vacuum Leak L1
+L17,refinj.csv,Injection Fail L0
+L27,refinj.csv,Injection Fail L1
+M308,input.csv,PRESSURE_SW_H_L0
+M318,input.csv,PRESSURE_SW_H_L1
+M309,input.csv,PRESSURE_SW_L_L0
+M319,input.csv,PRESSURE_SW_L_L1
+D156,ad.csv,Temperature EU L0
+D168,ad.csv,Temperature EU L1
+D16,setting.csv,Refriger Used Amount (32-bit)
+D14,setting.csv,Bombe Alarm Setting (32-bit)
+M501,485.csv,Barcode Read Fail
+M307,input.csv,DOOR_SENSOR_L0 (Explosion-proof)
+M317,input.csv,DOOR_SENSOR_L1 (Explosion-proof)
+M403,hmi.csv,ALARM RESET Button
+M404,hmi.csv,BUZZER STOP Button
+
+[OUTPUTS]
+DEVICE,DESC
+L40,EMG Stop Alarm Latch
+L41,Safety PLC Fault Latch
+L42,Gun Vacuum Timeout Latch
+L43,Unit Vacuum Timeout Latch
+L44,Vacuum Leak Latch
+L45,Injection Timeout Latch
+L46,Injection Over Latch
+L47,Injection Under Latch
+L48,Pressure High Latch
+L49,Pressure Low Latch
+L4A,Temperature Abnormal Latch
+L4B,Refriger Bombe Low Latch
+L4C,Barcode Read Fail Latch
+L4D,SCAN Comm Fail Latch
+L4E,Door Open Latch (Explosion-proof)
+L4F,Reserved
+M4C,BUZZER (→ output.csv → Y30)
+M4D,LAMP_GREEN (→ output.csv → Y31)
+M4E,LAMP_RED (→ output.csv → Y32)
+M4F,LAMP_YELLOW (→ output.csv → Y33)
+
+[ALARM_LATCH]
+ID,DEVICE,SOURCE_COND,SET_LOGIC,RESET_LOGIC
+AL00,L40,M303 OFF (NC Open),LD M303 NOT SET L40,PLS M403 AND M303=ON → RST L40
+AL01,L41,M30B OFF,LD M30B NOT SET L41,PLS M403 AND M30B=ON → RST L41
+AL02,L42,L11 OR L21,LD L11 OR L21 SET L42,PLS M403 AND (L11 OFF AND L21 OFF) → RST L42
+AL03,L43,L13 OR L23,LD L13 OR L23 SET L43,PLS M403 AND (L13 OFF AND L23 OFF) → RST L43
+AL04,L44,L15 OR L25,LD L15 OR L25 SET L44,PLS M403 AND (L15 OFF AND L25 OFF) → RST L44
+AL05,L45,L17 + Timeout Flag,LD L17 AND M_TOUT SET L45,PLS M403 AND L17 OFF → RST L45
+AL06,L46,L17 + Over Flag,LD L17 AND M_OVER SET L46,PLS M403 AND L17 OFF → RST L46
+AL07,L47,L17 + Under Flag,LD L17 AND M_UNDER SET L47,PLS M403 AND L17 OFF → RST L47
+AL08,L48,M308 OR M318 ON,LD M308 OR M318 SET L48,PLS M403 AND M308 OFF AND M318 OFF → RST L48
+AL09,L49,M309 OR M319 ON,LD M309 OR M319 SET L49,PLS M403 AND M309 OFF AND M319 OFF → RST L49
+AL10,L4A,D156<-200 OR D156>800 OR D168 out-of-range,LD D156 <-200 OR D156 >800 OR D168 BAD SET L4A,PLS M403 AND temp in range → RST L4A
+AL11,L4B,D16 ≥ D14 (32-bit),LDD>= D16 D14 SET L4B,PLS M403 AND D16 < D14 → RST L4B
+AL12,L4C,M501 ON,LD M501 SET L4C,PLS M403 AND M501 OFF → RST L4C
+AL13,L4D,M502 OFF when data expected,LD M502 NOT AND M_DATA_EXP SET L4D,PLS M403 AND (M502 ON OR M_DATA_EXP OFF) → RST L4D
+AL14,L4E,M307 ON OR M317 ON (Ex-proof only),LD M307 OR M317 SET L4E,PLS M403 AND M307 OFF AND M317 OFF → RST L4E
+
+[BUZZER_CONTROL]
+; Alarm発生時 Buzzer ON, BUZZER STOP(M404)로 Buzzer만 OFF
+NETWORK,OP,OPERAND,COMMENT
+100,LD,L40,EMG
+101,OR,L41,Safety
+102,OR,L42,GunVac
+103,OR,L43,UnitVac
+104,OR,L44,Leak
+105,OR,L45,Inj Timeout
+106,OR,L46,Inj Over
+107,OR,L47,Inj Under
+108,OR,L48,Press High
+109,OR,L49,Press Low
+110,OR,L4A,Temp
+111,OR,L4B,Bombe
+112,OR,L4C,Barcode
+113,OR,L4D,SCAN
+114,OR,L4E,Door
+115,OUT,M4C,Buzzer ON
+116,LD,M404,Buzzer Stop Button
+117,RST,M4C,Buzzer OFF (Alarm Latch 유지)
+
+[LAMP_CONTROL]
+NETWORK,OP,OPERAND,COMMENT
+200,LD,M10,Any L0 Step Active
+201,OR,M11,
+202,OR,M12,
+203,OR,M13,
+204,OR,M14,
+205,OR,M15,
+206,OR,M16,
+207,OR,M17,
+208,OR,M18,
+209,AND,L40 NOT,No Alarm
+210,OUT,M4D,GREEN Lamp ON
+211,LD,L40,Any Alarm
+212,OR,L41,
+213,OR,L4E,
+214,OUT,M4E,RED Lamp ON
+215,LD,L50 NOT,L0 Interlock Not OK
+216,OR,L60 NOT,L1 Interlock Not OK (D270>=2)
+217,AND,M10,IDLE State
+218,OUT,M4F,YELLOW Lamp ON
+
+[ALARM_RESET]
+; M403(ALARM RESET) Rising Edge → 각 Latch Source 조건 확인 후 RST
+STEP,ACTION,CONDITION
+1,PLS M403,Rising Edge Detect
+2,Check M303=ON?,Source Condition: EMG 해소 → RST L40
+3,Check M30B=ON?,Source Condition: Safety OK → RST L41
+4,Check L11 OFF AND L21 OFF?,Source Condition → RST L42
+5,Check L13 OFF AND L23 OFF?,Source Condition → RST L43
+6,Check L15 OFF AND L25 OFF?,Source Condition → RST L44
+7,Check L17 OFF?,Source Condition → RST L45~L47
+8,Check M308 OFF AND M318 OFF?,Source Condition → RST L48
+9,Check M309 OFF AND M319 OFF?,Source Condition → RST L49
+10,Check D156 in range AND D168 in range?,Source Condition → RST L4A
+11,Check D16 < D14?,Source Condition → RST L4B
+12,Check M501 OFF?,Source Condition → RST L4C
+13,Check M502 ON?,Source Condition → RST L4D
+14,Check M307 OFF AND M317 OFF?,Source Condition → RST L4E
+15,RST M4C,Buzzer Additional Stop
+
+[OUTPUT_INTERLOCK]
+; 알람 발생 중 출력 차단
+CONDITION,ACTION
+L40 OR L41,All Solenoid Coil Image RST (idata.csv 연동). M30~M4F RST. gmes.csv Step Bit RST.
+L42~L4E,해당 Line/Gun의 Injection만 차단
+
+[EMG_PRIORITY]
+; L40(EMG Stop) 최우선 처리
+ORDER,ACTION
+1,Same scan: M30~M4F ALL RST
+2,M10~M28 ALL RST (Force IDLE)
+3,Buzzer ON
+4,Lamp RED ON
+5,ALL Timer RST

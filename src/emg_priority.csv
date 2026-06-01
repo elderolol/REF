@@ -1,0 +1,27 @@
+[MODULE]
+NAME=emg_priority
+PARENT=alarm
+DESC=EMG Stop (L40) — Highest Priority, Same-Scan Immediate Processing
+
+[SCAN_SEQUENCE]
+STEP,ACTION,DEVICES,TIMING
+1,Read EMG Stop Input,M303 (NC),Scan Start
+2,Detect M303 OFF (NC Open → EMG),M303,Same Scan
+3,M30~M4F ALL Force RST,M30~M4F,Immediate — Current Scan
+4,M10~M28 ALL Force RST (Force IDLE),M10~M28,Immediate — Current Scan
+5,Buzzer ON,M4C (→ Y30),Immediate — Current Scan
+6,Lamp RED ON,M4E (→ Y32),Immediate — Current Scan
+7,GREEN Lamp OFF,M4D (→ Y31),Immediate — Current Scan
+8,YELLOW Lamp OFF,M4F (→ Y33),Immediate — Current Scan
+9,All Timers RST,T0~T99,Immediate — Current Scan
+10,L40 (EMG Alarm Latch) SET,L40,Immediate — Current Scan
+11,sys_idle.csv Step Initialize,idata.csv 연동,Next Scan
+
+[RECOVERY_SEQUENCE]
+STEP,ACTION,CONDITION
+1,EMG Stop Switch Reset (M303 ON),M303 = Physical ON
+2,Press ALARM RESET (M403 PLS),M403 Rising Edge
+3,M303=ON Check Pass → RST L40,Source Condition OK
+4,Check all other alarm sources,M30B, etc.
+5,Enter IDLE state (M10),M10 SET
+6,Ready for START,Full Read

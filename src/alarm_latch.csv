@@ -1,0 +1,32 @@
+[MODULE]
+NAME=alarm_latch
+PARENT=alarm
+DESC=Alarm Latch Definitions — L40~L4E (15 Alarm Types)
+
+[LATCH_DEFINITIONS]
+LATCH,DEVICE,NAME,CATEGORY,SOURCE_LINE,SET_CONDITION,RESET_CONDITION,AUTO_CLEAR
+L40,EMG_STOP_L,EMG Stop,Fatal,Both,M303 OFF (NC Open),M403 PLS AND M303 ON,No
+L41,SAFETY_FAULT_L,Safety PLC Fault,Fatal,Both,M30B OFF,M403 PLS AND M30B ON,No
+L42,GUNVAC_TOUT_L,Gun Vacuum Timeout,Process,L0/L1,L11 OR L21,M403 PLS AND L11 OFF AND L21 OFF,No
+L43,UNITVAC_TOUT_L,Unit Vacuum Timeout,Process,L0/L1,L13 OR L23,M403 PLS AND L13 OFF AND L23 OFF,No
+L44,VAC_LEAK_L,Vacuum Leak,Process,L0/L1,L15 OR L25,M403 PLS AND L15 OFF AND L25 OFF,No
+L45,INJ_TOUT_L,Injection Timeout,Process,L0/L1,L17 AND Timeout Flag,M403 PLS AND L17 OFF,No
+L46,INJ_OVER_L,Injection Over,Process,L0/L1,L17 AND Over Flag,M403 PLS AND L17 OFF,No
+L47,INJ_UNDER_L,Injection Under,Process,L0/L1,L17 AND Under Flag,M403 PLS AND L17 OFF,No
+L48,PRESS_HIGH_L,Pressure High,Sensor,Both,M308 OR M318 ON,M403 PLS AND M308 OFF AND M318 OFF,No
+L49,PRESS_LOW_L,Pressure Low,Sensor,Both,M309 OR M319 ON,M403 PLS AND M309 OFF AND M319 OFF,No
+L4A,TEMP_ABN_L,Temperature Abnormal,Sensor,Both,D156<-200 OR D156>800 OR D168 out-of-range,M403 PLS AND both in range,No
+L4B,BOMBE_LOW_L,Refriger Bombe Low,Material,Both,D16 >= D14 (32-bit),M403 PLS AND D16 < D14,No
+L4C,BARCODE_FAIL_L,Barcode Read Fail,Comm,Both,M501 ON,M403 PLS AND M501 OFF,No
+L4D,SCAN_FAIL_L,SCAN Comm Fail,Comm,Both,M502 OFF when data expected,M403 PLS AND (M502 ON OR no data expected),No
+L4E,DOOR_OPEN_L,Door Open,Safety,Both,M307 OR M317 ON (Ex-proof only),M403 PLS AND M307 OFF AND M317 OFF,Yes (non-latching)
+L4F,RESERVED,Reserved,-,-,-,-,-
+
+[GROUPING]
+GROUP,LATCHES,INTERLOCK_ACTION
+Fatal,L40 L41,All outputs RST (M30~M4F), Step Bits RST (M10~M28)
+Process,L42 L43 L44 L45 L46 L47,해당 Line/Gun Injection 차단
+Sensor,L48 L49 L4A,해당 Line/Gun Injection 차단
+Material,L4B,Injection 차단 (Refriger supply 중단)
+Comm,L4C L4D,Barcode/SCAN 관련 동작 차단
+Safety,L4E,Alarm only (No interlock, no EMG stop)
