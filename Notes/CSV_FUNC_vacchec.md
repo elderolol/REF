@@ -10,7 +10,7 @@
 
 진공 체크 (Vacuum Check / Leak Test) 공정 수행. 모든 진공 솔레노이드를 OFF한 상태에서
 진공도를 감시하여 리크(Leak) 여부를 판정. 일정 시간 동안 진공도 유지 시 Pass,
-진공도가 떨어지면 Leak Fail.
+진공도가 떨어지면 Leak NG.
 
 ---
 
@@ -38,8 +38,8 @@
 | T2 | Vacuum Check Timer (100ms base) |
 | L14 | VacCheck Done (Leak OK, Line 0) |
 | L24 | VacCheck Done (Leak OK, Line 1) |
-| L15 | VacCheck Fail (Leak Detected, Line 0) |
-| L25 | VacCheck Fail (Leak Detected, Line 1) |
+| L15 | VacCheck NG (Leak Detected, Line 0) |
+| L25 | VacCheck NG (Leak Detected, Line 1) |
 | L44 | Vacuum Leak Alarm |
 | Scratch D | P_start 저장 (진공 시작값) |
 
@@ -71,7 +71,7 @@ M14 (Step Entry) ─── Rising Edge
     │
     ├── 리크 검출 조건:
     │   |D160 - P_start| > D24 (진공 Check Setting 초과)
-    │   → SET L15 (Fail), SET L44 (Vac Leak Alarm)
+    │   → SET L15 (NG), SET L44 (Vac Leak Alarm)
     │
     └── 방폭(Door) 리크:
         M307=OPEN → 즉시 L15, SET L4E (Door Alarm)
@@ -96,7 +96,7 @@ M14 (Step Entry) ─── Rising Edge
 |:----:|:--:|:---------:|
 | UNIT VAC (M13) | VAC CHECK (M14) | UnitVac Done → gmes SET M14 |
 | VAC CHECK (M14) | [OIL/REFRIG] | L14 Done → gmes가 D276 확인 후 다음 Step |
-| VAC CHECK (M14) | IDLE (M10) | L15 Fail → Alarm + IDLE |
+| VAC CHECK (M14) | IDLE (M10) | L15 NG → Alarm + IDLE |
 
 ---
 
@@ -105,7 +105,7 @@ M14 (Step Entry) ─── Rising Edge
 | Error | Detection | Action |
 |-------|:---------:|--------|
 | Vacuum Leak | |D160 - P_start| > D24 | SET L15, L44 |
-| Vacuum Insufficient | D160 > D24 at entry | 대기, Timeout → Fail |
+| Vacuum Insufficient | D160 > D24 at entry | 대기, Timeout → NG |
 | Door Open (방폭) | M307=OPEN | SET L4E, L15 |
 | Check Timeout | T2 ≥ D6+5s (Done 미도달) | SET L15 |
 
@@ -121,5 +121,5 @@ M14 (Step Entry) ─── Rising Edge
 | `DMOV` | 32-bit vacuum read |
 | `D-` | ΔP = Current - P_start |
 | `LDD<=` | ΔP ≤ Tolerance? |
-| `SET` | Done/Fail |
+| `SET` | Done/NG |
 | `RST` | Step off |

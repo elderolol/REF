@@ -135,8 +135,8 @@ setting.csv를 통해 모든 시스템 설정값이 관리되며, 이 값들을 
 ### 6-2. Barcode = Used (PC 연동 모드)
 
 ```
-PC가 GMES Injection Amount Address(D180/D230)에 기록
-    → 485.csv에서 수신 → Working Area(D200/D250)로 복사
+PC가 Ethernet으로 D180/D230 (Barcode Write Area)에 직접 기록
+    → PLC가 Working Area(D200/D250)로 복사
     → setting.csv가 D60~D115 Table과 비교 → 일치하는 Amount 검색
     → 매칭된 Index → Model# (D0/D30)에 할당
     → 해당 Injection Amount → Injection Setting Amount(D128)에 설정

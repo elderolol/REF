@@ -13,7 +13,7 @@
 - Line / Gun 선택 및 Active Line 관리
 - 전체 공정 Step State Machine 제어 (Line 0 / Line 1 독립)
 - Type 분기 (CJ: D270=1→L1 Skip, D272=1→Gun B Skip, D276=0→Oil Skip)
-- Done/Fail 수신 → 다음 Step 전이
+- Done/NG 수신 → 다음 Step 전이
 - Barcode Data 유효성 검증 및 Model# 매핑
 - Lamp 상태 출력 (Green=Running, Red=Alarm, Yellow=Interlock)
 
@@ -38,8 +38,8 @@
 | M301 (input.csv) | STOP_PB_L0 (Hardware) |
 | M303 (input.csv) | EMG_STOP |
 | M30B (input.csv) | SAFETY_PLC_HEALTHY |
-| L10~L19 | Line 0 Done/Fail (각 서브 Function에서 SET) |
-| L20~L29 | Line 1 Done/Fail |
+| L10~L19 | Line 0 Done/NG (각 서브 Function에서 SET) |
+| L20~L29 | Line 1 Done/NG |
 | L40~L4F | Alarm Latches |
 | L50~L55 | Line 0 Interlock Status |
 | L60~L65 | Line 1 Interlock Status |
@@ -117,6 +117,28 @@ M409 (GUN B Momentary) → Self-Hold → L73=1, L72=0
 > PLC는 D7000/D7001(D8000/D8001)의 값만 읽어서 사용.  
 > PC는 D7220~/D8220~ 영역을 Read하여 현재 공정 진행중인 제품의 Barcode 확인.
 
+#### AUTO START 시 Barcode Working Area 갱신
+
+AUTO CHARGER START 시, PC가 Target Amount를 설정했으면 (D7001 > 0) PC가 보낸 Suffix 데이터를 Barcode 표시 영역으로 복사:
+
+```
+AUTO START (M413/M415) ─── Rising Edge
+    │
+    ├── [Line 1] LDD> D7001 K0  (Target Amount > 0?)
+    │   ├── YES → BMOV D6870~D6879  D7220~D7239  K10
+    │   │         (Suffix → Barcode Display Area)
+    │   └── THEN → FMOV K0  D6870  K10
+    │               (Source Clear — consume 방지)
+    │
+    └── [Line 2] LDD> D8001 K0  (D270≥2)
+        ├── YES → BMOV D7870~D7879  D8220~D8239  K10
+        └── THEN → FMOV K0  D7870  K10
+```
+
+> **조건**: D7001/D8001 > 0 → PC가 유효한 Injection Amount를 보냄 (데이터 갱신 완료).  
+> **복사**: D6870~D6879 (Suffix 10 words) → D7220~D7239 (Barcode 20 words 중 앞 10 words).  
+> **용도**: PC가 D7220~/D8220~를 Read하여 현재 진행중인 제품의 Barcode 확인.
+
 ---
 
 ## 5. Step State Machine
@@ -139,17 +161,17 @@ START (M413/M415)
 │ GUN VAC (M12/M22)                                        │
 │   → gunvac.csv 실행                                       │
 │   → L10/L20(Done) → SET M13/M23 (UNIT VAC)              │
-│   → L11/L21(Fail) → Alarm Latch, SET M10/M20 (IDLE)     │
+│   → L11/L21(NG) → Alarm Latch, SET M10/M20 (IDLE)     │
 ├──────────────────────────────────────────────────────────┤
 │ UNIT VAC (M13/M23)                                       │
 │   → unitvac.csv 실행                                      │
 │   → L12/L22(Done) → SET M14/M24 (VAC CHECK)             │
-│   → L13/L23(Fail) → Alarm                               │
+│   → L13/L23(NG) → Alarm                               │
 ├──────────────────────────────────────────────────────────┤
 │ VAC CHECK (M14/M24)                                      │
 │   → vacchec.csv 실행                                      │
 │   → L14/L24(Done) → [D276=1 → OIL] / [D276=0 → REFRIG] │
-│   → L15/L25(Fail) → Alarm                               │
+│   → L15/L25(NG) → Alarm                               │
 ├──────────────────────────────────────────────────────────┤
 │ ┌─ [D276=1] OIL FAST INJ (M19/M29)                      │
 │ │    → D62/76/90/104 Type 분기 (CJ)                       │
@@ -159,7 +181,7 @@ START (M413/M415)
 │ REFRIG INJ (M15/M16, M25/M26)                            │
 │   → refinj.csv (Refrig Sequence)                          │
 │   → L16/L26(Done) → SET M17/M27 (EXHAUST)               │
-│   → L17/L27(Fail) → Alarm                               │
+│   → L17/L27(NG) → Alarm                               │
 ├──────────────────────────────────────────────────────────┤
 │ EXHAUST (M17/M27)                                        │
 │   → EXHAUST SOL ON (M33/M43)                             │
@@ -179,10 +201,10 @@ START (M413/M415)
 Manual Function Button (M40F~M412) → Momentary
     └── PLC Rising Edge 검출
 
-M40F (GUN VAC)  → SET M12 (GUN VAC) → gunvac 실행 → Done/Fail → IDLE
-M410 (UNIT VAC) → SET M13 (UNIT VAC) → unitvac 실행 → Done/Fail → IDLE
-M411 (VAC CHECK)→ SET M14 (VAC CHECK) → vacchec 실행 → Done/Fail → IDLE
-M412 (INJECTION)→ SET M15 (INJECTION) → refinj 실행 → Done/Fail → IDLE
+M40F (GUN VAC)  → SET M12 (GUN VAC) → gunvac 실행 → Done/NG → IDLE
+M410 (UNIT VAC) → SET M13 (UNIT VAC) → unitvac 실행 → Done/NG → IDLE
+M411 (VAC CHECK)→ SET M14 (VAC CHECK) → vacchec 실행 → Done/NG → IDLE
+M412 (INJECTION)→ SET M15 (INJECTION) → refinj 실행 → Done/NG → IDLE
 
 (각 Function은 단독 실행 후 완료 시 자동 IDLE 복귀)
 ```
@@ -256,7 +278,7 @@ STOP (M414/M416 or M301/M311)
     │
     ├── RST 모든 Step Bit (M10~M28)
     ├── RST 모든 Solenoid Coil (M30~M4F)
-    ├── RST 모든 Done/Fail (L10~L29)
+    ├── RST 모든 Done/NG (L10~L29)
     ├── MOV K6 → D7012 (Result=Operator Stop)
     ├── EXHAUST SOL ON (M33/M43) → T3 타이머
     └── SET IDLE (M10/M20)

@@ -57,7 +57,7 @@ SM402 (Initial Pulse)
     ├── SET L0 (InitDone) ────────── 정전복구 후 최초 1회만 실행
     ├── RST M10~M28 ──────────────── 모든 Step Bit 초기화 (안전상태)
     ├── RST M30~M4F ──────────────── 모든 Solenoid Coil OFF
-    ├── RST L10~L29 ──────────────── 모든 Done/Fail 초기화
+    ├── RST L10~L29 ──────────────── 모든 Done/NG 초기화
     ├── RST L40~L4F ──────────────── 모든 Alarm Latch 초기화
     ├── MOV D270 → D274 계산 ─────── Total Gun = D270 × D272
     └── D270/D272 Validation ─────── 범위 체크 → 이상 시 Alarm

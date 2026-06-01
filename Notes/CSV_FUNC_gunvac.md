@@ -45,10 +45,10 @@ LINE VACUUM SOL을 ON 하여 해당 Gun의 진공 라인을 진공 펌프에 연
 | T0 | Gun Vacuum Timer (100ms base) |
 | L10 | GunVac Done (Line 0) |
 | L20 | GunVac Done (Line 1) |
-| L11 | GunVac Fail (Line 0) |
-| L21 | GunVac Fail (Line 1) |
+| L11 | GunVac NG (Line 0) |
+| L21 | GunVac NG (Line 1) |
 | L42 | GunVac Timeout Alarm (Latch) |
-| M4C | Buzzer (Fail 시) |
+| M4C | Buzzer (NG 시) |
 
 ---
 
@@ -78,7 +78,7 @@ M12 (Step Entry) ─── Rising Edge
     │
     └── 타임아웃 조건:
         T0 ≥ D2 + 100 (D2+10초)
-        → RST M31, SET L11 (Fail), SET L42 (Timeout Alarm), SET M4C (Buzzer)
+        → RST M31, SET L11 (NG), SET L42 (Timeout Alarm), SET M4C (Buzzer)
 ```
 
 ---
@@ -89,7 +89,7 @@ M12 (Step Entry) ─── Rising Edge
 |:----:|:--:|:---------:|
 | PRECHECK (M11) | GUN VAC (M12) | gmes에서 PRECHECK OK → SET M12 |
 | GUN VAC (M12) | UNIT VAC (M13) | L10 Done → gmes에서 SET M13 |
-| GUN VAC (M12) | IDLE (M10) | L11 Fail → gmes에서 Alarm + IDLE |
+| GUN VAC (M12) | IDLE (M10) | L11 NG → gmes에서 Alarm + IDLE |
 | GUN VAC (M12) | IDLE (M10) | STOP 감지 → gmes에서 RST ALL |
 
 ---
@@ -115,6 +115,6 @@ M12 (Step Entry) ─── Rising Edge
 | `MOV` | Timer Preset (D2 → T0) |
 | `DMOV` | Vacuum Compare (32-bit) |
 | `LDD<=` | Vacuum ≤ Setting (Done 조건) |
-| `SET` | Done/Fail Flag |
+| `SET` | Done/NG Flag |
 | `RST` | Step Bit 해제 |
 | `TMR` | Timer Start |

@@ -2,7 +2,7 @@
 
 > **Target PLC**: Mitsubishi QCPU (Q mode) Q03UDV  
 > **Device 할당 원칙**:
-> - **L device**: 정전 유지가 필요한 Bit (Done/Fail 상태, 알람 래치, 운전 모드)
+> - **L device**: 정전 유지가 필요한 Bit (Done/NG 상태, 알람 래치, 운전 모드)
 > - **M device**: 정전 유지 불필요한 Bit (Step 상태, HMI 버튼 원본, 출력 코일 이미지)
 > - **D device**: 짝수 주소 할당, 16-bit도 Dn+1 예약 (32-bit 확장 대비)
 > - **X/Y device**: `input.csv` / `output.csv` 로 매핑. 프로그램 내 직접 참조 없음.
@@ -22,29 +22,29 @@
 | **L3** | System | Barcode Use Flag | Y |
 | **L4~L9** | System | 예비 | Y |
 | | | | |
-| **Line 0 — Done/Fail (Retentive)** | | | |
-| **L10** | Done/Fail L0 | GunVac Done | Y |
-| **L11** | Done/Fail L0 | GunVac Fail | Y |
-| **L12** | Done/Fail L0 | UnitVac Done | Y |
-| **L13** | Done/Fail L0 | UnitVac Fail | Y |
-| **L14** | Done/Fail L0 | VacCheck Done | Y |
-| **L15** | Done/Fail L0 | VacCheck Fail | Y |
-| **L16** | Done/Fail L0 | Injection Done | Y |
-| **L17** | Done/Fail L0 | Injection Fail | Y |
-| **L18** | Done/Fail L0 | Cycle Done | Y |
-| **L19** | Done/Fail L0 | Cycle Fail | Y |
+| **Line 0 — Done/NG (Retentive)** | | | |
+| **L10** | Done/NG L0 | GunVac Done | Y |
+| **L11** | Done/NG L0 | GunVac NG | Y |
+| **L12** | Done/NG L0 | UnitVac Done | Y |
+| **L13** | Done/NG L0 | UnitVac NG | Y |
+| **L14** | Done/NG L0 | VacCheck Done | Y |
+| **L15** | Done/NG L0 | VacCheck NG | Y |
+| **L16** | Done/NG L0 | Injection Done | Y |
+| **L17** | Done/NG L0 | Injection NG | Y |
+| **L18** | Done/NG L0 | Cycle Done | Y |
+| **L19** | Done/NG L0 | Cycle NG | Y |
 | | | | |
-| **Line 1 — Done/Fail (Retentive)** | | | |
-| **L20** | Done/Fail L1 | GunVac Done | Y |
-| **L21** | Done/Fail L1 | GunVac Fail | Y |
-| **L22** | Done/Fail L1 | UnitVac Done | Y |
-| **L23** | Done/Fail L1 | UnitVac Fail | Y |
-| **L24** | Done/Fail L1 | VacCheck Done | Y |
-| **L25** | Done/Fail L1 | VacCheck Fail | Y |
-| **L26** | Done/Fail L1 | Injection Done | Y |
-| **L27** | Done/Fail L1 | Injection Fail | Y |
-| **L28** | Done/Fail L1 | Cycle Done | Y |
-| **L29** | Done/Fail L1 | Cycle Fail | Y |
+| **Line 1 — Done/NG (Retentive)** | | | |
+| **L20** | Done/NG L1 | GunVac Done | Y |
+| **L21** | Done/NG L1 | GunVac NG | Y |
+| **L22** | Done/NG L1 | UnitVac Done | Y |
+| **L23** | Done/NG L1 | UnitVac NG | Y |
+| **L24** | Done/NG L1 | VacCheck Done | Y |
+| **L25** | Done/NG L1 | VacCheck NG | Y |
+| **L26** | Done/NG L1 | Injection Done | Y |
+| **L27** | Done/NG L1 | Injection NG | Y |
+| **L28** | Done/NG L1 | Cycle Done | Y |
+| **L29** | Done/NG L1 | Cycle NG | Y |
 | | | | |
 | **Alarm Latch (Retentive)** | | | |
 | **L40** | Alarm | Emergency Stop (전체 정지) | Y |
@@ -59,8 +59,8 @@
 | **L49** | Alarm | Pressure Low | Y |
 | **L4A** | Alarm | Temperature Abnormal | Y |
 | **L4B** | Alarm | Refriger Bombe Low | Y |
-| **L4C** | Alarm | Barcode Read Fail | Y |
-| **L4D** | Alarm | SCAN Comm Fail | Y |
+| **L4C** | Alarm | SPARE | Y |
+| **L4D** | Alarm | SPARE | Y |
 | **L4E** | Alarm | Door Open (방폭) | Y |
 | **L4F** | Alarm | SPARE | Y |
 | | | | |
@@ -294,9 +294,9 @@
 
 | Addr | Signal | Note |
 |:----:|--------|------|
-| **M500** | BARCODE_READ_OK | RS-485 바코드 수신 완료 |
-| **M501** | BARCODE_READ_FAIL | 바코드 수신 실패 |
-| **M502** | SCAN_DATA_VALID | SCAN 주입량 수신 완료 |
+| **M500** | SPARE | (RS-485 바코드 — 미사용) |
+| **M501** | SPARE | (RS-485 바코드 — 미사용) |
+| **M502** | SPARE | (RS-485 SCAN — 미사용) |
 | **M503** | WORK_AREA_VALID_L0 | Line 0 Barcode Working Area 유효 |
 | **M504** | WORK_AREA_VALID_L1 | Line 1 Barcode Working Area 유효 |
 | **M505~M50F** | 예비 | |
@@ -318,7 +318,7 @@
 | D60~D115 | User Settings — Gun별 (4 Gun × 14 words) | Y (래치) |
 | D116~D149 | Operation Display (HMI Read) | Y (래치) |
 | D150~D189 | 예비 Parameter | Y (래치) |
-| D190~D209 | Barcode Write Area (PC → PLC) | Y (래치) |
+| D190~D209 | Barcode Write Area (PC Ethernet → PLC) | Y (래치) |
 | D210~D229 | Barcode Working Area (PLC 내부) | Y (래치) |
 | D230~D249 | Barcode Write Area — Line 1 | Y (래치) |
 | D250~D269 | Barcode Working Area — Line 1 | Y (래치) |
@@ -556,7 +556,7 @@
 
 | Device | Range | 용도 | Retentive |
 |:------:|:-----:|------|:---------:|
-| **L** | L0~L999 | 정전유지 Bit (Done/Fail/알람/상태) | Y (전체 래치) |
+| **L** | L0~L999 | 정전유지 Bit (Done/NG/알람/상태) | Y (전체 래치) |
 | **M** | M0~M9 | System Flags | N |
 | **M** | M10~M29 | Step State (Line 0/1) | N |
 | **M** | M30~M6F | Solenoid Coil Images + Injection Active | N |
@@ -595,7 +595,7 @@
 
 | Device | Range | 용도 | Retentive |
 |:------:|:-----:|------|:---------:|
-| **L** | L0~L999 | 정전유지 Bit (Done/Fail/알람/상태) | Y (전체 래치) |
+| **L** | L0~L999 | 정전유지 Bit (Done/NG/알람/상태) | Y (전체 래치) |
 | **M** | M0~M9 | System Flags | N |
 | **M** | M10~M29 | Step State (Line 0/1) | N |
 | **M** | M30~M6F | Solenoid Coil Images + Injection Active | N |

@@ -19,10 +19,10 @@ Alarm Reset 처리, 출력 Interlock (알람 중 모든 출력 차단) 담당.
 |:------:|:------:|-------------|
 | M303 | input.csv | EMG_STOP (NC Open = EMG) |
 | M30B | input.csv | SAFETY_PLC_HEALTHY |
-| L11/L21 | gunvac | GunVac Fail |
-| L13/L23 | unitvac | UnitVac Fail |
+| L11/L21 | gunvac | GunVac NG |
+| L13/L23 | unitvac | UnitVac NG |
 | L15/L25 | vacchec | Vacuum Leak |
-| L17/L27 | refinj | Injection Fail (Timeout/Over/Under) |
+| L17/L27 | refinj | Injection NG (Timeout/Over/Under) |
 | M308 | input.csv | PRESSURE_SW_H_L0 |
 | M318 | input.csv | PRESSURE_SW_H_L1 |
 | M309 | input.csv | PRESSURE_SW_L_L0 |
@@ -30,7 +30,6 @@ Alarm Reset 처리, 출력 Interlock (알람 중 모든 출력 차단) 담당.
 | D156/D168 | ad.csv | Temperature EU (L0/L1) |
 | D16 | setting | Refriger Used Amount (32-bit) |
 | D14 | setting | Bombe Alarm Setting (32-bit) |
-| M501 | 485.csv | Barcode Read Fail |
 | M307 | input.csv | DOOR_SENSOR_L0 (방폭) |
 | M317 | input.csv | DOOR_SENSOR_L1 (방폭) |
 | M403 | HMI | ALARM RESET Button |
@@ -54,8 +53,8 @@ Alarm Reset 처리, 출력 Interlock (알람 중 모든 출력 차단) 담당.
 | L49 | Pressure Low Latch |
 | L4A | Temperature Abnormal Latch |
 | L4B | Refriger Bombe Low Latch |
-| L4C | Barcode Read Fail Latch |
-| L4D | SCAN Comm Fail Latch |
+| L4C | SPARE |
+| L4D | SPARE |
 | L4E | Door Open Latch (방폭 전용) |
 | L4F | 예비 |
 | M4C | BUZZER (→ output.csv → Y30) |
@@ -81,8 +80,8 @@ Alarm Reset 처리, 출력 Interlock (알람 중 모든 출력 차단) 담당.
 | **L49** | Pressure Low | M309 OR M319 ON → SET L49 |
 | **L4A** | Temp Abnormal | D156 < -200 OR D156 > 800 (L0) OR D168 범위外 → SET L4A |
 | **L4B** | Bombe Low | D16 ≥ D14 (32-bit compare) → SET L4B |
-| **L4C** | Barcode Fail | M501 ON → SET L4C |
-| **L4D** | SCAN Fail | M502 OFF when data expected → SET L4D |
+| **L4C** | SPARE | — |
+| **L4D** | SPARE | — |
 | **L4E** | Door Open | M307 ON OR M317 ON (방폭 only) → SET L4E |
 
 > **모든 Latch는 SET 후 M403(ALARM RESET) Rising Edge로만 RST 가능**  
@@ -106,8 +105,6 @@ OR  L48    // Press High
 OR  L49    // Press Low
 OR  L4A    // Temp
 OR  L4B    // Bombe
-OR  L4C    // Barcode
-OR  L4D    // SCAN
 OR  L4E    // Door
 OUT M4C    // Buzzer ON
 

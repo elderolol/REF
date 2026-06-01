@@ -109,7 +109,7 @@ RS-485 Network
 
 | Error | Detection | Action |
 |-------|:---------:|--------|
-| Sensor Comm Fail | 응답 없음 / Timeout | Alarm, 해당 센서값 Invalid |
+| Sensor Comm NG | 응답 없음 / Timeout | Alarm, 해당 센서값 Invalid |
 | CRC Error | Checksum 불일치 | 재전송 요청, N회 실패 시 Alarm |
 
 ---

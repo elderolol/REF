@@ -43,8 +43,8 @@
 | T1 | Unit Vacuum Timer (100ms base) |
 | L12 | UnitVac Done (Line 0) |
 | L22 | UnitVac Done (Line 1) |
-| L13 | UnitVac Fail (Line 0) |
-| L23 | UnitVac Fail (Line 1) |
+| L13 | UnitVac NG (Line 0) |
+| L23 | UnitVac NG (Line 1) |
 | L43 | UnitVac Timeout Alarm |
 
 ---
@@ -69,7 +69,7 @@ M13 (Step Entry) ─── Rising Edge
     │
     └── 타임아웃:
         T1 ≥ D4 + 100 (D4+10초)
-        → RST M31, RST M32, SET L13 (Fail), SET L43 (Alarm)
+        → RST M31, RST M32, SET L13 (NG), SET L43 (Alarm)
     │
     ├── STOP 발생 → RST M31, RST M32, SET M10 (IDLE)
     └── EMG 발생 → 즉시 All Sol OFF, L40 SET
@@ -86,7 +86,7 @@ Unit Vacuum은 Gun 뿐만 아니라 Stem(샤프트/배관)까지 감압하므로
 |:----:|:--:|:---------:|
 | GUN VAC (M12) | UNIT VAC (M13) | L10 Done → gmes SET M13 |
 | UNIT VAC (M13) | VAC CHECK (M14) | L12 Done → gmes SET M14 |
-| UNIT VAC (M13) | IDLE (M10) | Fail or STOP |
+| UNIT VAC (M13) | IDLE (M10) | NG or STOP |
 
 ---
 
@@ -110,6 +110,6 @@ Unit Vacuum은 Gun 뿐만 아니라 Stem(샤프트/배관)까지 감압하므로
 | `MOV` | Timer preset |
 | `DMOV` | Vacuum compare |
 | `LDD<=` | Vacuum ≤ Setting |
-| `SET` | Done/Fail |
+| `SET` | Done/NG |
 | `RST` | Step/Solenoid off |
 | `TMR` | T1 Timer |

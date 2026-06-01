@@ -14,7 +14,7 @@
 - **Gun Type (0=1-Sol Base / 1=H+L Fast+Normal)** 에 따라 솔레노이드 구동 방식 분기
 - **Oil Mode (D276=0 REF Only / D276=1 REF+OIL)** 에 따라 Oil 선주입 후 Refrig 주입
 - HSC(고속카운터) 펄스 적산 → 주입량 계산
-- 목표량 ± 공차(Tolerance) 도달 확인 → Done/Fail 판정
+- 목표량 ± 공차(Tolerance) 도달 확인 → Done/NG 판정
 - 주입 완료 후 Gas Exhaust → Complete
 
 ---
@@ -60,7 +60,7 @@
 | T5 | Refrig Normal Injection Timer |
 | T6 | Oil Injection Timer |
 | L16 (L0) / L26 (L1) | Injection Done |
-| L17 (L0) / L27 (L1) | Injection Fail |
+| L17 (L0) / L27 (L1) | Injection NG |
 | L45 | Injection Timeout Alarm |
 | L46 | Injection Over Alarm |
 | L47 | Injection Under Alarm |
@@ -92,7 +92,7 @@ VacCheck Done
     │   → SET L16 (Injection Done 준비)
     │
     ├── 적산량 ≥ D64 + D26 (Over Tolerance)?
-    │   → SET L17 (Injection Fail), SET L46 (Over Alarm)
+    │   → SET L17 (Injection NG), SET L46 (Over Alarm)
     │
     └── T4 ≥ Timeout?
         → SET L17, SET L45 (Timeout Alarm)
@@ -132,7 +132,7 @@ VacCheck Done
     │   → RST M36 (Oil SOL OFF)
     │   → SET M15 (REFRIG FAST INJ 진입)
     │
-    └── T6 ≥ Timeout → Fail
+    └── T6 ≥ Timeout → NG
     │
     ▼
 [REFRIG FAST INJ]  ← M15 진입
@@ -144,7 +144,7 @@ VacCheck Done
     │   → RST M34
     │   → EXHAUST → COMPLETE
     │
-    └── Error → Fail
+    └── Error → NG
 ```
 
 ### 4-3. Type 1 (H+L Fast+Normal) + D276=0 (REF Only)
@@ -162,7 +162,7 @@ VacCheck Done
     │   → RST M34 (Fast SOL OFF), Normal만 유지
     │   → SET M16 (REFRIG NORMAL INJ)
     │
-    └── Error → Fail
+    └── Error → NG
     │
     ▼
 [REFRIG NORMAL INJ]  ← M16 진입
@@ -176,7 +176,7 @@ VacCheck Done
     │       ├── Actual > Target + D26 → L46 (Over)
     │       └── Actual < Target - D26 → L47 (Under)
     │
-    └── Error → Fail
+    └── Error → NG
     │
     ▼
 [EXHAUST → COMPLETE] (동일)
@@ -197,7 +197,7 @@ VacCheck Done
     │   → RST M36 (Oil Fast OFF)
     │   → SET M1A (OIL NORMAL INJ)
     │
-    └── Error → Fail
+    └── Error → NG
     │
     ▼
 [OIL NORMAL INJ]  ← M1A 진입
@@ -206,7 +206,7 @@ VacCheck Done
     │   → RST M37
     │   → SET M15 (REFRIG FAST INJ 진입)
     │
-    └── Error → Fail
+    └── Error → NG
     │
     ▼
 [REFRIG FAST INJ]  ← M15 진입
@@ -218,7 +218,7 @@ VacCheck Done
     │   → RST M34 (Fast OFF)
     │   → SET M16 (REFRIG NORMAL INJ)
     │
-    └── Error → Fail
+    └── Error → NG
     │
     ▼
 [REFRIG NORMAL INJ]  ← M16 진입
@@ -228,7 +228,7 @@ VacCheck Done
     │   → Tolerance Check
     │   → EXHAUST
     │
-    └── Error → Fail
+    └── Error → NG
     │
     ▼
 [EXHAUST → COMPLETE]
@@ -279,8 +279,8 @@ Actual_Volume = Pulse_Count × (1000 + Correction) / 1000 + HMI_Cal
 Difference = |Actual_Volume - Target_Volume|
 
 |Difference| ≤ D26(D54) → Injection OK → Done
-Difference > 0 AND > D26 → Injection Over → Fail + L46
-Difference < 0 AND |Difference| > D26 → Injection Under → Fail + L47
+Difference > 0 AND > D26 → Injection Over → NG + L46
+Difference < 0 AND |Difference| > D26 → Injection Under → NG + L47
 ```
 
 ---
@@ -292,7 +292,7 @@ Difference < 0 AND |Difference| > D26 → Injection Under → Fail + L47
 ```
 M17/M27 진입 조건:
     1. Injection Done (정상 완료)
-    2. Injection Fail (오류 정지)
+    2. Injection NG (오류 정지)
     3. STOP 감지 (사용자 정지)
     4. EMG (비상 정지)
 
@@ -310,10 +310,10 @@ M17/M27 진입 조건:
 | Error | Detection | Action |
 |-------|:---------:|--------|
 | Injection Timeout | 적산 변화 없음 × 시간 초과 | SET L45, All SOL OFF → Exhaust |
-| Injection Over | Actual > Target + Tolerance | SET L46, Fail |
-| Injection Under | Actual < Target - Tolerance | SET L47, Fail (±공차) |
+| Injection Over | Actual > Target + Tolerance | SET L46, NG |
+| Injection Under | Actual < Target - Tolerance | SET L47, NG (±공차) |
 | Gun Coupler OFF | 센서 OFF during injection | 즉시 All SOL OFF, Alarm |
-| High-Speed Fail | Fast Stop 미도달 (Type 1) | Normal만으로 계속 |
+| High-Speed NG | Fast Stop 미도달 (Type 1) | Normal만으로 계속 |
 
 ---
 

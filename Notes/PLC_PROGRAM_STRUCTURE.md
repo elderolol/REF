@@ -134,7 +134,7 @@ Gun Global Index = Line × GunPerLine(D230) + GunLocal
 | **AI L0** | 3ch | — | `ad.csv` (D150~D161) |
 | **AI L1** | 3ch | — | `ad.csv` (D162~D173) |
 | **HSC** | 2ch | — | Flow Meter Pulse × 2 Line |
-| **RS-485** | 1ch | — | Barcode / SCAN |
+| **RS-485** | 1ch | — | Vacuum / Pressure / Temp Sensors |
 
 > 상세 매핑 테이블: `INPUT_OUTPUT_MAP.md` 참조
 
@@ -162,7 +162,7 @@ REF/
 ├── refinj.csv    # 냉매 주입 시퀀스 (고속→저속→정지)
 ├── alarm.csv     # 알람 검출 / 알람 리셋 / 부저 제어
 ├── ad.csv        # 아날로그 입력 처리 (진공도, 온도, 압력)
-├── 485.csv       # RS-485 통신 (바코드, SCAN 데이터 수신)
+├── 485.csv       # RS-485 통신 (진공/압력/온도 센서 데이터 수신)
 └── spc.csv       # 통계 데이터 (사용량 누계, 주입 횟수, 펄스 누계)
 ```
 
@@ -179,7 +179,7 @@ REF/
 | **refinj.csv** | 고속 주입 밸브 ON → 설정량 도달 → 저속 주입 → 목표량 ±공차 도달 → OFF, 펄스 카운트 적산, 주입량 계산 | 주입 스텝 진입 시 |
 | **alarm.csv** | 알람 조건 OR 수집, 알람 래치, 부저 출력, 알람 리셋 처리, 인터락 신호 출력 | Always ON |
 | **ad.csv** | AI Raw → Engineering Unit 변환 (Scaling), 진공도/온도/압력 현재값 D레지스터 갱신 | Always ON |
-| **485.csv** | RS-485 수신 버퍼 → D레지스터 파싱, 바코드 데이터 검증, SCAN 주입량 수신 | Always ON |
+| **485.csv** | RS-485 수신 버퍼 → D레지스터 파싱 (진공/압력/온도 센서) | Always ON |
 | **spc.csv** | 냉매 총 사용량 적산 (32-bit), 주입 횟수 카운트 (16-bit), 펄스 누계 (32-bit), 실주입량/설정량 기록 | 사이클 완료 시 |
 
 ---
@@ -193,7 +193,7 @@ REF/
 
 | Device | 용도 | Retentive |
 |:------:|------|:---------:|
-| **L** | 정전유지 Bit (Done/Fail, 알람 Latch, 운전모드, Line/Gun 선택) | Y (전체 래치) |
+| **L** | 정전유지 Bit (Done/NG, 알람 Latch, 운전모드, Line/Gun 선택) | Y (전체 래치) |
 | **M** | Volatile Bit (Step 상태, Solenoid Coil Image, HMI 버퍼, DI Mirror) | N |
 | **D** | 파라미터 / 설정 / 누계 / 통신 (D0~D299) | Y (전체 래치) |
 | **D** | Scratch / Temp (D300~) | N |
@@ -205,8 +205,8 @@ REF/
 | Range | 용도 |
 |:-----:|------|
 | L0~L9 | System (InitDone, Auto/Manual Mode, Barcode Flag) |
-| L10~L19 | Line 0 Done/Fail (GunVac, UnitVac, VacCheck, Inj, Cycle) |
-| L20~L29 | Line 1 Done/Fail |
+| L10~L19 | Line 0 Done/NG (GunVac, UnitVac, VacCheck, Inj, Cycle) |
+| L20~L29 | Line 1 Done/NG |
 | L30~L3F | 예비 |
 | L40~L4F | Alarm Latch (EMG, Safety, Timeout, Leak, Pressure, Temp...) |
 | L50~L5F | Line 0 Interlock Status |
@@ -389,12 +389,12 @@ L40(EMG Stop)이 ON이면 전체 정지.
 | CSV File | 입력 (Read) | 출력 (Write) | 주요 Mnemonic |
 |---|---|---|---|
 | **idata.csv** | M300~M31F(←input.csv), D270~D276(Config) | M0~M2(System), L0(InitDone), X→M / M→Y 매핑 | LD, OUT, MOV, SET, RST |
-| **gmes.csv** | M10~M28(Step), L10~L29(Done/Fail), M400~M416(HMI), L50~L65(Interlock) | M4C~M4F(Lamp), M10~M28(Step), L10~L29(Done/Fail), L70~L71(Line Sel) | LD=, AND=, OR=, SET, RST, OUT, MOV, CJ, BMOV, FMOV, **CJ**(D270=1→L1 Skip) |
+| **gmes.csv** | M10~M28(Step), L10~L29(Done/NG), M400~M416(HMI), L50~L65(Interlock) | M4C~M4F(Lamp), M10~M28(Step), L10~L29(Done/NG), L70~L71(Line Sel) | LD=, AND=, OR=, SET, RST, OUT, MOV, CJ, BMOV, FMOV, **CJ**(D270=1→L1 Skip) |
 | **setting.csv** | D0~D28(Param L0), D30~D56(Param L1), D60~D115(User×4) | D0~D28, D30~D56, D60~D115 | DMOV, MOV, LD= |
-| **gunvac.csv** | M12/M22(Step), L51/L61(Safety), D2/D32, D22/D50, Vacuum EU(D160/D172) | M31/M41(Vac SOL), T0, L10/L20(Done), L11/L21(Fail) | LD, AND, OUT, MOV, DMOV, LDD<=, SET, RST, TMR |
-| **unitvac.csv** | M13/M23(Step), L51/L61(Safety), D4/D34, D22/D50, Vacuum EU | M31+M32/M41+M42(Vac+Stem), T1, L12/L22(Done), L13/L23(Fail) | LD, AND, OUT, MOV, DMOV, LDD<=, SET, RST, TMR |
-| **vacchec.csv** | M14/M24(Step), D6/D36, D24/D52, Vacuum EU | T2, L14/L24(Done), L15/L25(Fail), D160/D172(ΔP) | LD, AND, MOV, DMOV, D-, LDD<=, SET, RST, TMR |
-| **refinj.csv** | M15~M16/M25~M26(Step), D8~D10/D38~D40, D60~D115(User), Gun Type(D62/D76/D90/D104) | M34~M3B/M44~M4B(Valves), T4/T5/T6, L16/L26(Done), L17/L27(Fail), D124(Disp), M60~M63(Active) | LD, AND, D+, D-, D*, D/, LDD=, LDD<=, LDD>=, MOV, DMOV, SET, RST, TMR, **CJ**(Type 분기) |
+| **gunvac.csv** | M12/M22(Step), L51/L61(Safety), D2/D32, D22/D50, Vacuum EU(D160/D172) | M31/M41(Vac SOL), T0, L10/L20(Done), L11/L21(NG) | LD, AND, OUT, MOV, DMOV, LDD<=, SET, RST, TMR |
+| **unitvac.csv** | M13/M23(Step), L51/L61(Safety), D4/D34, D22/D50, Vacuum EU | M31+M32/M41+M42(Vac+Stem), T1, L12/L22(Done), L13/L23(NG) | LD, AND, OUT, MOV, DMOV, LDD<=, SET, RST, TMR |
+| **vacchec.csv** | M14/M24(Step), D6/D36, D24/D52, Vacuum EU | T2, L14/L24(Done), L15/L25(NG), D160/D172(ΔP) | LD, AND, MOV, DMOV, D-, LDD<=, SET, RST, TMR |
+| **refinj.csv** | M15~M16/M25~M26(Step), D8~D10/D38~D40, D60~D115(User), Gun Type(D62/D76/D90/D104) | M34~M3B/M44~M4B(Valves), T4/T5/T6, L16/L26(Done), L17/L27(NG), D124(Disp), M60~M63(Active) | LD, AND, D+, D-, D*, D/, LDD=, LDD<=, LDD>=, MOV, DMOV, SET, RST, TMR, **CJ**(Type 분기) |
 | **alarm.csv** | L40~L4F(Alarm latch), M403(Reset), M404(Buzzer Stop) | M4C(Buzzer), M4E/M4F(Lamp R/Y), L40~L4F | LD, OR, SET, RST, OUT, TMR |
 | **ad.csv** | D150~D173(2 Line Raw) | D152~D173(EU), D138~D148(Display Mirror) | LD, MOV, DMOV, D*, D/, D+, D- |
 | **485.csv** | RS-485 Buffer | D180~D269(2 Line PC/Work), M500~M504 | LD, MOV, AND=, SET, RST |

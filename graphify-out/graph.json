@@ -134,7 +134,7 @@
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L99",
-      "community": 15,
+      "community": 14,
       "norm_label": "4. universal quoting model (the most error-prone part)",
       "id": "notes_gx_works2_il_spec_4_universal_quoting_model_the_most_error_prone_part"
     },
@@ -143,7 +143,7 @@
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L103",
-      "community": 15,
+      "community": 14,
       "norm_label": "4-1. rule",
       "id": "notes_gx_works2_il_spec_4_1_rule"
     },
@@ -152,7 +152,7 @@
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L122",
-      "community": 15,
+      "community": 14,
       "norm_label": "4-2. worked example \u2014 type b row `ld m1000` at step 0",
       "id": "notes_gx_works2_il_spec_4_2_worked_example_type_b_row_ld_m1000_at_step_0"
     },
@@ -161,7 +161,7 @@
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L137",
-      "community": 15,
+      "community": 14,
       "norm_label": "code:block4 (\"0<tab>\"\"\"\"<tab>\"\"ld\"\"<tab>\"\"m1000\"\"<tab>\"\"\"\"<tab>\"\"\"\"<tab>\")",
       "id": "notes_gx_works2_il_spec_codeblock_4"
     },
@@ -170,7 +170,7 @@
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L143",
-      "community": 15,
+      "community": 14,
       "norm_label": "4-3. parsing algorithm (recommended)",
       "id": "notes_gx_works2_il_spec_4_3_parsing_algorithm_recommended"
     },
@@ -179,7 +179,7 @@
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L145",
-      "community": 15,
+      "community": 14,
       "norm_label": "code:python (def decode_record(raw: str) -> list[str]:)",
       "id": "notes_gx_works2_il_spec_codeblock_5"
     },
@@ -188,7 +188,7 @@
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L169",
-      "community": 15,
+      "community": 14,
       "norm_label": "4-4. generating (encoding) algorithm",
       "id": "notes_gx_works2_il_spec_4_4_generating_encoding_algorithm"
     },
@@ -197,7 +197,7 @@
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L171",
-      "community": 15,
+      "community": 14,
       "norm_label": "code:python (def encode_record(fields: list[str]) -> str:)",
       "id": "notes_gx_works2_il_spec_codeblock_6"
     },
@@ -278,7 +278,7 @@
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L247",
-      "community": 14,
+      "community": 15,
       "norm_label": "6. instruction mnemonics",
       "id": "notes_gx_works2_il_spec_6_instruction_mnemonics"
     },
@@ -287,7 +287,7 @@
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L251",
-      "community": 14,
+      "community": 19,
       "norm_label": "6-1. sequence instructions (confirmed in main.csv + melsec manual)",
       "id": "notes_gx_works2_il_spec_6_1_sequence_instructions_confirmed_in_main_csv_melsec_manual"
     },
@@ -296,7 +296,7 @@
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L253",
-      "community": 14,
+      "community": 19,
       "norm_label": "contact instructions (load / and / or)",
       "id": "notes_gx_works2_il_spec_contact_instructions_load_and_or"
     },
@@ -305,7 +305,7 @@
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L276",
-      "community": 14,
+      "community": 19,
       "norm_label": "association instructions",
       "id": "notes_gx_works2_il_spec_association_instructions"
     },
@@ -314,7 +314,7 @@
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L287",
-      "community": 14,
+      "community": 19,
       "norm_label": "output instructions",
       "id": "notes_gx_works2_il_spec_output_instructions"
     },
@@ -323,7 +323,7 @@
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L298",
-      "community": 14,
+      "community": 19,
       "norm_label": "shift / master control / termination",
       "id": "notes_gx_works2_il_spec_shift_master_control_termination"
     },
@@ -332,7 +332,7 @@
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L314",
-      "community": 20,
+      "community": 15,
       "norm_label": "6-2. basic instructions (confirmed in main.csv + melsec manual)",
       "id": "notes_gx_works2_il_spec_6_2_basic_instructions_confirmed_in_main_csv_melsec_manual"
     },
@@ -341,7 +341,7 @@
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L316",
-      "community": 20,
+      "community": 15,
       "norm_label": "comparison instructions",
       "id": "notes_gx_works2_il_spec_comparison_instructions"
     },
@@ -350,7 +350,7 @@
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L336",
-      "community": 20,
+      "community": 15,
       "norm_label": "transfer / arithmetic / conversion instructions",
       "id": "notes_gx_works2_il_spec_transfer_arithmetic_conversion_instructions"
     },
@@ -359,7 +359,7 @@
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L375",
-      "community": 20,
+      "community": 15,
       "norm_label": "program control instructions",
       "id": "notes_gx_works2_il_spec_program_control_instructions"
     },
@@ -368,7 +368,7 @@
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L384",
-      "community": 14,
+      "community": 15,
       "norm_label": "6-3. notation rules",
       "id": "notes_gx_works2_il_spec_6_3_notation_rules"
     },
@@ -377,7 +377,7 @@
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L401",
-      "community": 14,
+      "community": 15,
       "norm_label": "7. device / operand notation",
       "id": "notes_gx_works2_il_spec_7_device_operand_notation"
     },
@@ -386,7 +386,7 @@
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L403",
-      "community": 14,
+      "community": 15,
       "norm_label": "7-1. observed device prefixes",
       "id": "notes_gx_works2_il_spec_7_1_observed_device_prefixes"
     },
@@ -575,7 +575,7 @@
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L626",
-      "community": 19,
+      "community": 20,
       "norm_label": "14. official manual reference & list mode format",
       "id": "notes_gx_works2_il_spec_14_official_manual_reference_list_mode_format"
     },
@@ -584,7 +584,7 @@
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L630",
-      "community": 19,
+      "community": 20,
       "norm_label": "list mode (il) column mapping",
       "id": "notes_gx_works2_il_spec_list_mode_il_column_mapping"
     },
@@ -593,7 +593,7 @@
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L634",
-      "community": 19,
+      "community": 20,
       "norm_label": "code:block20 ([list mode])",
       "id": "notes_gx_works2_il_spec_codeblock_20"
     },
@@ -602,7 +602,7 @@
       "file_type": "document",
       "source_file": "Notes/GX_WORKS2_IL_Spec.md",
       "source_location": "L654",
-      "community": 19,
+      "community": 20,
       "norm_label": "extended instruction set",
       "id": "notes_gx_works2_il_spec_extended_instruction_set"
     },
@@ -6428,8 +6428,8 @@
       "source_location": "L407",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "notes_gx_works2_il_spec_7_device_operand_notation",
-      "target": "notes_gx_works2_il_spec_6_3_notation_rules"
+      "source": "notes_gx_works2_il_spec_6_3_notation_rules",
+      "target": "notes_gx_works2_il_spec_7_device_operand_notation"
     },
     {
       "relation": "contains",
@@ -6758,8 +6758,8 @@
       "source_location": "L62",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "notes_plc_program_structure_codeblock_2",
-      "target": "notes_plc_program_structure_0_5_gun_index_\uacf5\uc2dd"
+      "source": "notes_plc_program_structure_0_5_gun_index_\uacf5\uc2dd",
+      "target": "notes_plc_program_structure_codeblock_2"
     },
     {
       "relation": "contains",
@@ -7008,8 +7008,8 @@
       "source_location": "L1097",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "notes_plc_program_structure_5_4_vacuum_check",
-      "target": "notes_plc_program_structure_codeblock_4"
+      "source": "notes_plc_program_structure_codeblock_4",
+      "target": "notes_plc_program_structure_5_4_vacuum_check"
     },
     {
       "relation": "contains",
@@ -7098,8 +7098,8 @@
       "source_location": "L10",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "doc_hmi_spec",
-      "target": "notes_refriger_charging_machine_1_operation_screen"
+      "source": "notes_refriger_charging_machine_1_operation_screen",
+      "target": "doc_hmi_spec"
     },
     {
       "relation": "contains",
@@ -7138,8 +7138,8 @@
       "source_location": "L76",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "doc_hmi_spec",
-      "target": "notes_refriger_charging_machine_2_parameter_setting_screen"
+      "source": "notes_refriger_charging_machine_2_parameter_setting_screen",
+      "target": "doc_hmi_spec"
     },
     {
       "relation": "contains",
@@ -7148,8 +7148,8 @@
       "source_location": "L97",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "doc_hmi_spec",
-      "target": "notes_refriger_charging_machine_3_user_setting_screen_per_injection_gun"
+      "source": "notes_refriger_charging_machine_3_user_setting_screen_per_injection_gun",
+      "target": "doc_hmi_spec"
     },
     {
       "relation": "contains",
@@ -7158,8 +7158,8 @@
       "source_location": "L111",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "doc_hmi_spec",
-      "target": "notes_refriger_charging_machine_4_safety_plc_reset"
+      "source": "notes_refriger_charging_machine_4_safety_plc_reset",
+      "target": "doc_hmi_spec"
     },
     {
       "relation": "contains",
@@ -7168,8 +7168,8 @@
       "source_location": "L120",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "doc_hmi_spec",
-      "target": "notes_refriger_charging_machine_5_vacuum_pump_operation"
+      "source": "notes_refriger_charging_machine_5_vacuum_pump_operation",
+      "target": "doc_hmi_spec"
     },
     {
       "relation": "contains",
@@ -7178,8 +7178,8 @@
       "source_location": "L127",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "doc_hmi_spec",
-      "target": "notes_refriger_charging_machine_6_screen_flow_conceptual"
+      "source": "notes_refriger_charging_machine_6_screen_flow_conceptual",
+      "target": "doc_hmi_spec"
     },
     {
       "relation": "contains",
@@ -7198,8 +7198,8 @@
       "source_location": "L142",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "doc_hmi_spec",
-      "target": "notes_refriger_charging_machine_7_explosion_proof_non_explosion_proof_configuration"
+      "source": "notes_refriger_charging_machine_7_explosion_proof_non_explosion_proof_configuration",
+      "target": "doc_hmi_spec"
     },
     {
       "relation": "contains",
@@ -7438,8 +7438,8 @@
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
       "source_location": "\u00a7header",
       "weight": 1.0,
-      "source": "N01",
-      "target": "mitsubishi_q03udv"
+      "source": "mitsubishi_q03udv",
+      "target": "N01"
     },
     {
       "relation": "documents",
@@ -7568,8 +7568,8 @@
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "line 1",
       "weight": 1.0,
-      "source": "N01",
-      "target": "plc_program_structure"
+      "source": "plc_program_structure",
+      "target": "N01"
     },
     {
       "relation": "references",
@@ -7708,8 +7708,8 @@
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
       "source_location": "\u00a71",
       "weight": 1.0,
-      "source": "N01",
-      "target": "hmi_specification"
+      "source": "hmi_specification",
+      "target": "N01"
     },
     {
       "relation": "implements",
@@ -7758,8 +7758,8 @@
       "source_file": "Notes/DESIGN_REPORT_A3.html",
       "source_location": null,
       "weight": 1.0,
-      "source": "N01",
-      "target": "design_report_a3"
+      "source": "design_report_a3",
+      "target": "N01"
     },
     {
       "relation": "conceptually_related_to",
@@ -7768,8 +7768,8 @@
       "source_file": "Notes/REF_DOCUMENT.md",
       "source_location": null,
       "weight": 1.0,
-      "source": "N01",
-      "target": "mc_26074_project"
+      "source": "mc_26074_project",
+      "target": "N01"
     },
     {
       "relation": "defines",
@@ -7898,8 +7898,8 @@
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "section 3-1",
       "weight": 1.0,
-      "source": "conc_hmibutton_plc_mapping",
-      "target": "device_map_m_relay"
+      "source": "device_map_m_relay",
+      "target": "conc_hmibutton_plc_mapping"
     },
     {
       "relation": "conceptually_related_to",
@@ -7998,8 +7998,8 @@
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "section 3-2",
       "weight": 0.85,
-      "source": "conc_device_map_d_register",
-      "target": "analog_processing"
+      "source": "analog_processing",
+      "target": "conc_device_map_d_register"
     },
     {
       "relation": "part_of",
@@ -8028,8 +8028,8 @@
       "source_file": "Notes/PLC_PROGRAM_STRUCTURE.md",
       "source_location": "\u00a70",
       "weight": 1.0,
-      "source": "conc_line_independence",
-      "target": "config_parameters_d228_d230_d232"
+      "source": "config_parameters_d228_d230_d232",
+      "target": "conc_line_independence"
     },
     {
       "relation": "conceptually_related_to",
@@ -8128,8 +8128,8 @@
       "source_file": "Notes/DESIGN_REPORT_A3.html",
       "source_location": "line 51",
       "weight": 1.0,
-      "source": "N01",
-      "target": "doc_design_report_a3"
+      "source": "doc_design_report_a3",
+      "target": "N01"
     },
     {
       "relation": "references",
@@ -8158,8 +8158,8 @@
       "source_location": "L1",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "N01",
-      "target": "doc_hmi_spec"
+      "source": "doc_hmi_spec",
+      "target": "N01"
     },
     {
       "relation": "semantically_similar_to",
@@ -8168,8 +8168,8 @@
       "source_file": ".opencode/memory/project.md",
       "source_location": null,
       "weight": 1.0,
-      "source": "project_refriger_charging_machine",
-      "target": "doc_hmi_spec"
+      "source": "doc_hmi_spec",
+      "target": "project_refriger_charging_machine"
     },
     {
       "relation": "references",
@@ -8678,8 +8678,8 @@
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
       "source_location": "\u00a71-3",
       "weight": 1.0,
-      "source": "N04",
-      "target": "recm_user_setting_screen"
+      "source": "recm_user_setting_screen",
+      "target": "N04"
     },
     {
       "relation": "references",
@@ -8698,8 +8698,8 @@
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
       "source_location": "\u00a76",
       "weight": 1.0,
-      "source": "N04",
-      "target": "recm_screen_flow"
+      "source": "recm_screen_flow",
+      "target": "N04"
     },
     {
       "relation": "references",
@@ -8708,8 +8708,8 @@
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
       "source_location": "\u00a76",
       "weight": 1.0,
-      "source": "N05",
-      "target": "recm_screen_flow"
+      "source": "recm_screen_flow",
+      "target": "N05"
     },
     {
       "relation": "references",
@@ -8718,8 +8718,8 @@
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
       "source_location": "\u00a76",
       "weight": 1.0,
-      "source": "N07",
-      "target": "recm_screen_flow"
+      "source": "recm_screen_flow",
+      "target": "N07"
     },
     {
       "relation": "conceptually_related_to",
@@ -8808,8 +8808,8 @@
       "source_file": "Notes/REFRIGER_CHARGING_MACHINE.md",
       "source_location": "\u00a77-1",
       "weight": 1.0,
-      "source": "N07",
-      "target": "recm_door_open_alarm_relay"
+      "source": "recm_door_open_alarm_relay",
+      "target": "N07"
     },
     {
       "relation": "rationale_for",
@@ -9686,8 +9686,8 @@
       "relation": "duplicate_of",
       "confidence": "INFERRED",
       "confidence_score": 0.85,
-      "source": "NAV_ALARM_RESET",
-      "target": "n2l2g_alarm_reset_right"
+      "source": "n2l2g_alarm_reset_right",
+      "target": "NAV_ALARM_RESET"
     },
     {
       "relation": "duplicate_of",
@@ -9833,50 +9833,50 @@
       "relation": "delivers",
       "confidence": "INFERRED",
       "confidence_score": 0.95,
-      "source": "GUN_A",
-      "target": "n2l2g_line1_refrigerant_injection_amount"
+      "source": "n2l2g_line1_refrigerant_injection_amount",
+      "target": "GUN_A"
     },
     {
       "relation": "target_for",
       "confidence": "INFERRED",
       "confidence_score": 0.95,
-      "source": "L1_INJ_SET_AMOUNT",
-      "target": "n2l2g_line1_refrigerant_injection_amount"
+      "source": "n2l2g_line1_refrigerant_injection_amount",
+      "target": "L1_INJ_SET_AMOUNT"
     },
     {
       "relation": "measures",
       "confidence": "INFERRED",
       "confidence_score": 0.85,
-      "source": "L1_CHARGING_PULSE",
-      "target": "n2l2g_line1_refrigerant_injection_amount"
+      "source": "n2l2g_line1_refrigerant_injection_amount",
+      "target": "L1_CHARGING_PULSE"
     },
     {
       "relation": "has_display",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source": "n2l2g_line2",
-      "target": "n2l2g_line1_refrigerant_injection_amount"
+      "source": "n2l2g_line1_refrigerant_injection_amount",
+      "target": "n2l2g_line2"
     },
     {
       "relation": "has_display",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source": "n2l2g_line2",
-      "target": "n2l2g_line1_vacuum_degree"
+      "source": "n2l2g_line1_vacuum_degree",
+      "target": "n2l2g_line2"
     },
     {
       "relation": "affects",
       "confidence": "INFERRED",
       "confidence_score": 0.95,
-      "source": "n2l2g_line2_vacuum_pump",
-      "target": "n2l2g_line1_vacuum_degree"
+      "source": "n2l2g_line1_vacuum_degree",
+      "target": "n2l2g_line2_vacuum_pump"
     },
     {
       "relation": "inputs_to",
       "confidence": "INFERRED",
       "confidence_score": 0.85,
-      "source": "L1_SCAN_INFO",
-      "target": "n2l2g_line1_barcode_use"
+      "source": "n2l2g_line1_barcode_use",
+      "target": "L1_SCAN_INFO"
     },
     {
       "relation": "uses_refrigerant",
@@ -9987,8 +9987,8 @@
       "relation": "inputs_to",
       "confidence": "INFERRED",
       "confidence_score": 0.85,
-      "source": "L1_SCAN_INFO",
-      "target": "n2l2g_line2_barcode_use"
+      "source": "n2l2g_line2_barcode_use",
+      "target": "L1_SCAN_INFO"
     },
     {
       "relation": "identifies",
@@ -10247,8 +10247,8 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "label": "Reset active alarms",
-      "source": "2LINE4GUN_MACHINE",
-      "target": "NAV_ALARM_RESET"
+      "source": "NAV_ALARM_RESET",
+      "target": "2LINE4GUN_MACHINE"
     },
     {
       "relation": "interlocks_with",
@@ -11025,40 +11025,40 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Notes/CSV_FUNC_gmes.md",
-      "source": "notes_csv_func_gmes_gmes",
-      "target": "notes_csv_func_idata_idata"
+      "source": "notes_csv_func_idata_idata",
+      "target": "notes_csv_func_gmes_gmes"
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Notes/CSV_FUNC_gunvac.md",
-      "source": "notes_csv_func_gunvac_gunvac",
-      "target": "notes_csv_func_idata_idata"
+      "source": "notes_csv_func_idata_idata",
+      "target": "notes_csv_func_gunvac_gunvac"
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Notes/CSV_FUNC_unitvac.md",
-      "source": "notes_csv_func_unitvac_unitvac",
-      "target": "notes_csv_func_idata_idata"
+      "source": "notes_csv_func_idata_idata",
+      "target": "notes_csv_func_unitvac_unitvac"
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Notes/CSV_FUNC_vacchec.md",
-      "source": "notes_csv_func_vacchec_vacchec",
-      "target": "notes_csv_func_idata_idata"
+      "source": "notes_csv_func_idata_idata",
+      "target": "notes_csv_func_vacchec_vacchec"
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Notes/CSV_FUNC_refinj.md",
-      "source": "notes_csv_func_refinj_refinj",
-      "target": "notes_csv_func_idata_idata"
+      "source": "notes_csv_func_idata_idata",
+      "target": "notes_csv_func_refinj_refinj"
     },
     {
       "relation": "implements",
@@ -11105,24 +11105,24 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Notes/CSV_FUNC_gunvac.md",
-      "source": "notes_csv_func_gunvac_gunvac",
-      "target": "notes_csv_func_gmes_gmes"
+      "source": "notes_csv_func_gmes_gmes",
+      "target": "notes_csv_func_gunvac_gunvac"
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Notes/CSV_FUNC_unitvac.md",
-      "source": "notes_csv_func_unitvac_unitvac",
-      "target": "notes_csv_func_gmes_gmes"
+      "source": "notes_csv_func_gmes_gmes",
+      "target": "notes_csv_func_unitvac_unitvac"
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Notes/CSV_FUNC_vacchec.md",
-      "source": "notes_csv_func_vacchec_vacchec",
-      "target": "notes_csv_func_gmes_gmes"
+      "source": "notes_csv_func_gmes_gmes",
+      "target": "notes_csv_func_vacchec_vacchec"
     },
     {
       "relation": "calls",
@@ -11257,16 +11257,16 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Notes/CSV_FUNC_alarm.md",
-      "source": "notes_csv_func_alarm_output_interlock",
-      "target": "notes_csv_func_gmes_gmes"
+      "source": "notes_csv_func_gmes_gmes",
+      "target": "notes_csv_func_alarm_output_interlock"
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Notes/CSV_FUNC_alarm.md",
-      "source": "notes_csv_func_alarm_alarm",
-      "target": "notes_csv_func_gunvac_gunvac"
+      "source": "notes_csv_func_gunvac_gunvac",
+      "target": "notes_csv_func_alarm_alarm"
     },
     {
       "relation": "references",
@@ -11289,8 +11289,8 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Notes/CSV_FUNC_alarm.md",
-      "source": "notes_csv_func_alarm_alarm",
-      "target": "notes_csv_func_unitvac_unitvac"
+      "source": "notes_csv_func_unitvac_unitvac",
+      "target": "notes_csv_func_alarm_alarm"
     },
     {
       "relation": "references",
@@ -11313,8 +11313,8 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Notes/CSV_FUNC_alarm.md",
-      "source": "notes_csv_func_alarm_alarm",
-      "target": "notes_csv_func_vacchec_vacchec"
+      "source": "notes_csv_func_vacchec_vacchec",
+      "target": "notes_csv_func_alarm_alarm"
     },
     {
       "relation": "references",
@@ -11337,8 +11337,8 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Notes/OPERATION_SCENARIO.md",
-      "source": "notes_operation_scenario_explosion_proof",
-      "target": "notes_csv_func_vacchec_vacchec"
+      "source": "notes_csv_func_vacchec_vacchec",
+      "target": "notes_operation_scenario_explosion_proof"
     },
     {
       "relation": "references",
@@ -11361,16 +11361,16 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Notes/CSV_FUNC_alarm.md",
-      "source": "notes_csv_func_alarm_alarm",
-      "target": "notes_csv_func_refinj_refinj"
+      "source": "notes_csv_func_refinj_refinj",
+      "target": "notes_csv_func_alarm_alarm"
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Notes/CSV_FUNC_spc.md",
-      "source": "notes_csv_func_spc_spc",
-      "target": "notes_csv_func_refinj_refinj"
+      "source": "notes_csv_func_refinj_refinj",
+      "target": "notes_csv_func_spc_spc"
     },
     {
       "relation": "implements",
@@ -11841,48 +11841,48 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Notes/CSV_FUNC_alarm.md",
-      "source": "notes_csv_func_alarm_alarm_latch",
-      "target": "notes_device_map_l_device"
+      "source": "notes_device_map_l_device",
+      "target": "notes_csv_func_alarm_alarm_latch"
     },
     {
       "relation": "shares_data_with",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Notes/CSV_FUNC_gmes.md",
-      "source": "notes_csv_func_gmes_done_fail",
-      "target": "notes_device_map_l_device"
+      "source": "notes_device_map_l_device",
+      "target": "notes_csv_func_gmes_done_fail"
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Notes/CSV_FUNC_485.md",
-      "source": "notes_csv_func_485_shared_eu_space",
-      "target": "notes_device_map_sensor_type_arch"
+      "source": "notes_device_map_sensor_type_arch",
+      "target": "notes_csv_func_485_shared_eu_space"
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Notes/CSV_FUNC_refinj.md",
-      "source": "notes_csv_func_refinj_volume_calc",
-      "target": "notes_device_map_hsc_params"
+      "source": "notes_device_map_hsc_params",
+      "target": "notes_csv_func_refinj_volume_calc"
     },
     {
       "relation": "shares_data_with",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Notes/CSV_FUNC_gmes.md",
-      "source": "notes_csv_func_gmes_result_code",
-      "target": "notes_device_map_pc_comm_area"
+      "source": "notes_device_map_pc_comm_area",
+      "target": "notes_csv_func_gmes_result_code"
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Notes/CSV_FUNC_idata.md",
-      "source": "notes_csv_func_idata_config_validation",
-      "target": "notes_device_map_d270_d272_d276"
+      "source": "notes_device_map_d270_d272_d276",
+      "target": "notes_csv_func_idata_config_validation"
     },
     {
       "relation": "semantically_similar_to",
@@ -11937,8 +11937,8 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Notes/CSV_FUNC_refinj.md",
-      "source": "notes_csv_func_refinj_gas_exhaust",
-      "target": "notes_csv_func_refinj_tolerance_check"
+      "source": "notes_csv_func_refinj_tolerance_check",
+      "target": "notes_csv_func_refinj_gas_exhaust"
     },
     {
       "relation": "shares_data_with",
@@ -11953,16 +11953,16 @@
       "confidence": "INFERRED",
       "confidence_score": 0.95,
       "source_file": "Notes/CSV_FUNC_spc.md",
-      "source": "notes_csv_func_spc_bombe_alarm",
-      "target": "notes_csv_func_alarm_alarm_latch"
+      "source": "notes_csv_func_alarm_alarm_latch",
+      "target": "notes_csv_func_spc_bombe_alarm"
     },
     {
       "relation": "shares_data_with",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Notes/CSV_FUNC_gmes.md",
-      "source": "notes_csv_func_gmes_done_fail",
-      "target": "notes_csv_func_alarm_alarm_latch"
+      "source": "notes_csv_func_alarm_alarm_latch",
+      "target": "notes_csv_func_gmes_done_fail"
     },
     {
       "relation": "references",
@@ -12001,10 +12001,10 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Notes/CSV_FUNC_gmes.md",
-      "source": "notes_csv_func_gmes_result_code",
-      "target": "notes_csv_func_gmes_done_fail"
+      "source": "notes_csv_func_gmes_done_fail",
+      "target": "notes_csv_func_gmes_result_code"
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "dc1bb46847288199de9d832fd9ded533a53a634a"
+  "built_at_commit": "9388d69ebff8dd29d58e38d618e2e0c6f7012895"
 }
