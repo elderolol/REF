@@ -7,6 +7,10 @@
 - Work sequentially, one task at a time. Never dispatch subagents or background tasks.
 - All work must be done directly in the main session without delegation.
 
+## Project Conventions
+- `src/` — source code files only.
+- Reference/docs content uses `.md` or `.txt` extensions only. Never put documentation text in source code files.
+
 ## graphify
 
 This project has a knowledge graph at graphify-out/ with god nodes, community structure, and cross-file relationships.
