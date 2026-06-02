@@ -1,0 +1,1759 @@
+{
+  "meta": {
+    "source_file": "refinj.csv",
+    "cpu": "Q03UDV",
+    "total_steps": 138,
+    "block_count": 10,
+    "generated": "2026-06-02"
+  },
+  "blocks": [
+    {
+      "id": 1,
+      "name": "L0 REFRIG FAST",
+      "step_start": 0,
+      "step_end": 25,
+      "condition": [
+        {
+          "step": 1,
+          "instruction": "LD",
+          "device": "M21"
+        },
+        {
+          "step": 5,
+          "instruction": "LD",
+          "device": "M21"
+        },
+        {
+          "step": 6,
+          "instruction": "LD=",
+          "device": "D62"
+        },
+        {
+          "step": 8,
+          "instruction": "LDD>=",
+          "device": "D124"
+        },
+        {
+          "step": 12,
+          "instruction": "LD",
+          "device": "M21"
+        },
+        {
+          "step": 13,
+          "instruction": "LD=",
+          "device": "D62"
+        },
+        {
+          "step": 15,
+          "instruction": "LDD>=",
+          "device": "D124"
+        },
+        {
+          "step": 20,
+          "instruction": "LD",
+          "device": "M21"
+        }
+      ],
+      "actions": [
+        {
+          "step": 2,
+          "instruction": "SET",
+          "device": "M52"
+        },
+        {
+          "step": 3,
+          "instruction": "SET",
+          "device": "M96"
+        },
+        {
+          "step": 4,
+          "instruction": "OUT",
+          "device": "T4"
+        },
+        {
+          "step": 7,
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "step": 9,
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "step": 10,
+          "instruction": "RST",
+          "device": "M52"
+        },
+        {
+          "step": 11,
+          "instruction": "SET",
+          "device": "M22"
+        },
+        {
+          "step": 14,
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "step": 16,
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "step": 17,
+          "instruction": "RST",
+          "device": "M52"
+        },
+        {
+          "step": 18,
+          "instruction": "RST",
+          "device": "M96"
+        },
+        {
+          "step": 19,
+          "instruction": "SET",
+          "device": "M23"
+        },
+        {
+          "step": 21,
+          "instruction": "AND",
+          "device": "T4"
+        },
+        {
+          "step": 22,
+          "instruction": "RST",
+          "device": "M52"
+        },
+        {
+          "step": 23,
+          "instruction": "RST",
+          "device": "M96"
+        },
+        {
+          "step": 24,
+          "instruction": "SET",
+          "device": "M23"
+        },
+        {
+          "step": 25,
+          "instruction": "SET",
+          "device": "L69"
+        }
+      ],
+      "jumps": []
+    },
+    {
+      "id": 2,
+      "name": "L0 REFRIG NORMAL",
+      "step_start": 26,
+      "step_end": 35,
+      "condition": [
+        {
+          "step": 27,
+          "instruction": "LD",
+          "device": "M22"
+        },
+        {
+          "step": 30,
+          "instruction": "LD",
+          "device": "M22"
+        },
+        {
+          "step": 31,
+          "instruction": "LDD>=",
+          "device": "D124"
+        }
+      ],
+      "actions": [
+        {
+          "step": 28,
+          "instruction": "SET",
+          "device": "M53"
+        },
+        {
+          "step": 29,
+          "instruction": "OUT",
+          "device": "T5"
+        },
+        {
+          "step": 32,
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "step": 33,
+          "instruction": "RST",
+          "device": "M53"
+        },
+        {
+          "step": 34,
+          "instruction": "RST",
+          "device": "M96"
+        },
+        {
+          "step": 35,
+          "instruction": "SET",
+          "device": "M23"
+        }
+      ],
+      "jumps": []
+    },
+    {
+      "id": 3,
+      "name": "L0 OIL FAST",
+      "step_start": 36,
+      "step_end": 51,
+      "condition": [
+        {
+          "step": 37,
+          "instruction": "LD",
+          "device": "M25"
+        },
+        {
+          "step": 40,
+          "instruction": "LD",
+          "device": "M25"
+        },
+        {
+          "step": 41,
+          "instruction": "LD=",
+          "device": "D62"
+        },
+        {
+          "step": 43,
+          "instruction": "LDD>=",
+          "device": "D124"
+        },
+        {
+          "step": 47,
+          "instruction": "LD",
+          "device": "M25"
+        },
+        {
+          "step": 48,
+          "instruction": "LDD>=",
+          "device": "D124"
+        }
+      ],
+      "actions": [
+        {
+          "step": 38,
+          "instruction": "SET",
+          "device": "M54"
+        },
+        {
+          "step": 39,
+          "instruction": "OUT",
+          "device": "T6"
+        },
+        {
+          "step": 42,
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "step": 44,
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "step": 45,
+          "instruction": "RST",
+          "device": "M54"
+        },
+        {
+          "step": 46,
+          "instruction": "SET",
+          "device": "M26"
+        },
+        {
+          "step": 49,
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "step": 50,
+          "instruction": "RST",
+          "device": "M54"
+        },
+        {
+          "step": 51,
+          "instruction": "SET",
+          "device": "M21"
+        }
+      ],
+      "jumps": []
+    },
+    {
+      "id": 4,
+      "name": "L0 OIL NORMAL",
+      "step_start": 52,
+      "step_end": 59,
+      "condition": [
+        {
+          "step": 53,
+          "instruction": "LD",
+          "device": "M26"
+        },
+        {
+          "step": 55,
+          "instruction": "LD",
+          "device": "M26"
+        },
+        {
+          "step": 56,
+          "instruction": "LDD>=",
+          "device": "D124"
+        }
+      ],
+      "actions": [
+        {
+          "step": 54,
+          "instruction": "SET",
+          "device": "M55"
+        },
+        {
+          "step": 57,
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "step": 58,
+          "instruction": "RST",
+          "device": "M55"
+        },
+        {
+          "step": 59,
+          "instruction": "SET",
+          "device": "M21"
+        }
+      ],
+      "jumps": []
+    },
+    {
+      "id": 5,
+      "name": "L0 EXHAUST",
+      "step_start": 60,
+      "step_end": 68,
+      "condition": [
+        {
+          "step": 61,
+          "instruction": "LD",
+          "device": "M23"
+        },
+        {
+          "step": 64,
+          "instruction": "LD",
+          "device": "M23"
+        }
+      ],
+      "actions": [
+        {
+          "step": 62,
+          "instruction": "SET",
+          "device": "M51"
+        },
+        {
+          "step": 63,
+          "instruction": "OUT",
+          "device": "T3"
+        },
+        {
+          "step": 65,
+          "instruction": "AND",
+          "device": "T3"
+        },
+        {
+          "step": 66,
+          "instruction": "RST",
+          "device": "M51"
+        },
+        {
+          "step": 67,
+          "instruction": "SET",
+          "device": "L22"
+        },
+        {
+          "step": 68,
+          "instruction": "RST",
+          "device": "M23"
+        }
+      ],
+      "jumps": []
+    },
+    {
+      "id": 6,
+      "name": "L1 REFRIG FAST",
+      "step_start": 69,
+      "step_end": 94,
+      "condition": [
+        {
+          "step": 70,
+          "instruction": "LD",
+          "device": "M37"
+        },
+        {
+          "step": 74,
+          "instruction": "LD",
+          "device": "M37"
+        },
+        {
+          "step": 75,
+          "instruction": "LD=",
+          "device": "D62"
+        },
+        {
+          "step": 77,
+          "instruction": "LDD>=",
+          "device": "D124"
+        },
+        {
+          "step": 81,
+          "instruction": "LD",
+          "device": "M37"
+        },
+        {
+          "step": 82,
+          "instruction": "LD=",
+          "device": "D62"
+        },
+        {
+          "step": 84,
+          "instruction": "LDD>=",
+          "device": "D124"
+        },
+        {
+          "step": 89,
+          "instruction": "LD",
+          "device": "M37"
+        }
+      ],
+      "actions": [
+        {
+          "step": 71,
+          "instruction": "SET",
+          "device": "M68"
+        },
+        {
+          "step": 72,
+          "instruction": "SET",
+          "device": "M98"
+        },
+        {
+          "step": 73,
+          "instruction": "OUT",
+          "device": "T4"
+        },
+        {
+          "step": 76,
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "step": 78,
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "step": 79,
+          "instruction": "RST",
+          "device": "M68"
+        },
+        {
+          "step": 80,
+          "instruction": "SET",
+          "device": "M38"
+        },
+        {
+          "step": 83,
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "step": 85,
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "step": 86,
+          "instruction": "RST",
+          "device": "M68"
+        },
+        {
+          "step": 87,
+          "instruction": "RST",
+          "device": "M98"
+        },
+        {
+          "step": 88,
+          "instruction": "SET",
+          "device": "M39"
+        },
+        {
+          "step": 90,
+          "instruction": "AND",
+          "device": "T4"
+        },
+        {
+          "step": 91,
+          "instruction": "RST",
+          "device": "M68"
+        },
+        {
+          "step": 92,
+          "instruction": "RST",
+          "device": "M98"
+        },
+        {
+          "step": 93,
+          "instruction": "SET",
+          "device": "M39"
+        },
+        {
+          "step": 94,
+          "instruction": "SET",
+          "device": "L69"
+        }
+      ],
+      "jumps": []
+    },
+    {
+      "id": 7,
+      "name": "L1 REFRIG NORMAL",
+      "step_start": 95,
+      "step_end": 104,
+      "condition": [
+        {
+          "step": 96,
+          "instruction": "LD",
+          "device": "M38"
+        },
+        {
+          "step": 99,
+          "instruction": "LD",
+          "device": "M38"
+        },
+        {
+          "step": 100,
+          "instruction": "LDD>=",
+          "device": "D124"
+        }
+      ],
+      "actions": [
+        {
+          "step": 97,
+          "instruction": "SET",
+          "device": "M69"
+        },
+        {
+          "step": 98,
+          "instruction": "OUT",
+          "device": "T5"
+        },
+        {
+          "step": 101,
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "step": 102,
+          "instruction": "RST",
+          "device": "M69"
+        },
+        {
+          "step": 103,
+          "instruction": "RST",
+          "device": "M98"
+        },
+        {
+          "step": 104,
+          "instruction": "SET",
+          "device": "M39"
+        }
+      ],
+      "jumps": []
+    },
+    {
+      "id": 8,
+      "name": "L1 OIL FAST",
+      "step_start": 105,
+      "step_end": 120,
+      "condition": [
+        {
+          "step": 106,
+          "instruction": "LD",
+          "device": "M41"
+        },
+        {
+          "step": 109,
+          "instruction": "LD",
+          "device": "M41"
+        },
+        {
+          "step": 110,
+          "instruction": "LD=",
+          "device": "D62"
+        },
+        {
+          "step": 112,
+          "instruction": "LDD>=",
+          "device": "D124"
+        },
+        {
+          "step": 116,
+          "instruction": "LD",
+          "device": "M41"
+        },
+        {
+          "step": 117,
+          "instruction": "LDD>=",
+          "device": "D124"
+        }
+      ],
+      "actions": [
+        {
+          "step": 107,
+          "instruction": "SET",
+          "device": "M70"
+        },
+        {
+          "step": 108,
+          "instruction": "OUT",
+          "device": "T6"
+        },
+        {
+          "step": 111,
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "step": 113,
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "step": 114,
+          "instruction": "RST",
+          "device": "M70"
+        },
+        {
+          "step": 115,
+          "instruction": "SET",
+          "device": "M42"
+        },
+        {
+          "step": 118,
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "step": 119,
+          "instruction": "RST",
+          "device": "M70"
+        },
+        {
+          "step": 120,
+          "instruction": "SET",
+          "device": "M37"
+        }
+      ],
+      "jumps": []
+    },
+    {
+      "id": 9,
+      "name": "L1 OIL NORMAL",
+      "step_start": 121,
+      "step_end": 128,
+      "condition": [
+        {
+          "step": 122,
+          "instruction": "LD",
+          "device": "M42"
+        },
+        {
+          "step": 124,
+          "instruction": "LD",
+          "device": "M42"
+        },
+        {
+          "step": 125,
+          "instruction": "LDD>=",
+          "device": "D124"
+        }
+      ],
+      "actions": [
+        {
+          "step": 123,
+          "instruction": "SET",
+          "device": "M71"
+        },
+        {
+          "step": 126,
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "step": 127,
+          "instruction": "RST",
+          "device": "M71"
+        },
+        {
+          "step": 128,
+          "instruction": "SET",
+          "device": "M37"
+        }
+      ],
+      "jumps": []
+    },
+    {
+      "id": 10,
+      "name": "L1 EXHAUST",
+      "step_start": 129,
+      "step_end": 138,
+      "condition": [
+        {
+          "step": 130,
+          "instruction": "LD",
+          "device": "M39"
+        },
+        {
+          "step": 133,
+          "instruction": "LD",
+          "device": "M39"
+        }
+      ],
+      "actions": [
+        {
+          "step": 131,
+          "instruction": "SET",
+          "device": "M67"
+        },
+        {
+          "step": 132,
+          "instruction": "OUT",
+          "device": "T3"
+        },
+        {
+          "step": 134,
+          "instruction": "AND",
+          "device": "T3"
+        },
+        {
+          "step": 135,
+          "instruction": "RST",
+          "device": "M67"
+        },
+        {
+          "step": 136,
+          "instruction": "SET",
+          "device": "L38"
+        },
+        {
+          "step": 137,
+          "instruction": "RST",
+          "device": "M39"
+        },
+        {
+          "step": 138,
+          "instruction": "END",
+          "device": ""
+        }
+      ],
+      "jumps": []
+    }
+  ],
+  "device_map": {
+    "M21": {
+      "type": "M",
+      "read_steps": [
+        1,
+        5,
+        12,
+        20
+      ],
+      "set_steps": [
+        51,
+        59
+      ],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "M52": {
+      "type": "M",
+      "read_steps": [],
+      "set_steps": [
+        2
+      ],
+      "rst_steps": [
+        10,
+        17,
+        22
+      ],
+      "out_steps": []
+    },
+    "M96": {
+      "type": "M",
+      "read_steps": [],
+      "set_steps": [
+        3
+      ],
+      "rst_steps": [
+        18,
+        23,
+        34
+      ],
+      "out_steps": []
+    },
+    "T4": {
+      "type": "T",
+      "read_steps": [
+        21,
+        90
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": [
+        4,
+        73
+      ]
+    },
+    "D62": {
+      "type": "D",
+      "read_steps": [
+        6,
+        13,
+        41,
+        75,
+        82,
+        110
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "D124": {
+      "type": "D",
+      "read_steps": [
+        8,
+        15,
+        31,
+        43,
+        48,
+        56,
+        77,
+        84,
+        100,
+        112,
+        117,
+        125
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "M22": {
+      "type": "M",
+      "read_steps": [
+        27,
+        30
+      ],
+      "set_steps": [
+        11
+      ],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "M23": {
+      "type": "M",
+      "read_steps": [
+        61,
+        64
+      ],
+      "set_steps": [
+        19,
+        24,
+        35
+      ],
+      "rst_steps": [
+        68
+      ],
+      "out_steps": []
+    },
+    "L69": {
+      "type": "L",
+      "read_steps": [],
+      "set_steps": [
+        25,
+        94
+      ],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "M53": {
+      "type": "M",
+      "read_steps": [],
+      "set_steps": [
+        28
+      ],
+      "rst_steps": [
+        33
+      ],
+      "out_steps": []
+    },
+    "T5": {
+      "type": "T",
+      "read_steps": [],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": [
+        29,
+        98
+      ]
+    },
+    "M25": {
+      "type": "M",
+      "read_steps": [
+        37,
+        40,
+        47
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "M54": {
+      "type": "M",
+      "read_steps": [],
+      "set_steps": [
+        38
+      ],
+      "rst_steps": [
+        45,
+        50
+      ],
+      "out_steps": []
+    },
+    "T6": {
+      "type": "T",
+      "read_steps": [],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": [
+        39,
+        108
+      ]
+    },
+    "M26": {
+      "type": "M",
+      "read_steps": [
+        53,
+        55
+      ],
+      "set_steps": [
+        46
+      ],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "M55": {
+      "type": "M",
+      "read_steps": [],
+      "set_steps": [
+        54
+      ],
+      "rst_steps": [
+        58
+      ],
+      "out_steps": []
+    },
+    "M51": {
+      "type": "M",
+      "read_steps": [],
+      "set_steps": [
+        62
+      ],
+      "rst_steps": [
+        66
+      ],
+      "out_steps": []
+    },
+    "T3": {
+      "type": "T",
+      "read_steps": [
+        65,
+        134
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": [
+        63,
+        132
+      ]
+    },
+    "L22": {
+      "type": "L",
+      "read_steps": [],
+      "set_steps": [
+        67
+      ],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "M37": {
+      "type": "M",
+      "read_steps": [
+        70,
+        74,
+        81,
+        89
+      ],
+      "set_steps": [
+        120,
+        128
+      ],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "M68": {
+      "type": "M",
+      "read_steps": [],
+      "set_steps": [
+        71
+      ],
+      "rst_steps": [
+        79,
+        86,
+        91
+      ],
+      "out_steps": []
+    },
+    "M98": {
+      "type": "M",
+      "read_steps": [],
+      "set_steps": [
+        72
+      ],
+      "rst_steps": [
+        87,
+        92,
+        103
+      ],
+      "out_steps": []
+    },
+    "M38": {
+      "type": "M",
+      "read_steps": [
+        96,
+        99
+      ],
+      "set_steps": [
+        80
+      ],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "M39": {
+      "type": "M",
+      "read_steps": [
+        130,
+        133
+      ],
+      "set_steps": [
+        88,
+        93,
+        104
+      ],
+      "rst_steps": [
+        137
+      ],
+      "out_steps": []
+    },
+    "M69": {
+      "type": "M",
+      "read_steps": [],
+      "set_steps": [
+        97
+      ],
+      "rst_steps": [
+        102
+      ],
+      "out_steps": []
+    },
+    "M41": {
+      "type": "M",
+      "read_steps": [
+        106,
+        109,
+        116
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "M70": {
+      "type": "M",
+      "read_steps": [],
+      "set_steps": [
+        107
+      ],
+      "rst_steps": [
+        114,
+        119
+      ],
+      "out_steps": []
+    },
+    "M42": {
+      "type": "M",
+      "read_steps": [
+        122,
+        124
+      ],
+      "set_steps": [
+        115
+      ],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "M71": {
+      "type": "M",
+      "read_steps": [],
+      "set_steps": [
+        123
+      ],
+      "rst_steps": [
+        127
+      ],
+      "out_steps": []
+    },
+    "M67": {
+      "type": "M",
+      "read_steps": [],
+      "set_steps": [
+        131
+      ],
+      "rst_steps": [
+        135
+      ],
+      "out_steps": []
+    },
+    "L38": {
+      "type": "L",
+      "read_steps": [],
+      "set_steps": [
+        136
+      ],
+      "rst_steps": [],
+      "out_steps": []
+    }
+  },
+  "warnings": [
+    {
+      "type": "NO_RST",
+      "device": "M21",
+      "message": "M21: SET at step 51 but no RST found"
+    },
+    {
+      "type": "NO_RST",
+      "device": "M22",
+      "message": "M22: SET at step 11 but no RST found"
+    },
+    {
+      "type": "NO_RST",
+      "device": "L69",
+      "message": "L69: SET at step 25 but no RST found"
+    },
+    {
+      "type": "LATCH_DEVICE",
+      "device": "L69",
+      "message": "L69: L device is battery-backed latch relay"
+    },
+    {
+      "type": "NO_RST",
+      "device": "M26",
+      "message": "M26: SET at step 46 but no RST found"
+    },
+    {
+      "type": "NO_RST",
+      "device": "L22",
+      "message": "L22: SET at step 67 but no RST found"
+    },
+    {
+      "type": "LATCH_DEVICE",
+      "device": "L22",
+      "message": "L22: L device is battery-backed latch relay"
+    },
+    {
+      "type": "NO_RST",
+      "device": "M37",
+      "message": "M37: SET at step 120 but no RST found"
+    },
+    {
+      "type": "NO_RST",
+      "device": "M38",
+      "message": "M38: SET at step 80 but no RST found"
+    },
+    {
+      "type": "NO_RST",
+      "device": "M42",
+      "message": "M42: SET at step 115 but no RST found"
+    },
+    {
+      "type": "NO_RST",
+      "device": "L38",
+      "message": "L38: SET at step 136 but no RST found"
+    },
+    {
+      "type": "LATCH_DEVICE",
+      "device": "L38",
+      "message": "L38: L device is battery-backed latch relay"
+    },
+    {
+      "type": "DOUBLE_COIL_CANDIDATE",
+      "device": "M21",
+      "message": "M21 appears in 3 different blocks"
+    },
+    {
+      "type": "DOUBLE_COIL_CANDIDATE",
+      "device": "M96",
+      "message": "M96 appears in 2 different blocks"
+    },
+    {
+      "type": "DOUBLE_COIL_CANDIDATE",
+      "device": "T4",
+      "message": "T4 appears in 2 different blocks"
+    },
+    {
+      "type": "DOUBLE_COIL_CANDIDATE",
+      "device": "D62",
+      "message": "D62 appears in 4 different blocks"
+    },
+    {
+      "type": "DOUBLE_COIL_CANDIDATE",
+      "device": "D124",
+      "message": "D124 appears in 8 different blocks"
+    },
+    {
+      "type": "DOUBLE_COIL_CANDIDATE",
+      "device": "M22",
+      "message": "M22 appears in 2 different blocks"
+    },
+    {
+      "type": "DOUBLE_COIL_CANDIDATE",
+      "device": "M23",
+      "message": "M23 appears in 3 different blocks"
+    },
+    {
+      "type": "DOUBLE_COIL_CANDIDATE",
+      "device": "L69",
+      "message": "L69 appears in 2 different blocks"
+    },
+    {
+      "type": "DOUBLE_COIL_CANDIDATE",
+      "device": "T5",
+      "message": "T5 appears in 2 different blocks"
+    },
+    {
+      "type": "DOUBLE_COIL_CANDIDATE",
+      "device": "T6",
+      "message": "T6 appears in 2 different blocks"
+    },
+    {
+      "type": "DOUBLE_COIL_CANDIDATE",
+      "device": "M26",
+      "message": "M26 appears in 2 different blocks"
+    },
+    {
+      "type": "DOUBLE_COIL_CANDIDATE",
+      "device": "T3",
+      "message": "T3 appears in 2 different blocks"
+    },
+    {
+      "type": "DOUBLE_COIL_CANDIDATE",
+      "device": "M37",
+      "message": "M37 appears in 3 different blocks"
+    },
+    {
+      "type": "DOUBLE_COIL_CANDIDATE",
+      "device": "M98",
+      "message": "M98 appears in 2 different blocks"
+    },
+    {
+      "type": "DOUBLE_COIL_CANDIDATE",
+      "device": "M38",
+      "message": "M38 appears in 2 different blocks"
+    },
+    {
+      "type": "DOUBLE_COIL_CANDIDATE",
+      "device": "M39",
+      "message": "M39 appears in 3 different blocks"
+    },
+    {
+      "type": "DOUBLE_COIL_CANDIDATE",
+      "device": "M42",
+      "message": "M42 appears in 2 different blocks"
+    }
+  ],
+  "test_cases": [
+    {
+      "id": "TC_001",
+      "name": "L0 REFRIG FAST 실행 검증",
+      "description": "Step 0~25: L0 REFRIG FAST 블록 검증",
+      "precondition": {
+        "M21": 1
+      },
+      "expected": {
+        "M52": 0,
+        "M96": 0,
+        "M22": 1,
+        "M23": 1,
+        "L69": 1
+      },
+      "plc_write": [
+        {
+          "device": "M52",
+          "value": 0
+        },
+        {
+          "device": "M96",
+          "value": 0
+        },
+        {
+          "device": "M52",
+          "value": 1
+        },
+        {
+          "device": "M22",
+          "value": 0
+        },
+        {
+          "device": "M52",
+          "value": 1
+        },
+        {
+          "device": "M96",
+          "value": 1
+        },
+        {
+          "device": "M23",
+          "value": 0
+        },
+        {
+          "device": "M52",
+          "value": 1
+        },
+        {
+          "device": "M96",
+          "value": 1
+        },
+        {
+          "device": "M23",
+          "value": 0
+        },
+        {
+          "device": "L69",
+          "value": 0
+        },
+        {
+          "device": "M21",
+          "value": 1
+        }
+      ],
+      "plc_read": [
+        "M52",
+        "M96",
+        "M22",
+        "M23",
+        "L69",
+        "M21"
+      ]
+    },
+    {
+      "id": "TC_002",
+      "name": "L0 REFRIG NORMAL 실행 검증",
+      "description": "Step 26~35: L0 REFRIG NORMAL 블록 검증",
+      "precondition": {
+        "M22": 1
+      },
+      "expected": {
+        "M53": 0,
+        "M96": 0,
+        "M23": 1
+      },
+      "plc_write": [
+        {
+          "device": "M53",
+          "value": 0
+        },
+        {
+          "device": "M53",
+          "value": 1
+        },
+        {
+          "device": "M96",
+          "value": 1
+        },
+        {
+          "device": "M23",
+          "value": 0
+        },
+        {
+          "device": "M22",
+          "value": 1
+        }
+      ],
+      "plc_read": [
+        "M53",
+        "M96",
+        "M23",
+        "M22"
+      ]
+    },
+    {
+      "id": "TC_003",
+      "name": "L0 OIL FAST 실행 검증",
+      "description": "Step 36~51: L0 OIL FAST 블록 검증",
+      "precondition": {
+        "M25": 1
+      },
+      "expected": {
+        "M54": 0,
+        "M26": 1,
+        "M21": 1
+      },
+      "plc_write": [
+        {
+          "device": "M54",
+          "value": 0
+        },
+        {
+          "device": "M54",
+          "value": 1
+        },
+        {
+          "device": "M26",
+          "value": 0
+        },
+        {
+          "device": "M54",
+          "value": 1
+        },
+        {
+          "device": "M21",
+          "value": 0
+        },
+        {
+          "device": "M25",
+          "value": 1
+        }
+      ],
+      "plc_read": [
+        "M54",
+        "M26",
+        "M21",
+        "M25"
+      ]
+    },
+    {
+      "id": "TC_004",
+      "name": "L0 OIL NORMAL 실행 검증",
+      "description": "Step 52~59: L0 OIL NORMAL 블록 검증",
+      "precondition": {
+        "M26": 1
+      },
+      "expected": {
+        "M55": 0,
+        "M21": 1
+      },
+      "plc_write": [
+        {
+          "device": "M55",
+          "value": 0
+        },
+        {
+          "device": "M55",
+          "value": 1
+        },
+        {
+          "device": "M21",
+          "value": 0
+        },
+        {
+          "device": "M26",
+          "value": 1
+        }
+      ],
+      "plc_read": [
+        "M55",
+        "M21",
+        "M26"
+      ]
+    },
+    {
+      "id": "TC_005",
+      "name": "L0 EXHAUST 실행 검증",
+      "description": "Step 60~68: L0 EXHAUST 블록 검증",
+      "precondition": {
+        "M23": 1
+      },
+      "expected": {
+        "M51": 0,
+        "L22": 1,
+        "M23": 0
+      },
+      "plc_write": [
+        {
+          "device": "M51",
+          "value": 0
+        },
+        {
+          "device": "M51",
+          "value": 1
+        },
+        {
+          "device": "L22",
+          "value": 0
+        },
+        {
+          "device": "M23",
+          "value": 1
+        }
+      ],
+      "plc_read": [
+        "M51",
+        "L22",
+        "M23"
+      ]
+    },
+    {
+      "id": "TC_006",
+      "name": "L1 REFRIG FAST 실행 검증",
+      "description": "Step 69~94: L1 REFRIG FAST 블록 검증",
+      "precondition": {
+        "M37": 1
+      },
+      "expected": {
+        "M68": 0,
+        "M98": 0,
+        "M38": 1,
+        "M39": 1,
+        "L69": 1
+      },
+      "plc_write": [
+        {
+          "device": "M68",
+          "value": 0
+        },
+        {
+          "device": "M98",
+          "value": 0
+        },
+        {
+          "device": "M68",
+          "value": 1
+        },
+        {
+          "device": "M38",
+          "value": 0
+        },
+        {
+          "device": "M68",
+          "value": 1
+        },
+        {
+          "device": "M98",
+          "value": 1
+        },
+        {
+          "device": "M39",
+          "value": 0
+        },
+        {
+          "device": "M68",
+          "value": 1
+        },
+        {
+          "device": "M98",
+          "value": 1
+        },
+        {
+          "device": "M39",
+          "value": 0
+        },
+        {
+          "device": "L69",
+          "value": 0
+        },
+        {
+          "device": "M37",
+          "value": 1
+        }
+      ],
+      "plc_read": [
+        "M68",
+        "M98",
+        "M38",
+        "M39",
+        "L69",
+        "M37"
+      ]
+    },
+    {
+      "id": "TC_007",
+      "name": "L1 REFRIG NORMAL 실행 검증",
+      "description": "Step 95~104: L1 REFRIG NORMAL 블록 검증",
+      "precondition": {
+        "M38": 1
+      },
+      "expected": {
+        "M69": 0,
+        "M98": 0,
+        "M39": 1
+      },
+      "plc_write": [
+        {
+          "device": "M69",
+          "value": 0
+        },
+        {
+          "device": "M69",
+          "value": 1
+        },
+        {
+          "device": "M98",
+          "value": 1
+        },
+        {
+          "device": "M39",
+          "value": 0
+        },
+        {
+          "device": "M38",
+          "value": 1
+        }
+      ],
+      "plc_read": [
+        "M69",
+        "M98",
+        "M39",
+        "M38"
+      ]
+    },
+    {
+      "id": "TC_008",
+      "name": "L1 OIL FAST 실행 검증",
+      "description": "Step 105~120: L1 OIL FAST 블록 검증",
+      "precondition": {
+        "M41": 1
+      },
+      "expected": {
+        "M70": 0,
+        "M42": 1,
+        "M37": 1
+      },
+      "plc_write": [
+        {
+          "device": "M70",
+          "value": 0
+        },
+        {
+          "device": "M70",
+          "value": 1
+        },
+        {
+          "device": "M42",
+          "value": 0
+        },
+        {
+          "device": "M70",
+          "value": 1
+        },
+        {
+          "device": "M37",
+          "value": 0
+        },
+        {
+          "device": "M41",
+          "value": 1
+        }
+      ],
+      "plc_read": [
+        "M70",
+        "M42",
+        "M37",
+        "M41"
+      ]
+    },
+    {
+      "id": "TC_009",
+      "name": "L1 OIL NORMAL 실행 검증",
+      "description": "Step 121~128: L1 OIL NORMAL 블록 검증",
+      "precondition": {
+        "M42": 1
+      },
+      "expected": {
+        "M71": 0,
+        "M37": 1
+      },
+      "plc_write": [
+        {
+          "device": "M71",
+          "value": 0
+        },
+        {
+          "device": "M71",
+          "value": 1
+        },
+        {
+          "device": "M37",
+          "value": 0
+        },
+        {
+          "device": "M42",
+          "value": 1
+        }
+      ],
+      "plc_read": [
+        "M71",
+        "M37",
+        "M42"
+      ]
+    },
+    {
+      "id": "TC_010",
+      "name": "L1 EXHAUST 실행 검증",
+      "description": "Step 129~138: L1 EXHAUST 블록 검증",
+      "precondition": {
+        "M39": 1
+      },
+      "expected": {
+        "M67": 0,
+        "L38": 1,
+        "M39": 0
+      },
+      "plc_write": [
+        {
+          "device": "M67",
+          "value": 0
+        },
+        {
+          "device": "M67",
+          "value": 1
+        },
+        {
+          "device": "L38",
+          "value": 0
+        },
+        {
+          "device": "M39",
+          "value": 1
+        }
+      ],
+      "plc_read": [
+        "M67",
+        "L38",
+        "M39"
+      ]
+    }
+  ]
+}

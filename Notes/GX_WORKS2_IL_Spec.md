@@ -656,3 +656,149 @@ This maps to our CSV columns:
 The MELSEC manual documents additional mnemonics not found in the MAIN.csv reference export. These include floating-point comparisons (`LDE=`, `ANDED<>`, …), string comparisons (`LD$=`, …), pulse-NOT variants (`LDPI`, `ANDFI`, …), shift instructions (`SFT`, `SFR`, `SFL`), master control (`MC`, `MCR`), and program control (`CJ`, `FEND`, `STOP`, …). See `REF_DOCUMENT.md` → [Reference Data](#reference-data) for the complete list.
 
 When generating IL CSV files, prefer mnemonics confirmed in MAIN.csv for maximum compatibility. Use extended mnemonics only when the source ladder logic requires them.
+
+
+---
+
+## 15. Verified IL Coding Rules & Patterns (Project REF)
+
+> These rules were derived from repeated import/program-check cycles during the REF project on Q03UDV.
+
+### 15-1. Device Address Notation
+
+| Device | Doc Notation | PLC Notation | Example |
+|--------|:------------:|:------------:|---------|
+| M | Hex (e.g. M12) | **Decimal** (M18) | M12 (0x12=18) -> M18 (dec) |
+| L | Hex (e.g. L51) | **Decimal** (L81) | L51 (0x51=81) -> L81 (dec) |
+| D | **Decimal** | **Decimal** | D160 stays D160 |
+| T | **Decimal** | **Decimal** | T0 stays T0 |
+| X | **Hex** | **Hex** | X0A0 stays X0A0 |
+| Y | **Hex** | **Hex** | Y011 stays Y011 |
+| K (constant) | **Decimal** | **Decimal** | K100 stays K100 |
+
+**Rule**: M and L devices are documented in hex ranges (e.g. M30~M4F, L10~L1F). When writing to the CSV, convert each hex address to decimal. D, T, K devices are always decimal. X, Y devices are always hex.
+
+### 15-2. Timer Instruction -- Use OUT not TMR
+
+| Rejected | Accepted |
+|----------|----------|
+| TMR T0 K100 | OUT T0 K100 |
+| Type B: "TMR" "T0" + Type C: "K100" | Type B: "OUT" "T0" + Type C: "K100" |
+
+**Verified**: GX Works2 does not recognize TMR as a valid IL CSV mnemonic. Use OUT for all timer coil outputs with the preset on a Type C continuation row.
+
+### 15-3. Conditional Jump -- Avoid CJ in IL CSV
+
+| Rejected | Rejected | Accepted |
+|----------|----------|----------|
+| CJ L0SKP (label name) | CJ P0 (P pointer) | Remove CJ; use LD</LD> conditional MOV instead |
+
+**Verified**: GX Works2 IL CSV does not accept label names, P pointers, or step numbers as CJ targets. Replace CJ with conditional execution. Or use LD= comparisons + ANB block combine for type branching.
+
+### 15-4. Note Column -- Do Not Use in IL CSV
+
+| Rejected | Accepted |
+|----------|----------|
+| Any non-empty Note field | All Note fields = empty string |
+
+**Errors**: Type A rows get "Failed to read note and statement". Type C rows get "No instruction before note". Type B rows get unpredictable failures.
+
+**Rule**: Note column must be empty. Device comments go in a separate comment CSV file.
+
+### 15-5. Device Comment CSV Format
+
+Verified format for GX Works2 global device comment import:
+
+```
+"AAAA"
+"Device Name"   "Comment"
+"X0A1"  "STOP PB L0"
+"M18"   "GUN VAC step L0"
+"D160"  "AD CH2 EU L0 (32)"
+"T0"    "Gun vacuum timer"
+```
+
+- Line 1: "AAAA" (fixed header)
+- Line 2: "Device Name" tab "Comment" (header)
+- UTF-16 LE BOM, CRLF, TAB-delimited
+- Device names match PLC decimal addresses (M/L converted)
+- Comment length <= 32 half-width chars
+- D register: note bit-width as (16) or (32)
+
+### 15-6. Comparison Instruction Patterns
+
+**Pattern A -- AND-type (single-rung, recommended)**:
+
+```
+"20" "" "LD"     "M18"  "" "" ""   ; M12(hex)
+"21" "" "AND"    "T0"   "" "" ""
+"22" "" "ANDD<=" "D160" "" "" ""   ; Type B
+""   "" ""       "D22"  "" "" ""   ; Type C (operand 2)
+"23" "" "SET"    "L16"  "" "" ""   ; L10(hex)
+```
+
+**Pattern B -- Load-type + ANB (for type branching)**:
+
+```
+"10" "" "LD"     "M21"  "" "" ""   ; M15(hex)
+"11" "" "LD="    "D62"  "" "" ""   ; new stack entry
+""   "" ""       "K1"   "" "" ""
+"12" "" "ANB"    ""     "" "" ""   ; AND type check
+"13" "" "LDD>="  "D124" "" "" ""   ; new stack entry
+""   "" ""       "D10"  "" "" ""   ; Type C
+"14" "" "ANB"    ""     "" "" ""   ; AND volume check
+"15" "" "RST"    "M52"  "" "" ""   ; M34(hex)
+```
+
+Stack flow: LD -> [step] -> LD= -> [step, type] -> ANB -> [step AND type] -> LDD>= -> [step AND type, vol] -> ANB -> [step AND type AND vol].
+
+### 15-7. Rung Size -- Avoid Ladder Too Large (C9322/C9521)
+
+**Cause**: GX Works2 converts IL rungs to ladder. Single rung with > ~40 parallel outputs exceeds ladder conversion limit.
+
+**Fix**: Insert LD M0 between groups of ~8 outputs:
+
+```
+"8"  "" "LD"  "M2"  "" "" ""   ; Rung 1
+"9"  "" "SET" "L0"  "" "" ""
+"10" "" "RST" "M16" "" "" ""
+...(7 more)
+"17" "" "LD"  "M2"  "" "" ""   ; Rung 2 (new)
+"18" "" "RST" "M24" "" "" ""
+...
+```
+
+Also applies to EMG/STOP handlers with many RST instructions.
+
+### 15-8. Multi-Operand Instruction Counts (Verified)
+
+| Mnemonic | Operands | CSV Format |
+|----------|:--------:|------------|
+| OUT Tn | 2 | B: OUT T0, C: D2 (preset) |
+| MOV | 2 | B: MOV D270, C: D274 |
+| DMOV | 2 | B: DMOV D160, C: D300 |
+| BMOV | 3 | B + C + C |
+| D+, D-, D*, D/ | 3 | B + C + C (S1 S2 D) |
+| LD=, LD<, LD> | 2 | B + C |
+| ANDD<=, ANDD>= | 2 | B + C |
+| LDD>=, LDD> | 2 | B + C |
+| ANB, ORB | 0 | B only (device must be empty) |
+| PLS | 1 | B only |
+
+### 15-9. Format Constraints Summary
+
+| Item | Constraint | Verified |
+|------|-----------|:--------:|
+| BOM | UTF-16 LE (FF FE) | OK |
+| Line ending | CRLF | OK |
+| Delimiter | TAB | OK |
+| Fields per row | Exactly 7 | OK |
+| Encoding | UTF-16 LE (never UTF-8) | OK |
+| File name | <= 8 chars (excl. .csv) | OK |
+| Note field | Must be empty | OK |
+| Timer | OUT Tn, not TMR | OK |
+| CJ | Avoid (use conditional MOV) | OK |
+| M/L address | Decimal in CSV | OK |
+| Rung outputs | <= 8 per rung | OK |
+| Comment file header | "AAAA" header | OK |
+| Comment length | <= 32 half-width chars | OK |

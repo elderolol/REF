@@ -1,4 +1,4 @@
-# Device Map — REFRIGER CHARGING MACHINE Standard Program
+﻿# Device Map — REFRIGER CHARGING MACHINE Standard Program
 
 > **Target PLC**: Mitsubishi QCPU (Q mode) Q03UDV  
 > **Device 할당 원칙**:
@@ -59,8 +59,8 @@
 | **L49** | Alarm | Pressure Low | Y |
 | **L4A** | Alarm | Temperature Abnormal | Y |
 | **L4B** | Alarm | Refriger Bombe Low | Y |
-| **L4C** | Alarm | SPARE | Y |
-| **L4D** | Alarm | SPARE | Y |
+| **L4C** | Alarm | **Model Not Selected** (Auto START시 D0=0) | Y |
+| **L4D** | Alarm | **Inj Amount Zero** (Auto START시 D128=0) | Y |
 | **L4E** | Alarm | Door Open (방폭) | Y |
 | **L4F** | Alarm | SPARE | Y |
 | | | | |
@@ -127,6 +127,15 @@
 | **M18** | COMPLETE | 완료 |
 | **M19** | 예비 | |
 
+### 2-2b. WARMUP Flags (M520~M521)
+### 2-2b. WARMUP Flags (M520~M521)
+
+> Auto mode START 시 0.5s warm-up 상태. MAIN.csv가 관리.
+
+| Addr | 용도 | SET | RST |
+|:----:|------|:---:|:---:|
+| **M520** | WARMUP L0 | M413+Auto+Validation OK | T10 done or STOP/EMG/NG |
+| **M521** | WARMUP L1 | M415+Auto+Validation OK | T10 done or STOP/EMG/NG |
 ### 2-3. Step State — Line 1 (M20~M29)
 
 | Addr | Step | 상세 |
@@ -289,8 +298,24 @@
 | **M415** | START (Line 1) | Momentary | → Rising Edge (자동) |
 | **M416** | STOP (Line 1) | Momentary | → Rising Edge |
 | **M417~M41F** | 예비 | — | |
+### 2-6b. HMI Lamp Bits (M530~M541)
 
-### 2-7. Communication Flags (M500~M50F)
+> HMI GOT가 읽어서 버튼 백라이트에 반영. MAIN.csv가 갱신.
+
+| Addr | Lamp | 점등 조건 |
+|:----:|------|----------|
+| **M530** | GUN VAC Lamp L0 | M502(READY) OR M18(GUN VAC) |
+| **M531** | UNIT VAC Lamp L0 | M503(READY) OR M19(UNIT VAC) |
+| **M532** | VAC CHECK Lamp L0 | M504(READY) OR M20(VAC CHECK) |
+| **M533** | INJECTION Lamp L0 | M505(READY) OR M21/M22(INJ) |
+| **M534** | GUN VAC Lamp L1 | M506(READY) OR M34 |
+| **M535** | UNIT VAC Lamp L1 | M507(READY) OR M35 |
+| **M536** | VAC CHECK Lamp L1 | M508(READY) OR M36 |
+| **M537** | INJECTION Lamp L1 | M509(READY) OR M37/M38 |
+| **M540** | START Lamp L0 | M18~M24 (any L0 step) |
+| **M541** | START Lamp L1 | M34~M40 (any L1 step) |
+
+### 2-7. Communication Flags (M500~M50F) + Function Flags (M502~M509)
 
 | Addr | Signal | Note |
 |:----:|--------|------|
@@ -489,6 +514,22 @@
 | **D31C** | **32** | L1 Current HSC Pulse | |
 | **D31E** | **32** | L1 Accumulated Pulse | |
 
+### 3-12. HMI Display / Scratch (D400~D499)
+
+> Line 1 전용 동시 실행 데이터. L0는 D124~D134 사용, L1은 D400~D410 사용.
+
+| Addr | Width | 항목 | Line | Note |
+|:----:|:-----:|------|:----:|------|
+| **D400** | **32** | L1 Charging Pulse | L1 | Flow Meter 펄스 (L0=D124) |
+| **D402** | 16 | L1 Injection Time | L1 | 0.1sec (L0=D126) |
+| **D404** | **32** | L1 Inj Setting Amount (Refrig) | L1 | g (L0=D128) |
+| **D406** | **32** | L1 Actual Inj Volume (Refrig) | L1 | g (L0=D130) |
+| **D408** | **32** | L1 Oil Inj Setting Amount | L1 | g (L0=D132) |
+| **D410** | **32** | L1 Actual Oil Inj Volume | L1 | g (L0=D134) |
+| **D412~D499** | — | 예비 | — | |
+
+### 3-13. PC Communication Area
+
 ### 3-12. SPC Data Logging
 
 > 별도의 로깅 D 레지스터 없음. **D7020~D7219** (L1) 및 **D8020~D8219** (L2) PC 통신 영역에 직접 기록.  
@@ -579,15 +620,27 @@
 
 | Addr | 용도 | Time Base | 소속 |
 |:----:|------|:---------:|:----:|
-| **T0** | Gun Vacuum Timer | 100ms | gunvac |
-| **T1** | Unit Vacuum Timer | 100ms | unitvac |
-| **T2** | Vacuum Check Timer | 100ms | vacchec |
-| **T3** | Exhaust Timer | 100ms | refinj |
-| **T4** | Refrig Injection Timer (Fast) | 100ms | refinj |
-| **T5** | Refrig Injection Timer (Normal) | 100ms | refinj |
-| **T6** | Oil Injection Timer | 100ms | refinj |
-| **T7~T15** | 예비 | 100ms | |
-| **T16~T31** | 확장 예비 | 100ms | |
+| **T0** | Gun Vacuum Timer L0 | 100ms | gunvac |
+| **T1** | Unit Vacuum Timer L0 | 100ms | unitvac |
+| **T2** | Vacuum Check Timer L0 | 100ms | vacchec |
+| **T3** | Exhaust Timer L0 | 100ms | refinj |
+| **T4** | Refrig Fast Timer L0 | 100ms | refinj |
+| **T5** | Refrig Normal Timer L0 | 100ms | refinj |
+| **T6** | Oil Inj Timer L0 | 100ms | refinj |
+| **T7** | Grace Timer L0 | 100ms | gunvac/unitvac |
+| **T8** | Gun Vacuum Timer L1 | 100ms | gunvac |
+| **T9** | Unit Vacuum Timer L1 | 100ms | unitvac |
+| **T10** | Inj Warmup Timer L0 | 100ms | MAIN |
+| **T11** | Vacuum Check Timer L1 | 100ms | vacchec |
+| **T12** | Exhaust Timer L1 | 100ms | refinj |
+| **T13** | Refrig Fast Timer L1 | 100ms | refinj |
+| **T14** | Refrig Normal Timer L1 | 100ms | refinj |
+| **T15** | Oil Inj Timer L1 | 100ms | refinj |
+| **T16** | Inj Warmup Timer L1 | 100ms | MAIN |
+| **T17** | Grace Timer L1 | 100ms | gunvac/unitvac |
+| **T18** | VAC SPC Logging Interval L0 | **10ms(K8=80ms)** | gmes(OUTH) |
+| **T19** | VAC SPC Logging Interval L1 | **10ms(K8=80ms)** | gmes(OUTH) |
+| **T19~T31** | 확장 예비 | 100ms | |
 
 ---
 
@@ -608,3 +661,6 @@
 | **T** | T0~T31 | Timer (100ms base) | — |
 | **X** | X00~X1F | Physical Input (input.csv mapping) | — |
 | **Y** | Y10~Y3F | Physical Output (output.csv mapping) | — |
+
+
+

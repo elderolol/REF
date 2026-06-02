@@ -1,4 +1,4 @@
-# REFRIGER CHARGING MACHINE — Operation Scenario
+﻿# REFRIGER CHARGING MACHINE — Operation Scenario
 
 > 작성일: 2026-05-31  
 > 기준 문서: `PLC_PROGRAM_STRUCTURE.md`, `REFRIGER_CHARGING_MACHINE.md`
@@ -156,3 +156,51 @@
 |:----:|:----------------:|:--------------------------:|
 | **Barcode Not Used** | 사용자가 숫자 입력 | 입력한 Model# → lookup → Amount |
 | **Barcode Used** | PC Data → Amount match → Index 산출 | PC가 기록한 Amount를 그대로 사용 |
+
+---
+
+## 4. Manual Mode 상세 — READY-START 2단계
+
+### 4-1. Function 버튼 동작
+
+`
+① MANUAL MODE 진입 (L2=ON)
+② Function 버튼 누름 (M40F/M410/M411/M412)
+     ├── READY 상태가 아니면 → READY SET (M502~M505)
+     │      → Function Lamp ON (M530~M533)
+     └── READY 상태이면 → READY RST (취소)
+            → Function Lamp OFF
+③ START 버튼 누름 (M413/M415) + READY 상태
+     ├── 해당 Function Step 실행 (ex: GUN VAC = M18)
+     ├── READY RST
+     ├── Function Lamp 유지 (step active 상태)
+     └── START Lamp ON (M540/M541)
+④ Function 완료 or STOP
+     ├── Function Lamp OFF
+     └── START Lamp OFF
+`
+
+### 4-2. HMI Lamp 매핑
+
+| HMI Lamp | PLC M | 점등 조건 |
+|----------|:-----:|-----------|
+| GUN VAC Lamp L0 | M530 | M502(READY) OR M18(GUN VAC step) |
+| UNIT VAC Lamp L0 | M531 | M503(READY) OR M19(UNIT VAC step) |
+| VAC CHECK Lamp L0 | M532 | M504(READY) OR M20(VAC CHECK step) |
+| INJECTION Lamp L0 | M533 | M505(READY) OR M21/M22(INJ step) |
+| GUN VAC Lamp L1 | M534 | M506(READY) OR M34 |
+| UNIT VAC Lamp L1 | M535 | M507(READY) OR M35 |
+| VAC CHECK Lamp L1 | M536 | M508(READY) OR M36 |
+| INJECTION Lamp L1 | M537 | M509(READY) OR M37/M38 |
+| START Lamp L0 | M540 | M18~M24 (any L0 step active) |
+| START Lamp L1 | M541 | M34~M40 (any L1 step active) |
+
+### 4-3. READY 플래그 (M502~M509)
+
+| M | 용도 | SET 조건 | RST 조건 |
+|:-:|------|---------|---------|
+| M502 | GUN VAC READY L0 | M40F + L2 + NOT RUNNING | M40F again(토글) or M413+START or STOP/EMG/NG |
+| M503 | UNIT VAC READY L0 | M410 + L2 | M410 again or M413+START or STOP/EMG/NG |
+| M504 | VAC CHECK READY L0 | M411 + L2 | M411 again or M413+START or STOP/EMG/NG |
+| M505 | INJ READY L0 | M412 + L2 | M412 again or M413+START or STOP/EMG/NG |
+| M506~M509 | L1 동일 | (L1 버튼 + L2) | 동일 조건 (STOP/START L1=M415) |

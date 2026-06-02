@@ -1,0 +1,386 @@
+{
+  "meta": {
+    "source_file": "spc.csv",
+    "cpu": "Q03UDV",
+    "total_steps": 27,
+    "block_count": 3,
+    "generated": "2026-06-02"
+  },
+  "blocks": [
+    {
+      "id": 1,
+      "name": "L0 CYCLE DONE",
+      "step_start": 0,
+      "step_end": 10,
+      "condition": [
+        {
+          "step": 1,
+          "instruction": "LD",
+          "device": "L24"
+        },
+        {
+          "step": 3,
+          "instruction": "LD",
+          "device": "L24"
+        },
+        {
+          "step": 5,
+          "instruction": "LD",
+          "device": "L24"
+        },
+        {
+          "step": 7,
+          "instruction": "LD",
+          "device": "L24"
+        },
+        {
+          "step": 9,
+          "instruction": "LD",
+          "device": "L24"
+        }
+      ],
+      "actions": [
+        {
+          "step": 2,
+          "instruction": "D+",
+          "device": "D280"
+        },
+        {
+          "step": 4,
+          "instruction": "D+",
+          "device": "D282"
+        },
+        {
+          "step": 6,
+          "instruction": "D+",
+          "device": "D284"
+        },
+        {
+          "step": 8,
+          "instruction": "DMOV",
+          "device": "D130"
+        },
+        {
+          "step": 10,
+          "instruction": "DMOV",
+          "device": "D128"
+        }
+      ],
+      "jumps": []
+    },
+    {
+      "id": 2,
+      "name": "L1 CYCLE DONE",
+      "step_start": 11,
+      "step_end": 21,
+      "condition": [
+        {
+          "step": 12,
+          "instruction": "LD",
+          "device": "L40"
+        },
+        {
+          "step": 14,
+          "instruction": "LD",
+          "device": "L40"
+        },
+        {
+          "step": 16,
+          "instruction": "LD",
+          "device": "L40"
+        },
+        {
+          "step": 18,
+          "instruction": "LD",
+          "device": "L40"
+        },
+        {
+          "step": 20,
+          "instruction": "LD",
+          "device": "L40"
+        }
+      ],
+      "actions": [
+        {
+          "step": 13,
+          "instruction": "D+",
+          "device": "D290"
+        },
+        {
+          "step": 15,
+          "instruction": "D+",
+          "device": "D292"
+        },
+        {
+          "step": 17,
+          "instruction": "D+",
+          "device": "D294"
+        },
+        {
+          "step": 19,
+          "instruction": "DMOV",
+          "device": "D130"
+        },
+        {
+          "step": 21,
+          "instruction": "DMOV",
+          "device": "D128"
+        }
+      ],
+      "jumps": []
+    },
+    {
+      "id": 3,
+      "name": "DISPLAY BOMBE",
+      "step_start": 22,
+      "step_end": 27,
+      "condition": [
+        {
+          "step": 23,
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "step": 25,
+          "instruction": "LDD>=",
+          "device": "D280"
+        }
+      ],
+      "actions": [
+        {
+          "step": 24,
+          "instruction": "MOV",
+          "device": "D282"
+        },
+        {
+          "step": 26,
+          "instruction": "SET",
+          "device": "L75"
+        },
+        {
+          "step": 27,
+          "instruction": "END",
+          "device": ""
+        }
+      ],
+      "jumps": []
+    }
+  ],
+  "device_map": {
+    "L24": {
+      "type": "L",
+      "read_steps": [
+        1,
+        3,
+        5,
+        7,
+        9
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "D280": {
+      "type": "D",
+      "read_steps": [
+        25
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "D282": {
+      "type": "D",
+      "read_steps": [
+        24
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "D284": {
+      "type": "D",
+      "read_steps": [],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "D130": {
+      "type": "D",
+      "read_steps": [
+        8,
+        19
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "D128": {
+      "type": "D",
+      "read_steps": [
+        10,
+        21
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "L40": {
+      "type": "L",
+      "read_steps": [
+        12,
+        14,
+        16,
+        18,
+        20
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "D290": {
+      "type": "D",
+      "read_steps": [],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "D292": {
+      "type": "D",
+      "read_steps": [],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "D294": {
+      "type": "D",
+      "read_steps": [],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "M0": {
+      "type": "M",
+      "read_steps": [
+        23
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "L75": {
+      "type": "L",
+      "read_steps": [],
+      "set_steps": [
+        26
+      ],
+      "rst_steps": [],
+      "out_steps": []
+    }
+  },
+  "warnings": [
+    {
+      "type": "LATCH_DEVICE",
+      "device": "L24",
+      "message": "L24: L device is battery-backed latch relay"
+    },
+    {
+      "type": "LATCH_DEVICE",
+      "device": "L40",
+      "message": "L40: L device is battery-backed latch relay"
+    },
+    {
+      "type": "NO_RST",
+      "device": "L75",
+      "message": "L75: SET at step 26 but no RST found"
+    },
+    {
+      "type": "LATCH_DEVICE",
+      "device": "L75",
+      "message": "L75: L device is battery-backed latch relay"
+    },
+    {
+      "type": "DOUBLE_COIL_CANDIDATE",
+      "device": "D280",
+      "message": "D280 appears in 2 different blocks"
+    },
+    {
+      "type": "DOUBLE_COIL_CANDIDATE",
+      "device": "D282",
+      "message": "D282 appears in 2 different blocks"
+    },
+    {
+      "type": "DOUBLE_COIL_CANDIDATE",
+      "device": "D130",
+      "message": "D130 appears in 2 different blocks"
+    },
+    {
+      "type": "DOUBLE_COIL_CANDIDATE",
+      "device": "D128",
+      "message": "D128 appears in 2 different blocks"
+    }
+  ],
+  "test_cases": [
+    {
+      "id": "TC_001",
+      "name": "L0 CYCLE DONE 실행 검증",
+      "description": "Step 0~10: L0 CYCLE DONE 블록 검증",
+      "precondition": {
+        "L24": 1
+      },
+      "expected": {},
+      "plc_write": [
+        {
+          "device": "L24",
+          "value": 1
+        }
+      ],
+      "plc_read": [
+        "L24"
+      ]
+    },
+    {
+      "id": "TC_002",
+      "name": "L1 CYCLE DONE 실행 검증",
+      "description": "Step 11~21: L1 CYCLE DONE 블록 검증",
+      "precondition": {
+        "L40": 1
+      },
+      "expected": {},
+      "plc_write": [
+        {
+          "device": "L40",
+          "value": 1
+        }
+      ],
+      "plc_read": [
+        "L40"
+      ]
+    },
+    {
+      "id": "TC_003",
+      "name": "DISPLAY BOMBE 실행 검증",
+      "description": "Step 22~27: DISPLAY BOMBE 블록 검증",
+      "precondition": {
+        "M0": 1
+      },
+      "expected": {
+        "L75": 1
+      },
+      "plc_write": [
+        {
+          "device": "L75",
+          "value": 0
+        },
+        {
+          "device": "M0",
+          "value": 1
+        }
+      ],
+      "plc_read": [
+        "L75",
+        "M0"
+      ]
+    }
+  ]
+}

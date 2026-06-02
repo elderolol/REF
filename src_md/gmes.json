@@ -1,0 +1,1206 @@
+{
+  "meta": {
+    "source_file": "gmes.csv",
+    "cpu": "Q03UDV",
+    "total_steps": 100,
+    "block_count": 6,
+    "generated": "2026-06-02"
+  },
+  "blocks": [
+    {
+      "id": 1,
+      "name": "PC COMM L1",
+      "step_start": 0,
+      "step_end": 39,
+      "condition": [
+        {
+          "step": 1,
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "step": 3,
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "step": 5,
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "step": 7,
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "step": 9,
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "step": 11,
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "step": 13,
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "step": 15,
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "step": 17,
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "step": 19,
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "step": 21,
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "step": 23,
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "step": 25,
+          "instruction": "LD",
+          "device": "M16"
+        },
+        {
+          "step": 27,
+          "instruction": "LDI",
+          "device": "M16"
+        },
+        {
+          "step": 29,
+          "instruction": "LD",
+          "device": "M18"
+        },
+        {
+          "step": 31,
+          "instruction": "LD",
+          "device": "M19"
+        },
+        {
+          "step": 33,
+          "instruction": "LD",
+          "device": "M20"
+        },
+        {
+          "step": 35,
+          "instruction": "LD",
+          "device": "M21"
+        },
+        {
+          "step": 38,
+          "instruction": "LD",
+          "device": "M16"
+        }
+      ],
+      "actions": [
+        {
+          "step": 2,
+          "instruction": "MOV",
+          "device": "D7000"
+        },
+        {
+          "step": 4,
+          "instruction": "MOV",
+          "device": "D7001"
+        },
+        {
+          "step": 6,
+          "instruction": "DMOV",
+          "device": "D130"
+        },
+        {
+          "step": 8,
+          "instruction": "MOV",
+          "device": "D142"
+        },
+        {
+          "step": 10,
+          "instruction": "MOV",
+          "device": "D142"
+        },
+        {
+          "step": 12,
+          "instruction": "MOV",
+          "device": "D140"
+        },
+        {
+          "step": 14,
+          "instruction": "DMOV",
+          "device": "D160"
+        },
+        {
+          "step": 16,
+          "instruction": "DMOV",
+          "device": "D22"
+        },
+        {
+          "step": 18,
+          "instruction": "MOV",
+          "device": "K1"
+        },
+        {
+          "step": 20,
+          "instruction": "MOV",
+          "device": "K0"
+        },
+        {
+          "step": 22,
+          "instruction": "MOV",
+          "device": "K1"
+        },
+        {
+          "step": 24,
+          "instruction": "MOV",
+          "device": "K2"
+        },
+        {
+          "step": 26,
+          "instruction": "MOV",
+          "device": "K0"
+        },
+        {
+          "step": 28,
+          "instruction": "MOV",
+          "device": "K1"
+        },
+        {
+          "step": 30,
+          "instruction": "MOV",
+          "device": "K1"
+        },
+        {
+          "step": 32,
+          "instruction": "MOV",
+          "device": "K2"
+        },
+        {
+          "step": 34,
+          "instruction": "MOV",
+          "device": "K3"
+        },
+        {
+          "step": 36,
+          "instruction": "OR",
+          "device": "M22"
+        },
+        {
+          "step": 37,
+          "instruction": "MOV",
+          "device": "K4"
+        },
+        {
+          "step": 39,
+          "instruction": "MOV",
+          "device": "K0"
+        }
+      ],
+      "jumps": []
+    },
+    {
+      "id": 2,
+      "name": "PC COMM L2",
+      "step_start": 40,
+      "step_end": 79,
+      "condition": [
+        {
+          "step": 41,
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "step": 43,
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "step": 45,
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "step": 47,
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "step": 49,
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "step": 51,
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "step": 53,
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "step": 55,
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "step": 57,
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "step": 59,
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "step": 61,
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "step": 63,
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "step": 65,
+          "instruction": "LD",
+          "device": "M32"
+        },
+        {
+          "step": 67,
+          "instruction": "LDI",
+          "device": "M32"
+        },
+        {
+          "step": 69,
+          "instruction": "LD",
+          "device": "M34"
+        },
+        {
+          "step": 71,
+          "instruction": "LD",
+          "device": "M35"
+        },
+        {
+          "step": 73,
+          "instruction": "LD",
+          "device": "M36"
+        },
+        {
+          "step": 75,
+          "instruction": "LD",
+          "device": "M37"
+        },
+        {
+          "step": 78,
+          "instruction": "LD",
+          "device": "M32"
+        }
+      ],
+      "actions": [
+        {
+          "step": 42,
+          "instruction": "MOV",
+          "device": "D8000"
+        },
+        {
+          "step": 44,
+          "instruction": "MOV",
+          "device": "D8001"
+        },
+        {
+          "step": 46,
+          "instruction": "DMOV",
+          "device": "D130"
+        },
+        {
+          "step": 48,
+          "instruction": "MOV",
+          "device": "D148"
+        },
+        {
+          "step": 50,
+          "instruction": "MOV",
+          "device": "D148"
+        },
+        {
+          "step": 52,
+          "instruction": "MOV",
+          "device": "D146"
+        },
+        {
+          "step": 54,
+          "instruction": "DMOV",
+          "device": "D172"
+        },
+        {
+          "step": 56,
+          "instruction": "DMOV",
+          "device": "D50"
+        },
+        {
+          "step": 58,
+          "instruction": "MOV",
+          "device": "K2"
+        },
+        {
+          "step": 60,
+          "instruction": "MOV",
+          "device": "K0"
+        },
+        {
+          "step": 62,
+          "instruction": "MOV",
+          "device": "K1"
+        },
+        {
+          "step": 64,
+          "instruction": "MOV",
+          "device": "K2"
+        },
+        {
+          "step": 66,
+          "instruction": "MOV",
+          "device": "K0"
+        },
+        {
+          "step": 68,
+          "instruction": "MOV",
+          "device": "K1"
+        },
+        {
+          "step": 70,
+          "instruction": "MOV",
+          "device": "K1"
+        },
+        {
+          "step": 72,
+          "instruction": "MOV",
+          "device": "K2"
+        },
+        {
+          "step": 74,
+          "instruction": "MOV",
+          "device": "K3"
+        },
+        {
+          "step": 76,
+          "instruction": "OR",
+          "device": "M38"
+        },
+        {
+          "step": 77,
+          "instruction": "MOV",
+          "device": "K4"
+        },
+        {
+          "step": 79,
+          "instruction": "MOV",
+          "device": "K0"
+        }
+      ],
+      "jumps": []
+    },
+    {
+      "id": 3,
+      "name": "GAS TYPE MAP",
+      "step_start": 80,
+      "step_end": 84,
+      "condition": [
+        {
+          "step": 81,
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "step": 83,
+          "instruction": "LD",
+          "device": "M0"
+        }
+      ],
+      "actions": [
+        {
+          "step": 82,
+          "instruction": "MOV",
+          "device": "D7000"
+        },
+        {
+          "step": 84,
+          "instruction": "MOV",
+          "device": "D8000"
+        }
+      ],
+      "jumps": []
+    },
+    {
+      "id": 4,
+      "name": "AUTO BARCODE",
+      "step_start": 85,
+      "step_end": 89,
+      "condition": [
+        {
+          "step": 86,
+          "instruction": "LDD>",
+          "device": "D7001"
+        },
+        {
+          "step": 88,
+          "instruction": "LDD>",
+          "device": "D8001"
+        }
+      ],
+      "actions": [
+        {
+          "step": 87,
+          "instruction": "BMOV",
+          "device": "D6870"
+        },
+        {
+          "step": 89,
+          "instruction": "BMOV",
+          "device": "D7870"
+        }
+      ],
+      "jumps": []
+    },
+    {
+      "id": 5,
+      "name": "VAC SPC DATA",
+      "step_start": 90,
+      "step_end": 94,
+      "condition": [
+        {
+          "step": 91,
+          "instruction": "LD",
+          "device": "M18"
+        },
+        {
+          "step": 93,
+          "instruction": "LD",
+          "device": "M34"
+        }
+      ],
+      "actions": [
+        {
+          "step": 92,
+          "instruction": "D*",
+          "device": "D160"
+        },
+        {
+          "step": 94,
+          "instruction": "D*",
+          "device": "D172"
+        }
+      ],
+      "jumps": []
+    },
+    {
+      "id": 6,
+      "name": "RESULT CODE",
+      "step_start": 95,
+      "step_end": 100,
+      "condition": [
+        {
+          "step": 96,
+          "instruction": "LD",
+          "device": "M24"
+        },
+        {
+          "step": 98,
+          "instruction": "LD",
+          "device": "M40"
+        }
+      ],
+      "actions": [
+        {
+          "step": 97,
+          "instruction": "MOV",
+          "device": "K1"
+        },
+        {
+          "step": 99,
+          "instruction": "MOV",
+          "device": "K1"
+        },
+        {
+          "step": 100,
+          "instruction": "END",
+          "device": ""
+        }
+      ],
+      "jumps": []
+    }
+  ],
+  "device_map": {
+    "M0": {
+      "type": "M",
+      "read_steps": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        17,
+        19,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        81,
+        83
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "D7000": {
+      "type": "D",
+      "read_steps": [
+        2,
+        82
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "D7001": {
+      "type": "D",
+      "read_steps": [
+        4,
+        86
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "D130": {
+      "type": "D",
+      "read_steps": [
+        6,
+        46
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "D142": {
+      "type": "D",
+      "read_steps": [
+        8,
+        10
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "D140": {
+      "type": "D",
+      "read_steps": [
+        12
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "D160": {
+      "type": "D",
+      "read_steps": [
+        14
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "D22": {
+      "type": "D",
+      "read_steps": [
+        16
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "K1": {
+      "type": "K",
+      "read_steps": [
+        18,
+        22,
+        28,
+        30,
+        62,
+        68,
+        70,
+        97,
+        99
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "K0": {
+      "type": "K",
+      "read_steps": [
+        20,
+        26,
+        39,
+        60,
+        66,
+        79
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "L3": {
+      "type": "L",
+      "read_steps": [
+        21,
+        23,
+        61,
+        63
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "K2": {
+      "type": "K",
+      "read_steps": [
+        24,
+        32,
+        58,
+        64,
+        72
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "M16": {
+      "type": "M",
+      "read_steps": [
+        25,
+        27,
+        38
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "M18": {
+      "type": "M",
+      "read_steps": [
+        29,
+        91
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "M19": {
+      "type": "M",
+      "read_steps": [
+        31
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "M20": {
+      "type": "M",
+      "read_steps": [
+        33
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "K3": {
+      "type": "K",
+      "read_steps": [
+        34,
+        74
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "M21": {
+      "type": "M",
+      "read_steps": [
+        35
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "M22": {
+      "type": "M",
+      "read_steps": [
+        36
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "K4": {
+      "type": "K",
+      "read_steps": [
+        37,
+        77
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "D8000": {
+      "type": "D",
+      "read_steps": [
+        42,
+        84
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "D8001": {
+      "type": "D",
+      "read_steps": [
+        44,
+        88
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "D148": {
+      "type": "D",
+      "read_steps": [
+        48,
+        50
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "D146": {
+      "type": "D",
+      "read_steps": [
+        52
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "D172": {
+      "type": "D",
+      "read_steps": [
+        54
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "D50": {
+      "type": "D",
+      "read_steps": [
+        56
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "M32": {
+      "type": "M",
+      "read_steps": [
+        65,
+        67,
+        78
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "M34": {
+      "type": "M",
+      "read_steps": [
+        69,
+        93
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "M35": {
+      "type": "M",
+      "read_steps": [
+        71
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "M36": {
+      "type": "M",
+      "read_steps": [
+        73
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "M37": {
+      "type": "M",
+      "read_steps": [
+        75
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "M38": {
+      "type": "M",
+      "read_steps": [
+        76
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "D6870": {
+      "type": "D",
+      "read_steps": [
+        87
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "D7870": {
+      "type": "D",
+      "read_steps": [
+        89
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "M24": {
+      "type": "M",
+      "read_steps": [
+        96
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "M40": {
+      "type": "M",
+      "read_steps": [
+        98
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    }
+  },
+  "warnings": [
+    {
+      "type": "LATCH_DEVICE",
+      "device": "L3",
+      "message": "L3: L device is battery-backed latch relay"
+    },
+    {
+      "type": "DOUBLE_COIL_CANDIDATE",
+      "device": "M0",
+      "message": "M0 appears in 3 different blocks"
+    },
+    {
+      "type": "DOUBLE_COIL_CANDIDATE",
+      "device": "D7000",
+      "message": "D7000 appears in 2 different blocks"
+    },
+    {
+      "type": "DOUBLE_COIL_CANDIDATE",
+      "device": "D7001",
+      "message": "D7001 appears in 2 different blocks"
+    },
+    {
+      "type": "DOUBLE_COIL_CANDIDATE",
+      "device": "D130",
+      "message": "D130 appears in 2 different blocks"
+    },
+    {
+      "type": "DOUBLE_COIL_CANDIDATE",
+      "device": "D160",
+      "message": "D160 appears in 2 different blocks"
+    },
+    {
+      "type": "DOUBLE_COIL_CANDIDATE",
+      "device": "K1",
+      "message": "K1 appears in 3 different blocks"
+    },
+    {
+      "type": "DOUBLE_COIL_CANDIDATE",
+      "device": "K0",
+      "message": "K0 appears in 2 different blocks"
+    },
+    {
+      "type": "DOUBLE_COIL_CANDIDATE",
+      "device": "L3",
+      "message": "L3 appears in 2 different blocks"
+    },
+    {
+      "type": "DOUBLE_COIL_CANDIDATE",
+      "device": "K2",
+      "message": "K2 appears in 2 different blocks"
+    },
+    {
+      "type": "DOUBLE_COIL_CANDIDATE",
+      "device": "M18",
+      "message": "M18 appears in 2 different blocks"
+    },
+    {
+      "type": "DOUBLE_COIL_CANDIDATE",
+      "device": "K3",
+      "message": "K3 appears in 2 different blocks"
+    },
+    {
+      "type": "DOUBLE_COIL_CANDIDATE",
+      "device": "K4",
+      "message": "K4 appears in 2 different blocks"
+    },
+    {
+      "type": "DOUBLE_COIL_CANDIDATE",
+      "device": "D8000",
+      "message": "D8000 appears in 2 different blocks"
+    },
+    {
+      "type": "DOUBLE_COIL_CANDIDATE",
+      "device": "D8001",
+      "message": "D8001 appears in 2 different blocks"
+    },
+    {
+      "type": "DOUBLE_COIL_CANDIDATE",
+      "device": "D172",
+      "message": "D172 appears in 2 different blocks"
+    },
+    {
+      "type": "DOUBLE_COIL_CANDIDATE",
+      "device": "M34",
+      "message": "M34 appears in 2 different blocks"
+    }
+  ],
+  "test_cases": [
+    {
+      "id": "TC_001",
+      "name": "PC COMM L1 실행 검증",
+      "description": "Step 0~39: PC COMM L1 블록 검증",
+      "precondition": {
+        "M0": 1,
+        "L3": 0,
+        "M16": 1,
+        "M18": 1,
+        "M19": 1,
+        "M20": 1,
+        "M21": 1
+      },
+      "expected": {},
+      "plc_write": [
+        {
+          "device": "M0",
+          "value": 1
+        },
+        {
+          "device": "L3",
+          "value": 0
+        },
+        {
+          "device": "M16",
+          "value": 1
+        },
+        {
+          "device": "M18",
+          "value": 1
+        },
+        {
+          "device": "M19",
+          "value": 1
+        },
+        {
+          "device": "M20",
+          "value": 1
+        },
+        {
+          "device": "M21",
+          "value": 1
+        }
+      ],
+      "plc_read": [
+        "M0",
+        "L3",
+        "M16",
+        "M18",
+        "M19",
+        "M20",
+        "M21"
+      ]
+    },
+    {
+      "id": "TC_002",
+      "name": "PC COMM L2 실행 검증",
+      "description": "Step 40~79: PC COMM L2 블록 검증",
+      "precondition": {
+        "M0": 1,
+        "L3": 0,
+        "M32": 1,
+        "M34": 1,
+        "M35": 1,
+        "M36": 1,
+        "M37": 1
+      },
+      "expected": {},
+      "plc_write": [
+        {
+          "device": "M0",
+          "value": 1
+        },
+        {
+          "device": "L3",
+          "value": 0
+        },
+        {
+          "device": "M32",
+          "value": 1
+        },
+        {
+          "device": "M34",
+          "value": 1
+        },
+        {
+          "device": "M35",
+          "value": 1
+        },
+        {
+          "device": "M36",
+          "value": 1
+        },
+        {
+          "device": "M37",
+          "value": 1
+        }
+      ],
+      "plc_read": [
+        "M0",
+        "L3",
+        "M32",
+        "M34",
+        "M35",
+        "M36",
+        "M37"
+      ]
+    },
+    {
+      "id": "TC_003",
+      "name": "GAS TYPE MAP 실행 검증",
+      "description": "Step 80~84: GAS TYPE MAP 블록 검증",
+      "precondition": {
+        "M0": 1
+      },
+      "expected": {},
+      "plc_write": [
+        {
+          "device": "M0",
+          "value": 1
+        }
+      ],
+      "plc_read": [
+        "M0"
+      ]
+    },
+    {
+      "id": "TC_004",
+      "name": "AUTO BARCODE 실행 검증",
+      "description": "Step 85~89: AUTO BARCODE 블록 검증",
+      "precondition": {},
+      "expected": {},
+      "plc_write": [],
+      "plc_read": []
+    },
+    {
+      "id": "TC_005",
+      "name": "VAC SPC DATA 실행 검증",
+      "description": "Step 90~94: VAC SPC DATA 블록 검증",
+      "precondition": {
+        "M18": 1,
+        "M34": 1
+      },
+      "expected": {},
+      "plc_write": [
+        {
+          "device": "M18",
+          "value": 1
+        },
+        {
+          "device": "M34",
+          "value": 1
+        }
+      ],
+      "plc_read": [
+        "M18",
+        "M34"
+      ]
+    },
+    {
+      "id": "TC_006",
+      "name": "RESULT CODE 실행 검증",
+      "description": "Step 95~100: RESULT CODE 블록 검증",
+      "precondition": {
+        "M24": 1,
+        "M40": 1
+      },
+      "expected": {},
+      "plc_write": [
+        {
+          "device": "M24",
+          "value": 1
+        },
+        {
+          "device": "M40",
+          "value": 1
+        }
+      ],
+      "plc_read": [
+        "M24",
+        "M40"
+      ]
+    }
+  ]
+}

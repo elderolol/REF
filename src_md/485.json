@@ -1,0 +1,298 @@
+{
+  "meta": {
+    "source_file": "485.csv",
+    "cpu": "Q03UDV",
+    "total_steps": 25,
+    "block_count": 1,
+    "generated": "2026-06-02"
+  },
+  "blocks": [
+    {
+      "id": 1,
+      "name": "RS-485 DATA MIRROR",
+      "step_start": 0,
+      "step_end": 25,
+      "condition": [
+        {
+          "step": 1,
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "step": 3,
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "step": 5,
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "step": 7,
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "step": 9,
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "step": 11,
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "step": 13,
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "step": 15,
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "step": 17,
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "step": 19,
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "step": 21,
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "step": 23,
+          "instruction": "LD",
+          "device": "M0"
+        }
+      ],
+      "actions": [
+        {
+          "step": 2,
+          "instruction": "MOV",
+          "device": "D150"
+        },
+        {
+          "step": 4,
+          "instruction": "MOV",
+          "device": "D154"
+        },
+        {
+          "step": 6,
+          "instruction": "DMOV",
+          "device": "D158"
+        },
+        {
+          "step": 8,
+          "instruction": "MOV",
+          "device": "D162"
+        },
+        {
+          "step": 10,
+          "instruction": "MOV",
+          "device": "D166"
+        },
+        {
+          "step": 12,
+          "instruction": "DMOV",
+          "device": "D170"
+        },
+        {
+          "step": 14,
+          "instruction": "DMOV",
+          "device": "D160"
+        },
+        {
+          "step": 16,
+          "instruction": "MOV",
+          "device": "D156"
+        },
+        {
+          "step": 18,
+          "instruction": "MOV",
+          "device": "D152"
+        },
+        {
+          "step": 20,
+          "instruction": "DMOV",
+          "device": "D172"
+        },
+        {
+          "step": 22,
+          "instruction": "MOV",
+          "device": "D168"
+        },
+        {
+          "step": 24,
+          "instruction": "MOV",
+          "device": "D164"
+        },
+        {
+          "step": 25,
+          "instruction": "END",
+          "device": ""
+        }
+      ],
+      "jumps": []
+    }
+  ],
+  "device_map": {
+    "M0": {
+      "type": "M",
+      "read_steps": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        17,
+        19,
+        21,
+        23
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "D150": {
+      "type": "D",
+      "read_steps": [
+        2
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "D154": {
+      "type": "D",
+      "read_steps": [
+        4
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "D158": {
+      "type": "D",
+      "read_steps": [
+        6
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "D162": {
+      "type": "D",
+      "read_steps": [
+        8
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "D166": {
+      "type": "D",
+      "read_steps": [
+        10
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "D170": {
+      "type": "D",
+      "read_steps": [
+        12
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "D160": {
+      "type": "D",
+      "read_steps": [
+        14
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "D156": {
+      "type": "D",
+      "read_steps": [
+        16
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "D152": {
+      "type": "D",
+      "read_steps": [
+        18
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "D172": {
+      "type": "D",
+      "read_steps": [
+        20
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "D168": {
+      "type": "D",
+      "read_steps": [
+        22
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "D164": {
+      "type": "D",
+      "read_steps": [
+        24
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    }
+  },
+  "warnings": [],
+  "test_cases": [
+    {
+      "id": "TC_001",
+      "name": "RS-485 DATA MIRROR 실행 검증",
+      "description": "Step 0~25: RS-485 DATA MIRROR 블록 검증",
+      "precondition": {
+        "M0": 1
+      },
+      "expected": {},
+      "plc_write": [
+        {
+          "device": "M0",
+          "value": 1
+        }
+      ],
+      "plc_read": [
+        "M0"
+      ]
+    }
+  ]
+}

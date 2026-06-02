@@ -1,0 +1,17 @@
+﻿C:\WorkSpace\REF\Notes\GX_WORKS2_IL_Spec.md
+C:\WorkSpace\REF\Notes\OPERATION_SCENARIO.md
+C:\WorkSpace\REF\Notes\PLC_PROGRAM_STRUCTURE.md
+C:\WorkSpace\REF\Notes\alarm_per_line_plan.md
+C:\WorkSpace\REF\src_md\485.md
+C:\WorkSpace\REF\src_md\MAIN.md
+C:\WorkSpace\REF\src_md\ad.md
+C:\WorkSpace\REF\src_md\alarm.md
+C:\WorkSpace\REF\src_md\gmes.md
+C:\WorkSpace\REF\src_md\gunvac.md
+C:\WorkSpace\REF\src_md\idata.md
+C:\WorkSpace\REF\src_md\refinj.md
+C:\WorkSpace\REF\src_md\setting.md
+C:\WorkSpace\REF\src_md\spc.md
+C:\WorkSpace\REF\src_md\unitvac.md
+C:\WorkSpace\REF\src_md\vacchec.md
+C:\WorkSpace\REF\Notes\MELSEC_QL_Programming_Manual(Common_Instruction).pdf

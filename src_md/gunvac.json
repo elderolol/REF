@@ -1,0 +1,987 @@
+{
+  "meta": {
+    "source_file": "gunvac.csv",
+    "cpu": "Q03UDV",
+    "total_steps": 72,
+    "block_count": 2,
+    "generated": "2026-06-02"
+  },
+  "blocks": [
+    {
+      "id": 1,
+      "name": "GUN VACUUM (Line 0)",
+      "step_start": 0,
+      "step_end": 35,
+      "condition": [
+        {
+          "step": 1,
+          "instruction": "LD",
+          "device": "M18"
+        },
+        {
+          "step": 3,
+          "instruction": "LD",
+          "device": "M18"
+        },
+        {
+          "step": 5,
+          "instruction": "LD",
+          "device": "M18"
+        },
+        {
+          "step": 10,
+          "instruction": "LD",
+          "device": "M18"
+        },
+        {
+          "step": 11,
+          "instruction": "LD",
+          "device": "L114"
+        },
+        {
+          "step": 13,
+          "instruction": "LD",
+          "device": "L115"
+        },
+        {
+          "step": 20,
+          "instruction": "LD",
+          "device": "M18"
+        },
+        {
+          "step": 26,
+          "instruction": "LD",
+          "device": "M18"
+        },
+        {
+          "step": 30,
+          "instruction": "LD",
+          "device": "T7"
+        }
+      ],
+      "actions": [
+        {
+          "step": 2,
+          "instruction": "OUT",
+          "device": "T0"
+        },
+        {
+          "step": 4,
+          "instruction": "OUT",
+          "device": "M49"
+        },
+        {
+          "step": 6,
+          "instruction": "ANI",
+          "device": "L81"
+        },
+        {
+          "step": 7,
+          "instruction": "SET",
+          "device": "M16"
+        },
+        {
+          "step": 8,
+          "instruction": "RST",
+          "device": "M18"
+        },
+        {
+          "step": 9,
+          "instruction": "RST",
+          "device": "M49"
+        },
+        {
+          "step": 12,
+          "instruction": "ANI",
+          "device": "M772"
+        },
+        {
+          "step": 14,
+          "instruction": "ANI",
+          "device": "M773"
+        },
+        {
+          "step": 15,
+          "instruction": "ORB",
+          "device": ""
+        },
+        {
+          "step": 16,
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "step": 17,
+          "instruction": "SET",
+          "device": "L17"
+        },
+        {
+          "step": 18,
+          "instruction": "RST",
+          "device": "M49"
+        },
+        {
+          "step": 19,
+          "instruction": "RST",
+          "device": "M18"
+        },
+        {
+          "step": 21,
+          "instruction": "AND",
+          "device": "T0"
+        },
+        {
+          "step": 22,
+          "instruction": "ANDD<=",
+          "device": "D160"
+        },
+        {
+          "step": 23,
+          "instruction": "RST",
+          "device": "M49"
+        },
+        {
+          "step": 24,
+          "instruction": "SET",
+          "device": "L16"
+        },
+        {
+          "step": 25,
+          "instruction": "RST",
+          "device": "M18"
+        },
+        {
+          "step": 27,
+          "instruction": "AND",
+          "device": "T0"
+        },
+        {
+          "step": 28,
+          "instruction": "ANDD>",
+          "device": "D160"
+        },
+        {
+          "step": 29,
+          "instruction": "OUT",
+          "device": "T7"
+        },
+        {
+          "step": 31,
+          "instruction": "SET",
+          "device": "L17"
+        },
+        {
+          "step": 32,
+          "instruction": "SET",
+          "device": "L66"
+        },
+        {
+          "step": 33,
+          "instruction": "SET",
+          "device": "M76"
+        },
+        {
+          "step": 34,
+          "instruction": "RST",
+          "device": "M49"
+        },
+        {
+          "step": 35,
+          "instruction": "RST",
+          "device": "M18"
+        }
+      ],
+      "jumps": []
+    },
+    {
+      "id": 2,
+      "name": "GUN VACUUM (Line 1)",
+      "step_start": 36,
+      "step_end": 72,
+      "condition": [
+        {
+          "step": 37,
+          "instruction": "LD",
+          "device": "M34"
+        },
+        {
+          "step": 39,
+          "instruction": "LD",
+          "device": "M34"
+        },
+        {
+          "step": 41,
+          "instruction": "LD",
+          "device": "M34"
+        },
+        {
+          "step": 46,
+          "instruction": "LD",
+          "device": "M34"
+        },
+        {
+          "step": 47,
+          "instruction": "LD",
+          "device": "L114"
+        },
+        {
+          "step": 49,
+          "instruction": "LD",
+          "device": "L115"
+        },
+        {
+          "step": 56,
+          "instruction": "LD",
+          "device": "M34"
+        },
+        {
+          "step": 62,
+          "instruction": "LD",
+          "device": "M34"
+        },
+        {
+          "step": 66,
+          "instruction": "LD",
+          "device": "T7"
+        }
+      ],
+      "actions": [
+        {
+          "step": 38,
+          "instruction": "OUT",
+          "device": "T0"
+        },
+        {
+          "step": 40,
+          "instruction": "OUT",
+          "device": "M65"
+        },
+        {
+          "step": 42,
+          "instruction": "ANI",
+          "device": "L97"
+        },
+        {
+          "step": 43,
+          "instruction": "SET",
+          "device": "M32"
+        },
+        {
+          "step": 44,
+          "instruction": "RST",
+          "device": "M34"
+        },
+        {
+          "step": 45,
+          "instruction": "RST",
+          "device": "M65"
+        },
+        {
+          "step": 48,
+          "instruction": "ANI",
+          "device": "M788"
+        },
+        {
+          "step": 50,
+          "instruction": "ANI",
+          "device": "M789"
+        },
+        {
+          "step": 51,
+          "instruction": "ORB",
+          "device": ""
+        },
+        {
+          "step": 52,
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "step": 53,
+          "instruction": "SET",
+          "device": "L33"
+        },
+        {
+          "step": 54,
+          "instruction": "RST",
+          "device": "M65"
+        },
+        {
+          "step": 55,
+          "instruction": "RST",
+          "device": "M34"
+        },
+        {
+          "step": 57,
+          "instruction": "AND",
+          "device": "T0"
+        },
+        {
+          "step": 58,
+          "instruction": "ANDD<=",
+          "device": "D172"
+        },
+        {
+          "step": 59,
+          "instruction": "RST",
+          "device": "M65"
+        },
+        {
+          "step": 60,
+          "instruction": "SET",
+          "device": "L32"
+        },
+        {
+          "step": 61,
+          "instruction": "RST",
+          "device": "M34"
+        },
+        {
+          "step": 63,
+          "instruction": "AND",
+          "device": "T0"
+        },
+        {
+          "step": 64,
+          "instruction": "ANDD>",
+          "device": "D172"
+        },
+        {
+          "step": 65,
+          "instruction": "OUT",
+          "device": "T7"
+        },
+        {
+          "step": 67,
+          "instruction": "SET",
+          "device": "L33"
+        },
+        {
+          "step": 68,
+          "instruction": "SET",
+          "device": "L66"
+        },
+        {
+          "step": 69,
+          "instruction": "SET",
+          "device": "M76"
+        },
+        {
+          "step": 70,
+          "instruction": "RST",
+          "device": "M65"
+        },
+        {
+          "step": 71,
+          "instruction": "RST",
+          "device": "M34"
+        },
+        {
+          "step": 72,
+          "instruction": "END",
+          "device": ""
+        }
+      ],
+      "jumps": []
+    }
+  ],
+  "device_map": {
+    "M18": {
+      "type": "M",
+      "read_steps": [
+        1,
+        3,
+        5,
+        10,
+        20,
+        26
+      ],
+      "set_steps": [],
+      "rst_steps": [
+        8,
+        19,
+        25,
+        35
+      ],
+      "out_steps": []
+    },
+    "T0": {
+      "type": "T",
+      "read_steps": [
+        21,
+        27,
+        57,
+        63
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": [
+        2,
+        38
+      ]
+    },
+    "M49": {
+      "type": "M",
+      "read_steps": [],
+      "set_steps": [],
+      "rst_steps": [
+        9,
+        18,
+        23,
+        34
+      ],
+      "out_steps": [
+        4
+      ]
+    },
+    "L81": {
+      "type": "L",
+      "read_steps": [
+        6
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "M16": {
+      "type": "M",
+      "read_steps": [],
+      "set_steps": [
+        7
+      ],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "L114": {
+      "type": "L",
+      "read_steps": [
+        11,
+        47
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "M772": {
+      "type": "M",
+      "read_steps": [
+        12
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "L115": {
+      "type": "L",
+      "read_steps": [
+        13,
+        49
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "M773": {
+      "type": "M",
+      "read_steps": [
+        14
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "L17": {
+      "type": "L",
+      "read_steps": [],
+      "set_steps": [
+        17,
+        31
+      ],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "D160": {
+      "type": "D",
+      "read_steps": [
+        22,
+        28
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "L16": {
+      "type": "L",
+      "read_steps": [],
+      "set_steps": [
+        24
+      ],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "T7": {
+      "type": "T",
+      "read_steps": [
+        30,
+        66
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": [
+        29,
+        65
+      ]
+    },
+    "L66": {
+      "type": "L",
+      "read_steps": [],
+      "set_steps": [
+        32,
+        68
+      ],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "M76": {
+      "type": "M",
+      "read_steps": [],
+      "set_steps": [
+        33,
+        69
+      ],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "M34": {
+      "type": "M",
+      "read_steps": [
+        37,
+        39,
+        41,
+        46,
+        56,
+        62
+      ],
+      "set_steps": [],
+      "rst_steps": [
+        44,
+        55,
+        61,
+        71
+      ],
+      "out_steps": []
+    },
+    "M65": {
+      "type": "M",
+      "read_steps": [],
+      "set_steps": [],
+      "rst_steps": [
+        45,
+        54,
+        59,
+        70
+      ],
+      "out_steps": [
+        40
+      ]
+    },
+    "L97": {
+      "type": "L",
+      "read_steps": [
+        42
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "M32": {
+      "type": "M",
+      "read_steps": [],
+      "set_steps": [
+        43
+      ],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "M788": {
+      "type": "M",
+      "read_steps": [
+        48
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "M789": {
+      "type": "M",
+      "read_steps": [
+        50
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "L33": {
+      "type": "L",
+      "read_steps": [],
+      "set_steps": [
+        53,
+        67
+      ],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "D172": {
+      "type": "D",
+      "read_steps": [
+        58,
+        64
+      ],
+      "set_steps": [],
+      "rst_steps": [],
+      "out_steps": []
+    },
+    "L32": {
+      "type": "L",
+      "read_steps": [],
+      "set_steps": [
+        60
+      ],
+      "rst_steps": [],
+      "out_steps": []
+    }
+  },
+  "warnings": [
+    {
+      "type": "NO_SET",
+      "device": "M18",
+      "message": "M18: RST at step 8 but no SET found"
+    },
+    {
+      "type": "LATCH_DEVICE",
+      "device": "L81",
+      "message": "L81: L device is battery-backed latch relay"
+    },
+    {
+      "type": "NO_RST",
+      "device": "M16",
+      "message": "M16: SET at step 7 but no RST found"
+    },
+    {
+      "type": "LATCH_DEVICE",
+      "device": "L114",
+      "message": "L114: L device is battery-backed latch relay"
+    },
+    {
+      "type": "LATCH_DEVICE",
+      "device": "L115",
+      "message": "L115: L device is battery-backed latch relay"
+    },
+    {
+      "type": "NO_RST",
+      "device": "L17",
+      "message": "L17: SET at step 17 but no RST found"
+    },
+    {
+      "type": "LATCH_DEVICE",
+      "device": "L17",
+      "message": "L17: L device is battery-backed latch relay"
+    },
+    {
+      "type": "NO_RST",
+      "device": "L16",
+      "message": "L16: SET at step 24 but no RST found"
+    },
+    {
+      "type": "LATCH_DEVICE",
+      "device": "L16",
+      "message": "L16: L device is battery-backed latch relay"
+    },
+    {
+      "type": "NO_RST",
+      "device": "L66",
+      "message": "L66: SET at step 32 but no RST found"
+    },
+    {
+      "type": "LATCH_DEVICE",
+      "device": "L66",
+      "message": "L66: L device is battery-backed latch relay"
+    },
+    {
+      "type": "NO_RST",
+      "device": "M76",
+      "message": "M76: SET at step 33 but no RST found"
+    },
+    {
+      "type": "NO_SET",
+      "device": "M34",
+      "message": "M34: RST at step 44 but no SET found"
+    },
+    {
+      "type": "LATCH_DEVICE",
+      "device": "L97",
+      "message": "L97: L device is battery-backed latch relay"
+    },
+    {
+      "type": "NO_RST",
+      "device": "M32",
+      "message": "M32: SET at step 43 but no RST found"
+    },
+    {
+      "type": "NO_RST",
+      "device": "L33",
+      "message": "L33: SET at step 53 but no RST found"
+    },
+    {
+      "type": "LATCH_DEVICE",
+      "device": "L33",
+      "message": "L33: L device is battery-backed latch relay"
+    },
+    {
+      "type": "NO_RST",
+      "device": "L32",
+      "message": "L32: SET at step 60 but no RST found"
+    },
+    {
+      "type": "LATCH_DEVICE",
+      "device": "L32",
+      "message": "L32: L device is battery-backed latch relay"
+    },
+    {
+      "type": "DOUBLE_COIL_CANDIDATE",
+      "device": "T0",
+      "message": "T0 appears in 2 different blocks"
+    },
+    {
+      "type": "DOUBLE_COIL_CANDIDATE",
+      "device": "L114",
+      "message": "L114 appears in 2 different blocks"
+    },
+    {
+      "type": "DOUBLE_COIL_CANDIDATE",
+      "device": "L115",
+      "message": "L115 appears in 2 different blocks"
+    },
+    {
+      "type": "DOUBLE_COIL_CANDIDATE",
+      "device": "T7",
+      "message": "T7 appears in 2 different blocks"
+    },
+    {
+      "type": "DOUBLE_COIL_CANDIDATE",
+      "device": "L66",
+      "message": "L66 appears in 2 different blocks"
+    },
+    {
+      "type": "DOUBLE_COIL_CANDIDATE",
+      "device": "M76",
+      "message": "M76 appears in 2 different blocks"
+    }
+  ],
+  "test_cases": [
+    {
+      "id": "TC_001",
+      "name": "GUN VACUUM (Line 0) 실행 검증",
+      "description": "Step 0~35: GUN VACUUM (Line 0) 블록 검증",
+      "precondition": {
+        "M18": 1,
+        "L114": 1,
+        "L115": 1,
+        "T7": 1
+      },
+      "expected": {
+        "M16": 1,
+        "M18": 0,
+        "M49": 0,
+        "L17": 1,
+        "L16": 1,
+        "L66": 1,
+        "M76": 1
+      },
+      "plc_write": [
+        {
+          "device": "M16",
+          "value": 0
+        },
+        {
+          "device": "M18",
+          "value": 1
+        },
+        {
+          "device": "M49",
+          "value": 1
+        },
+        {
+          "device": "L17",
+          "value": 0
+        },
+        {
+          "device": "M49",
+          "value": 1
+        },
+        {
+          "device": "M18",
+          "value": 1
+        },
+        {
+          "device": "M49",
+          "value": 1
+        },
+        {
+          "device": "L16",
+          "value": 0
+        },
+        {
+          "device": "M18",
+          "value": 1
+        },
+        {
+          "device": "L17",
+          "value": 0
+        },
+        {
+          "device": "L66",
+          "value": 0
+        },
+        {
+          "device": "M76",
+          "value": 0
+        },
+        {
+          "device": "M49",
+          "value": 1
+        },
+        {
+          "device": "M18",
+          "value": 1
+        },
+        {
+          "device": "L114",
+          "value": 1
+        },
+        {
+          "device": "L115",
+          "value": 1
+        },
+        {
+          "device": "T7",
+          "value": 1
+        }
+      ],
+      "plc_read": [
+        "M16",
+        "M18",
+        "M49",
+        "L17",
+        "L16",
+        "L66",
+        "M76",
+        "L114",
+        "L115",
+        "T7"
+      ]
+    },
+    {
+      "id": "TC_002",
+      "name": "GUN VACUUM (Line 1) 실행 검증",
+      "description": "Step 36~72: GUN VACUUM (Line 1) 블록 검증",
+      "precondition": {
+        "M34": 1,
+        "L114": 1,
+        "L115": 1,
+        "T7": 1
+      },
+      "expected": {
+        "M32": 1,
+        "M34": 0,
+        "M65": 0,
+        "L33": 1,
+        "L32": 1,
+        "L66": 1,
+        "M76": 1
+      },
+      "plc_write": [
+        {
+          "device": "M32",
+          "value": 0
+        },
+        {
+          "device": "M34",
+          "value": 1
+        },
+        {
+          "device": "M65",
+          "value": 1
+        },
+        {
+          "device": "L33",
+          "value": 0
+        },
+        {
+          "device": "M65",
+          "value": 1
+        },
+        {
+          "device": "M34",
+          "value": 1
+        },
+        {
+          "device": "M65",
+          "value": 1
+        },
+        {
+          "device": "L32",
+          "value": 0
+        },
+        {
+          "device": "M34",
+          "value": 1
+        },
+        {
+          "device": "L33",
+          "value": 0
+        },
+        {
+          "device": "L66",
+          "value": 0
+        },
+        {
+          "device": "M76",
+          "value": 0
+        },
+        {
+          "device": "M65",
+          "value": 1
+        },
+        {
+          "device": "M34",
+          "value": 1
+        },
+        {
+          "device": "L114",
+          "value": 1
+        },
+        {
+          "device": "L115",
+          "value": 1
+        },
+        {
+          "device": "T7",
+          "value": 1
+        }
+      ],
+      "plc_read": [
+        "M32",
+        "M34",
+        "M65",
+        "L33",
+        "L32",
+        "L66",
+        "M76",
+        "L114",
+        "L115",
+        "T7"
+      ]
+    }
+  ]
+}

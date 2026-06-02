@@ -1,4 +1,4 @@
-# REFRIGER CHARGING MACHINE — PLC Program Structure Design
+﻿# REFRIGER CHARGING MACHINE — PLC Program Structure Design
 
 > **Target PLC**: Mitsubishi QCPU (Q mode) Q03UDV  
 > **HMI Spec**: REFRIGER_CHARGING_MACHINE.md  
@@ -171,8 +171,9 @@ REF/
 | POU | 책임 | 실행 조건 |
 |---|---|---|
 | **idata.csv** | X→M 매핑, 초기 기동 시 D/T 초기화, 상시 ON 처리 | Always ON |
-| **gmes.csv** | 자동/수동 모드, 메인 시퀀스 스텝 제어, 각 서브시퀀스 기동/완료/실패 인터페이스, 사이클 완료 판정 | Always ON |
-| **setting.csv** | 파라미터 화면 값 ↔ PLC D레지스터, 사용자 설정(건별) ↔ PLC D레지스터, 설정값 범위 체크 | Always ON |
+| **gmes.csv** | PC 통신 영역 갱신 (D7000~D7239 L1, D8000~D8239 L2) — Gas Type/Result/Process Code/SPC Data | Always ON |
+| **MAIN.csv** | Auto/Manual 모드 전환, Line/Gun 선택, Step State Machine, Interlock, READY/START, STOP/EMG, Lamp 제어 | Always ON |
+| **setting.csv** | Config(D270/D272) → D274 계산, Line별 Preset Injection Table(D60~D84 L0, D88~D112 L1) 관리 | Always ON |
 | **gunvac.csv** | 건 진공용 솔레노이드 ON, 진공 시간 T카운트, 진공도 도달 체크, 타임아웃 알람 | 진공 스텝 진입 시 |
 | **unitvac.csv** | 유닛 진공용 솔레노이드 ON, 진공 시간 T카운트, 진공도 도달 체크, 타임아웃 알람 | 진공 스텝 진입 시 |
 | **vacchec.csv** | 진공 밸브 CLOSE 후 ΔP 감시, 리크 판정 (ΔP > 허용치 → 알람) | 진공 체크 스텝 진입 시 |
@@ -390,13 +391,13 @@ L40(EMG Stop)이 ON이면 전체 정지.
 |---|---|---|---|
 | **idata.csv** | M300~M31F(←input.csv), D270~D276(Config) | M0~M2(System), L0(InitDone), X→M / M→Y 매핑 | LD, OUT, MOV, SET, RST |
 | **gmes.csv** | M10~M28(Step), L10~L29(Done/NG), M400~M416(HMI), L50~L65(Interlock) | M4C~M4F(Lamp), M10~M28(Step), L10~L29(Done/NG), L70~L71(Line Sel) | LD=, AND=, OR=, SET, RST, OUT, MOV, CJ, BMOV, FMOV, **CJ**(D270=1→L1 Skip) |
-| **setting.csv** | D0~D28(Param L0), D30~D56(Param L1), D60~D115(User×4) | D0~D28, D30~D56, D60~D115 | DMOV, MOV, LD= |
-| **gunvac.csv** | M12/M22(Step), L51/L61(Safety), D2/D32, D22/D50, Vacuum EU(D160/D172) | M31/M41(Vac SOL), T0, L10/L20(Done), L11/L21(NG) | LD, AND, OUT, MOV, DMOV, LDD<=, SET, RST, TMR |
-| **unitvac.csv** | M13/M23(Step), L51/L61(Safety), D4/D34, D22/D50, Vacuum EU | M31+M32/M41+M42(Vac+Stem), T1, L12/L22(Done), L13/L23(NG) | LD, AND, OUT, MOV, DMOV, LDD<=, SET, RST, TMR |
-| **vacchec.csv** | M14/M24(Step), D6/D36, D24/D52, Vacuum EU | T2, L14/L24(Done), L15/L25(NG), D160/D172(ΔP) | LD, AND, MOV, DMOV, D-, LDD<=, SET, RST, TMR |
-| **refinj.csv** | M15~M16/M25~M26(Step), D8~D10/D38~D40, D60~D115(User), Gun Type(D62/D76/D90/D104) | M34~M3B/M44~M4B(Valves), T4/T5/T6, L16/L26(Done), L17/L27(NG), D124(Disp), M60~M63(Active) | LD, AND, D+, D-, D*, D/, LDD=, LDD<=, LDD>=, MOV, DMOV, SET, RST, TMR, **CJ**(Type 분기) |
-| **alarm.csv** | L40~L4F(Alarm latch), M403(Reset), M404(Buzzer Stop) | M4C(Buzzer), M4E/M4F(Lamp R/Y), L40~L4F | LD, OR, SET, RST, OUT, TMR |
-| **ad.csv** | D150~D173(2 Line Raw) | D152~D173(EU), D138~D148(Display Mirror) | LD, MOV, DMOV, D*, D/, D+, D- |
-| **485.csv** | RS-485 Buffer | D180~D269(2 Line PC/Work), M500~M504 | LD, MOV, AND=, SET, RST |
-| **spc.csv** | L18/L28(CycleDone×2), M60~M63(Inj Active) | D280~D289(SPC), L80~L8F(Flag) | LD, D+, DMOV, LDD>=, SET |
+| **setting.csv** | D60~D115(Preset Table) | D274(Total Gun) | MOV, D* |
+| **gunvac.csv** | M12/M22(Step), L51/L61(Safety), D2/D32, D22/D50, Vacuum EU(D160/D172) | M31/M41(Vac SOL), T0, L10/L20(Done), L11/L21(NG) | LD, AND, OUT, MOV, DMOV, LDD<=, SET, RST, OUT |
+| **unitvac.csv** | M13/M23(Step), L51/L61(Safety), D4/D34, D22/D50, Vacuum EU | M31+M32/M41+M42(Vac+Stem), T1, L12/L22(Done), L13/L23(NG) | LD, AND, OUT, MOV, DMOV, LDD<=, SET, RST, OUT |
+| **vacchec.csv** | M14/M24(Step), D6/D36, D24/D52, Vacuum EU | T2, L14/L24(Done), L15/L25(NG), D160/D172(ΔP) | LD, AND, MOV, DMOV, D-, LDD<=, SET, RST, OUT |
+| **refinj.csv** | M15~M16/M25~M26(Step), D8~D10/D38~D40, D60~D115(User), Gun Type(D62/D76/D90/D104) | M34~M3B/M44~M4B(Valves), T4/T5/T6, L16/L26(Done), L17/L27(NG), D124(Disp), M60~M63(Active) | LD, AND, D+, D-, D*, D/, LDD=, LDD<=, LDD>=, MOV, DMOV, SET, RST, OUT, **CJ**(Type 분기) |
+| **alarm.csv** | L40~L4F(Alarm latch), M403(Reset), M404(Buzzer Stop) | M4C(Buzzer), M4E/M4F(Lamp R/Y), L40~L4F | LD, OR, SET, RST, OUT, OUT |
+| **ad.csv** | (User Fill — 현재 END only) | — | — |
+| **485.csv** | (User Fill — 현재 END only) | — | — |
+| **spc.csv** | L18/L28(CycleDone×2), M60~M63(Inj Active) | D280~D289(SPC), L24/L40(CycleDone) | LD, D+, DMOV, LDD>=, SET |
 

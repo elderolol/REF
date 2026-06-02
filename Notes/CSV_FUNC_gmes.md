@@ -1,3 +1,6 @@
+> **NOTE (2026-06)**: 시퀀스/모드/스텝 제어 기능은 MAIN.csv로 이관되었습니다.
+> gmes.csv는 PC 통신 영역 매핑(D7000~D7239, D8000~D8239), Barcode Model Lookup, VAC SPC Logging만 담당합니다.
+
 # REFRIGER CHARGING MACHINE — Function Spec: gmes.csv
 
 > **Module**: `gmes.csv`  
