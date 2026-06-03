@@ -1,0 +1,959 @@
+{
+  "meta": {
+    "source_file": "refinj.csv",
+    "cpu": "QCPU (Q mode) Q03UDV",
+    "total_steps": 215,
+    "block_count": 14,
+    "generated": "2026-06-04"
+  },
+  "blocks": [
+    {
+      "id": 1,
+      "name": "L0 REFRIG FAST",
+      "step_start": 1,
+      "step_end": 6,
+      "conditions": [
+        {
+          "instruction": "LD",
+          "device": "M21"
+        },
+        {
+          "instruction": "LD",
+          "device": "M21"
+        },
+        {
+          "instruction": "LD",
+          "device": "M21"
+        }
+      ],
+      "actions": [
+        {
+          "instruction": "OUT",
+          "device": "M52"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M96"
+        },
+        {
+          "instruction": "OUT",
+          "device": "T4"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "L0 REFRIG NORMAL",
+      "step_start": 8,
+      "step_end": 11,
+      "conditions": [
+        {
+          "instruction": "LD",
+          "device": "M22"
+        },
+        {
+          "instruction": "LD",
+          "device": "M22"
+        }
+      ],
+      "actions": [
+        {
+          "instruction": "OUT",
+          "device": "M53"
+        },
+        {
+          "instruction": "OUT",
+          "device": "T5"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "L0 OIL FAST",
+      "step_start": 13,
+      "step_end": 27,
+      "conditions": [
+        {
+          "instruction": "LD",
+          "device": "M23"
+        },
+        {
+          "instruction": "LD",
+          "device": "M25"
+        },
+        {
+          "instruction": "LD",
+          "device": "M25"
+        }
+      ],
+      "actions": [
+        {
+          "instruction": "ANI",
+          "device": "T3"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M822"
+        },
+        {
+          "instruction": "OR",
+          "device": "M25"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M26"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M340"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M320"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M301"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M304"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M25"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M54"
+        },
+        {
+          "instruction": "OR",
+          "device": "M26"
+        },
+        {
+          "instruction": "OUT",
+          "device": "T6"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "L0 OIL NORMAL",
+      "step_start": 29,
+      "step_end": 40,
+      "conditions": [
+        {
+          "instruction": "LD",
+          "device": "M25"
+        },
+        {
+          "instruction": "LD",
+          "device": "M26"
+        }
+      ],
+      "actions": [
+        {
+          "instruction": "LD=",
+          "device": "D62"
+        },
+        {
+          "instruction": "AND>=",
+          "device": "D124"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "OR",
+          "device": "M26"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M340"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M320"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M301"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M304"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M26"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M55"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "L0 EXHAUST",
+      "step_start": 42,
+      "step_end": 43,
+      "conditions": [
+        {
+          "instruction": "LD",
+          "device": "M23"
+        }
+      ],
+      "actions": [
+        {
+          "instruction": "OUT",
+          "device": "M51"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "L1 REFRIG FAST",
+      "step_start": 45,
+      "step_end": 50,
+      "conditions": [
+        {
+          "instruction": "LD",
+          "device": "M37"
+        },
+        {
+          "instruction": "LD",
+          "device": "M37"
+        },
+        {
+          "instruction": "LD",
+          "device": "M37"
+        }
+      ],
+      "actions": [
+        {
+          "instruction": "OUT",
+          "device": "M68"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M112"
+        },
+        {
+          "instruction": "OUT",
+          "device": "T13"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "L1 REFRIG NORMAL",
+      "step_start": 52,
+      "step_end": 55,
+      "conditions": [
+        {
+          "instruction": "LD",
+          "device": "M38"
+        },
+        {
+          "instruction": "LD",
+          "device": "M38"
+        }
+      ],
+      "actions": [
+        {
+          "instruction": "OUT",
+          "device": "M69"
+        },
+        {
+          "instruction": "OUT",
+          "device": "T14"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "L1 OIL FAST",
+      "step_start": 57,
+      "step_end": 71,
+      "conditions": [
+        {
+          "instruction": "LD",
+          "device": "M39"
+        },
+        {
+          "instruction": "LD",
+          "device": "M41"
+        },
+        {
+          "instruction": "LD",
+          "device": "M41"
+        }
+      ],
+      "actions": [
+        {
+          "instruction": "ANI",
+          "device": "T12"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M838"
+        },
+        {
+          "instruction": "OR",
+          "device": "M41"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M42"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M356"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M336"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M317"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M304"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M41"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M70"
+        },
+        {
+          "instruction": "OR",
+          "device": "M42"
+        },
+        {
+          "instruction": "OUT",
+          "device": "T15"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "L1 OIL NORMAL",
+      "step_start": 73,
+      "step_end": 90,
+      "conditions": [
+        {
+          "instruction": "LD",
+          "device": "M41"
+        },
+        {
+          "instruction": "LD",
+          "device": "M872"
+        },
+        {
+          "instruction": "LD",
+          "device": "M873"
+        },
+        {
+          "instruction": "LD",
+          "device": "M42"
+        }
+      ],
+      "actions": [
+        {
+          "instruction": "LD=",
+          "device": "D90"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LD=",
+          "device": "D104"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "ORB",
+          "device": ""
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "AND>=",
+          "device": "D400"
+        },
+        {
+          "instruction": "OR",
+          "device": "M42"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M356"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M336"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M317"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M304"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M42"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M71"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "L1 EXHAUST",
+      "step_start": 92,
+      "step_end": 95,
+      "conditions": [
+        {
+          "instruction": "LD",
+          "device": "M39"
+        },
+        {
+          "instruction": "LD",
+          "device": "M39"
+        }
+      ],
+      "actions": [
+        {
+          "instruction": "OUT",
+          "device": "M67"
+        },
+        {
+          "instruction": "OUT",
+          "device": "T12"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "COMPLETION L0 (M822)",
+      "step_start": 97,
+      "step_end": 126,
+      "conditions": [
+        {
+          "instruction": "LD",
+          "device": "M21"
+        },
+        {
+          "instruction": "LD",
+          "device": "M21"
+        },
+        {
+          "instruction": "LD",
+          "device": "M21"
+        },
+        {
+          "instruction": "LD",
+          "device": "M22"
+        },
+        {
+          "instruction": "LD",
+          "device": "M22"
+        },
+        {
+          "instruction": "LD",
+          "device": "M25"
+        },
+        {
+          "instruction": "LD",
+          "device": "M26"
+        },
+        {
+          "instruction": "LD",
+          "device": "M23"
+        }
+      ],
+      "actions": [
+        {
+          "instruction": "LD=",
+          "device": "D62"
+        },
+        {
+          "instruction": "AND>=",
+          "device": "D124"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LD=",
+          "device": "D62"
+        },
+        {
+          "instruction": "AND>=",
+          "device": "D124"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "ORB",
+          "device": ""
+        },
+        {
+          "instruction": "AND",
+          "device": "T4"
+        },
+        {
+          "instruction": "ORB",
+          "device": ""
+        },
+        {
+          "instruction": "AND>=",
+          "device": "D124"
+        },
+        {
+          "instruction": "ORB",
+          "device": ""
+        },
+        {
+          "instruction": "AND",
+          "device": "T5"
+        },
+        {
+          "instruction": "ORB",
+          "device": ""
+        },
+        {
+          "instruction": "AND",
+          "device": "T6"
+        },
+        {
+          "instruction": "ORB",
+          "device": ""
+        },
+        {
+          "instruction": "AND",
+          "device": "T6"
+        },
+        {
+          "instruction": "ORB",
+          "device": ""
+        },
+        {
+          "instruction": "AND",
+          "device": "T3"
+        },
+        {
+          "instruction": "ORB",
+          "device": ""
+        },
+        {
+          "instruction": "OR",
+          "device": "M822"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M24"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M822"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "COMPLETION L1 (M838)",
+      "step_start": 128,
+      "step_end": 169,
+      "conditions": [
+        {
+          "instruction": "LD",
+          "device": "M37"
+        },
+        {
+          "instruction": "LD",
+          "device": "M872"
+        },
+        {
+          "instruction": "LD",
+          "device": "M873"
+        },
+        {
+          "instruction": "LD",
+          "device": "M37"
+        },
+        {
+          "instruction": "LD",
+          "device": "M872"
+        },
+        {
+          "instruction": "LD",
+          "device": "M873"
+        },
+        {
+          "instruction": "LD",
+          "device": "M37"
+        },
+        {
+          "instruction": "LD",
+          "device": "M38"
+        },
+        {
+          "instruction": "LD",
+          "device": "M38"
+        },
+        {
+          "instruction": "LD",
+          "device": "M41"
+        },
+        {
+          "instruction": "LD",
+          "device": "M42"
+        },
+        {
+          "instruction": "LD",
+          "device": "M39"
+        }
+      ],
+      "actions": [
+        {
+          "instruction": "LD=",
+          "device": "D90"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LD=",
+          "device": "D104"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "ORB",
+          "device": ""
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "AND>=",
+          "device": "D400"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D90"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LD=",
+          "device": "D104"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "ORB",
+          "device": ""
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "AND>=",
+          "device": "D400"
+        },
+        {
+          "instruction": "ORB",
+          "device": ""
+        },
+        {
+          "instruction": "AND",
+          "device": "T13"
+        },
+        {
+          "instruction": "ORB",
+          "device": ""
+        },
+        {
+          "instruction": "AND>=",
+          "device": "D400"
+        },
+        {
+          "instruction": "ORB",
+          "device": ""
+        },
+        {
+          "instruction": "AND",
+          "device": "T14"
+        },
+        {
+          "instruction": "ORB",
+          "device": ""
+        },
+        {
+          "instruction": "AND",
+          "device": "T15"
+        },
+        {
+          "instruction": "ORB",
+          "device": ""
+        },
+        {
+          "instruction": "AND",
+          "device": "T15"
+        },
+        {
+          "instruction": "ORB",
+          "device": ""
+        },
+        {
+          "instruction": "AND",
+          "device": "T12"
+        },
+        {
+          "instruction": "ORB",
+          "device": ""
+        },
+        {
+          "instruction": "OR",
+          "device": "M838"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M40"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M838"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "TIMEOUT ALARM TRIGGERS",
+      "step_start": 171,
+      "step_end": 198,
+      "conditions": [
+        {
+          "instruction": "LD",
+          "device": "M21"
+        },
+        {
+          "instruction": "LD",
+          "device": "M22"
+        },
+        {
+          "instruction": "LD",
+          "device": "M25"
+        },
+        {
+          "instruction": "LD",
+          "device": "M26"
+        },
+        {
+          "instruction": "LD",
+          "device": "M37"
+        },
+        {
+          "instruction": "LD",
+          "device": "M38"
+        },
+        {
+          "instruction": "LD",
+          "device": "M41"
+        },
+        {
+          "instruction": "LD",
+          "device": "M42"
+        }
+      ],
+      "actions": [
+        {
+          "instruction": "AND",
+          "device": "T4"
+        },
+        {
+          "instruction": "AND",
+          "device": "T5"
+        },
+        {
+          "instruction": "ORB",
+          "device": ""
+        },
+        {
+          "instruction": "AND",
+          "device": "T6"
+        },
+        {
+          "instruction": "ORB",
+          "device": ""
+        },
+        {
+          "instruction": "AND",
+          "device": "T6"
+        },
+        {
+          "instruction": "ORB",
+          "device": ""
+        },
+        {
+          "instruction": "OR",
+          "device": "M320"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M1027"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M320"
+        },
+        {
+          "instruction": "AND",
+          "device": "T13"
+        },
+        {
+          "instruction": "AND",
+          "device": "T14"
+        },
+        {
+          "instruction": "ORB",
+          "device": ""
+        },
+        {
+          "instruction": "AND",
+          "device": "T15"
+        },
+        {
+          "instruction": "ORB",
+          "device": ""
+        },
+        {
+          "instruction": "AND",
+          "device": "T15"
+        },
+        {
+          "instruction": "ORB",
+          "device": ""
+        },
+        {
+          "instruction": "OR",
+          "device": "M336"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M1027"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M336"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "OIL RESTART FLAGS",
+      "step_start": 200,
+      "step_end": 215,
+      "conditions": [
+        {
+          "instruction": "LD",
+          "device": "M25"
+        },
+        {
+          "instruction": "LD",
+          "device": "M26"
+        },
+        {
+          "instruction": "LD",
+          "device": "M41"
+        },
+        {
+          "instruction": "LD",
+          "device": "M42"
+        }
+      ],
+      "actions": [
+        {
+          "instruction": "AND>=",
+          "device": "D124"
+        },
+        {
+          "instruction": "AND>=",
+          "device": "D124"
+        },
+        {
+          "instruction": "ORB",
+          "device": ""
+        },
+        {
+          "instruction": "OR",
+          "device": "M340"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M21"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M340"
+        },
+        {
+          "instruction": "AND>=",
+          "device": "D400"
+        },
+        {
+          "instruction": "AND>=",
+          "device": "D400"
+        },
+        {
+          "instruction": "ORB",
+          "device": ""
+        },
+        {
+          "instruction": "OR",
+          "device": "M356"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M37"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M356"
+        }
+      ]
+    }
+  ]
+}

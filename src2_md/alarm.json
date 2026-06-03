@@ -1,0 +1,357 @@
+{
+  "meta": {
+    "source_file": "alarm.csv",
+    "cpu": "QCPU (Q mode) Q03UDV",
+    "total_steps": 81,
+    "block_count": 3,
+    "generated": "2026-06-04"
+  },
+  "blocks": [
+    {
+      "id": 1,
+      "name": "ALARM LATCH",
+      "step_start": 1,
+      "step_end": 49,
+      "conditions": [
+        {
+          "instruction": "LDI",
+          "device": "M771"
+        },
+        {
+          "instruction": "LDI",
+          "device": "M779"
+        },
+        {
+          "instruction": "LD",
+          "device": "M817"
+        },
+        {
+          "instruction": "LD",
+          "device": "M819"
+        },
+        {
+          "instruction": "LD",
+          "device": "M821"
+        },
+        {
+          "instruction": "LD",
+          "device": "M823"
+        },
+        {
+          "instruction": "LD",
+          "device": "M776"
+        },
+        {
+          "instruction": "LD",
+          "device": "M777"
+        },
+        {
+          "instruction": "LD",
+          "device": "M791"
+        }
+      ],
+      "actions": [
+        {
+          "instruction": "OR",
+          "device": "M864"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M1027"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M864"
+        },
+        {
+          "instruction": "OR",
+          "device": "M865"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M1027"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M865"
+        },
+        {
+          "instruction": "OR",
+          "device": "M833"
+        },
+        {
+          "instruction": "OR",
+          "device": "M866"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M1027"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M866"
+        },
+        {
+          "instruction": "OR",
+          "device": "M835"
+        },
+        {
+          "instruction": "OR",
+          "device": "M867"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M1027"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M867"
+        },
+        {
+          "instruction": "OR",
+          "device": "M837"
+        },
+        {
+          "instruction": "OR",
+          "device": "M868"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M1027"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M868"
+        },
+        {
+          "instruction": "OR",
+          "device": "M839"
+        },
+        {
+          "instruction": "OR",
+          "device": "M320"
+        },
+        {
+          "instruction": "OR",
+          "device": "M336"
+        },
+        {
+          "instruction": "OR",
+          "device": "M869"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M1027"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M869"
+        },
+        {
+          "instruction": "OR",
+          "device": "M792"
+        },
+        {
+          "instruction": "OR",
+          "device": "M872"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M1027"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M872"
+        },
+        {
+          "instruction": "OR",
+          "device": "M793"
+        },
+        {
+          "instruction": "OR",
+          "device": "M873"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M1027"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M873"
+        },
+        {
+          "instruction": "LD<",
+          "device": "D156"
+        },
+        {
+          "instruction": "OR>",
+          "device": "D156"
+        },
+        {
+          "instruction": "OR",
+          "device": "M874"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M1027"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M874"
+        },
+        {
+          "instruction": "OR",
+          "device": "M879"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M1027"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M879"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "BUZZER",
+      "step_start": 51,
+      "step_end": 72,
+      "conditions": [
+        {
+          "instruction": "LD",
+          "device": "M1028"
+        },
+        {
+          "instruction": "LD",
+          "device": "M864"
+        }
+      ],
+      "actions": [
+        {
+          "instruction": "OR",
+          "device": "M500"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M1027"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M500"
+        },
+        {
+          "instruction": "OR",
+          "device": "M865"
+        },
+        {
+          "instruction": "OR",
+          "device": "M866"
+        },
+        {
+          "instruction": "OR",
+          "device": "M867"
+        },
+        {
+          "instruction": "OR",
+          "device": "M868"
+        },
+        {
+          "instruction": "OR",
+          "device": "M869"
+        },
+        {
+          "instruction": "OR",
+          "device": "M872"
+        },
+        {
+          "instruction": "OR",
+          "device": "M873"
+        },
+        {
+          "instruction": "OR",
+          "device": "M874"
+        },
+        {
+          "instruction": "OR",
+          "device": "M875"
+        },
+        {
+          "instruction": "OR",
+          "device": "M876"
+        },
+        {
+          "instruction": "OR",
+          "device": "M877"
+        },
+        {
+          "instruction": "OR",
+          "device": "M878"
+        },
+        {
+          "instruction": "OR",
+          "device": "M879"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M500"
+        },
+        {
+          "instruction": "OR",
+          "device": "M76"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M1028"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M76"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "ALARM RESET",
+      "step_start": 74,
+      "step_end": 81,
+      "conditions": [
+        {
+          "instruction": "LD",
+          "device": "M1027"
+        },
+        {
+          "instruction": "LD",
+          "device": "M1027"
+        },
+        {
+          "instruction": "LD",
+          "device": "M1027"
+        },
+        {
+          "instruction": "LD",
+          "device": "M1027"
+        }
+      ],
+      "actions": [
+        {
+          "instruction": "RST",
+          "device": "M875"
+        },
+        {
+          "instruction": "RST",
+          "device": "M876"
+        },
+        {
+          "instruction": "RST",
+          "device": "M877"
+        },
+        {
+          "instruction": "RST",
+          "device": "M878"
+        }
+      ]
+    }
+  ]
+}

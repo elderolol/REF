@@ -1,0 +1,3458 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "485.json",
+      "file_type": "code",
+      "source_file": "485.json",
+      "source_location": "L1",
+      "id": "485_json_485",
+      "community": 4,
+      "norm_label": "485.json"
+    },
+    {
+      "label": "meta",
+      "file_type": "code",
+      "source_file": "485.json",
+      "source_location": "L2",
+      "id": "485_meta",
+      "community": 4,
+      "norm_label": "meta"
+    },
+    {
+      "label": "source_file",
+      "file_type": "code",
+      "source_file": "485.json",
+      "source_location": "L3",
+      "id": "485_meta_source_file",
+      "community": 4,
+      "norm_label": "source_file"
+    },
+    {
+      "label": "cpu",
+      "file_type": "code",
+      "source_file": "485.json",
+      "source_location": "L4",
+      "id": "485_meta_cpu",
+      "community": 4,
+      "norm_label": "cpu"
+    },
+    {
+      "label": "total_steps",
+      "file_type": "code",
+      "source_file": "485.json",
+      "source_location": "L5",
+      "id": "485_meta_total_steps",
+      "community": 4,
+      "norm_label": "total_steps"
+    },
+    {
+      "label": "block_count",
+      "file_type": "code",
+      "source_file": "485.json",
+      "source_location": "L6",
+      "id": "485_meta_block_count",
+      "community": 4,
+      "norm_label": "block_count"
+    },
+    {
+      "label": "generated",
+      "file_type": "code",
+      "source_file": "485.json",
+      "source_location": "L7",
+      "id": "485_meta_generated",
+      "community": 4,
+      "norm_label": "generated"
+    },
+    {
+      "label": "blocks",
+      "file_type": "code",
+      "source_file": "485.json",
+      "source_location": "L9",
+      "id": "485_blocks",
+      "community": 4,
+      "norm_label": "blocks"
+    },
+    {
+      "label": "MAIN.json",
+      "file_type": "code",
+      "source_file": "MAIN.json",
+      "source_location": "L1",
+      "id": "main_json_main",
+      "community": 10,
+      "norm_label": "main.json"
+    },
+    {
+      "label": "meta",
+      "file_type": "code",
+      "source_file": "MAIN.json",
+      "source_location": "L2",
+      "id": "main_meta",
+      "community": 10,
+      "norm_label": "meta"
+    },
+    {
+      "label": "source_file",
+      "file_type": "code",
+      "source_file": "MAIN.json",
+      "source_location": "L3",
+      "id": "main_meta_source_file",
+      "community": 10,
+      "norm_label": "source_file"
+    },
+    {
+      "label": "cpu",
+      "file_type": "code",
+      "source_file": "MAIN.json",
+      "source_location": "L4",
+      "id": "main_meta_cpu",
+      "community": 10,
+      "norm_label": "cpu"
+    },
+    {
+      "label": "total_steps",
+      "file_type": "code",
+      "source_file": "MAIN.json",
+      "source_location": "L5",
+      "id": "main_meta_total_steps",
+      "community": 10,
+      "norm_label": "total_steps"
+    },
+    {
+      "label": "block_count",
+      "file_type": "code",
+      "source_file": "MAIN.json",
+      "source_location": "L6",
+      "id": "main_meta_block_count",
+      "community": 10,
+      "norm_label": "block_count"
+    },
+    {
+      "label": "generated",
+      "file_type": "code",
+      "source_file": "MAIN.json",
+      "source_location": "L7",
+      "id": "main_meta_generated",
+      "community": 10,
+      "norm_label": "generated"
+    },
+    {
+      "label": "blocks",
+      "file_type": "code",
+      "source_file": "MAIN.json",
+      "source_location": "L9",
+      "id": "main_blocks",
+      "community": 10,
+      "norm_label": "blocks"
+    },
+    {
+      "label": "ad.json",
+      "file_type": "code",
+      "source_file": "ad.json",
+      "source_location": "L1",
+      "id": "ad_json_ad",
+      "community": 5,
+      "norm_label": "ad.json"
+    },
+    {
+      "label": "meta",
+      "file_type": "code",
+      "source_file": "ad.json",
+      "source_location": "L2",
+      "id": "ad_meta",
+      "community": 5,
+      "norm_label": "meta"
+    },
+    {
+      "label": "source_file",
+      "file_type": "code",
+      "source_file": "ad.json",
+      "source_location": "L3",
+      "id": "ad_meta_source_file",
+      "community": 5,
+      "norm_label": "source_file"
+    },
+    {
+      "label": "cpu",
+      "file_type": "code",
+      "source_file": "ad.json",
+      "source_location": "L4",
+      "id": "ad_meta_cpu",
+      "community": 5,
+      "norm_label": "cpu"
+    },
+    {
+      "label": "total_steps",
+      "file_type": "code",
+      "source_file": "ad.json",
+      "source_location": "L5",
+      "id": "ad_meta_total_steps",
+      "community": 5,
+      "norm_label": "total_steps"
+    },
+    {
+      "label": "block_count",
+      "file_type": "code",
+      "source_file": "ad.json",
+      "source_location": "L6",
+      "id": "ad_meta_block_count",
+      "community": 5,
+      "norm_label": "block_count"
+    },
+    {
+      "label": "generated",
+      "file_type": "code",
+      "source_file": "ad.json",
+      "source_location": "L7",
+      "id": "ad_meta_generated",
+      "community": 5,
+      "norm_label": "generated"
+    },
+    {
+      "label": "blocks",
+      "file_type": "code",
+      "source_file": "ad.json",
+      "source_location": "L9",
+      "id": "ad_blocks",
+      "community": 5,
+      "norm_label": "blocks"
+    },
+    {
+      "label": "alarm.json",
+      "file_type": "code",
+      "source_file": "alarm.json",
+      "source_location": "L1",
+      "id": "alarm_json_alarm",
+      "community": 7,
+      "norm_label": "alarm.json"
+    },
+    {
+      "label": "meta",
+      "file_type": "code",
+      "source_file": "alarm.json",
+      "source_location": "L2",
+      "id": "alarm_meta",
+      "community": 7,
+      "norm_label": "meta"
+    },
+    {
+      "label": "source_file",
+      "file_type": "code",
+      "source_file": "alarm.json",
+      "source_location": "L3",
+      "id": "alarm_meta_source_file",
+      "community": 7,
+      "norm_label": "source_file"
+    },
+    {
+      "label": "cpu",
+      "file_type": "code",
+      "source_file": "alarm.json",
+      "source_location": "L4",
+      "id": "alarm_meta_cpu",
+      "community": 7,
+      "norm_label": "cpu"
+    },
+    {
+      "label": "total_steps",
+      "file_type": "code",
+      "source_file": "alarm.json",
+      "source_location": "L5",
+      "id": "alarm_meta_total_steps",
+      "community": 7,
+      "norm_label": "total_steps"
+    },
+    {
+      "label": "block_count",
+      "file_type": "code",
+      "source_file": "alarm.json",
+      "source_location": "L6",
+      "id": "alarm_meta_block_count",
+      "community": 7,
+      "norm_label": "block_count"
+    },
+    {
+      "label": "generated",
+      "file_type": "code",
+      "source_file": "alarm.json",
+      "source_location": "L7",
+      "id": "alarm_meta_generated",
+      "community": 7,
+      "norm_label": "generated"
+    },
+    {
+      "label": "blocks",
+      "file_type": "code",
+      "source_file": "alarm.json",
+      "source_location": "L9",
+      "id": "alarm_blocks",
+      "community": 7,
+      "norm_label": "blocks"
+    },
+    {
+      "label": "gunvac.json",
+      "file_type": "code",
+      "source_file": "gunvac.json",
+      "source_location": "L1",
+      "id": "gunvac_json_gunvac",
+      "community": 8,
+      "norm_label": "gunvac.json"
+    },
+    {
+      "label": "meta",
+      "file_type": "code",
+      "source_file": "gunvac.json",
+      "source_location": "L2",
+      "id": "gunvac_meta",
+      "community": 8,
+      "norm_label": "meta"
+    },
+    {
+      "label": "source_file",
+      "file_type": "code",
+      "source_file": "gunvac.json",
+      "source_location": "L3",
+      "id": "gunvac_meta_source_file",
+      "community": 8,
+      "norm_label": "source_file"
+    },
+    {
+      "label": "cpu",
+      "file_type": "code",
+      "source_file": "gunvac.json",
+      "source_location": "L4",
+      "id": "gunvac_meta_cpu",
+      "community": 8,
+      "norm_label": "cpu"
+    },
+    {
+      "label": "total_steps",
+      "file_type": "code",
+      "source_file": "gunvac.json",
+      "source_location": "L5",
+      "id": "gunvac_meta_total_steps",
+      "community": 8,
+      "norm_label": "total_steps"
+    },
+    {
+      "label": "block_count",
+      "file_type": "code",
+      "source_file": "gunvac.json",
+      "source_location": "L6",
+      "id": "gunvac_meta_block_count",
+      "community": 8,
+      "norm_label": "block_count"
+    },
+    {
+      "label": "generated",
+      "file_type": "code",
+      "source_file": "gunvac.json",
+      "source_location": "L7",
+      "id": "gunvac_meta_generated",
+      "community": 8,
+      "norm_label": "generated"
+    },
+    {
+      "label": "blocks",
+      "file_type": "code",
+      "source_file": "gunvac.json",
+      "source_location": "L9",
+      "id": "gunvac_blocks",
+      "community": 8,
+      "norm_label": "blocks"
+    },
+    {
+      "label": "idata.json",
+      "file_type": "code",
+      "source_file": "idata.json",
+      "source_location": "L1",
+      "id": "idata_json_idata",
+      "community": 9,
+      "norm_label": "idata.json"
+    },
+    {
+      "label": "meta",
+      "file_type": "code",
+      "source_file": "idata.json",
+      "source_location": "L2",
+      "id": "idata_meta",
+      "community": 9,
+      "norm_label": "meta"
+    },
+    {
+      "label": "source_file",
+      "file_type": "code",
+      "source_file": "idata.json",
+      "source_location": "L3",
+      "id": "idata_meta_source_file",
+      "community": 9,
+      "norm_label": "source_file"
+    },
+    {
+      "label": "cpu",
+      "file_type": "code",
+      "source_file": "idata.json",
+      "source_location": "L4",
+      "id": "idata_meta_cpu",
+      "community": 9,
+      "norm_label": "cpu"
+    },
+    {
+      "label": "total_steps",
+      "file_type": "code",
+      "source_file": "idata.json",
+      "source_location": "L5",
+      "id": "idata_meta_total_steps",
+      "community": 9,
+      "norm_label": "total_steps"
+    },
+    {
+      "label": "block_count",
+      "file_type": "code",
+      "source_file": "idata.json",
+      "source_location": "L6",
+      "id": "idata_meta_block_count",
+      "community": 9,
+      "norm_label": "block_count"
+    },
+    {
+      "label": "generated",
+      "file_type": "code",
+      "source_file": "idata.json",
+      "source_location": "L7",
+      "id": "idata_meta_generated",
+      "community": 9,
+      "norm_label": "generated"
+    },
+    {
+      "label": "blocks",
+      "file_type": "code",
+      "source_file": "idata.json",
+      "source_location": "L9",
+      "id": "idata_blocks",
+      "community": 9,
+      "norm_label": "blocks"
+    },
+    {
+      "label": "refinj.json",
+      "file_type": "code",
+      "source_file": "refinj.json",
+      "source_location": "L1",
+      "id": "refinj_json_refinj",
+      "community": 11,
+      "norm_label": "refinj.json"
+    },
+    {
+      "label": "meta",
+      "file_type": "code",
+      "source_file": "refinj.json",
+      "source_location": "L2",
+      "id": "refinj_meta",
+      "community": 11,
+      "norm_label": "meta"
+    },
+    {
+      "label": "source_file",
+      "file_type": "code",
+      "source_file": "refinj.json",
+      "source_location": "L3",
+      "id": "refinj_meta_source_file",
+      "community": 11,
+      "norm_label": "source_file"
+    },
+    {
+      "label": "cpu",
+      "file_type": "code",
+      "source_file": "refinj.json",
+      "source_location": "L4",
+      "id": "refinj_meta_cpu",
+      "community": 11,
+      "norm_label": "cpu"
+    },
+    {
+      "label": "total_steps",
+      "file_type": "code",
+      "source_file": "refinj.json",
+      "source_location": "L5",
+      "id": "refinj_meta_total_steps",
+      "community": 11,
+      "norm_label": "total_steps"
+    },
+    {
+      "label": "block_count",
+      "file_type": "code",
+      "source_file": "refinj.json",
+      "source_location": "L6",
+      "id": "refinj_meta_block_count",
+      "community": 11,
+      "norm_label": "block_count"
+    },
+    {
+      "label": "generated",
+      "file_type": "code",
+      "source_file": "refinj.json",
+      "source_location": "L7",
+      "id": "refinj_meta_generated",
+      "community": 11,
+      "norm_label": "generated"
+    },
+    {
+      "label": "blocks",
+      "file_type": "code",
+      "source_file": "refinj.json",
+      "source_location": "L9",
+      "id": "refinj_blocks",
+      "community": 11,
+      "norm_label": "blocks"
+    },
+    {
+      "label": "setting.json",
+      "file_type": "code",
+      "source_file": "setting.json",
+      "source_location": "L1",
+      "id": "setting_json_setting",
+      "community": 12,
+      "norm_label": "setting.json"
+    },
+    {
+      "label": "meta",
+      "file_type": "code",
+      "source_file": "setting.json",
+      "source_location": "L2",
+      "id": "setting_meta",
+      "community": 12,
+      "norm_label": "meta"
+    },
+    {
+      "label": "source_file",
+      "file_type": "code",
+      "source_file": "setting.json",
+      "source_location": "L3",
+      "id": "setting_meta_source_file",
+      "community": 12,
+      "norm_label": "source_file"
+    },
+    {
+      "label": "cpu",
+      "file_type": "code",
+      "source_file": "setting.json",
+      "source_location": "L4",
+      "id": "setting_meta_cpu",
+      "community": 12,
+      "norm_label": "cpu"
+    },
+    {
+      "label": "total_steps",
+      "file_type": "code",
+      "source_file": "setting.json",
+      "source_location": "L5",
+      "id": "setting_meta_total_steps",
+      "community": 12,
+      "norm_label": "total_steps"
+    },
+    {
+      "label": "block_count",
+      "file_type": "code",
+      "source_file": "setting.json",
+      "source_location": "L6",
+      "id": "setting_meta_block_count",
+      "community": 12,
+      "norm_label": "block_count"
+    },
+    {
+      "label": "generated",
+      "file_type": "code",
+      "source_file": "setting.json",
+      "source_location": "L7",
+      "id": "setting_meta_generated",
+      "community": 12,
+      "norm_label": "generated"
+    },
+    {
+      "label": "blocks",
+      "file_type": "code",
+      "source_file": "setting.json",
+      "source_location": "L9",
+      "id": "setting_blocks",
+      "community": 12,
+      "norm_label": "blocks"
+    },
+    {
+      "label": "spc.json",
+      "file_type": "code",
+      "source_file": "spc.json",
+      "source_location": "L1",
+      "id": "spc_json_spc",
+      "community": 13,
+      "norm_label": "spc.json"
+    },
+    {
+      "label": "meta",
+      "file_type": "code",
+      "source_file": "spc.json",
+      "source_location": "L2",
+      "id": "spc_meta",
+      "community": 13,
+      "norm_label": "meta"
+    },
+    {
+      "label": "source_file",
+      "file_type": "code",
+      "source_file": "spc.json",
+      "source_location": "L3",
+      "id": "spc_meta_source_file",
+      "community": 13,
+      "norm_label": "source_file"
+    },
+    {
+      "label": "cpu",
+      "file_type": "code",
+      "source_file": "spc.json",
+      "source_location": "L4",
+      "id": "spc_meta_cpu",
+      "community": 13,
+      "norm_label": "cpu"
+    },
+    {
+      "label": "total_steps",
+      "file_type": "code",
+      "source_file": "spc.json",
+      "source_location": "L5",
+      "id": "spc_meta_total_steps",
+      "community": 13,
+      "norm_label": "total_steps"
+    },
+    {
+      "label": "block_count",
+      "file_type": "code",
+      "source_file": "spc.json",
+      "source_location": "L6",
+      "id": "spc_meta_block_count",
+      "community": 13,
+      "norm_label": "block_count"
+    },
+    {
+      "label": "generated",
+      "file_type": "code",
+      "source_file": "spc.json",
+      "source_location": "L7",
+      "id": "spc_meta_generated",
+      "community": 13,
+      "norm_label": "generated"
+    },
+    {
+      "label": "blocks",
+      "file_type": "code",
+      "source_file": "spc.json",
+      "source_location": "L9",
+      "id": "spc_blocks",
+      "community": 13,
+      "norm_label": "blocks"
+    },
+    {
+      "label": "unitvac.json",
+      "file_type": "code",
+      "source_file": "unitvac.json",
+      "source_location": "L1",
+      "id": "unitvac_json_unitvac",
+      "community": 14,
+      "norm_label": "unitvac.json"
+    },
+    {
+      "label": "meta",
+      "file_type": "code",
+      "source_file": "unitvac.json",
+      "source_location": "L2",
+      "id": "unitvac_meta",
+      "community": 14,
+      "norm_label": "meta"
+    },
+    {
+      "label": "source_file",
+      "file_type": "code",
+      "source_file": "unitvac.json",
+      "source_location": "L3",
+      "id": "unitvac_meta_source_file",
+      "community": 14,
+      "norm_label": "source_file"
+    },
+    {
+      "label": "cpu",
+      "file_type": "code",
+      "source_file": "unitvac.json",
+      "source_location": "L4",
+      "id": "unitvac_meta_cpu",
+      "community": 14,
+      "norm_label": "cpu"
+    },
+    {
+      "label": "total_steps",
+      "file_type": "code",
+      "source_file": "unitvac.json",
+      "source_location": "L5",
+      "id": "unitvac_meta_total_steps",
+      "community": 14,
+      "norm_label": "total_steps"
+    },
+    {
+      "label": "block_count",
+      "file_type": "code",
+      "source_file": "unitvac.json",
+      "source_location": "L6",
+      "id": "unitvac_meta_block_count",
+      "community": 14,
+      "norm_label": "block_count"
+    },
+    {
+      "label": "generated",
+      "file_type": "code",
+      "source_file": "unitvac.json",
+      "source_location": "L7",
+      "id": "unitvac_meta_generated",
+      "community": 14,
+      "norm_label": "generated"
+    },
+    {
+      "label": "blocks",
+      "file_type": "code",
+      "source_file": "unitvac.json",
+      "source_location": "L9",
+      "id": "unitvac_blocks",
+      "community": 14,
+      "norm_label": "blocks"
+    },
+    {
+      "label": "vacchec.json",
+      "file_type": "code",
+      "source_file": "vacchec.json",
+      "source_location": "L1",
+      "id": "vacchec_json_vacchec",
+      "community": 15,
+      "norm_label": "vacchec.json"
+    },
+    {
+      "label": "meta",
+      "file_type": "code",
+      "source_file": "vacchec.json",
+      "source_location": "L2",
+      "id": "vacchec_meta",
+      "community": 15,
+      "norm_label": "meta"
+    },
+    {
+      "label": "source_file",
+      "file_type": "code",
+      "source_file": "vacchec.json",
+      "source_location": "L3",
+      "id": "vacchec_meta_source_file",
+      "community": 15,
+      "norm_label": "source_file"
+    },
+    {
+      "label": "cpu",
+      "file_type": "code",
+      "source_file": "vacchec.json",
+      "source_location": "L4",
+      "id": "vacchec_meta_cpu",
+      "community": 15,
+      "norm_label": "cpu"
+    },
+    {
+      "label": "total_steps",
+      "file_type": "code",
+      "source_file": "vacchec.json",
+      "source_location": "L5",
+      "id": "vacchec_meta_total_steps",
+      "community": 15,
+      "norm_label": "total_steps"
+    },
+    {
+      "label": "block_count",
+      "file_type": "code",
+      "source_file": "vacchec.json",
+      "source_location": "L6",
+      "id": "vacchec_meta_block_count",
+      "community": 15,
+      "norm_label": "block_count"
+    },
+    {
+      "label": "generated",
+      "file_type": "code",
+      "source_file": "vacchec.json",
+      "source_location": "L7",
+      "id": "vacchec_meta_generated",
+      "community": 15,
+      "norm_label": "generated"
+    },
+    {
+      "label": "blocks",
+      "file_type": "code",
+      "source_file": "vacchec.json",
+      "source_location": "L9",
+      "id": "vacchec_blocks",
+      "community": 15,
+      "norm_label": "blocks"
+    },
+    {
+      "label": "485.md",
+      "file_type": "document",
+      "source_file": "485.md",
+      "source_location": "L1",
+      "id": "485_md_485",
+      "community": 20,
+      "norm_label": "485.md"
+    },
+    {
+      "label": "REF_self_holding -- IL Logic Map",
+      "file_type": "document",
+      "source_file": "485.md",
+      "source_location": "L2",
+      "id": "485_ref_self_holding_il_logic_map",
+      "community": 20,
+      "norm_label": "ref_self_holding -- il logic map"
+    },
+    {
+      "label": "Block List",
+      "file_type": "document",
+      "source_file": "485.md",
+      "source_location": "L9",
+      "id": "485_block_list",
+      "community": 20,
+      "norm_label": "block list"
+    },
+    {
+      "label": "Block Detail",
+      "file_type": "document",
+      "source_file": "485.md",
+      "source_location": "L13",
+      "id": "485_block_detail",
+      "community": 20,
+      "norm_label": "block detail"
+    },
+    {
+      "label": "Device Map",
+      "file_type": "document",
+      "source_file": "485.md",
+      "source_location": "L15",
+      "id": "485_device_map",
+      "community": 20,
+      "norm_label": "device map"
+    },
+    {
+      "label": "MAIN.md",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L1",
+      "id": "main_md_main",
+      "community": 1,
+      "norm_label": "main.md"
+    },
+    {
+      "label": "REF_self_holding -- IL Logic Map",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L2",
+      "id": "main_ref_self_holding_il_logic_map",
+      "community": 1,
+      "norm_label": "ref_self_holding -- il logic map"
+    },
+    {
+      "label": "Block List",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L9",
+      "id": "main_block_list",
+      "community": 1,
+      "norm_label": "block list"
+    },
+    {
+      "label": "Block Detail",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L25",
+      "id": "main_block_detail",
+      "community": 1,
+      "norm_label": "block detail"
+    },
+    {
+      "label": "Block 1: MODE CONTROL (Step 1-38)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L27",
+      "id": "main_block_1_mode_control_step_1_38",
+      "community": 1,
+      "norm_label": "block 1: mode control (step 1-38)"
+    },
+    {
+      "label": "Block 2: INTERLOCK CHECK (Step 40-51)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L71",
+      "id": "main_block_2_interlock_check_step_40_51",
+      "community": 1,
+      "norm_label": "block 2: interlock check (step 40-51)"
+    },
+    {
+      "label": "Block 3: STOP / EMG LATCH (Step 53-80)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L89",
+      "id": "main_block_3_stop_emg_latch_step_53_80",
+      "community": 1,
+      "norm_label": "block 3: stop / emg latch (step 53-80)"
+    },
+    {
+      "label": "Block 4: NG ALARM GROUP (Step 82-107)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L123",
+      "id": "main_block_4_ng_alarm_group_step_82_107",
+      "community": 1,
+      "norm_label": "block 4: ng alarm group (step 82-107)"
+    },
+    {
+      "label": "Block 5: READY L0 (Step 109-142)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L155",
+      "id": "main_block_5_ready_l0_step_109_142",
+      "community": 1,
+      "norm_label": "block 5: ready l0 (step 109-142)"
+    },
+    {
+      "label": "Block 6: READY L1 (Step 144-177)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L195",
+      "id": "main_block_6_ready_l1_step_144_177",
+      "community": 1,
+      "norm_label": "block 6: ready l1 (step 144-177)"
+    },
+    {
+      "label": "Block 7: STEP L0 (Step 179-359)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L235",
+      "id": "main_block_7_step_l0_step_179_359",
+      "community": 1,
+      "norm_label": "block 7: step l0 (step 179-359)"
+    },
+    {
+      "label": "Block 8: STEP L1 (Step 361-541)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L422",
+      "id": "main_block_8_step_l1_step_361_541",
+      "community": 1,
+      "norm_label": "block 8: step l1 (step 361-541)"
+    },
+    {
+      "label": "Block 9: NG RESULT CODE (Step 543-554)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L609",
+      "id": "main_block_9_ng_result_code_step_543_554",
+      "community": 1,
+      "norm_label": "block 9: ng result code (step 543-554)"
+    },
+    {
+      "label": "Block 10: EXHAUST TIMER (Step 556-559)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L627",
+      "id": "main_block_10_exhaust_timer_step_556_559",
+      "community": 1,
+      "norm_label": "block 10: exhaust timer (step 556-559)"
+    },
+    {
+      "label": "Block 11: LAMP CONTROL (Step 561-600)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L637",
+      "id": "main_block_11_lamp_control_step_561_600",
+      "community": 1,
+      "norm_label": "block 11: lamp control (step 561-600)"
+    },
+    {
+      "label": "Block 12: HMI LAMP (Step 602-643)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L683",
+      "id": "main_block_12_hmi_lamp_step_602_643",
+      "community": 1,
+      "norm_label": "block 12: hmi lamp (step 602-643)"
+    },
+    {
+      "label": "Device Map",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L731",
+      "id": "main_device_map",
+      "community": 1,
+      "norm_label": "device map"
+    },
+    {
+      "label": "ad.md",
+      "file_type": "document",
+      "source_file": "ad.md",
+      "source_location": "L1",
+      "id": "ad_md_ad",
+      "community": 21,
+      "norm_label": "ad.md"
+    },
+    {
+      "label": "REF_self_holding -- IL Logic Map",
+      "file_type": "document",
+      "source_file": "ad.md",
+      "source_location": "L2",
+      "id": "ad_ref_self_holding_il_logic_map",
+      "community": 21,
+      "norm_label": "ref_self_holding -- il logic map"
+    },
+    {
+      "label": "Block List",
+      "file_type": "document",
+      "source_file": "ad.md",
+      "source_location": "L9",
+      "id": "ad_block_list",
+      "community": 21,
+      "norm_label": "block list"
+    },
+    {
+      "label": "Block Detail",
+      "file_type": "document",
+      "source_file": "ad.md",
+      "source_location": "L13",
+      "id": "ad_block_detail",
+      "community": 21,
+      "norm_label": "block detail"
+    },
+    {
+      "label": "Device Map",
+      "file_type": "document",
+      "source_file": "ad.md",
+      "source_location": "L15",
+      "id": "ad_device_map",
+      "community": 21,
+      "norm_label": "device map"
+    },
+    {
+      "label": "alarm.md",
+      "file_type": "document",
+      "source_file": "alarm.md",
+      "source_location": "L1",
+      "id": "alarm_md_alarm",
+      "community": 6,
+      "norm_label": "alarm.md"
+    },
+    {
+      "label": "REF_self_holding -- IL Logic Map",
+      "file_type": "document",
+      "source_file": "alarm.md",
+      "source_location": "L2",
+      "id": "alarm_ref_self_holding_il_logic_map",
+      "community": 6,
+      "norm_label": "ref_self_holding -- il logic map"
+    },
+    {
+      "label": "Block List",
+      "file_type": "document",
+      "source_file": "alarm.md",
+      "source_location": "L9",
+      "id": "alarm_block_list",
+      "community": 6,
+      "norm_label": "block list"
+    },
+    {
+      "label": "Block Detail",
+      "file_type": "document",
+      "source_file": "alarm.md",
+      "source_location": "L16",
+      "id": "alarm_block_detail",
+      "community": 6,
+      "norm_label": "block detail"
+    },
+    {
+      "label": "Block 1: ALARM LATCH (Step 1-61)",
+      "file_type": "document",
+      "source_file": "alarm.md",
+      "source_location": "L18",
+      "id": "alarm_block_1_alarm_latch_step_1_61",
+      "community": 6,
+      "norm_label": "block 1: alarm latch (step 1-61)"
+    },
+    {
+      "label": "Block 2: BUZZER (Step 63-88)",
+      "file_type": "document",
+      "source_file": "alarm.md",
+      "source_location": "L85",
+      "id": "alarm_block_2_buzzer_step_63_88",
+      "community": 6,
+      "norm_label": "block 2: buzzer (step 63-88)"
+    },
+    {
+      "label": "Block 3: ALARM RESET (Step 90-93)",
+      "file_type": "document",
+      "source_file": "alarm.md",
+      "source_location": "L117",
+      "id": "alarm_block_3_alarm_reset_step_90_93",
+      "community": 6,
+      "norm_label": "block 3: alarm reset (step 90-93)"
+    },
+    {
+      "label": "Device Map",
+      "file_type": "document",
+      "source_file": "alarm.md",
+      "source_location": "L127",
+      "id": "alarm_device_map",
+      "community": 6,
+      "norm_label": "device map"
+    },
+    {
+      "label": "gunvac.md",
+      "file_type": "document",
+      "source_file": "gunvac.md",
+      "source_location": "L1",
+      "id": "gunvac_md_gunvac",
+      "community": 16,
+      "norm_label": "gunvac.md"
+    },
+    {
+      "label": "REF_self_holding -- IL Logic Map",
+      "file_type": "document",
+      "source_file": "gunvac.md",
+      "source_location": "L2",
+      "id": "gunvac_ref_self_holding_il_logic_map",
+      "community": 16,
+      "norm_label": "ref_self_holding -- il logic map"
+    },
+    {
+      "label": "Block List",
+      "file_type": "document",
+      "source_file": "gunvac.md",
+      "source_location": "L9",
+      "id": "gunvac_block_list",
+      "community": 16,
+      "norm_label": "block list"
+    },
+    {
+      "label": "Block Detail",
+      "file_type": "document",
+      "source_file": "gunvac.md",
+      "source_location": "L15",
+      "id": "gunvac_block_detail",
+      "community": 16,
+      "norm_label": "block detail"
+    },
+    {
+      "label": "Block 1: GUN VACUUM (Line 0) (Step 1-35)",
+      "file_type": "document",
+      "source_file": "gunvac.md",
+      "source_location": "L17",
+      "id": "gunvac_block_1_gun_vacuum_line_0_step_1_35",
+      "community": 16,
+      "norm_label": "block 1: gun vacuum (line 0) (step 1-35)"
+    },
+    {
+      "label": "Block 2: GUN VACUUM (Line 1) (Step 37-71)",
+      "file_type": "document",
+      "source_file": "gunvac.md",
+      "source_location": "L58",
+      "id": "gunvac_block_2_gun_vacuum_line_1_step_37_71",
+      "community": 16,
+      "norm_label": "block 2: gun vacuum (line 1) (step 37-71)"
+    },
+    {
+      "label": "Device Map",
+      "file_type": "document",
+      "source_file": "gunvac.md",
+      "source_location": "L99",
+      "id": "gunvac_device_map",
+      "community": 16,
+      "norm_label": "device map"
+    },
+    {
+      "label": "idata.md",
+      "file_type": "document",
+      "source_file": "idata.md",
+      "source_location": "L1",
+      "id": "idata_md_idata",
+      "community": 2,
+      "norm_label": "idata.md"
+    },
+    {
+      "label": "REF_self_holding -- IL Logic Map",
+      "file_type": "document",
+      "source_file": "idata.md",
+      "source_location": "L2",
+      "id": "idata_ref_self_holding_il_logic_map",
+      "community": 2,
+      "norm_label": "ref_self_holding -- il logic map"
+    },
+    {
+      "label": "Block List",
+      "file_type": "document",
+      "source_file": "idata.md",
+      "source_location": "L9",
+      "id": "idata_block_list",
+      "community": 2,
+      "norm_label": "block list"
+    },
+    {
+      "label": "Block Detail",
+      "file_type": "document",
+      "source_file": "idata.md",
+      "source_location": "L21",
+      "id": "idata_block_detail",
+      "community": 2,
+      "norm_label": "block detail"
+    },
+    {
+      "label": "Block 1: SYSTEM FLAGS (Step 1-6)",
+      "file_type": "document",
+      "source_file": "idata.md",
+      "source_location": "L23",
+      "id": "idata_block_1_system_flags_step_1_6",
+      "community": 2,
+      "norm_label": "block 1: system flags (step 1-6)"
+    },
+    {
+      "label": "Block 2: INIT FIRST SCAN (Step 8-9)",
+      "file_type": "document",
+      "source_file": "idata.md",
+      "source_location": "L35",
+      "id": "idata_block_2_init_first_scan_step_8_9",
+      "community": 2,
+      "norm_label": "block 2: init first scan (step 8-9)"
+    },
+    {
+      "label": "Block 3: INPUT MAPPING L0 (Step 98-129)",
+      "file_type": "document",
+      "source_file": "idata.md",
+      "source_location": "L43",
+      "id": "idata_block_3_input_mapping_l0_step_98_129",
+      "community": 2,
+      "norm_label": "block 3: input mapping l0 (step 98-129)"
+    },
+    {
+      "label": "Block 4: INPUT MAPPING L1 (Step 131-162)",
+      "file_type": "document",
+      "source_file": "idata.md",
+      "source_location": "L81",
+      "id": "idata_block_4_input_mapping_l1_step_131_162",
+      "community": 2,
+      "norm_label": "block 4: input mapping l1 (step 131-162)"
+    },
+    {
+      "label": "Block 5: OUTPUT MAPPING L0 (Step 164-189)",
+      "file_type": "document",
+      "source_file": "idata.md",
+      "source_location": "L119",
+      "id": "idata_block_5_output_mapping_l0_step_164_189",
+      "community": 2,
+      "norm_label": "block 5: output mapping l0 (step 164-189)"
+    },
+    {
+      "label": "Block 6: GLOBAL OUTPUTS (Step 191-198)",
+      "file_type": "document",
+      "source_file": "idata.md",
+      "source_location": "L151",
+      "id": "idata_block_6_global_outputs_step_191_198",
+      "community": 2,
+      "norm_label": "block 6: global outputs (step 191-198)"
+    },
+    {
+      "label": "Block 7: OUTPUT MAPPING L1 (Step 200-223)",
+      "file_type": "document",
+      "source_file": "idata.md",
+      "source_location": "L165",
+      "id": "idata_block_7_output_mapping_l1_step_200_223",
+      "community": 2,
+      "norm_label": "block 7: output mapping l1 (step 200-223)"
+    },
+    {
+      "label": "Block 8: CONFIG VALIDATION (Step 225-232)",
+      "file_type": "document",
+      "source_file": "idata.md",
+      "source_location": "L195",
+      "id": "idata_block_8_config_validation_step_225_232",
+      "community": 2,
+      "norm_label": "block 8: config validation (step 225-232)"
+    },
+    {
+      "label": "Device Map",
+      "file_type": "document",
+      "source_file": "idata.md",
+      "source_location": "L209",
+      "id": "idata_device_map",
+      "community": 2,
+      "norm_label": "device map"
+    },
+    {
+      "label": "refinj.md",
+      "file_type": "document",
+      "source_file": "refinj.md",
+      "source_location": "L1",
+      "id": "refinj_md_refinj",
+      "community": 0,
+      "norm_label": "refinj.md"
+    },
+    {
+      "label": "REF_self_holding -- IL Logic Map",
+      "file_type": "document",
+      "source_file": "refinj.md",
+      "source_location": "L2",
+      "id": "refinj_ref_self_holding_il_logic_map",
+      "community": 0,
+      "norm_label": "ref_self_holding -- il logic map"
+    },
+    {
+      "label": "Block List",
+      "file_type": "document",
+      "source_file": "refinj.md",
+      "source_location": "L9",
+      "id": "refinj_block_list",
+      "community": 0,
+      "norm_label": "block list"
+    },
+    {
+      "label": "Block Detail",
+      "file_type": "document",
+      "source_file": "refinj.md",
+      "source_location": "L28",
+      "id": "refinj_block_detail",
+      "community": 0,
+      "norm_label": "block detail"
+    },
+    {
+      "label": "Block 1: L0 REFRIG FAST (Step 1-6)",
+      "file_type": "document",
+      "source_file": "refinj.md",
+      "source_location": "L30",
+      "id": "refinj_block_1_l0_refrig_fast_step_1_6",
+      "community": 0,
+      "norm_label": "block 1: l0 refrig fast (step 1-6)"
+    },
+    {
+      "label": "Block 2: L0 REFRIG NORMAL (Step 8-11)",
+      "file_type": "document",
+      "source_file": "refinj.md",
+      "source_location": "L42",
+      "id": "refinj_block_2_l0_refrig_normal_step_8_11",
+      "community": 0,
+      "norm_label": "block 2: l0 refrig normal (step 8-11)"
+    },
+    {
+      "label": "Block 3: L0 OIL FAST (Step 13-26)",
+      "file_type": "document",
+      "source_file": "refinj.md",
+      "source_location": "L52",
+      "id": "refinj_block_3_l0_oil_fast_step_13_26",
+      "community": 0,
+      "norm_label": "block 3: l0 oil fast (step 13-26)"
+    },
+    {
+      "label": "Block 4: L0 OIL NORMAL (Step 28-38)",
+      "file_type": "document",
+      "source_file": "refinj.md",
+      "source_location": "L72",
+      "id": "refinj_block_4_l0_oil_normal_step_28_38",
+      "community": 0,
+      "norm_label": "block 4: l0 oil normal (step 28-38)"
+    },
+    {
+      "label": "Block 5: L0 EXHAUST (Step 40-43)",
+      "file_type": "document",
+      "source_file": "refinj.md",
+      "source_location": "L89",
+      "id": "refinj_block_5_l0_exhaust_step_40_43",
+      "community": 0,
+      "norm_label": "block 5: l0 exhaust (step 40-43)"
+    },
+    {
+      "label": "Block 6: L1 REFRIG FAST (Step 45-50)",
+      "file_type": "document",
+      "source_file": "refinj.md",
+      "source_location": "L99",
+      "id": "refinj_block_6_l1_refrig_fast_step_45_50",
+      "community": 0,
+      "norm_label": "block 6: l1 refrig fast (step 45-50)"
+    },
+    {
+      "label": "Block 7: L1 REFRIG NORMAL (Step 52-55)",
+      "file_type": "document",
+      "source_file": "refinj.md",
+      "source_location": "L111",
+      "id": "refinj_block_7_l1_refrig_normal_step_52_55",
+      "community": 0,
+      "norm_label": "block 7: l1 refrig normal (step 52-55)"
+    },
+    {
+      "label": "Block 8: L1 OIL FAST (Step 57-70)",
+      "file_type": "document",
+      "source_file": "refinj.md",
+      "source_location": "L121",
+      "id": "refinj_block_8_l1_oil_fast_step_57_70",
+      "community": 0,
+      "norm_label": "block 8: l1 oil fast (step 57-70)"
+    },
+    {
+      "label": "Block 9: L1 OIL NORMAL (Step 72-82)",
+      "file_type": "document",
+      "source_file": "refinj.md",
+      "source_location": "L141",
+      "id": "refinj_block_9_l1_oil_normal_step_72_82",
+      "community": 0,
+      "norm_label": "block 9: l1 oil normal (step 72-82)"
+    },
+    {
+      "label": "Block 10: L1 EXHAUST (Step 84-87)",
+      "file_type": "document",
+      "source_file": "refinj.md",
+      "source_location": "L158",
+      "id": "refinj_block_10_l1_exhaust_step_84_87",
+      "community": 0,
+      "norm_label": "block 10: l1 exhaust (step 84-87)"
+    },
+    {
+      "label": "Block 11: COMPLETION L0 (M822) (Step 89-118)",
+      "file_type": "document",
+      "source_file": "refinj.md",
+      "source_location": "L168",
+      "id": "refinj_block_11_completion_l0_m822_step_89_118",
+      "community": 0,
+      "norm_label": "block 11: completion l0 (m822) (step 89-118)"
+    },
+    {
+      "label": "Block 12: COMPLETION L1 (M838) (Step 120-161)",
+      "file_type": "document",
+      "source_file": "refinj.md",
+      "source_location": "L204",
+      "id": "refinj_block_12_completion_l1_m838_step_120_161",
+      "community": 0,
+      "norm_label": "block 12: completion l1 (m838) (step 120-161)"
+    },
+    {
+      "label": "Block 13: TIMEOUT ALARM TRIGGERS (Step 163-190)",
+      "file_type": "document",
+      "source_file": "refinj.md",
+      "source_location": "L252",
+      "id": "refinj_block_13_timeout_alarm_triggers_step_163_190",
+      "community": 0,
+      "norm_label": "block 13: timeout alarm triggers (step 163-190)"
+    },
+    {
+      "label": "Block 14: OIL RESTART FLAGS (Step 192-207)",
+      "file_type": "document",
+      "source_file": "refinj.md",
+      "source_location": "L286",
+      "id": "refinj_block_14_oil_restart_flags_step_192_207",
+      "community": 0,
+      "norm_label": "block 14: oil restart flags (step 192-207)"
+    },
+    {
+      "label": "Block 15: OIL NORMAL ENTRY (Step 209-226)",
+      "file_type": "document",
+      "source_file": "refinj.md",
+      "source_location": "L308",
+      "id": "refinj_block_15_oil_normal_entry_step_209_226",
+      "community": 0,
+      "norm_label": "block 15: oil normal entry (step 209-226)"
+    },
+    {
+      "label": "Device Map",
+      "file_type": "document",
+      "source_file": "refinj.md",
+      "source_location": "L332",
+      "id": "refinj_device_map",
+      "community": 0,
+      "norm_label": "device map"
+    },
+    {
+      "label": "setting.md",
+      "file_type": "document",
+      "source_file": "setting.md",
+      "source_location": "L1",
+      "id": "setting_md_setting",
+      "community": 19,
+      "norm_label": "setting.md"
+    },
+    {
+      "label": "REF_self_holding -- IL Logic Map",
+      "file_type": "document",
+      "source_file": "setting.md",
+      "source_location": "L2",
+      "id": "setting_ref_self_holding_il_logic_map",
+      "community": 19,
+      "norm_label": "ref_self_holding -- il logic map"
+    },
+    {
+      "label": "Block List",
+      "file_type": "document",
+      "source_file": "setting.md",
+      "source_location": "L9",
+      "id": "setting_block_list",
+      "community": 19,
+      "norm_label": "block list"
+    },
+    {
+      "label": "Block Detail",
+      "file_type": "document",
+      "source_file": "setting.md",
+      "source_location": "L14",
+      "id": "setting_block_detail",
+      "community": 19,
+      "norm_label": "block detail"
+    },
+    {
+      "label": "Block 1: CONFIG SYNC (Step 1-4)",
+      "file_type": "document",
+      "source_file": "setting.md",
+      "source_location": "L16",
+      "id": "setting_block_1_config_sync_step_1_4",
+      "community": 19,
+      "norm_label": "block 1: config sync (step 1-4)"
+    },
+    {
+      "label": "Device Map",
+      "file_type": "document",
+      "source_file": "setting.md",
+      "source_location": "L26",
+      "id": "setting_device_map",
+      "community": 19,
+      "norm_label": "device map"
+    },
+    {
+      "label": "spc.md",
+      "file_type": "document",
+      "source_file": "spc.md",
+      "source_location": "L1",
+      "id": "spc_md_spc",
+      "community": 3,
+      "norm_label": "spc.md"
+    },
+    {
+      "label": "REF_self_holding -- IL Logic Map",
+      "file_type": "document",
+      "source_file": "spc.md",
+      "source_location": "L2",
+      "id": "spc_ref_self_holding_il_logic_map",
+      "community": 3,
+      "norm_label": "ref_self_holding -- il logic map"
+    },
+    {
+      "label": "Block List",
+      "file_type": "document",
+      "source_file": "spc.md",
+      "source_location": "L9",
+      "id": "spc_block_list",
+      "community": 3,
+      "norm_label": "block list"
+    },
+    {
+      "label": "Block Detail",
+      "file_type": "document",
+      "source_file": "spc.md",
+      "source_location": "L18",
+      "id": "spc_block_detail",
+      "community": 3,
+      "norm_label": "block detail"
+    },
+    {
+      "label": "Block 1: L0 CYCLE DONE (Step 1-12)",
+      "file_type": "document",
+      "source_file": "spc.md",
+      "source_location": "L20",
+      "id": "spc_block_1_l0_cycle_done_step_1_12",
+      "community": 3,
+      "norm_label": "block 1: l0 cycle done (step 1-12)"
+    },
+    {
+      "label": "Block 2: L1 CYCLE DONE (Step 14-25)",
+      "file_type": "document",
+      "source_file": "spc.md",
+      "source_location": "L38",
+      "id": "spc_block_2_l1_cycle_done_step_14_25",
+      "community": 3,
+      "norm_label": "block 2: l1 cycle done (step 14-25)"
+    },
+    {
+      "label": "Block 3: DISPLAY BOMBE (Step 27-30)",
+      "file_type": "document",
+      "source_file": "spc.md",
+      "source_location": "L56",
+      "id": "spc_block_3_display_bombe_step_27_30",
+      "community": 3,
+      "norm_label": "block 3: display bombe (step 27-30)"
+    },
+    {
+      "label": "Block 4: VAC SPC LOGGING (Step 32-53)",
+      "file_type": "document",
+      "source_file": "spc.md",
+      "source_location": "L66",
+      "id": "spc_block_4_vac_spc_logging_step_32_53",
+      "community": 3,
+      "norm_label": "block 4: vac spc logging (step 32-53)"
+    },
+    {
+      "label": "Block 5: VAC SPC CLEAR (Step 55-58)",
+      "file_type": "document",
+      "source_file": "spc.md",
+      "source_location": "L94",
+      "id": "spc_block_5_vac_spc_clear_step_55_58",
+      "community": 3,
+      "norm_label": "block 5: vac spc clear (step 55-58)"
+    },
+    {
+      "label": "Device Map",
+      "file_type": "document",
+      "source_file": "spc.md",
+      "source_location": "L104",
+      "id": "spc_device_map",
+      "community": 3,
+      "norm_label": "device map"
+    },
+    {
+      "label": "unitvac.md",
+      "file_type": "document",
+      "source_file": "unitvac.md",
+      "source_location": "L1",
+      "id": "unitvac_md_unitvac",
+      "community": 17,
+      "norm_label": "unitvac.md"
+    },
+    {
+      "label": "REF_self_holding -- IL Logic Map",
+      "file_type": "document",
+      "source_file": "unitvac.md",
+      "source_location": "L2",
+      "id": "unitvac_ref_self_holding_il_logic_map",
+      "community": 17,
+      "norm_label": "ref_self_holding -- il logic map"
+    },
+    {
+      "label": "Block List",
+      "file_type": "document",
+      "source_file": "unitvac.md",
+      "source_location": "L9",
+      "id": "unitvac_block_list",
+      "community": 17,
+      "norm_label": "block list"
+    },
+    {
+      "label": "Block Detail",
+      "file_type": "document",
+      "source_file": "unitvac.md",
+      "source_location": "L15",
+      "id": "unitvac_block_detail",
+      "community": 17,
+      "norm_label": "block detail"
+    },
+    {
+      "label": "Block 1: UNIT VACUUM (Line 0) (Step 1-42)",
+      "file_type": "document",
+      "source_file": "unitvac.md",
+      "source_location": "L17",
+      "id": "unitvac_block_1_unit_vacuum_line_0_step_1_42",
+      "community": 17,
+      "norm_label": "block 1: unit vacuum (line 0) (step 1-42)"
+    },
+    {
+      "label": "Block 2: UNIT VACUUM (Line 1) (Step 44-85)",
+      "file_type": "document",
+      "source_file": "unitvac.md",
+      "source_location": "L65",
+      "id": "unitvac_block_2_unit_vacuum_line_1_step_44_85",
+      "community": 17,
+      "norm_label": "block 2: unit vacuum (line 1) (step 44-85)"
+    },
+    {
+      "label": "Device Map",
+      "file_type": "document",
+      "source_file": "unitvac.md",
+      "source_location": "L113",
+      "id": "unitvac_device_map",
+      "community": 17,
+      "norm_label": "device map"
+    },
+    {
+      "label": "vacchec.md",
+      "file_type": "document",
+      "source_file": "vacchec.md",
+      "source_location": "L1",
+      "id": "vacchec_md_vacchec",
+      "community": 18,
+      "norm_label": "vacchec.md"
+    },
+    {
+      "label": "REF_self_holding -- IL Logic Map",
+      "file_type": "document",
+      "source_file": "vacchec.md",
+      "source_location": "L2",
+      "id": "vacchec_ref_self_holding_il_logic_map",
+      "community": 18,
+      "norm_label": "ref_self_holding -- il logic map"
+    },
+    {
+      "label": "Block List",
+      "file_type": "document",
+      "source_file": "vacchec.md",
+      "source_location": "L9",
+      "id": "vacchec_block_list",
+      "community": 18,
+      "norm_label": "block list"
+    },
+    {
+      "label": "Block Detail",
+      "file_type": "document",
+      "source_file": "vacchec.md",
+      "source_location": "L15",
+      "id": "vacchec_block_detail",
+      "community": 18,
+      "norm_label": "block detail"
+    },
+    {
+      "label": "Block 1: VAC CHECK L0 (Step 1-21)",
+      "file_type": "document",
+      "source_file": "vacchec.md",
+      "source_location": "L17",
+      "id": "vacchec_block_1_vac_check_l0_step_1_21",
+      "community": 18,
+      "norm_label": "block 1: vac check l0 (step 1-21)"
+    },
+    {
+      "label": "Block 2: VAC CHECK L1 (Step 23-43)",
+      "file_type": "document",
+      "source_file": "vacchec.md",
+      "source_location": "L44",
+      "id": "vacchec_block_2_vac_check_l1_step_23_43",
+      "community": 18,
+      "norm_label": "block 2: vac check l1 (step 23-43)"
+    },
+    {
+      "label": "Device Map",
+      "file_type": "document",
+      "source_file": "vacchec.md",
+      "source_location": "L71",
+      "id": "vacchec_device_map",
+      "community": 18,
+      "norm_label": "device map"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "485.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "485_json_485",
+      "target": "485_blocks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "485.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "485_json_485",
+      "target": "485_meta",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "485.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "485_meta",
+      "target": "485_meta_block_count",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "485.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "485_meta",
+      "target": "485_meta_cpu",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "485.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "485_meta",
+      "target": "485_meta_generated",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "485.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "485_meta",
+      "target": "485_meta_source_file",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "485.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "485_meta",
+      "target": "485_meta_total_steps",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "main_json_main",
+      "target": "main_blocks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "main_json_main",
+      "target": "main_meta",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "main_meta",
+      "target": "main_meta_block_count",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "main_meta",
+      "target": "main_meta_cpu",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "main_meta",
+      "target": "main_meta_generated",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "main_meta",
+      "target": "main_meta_source_file",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "main_meta",
+      "target": "main_meta_total_steps",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ad.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "ad_json_ad",
+      "target": "ad_blocks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ad.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "ad_json_ad",
+      "target": "ad_meta",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ad.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "ad_meta",
+      "target": "ad_meta_block_count",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ad.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "ad_meta",
+      "target": "ad_meta_cpu",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ad.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "ad_meta",
+      "target": "ad_meta_generated",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ad.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "ad_meta",
+      "target": "ad_meta_source_file",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ad.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "ad_meta",
+      "target": "ad_meta_total_steps",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "alarm.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "alarm_json_alarm",
+      "target": "alarm_blocks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "alarm.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "alarm_json_alarm",
+      "target": "alarm_meta",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "alarm.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "alarm_meta",
+      "target": "alarm_meta_block_count",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "alarm.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "alarm_meta",
+      "target": "alarm_meta_cpu",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "alarm.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "alarm_meta",
+      "target": "alarm_meta_generated",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "alarm.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "alarm_meta",
+      "target": "alarm_meta_source_file",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "alarm.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "alarm_meta",
+      "target": "alarm_meta_total_steps",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gunvac.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "gunvac_json_gunvac",
+      "target": "gunvac_blocks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gunvac.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "gunvac_json_gunvac",
+      "target": "gunvac_meta",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gunvac.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "gunvac_meta",
+      "target": "gunvac_meta_block_count",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gunvac.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "gunvac_meta",
+      "target": "gunvac_meta_cpu",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gunvac.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "gunvac_meta",
+      "target": "gunvac_meta_generated",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gunvac.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "gunvac_meta",
+      "target": "gunvac_meta_source_file",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gunvac.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "gunvac_meta",
+      "target": "gunvac_meta_total_steps",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "idata.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "idata_json_idata",
+      "target": "idata_blocks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "idata.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "idata_json_idata",
+      "target": "idata_meta",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "idata.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "idata_meta",
+      "target": "idata_meta_block_count",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "idata.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "idata_meta",
+      "target": "idata_meta_cpu",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "idata.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "idata_meta",
+      "target": "idata_meta_generated",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "idata.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "idata_meta",
+      "target": "idata_meta_source_file",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "idata.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "idata_meta",
+      "target": "idata_meta_total_steps",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "refinj.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "refinj_json_refinj",
+      "target": "refinj_blocks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "refinj.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "refinj_json_refinj",
+      "target": "refinj_meta",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "refinj.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "refinj_meta",
+      "target": "refinj_meta_block_count",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "refinj.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "refinj_meta",
+      "target": "refinj_meta_cpu",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "refinj.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "refinj_meta",
+      "target": "refinj_meta_generated",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "refinj.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "refinj_meta",
+      "target": "refinj_meta_source_file",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "refinj.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "refinj_meta",
+      "target": "refinj_meta_total_steps",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "setting.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "setting_json_setting",
+      "target": "setting_blocks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "setting.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "setting_json_setting",
+      "target": "setting_meta",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "setting.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "setting_meta",
+      "target": "setting_meta_block_count",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "setting.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "setting_meta",
+      "target": "setting_meta_cpu",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "setting.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "setting_meta",
+      "target": "setting_meta_generated",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "setting.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "setting_meta",
+      "target": "setting_meta_source_file",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "setting.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "setting_meta",
+      "target": "setting_meta_total_steps",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spc.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "spc_json_spc",
+      "target": "spc_blocks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spc.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "spc_json_spc",
+      "target": "spc_meta",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spc.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "spc_meta",
+      "target": "spc_meta_block_count",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spc.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "spc_meta",
+      "target": "spc_meta_cpu",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spc.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "spc_meta",
+      "target": "spc_meta_generated",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spc.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "spc_meta",
+      "target": "spc_meta_source_file",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spc.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "spc_meta",
+      "target": "spc_meta_total_steps",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "unitvac.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "unitvac_json_unitvac",
+      "target": "unitvac_blocks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "unitvac.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "unitvac_json_unitvac",
+      "target": "unitvac_meta",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "unitvac.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "unitvac_meta",
+      "target": "unitvac_meta_block_count",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "unitvac.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "unitvac_meta",
+      "target": "unitvac_meta_cpu",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "unitvac.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "unitvac_meta",
+      "target": "unitvac_meta_generated",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "unitvac.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "unitvac_meta",
+      "target": "unitvac_meta_source_file",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "unitvac.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "unitvac_meta",
+      "target": "unitvac_meta_total_steps",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vacchec.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "vacchec_json_vacchec",
+      "target": "vacchec_blocks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vacchec.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "vacchec_json_vacchec",
+      "target": "vacchec_meta",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vacchec.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "vacchec_meta",
+      "target": "vacchec_meta_block_count",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vacchec.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "vacchec_meta",
+      "target": "vacchec_meta_cpu",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vacchec.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "vacchec_meta",
+      "target": "vacchec_meta_generated",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vacchec.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "vacchec_meta",
+      "target": "vacchec_meta_source_file",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vacchec.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "vacchec_meta",
+      "target": "vacchec_meta_total_steps",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "485.md",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "485_md_485",
+      "target": "485_ref_self_holding_il_logic_map",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "485.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "485_ref_self_holding_il_logic_map",
+      "target": "485_block_detail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "485.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "485_ref_self_holding_il_logic_map",
+      "target": "485_block_list",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "485.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "485_ref_self_holding_il_logic_map",
+      "target": "485_device_map",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "main_md_main",
+      "target": "main_ref_self_holding_il_logic_map",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "main_ref_self_holding_il_logic_map",
+      "target": "main_block_detail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "main_ref_self_holding_il_logic_map",
+      "target": "main_block_list",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L731",
+      "weight": 1.0,
+      "source": "main_ref_self_holding_il_logic_map",
+      "target": "main_device_map",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L627",
+      "weight": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_10_exhaust_timer_step_556_559",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L637",
+      "weight": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_11_lamp_control_step_561_600",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L683",
+      "weight": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_12_hmi_lamp_step_602_643",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_1_mode_control_step_1_38",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_2_interlock_check_step_40_51",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L89",
+      "weight": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_3_stop_emg_latch_step_53_80",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L123",
+      "weight": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_4_ng_alarm_group_step_82_107",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L155",
+      "weight": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_5_ready_l0_step_109_142",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L195",
+      "weight": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_6_ready_l1_step_144_177",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L235",
+      "weight": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_7_step_l0_step_179_359",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L422",
+      "weight": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_8_step_l1_step_361_541",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L609",
+      "weight": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_9_ng_result_code_step_543_554",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ad.md",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "ad_md_ad",
+      "target": "ad_ref_self_holding_il_logic_map",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ad.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "ad_ref_self_holding_il_logic_map",
+      "target": "ad_block_detail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ad.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "ad_ref_self_holding_il_logic_map",
+      "target": "ad_block_list",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ad.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "ad_ref_self_holding_il_logic_map",
+      "target": "ad_device_map",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "alarm.md",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "alarm_md_alarm",
+      "target": "alarm_ref_self_holding_il_logic_map",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "alarm.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "alarm_ref_self_holding_il_logic_map",
+      "target": "alarm_block_detail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "alarm.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "alarm_ref_self_holding_il_logic_map",
+      "target": "alarm_block_list",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "alarm.md",
+      "source_location": "L127",
+      "weight": 1.0,
+      "source": "alarm_ref_self_holding_il_logic_map",
+      "target": "alarm_device_map",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "alarm.md",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "alarm_block_detail",
+      "target": "alarm_block_1_alarm_latch_step_1_61",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "alarm.md",
+      "source_location": "L85",
+      "weight": 1.0,
+      "source": "alarm_block_detail",
+      "target": "alarm_block_2_buzzer_step_63_88",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "alarm.md",
+      "source_location": "L117",
+      "weight": 1.0,
+      "source": "alarm_block_detail",
+      "target": "alarm_block_3_alarm_reset_step_90_93",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gunvac.md",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "gunvac_md_gunvac",
+      "target": "gunvac_ref_self_holding_il_logic_map",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gunvac.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "gunvac_ref_self_holding_il_logic_map",
+      "target": "gunvac_block_detail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gunvac.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "gunvac_ref_self_holding_il_logic_map",
+      "target": "gunvac_block_list",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gunvac.md",
+      "source_location": "L99",
+      "weight": 1.0,
+      "source": "gunvac_ref_self_holding_il_logic_map",
+      "target": "gunvac_device_map",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gunvac.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "gunvac_block_detail",
+      "target": "gunvac_block_1_gun_vacuum_line_0_step_1_35",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gunvac.md",
+      "source_location": "L58",
+      "weight": 1.0,
+      "source": "gunvac_block_detail",
+      "target": "gunvac_block_2_gun_vacuum_line_1_step_37_71",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "idata.md",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "idata_md_idata",
+      "target": "idata_ref_self_holding_il_logic_map",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "idata.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "idata_ref_self_holding_il_logic_map",
+      "target": "idata_block_detail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "idata.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "idata_ref_self_holding_il_logic_map",
+      "target": "idata_block_list",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "idata.md",
+      "source_location": "L209",
+      "weight": 1.0,
+      "source": "idata_ref_self_holding_il_logic_map",
+      "target": "idata_device_map",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "idata.md",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "idata_block_detail",
+      "target": "idata_block_1_system_flags_step_1_6",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "idata.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "idata_block_detail",
+      "target": "idata_block_2_init_first_scan_step_8_9",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "idata.md",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "idata_block_detail",
+      "target": "idata_block_3_input_mapping_l0_step_98_129",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "idata.md",
+      "source_location": "L81",
+      "weight": 1.0,
+      "source": "idata_block_detail",
+      "target": "idata_block_4_input_mapping_l1_step_131_162",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "idata.md",
+      "source_location": "L119",
+      "weight": 1.0,
+      "source": "idata_block_detail",
+      "target": "idata_block_5_output_mapping_l0_step_164_189",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "idata.md",
+      "source_location": "L151",
+      "weight": 1.0,
+      "source": "idata_block_detail",
+      "target": "idata_block_6_global_outputs_step_191_198",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "idata.md",
+      "source_location": "L165",
+      "weight": 1.0,
+      "source": "idata_block_detail",
+      "target": "idata_block_7_output_mapping_l1_step_200_223",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "idata.md",
+      "source_location": "L195",
+      "weight": 1.0,
+      "source": "idata_block_detail",
+      "target": "idata_block_8_config_validation_step_225_232",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "refinj.md",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "refinj_md_refinj",
+      "target": "refinj_ref_self_holding_il_logic_map",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "refinj.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "refinj_ref_self_holding_il_logic_map",
+      "target": "refinj_block_detail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "refinj.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "refinj_ref_self_holding_il_logic_map",
+      "target": "refinj_block_list",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "refinj.md",
+      "source_location": "L332",
+      "weight": 1.0,
+      "source": "refinj_ref_self_holding_il_logic_map",
+      "target": "refinj_device_map",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "refinj.md",
+      "source_location": "L158",
+      "weight": 1.0,
+      "source": "refinj_block_detail",
+      "target": "refinj_block_10_l1_exhaust_step_84_87",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "refinj.md",
+      "source_location": "L168",
+      "weight": 1.0,
+      "source": "refinj_block_detail",
+      "target": "refinj_block_11_completion_l0_m822_step_89_118",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "refinj.md",
+      "source_location": "L204",
+      "weight": 1.0,
+      "source": "refinj_block_detail",
+      "target": "refinj_block_12_completion_l1_m838_step_120_161",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "refinj.md",
+      "source_location": "L252",
+      "weight": 1.0,
+      "source": "refinj_block_detail",
+      "target": "refinj_block_13_timeout_alarm_triggers_step_163_190",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "refinj.md",
+      "source_location": "L286",
+      "weight": 1.0,
+      "source": "refinj_block_detail",
+      "target": "refinj_block_14_oil_restart_flags_step_192_207",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "refinj.md",
+      "source_location": "L308",
+      "weight": 1.0,
+      "source": "refinj_block_detail",
+      "target": "refinj_block_15_oil_normal_entry_step_209_226",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "refinj.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "refinj_block_detail",
+      "target": "refinj_block_1_l0_refrig_fast_step_1_6",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "refinj.md",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "refinj_block_detail",
+      "target": "refinj_block_2_l0_refrig_normal_step_8_11",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "refinj.md",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "refinj_block_detail",
+      "target": "refinj_block_3_l0_oil_fast_step_13_26",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "refinj.md",
+      "source_location": "L72",
+      "weight": 1.0,
+      "source": "refinj_block_detail",
+      "target": "refinj_block_4_l0_oil_normal_step_28_38",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "refinj.md",
+      "source_location": "L89",
+      "weight": 1.0,
+      "source": "refinj_block_detail",
+      "target": "refinj_block_5_l0_exhaust_step_40_43",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "refinj.md",
+      "source_location": "L99",
+      "weight": 1.0,
+      "source": "refinj_block_detail",
+      "target": "refinj_block_6_l1_refrig_fast_step_45_50",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "refinj.md",
+      "source_location": "L111",
+      "weight": 1.0,
+      "source": "refinj_block_detail",
+      "target": "refinj_block_7_l1_refrig_normal_step_52_55",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "refinj.md",
+      "source_location": "L121",
+      "weight": 1.0,
+      "source": "refinj_block_detail",
+      "target": "refinj_block_8_l1_oil_fast_step_57_70",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "refinj.md",
+      "source_location": "L141",
+      "weight": 1.0,
+      "source": "refinj_block_detail",
+      "target": "refinj_block_9_l1_oil_normal_step_72_82",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "setting.md",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "setting_md_setting",
+      "target": "setting_ref_self_holding_il_logic_map",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "setting.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "setting_ref_self_holding_il_logic_map",
+      "target": "setting_block_detail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "setting.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "setting_ref_self_holding_il_logic_map",
+      "target": "setting_block_list",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "setting.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "setting_ref_self_holding_il_logic_map",
+      "target": "setting_device_map",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "setting.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "setting_block_detail",
+      "target": "setting_block_1_config_sync_step_1_4",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spc.md",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "spc_md_spc",
+      "target": "spc_ref_self_holding_il_logic_map",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spc.md",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "spc_ref_self_holding_il_logic_map",
+      "target": "spc_block_detail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spc.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "spc_ref_self_holding_il_logic_map",
+      "target": "spc_block_list",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spc.md",
+      "source_location": "L104",
+      "weight": 1.0,
+      "source": "spc_ref_self_holding_il_logic_map",
+      "target": "spc_device_map",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spc.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "spc_block_detail",
+      "target": "spc_block_1_l0_cycle_done_step_1_12",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spc.md",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "spc_block_detail",
+      "target": "spc_block_2_l1_cycle_done_step_14_25",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spc.md",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "spc_block_detail",
+      "target": "spc_block_3_display_bombe_step_27_30",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spc.md",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "spc_block_detail",
+      "target": "spc_block_4_vac_spc_logging_step_32_53",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spc.md",
+      "source_location": "L94",
+      "weight": 1.0,
+      "source": "spc_block_detail",
+      "target": "spc_block_5_vac_spc_clear_step_55_58",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "unitvac.md",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "unitvac_md_unitvac",
+      "target": "unitvac_ref_self_holding_il_logic_map",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "unitvac.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "unitvac_ref_self_holding_il_logic_map",
+      "target": "unitvac_block_detail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "unitvac.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "unitvac_ref_self_holding_il_logic_map",
+      "target": "unitvac_block_list",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "unitvac.md",
+      "source_location": "L113",
+      "weight": 1.0,
+      "source": "unitvac_ref_self_holding_il_logic_map",
+      "target": "unitvac_device_map",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "unitvac.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "unitvac_block_detail",
+      "target": "unitvac_block_1_unit_vacuum_line_0_step_1_42",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "unitvac.md",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "unitvac_block_detail",
+      "target": "unitvac_block_2_unit_vacuum_line_1_step_44_85",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vacchec.md",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "vacchec_md_vacchec",
+      "target": "vacchec_ref_self_holding_il_logic_map",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vacchec.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "vacchec_ref_self_holding_il_logic_map",
+      "target": "vacchec_block_detail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vacchec.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "vacchec_ref_self_holding_il_logic_map",
+      "target": "vacchec_block_list",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vacchec.md",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "vacchec_ref_self_holding_il_logic_map",
+      "target": "vacchec_device_map",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vacchec.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "vacchec_block_detail",
+      "target": "vacchec_block_1_vac_check_l0_step_1_21",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vacchec.md",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "vacchec_block_detail",
+      "target": "vacchec_block_2_vac_check_l1_step_23_43",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "built_at_commit": "bee248bffce28055c3aece9e2457add4439fe768"
+}

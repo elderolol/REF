@@ -1,192 +1,253 @@
-# REF — GX Works2 PLC IL CSV Processing
+# REF_DOCUMENT
 
-> **Domain**: Factory Automation / Mitsubishi Electric PLC  
-> **Toolchain**: GX Works2 → Ladder Logic → IL (Instruction List) → CSV export → LLM Analysis  
-> **Strict Constraint**: Design and code MUST strictly follow `Notes/GX_WORKS2_IL_Spec.md`
-
----
-
-## Overview
-
-REF is a workspace for analyzing, parsing, generating, and modifying CSV files exported from **Mitsubishi Electric GX Works2**. The exported CSV represents PLC Ladder Logic converted to IL (Instruction List) format.
-
-The core specification (`Notes/GX_WORKS2_IL_Spec.md`) was reverse-engineered from real PLC export files (`F:\WorkSpace\MC_26074_DS\MAIN.csv`, 3,607 lines) and defines byte-level encoding rules. Violating even one rule causes GX Works2 import failure or abnormal PLC behavior.
+> **PLC**: QCPU (Q mode) Q03UDV | **Tool**: GX Works2 IL | **HMI**: LS IXP2-1200
+> 
+> IL coding rules: `gx_works2_il_spec.md` | CSV format: see [CSV Format Reference](#csv-format-reference)
 
 ---
 
-## Target CSV Files
+# Program Structure
 
-### Main Program
+## System Overview
+Refrigerant injection equipment. Two independent lanes (L0, L1) with shared HMI.
 
-| File | Description |
-|---|---|
-| `main.csv` | Project-wide master program — orchestrates all individual functional modules. Contains the overall control flow, initialization, and global logic for the entire system. |
+## Operation Modes
 
-### Functional Modules
+### Mode Toggle
+- M1038 toggles M801 (auto) ↔ M802 (manual). Complement toggle with PLS edge (M600).
 
-| File | Description |
-|---|---|
-| `gunvac.csv` | Gun vacuum control |
-| `unitvac.csv` | Unit vacuum control |
-| `vacchec.csv` | Vacuum check |
-| `refinj.csv` | Refrigerant injection |
-| `alarm.csv` | Alarm handling |
-| `gmes.csv` | GMES (General-purpose) |
-| `ad.csv` | Analog-to-Digital conversion |
-| `485.csv` | RS-485 communication |
-| `setting.csv` | System settings / configuration |
-| `spc.csv` | SPC (Statistical Process Control) |
-| `idata.csv` | Input data |
+### Auto Mode (M801 = ON)
+- Full process chain runs sequentially.
+- START (M1043 L0 / M1045 L1) initiates from M17/M33 (wait step).
 
----
+### Manual Mode (M802 = ON)
+- Function selection via HMI momentary buttons M1039-M1042.
+- Function btn + START → direct step entry. Chain continues automatically from entry point.
 
-## Key Technical Constraints
+| Btn | + START | Step |
+|-----|---------|------|
+| M1039 | M1043 | M18 gunvac L0 |
+| M1040 | M1043 | M19 unitvac L0 |
+| M1041 | M1043 | M20 vacchec L0 |
+| M1042 | M1043 | M21+M22 refrig L0 |
+| M1039 | M1045 | M34 gunvac L1 |
+| M1040 | M1045 | M35 unitvac L1 |
+| M1041 | M1045 | M36 vacchec L1 |
+| M1042 | M1045 | M37+M38 refrig L1 |
 
-### File Format (GX Works2 IL CSV)
-- **Encoding**: UTF-16 LE with BOM (FF FE)
-- **Line ending**: CR+LF (0D 00 0A 00 hex)
-- **Field delimiter**: TAB (09 00)
-- **No blank rows** anywhere in the file
-- **Fixed file structure**:
-  - Row 1: Program name (title)
-  - Row 2: PLC information record
-  - Row 3: Column header record
-  - Row 4+: Data records
-  - Last: END instruction record
+## Step Machine
 
-### Non-compliance Consequence
-- Import into GX Works2 fails or produces abnormal PLC behavior
-
----
-
-## Directory Structure
-
+### L0
 ```
-REF/
-├── AGENTS.md                                    # OpenCode agent config (graphify rules)
-├── Notes/
-│   ├── REF_DOCUMENT.md                          # This file — project documentation & reference data
-│   └── GX_WORKS2_IL_Spec.md         # Strict IL CSV format specification
-├── graphify-out/                                # Knowledge graph output
-│   └── .graphify_detect.json
-├── .opencode/                                   # OpenCode runtime config
-└── .sisyphus/                                   # Sisyphus session data
+M16(init) → M17(wait) → M18(gunvac) → M19(unitvac)
+          → M20(vacchec) → M21+M22(refrig, parallel) → M23(exhaust) → M24(complete) → M16
+```
+- M25/M26: oil sub-cycles (refinj-owned).
+- **Rung order** (release step before released): M24→M23→M21→M22→M20→M19→M18→M17→M16
+
+### L1
+```
+M32(init) → M33(wait) → M34(gunvac) → M35(unitvac)
+          → M36(vacchec) → M37+M38(refrig, parallel) → M39(exhaust) → M40(complete) → M32
+```
+- M41/M42: oil sub-cycles (refinj-owned).
+- **Rung order**: M40→M39→M37→M38→M36→M35→M34→M33→M32
+
+## Injection Quantity
+
+### PC/Barcode Mode (M803 = ON)
+```
+D7001(L0)/D8001(L1) → D60-D84/D88-D112 lookup → D0/D30 model index → D128/D404 final setpoint
+```
+- M876 SET if D7000≠1 or D8000≠2 → PC data error alarm.
+
+### Manual Mode (M803 = OFF)
+- User sets D0(L0)/D30(L1) to model 1-25 → D60-D84/D88-D112 lookup → D128/D404.
+
+### Refrig Process
+- D62 = gas type. D124 = current injection amount.
+- Gas type 1: D124 ≥ D10 → M22 normal refrig → D124 ≥ D64 → exhaust.
+- Gas type 0: D124 ≥ D64 → exhaust (skip normal).
+- D72 = oil target → trigger oil sub-cycle or restart refrig.
+
+## Stop / Emergency
+
+| Action | Bit | Behavior |
+|--------|-----|----------|
+| STOP (M1044) | M301(L0) / M317(L1) | Self-holding ON. All steps `ANI M301/M317` → release. Init reactivates → latch OFF. |
+| EMG (M303 N/C) | M304 | Self-holding ON. All steps `ANI M304` → release. Resets only on M2 (power-cycle first scan). |
+
+## Interlock
+
+| Lane | Inputs | All-OK | Fail Latch |
+|------|--------|--------|------------|
+| L0 | M881-M885 (5, N/C closed=OK) | M880 | M316 |
+| L1 | M897-M901 (5) | M896 | M332 |
+
+- Interlock fail during M18/M19(L0) or M34/M35(L1): M316/M332 latches ON.
+- `ANI M316` in M18/M19 ANI chain, `ANI M332` in M34/M35 ANI chain → immediate stop.
+- **방폭** model: physical door sensors. **비방폭** model: inputs tied ON.
+
+## Alarm System
+
+| Item | Device | Detail |
+|------|--------|--------|
+| Latches | M864-M879 | Self-holding, released by M1027 alarm reset |
+| Buzzer | M76 | Self-holding: any alarm AND not silenced → ON. OFF by M1028. |
+| Silence | M500 | Self-holding: M1028→ON, M1027→OFF |
+| Lamps | M77(green) / M78(red) / M79(yellow) | Step active / NG alarm / init+!interlock |
+| Result codes | D7012(L0) / D8012(L1) | K1=OK, K2=exhaust NG, K3=vac mismatch, K4=vac leak, K5=refrig NG, K6=stop |
+
+## HMI Specification
+
+> **Model**: LS IXP2-1200 (1024×768, XGA). All buttons momentary.
+
+### Operation Screen Buttons
+
+| Button | Device | Function |
+|--------|--------|----------|
+| MANUAL/AUTO | M1038 | Mode toggle → M801/M802 |
+| GUN VACUUM | M1039 | Function select st0 |
+| UNIT VACUUM | M1040 | Function select st1 |
+| VACUUM CHECK | M1041 | Function select st2 |
+| REFRIGER INJECTION | M1042 | Function select st3 |
+| START | M1043(L0) / M1045(L1) | Initiate |
+| STOP | M1044 | Stop |
+| ALARM RESET | M1027 | Reset alarm latches |
+| BUZZER STOP | M1028 | Silence buzzer |
+| BARCODE USE/NOT USE | M803 | Toggle PC/barcode mode |
+| MODEL SELECT | — | Set D0/D30 |
+
+### Parameter ↔ PLC
+
+| # | Parameter | Device | Unit |
+|---|-----------|--------|------|
+| 1 | Gun Vacuum Time | D2(L0) / D32(L1) | sec |
+| 2 | Unit Vacuum Time | D4 / D34 | sec |
+| 3 | Vacuum Check Time | D6 / D36 | sec |
+| 4 | Exhaust Time | D8 / D38 | sec |
+| 5 | Fast Stop Section | D10 | g |
+| 6 | Bombe Alarm | D14 | Kg |
+| 7 | Gas Used Amount | D280/D290 | Kg |
+| 10 | Unit Vacuum Setting | D22 / D50 | Torr |
+| 11 | Vacuum Check Setting | D24 / D52 | Torr |
+
+### Screen Flow
+```
+POWER ON → OPERATION SCREEN
+              ├── USER SETTING (per-gun model params)
+              ├── PARAMETER SETTING (timers/limits)
+              └── ALARM SCREEN
 ```
 
-### External Reference
-- `F:\WorkSpace\MC_26074_DS\MAIN.csv` — Source-of-truth PLC export file (3,607 lines)
-- `F:\WorkSpace\MC_26074_DS\L1_MAIN.csv`, `L2_MAIN.csv` — Additional reference exports
+## File Map
+
+| File | Sections | Content |
+|------|----------|---------|
+| MAIN.csv | 12 | Step machine, mode, stop/emg, interlock, lamps |
+| alarm.csv | 3 | Alarm latches, buzzer, reset |
+| refinj.csv | 14 | Refrig injection: fast/normal, oil cycles, exhaust |
+| gunvac.csv | 2 | Gun vacuum: solenoids, OK/NG, timeout |
+| unitvac.csv | 2 | Unit vacuum: solenoids, OK/NG |
+| vacchec.csv | 2 | Vacuum check: delta calc, OK/NG |
+| indexs.csv | 8 | PC data check, barcode lookup, manual model |
+| spc.csv | 5 | Cycle counters, SPC logging, bombe alarm |
+| gmes.csv | 2 | PC communication data packing |
+| idata.csv | 8 | System flags, I/O mapping (X→M mirror) |
+| setting.csv | 1 | Config sync |
+
+## Device Address Map
+
+### Step Machine
+```
+L0: M16-M26 (11)         L1: M32-M42 (11)          offset +16
+```
+
+### Solenoids / Outputs
+```
+L0: M49-M55 (7)          L1: M65-M71 (7)           offset +16
+M96 L0 pump              M112 L1 pump              offset +16
+M100 L0 vac aux          M116 L1 vac aux           offset +16
+M102 L0 unit vac aux     M118 L1 unit vac aux      offset +16
+```
+
+### Control Flags
+```
+M301 L0 stop             M317 L1 stop              offset +16
+M304 emergency (shared)
+M312 L0 NG alarm OR      M328 L1 NG alarm OR       offset +16
+M316 L0 interlock fail   M332 L1 interlock fail    offset +16
+M320 L0 timeout          M336 L1 timeout           offset +16
+M340 L0 oil restart      M356 L1 oil restart       offset +16
+```
+
+### HMI
+```
+M500 buzzer silence (shared)    M76 buzzer
+M77 green  M78 red  M79 yellow
+M530-M533 L0 lamps      M546-M549 L1 lamps         offset +16
+M540 L0 run lamp        M556 L1 run lamp           offset +16
+M1024-M1045 HMI buttons (hardware fixed)
+M600-M601 PLS edge bits
+```
+
+### Results / Interlock / Direction
+```
+M816-M824 L0 results    M832-M840 L1 results       offset +16
+M880-M885 L0 interlock  M896-M901 L1 interlock     offset +16
+M864-M879 alarm latches (shared)
+M912-M913 L0 direction  M928-M929 L1 direction     offset +16
+M916 toggle (shared)
+```
+
+### Input Mapping
+```
+M768-M799 X→M mirror (hardware fixed)
+M800 first-scan  M801 manual mode  M802 auto mode
+```
+
+### D-Registers
+```
+D0/D30   model index      D2-D38   timer presets
+D60-D84  L0 model params  D88-D112 L1 model params
+D124     current amount   D128/D404 final setpoint
+D160/D172 vac current    D280-D298 SPC accumulators
+D7000+   PC comm L0      D8000+   PC comm L1
+```
 
 ---
 
-## Development Rules
+# CSV Format Reference
 
-1. All CSV read/write must strictly conform to `Notes/GX_WORKS2_IL_Spec.md` (IL writing rules). See [Reference Data](#reference-data) below for frequency evidence.
-2. After code changes, run `graphify update .` to keep the knowledge graph current
-3. For codebase questions, use `graphify query`, `graphify path`, or `graphify explain` when `graphify-out/graph.json` exists
+## File Format
+- **Encoding**: UTF-16 LE with BOM (`FF FE`)
+- **Line ending**: CR+LF (`0D 00 0A 00`)
+- **Field delimiter**: TAB (`09 00`)
+- **No blank rows** anywhere
+- **Structure**: Row1=Title, Row2=PLC info, Row3=Headers, Row4+=Data, Last=END
 
----
+## Mnemonic Reference
+Common mnemonics in this project:
 
-## Reference Data
+| Category | Mnemonic | Operands | Usage |
+|----------|----------|----------|-------|
+| Contact | `LD`, `LDI`, `AND`, `ANI`, `OR`, `ORI` | 1 | Bit logic |
+| Block | `ANB`, `ORB` | 0 | Block AND/OR |
+| Output | `OUT`, `SET`, `RST`, `PLS` | 1 | Write actions |
+| Comparison | `LD=`, `LD>`, `AND=`, `AND>=`, `LDD>=` | 2 | Compare |
+| Transfer | `MOV`, `DMOV`, `BMOV`, `FMOV` | 2+ | Data move |
+| Arithmetic | `D+`, `D-`, `D*`, `D/` | 3 | Math |
+| Timer | `OUT Tn` + preset | 2 | Timer coil |
+| Term | `END` | 0 | End of program |
 
-### Source Materials
-
-| Source | Description |
-|---|---|
-| `F:\WorkSpace\MC_26074_DS\MAIN.csv` | Original PLC export (3,607 lines). Reverse-engineered for format rules. Now being reconstructed as the project's `main.csv`. |
-| `F:\WorkSpace\MC_26074_DS\L1_MAIN.csv`, `L2_MAIN.csv` | Additional partial-exports confirming format variants. |
-| `Notes/MELSEC_QL_Programming_Manual(Common_Instruction).pdf` | Mitsubishi official manual (1,096 pages). Documents the complete MELSEC-Q/L instruction set and List Mode (IL) format. Used to validate and extend the spec. |
-
-> **Purpose**: This specification defines the mandatory format rules for CSV files exported from GX-Works2 by converting Ladder Logic to IL (Instruction List).
->
-> **Non-compliance = failure**: Violating even one rule will cause GX-Works2 import to fail or produce abnormal PLC behavior.
-
-### Hex Prefix Evidence (MAIN.csv)
-
-```
-FF FE  4D 00 43 00 5F 00 …      ← BOM, then "MC_..." in UTF-16 LE
-… 5F 00 44 00 53 00  0D 00 0A 00  ← end of row 1 with CRLF
-22 00 50 00 4C 00 43 00 …       ← start of row 2: "PLC...
-```
-
-### Verified Counts (MAIN.csv)
-
-- Total lines: 3,607
-- Blank lines: **0**
-- Lines with exactly 7 TAB-separated fields: 3,605 (= rows 3 … 3,607, i.e. the column header + all data rows)
-- Row 1: 1 field (title only)
-- Row 2: 2 TAB-separated fields (PLC info)
-
-### Mnemonic Frequency (MAIN.csv)
-
-A total of **46 distinct mnemonics** are observed. All mnemonics are UPPERCASE, contain no internal whitespace.
-
-| Category | Mnemonic | Count | Operands |
-|---|---|---|---|
-| Contact load | `LD` | 505 | 1 |
-| | `LDI` | 53 | 1 |
-| | `LDP` | 23 | 1 |
-| | `LDF` | (rare) | 1 |
-| AND series | `AND` | 359 | 1 |
-| | `ANI` | 483 | 1 |
-| | `ANDP` | (rare) | 1 |
-| OR series | `OR` | 223 | 1 |
-| | `ORI` | (rare) | 1 |
-| | `ORP` | 13 | 1 |
-| Block | `ANB` | 113 | 0 |
-| | `ORB` | 35 | 0 |
-| Inversion | `INV` | 24 | 0 |
-| Stack | `MPS` | 35 | 0 |
-| | `MPP` | 35 | 0 |
-| | `MRD` | 22 | 0 |
-| Output | `OUT` | 364 | 1 |
-| | `SET` | 17 | 1 |
-| | `RST` | 21 | 1 |
-| | `PLS` | 15 | 1 |
-| Word comparison (load/AND/OR) | `LD=` | 48 | 2 |
-| | `LD<` | (rare) | 2 |
-| | `LD<>` | 6 | 2 |
-| | `AND=` | (rare) | 2 |
-| | `OR=` | 10 | 2 |
-| Double-word comparison | `LDD=` | 48 | 2 |
-| | `LDD<` | (rare) | 2 |
-| | `LDD>` | (rare) | 2 |
-| | `ANDD<` | (rare) | 2 |
-| | `ANDD<=` | (rare) | 2 |
-| | `ANDD<>` | (rare) | 2 |
-| | `ANDD=` | (rare) | 2 |
-| | `ANDD>` | 6 | 2 |
-| | `ORD=` | 36 | 2 |
-| | `ORD<` | (rare) | 2 |
-| Transfer (word / double-word) | `MOV` | 108 | 2 |
-| | `MOVP` | 49 | 2 |
-| | `DMOV` | 22 | 2 |
-| | `DMOVP` | (rare) | 2 |
-| Arithmetic (double-word) | `D+` | 68 | 3 |
-| | `D-` | 48 | 3 |
-| | `D*` | 8 | 3 |
-| | `D/` | 7 | 3 |
-| Increment | `INCP` | (rare) | 1 |
-| Conversion | `FLT` | (rare) | 2 |
-| Termination | `END` | 1 | 0 |
-
-> Counts marked "(rare)" mean fewer than 6 occurrences; they are still confirmed present.
-
-> For mnemonics not present in MAIN.csv but documented in the official MELSEC-Q/L manual, see `GX_WORKS2_IL_Spec.md` §6-1 and §6-2.
-
-### Device Prefix Frequency (MAIN.csv)
-
-| Prefix | Type | Count | Notation |
-|---|---|---|---|
-| `M` | Internal relay | 1,579 | `M0`, `M731`, `M1000`, `M1020`, … (decimal index) |
-| `D` | Data register | 863 | `D0`, `D4`, `D780`, `D1230`, … (decimal index) |
-| `K` | Decimal constant | 352 | `K0`, `K1`, `K2`, `K3` (literal decimal) |
-| `T` | Timer | 209 | `T0`, `T1`, … (decimal index) |
-| `L` | Latch relay | 168 | `L31`, `L32`, `L33`, … (decimal index) |
-| `SM` | Special relay | 59 | `SM400`, … |
-| `X` | Digital input | 44 | `X0BA`, `X0BB`, `X2F`, … (**uppercase hex** index) |
-| `Y` | Digital output | 33 | `Y15`, `Y2F`, … (**uppercase hex** index) |
-
-### Additional Device Types (not in MAIN.csv)
-
-These are common in MELSEC-Q IL exports and may appear in sibling files: `SD` (special data register), `W` (link register, hex index), `B` (link relay, hex index), `R` / `ZR` (file register), `Z` (index register), `C` (counter), `H` (hex constant — `H300`, `H31A`), `E` (floating-point constant — `E1000`), `U<n>` / `U<n>\G<addr>` (intelligent module / buffer memory — the backslash is written literally, not escaped).
+## Device Prefix
+| Prefix | Type | Index |
+|--------|------|-------|
+| `M` | Internal relay | **Decimal** (never hex) |
+| `D` | Data register | Decimal |
+| `T` | Timer | Decimal |
+| `K` | Decimal constant | Literal |
+| `X` | Digital input | Uppercase hex |
+| `Y` | Digital output | Uppercase hex |
+| `SM` | Special relay | Decimal |
+| `L` | Latch relay | Decimal |

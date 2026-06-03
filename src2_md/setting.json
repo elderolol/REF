@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "source_file": "setting.csv",
+    "cpu": "QCPU (Q mode) Q03UDV",
+    "total_steps": 4,
+    "block_count": 1,
+    "generated": "2026-06-04"
+  },
+  "blocks": [
+    {
+      "id": 1,
+      "name": "CONFIG SYNC",
+      "step_start": 1,
+      "step_end": 4,
+      "conditions": [
+        {
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "instruction": "LD",
+          "device": "M0"
+        }
+      ],
+      "actions": [
+        {
+          "instruction": "MOV",
+          "device": "D270"
+        },
+        {
+          "instruction": "D*",
+          "device": "D274"
+        }
+      ]
+    }
+  ]
+}
