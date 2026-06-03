@@ -14,6 +14,7 @@
 - `src_md/` — converted MD + JSON files from src/ CSV only.
 - `src2/` — same structure as src/, newly built version.
 - `src2_md/` — converted MD + JSON files from src2/ CSV.
+- Device comments: `src2/ref_comment.csv` (all addresses decimal).
 - Reference/docs content uses `.md` or `.txt` extensions only. Never put documentation text in source code files.
 - GX Works2 IL coding rules: see `Notes/GX_WORKS2_IL_Spec.md` in project root.
 - PLC program structure and logic architecture: see `Notes/REF_DOCUMENT.md`

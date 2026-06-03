@@ -14,11 +14,7 @@ Refrigerant injection equipment. Two independent lanes (L0, L1) with shared HMI.
 ## Operation Modes
 
 ### Mode Toggle
-- M1038 toggles M801 (auto) ↔ M802 (manual). Complement toggle with PLS edge (M600).
-
-### Auto Mode (M801 = ON)
-- Full process chain runs sequentially.
-- START (M1043 L0 / M1045 L1) initiates from M17/M33 (wait step).
+- M1038 toggles M801 (auto) ↔ M802 (manual). SET/RST flip-flop with PLS edge (M600) — no 1-scan overlap.
 
 ### Manual Mode (M802 = ON)
 - Function selection via HMI momentary buttons M1039-M1042.
@@ -75,7 +71,7 @@ D7001(L0)/D8001(L1) → D60-D84/D88-D112 lookup → D0/D30 model index → D128/
 | Action | Bit | Behavior |
 |--------|-----|----------|
 | STOP (M1044) | M301(L0) / M317(L1) | Self-holding ON. All steps `ANI M301/M317` → release. Init reactivates → latch OFF. |
-| EMG (M303 N/C) | M304 | Self-holding ON. All steps `ANI M304` → release. Resets only on M2 (power-cycle first scan). |
+| EMG (M303 N/C) | M304, M330 | Self-holding ON. All steps `ANI M304` → release. Manual reset: M303 restored + M1027 → M330 → M304 OFF. (IEC 60204-1 compliant) |
 
 ## Interlock
 
@@ -92,11 +88,39 @@ D7001(L0)/D8001(L1) → D60-D84/D88-D112 lookup → D0/D30 model index → D128/
 
 | Item | Device | Detail |
 |------|--------|--------|
-| Latches | M864-M879 | Self-holding, released by M1027 alarm reset |
+| Latches | M864-M879 | Self-holding (M864-M874) or 1:1 SET/RST (M875-M879). Released by M1027. |
 | Buzzer | M76 | Self-holding: any alarm AND not silenced → ON. OFF by M1028. |
 | Silence | M500 | Self-holding: M1028→ON, M1027→OFF |
 | Lamps | M77(green) / M78(red) / M79(yellow) | Step active / NG alarm / init+!interlock |
-| Result codes | D7012(L0) / D8012(L1) | K1=OK, K2=exhaust NG, K3=vac mismatch, K4=vac leak, K5=refrig NG, K6=stop |
+| Result codes | D7012(L0) / D8012(L1) | K1=OK, K2-K6=NG codes |
+
+### Alarm Allocation (per Lane)
+
+| Bit | Lane | Description | Type |
+|----|------|-------------|------|
+| M864 | Shared | Emergency Stop | self-hold |
+| M865 | Shared | Door Open | self-hold |
+| M866 | Shared | Vac Mismatch | self-hold |
+| M867 | Shared | Unit Vac Mismatch | self-hold |
+| M868 | Shared | Vac Leak | self-hold |
+| M869 | Shared | Timeout Alarm | self-hold |
+| M872 | Shared | Gas Check L1A | self-hold |
+| M873 | Shared | Gas Check L1B | self-hold |
+| M874 | Shared | Temp Out of Range | self-hold |
+| M875 | **L0** | Bombe Count Exceed | 1:1 SET/RST |
+| M876 | **L0** | PC Data Error | 1:1 SET/RST |
+| M877 | **L1** | PC Data Error | 1:1 SET/RST |
+| M878 | **L1** | Bombe Count Exceed | 1:1 SET/RST |
+| M879 | **L1** | Interlock Fail | self-hold |
+
+M870, M871 removed (were always-ON placeholders).
+
+### ANI Chain
+
+| Lane | Bits (in step ANI) |
+|------|---------------------|
+| L0 | M864-M869, M872-M874, M875, M876 (11) |
+| L1 | M864-M869, M872-M874, M877, M878, M879 (12) |
 
 ## HMI Specification
 
@@ -174,11 +198,12 @@ M102 L0 unit vac aux     M118 L1 unit vac aux      offset +16
 ### Control Flags
 ```
 M301 L0 stop             M317 L1 stop              offset +16
-M304 emergency (shared)
+M304 emergency latch (shared)
 M312 L0 NG alarm OR      M328 L1 NG alarm OR       offset +16
 M316 L0 interlock fail   M332 L1 interlock fail    offset +16
 M320 L0 timeout          M336 L1 timeout           offset +16
 M340 L0 oil restart      M356 L1 oil restart       offset +16
+M330 EMG release permit (M303 AND M1027)
 ```
 
 ### HMI
@@ -195,7 +220,7 @@ M600-M601 PLS edge bits
 ```
 M816-M824 L0 results    M832-M840 L1 results       offset +16
 M880-M885 L0 interlock  M896-M901 L1 interlock     offset +16
-M864-M879 alarm latches (shared)
+M864-M879 alarm latches (shared M864-M874, lane: M875-M879)
 M912-M913 L0 direction  M928-M929 L1 direction     offset +16
 M916 toggle (shared)
 ```

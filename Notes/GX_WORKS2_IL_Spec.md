@@ -82,7 +82,8 @@ All mnemonics UPPERCASE, no internal whitespace.
 
 ## HMI Buttons
 - HMI buttons are momentary (one scan ON). Use directly — no PLS wrapper.
-- Exception: complement toggle requires PLS for edge detection.
+- Exception: complement toggle (e.g. mode flip-flop) uses SET/RST pair with PLS edge.
+- Mode toggle (M1038): SET/RST flip-flop ensures atomic transition, no 1-scan overlap.
 
 ## Intermediate Group Bits
 - Rungs with 6+ contacts: group conditions into an intermediate bit.
@@ -102,13 +103,17 @@ All mnemonics UPPERCASE, no internal whitespace.
 - Fail latch: M316 (L0) / M332 (L1). Self-holding, releases on init.
 - Every vac step (M18, M19, M34, M35) MUST have `ANI M316` / `ANI M332`.
 
-## Timer Instructions
-- Use `OUT Tn` with preset on Type C continuation row. Example:
-  ```
-  "10"  ""  "OUT"  "T3"  ""  ""  ""
-  ""    ""  ""     "D8"  ""  ""  ""
-  ```
-- Never use `TMR`.
+## Emergency Stop
+- M303 (N/C input, OPEN = EMG). Latch: M304 (self-holding).
+- Release permit: M330 = M303 AND M1027. M304 releases on `ANI M330`.
+- Manual reset required (IEC 60204-1 compliant). Power cycle alone does not reset.
+
+## Alarm Allocation
+- Shared alarms: M864-M874 (self-holding).
+- Lane-specific: M875(L0 bombe), M876(L0 PC error), M877(L1 PC error), M878(L1 bombe), M879(L1 interlock).
+- ANI chain: L0 blocks M875, M876. L1 blocks M877, M878, M879. Shared blocks both.
+- M870, M871: reserved (removed from self-holding).
 
 ## Device Comments
-- Note column must be empty. Device comments go in a separate comment CSV (`ref_comment.csv`).
+- Note column must be empty. Device comments go in `src2/ref_comment.csv`.
+- All device addresses in comments use decimal notation.
