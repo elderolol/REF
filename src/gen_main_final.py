@@ -33,7 +33,6 @@ l1_al = ["40","41","42","43","44","45","46","47","48","49","4A","4F"]
 
 # ===== READY + START for Manual Mode =====
 al("READY SET L0")
-# Manual button + Manual mode + NOT already running → SET READY
 a("LD", M("40F")); a("AND", L("2")); a("ANI", M("12")); a("SET", "M502")
 a("LD", M("410")); a("AND", L("2")); a("ANI", M("13")); a("SET", "M503")
 a("LD", M("411")); a("AND", L("2")); a("ANI", M("14")); a("SET", "M504")
@@ -46,7 +45,6 @@ a("LD", M("411")); a("AND", L("2")); a("ANI", M("24")); a("SET", "M508")
 a("LD", M("412")); a("AND", L("2")); a("ANI", M("25")); a("SET", "M509")
 
 al("START EXEC L0")
-# START + READY → Execute + RST READY
 a("LD", M("413")); a("AND", "M502"); a("SET", M("12")); a("RST", "M502")
 a("LD", M("413")); a("AND", "M503"); a("SET", M("13")); a("RST", "M503")
 a("LD", M("413")); a("AND", "M504"); a("SET", M("14")); a("RST", "M504")
@@ -58,45 +56,175 @@ a("LD", M("415")); a("AND", "M507"); a("SET", M("23")); a("RST", "M507")
 a("LD", M("415")); a("AND", "M508"); a("SET", M("24")); a("RST", "M508")
 a("LD", M("415")); a("AND", "M509"); a("SET", M("25")); a("RST", "M509")
 
-# ===== STEP MACHINE L0 =====
+# ===== SELF-HOLDING STEP MACHINE L0 =====
 al("STEP L0")
+# M16 (init): M24 cycle complete OR self-hold, release when M17 active
+a("LD", M("18"))
+a("OR", M("10"))
+a("ANI", M("11"))
+a("ANI", L("40"))
+a("OUT", M("10"))
+
+# M17: M16 AND start_conditions, release when M18 active
 a("LD", M("10")); a("AND", L("0")); a("AND", L("50")); a("AND", M("413")); a("AND", L("1"))
 for la in l0_al: a("ANI", L(la))
-a("SET", M("11")); a("RST", M("10"))
-a("LD", M("11")); a("SET", M("12")); a("RST", M("11"))
-a("LD", M("12")); a("AND", L("10")); a("SET", M("13")); a("RST", M("12"))
-a("LD", M("13")); a("AND", L("12")); a("SET", M("14")); a("RST", M("13"))
-a("LD", M("14")); a("AND", L("14")); a("SET", M("15")); a("RST", M("14"))
-a("LD", M("15")); a("OR", M("16")); a("AND", L("16")); a("SET", M("17")); a("RST", M("15")); a("RST", M("16"))
-a("LD", M("17")); a("AND", "T3"); a("SET", M("18")); a("RST", M("17"))
-a("LD", M("18")); a("SET", L("18")); a("SET", M("10")); a("RST", M("18"))
+a("OR", M("11"))
+a("ANI", M("12"))
+a("ANI", L("40"))
+for la in l0_al: a("ANI", L(la))
+a("OUT", M("11"))
 
-# ===== STEP MACHINE L1 =====
+# M18: M17 unconditional, release when M19 active
+a("LD", M("11"))
+a("OR", M("12"))
+a("ANI", M("13"))
+a("ANI", L("40"))
+for la in l0_al: a("ANI", L(la))
+a("OUT", M("12"))
+
+# M19: M18 AND L16, release when M20 active
+a("LD", M("12")); a("AND", L("10"))
+a("OR", M("13"))
+a("ANI", M("14"))
+a("ANI", L("40"))
+for la in l0_al: a("ANI", L(la))
+a("OUT", M("13"))
+
+# M20: M19 AND L18, release when M21 active
+a("LD", M("13")); a("AND", L("12"))
+a("OR", M("14"))
+a("ANI", M("15"))
+a("ANI", L("40"))
+for la in l0_al: a("ANI", L(la))
+a("OUT", M("14"))
+
+# M21: M20 AND L20, release when M23 active
+a("LD", M("14")); a("AND", L("14"))
+a("OR", M("15"))
+a("ANI", M("17"))
+a("ANI", L("40"))
+for la in l0_al: a("ANI", L(la))
+a("OUT", M("15"))
+
+# M22: parallel branch (same trigger as M21, release when M23 active)
+a("LD", M("14")); a("AND", L("14"))
+a("OR", M("16"))
+a("ANI", M("17"))
+a("ANI", L("40"))
+for la in l0_al: a("ANI", L(la))
+a("OUT", M("16"))
+
+# M23: M21 OR M22 AND L22, release when M24 active
+a("LD", M("15")); a("OR", M("16")); a("AND", L("16"))
+a("OR", M("17"))
+a("ANI", M("18"))
+a("ANI", L("40"))
+for la in l0_al: a("ANI", L(la))
+a("OUT", M("17"))
+
+# M24: M23 AND T3, release when M16 active (cycle complete)
+a("LD", M("17")); a("AND", "T3")
+a("OR", M("18"))
+a("ANI", M("10"))
+a("ANI", L("40"))
+for la in l0_al: a("ANI", L(la))
+a("OUT", M("18"))
+# L24 cycle complete pulse
+a("LD", M("17")); a("AND", "T3"); a("SET", L("18"))
+# Result code K1: normal complete
+a("LD", M("18")); a("MOV", "K1"); ac("D7012")
+
+# ===== SELF-HOLDING STEP MACHINE L1 =====
 al("STEP L1")
+# M32 (init): M40 cycle complete OR self-hold, release when M33 active
+a("LD", M("28"))
+a("OR", M("20"))
+a("ANI", M("21"))
+a("ANI", L("40"))
+a("OUT", M("20"))
+
+# M33: M32 AND start_conditions, release when M34 active
 a("LD", M("20")); a("AND", L("0")); a("AND", L("60")); a("AND", M("415")); a("AND", L("1"))
 for la in l1_al: a("ANI", L(la))
-a("SET", M("21")); a("RST", M("20"))
-a("LD", M("21")); a("SET", M("22")); a("RST", M("21"))
-a("LD", M("22")); a("AND", L("20")); a("SET", M("23")); a("RST", M("22"))
-a("LD", M("23")); a("AND", L("22")); a("SET", M("24")); a("RST", M("23"))
-a("LD", M("24")); a("AND", L("24")); a("SET", M("25")); a("RST", M("24"))
-a("LD", M("25")); a("OR", M("26")); a("AND", L("26")); a("SET", M("27")); a("RST", M("25")); a("RST", M("26"))
-a("LD", M("27")); a("AND", "T3"); a("SET", M("28")); a("RST", M("27"))
-a("LD", M("28")); a("SET", L("28")); a("SET", M("20")); a("RST", M("28"))
+a("OR", M("21"))
+a("ANI", M("22"))
+a("ANI", L("40"))
+for la in l1_al: a("ANI", L(la))
+a("OUT", M("21"))
+
+# M34: M33 unconditional, release when M35 active
+a("LD", M("21"))
+a("OR", M("22"))
+a("ANI", M("23"))
+a("ANI", L("40"))
+for la in l1_al: a("ANI", L(la))
+a("OUT", M("22"))
+
+# M35: M34 AND L32, release when M36 active
+a("LD", M("22")); a("AND", L("20"))
+a("OR", M("23"))
+a("ANI", M("24"))
+a("ANI", L("40"))
+for la in l1_al: a("ANI", L(la))
+a("OUT", M("23"))
+
+# M36: M35 AND L34, release when M37 active
+a("LD", M("23")); a("AND", L("22"))
+a("OR", M("24"))
+a("ANI", M("25"))
+a("ANI", L("40"))
+for la in l1_al: a("ANI", L(la))
+a("OUT", M("24"))
+
+# M37: M36 AND L36, release when M39 active
+a("LD", M("24")); a("AND", L("24"))
+a("OR", M("25"))
+a("ANI", M("27"))
+a("ANI", L("40"))
+for la in l1_al: a("ANI", L(la))
+a("OUT", M("25"))
+
+# M38: parallel branch (same trigger as M37, release when M39 active)
+a("LD", M("24")); a("AND", L("24"))
+a("OR", M("26"))
+a("ANI", M("27"))
+a("ANI", L("40"))
+for la in l1_al: a("ANI", L(la))
+a("OUT", M("26"))
+
+# M39: M37 OR M38 AND L38, release when M40 active
+a("LD", M("25")); a("OR", M("26")); a("AND", L("26"))
+a("OR", M("27"))
+a("ANI", M("28"))
+a("ANI", L("40"))
+for la in l1_al: a("ANI", L(la))
+a("OUT", M("27"))
+
+# M40: M39 AND T3, release when M32 active (cycle complete)
+a("LD", M("27")); a("AND", "T3")
+a("OR", M("28"))
+a("ANI", M("20"))
+a("ANI", L("40"))
+for la in l1_al: a("ANI", L(la))
+a("OUT", M("28"))
+# L40 cycle complete pulse
+a("LD", M("27")); a("AND", "T3"); a("SET", L("28"))
+# Result code K1: normal complete
+a("LD", M("28")); a("MOV", "K1"); ac("D8012")
 
 # ===== NG ALARM STOP =====
+# Self-holding: active steps turn off via alarm ANI in each step's self-hold rung
+# Result codes: L17→K3 Gun vacuum NG, L19→K4 Unit vacuum NG, L21→K5 Vacuum check NG, L23→K2 Charging NG
 al("NG ALARM STOP")
+a("LD", L("11")); a("MOV", "K3"); ac("D7012"); a("MOV", "K3"); ac("D8012")
+a("LD", L("13")); a("MOV", "K4"); ac("D7012"); a("MOV", "K4"); ac("D8012")
+a("LD", L("15")); a("MOV", "K5"); ac("D7012"); a("MOV", "K5"); ac("D8012")
+a("LD", L("17")); a("MOV", "K2"); ac("D7012"); a("MOV", "K2"); ac("D8012")
 a("LD", L("11")); a("OR", L("13")); a("OR", L("15")); a("OR", L("17"))
-for sh in ["12","13","14","15","16","17"]:
-    a("RST", M(sh)); a("RST", M(l1(sh)))
-a("SET", M("10")); a("SET", M("20"))
-a("LD", L(l0_al[0]))
-for la in l0_al[1:]: a("OR", L(la))
-for sh in ["10","11","12","13","14","15","16","17","18"]: a("RST", M(sh))
+for la in l0_al: a("OR", L(la))
 a("SET", M("10"))
-a("LD", L(l1_al[0]))
-for la in l1_al[1:]: a("OR", L(la))
-for sh in ["20","21","22","23","24","25","26","27","28"]: a("RST", M(sh))
+a("LD", L("11")); a("OR", L("13")); a("OR", L("15")); a("OR", L("17"))
+for la in l1_al: a("OR", L(la))
 a("SET", M("20"))
 
 # ===== STOP =====
@@ -116,6 +244,7 @@ a("MOV","K6 D7012"); a("MOV","K6 D8012")
 # ===== EMERGENCY STOP =====
 al("EMERGENCY STOP")
 a("LDI",M("303")); a("SET",L("40"))
+a("MOV","K6 D7012"); a("MOV","K6 D8012")
 for cs in range(0,len(all_sh),8):
     if cs>0: a("LD","M0")
     for s in all_sh[cs:cs+8]: a("RST",M(s))
@@ -145,21 +274,20 @@ a("LD",M("10")); a("ANI",L("50")); a("OUT",M("4F"))
 
 # ===== HMI LAMP BITS =====
 al("HMI LAMP")
-# L0 Function lamps (READY OR step active)
 a("LD","M502"); a("OR",M("12")); a("OUT","M530")
 a("LD","M503"); a("OR",M("13")); a("OUT","M531")
 a("LD","M504"); a("OR",M("14")); a("OUT","M532")
 a("LD","M505"); a("OR",M("15")); a("OR",M("16")); a("OUT","M533")
-# L1 Function lamps
 a("LD","M506"); a("OR",M("22")); a("OUT","M534")
 a("LD","M507"); a("OR",M("23")); a("OUT","M535")
 a("LD","M508"); a("OR",M("24")); a("OUT","M536")
 a("LD","M509"); a("OR",M("25")); a("OR",M("26")); a("OUT","M537")
-# START lamp (any step active)
-a("LD",M("12")); for s in ["13","14","15","16","17","18"]: a("OR",M(s))
+a("LD",M("12"))
+for s in ["13","14","15","16","17","18"]: a("OR",M(s))
 a("OUT","M540")
-a("LD",M("22")); for s in ["23","24","25","26","27","28"]: a("OR",M(s))
+a("LD",M("22"))
+for s in ["23","24","25","26","27","28"]: a("OR",M(s))
 a("OUT","M541")
 
 a("END","")
-wr("C:\\WorkSpace\\REF\\src\\MAIN.csv")
+wr("F:\\WorkSpace\\REF\\src\\MAIN.csv")

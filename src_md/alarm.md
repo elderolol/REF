@@ -1,21 +1,21 @@
 ---
 # alarm — IL Logic Map
-**CPU:** Q03UDV
-**Total Steps:** 85
+**CPU:** QCPU (Q mode) Q03UDV
+**Total Steps:** 86
 **Blocks:** 3
-**Generated:** 2026-06-02
+**Generated:** 2026-06-03
 ---
 
 ## Block List
 | # | Name | Steps | Condition Device | Action Count |
 |---|------|-------|-----------------|--------------|
-| 1 | ALARM LATCH | 0–32 | LDI M771, LDI M779, LD L17 | 20 |
-| 2 | BUZZER | 33–49 | LD L64, LD M1028 | 14 |
-| 3 | ALARM RESET | 50–85 | LD M1027, LD M1872, LD M1872 | 24 |
+| 1 | ALARM LATCH | 1–57 | LDI M771, LDI M779, LD L17 ... (+9) | 45 |
+| 2 | BUZZER | 59–79 | LD L64, LD M1028, LD M1028 | 18 |
+| 3 | ALARM RESET | 81–86 | LD M1027, LD M750, LD M750 | 3 |
 
 ## Block Detail
 
-### Block 1: ALARM LATCH (Step 0–32)
+### Block 1: ALARM LATCH (Step 1–57)
 
 **Trigger Condition:**
 - LDI M771
@@ -24,39 +24,65 @@
 - LD L19
 - LD L21
 - LD L23
+- LD M0
+- LD M0
 - LD M776
 - LD M777
-- LD< D156
-- LD> D156
-- LD M775
+- LD M0
 - LD M791
 
 **Actions:**
 - SET L64
-- SET L65
+- OR L65
+- ANI M750
+- OUT L65
 - OR L33
-- SET L66
+- OR L66
+- ANI M750
+- OUT L66
 - OR L35
-- SET L67
+- OR L67
+- ANI M750
+- OUT L67
 - OR L37
-- SET L68
+- OR L68
+- ANI M750
+- OUT L68
 - OR L39
-- SET L69
-- SET L70
-- SET L71
+- OR L69
+- ANI M750
+- OUT L69
+- OR L70
+- ANI M750
+- OUT L70
+- OR L71
+- ANI M750
+- OUT L71
 - OR M792
-- SET L72
+- OR L72
+- ANI M750
+- OUT L72
 - OR M793
-- SET L73
-- SET L74
-- SET L74
-- SET L78
-- SET L79
+- OR L73
+- ANI M750
+- OUT L73
+- LD< D156
+- OR> D156
+- OR L74
+- ANI M750
+- OUT L74
+- OR L78
+- ANI M750
+- OUT L78
+- OR L79
+- ANI M750
+- OUT L79
 
-### Block 2: BUZZER (Step 33–49)
+### Block 2: BUZZER (Step 59–79)
 
 **Trigger Condition:**
 - LD L64
+- LD M1028
 - LD M1028
 
 **Actions:**
@@ -70,86 +96,64 @@
 - OR L72
 - OR L73
 - OR L74
+- OR L76
+- OR L77
 - OR L78
 - OR L79
+- ANI M500
 - OUT M76
+- SET M500
 - RST M76
 
-### Block 3: ALARM RESET (Step 50–85)
+### Block 3: ALARM RESET (Step 81–86)
 
 **Trigger Condition:**
 - LD M1027
-- LD M1872
-- LD M1872
-- LD M1872
-- LD M1872
-- LD M1872
-- LD M1872
-- LD M1872
-- LD M1872
-- LD M1872
-- LD M1872
+- LD M750
+- LD M750
 
 **Actions:**
-- PLS M1872
-- ANI M771
+- PLS M750
 - RST L64
-- ANI M779
-- RST L65
-- RST L66
-- RST L67
-- RST L68
-- RST L69
-- RST L70
-- RST L71
-- ANI M776
-- ANI M792
-- RST L72
-- ANI M777
-- ANI M793
-- RST L73
-- RST L74
-- ANI M775
-- RST L78
-- ANI M791
-- RST L79
-- RST M76
-- END 
+- RST L76
 
 ## Device Map
-| Device | Type | SET Steps | RST Steps | OUT Steps | Read Steps | Warnings |
-|--------|------|-----------|-----------|-----------|------------|----------|
-| D156 | D | — | — | — | 25, 27 |  |
-| L17 | L | — | — | — | 5 | LATCH_DEVICE |
-| L19 | L | — | — | — | 8 | LATCH_DEVICE |
-| L21 | L | — | — | — | 11 | LATCH_DEVICE |
-| L23 | L | — | — | — | 14 | LATCH_DEVICE |
-| L33 | L | — | — | — | 6 | LATCH_DEVICE |
-| L35 | L | — | — | — | 9 | LATCH_DEVICE |
-| L37 | L | — | — | — | 12 | LATCH_DEVICE |
-| L39 | L | — | — | — | 15 | LATCH_DEVICE |
-| L64 | L | 2 | 55 | — | 34 | LATCH_DEVICE, DOUBLE_COIL_CANDIDATE |
-| L65 | L | 4 | 58 | — | 35 | LATCH_DEVICE, DOUBLE_COIL_CANDIDATE |
-| L66 | L | 7 | 60 | — | 36 | LATCH_DEVICE, DOUBLE_COIL_CANDIDATE |
-| L67 | L | 10 | 61 | — | 37 | LATCH_DEVICE, DOUBLE_COIL_CANDIDATE |
-| L68 | L | 13 | 62 | — | 38 | LATCH_DEVICE, DOUBLE_COIL_CANDIDATE |
-| L69 | L | 16 | 64 | — | 39 | LATCH_DEVICE, DOUBLE_COIL_CANDIDATE |
-| L70 | L | 17 | 65 | — | 40 | LATCH_DEVICE, DOUBLE_COIL_CANDIDATE |
-| L71 | L | 18 | 66 | — | 41 | LATCH_DEVICE, DOUBLE_COIL_CANDIDATE |
-| L72 | L | 21 | 70 | — | 42 | LATCH_DEVICE, DOUBLE_COIL_CANDIDATE |
-| L73 | L | 24 | 74 | — | 43 | LATCH_DEVICE, DOUBLE_COIL_CANDIDATE |
-| L74 | L | 26, 28 | 76 | — | 44 | LATCH_DEVICE, DOUBLE_COIL_CANDIDATE |
-| L78 | L | 30 | 79 | — | 45 | LATCH_DEVICE, DOUBLE_COIL_CANDIDATE |
-| L79 | L | 32 | 82 | — | 46 | LATCH_DEVICE, DOUBLE_COIL_CANDIDATE |
-| M1027 | M | — | — | — | 51 |  |
-| M1028 | M | — | — | — | 48 |  |
-| M1872 | M | — | — | — | 53, 56, 59, 63, 67, 71, 75, 77, 80, 83 |  |
-| M76 | M | — | 49, 84 | 47 | — | DOUBLE_COIL_CANDIDATE |
-| M771 | M | — | — | — | 1, 54 | DOUBLE_COIL_CANDIDATE |
-| M775 | M | — | — | — | 29, 78 | DOUBLE_COIL_CANDIDATE |
-| M776 | M | — | — | — | 19, 68 | DOUBLE_COIL_CANDIDATE |
-| M777 | M | — | — | — | 22, 72 | DOUBLE_COIL_CANDIDATE |
-| M779 | M | — | — | — | 3, 57 | DOUBLE_COIL_CANDIDATE |
-| M791 | M | — | — | — | 31, 81 | DOUBLE_COIL_CANDIDATE |
-| M792 | M | — | — | — | 20, 69 | DOUBLE_COIL_CANDIDATE |
-| M793 | M | — | — | — | 23, 73 | DOUBLE_COIL_CANDIDATE |
+| Device | Type | SET Steps | RST Steps | OUT Steps | Read Steps |
+|--------|------|-----------|-----------|-----------|------------|
+| D156 | D |  |  |  | 2 |
+| L17 | L |  |  |  | 1 |
+| L19 | L |  |  |  | 1 |
+| L21 | L |  |  |  | 1 |
+| L23 | L |  |  |  | 1 |
+| L33 | L |  |  |  | 1 |
+| L35 | L |  |  |  | 1 |
+| L37 | L |  |  |  | 1 |
+| L39 | L |  |  |  | 1 |
+| L64 | L | 1 | 1 |  | 1 |
+| L65 | L |  |  | 1 | 2 |
+| L66 | L |  |  | 1 | 2 |
+| L67 | L |  |  | 1 | 2 |
+| L68 | L |  |  | 1 | 2 |
+| L69 | L |  |  | 1 | 2 |
+| L70 | L |  |  | 1 | 2 |
+| L71 | L |  |  | 1 | 2 |
+| L72 | L |  |  | 1 | 2 |
+| L73 | L |  |  | 1 | 2 |
+| L74 | L |  |  | 1 | 2 |
+| L76 | L |  | 1 |  | 1 |
+| L77 | L |  |  |  | 1 |
+| L78 | L |  |  | 1 | 2 |
+| L79 | L |  |  | 1 | 2 |
+| M0 | M |  |  |  | 3 |
+| M1027 | M |  |  |  | 1 |
+| M1028 | M |  |  |  | 2 |
+| M500 | M | 1 |  |  | 1 |
+| M750 | M |  |  |  | 15 |
+| M76 | M |  | 1 | 1 |  |
+| M771 | M |  |  |  | 1 |
+| M776 | M |  |  |  | 1 |
+| M777 | M |  |  |  | 1 |
+| M779 | M |  |  |  | 1 |
+| M791 | M |  |  |  | 1 |
+| M792 | M |  |  |  | 1 |
+| M793 | M |  |  |  | 1 |

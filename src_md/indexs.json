@@ -1,0 +1,2650 @@
+{
+  "meta": {
+    "source_file": "indexs.csv",
+    "cpu": "QCPU (Q mode) Q03UDV",
+    "total_steps": 647,
+    "block_count": 8,
+    "generated": "2026-06-03"
+  },
+  "blocks": [
+    {
+      "id": 1,
+      "name": "PC DATA CHECK",
+      "step_start": 1,
+      "step_end": 10,
+      "conditions": [
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        }
+      ],
+      "actions": [
+        {
+          "instruction": "LDD>",
+          "device": "D7001"
+        },
+        {
+          "instruction": "LD<>",
+          "device": "D7000"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "SET",
+          "device": "L76"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D8001"
+        },
+        {
+          "instruction": "LD<>",
+          "device": "D8000"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "SET",
+          "device": "L76"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "AUTO BARCODE",
+      "step_start": 12,
+      "step_end": 15,
+      "conditions": [],
+      "actions": [
+        {
+          "instruction": "LDD>",
+          "device": "D7001"
+        },
+        {
+          "instruction": "BMOV",
+          "device": "D6980"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D8001"
+        },
+        {
+          "instruction": "BMOV",
+          "device": "D7980"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "BARCODE L1 (D60~D84)",
+      "step_start": 17,
+      "step_end": 166,
+      "conditions": [
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        }
+      ],
+      "actions": [
+        {
+          "instruction": "LDD>",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K1"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K2"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K3"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K4"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K5"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K6"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K7"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K8"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K9"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K10"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K11"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K12"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K13"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K14"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K15"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K16"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K17"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K18"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K19"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K20"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K21"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K22"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K23"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K24"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D7001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K25"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "BARCODE L2 (D88~D112)",
+      "step_start": 168,
+      "step_end": 317,
+      "conditions": [
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L3"
+        }
+      ],
+      "actions": [
+        {
+          "instruction": "LDD>",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K1"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K2"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K3"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K4"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K5"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K6"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K7"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K8"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K9"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K10"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K11"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K12"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K13"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K14"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K15"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K16"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K17"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K18"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K19"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K20"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K21"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K22"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K23"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K24"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "LDD=",
+          "device": "D8001"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "K25"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "MANUAL MODEL L0",
+      "step_start": 319,
+      "step_end": 468,
+      "conditions": [
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        }
+      ],
+      "actions": [
+        {
+          "instruction": "AND>",
+          "device": "D0"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D0"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D0"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D60"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D0"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D0"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D0"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D61"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D0"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D0"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D0"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D62"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D0"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D0"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D0"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D63"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D0"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D0"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D0"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D64"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D0"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D0"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D0"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D65"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D0"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D0"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D0"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D66"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D0"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D0"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D0"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D67"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D0"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D0"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D0"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D68"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D0"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D0"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D0"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D69"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D0"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D0"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D0"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D70"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D0"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D0"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D0"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D71"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D0"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D0"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D0"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D72"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D0"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D0"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D0"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D73"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D0"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D0"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D0"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D74"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D0"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D0"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D0"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D75"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D0"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D0"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D0"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D76"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D0"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D0"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D0"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D77"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D0"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D0"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D0"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D78"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D0"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D0"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D0"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D79"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D0"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D0"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D0"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D80"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D0"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D0"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D0"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D81"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D0"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D0"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D0"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D82"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D0"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D0"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D0"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D83"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D0"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D0"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D0"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D84"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "MANUAL MODEL L1",
+      "step_start": 470,
+      "step_end": 619,
+      "conditions": [
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        },
+        {
+          "instruction": "LDI",
+          "device": "L3"
+        }
+      ],
+      "actions": [
+        {
+          "instruction": "AND>",
+          "device": "D30"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D30"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D30"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D88"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D30"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D30"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D30"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D89"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D30"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D30"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D30"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D90"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D30"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D30"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D30"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D91"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D30"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D30"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D30"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D92"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D30"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D30"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D30"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D93"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D30"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D30"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D30"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D94"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D30"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D30"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D30"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D95"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D30"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D30"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D30"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D96"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D30"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D30"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D30"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D97"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D30"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D30"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D30"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D98"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D30"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D30"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D30"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D99"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D30"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D30"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D30"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D100"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D30"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D30"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D30"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D101"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D30"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D30"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D30"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D102"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D30"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D30"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D30"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D103"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D30"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D30"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D30"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D104"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D30"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D30"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D30"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D105"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D30"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D30"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D30"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D106"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D30"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D30"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D30"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D107"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D30"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D30"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D30"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D108"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D30"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D30"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D30"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D109"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D30"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D30"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D30"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D110"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D30"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D30"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D30"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D111"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D30"
+        },
+        {
+          "instruction": "AND<=",
+          "device": "D30"
+        },
+        {
+          "instruction": "LD=",
+          "device": "D30"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "MOV",
+          "device": "D112"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "BARCODE RESET",
+      "step_start": 621,
+      "step_end": 635,
+      "conditions": [
+        {
+          "instruction": "LD",
+          "device": "L24"
+        },
+        {
+          "instruction": "LD",
+          "device": "L40"
+        }
+      ],
+      "actions": [
+        {
+          "instruction": "AND",
+          "device": "M16"
+        },
+        {
+          "instruction": "AND",
+          "device": "M32"
+        },
+        {
+          "instruction": "ORB",
+          "device": ""
+        },
+        {
+          "instruction": "OR",
+          "device": "L17"
+        },
+        {
+          "instruction": "OR",
+          "device": "L19"
+        },
+        {
+          "instruction": "OR",
+          "device": "L21"
+        },
+        {
+          "instruction": "OR",
+          "device": "L23"
+        },
+        {
+          "instruction": "OR",
+          "device": "L64"
+        },
+        {
+          "instruction": "MOV",
+          "device": "K0"
+        },
+        {
+          "instruction": "MOV",
+          "device": "K0"
+        },
+        {
+          "instruction": "MOV",
+          "device": "K0"
+        },
+        {
+          "instruction": "MOV",
+          "device": "K0"
+        },
+        {
+          "instruction": "MOV",
+          "device": "K0"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "BARCODE MODEL CLEANUP",
+      "step_start": 637,
+      "step_end": 647,
+      "conditions": [
+        {
+          "instruction": "LD",
+          "device": "L3"
+        },
+        {
+          "instruction": "LD",
+          "device": "L17"
+        }
+      ],
+      "actions": [
+        {
+          "instruction": "OR",
+          "device": "L19"
+        },
+        {
+          "instruction": "OR",
+          "device": "L21"
+        },
+        {
+          "instruction": "OR",
+          "device": "L23"
+        },
+        {
+          "instruction": "OR",
+          "device": "L24"
+        },
+        {
+          "instruction": "OR",
+          "device": "L40"
+        },
+        {
+          "instruction": "OR",
+          "device": "L64"
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "RST",
+          "device": "D0"
+        },
+        {
+          "instruction": "RST",
+          "device": "D30"
+        }
+      ]
+    }
+  ]
+}

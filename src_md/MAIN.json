@@ -1,5478 +1,2938 @@
 {
   "meta": {
     "source_file": "MAIN.csv",
-    "cpu": "Q03UDV",
-    "total_steps": 402,
-    "block_count": 10,
-    "generated": "2026-06-02"
+    "cpu": "QCPU (Q mode) Q03UDV",
+    "total_steps": 710,
+    "block_count": 14,
+    "generated": "2026-06-03"
   },
   "blocks": [
     {
       "id": 1,
       "name": "MODE CONTROL",
-      "step_start": 0,
+      "step_start": 1,
       "step_end": 34,
-      "condition": [
+      "conditions": [
         {
-          "step": 1,
           "instruction": "LD",
           "device": "M1038"
         },
         {
-          "step": 3,
           "instruction": "LD",
           "device": "M1536"
         },
         {
-          "step": 7,
           "instruction": "LD",
           "device": "M1536"
         },
         {
-          "step": 11,
           "instruction": "LD",
           "device": "M1024"
         },
         {
-          "step": 15,
           "instruction": "LD",
           "device": "M1025"
         },
         {
-          "step": 19,
           "instruction": "LD",
           "device": "M1032"
         },
         {
-          "step": 23,
           "instruction": "LD",
           "device": "M1033"
         },
         {
-          "step": 27,
           "instruction": "LD",
           "device": "M1026"
         },
         {
-          "step": 29,
           "instruction": "LD",
           "device": "M1537"
         },
         {
-          "step": 32,
           "instruction": "LD",
           "device": "M1537"
         }
       ],
       "actions": [
         {
-          "step": 2,
           "instruction": "PLS",
           "device": "M1536"
         },
         {
-          "step": 4,
           "instruction": "AND",
           "device": "L1"
         },
         {
-          "step": 5,
           "instruction": "SET",
           "device": "L2"
         },
         {
-          "step": 6,
           "instruction": "RST",
           "device": "L1"
         },
         {
-          "step": 8,
           "instruction": "ANI",
           "device": "L1"
         },
         {
-          "step": 9,
           "instruction": "SET",
           "device": "L1"
         },
         {
-          "step": 10,
           "instruction": "RST",
           "device": "L2"
         },
         {
-          "step": 12,
           "instruction": "OR",
           "device": "L112"
         },
         {
-          "step": 13,
           "instruction": "ANI",
           "device": "M1025"
         },
         {
-          "step": 14,
           "instruction": "OUT",
           "device": "L112"
         },
         {
-          "step": 16,
           "instruction": "OR",
           "device": "L113"
         },
         {
-          "step": 17,
           "instruction": "ANI",
           "device": "M1024"
         },
         {
-          "step": 18,
           "instruction": "OUT",
           "device": "L113"
         },
         {
-          "step": 20,
           "instruction": "OR",
           "device": "L114"
         },
         {
-          "step": 21,
           "instruction": "ANI",
           "device": "M1033"
         },
         {
-          "step": 22,
           "instruction": "OUT",
           "device": "L114"
         },
         {
-          "step": 24,
           "instruction": "OR",
           "device": "L115"
         },
         {
-          "step": 25,
           "instruction": "ANI",
           "device": "M1032"
         },
         {
-          "step": 26,
           "instruction": "OUT",
           "device": "L115"
         },
         {
-          "step": 28,
           "instruction": "PLS",
           "device": "M1537"
         },
         {
-          "step": 30,
           "instruction": "AND",
           "device": "L116"
         },
         {
-          "step": 31,
           "instruction": "RST",
           "device": "L116"
         },
         {
-          "step": 33,
           "instruction": "ANI",
           "device": "L116"
         },
         {
-          "step": 34,
           "instruction": "SET",
           "device": "L116"
         }
-      ],
-      "jumps": []
+      ]
     },
     {
       "id": 2,
       "name": "INTERLOCK CHECK",
-      "step_start": 35,
+      "step_start": 36,
       "step_end": 47,
-      "condition": [
+      "conditions": [
         {
-          "step": 36,
           "instruction": "LD",
           "device": "L81"
         },
         {
-          "step": 42,
           "instruction": "LD",
           "device": "L97"
         }
       ],
       "actions": [
         {
-          "step": 37,
           "instruction": "AND",
           "device": "L82"
         },
         {
-          "step": 38,
           "instruction": "AND",
           "device": "L83"
         },
         {
-          "step": 39,
           "instruction": "AND",
           "device": "L84"
         },
         {
-          "step": 40,
           "instruction": "AND",
           "device": "L85"
         },
         {
-          "step": 41,
           "instruction": "OUT",
           "device": "L80"
         },
         {
-          "step": 43,
           "instruction": "AND",
           "device": "L98"
         },
         {
-          "step": 44,
           "instruction": "AND",
           "device": "L99"
         },
         {
-          "step": 45,
           "instruction": "AND",
           "device": "L100"
         },
         {
-          "step": 46,
           "instruction": "AND",
           "device": "L101"
         },
         {
-          "step": 47,
           "instruction": "OUT",
           "device": "L96"
         }
-      ],
-      "jumps": []
+      ]
     },
     {
       "id": 3,
-      "name": "STEP L0",
-      "step_start": 48,
-      "step_end": 95,
-      "condition": [
+      "name": "READY SET L0",
+      "step_start": 49,
+      "step_end": 64,
+      "conditions": [
         {
-          "step": 49,
+          "instruction": "LD",
+          "device": "M1039"
+        },
+        {
+          "instruction": "LD",
+          "device": "M1040"
+        },
+        {
+          "instruction": "LD",
+          "device": "M1041"
+        },
+        {
+          "instruction": "LD",
+          "device": "M1042"
+        }
+      ],
+      "actions": [
+        {
+          "instruction": "AND",
+          "device": "L2"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M18"
+        },
+        {
+          "instruction": "SET",
+          "device": "M502"
+        },
+        {
+          "instruction": "AND",
+          "device": "L2"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M19"
+        },
+        {
+          "instruction": "SET",
+          "device": "M503"
+        },
+        {
+          "instruction": "AND",
+          "device": "L2"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M20"
+        },
+        {
+          "instruction": "SET",
+          "device": "M504"
+        },
+        {
+          "instruction": "AND",
+          "device": "L2"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M21"
+        },
+        {
+          "instruction": "SET",
+          "device": "M505"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "READY SET L1",
+      "step_start": 66,
+      "step_end": 81,
+      "conditions": [
+        {
+          "instruction": "LD",
+          "device": "M1039"
+        },
+        {
+          "instruction": "LD",
+          "device": "M1040"
+        },
+        {
+          "instruction": "LD",
+          "device": "M1041"
+        },
+        {
+          "instruction": "LD",
+          "device": "M1042"
+        }
+      ],
+      "actions": [
+        {
+          "instruction": "AND",
+          "device": "L2"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M34"
+        },
+        {
+          "instruction": "SET",
+          "device": "M506"
+        },
+        {
+          "instruction": "AND",
+          "device": "L2"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M35"
+        },
+        {
+          "instruction": "SET",
+          "device": "M507"
+        },
+        {
+          "instruction": "AND",
+          "device": "L2"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M36"
+        },
+        {
+          "instruction": "SET",
+          "device": "M508"
+        },
+        {
+          "instruction": "AND",
+          "device": "L2"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M37"
+        },
+        {
+          "instruction": "SET",
+          "device": "M509"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "START EXEC L0",
+      "step_start": 83,
+      "step_end": 98,
+      "conditions": [
+        {
+          "instruction": "LD",
+          "device": "M1043"
+        },
+        {
+          "instruction": "LD",
+          "device": "M1043"
+        },
+        {
+          "instruction": "LD",
+          "device": "M1043"
+        },
+        {
+          "instruction": "LD",
+          "device": "M1043"
+        }
+      ],
+      "actions": [
+        {
+          "instruction": "AND",
+          "device": "M502"
+        },
+        {
+          "instruction": "SET",
+          "device": "M18"
+        },
+        {
+          "instruction": "RST",
+          "device": "M502"
+        },
+        {
+          "instruction": "AND",
+          "device": "M503"
+        },
+        {
+          "instruction": "SET",
+          "device": "M19"
+        },
+        {
+          "instruction": "RST",
+          "device": "M503"
+        },
+        {
+          "instruction": "AND",
+          "device": "M504"
+        },
+        {
+          "instruction": "SET",
+          "device": "M20"
+        },
+        {
+          "instruction": "RST",
+          "device": "M504"
+        },
+        {
+          "instruction": "AND",
+          "device": "M505"
+        },
+        {
+          "instruction": "SET",
+          "device": "M21"
+        },
+        {
+          "instruction": "RST",
+          "device": "M505"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "START EXEC L1",
+      "step_start": 100,
+      "step_end": 115,
+      "conditions": [
+        {
+          "instruction": "LD",
+          "device": "M1045"
+        },
+        {
+          "instruction": "LD",
+          "device": "M1045"
+        },
+        {
+          "instruction": "LD",
+          "device": "M1045"
+        },
+        {
+          "instruction": "LD",
+          "device": "M1045"
+        }
+      ],
+      "actions": [
+        {
+          "instruction": "AND",
+          "device": "M506"
+        },
+        {
+          "instruction": "SET",
+          "device": "M34"
+        },
+        {
+          "instruction": "RST",
+          "device": "M506"
+        },
+        {
+          "instruction": "AND",
+          "device": "M507"
+        },
+        {
+          "instruction": "SET",
+          "device": "M35"
+        },
+        {
+          "instruction": "RST",
+          "device": "M507"
+        },
+        {
+          "instruction": "AND",
+          "device": "M508"
+        },
+        {
+          "instruction": "SET",
+          "device": "M36"
+        },
+        {
+          "instruction": "RST",
+          "device": "M508"
+        },
+        {
+          "instruction": "AND",
+          "device": "M509"
+        },
+        {
+          "instruction": "SET",
+          "device": "M37"
+        },
+        {
+          "instruction": "RST",
+          "device": "M509"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "STEP L0",
+      "step_start": 117,
+      "step_end": 285,
+      "conditions": [
+        {
+          "instruction": "LD",
+          "device": "M24"
+        },
+        {
           "instruction": "LD",
           "device": "M16"
         },
         {
-          "step": 68,
           "instruction": "LD",
           "device": "M17"
         },
         {
-          "step": 71,
           "instruction": "LD",
           "device": "M18"
         },
         {
-          "step": 75,
           "instruction": "LD",
           "device": "M19"
         },
         {
-          "step": 79,
           "instruction": "LD",
           "device": "M20"
         },
         {
-          "step": 83,
+          "instruction": "LD",
+          "device": "M20"
+        },
+        {
           "instruction": "LD",
           "device": "M21"
         },
         {
-          "step": 89,
           "instruction": "LD",
           "device": "M23"
         },
         {
-          "step": 93,
+          "instruction": "LD",
+          "device": "M23"
+        },
+        {
           "instruction": "LD",
           "device": "M24"
         }
       ],
       "actions": [
         {
-          "step": 50,
+          "instruction": "OR",
+          "device": "M16"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M17"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L64"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M16"
+        },
+        {
           "instruction": "AND",
           "device": "L0"
         },
         {
-          "step": 51,
           "instruction": "AND",
           "device": "L80"
         },
         {
-          "step": 52,
           "instruction": "AND",
           "device": "M1043"
         },
         {
-          "step": 53,
           "instruction": "AND",
           "device": "L1"
         },
         {
-          "step": 54,
           "instruction": "ANI",
           "device": "L64"
         },
         {
-          "step": 55,
           "instruction": "ANI",
           "device": "L65"
         },
         {
-          "step": 56,
           "instruction": "ANI",
           "device": "L66"
         },
         {
-          "step": 57,
           "instruction": "ANI",
           "device": "L67"
         },
         {
-          "step": 58,
           "instruction": "ANI",
           "device": "L68"
         },
         {
-          "step": 59,
           "instruction": "ANI",
           "device": "L69"
         },
         {
-          "step": 60,
           "instruction": "ANI",
           "device": "L70"
         },
         {
-          "step": 61,
           "instruction": "ANI",
           "device": "L71"
         },
         {
-          "step": 62,
           "instruction": "ANI",
           "device": "L72"
         },
         {
-          "step": 63,
           "instruction": "ANI",
           "device": "L73"
         },
         {
-          "step": 64,
           "instruction": "ANI",
           "device": "L74"
         },
         {
-          "step": 65,
           "instruction": "ANI",
           "device": "L78"
         },
         {
-          "step": 66,
-          "instruction": "SET",
+          "instruction": "OR",
           "device": "M17"
         },
         {
-          "step": 67,
-          "instruction": "RST",
-          "device": "M16"
-        },
-        {
-          "step": 69,
-          "instruction": "SET",
+          "instruction": "ANI",
           "device": "M18"
         },
         {
-          "step": 70,
-          "instruction": "RST",
+          "instruction": "ANI",
+          "device": "L64"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L64"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L65"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L66"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L67"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L68"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L69"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L70"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L71"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L72"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L73"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L74"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L78"
+        },
+        {
+          "instruction": "OUT",
           "device": "M17"
         },
         {
-          "step": 72,
+          "instruction": "OR",
+          "device": "M18"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M19"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L64"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L64"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L65"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L66"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L67"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L68"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L69"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L70"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L71"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L72"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L73"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L74"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L78"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M18"
+        },
+        {
           "instruction": "AND",
           "device": "L16"
         },
         {
-          "step": 73,
-          "instruction": "SET",
+          "instruction": "OR",
           "device": "M19"
         },
         {
-          "step": 74,
-          "instruction": "RST",
-          "device": "M18"
+          "instruction": "ANI",
+          "device": "M20"
         },
         {
-          "step": 76,
+          "instruction": "ANI",
+          "device": "L64"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L64"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L65"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L66"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L67"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L68"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L69"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L70"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L71"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L72"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L73"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L74"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L78"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M19"
+        },
+        {
           "instruction": "AND",
           "device": "L18"
         },
         {
-          "step": 77,
-          "instruction": "SET",
+          "instruction": "OR",
           "device": "M20"
         },
         {
-          "step": 78,
-          "instruction": "RST",
-          "device": "M19"
+          "instruction": "ANI",
+          "device": "M21"
         },
         {
-          "step": 80,
+          "instruction": "ANI",
+          "device": "L64"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L64"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L65"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L66"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L67"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L68"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L69"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L70"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L71"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L72"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L73"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L74"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L78"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M20"
+        },
+        {
           "instruction": "AND",
           "device": "L20"
         },
         {
-          "step": 81,
-          "instruction": "SET",
+          "instruction": "OR",
           "device": "M21"
         },
         {
-          "step": 82,
-          "instruction": "RST",
-          "device": "M20"
+          "instruction": "ANI",
+          "device": "M23"
         },
         {
-          "step": 84,
+          "instruction": "ANI",
+          "device": "L64"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L64"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L65"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L66"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L67"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L68"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L69"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L70"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L71"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L72"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L73"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L74"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L78"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M21"
+        },
+        {
+          "instruction": "AND",
+          "device": "L20"
+        },
+        {
           "instruction": "OR",
           "device": "M22"
         },
         {
-          "step": 85,
+          "instruction": "ANI",
+          "device": "M23"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L64"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L64"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L65"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L66"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L67"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L68"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L69"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L70"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L71"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L72"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L73"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L74"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L78"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M22"
+        },
+        {
+          "instruction": "OR",
+          "device": "M22"
+        },
+        {
           "instruction": "AND",
           "device": "L22"
         },
         {
-          "step": 86,
-          "instruction": "SET",
+          "instruction": "OR",
           "device": "M23"
         },
         {
-          "step": 87,
-          "instruction": "RST",
-          "device": "M21"
+          "instruction": "ANI",
+          "device": "M24"
         },
         {
-          "step": 88,
-          "instruction": "RST",
-          "device": "M22"
+          "instruction": "ANI",
+          "device": "L64"
         },
         {
-          "step": 90,
+          "instruction": "ANI",
+          "device": "L64"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L65"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L66"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L67"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L68"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L69"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L70"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L71"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L72"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L73"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L74"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L78"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M23"
+        },
+        {
           "instruction": "AND",
           "device": "T3"
         },
         {
-          "step": 91,
-          "instruction": "SET",
+          "instruction": "OR",
           "device": "M24"
         },
         {
-          "step": 92,
-          "instruction": "RST",
-          "device": "M23"
-        },
-        {
-          "step": 94,
-          "instruction": "SET",
+          "instruction": "ANI",
           "device": "M16"
         },
         {
-          "step": 95,
-          "instruction": "RST",
+          "instruction": "ANI",
+          "device": "L64"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L64"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L65"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L66"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L67"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L68"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L69"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L70"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L71"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L72"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L73"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L74"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L78"
+        },
+        {
+          "instruction": "OUT",
           "device": "M24"
+        },
+        {
+          "instruction": "AND",
+          "device": "T3"
+        },
+        {
+          "instruction": "SET",
+          "device": "L24"
+        },
+        {
+          "instruction": "MOV",
+          "device": "K1"
         }
-      ],
-      "jumps": []
+      ]
     },
     {
-      "id": 4,
+      "id": 8,
       "name": "STEP L1",
-      "step_start": 96,
-      "step_end": 143,
-      "condition": [
+      "step_start": 287,
+      "step_end": 455,
+      "conditions": [
         {
-          "step": 97,
+          "instruction": "LD",
+          "device": "M40"
+        },
+        {
           "instruction": "LD",
           "device": "M32"
         },
         {
-          "step": 116,
           "instruction": "LD",
           "device": "M33"
         },
         {
-          "step": 119,
           "instruction": "LD",
           "device": "M34"
         },
         {
-          "step": 123,
           "instruction": "LD",
           "device": "M35"
         },
         {
-          "step": 127,
           "instruction": "LD",
           "device": "M36"
         },
         {
-          "step": 131,
+          "instruction": "LD",
+          "device": "M36"
+        },
+        {
           "instruction": "LD",
           "device": "M37"
         },
         {
-          "step": 137,
           "instruction": "LD",
           "device": "M39"
         },
         {
-          "step": 141,
+          "instruction": "LD",
+          "device": "M39"
+        },
+        {
           "instruction": "LD",
           "device": "M40"
         }
       ],
       "actions": [
         {
-          "step": 98,
+          "instruction": "OR",
+          "device": "M32"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M33"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L64"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M32"
+        },
+        {
           "instruction": "AND",
           "device": "L0"
         },
         {
-          "step": 99,
           "instruction": "AND",
           "device": "L96"
         },
         {
-          "step": 100,
           "instruction": "AND",
           "device": "M1045"
         },
         {
-          "step": 101,
           "instruction": "AND",
           "device": "L1"
         },
         {
-          "step": 102,
           "instruction": "ANI",
           "device": "L64"
         },
         {
-          "step": 103,
           "instruction": "ANI",
           "device": "L65"
         },
         {
-          "step": 104,
           "instruction": "ANI",
           "device": "L66"
         },
         {
-          "step": 105,
           "instruction": "ANI",
           "device": "L67"
         },
         {
-          "step": 106,
           "instruction": "ANI",
           "device": "L68"
         },
         {
-          "step": 107,
           "instruction": "ANI",
           "device": "L69"
         },
         {
-          "step": 108,
           "instruction": "ANI",
           "device": "L70"
         },
         {
-          "step": 109,
           "instruction": "ANI",
           "device": "L71"
         },
         {
-          "step": 110,
           "instruction": "ANI",
           "device": "L72"
         },
         {
-          "step": 111,
           "instruction": "ANI",
           "device": "L73"
         },
         {
-          "step": 112,
           "instruction": "ANI",
           "device": "L74"
         },
         {
-          "step": 113,
           "instruction": "ANI",
           "device": "L79"
         },
         {
-          "step": 114,
-          "instruction": "SET",
+          "instruction": "OR",
           "device": "M33"
         },
         {
-          "step": 115,
-          "instruction": "RST",
-          "device": "M32"
-        },
-        {
-          "step": 117,
-          "instruction": "SET",
+          "instruction": "ANI",
           "device": "M34"
         },
         {
-          "step": 118,
-          "instruction": "RST",
+          "instruction": "ANI",
+          "device": "L64"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L64"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L65"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L66"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L67"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L68"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L69"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L70"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L71"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L72"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L73"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L74"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L79"
+        },
+        {
+          "instruction": "OUT",
           "device": "M33"
         },
         {
-          "step": 120,
+          "instruction": "OR",
+          "device": "M34"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M35"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L64"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L64"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L65"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L66"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L67"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L68"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L69"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L70"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L71"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L72"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L73"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L74"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L79"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M34"
+        },
+        {
           "instruction": "AND",
           "device": "L32"
         },
         {
-          "step": 121,
-          "instruction": "SET",
+          "instruction": "OR",
           "device": "M35"
         },
         {
-          "step": 122,
-          "instruction": "RST",
-          "device": "M34"
+          "instruction": "ANI",
+          "device": "M36"
         },
         {
-          "step": 124,
+          "instruction": "ANI",
+          "device": "L64"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L64"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L65"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L66"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L67"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L68"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L69"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L70"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L71"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L72"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L73"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L74"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L79"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M35"
+        },
+        {
           "instruction": "AND",
           "device": "L34"
         },
         {
-          "step": 125,
-          "instruction": "SET",
+          "instruction": "OR",
           "device": "M36"
         },
         {
-          "step": 126,
-          "instruction": "RST",
-          "device": "M35"
+          "instruction": "ANI",
+          "device": "M37"
         },
         {
-          "step": 128,
+          "instruction": "ANI",
+          "device": "L64"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L64"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L65"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L66"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L67"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L68"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L69"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L70"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L71"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L72"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L73"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L74"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L79"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M36"
+        },
+        {
           "instruction": "AND",
           "device": "L36"
         },
         {
-          "step": 129,
-          "instruction": "SET",
+          "instruction": "OR",
           "device": "M37"
         },
         {
-          "step": 130,
-          "instruction": "RST",
-          "device": "M36"
+          "instruction": "ANI",
+          "device": "M39"
         },
         {
-          "step": 132,
+          "instruction": "ANI",
+          "device": "L64"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L64"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L65"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L66"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L67"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L68"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L69"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L70"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L71"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L72"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L73"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L74"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L79"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M37"
+        },
+        {
+          "instruction": "AND",
+          "device": "L36"
+        },
+        {
           "instruction": "OR",
           "device": "M38"
         },
         {
-          "step": 133,
+          "instruction": "ANI",
+          "device": "M39"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L64"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L64"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L65"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L66"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L67"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L68"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L69"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L70"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L71"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L72"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L73"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L74"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L79"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M38"
+        },
+        {
+          "instruction": "OR",
+          "device": "M38"
+        },
+        {
           "instruction": "AND",
           "device": "L38"
         },
         {
-          "step": 134,
-          "instruction": "SET",
+          "instruction": "OR",
           "device": "M39"
         },
         {
-          "step": 135,
-          "instruction": "RST",
-          "device": "M37"
+          "instruction": "ANI",
+          "device": "M40"
         },
         {
-          "step": 136,
-          "instruction": "RST",
-          "device": "M38"
+          "instruction": "ANI",
+          "device": "L64"
         },
         {
-          "step": 138,
+          "instruction": "ANI",
+          "device": "L64"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L65"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L66"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L67"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L68"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L69"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L70"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L71"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L72"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L73"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L74"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L79"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M39"
+        },
+        {
           "instruction": "AND",
           "device": "T3"
         },
         {
-          "step": 139,
-          "instruction": "SET",
+          "instruction": "OR",
           "device": "M40"
         },
         {
-          "step": 140,
-          "instruction": "RST",
-          "device": "M39"
-        },
-        {
-          "step": 142,
-          "instruction": "SET",
+          "instruction": "ANI",
           "device": "M32"
         },
         {
-          "step": 143,
-          "instruction": "RST",
+          "instruction": "ANI",
+          "device": "L64"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L64"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L65"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L66"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L67"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L68"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L69"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L70"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L71"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L72"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L73"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L74"
+        },
+        {
+          "instruction": "ANI",
+          "device": "L79"
+        },
+        {
+          "instruction": "OUT",
           "device": "M40"
+        },
+        {
+          "instruction": "AND",
+          "device": "T3"
+        },
+        {
+          "instruction": "SET",
+          "device": "L40"
+        },
+        {
+          "instruction": "MOV",
+          "device": "K1"
         }
-      ],
-      "jumps": []
+      ]
     },
     {
-      "id": 5,
+      "id": 9,
       "name": "NG ALARM STOP",
-      "step_start": 144,
-      "step_end": 206,
-      "condition": [
+      "step_start": 457,
+      "step_end": 502,
+      "conditions": [
         {
-          "step": 145,
           "instruction": "LD",
           "device": "L17"
         },
         {
-          "step": 163,
           "instruction": "LD",
-          "device": "L64"
+          "device": "L19"
         },
         {
-          "step": 185,
           "instruction": "LD",
-          "device": "L64"
+          "device": "L21"
+        },
+        {
+          "instruction": "LD",
+          "device": "L23"
+        },
+        {
+          "instruction": "LD",
+          "device": "L17"
+        },
+        {
+          "instruction": "LD",
+          "device": "L17"
         }
       ],
       "actions": [
         {
-          "step": 146,
+          "instruction": "MOV",
+          "device": "K3"
+        },
+        {
+          "instruction": "MOV",
+          "device": "K3"
+        },
+        {
+          "instruction": "MOV",
+          "device": "K4"
+        },
+        {
+          "instruction": "MOV",
+          "device": "K4"
+        },
+        {
+          "instruction": "MOV",
+          "device": "K5"
+        },
+        {
+          "instruction": "MOV",
+          "device": "K5"
+        },
+        {
+          "instruction": "MOV",
+          "device": "K2"
+        },
+        {
+          "instruction": "MOV",
+          "device": "K2"
+        },
+        {
           "instruction": "OR",
           "device": "L19"
         },
         {
-          "step": 147,
           "instruction": "OR",
           "device": "L21"
         },
         {
-          "step": 148,
           "instruction": "OR",
           "device": "L23"
         },
         {
-          "step": 149,
-          "instruction": "RST",
-          "device": "M18"
+          "instruction": "OR",
+          "device": "L64"
         },
         {
-          "step": 150,
-          "instruction": "RST",
-          "device": "M34"
-        },
-        {
-          "step": 151,
-          "instruction": "RST",
-          "device": "M19"
-        },
-        {
-          "step": 152,
-          "instruction": "RST",
-          "device": "M35"
-        },
-        {
-          "step": 153,
-          "instruction": "RST",
-          "device": "M20"
-        },
-        {
-          "step": 154,
-          "instruction": "RST",
-          "device": "M36"
-        },
-        {
-          "step": 155,
-          "instruction": "RST",
-          "device": "M21"
-        },
-        {
-          "step": 156,
-          "instruction": "RST",
-          "device": "M37"
-        },
-        {
-          "step": 157,
-          "instruction": "RST",
-          "device": "M22"
-        },
-        {
-          "step": 158,
-          "instruction": "RST",
-          "device": "M38"
-        },
-        {
-          "step": 159,
-          "instruction": "RST",
-          "device": "M23"
-        },
-        {
-          "step": 160,
-          "instruction": "RST",
-          "device": "M39"
-        },
-        {
-          "step": 161,
-          "instruction": "SET",
-          "device": "M16"
-        },
-        {
-          "step": 162,
-          "instruction": "SET",
-          "device": "M32"
-        },
-        {
-          "step": 164,
           "instruction": "OR",
           "device": "L65"
         },
         {
-          "step": 165,
           "instruction": "OR",
           "device": "L66"
         },
         {
-          "step": 166,
           "instruction": "OR",
           "device": "L67"
         },
         {
-          "step": 167,
           "instruction": "OR",
           "device": "L68"
         },
         {
-          "step": 168,
           "instruction": "OR",
           "device": "L69"
         },
         {
-          "step": 169,
           "instruction": "OR",
           "device": "L70"
         },
         {
-          "step": 170,
           "instruction": "OR",
           "device": "L71"
         },
         {
-          "step": 171,
           "instruction": "OR",
           "device": "L72"
         },
         {
-          "step": 172,
           "instruction": "OR",
           "device": "L73"
         },
         {
-          "step": 173,
           "instruction": "OR",
           "device": "L74"
         },
         {
-          "step": 174,
           "instruction": "OR",
           "device": "L78"
         },
         {
-          "step": 175,
-          "instruction": "RST",
-          "device": "M16"
-        },
-        {
-          "step": 176,
-          "instruction": "RST",
-          "device": "M17"
-        },
-        {
-          "step": 177,
-          "instruction": "RST",
-          "device": "M18"
-        },
-        {
-          "step": 178,
-          "instruction": "RST",
-          "device": "M19"
-        },
-        {
-          "step": 179,
-          "instruction": "RST",
-          "device": "M20"
-        },
-        {
-          "step": 180,
-          "instruction": "RST",
-          "device": "M21"
-        },
-        {
-          "step": 181,
-          "instruction": "RST",
-          "device": "M22"
-        },
-        {
-          "step": 182,
-          "instruction": "RST",
-          "device": "M23"
-        },
-        {
-          "step": 183,
-          "instruction": "RST",
-          "device": "M24"
-        },
-        {
-          "step": 184,
           "instruction": "SET",
           "device": "M16"
         },
         {
-          "step": 186,
+          "instruction": "OR",
+          "device": "L19"
+        },
+        {
+          "instruction": "OR",
+          "device": "L21"
+        },
+        {
+          "instruction": "OR",
+          "device": "L23"
+        },
+        {
+          "instruction": "OR",
+          "device": "L64"
+        },
+        {
           "instruction": "OR",
           "device": "L65"
         },
         {
-          "step": 187,
           "instruction": "OR",
           "device": "L66"
         },
         {
-          "step": 188,
           "instruction": "OR",
           "device": "L67"
         },
         {
-          "step": 189,
           "instruction": "OR",
           "device": "L68"
         },
         {
-          "step": 190,
           "instruction": "OR",
           "device": "L69"
         },
         {
-          "step": 191,
           "instruction": "OR",
           "device": "L70"
         },
         {
-          "step": 192,
           "instruction": "OR",
           "device": "L71"
         },
         {
-          "step": 193,
           "instruction": "OR",
           "device": "L72"
         },
         {
-          "step": 194,
           "instruction": "OR",
           "device": "L73"
         },
         {
-          "step": 195,
           "instruction": "OR",
           "device": "L74"
         },
         {
-          "step": 196,
           "instruction": "OR",
           "device": "L79"
         },
         {
-          "step": 197,
-          "instruction": "RST",
-          "device": "M32"
-        },
-        {
-          "step": 198,
-          "instruction": "RST",
-          "device": "M33"
-        },
-        {
-          "step": 199,
-          "instruction": "RST",
-          "device": "M34"
-        },
-        {
-          "step": 200,
-          "instruction": "RST",
-          "device": "M35"
-        },
-        {
-          "step": 201,
-          "instruction": "RST",
-          "device": "M36"
-        },
-        {
-          "step": 202,
-          "instruction": "RST",
-          "device": "M37"
-        },
-        {
-          "step": 203,
-          "instruction": "RST",
-          "device": "M38"
-        },
-        {
-          "step": 204,
-          "instruction": "RST",
-          "device": "M39"
-        },
-        {
-          "step": 205,
-          "instruction": "RST",
-          "device": "M40"
-        },
-        {
-          "step": 206,
           "instruction": "SET",
           "device": "M32"
         }
-      ],
-      "jumps": []
+      ]
     },
     {
-      "id": 6,
-      "name": "MANUAL MODE",
-      "step_start": 207,
-      "step_end": 239,
-      "condition": [
-        {
-          "step": 208,
-          "instruction": "LD",
-          "device": "M1039"
-        },
-        {
-          "step": 212,
-          "instruction": "LD",
-          "device": "M1039"
-        },
-        {
-          "step": 216,
-          "instruction": "LD",
-          "device": "M1040"
-        },
-        {
-          "step": 220,
-          "instruction": "LD",
-          "device": "M1040"
-        },
-        {
-          "step": 224,
-          "instruction": "LD",
-          "device": "M1041"
-        },
-        {
-          "step": 228,
-          "instruction": "LD",
-          "device": "M1041"
-        },
-        {
-          "step": 232,
-          "instruction": "LD",
-          "device": "M1042"
-        },
-        {
-          "step": 236,
-          "instruction": "LD",
-          "device": "M1042"
-        }
-      ],
-      "actions": [
-        {
-          "step": 209,
-          "instruction": "AND",
-          "device": "L2"
-        },
-        {
-          "step": 210,
-          "instruction": "SET",
-          "device": "M18"
-        },
-        {
-          "step": 211,
-          "instruction": "RST",
-          "device": "M16"
-        },
-        {
-          "step": 213,
-          "instruction": "AND",
-          "device": "L2"
-        },
-        {
-          "step": 214,
-          "instruction": "SET",
-          "device": "M34"
-        },
-        {
-          "step": 215,
-          "instruction": "RST",
-          "device": "M32"
-        },
-        {
-          "step": 217,
-          "instruction": "AND",
-          "device": "L2"
-        },
-        {
-          "step": 218,
-          "instruction": "SET",
-          "device": "M19"
-        },
-        {
-          "step": 219,
-          "instruction": "RST",
-          "device": "M16"
-        },
-        {
-          "step": 221,
-          "instruction": "AND",
-          "device": "L2"
-        },
-        {
-          "step": 222,
-          "instruction": "SET",
-          "device": "M35"
-        },
-        {
-          "step": 223,
-          "instruction": "RST",
-          "device": "M32"
-        },
-        {
-          "step": 225,
-          "instruction": "AND",
-          "device": "L2"
-        },
-        {
-          "step": 226,
-          "instruction": "SET",
-          "device": "M20"
-        },
-        {
-          "step": 227,
-          "instruction": "RST",
-          "device": "M16"
-        },
-        {
-          "step": 229,
-          "instruction": "AND",
-          "device": "L2"
-        },
-        {
-          "step": 230,
-          "instruction": "SET",
-          "device": "M36"
-        },
-        {
-          "step": 231,
-          "instruction": "RST",
-          "device": "M32"
-        },
-        {
-          "step": 233,
-          "instruction": "AND",
-          "device": "L2"
-        },
-        {
-          "step": 234,
-          "instruction": "SET",
-          "device": "M21"
-        },
-        {
-          "step": 235,
-          "instruction": "RST",
-          "device": "M16"
-        },
-        {
-          "step": 237,
-          "instruction": "AND",
-          "device": "L2"
-        },
-        {
-          "step": 238,
-          "instruction": "SET",
-          "device": "M37"
-        },
-        {
-          "step": 239,
-          "instruction": "RST",
-          "device": "M32"
-        }
-      ],
-      "jumps": []
-    },
-    {
-      "id": 7,
+      "id": 10,
       "name": "STOP",
-      "step_start": 240,
-      "step_end": 300,
-      "condition": [
+      "step_start": 504,
+      "step_end": 563,
+      "conditions": [
         {
-          "step": 241,
           "instruction": "LD",
           "device": "M1044"
         },
         {
-          "step": 251,
           "instruction": "LD",
           "device": "M0"
         },
         {
-          "step": 260,
           "instruction": "LD",
           "device": "M0"
         },
         {
-          "step": 263,
           "instruction": "LD",
           "device": "M0"
         },
         {
-          "step": 272,
           "instruction": "LD",
           "device": "M0"
         },
         {
-          "step": 281,
           "instruction": "LD",
           "device": "M0"
         },
         {
-          "step": 290,
           "instruction": "LD",
           "device": "M0"
         },
         {
-          "step": 296,
           "instruction": "LD",
           "device": "M0"
         }
       ],
       "actions": [
         {
-          "step": 242,
           "instruction": "OR",
           "device": "M769"
         },
         {
-          "step": 243,
           "instruction": "RST",
           "device": "M16"
         },
         {
-          "step": 244,
           "instruction": "RST",
           "device": "M17"
         },
         {
-          "step": 245,
           "instruction": "RST",
           "device": "M18"
         },
         {
-          "step": 246,
           "instruction": "RST",
           "device": "M19"
         },
         {
-          "step": 247,
           "instruction": "RST",
           "device": "M20"
         },
         {
-          "step": 248,
           "instruction": "RST",
           "device": "M21"
         },
         {
-          "step": 249,
           "instruction": "RST",
           "device": "M22"
         },
         {
-          "step": 250,
           "instruction": "RST",
           "device": "M23"
         },
         {
-          "step": 252,
           "instruction": "RST",
           "device": "M24"
         },
         {
-          "step": 253,
           "instruction": "RST",
           "device": "M32"
         },
         {
-          "step": 254,
           "instruction": "RST",
           "device": "M33"
         },
         {
-          "step": 255,
           "instruction": "RST",
           "device": "M34"
         },
         {
-          "step": 256,
           "instruction": "RST",
           "device": "M35"
         },
         {
-          "step": 257,
           "instruction": "RST",
           "device": "M36"
         },
         {
-          "step": 258,
           "instruction": "RST",
           "device": "M37"
         },
         {
-          "step": 259,
           "instruction": "RST",
           "device": "M38"
         },
         {
-          "step": 261,
           "instruction": "RST",
           "device": "M39"
         },
         {
-          "step": 262,
           "instruction": "RST",
           "device": "M40"
         },
         {
-          "step": 264,
           "instruction": "RST",
           "device": "M48"
         },
         {
-          "step": 265,
           "instruction": "RST",
           "device": "M49"
         },
         {
-          "step": 266,
           "instruction": "RST",
           "device": "M50"
         },
         {
-          "step": 267,
           "instruction": "RST",
           "device": "M51"
         },
         {
-          "step": 268,
           "instruction": "RST",
           "device": "M52"
         },
         {
-          "step": 269,
           "instruction": "RST",
           "device": "M53"
         },
         {
-          "step": 270,
           "instruction": "RST",
           "device": "M54"
         },
         {
-          "step": 271,
           "instruction": "RST",
           "device": "M55"
         },
         {
-          "step": 273,
           "instruction": "RST",
           "device": "M56"
         },
         {
-          "step": 274,
           "instruction": "RST",
           "device": "M57"
         },
         {
-          "step": 275,
           "instruction": "RST",
           "device": "M58"
         },
         {
-          "step": 276,
           "instruction": "RST",
           "device": "M59"
         },
         {
-          "step": 277,
           "instruction": "RST",
           "device": "M64"
         },
         {
-          "step": 278,
           "instruction": "RST",
           "device": "M65"
         },
         {
-          "step": 279,
           "instruction": "RST",
           "device": "M66"
         },
         {
-          "step": 280,
           "instruction": "RST",
           "device": "M67"
         },
         {
-          "step": 282,
           "instruction": "RST",
           "device": "M68"
         },
         {
-          "step": 283,
           "instruction": "RST",
           "device": "M69"
         },
         {
-          "step": 284,
           "instruction": "RST",
           "device": "M70"
         },
         {
-          "step": 285,
           "instruction": "RST",
           "device": "M71"
         },
         {
-          "step": 286,
           "instruction": "RST",
           "device": "M72"
         },
         {
-          "step": 287,
           "instruction": "RST",
           "device": "M73"
         },
         {
-          "step": 288,
           "instruction": "RST",
           "device": "M74"
         },
         {
-          "step": 289,
           "instruction": "RST",
           "device": "M75"
         },
         {
-          "step": 291,
           "instruction": "RST",
           "device": "M76"
         },
         {
-          "step": 292,
           "instruction": "RST",
           "device": "M77"
         },
         {
-          "step": 293,
           "instruction": "RST",
           "device": "M78"
         },
         {
-          "step": 294,
           "instruction": "RST",
           "device": "M79"
         },
         {
-          "step": 295,
           "instruction": "RST",
           "device": "M80"
         },
         {
-          "step": 297,
           "instruction": "SET",
           "device": "M16"
         },
         {
-          "step": 298,
           "instruction": "SET",
           "device": "M32"
         },
         {
-          "step": 299,
           "instruction": "MOV",
           "device": "K6 D7012"
         },
         {
-          "step": 300,
           "instruction": "MOV",
           "device": "K6 D8012"
         }
-      ],
-      "jumps": []
+      ]
     },
     {
-      "id": 8,
+      "id": 11,
       "name": "EMERGENCY STOP",
-      "step_start": 301,
-      "step_end": 356,
-      "condition": [
+      "step_start": 565,
+      "step_end": 621,
+      "conditions": [
         {
-          "step": 302,
           "instruction": "LDI",
           "device": "M771"
         },
         {
-          "step": 312,
           "instruction": "LD",
           "device": "M0"
         },
         {
-          "step": 321,
           "instruction": "LD",
           "device": "M0"
         },
         {
-          "step": 324,
           "instruction": "LD",
           "device": "M0"
         },
         {
-          "step": 333,
           "instruction": "LD",
           "device": "M0"
         },
         {
-          "step": 342,
           "instruction": "LD",
           "device": "M0"
         },
         {
-          "step": 351,
           "instruction": "LD",
           "device": "M0"
         }
       ],
       "actions": [
         {
-          "step": 303,
           "instruction": "SET",
           "device": "L64"
         },
         {
-          "step": 304,
+          "instruction": "MOV",
+          "device": "K6 D7012"
+        },
+        {
+          "instruction": "MOV",
+          "device": "K6 D8012"
+        },
+        {
           "instruction": "RST",
           "device": "M16"
         },
         {
-          "step": 305,
           "instruction": "RST",
           "device": "M17"
         },
         {
-          "step": 306,
           "instruction": "RST",
           "device": "M18"
         },
         {
-          "step": 307,
           "instruction": "RST",
           "device": "M19"
         },
         {
-          "step": 308,
           "instruction": "RST",
           "device": "M20"
         },
         {
-          "step": 309,
           "instruction": "RST",
           "device": "M21"
         },
         {
-          "step": 310,
           "instruction": "RST",
           "device": "M22"
         },
         {
-          "step": 311,
           "instruction": "RST",
           "device": "M23"
         },
         {
-          "step": 313,
           "instruction": "RST",
           "device": "M24"
         },
         {
-          "step": 314,
           "instruction": "RST",
           "device": "M32"
         },
         {
-          "step": 315,
           "instruction": "RST",
           "device": "M33"
         },
         {
-          "step": 316,
           "instruction": "RST",
           "device": "M34"
         },
         {
-          "step": 317,
           "instruction": "RST",
           "device": "M35"
         },
         {
-          "step": 318,
           "instruction": "RST",
           "device": "M36"
         },
         {
-          "step": 319,
           "instruction": "RST",
           "device": "M37"
         },
         {
-          "step": 320,
           "instruction": "RST",
           "device": "M38"
         },
         {
-          "step": 322,
           "instruction": "RST",
           "device": "M39"
         },
         {
-          "step": 323,
           "instruction": "RST",
           "device": "M40"
         },
         {
-          "step": 325,
           "instruction": "RST",
           "device": "M48"
         },
         {
-          "step": 326,
           "instruction": "RST",
           "device": "M49"
         },
         {
-          "step": 327,
           "instruction": "RST",
           "device": "M50"
         },
         {
-          "step": 328,
           "instruction": "RST",
           "device": "M51"
         },
         {
-          "step": 329,
           "instruction": "RST",
           "device": "M52"
         },
         {
-          "step": 330,
           "instruction": "RST",
           "device": "M53"
         },
         {
-          "step": 331,
           "instruction": "RST",
           "device": "M54"
         },
         {
-          "step": 332,
           "instruction": "RST",
           "device": "M55"
         },
         {
-          "step": 334,
           "instruction": "RST",
           "device": "M56"
         },
         {
-          "step": 335,
           "instruction": "RST",
           "device": "M57"
         },
         {
-          "step": 336,
           "instruction": "RST",
           "device": "M58"
         },
         {
-          "step": 337,
           "instruction": "RST",
           "device": "M59"
         },
         {
-          "step": 338,
           "instruction": "RST",
           "device": "M64"
         },
         {
-          "step": 339,
           "instruction": "RST",
           "device": "M65"
         },
         {
-          "step": 340,
           "instruction": "RST",
           "device": "M66"
         },
         {
-          "step": 341,
           "instruction": "RST",
           "device": "M67"
         },
         {
-          "step": 343,
           "instruction": "RST",
           "device": "M68"
         },
         {
-          "step": 344,
           "instruction": "RST",
           "device": "M69"
         },
         {
-          "step": 345,
           "instruction": "RST",
           "device": "M70"
         },
         {
-          "step": 346,
           "instruction": "RST",
           "device": "M71"
         },
         {
-          "step": 347,
           "instruction": "RST",
           "device": "M72"
         },
         {
-          "step": 348,
           "instruction": "RST",
           "device": "M73"
         },
         {
-          "step": 349,
           "instruction": "RST",
           "device": "M74"
         },
         {
-          "step": 350,
           "instruction": "RST",
           "device": "M75"
         },
         {
-          "step": 352,
           "instruction": "RST",
           "device": "M76"
         },
         {
-          "step": 353,
           "instruction": "RST",
           "device": "M77"
         },
         {
-          "step": 354,
           "instruction": "RST",
           "device": "M78"
         },
         {
-          "step": 355,
           "instruction": "RST",
           "device": "M79"
         },
         {
-          "step": 356,
           "instruction": "RST",
           "device": "M80"
         }
-      ],
-      "jumps": []
+      ]
     },
     {
-      "id": 9,
+      "id": 12,
       "name": "EXHAUST TIMER",
-      "step_start": 357,
-      "step_end": 360,
-      "condition": [
+      "step_start": 623,
+      "step_end": 626,
+      "conditions": [
         {
-          "step": 358,
           "instruction": "LD",
           "device": "M23"
+        },
+        {
+          "instruction": "LD",
+          "device": "M39"
         }
       ],
       "actions": [
         {
-          "step": 359,
-          "instruction": "OR",
-          "device": "M39"
+          "instruction": "OUT",
+          "device": "T3"
         },
         {
-          "step": 360,
           "instruction": "OUT",
           "device": "T3"
         }
-      ],
-      "jumps": []
+      ]
     },
     {
-      "id": 10,
+      "id": 13,
       "name": "LAMP CONTROL",
-      "step_start": 361,
-      "step_end": 402,
-      "condition": [
+      "step_start": 628,
+      "step_end": 667,
+      "conditions": [
         {
-          "step": 362,
           "instruction": "LD",
           "device": "M16"
         },
         {
-          "step": 385,
           "instruction": "LD",
           "device": "L64"
         },
         {
-          "step": 399,
           "instruction": "LD",
           "device": "M16"
         }
       ],
       "actions": [
         {
-          "step": 363,
           "instruction": "OR",
           "device": "M17"
         },
         {
-          "step": 364,
           "instruction": "OR",
           "device": "M18"
         },
         {
-          "step": 365,
           "instruction": "OR",
           "device": "M19"
         },
         {
-          "step": 366,
           "instruction": "OR",
           "device": "M20"
         },
         {
-          "step": 367,
           "instruction": "OR",
           "device": "M21"
         },
         {
-          "step": 368,
           "instruction": "OR",
           "device": "M22"
         },
         {
-          "step": 369,
           "instruction": "OR",
           "device": "M23"
         },
         {
-          "step": 370,
           "instruction": "OR",
           "device": "M24"
         },
         {
-          "step": 371,
           "instruction": "ANI",
           "device": "L64"
         },
         {
-          "step": 372,
           "instruction": "ANI",
           "device": "L65"
         },
         {
-          "step": 373,
           "instruction": "ANI",
           "device": "L66"
         },
         {
-          "step": 374,
           "instruction": "ANI",
           "device": "L67"
         },
         {
-          "step": 375,
           "instruction": "ANI",
           "device": "L68"
         },
         {
-          "step": 376,
           "instruction": "ANI",
           "device": "L69"
         },
         {
-          "step": 377,
           "instruction": "ANI",
           "device": "L70"
         },
         {
-          "step": 378,
           "instruction": "ANI",
           "device": "L71"
         },
         {
-          "step": 379,
           "instruction": "ANI",
           "device": "L72"
         },
         {
-          "step": 380,
           "instruction": "ANI",
           "device": "L73"
         },
         {
-          "step": 381,
           "instruction": "ANI",
           "device": "L74"
         },
         {
-          "step": 382,
           "instruction": "ANI",
           "device": "L78"
         },
         {
-          "step": 383,
           "instruction": "ANI",
           "device": "L79"
         },
         {
-          "step": 384,
           "instruction": "OUT",
           "device": "M77"
         },
         {
-          "step": 386,
           "instruction": "OR",
           "device": "L65"
         },
         {
-          "step": 387,
           "instruction": "OR",
           "device": "L66"
         },
         {
-          "step": 388,
           "instruction": "OR",
           "device": "L67"
         },
         {
-          "step": 389,
           "instruction": "OR",
           "device": "L68"
         },
         {
-          "step": 390,
           "instruction": "OR",
           "device": "L69"
         },
         {
-          "step": 391,
           "instruction": "OR",
           "device": "L70"
         },
         {
-          "step": 392,
           "instruction": "OR",
           "device": "L71"
         },
         {
-          "step": 393,
           "instruction": "OR",
           "device": "L72"
         },
         {
-          "step": 394,
           "instruction": "OR",
           "device": "L73"
         },
         {
-          "step": 395,
           "instruction": "OR",
           "device": "L74"
         },
         {
-          "step": 396,
           "instruction": "OR",
           "device": "L78"
         },
         {
-          "step": 397,
           "instruction": "OR",
           "device": "L79"
         },
         {
-          "step": 398,
           "instruction": "OUT",
           "device": "M78"
         },
         {
-          "step": 400,
           "instruction": "ANI",
           "device": "L80"
         },
         {
-          "step": 401,
           "instruction": "OUT",
           "device": "M79"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "HMI LAMP",
+      "step_start": 669,
+      "step_end": 710,
+      "conditions": [
+        {
+          "instruction": "LD",
+          "device": "M502"
         },
         {
-          "step": 402,
-          "instruction": "END",
-          "device": ""
+          "instruction": "LD",
+          "device": "M503"
+        },
+        {
+          "instruction": "LD",
+          "device": "M504"
+        },
+        {
+          "instruction": "LD",
+          "device": "M505"
+        },
+        {
+          "instruction": "LD",
+          "device": "M506"
+        },
+        {
+          "instruction": "LD",
+          "device": "M507"
+        },
+        {
+          "instruction": "LD",
+          "device": "M508"
+        },
+        {
+          "instruction": "LD",
+          "device": "M509"
+        },
+        {
+          "instruction": "LD",
+          "device": "M18"
+        },
+        {
+          "instruction": "LD",
+          "device": "M34"
         }
       ],
-      "jumps": []
-    }
-  ],
-  "device_map": {
-    "M1038": {
-      "type": "M",
-      "read_steps": [
-        1
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "M1536": {
-      "type": "M",
-      "read_steps": [
-        3,
-        7
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "L1": {
-      "type": "L",
-      "read_steps": [
-        4,
-        8,
-        53,
-        101
-      ],
-      "set_steps": [
-        9
-      ],
-      "rst_steps": [
-        6
-      ],
-      "out_steps": []
-    },
-    "L2": {
-      "type": "L",
-      "read_steps": [
-        209,
-        213,
-        217,
-        221,
-        225,
-        229,
-        233,
-        237
-      ],
-      "set_steps": [
-        5
-      ],
-      "rst_steps": [
-        10
-      ],
-      "out_steps": []
-    },
-    "M1024": {
-      "type": "M",
-      "read_steps": [
-        11,
-        17
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "L112": {
-      "type": "L",
-      "read_steps": [
-        12
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": [
-        14
-      ]
-    },
-    "M1025": {
-      "type": "M",
-      "read_steps": [
-        13,
-        15
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "L113": {
-      "type": "L",
-      "read_steps": [
-        16
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": [
-        18
-      ]
-    },
-    "M1032": {
-      "type": "M",
-      "read_steps": [
-        19,
-        25
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "L114": {
-      "type": "L",
-      "read_steps": [
-        20
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": [
-        22
-      ]
-    },
-    "M1033": {
-      "type": "M",
-      "read_steps": [
-        21,
-        23
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "L115": {
-      "type": "L",
-      "read_steps": [
-        24
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": [
-        26
-      ]
-    },
-    "M1026": {
-      "type": "M",
-      "read_steps": [
-        27
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "M1537": {
-      "type": "M",
-      "read_steps": [
-        29,
-        32
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "L116": {
-      "type": "L",
-      "read_steps": [
-        30,
-        33
-      ],
-      "set_steps": [
-        34
-      ],
-      "rst_steps": [
-        31
-      ],
-      "out_steps": []
-    },
-    "L81": {
-      "type": "L",
-      "read_steps": [
-        36
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "L82": {
-      "type": "L",
-      "read_steps": [
-        37
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "L83": {
-      "type": "L",
-      "read_steps": [
-        38
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "L84": {
-      "type": "L",
-      "read_steps": [
-        39
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "L85": {
-      "type": "L",
-      "read_steps": [
-        40
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "L80": {
-      "type": "L",
-      "read_steps": [
-        51,
-        400
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": [
-        41
-      ]
-    },
-    "L97": {
-      "type": "L",
-      "read_steps": [
-        42
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "L98": {
-      "type": "L",
-      "read_steps": [
-        43
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "L99": {
-      "type": "L",
-      "read_steps": [
-        44
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "L100": {
-      "type": "L",
-      "read_steps": [
-        45
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "L101": {
-      "type": "L",
-      "read_steps": [
-        46
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "L96": {
-      "type": "L",
-      "read_steps": [
-        99
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": [
-        47
-      ]
-    },
-    "M16": {
-      "type": "M",
-      "read_steps": [
-        49,
-        362,
-        399
-      ],
-      "set_steps": [
-        94,
-        161,
-        184,
-        297
-      ],
-      "rst_steps": [
-        67,
-        175,
-        211,
-        219,
-        227,
-        235,
-        243,
-        304
-      ],
-      "out_steps": []
-    },
-    "L0": {
-      "type": "L",
-      "read_steps": [
-        50,
-        98
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "M1043": {
-      "type": "M",
-      "read_steps": [
-        52
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "L64": {
-      "type": "L",
-      "read_steps": [
-        54,
-        102,
-        163,
-        185,
-        371,
-        385
-      ],
-      "set_steps": [
-        303
-      ],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "L65": {
-      "type": "L",
-      "read_steps": [
-        55,
-        103,
-        164,
-        186,
-        372,
-        386
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "L66": {
-      "type": "L",
-      "read_steps": [
-        56,
-        104,
-        165,
-        187,
-        373,
-        387
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "L67": {
-      "type": "L",
-      "read_steps": [
-        57,
-        105,
-        166,
-        188,
-        374,
-        388
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "L68": {
-      "type": "L",
-      "read_steps": [
-        58,
-        106,
-        167,
-        189,
-        375,
-        389
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "L69": {
-      "type": "L",
-      "read_steps": [
-        59,
-        107,
-        168,
-        190,
-        376,
-        390
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "L70": {
-      "type": "L",
-      "read_steps": [
-        60,
-        108,
-        169,
-        191,
-        377,
-        391
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "L71": {
-      "type": "L",
-      "read_steps": [
-        61,
-        109,
-        170,
-        192,
-        378,
-        392
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "L72": {
-      "type": "L",
-      "read_steps": [
-        62,
-        110,
-        171,
-        193,
-        379,
-        393
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "L73": {
-      "type": "L",
-      "read_steps": [
-        63,
-        111,
-        172,
-        194,
-        380,
-        394
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "L74": {
-      "type": "L",
-      "read_steps": [
-        64,
-        112,
-        173,
-        195,
-        381,
-        395
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "L78": {
-      "type": "L",
-      "read_steps": [
-        65,
-        174,
-        382,
-        396
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "M17": {
-      "type": "M",
-      "read_steps": [
-        68,
-        363
-      ],
-      "set_steps": [
-        66
-      ],
-      "rst_steps": [
-        70,
-        176,
-        244,
-        305
-      ],
-      "out_steps": []
-    },
-    "M18": {
-      "type": "M",
-      "read_steps": [
-        71,
-        364
-      ],
-      "set_steps": [
-        69,
-        210
-      ],
-      "rst_steps": [
-        74,
-        149,
-        177,
-        245,
-        306
-      ],
-      "out_steps": []
-    },
-    "L16": {
-      "type": "L",
-      "read_steps": [
-        72
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "M19": {
-      "type": "M",
-      "read_steps": [
-        75,
-        365
-      ],
-      "set_steps": [
-        73,
-        218
-      ],
-      "rst_steps": [
-        78,
-        151,
-        178,
-        246,
-        307
-      ],
-      "out_steps": []
-    },
-    "L18": {
-      "type": "L",
-      "read_steps": [
-        76
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "M20": {
-      "type": "M",
-      "read_steps": [
-        79,
-        366
-      ],
-      "set_steps": [
-        77,
-        226
-      ],
-      "rst_steps": [
-        82,
-        153,
-        179,
-        247,
-        308
-      ],
-      "out_steps": []
-    },
-    "L20": {
-      "type": "L",
-      "read_steps": [
-        80
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "M21": {
-      "type": "M",
-      "read_steps": [
-        83,
-        367
-      ],
-      "set_steps": [
-        81,
-        234
-      ],
-      "rst_steps": [
-        87,
-        155,
-        180,
-        248,
-        309
-      ],
-      "out_steps": []
-    },
-    "M22": {
-      "type": "M",
-      "read_steps": [
-        84,
-        368
-      ],
-      "set_steps": [],
-      "rst_steps": [
-        88,
-        157,
-        181,
-        249,
-        310
-      ],
-      "out_steps": []
-    },
-    "L22": {
-      "type": "L",
-      "read_steps": [
-        85
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "M23": {
-      "type": "M",
-      "read_steps": [
-        89,
-        358,
-        369
-      ],
-      "set_steps": [
-        86
-      ],
-      "rst_steps": [
-        92,
-        159,
-        182,
-        250,
-        311
-      ],
-      "out_steps": []
-    },
-    "T3": {
-      "type": "T",
-      "read_steps": [
-        90,
-        138
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": [
-        360
-      ]
-    },
-    "M24": {
-      "type": "M",
-      "read_steps": [
-        93,
-        370
-      ],
-      "set_steps": [
-        91
-      ],
-      "rst_steps": [
-        95,
-        183,
-        252,
-        313
-      ],
-      "out_steps": []
-    },
-    "M32": {
-      "type": "M",
-      "read_steps": [
-        97
-      ],
-      "set_steps": [
-        142,
-        162,
-        206,
-        298
-      ],
-      "rst_steps": [
-        115,
-        197,
-        215,
-        223,
-        231,
-        239,
-        253,
-        314
-      ],
-      "out_steps": []
-    },
-    "M1045": {
-      "type": "M",
-      "read_steps": [
-        100
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "L79": {
-      "type": "L",
-      "read_steps": [
-        113,
-        196,
-        383,
-        397
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "M33": {
-      "type": "M",
-      "read_steps": [
-        116
-      ],
-      "set_steps": [
-        114
-      ],
-      "rst_steps": [
-        118,
-        198,
-        254,
-        315
-      ],
-      "out_steps": []
-    },
-    "M34": {
-      "type": "M",
-      "read_steps": [
-        119
-      ],
-      "set_steps": [
-        117,
-        214
-      ],
-      "rst_steps": [
-        122,
-        150,
-        199,
-        255,
-        316
-      ],
-      "out_steps": []
-    },
-    "L32": {
-      "type": "L",
-      "read_steps": [
-        120
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "M35": {
-      "type": "M",
-      "read_steps": [
-        123
-      ],
-      "set_steps": [
-        121,
-        222
-      ],
-      "rst_steps": [
-        126,
-        152,
-        200,
-        256,
-        317
-      ],
-      "out_steps": []
-    },
-    "L34": {
-      "type": "L",
-      "read_steps": [
-        124
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "M36": {
-      "type": "M",
-      "read_steps": [
-        127
-      ],
-      "set_steps": [
-        125,
-        230
-      ],
-      "rst_steps": [
-        130,
-        154,
-        201,
-        257,
-        318
-      ],
-      "out_steps": []
-    },
-    "L36": {
-      "type": "L",
-      "read_steps": [
-        128
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "M37": {
-      "type": "M",
-      "read_steps": [
-        131
-      ],
-      "set_steps": [
-        129,
-        238
-      ],
-      "rst_steps": [
-        135,
-        156,
-        202,
-        258,
-        319
-      ],
-      "out_steps": []
-    },
-    "M38": {
-      "type": "M",
-      "read_steps": [
-        132
-      ],
-      "set_steps": [],
-      "rst_steps": [
-        136,
-        158,
-        203,
-        259,
-        320
-      ],
-      "out_steps": []
-    },
-    "L38": {
-      "type": "L",
-      "read_steps": [
-        133
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "M39": {
-      "type": "M",
-      "read_steps": [
-        137,
-        359
-      ],
-      "set_steps": [
-        134
-      ],
-      "rst_steps": [
-        140,
-        160,
-        204,
-        261,
-        322
-      ],
-      "out_steps": []
-    },
-    "M40": {
-      "type": "M",
-      "read_steps": [
-        141
-      ],
-      "set_steps": [
-        139
-      ],
-      "rst_steps": [
-        143,
-        205,
-        262,
-        323
-      ],
-      "out_steps": []
-    },
-    "L17": {
-      "type": "L",
-      "read_steps": [
-        145
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "L19": {
-      "type": "L",
-      "read_steps": [
-        146
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "L21": {
-      "type": "L",
-      "read_steps": [
-        147
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "L23": {
-      "type": "L",
-      "read_steps": [
-        148
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "M1039": {
-      "type": "M",
-      "read_steps": [
-        208,
-        212
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "M1040": {
-      "type": "M",
-      "read_steps": [
-        216,
-        220
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "M1041": {
-      "type": "M",
-      "read_steps": [
-        224,
-        228
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "M1042": {
-      "type": "M",
-      "read_steps": [
-        232,
-        236
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "M1044": {
-      "type": "M",
-      "read_steps": [
-        241
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "M769": {
-      "type": "M",
-      "read_steps": [
-        242
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "M0": {
-      "type": "M",
-      "read_steps": [
-        251,
-        260,
-        263,
-        272,
-        281,
-        290,
-        296,
-        312,
-        321,
-        324,
-        333,
-        342,
-        351
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "M48": {
-      "type": "M",
-      "read_steps": [],
-      "set_steps": [],
-      "rst_steps": [
-        264,
-        325
-      ],
-      "out_steps": []
-    },
-    "M49": {
-      "type": "M",
-      "read_steps": [],
-      "set_steps": [],
-      "rst_steps": [
-        265,
-        326
-      ],
-      "out_steps": []
-    },
-    "M50": {
-      "type": "M",
-      "read_steps": [],
-      "set_steps": [],
-      "rst_steps": [
-        266,
-        327
-      ],
-      "out_steps": []
-    },
-    "M51": {
-      "type": "M",
-      "read_steps": [],
-      "set_steps": [],
-      "rst_steps": [
-        267,
-        328
-      ],
-      "out_steps": []
-    },
-    "M52": {
-      "type": "M",
-      "read_steps": [],
-      "set_steps": [],
-      "rst_steps": [
-        268,
-        329
-      ],
-      "out_steps": []
-    },
-    "M53": {
-      "type": "M",
-      "read_steps": [],
-      "set_steps": [],
-      "rst_steps": [
-        269,
-        330
-      ],
-      "out_steps": []
-    },
-    "M54": {
-      "type": "M",
-      "read_steps": [],
-      "set_steps": [],
-      "rst_steps": [
-        270,
-        331
-      ],
-      "out_steps": []
-    },
-    "M55": {
-      "type": "M",
-      "read_steps": [],
-      "set_steps": [],
-      "rst_steps": [
-        271,
-        332
-      ],
-      "out_steps": []
-    },
-    "M56": {
-      "type": "M",
-      "read_steps": [],
-      "set_steps": [],
-      "rst_steps": [
-        273,
-        334
-      ],
-      "out_steps": []
-    },
-    "M57": {
-      "type": "M",
-      "read_steps": [],
-      "set_steps": [],
-      "rst_steps": [
-        274,
-        335
-      ],
-      "out_steps": []
-    },
-    "M58": {
-      "type": "M",
-      "read_steps": [],
-      "set_steps": [],
-      "rst_steps": [
-        275,
-        336
-      ],
-      "out_steps": []
-    },
-    "M59": {
-      "type": "M",
-      "read_steps": [],
-      "set_steps": [],
-      "rst_steps": [
-        276,
-        337
-      ],
-      "out_steps": []
-    },
-    "M64": {
-      "type": "M",
-      "read_steps": [],
-      "set_steps": [],
-      "rst_steps": [
-        277,
-        338
-      ],
-      "out_steps": []
-    },
-    "M65": {
-      "type": "M",
-      "read_steps": [],
-      "set_steps": [],
-      "rst_steps": [
-        278,
-        339
-      ],
-      "out_steps": []
-    },
-    "M66": {
-      "type": "M",
-      "read_steps": [],
-      "set_steps": [],
-      "rst_steps": [
-        279,
-        340
-      ],
-      "out_steps": []
-    },
-    "M67": {
-      "type": "M",
-      "read_steps": [],
-      "set_steps": [],
-      "rst_steps": [
-        280,
-        341
-      ],
-      "out_steps": []
-    },
-    "M68": {
-      "type": "M",
-      "read_steps": [],
-      "set_steps": [],
-      "rst_steps": [
-        282,
-        343
-      ],
-      "out_steps": []
-    },
-    "M69": {
-      "type": "M",
-      "read_steps": [],
-      "set_steps": [],
-      "rst_steps": [
-        283,
-        344
-      ],
-      "out_steps": []
-    },
-    "M70": {
-      "type": "M",
-      "read_steps": [],
-      "set_steps": [],
-      "rst_steps": [
-        284,
-        345
-      ],
-      "out_steps": []
-    },
-    "M71": {
-      "type": "M",
-      "read_steps": [],
-      "set_steps": [],
-      "rst_steps": [
-        285,
-        346
-      ],
-      "out_steps": []
-    },
-    "M72": {
-      "type": "M",
-      "read_steps": [],
-      "set_steps": [],
-      "rst_steps": [
-        286,
-        347
-      ],
-      "out_steps": []
-    },
-    "M73": {
-      "type": "M",
-      "read_steps": [],
-      "set_steps": [],
-      "rst_steps": [
-        287,
-        348
-      ],
-      "out_steps": []
-    },
-    "M74": {
-      "type": "M",
-      "read_steps": [],
-      "set_steps": [],
-      "rst_steps": [
-        288,
-        349
-      ],
-      "out_steps": []
-    },
-    "M75": {
-      "type": "M",
-      "read_steps": [],
-      "set_steps": [],
-      "rst_steps": [
-        289,
-        350
-      ],
-      "out_steps": []
-    },
-    "M76": {
-      "type": "M",
-      "read_steps": [],
-      "set_steps": [],
-      "rst_steps": [
-        291,
-        352
-      ],
-      "out_steps": []
-    },
-    "M77": {
-      "type": "M",
-      "read_steps": [],
-      "set_steps": [],
-      "rst_steps": [
-        292,
-        353
-      ],
-      "out_steps": [
-        384
-      ]
-    },
-    "M78": {
-      "type": "M",
-      "read_steps": [],
-      "set_steps": [],
-      "rst_steps": [
-        293,
-        354
-      ],
-      "out_steps": [
-        398
-      ]
-    },
-    "M79": {
-      "type": "M",
-      "read_steps": [],
-      "set_steps": [],
-      "rst_steps": [
-        294,
-        355
-      ],
-      "out_steps": [
-        401
-      ]
-    },
-    "M80": {
-      "type": "M",
-      "read_steps": [],
-      "set_steps": [],
-      "rst_steps": [
-        295,
-        356
-      ],
-      "out_steps": []
-    },
-    "K6": {
-      "type": "K",
-      "read_steps": [
-        299,
-        300
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "D7012": {
-      "type": "D",
-      "read_steps": [],
-      "set_steps": [
-        299
-      ],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "D8012": {
-      "type": "D",
-      "read_steps": [],
-      "set_steps": [
-        300
-      ],
-      "rst_steps": [],
-      "out_steps": []
-    },
-    "M771": {
-      "type": "M",
-      "read_steps": [
-        302
-      ],
-      "set_steps": [],
-      "rst_steps": [],
-      "out_steps": []
-    }
-  },
-  "warnings": [
-    {
-      "type": "LATCH_DEVICE",
-      "device": "L1",
-      "message": "L1: L device is battery-backed latch relay"
-    },
-    {
-      "type": "LATCH_DEVICE",
-      "device": "L2",
-      "message": "L2: L device is battery-backed latch relay"
-    },
-    {
-      "type": "LATCH_DEVICE",
-      "device": "L112",
-      "message": "L112: L device is battery-backed latch relay"
-    },
-    {
-      "type": "LATCH_DEVICE",
-      "device": "L113",
-      "message": "L113: L device is battery-backed latch relay"
-    },
-    {
-      "type": "LATCH_DEVICE",
-      "device": "L114",
-      "message": "L114: L device is battery-backed latch relay"
-    },
-    {
-      "type": "LATCH_DEVICE",
-      "device": "L115",
-      "message": "L115: L device is battery-backed latch relay"
-    },
-    {
-      "type": "LATCH_DEVICE",
-      "device": "L116",
-      "message": "L116: L device is battery-backed latch relay"
-    },
-    {
-      "type": "LATCH_DEVICE",
-      "device": "L81",
-      "message": "L81: L device is battery-backed latch relay"
-    },
-    {
-      "type": "LATCH_DEVICE",
-      "device": "L82",
-      "message": "L82: L device is battery-backed latch relay"
-    },
-    {
-      "type": "LATCH_DEVICE",
-      "device": "L83",
-      "message": "L83: L device is battery-backed latch relay"
-    },
-    {
-      "type": "LATCH_DEVICE",
-      "device": "L84",
-      "message": "L84: L device is battery-backed latch relay"
-    },
-    {
-      "type": "LATCH_DEVICE",
-      "device": "L85",
-      "message": "L85: L device is battery-backed latch relay"
-    },
-    {
-      "type": "LATCH_DEVICE",
-      "device": "L80",
-      "message": "L80: L device is battery-backed latch relay"
-    },
-    {
-      "type": "LATCH_DEVICE",
-      "device": "L97",
-      "message": "L97: L device is battery-backed latch relay"
-    },
-    {
-      "type": "LATCH_DEVICE",
-      "device": "L98",
-      "message": "L98: L device is battery-backed latch relay"
-    },
-    {
-      "type": "LATCH_DEVICE",
-      "device": "L99",
-      "message": "L99: L device is battery-backed latch relay"
-    },
-    {
-      "type": "LATCH_DEVICE",
-      "device": "L100",
-      "message": "L100: L device is battery-backed latch relay"
-    },
-    {
-      "type": "LATCH_DEVICE",
-      "device": "L101",
-      "message": "L101: L device is battery-backed latch relay"
-    },
-    {
-      "type": "LATCH_DEVICE",
-      "device": "L96",
-      "message": "L96: L device is battery-backed latch relay"
-    },
-    {
-      "type": "LATCH_DEVICE",
-      "device": "L0",
-      "message": "L0: L device is battery-backed latch relay"
-    },
-    {
-      "type": "NO_RST",
-      "device": "L64",
-      "message": "L64: SET at step 303 but no RST found"
-    },
-    {
-      "type": "LATCH_DEVICE",
-      "device": "L64",
-      "message": "L64: L device is battery-backed latch relay"
-    },
-    {
-      "type": "LATCH_DEVICE",
-      "device": "L65",
-      "message": "L65: L device is battery-backed latch relay"
-    },
-    {
-      "type": "LATCH_DEVICE",
-      "device": "L66",
-      "message": "L66: L device is battery-backed latch relay"
-    },
-    {
-      "type": "LATCH_DEVICE",
-      "device": "L67",
-      "message": "L67: L device is battery-backed latch relay"
-    },
-    {
-      "type": "LATCH_DEVICE",
-      "device": "L68",
-      "message": "L68: L device is battery-backed latch relay"
-    },
-    {
-      "type": "LATCH_DEVICE",
-      "device": "L69",
-      "message": "L69: L device is battery-backed latch relay"
-    },
-    {
-      "type": "LATCH_DEVICE",
-      "device": "L70",
-      "message": "L70: L device is battery-backed latch relay"
-    },
-    {
-      "type": "LATCH_DEVICE",
-      "device": "L71",
-      "message": "L71: L device is battery-backed latch relay"
-    },
-    {
-      "type": "LATCH_DEVICE",
-      "device": "L72",
-      "message": "L72: L device is battery-backed latch relay"
-    },
-    {
-      "type": "LATCH_DEVICE",
-      "device": "L73",
-      "message": "L73: L device is battery-backed latch relay"
-    },
-    {
-      "type": "LATCH_DEVICE",
-      "device": "L74",
-      "message": "L74: L device is battery-backed latch relay"
-    },
-    {
-      "type": "LATCH_DEVICE",
-      "device": "L78",
-      "message": "L78: L device is battery-backed latch relay"
-    },
-    {
-      "type": "LATCH_DEVICE",
-      "device": "L16",
-      "message": "L16: L device is battery-backed latch relay"
-    },
-    {
-      "type": "LATCH_DEVICE",
-      "device": "L18",
-      "message": "L18: L device is battery-backed latch relay"
-    },
-    {
-      "type": "LATCH_DEVICE",
-      "device": "L20",
-      "message": "L20: L device is battery-backed latch relay"
-    },
-    {
-      "type": "NO_SET",
-      "device": "M22",
-      "message": "M22: RST at step 88 but no SET found"
-    },
-    {
-      "type": "LATCH_DEVICE",
-      "device": "L22",
-      "message": "L22: L device is battery-backed latch relay"
-    },
-    {
-      "type": "LATCH_DEVICE",
-      "device": "L79",
-      "message": "L79: L device is battery-backed latch relay"
-    },
-    {
-      "type": "LATCH_DEVICE",
-      "device": "L32",
-      "message": "L32: L device is battery-backed latch relay"
-    },
-    {
-      "type": "LATCH_DEVICE",
-      "device": "L34",
-      "message": "L34: L device is battery-backed latch relay"
-    },
-    {
-      "type": "LATCH_DEVICE",
-      "device": "L36",
-      "message": "L36: L device is battery-backed latch relay"
-    },
-    {
-      "type": "NO_SET",
-      "device": "M38",
-      "message": "M38: RST at step 136 but no SET found"
-    },
-    {
-      "type": "LATCH_DEVICE",
-      "device": "L38",
-      "message": "L38: L device is battery-backed latch relay"
-    },
-    {
-      "type": "LATCH_DEVICE",
-      "device": "L17",
-      "message": "L17: L device is battery-backed latch relay"
-    },
-    {
-      "type": "LATCH_DEVICE",
-      "device": "L19",
-      "message": "L19: L device is battery-backed latch relay"
-    },
-    {
-      "type": "LATCH_DEVICE",
-      "device": "L21",
-      "message": "L21: L device is battery-backed latch relay"
-    },
-    {
-      "type": "LATCH_DEVICE",
-      "device": "L23",
-      "message": "L23: L device is battery-backed latch relay"
-    },
-    {
-      "type": "NO_SET",
-      "device": "M48",
-      "message": "M48: RST at step 264 but no SET found"
-    },
-    {
-      "type": "NO_SET",
-      "device": "M49",
-      "message": "M49: RST at step 265 but no SET found"
-    },
-    {
-      "type": "NO_SET",
-      "device": "M50",
-      "message": "M50: RST at step 266 but no SET found"
-    },
-    {
-      "type": "NO_SET",
-      "device": "M51",
-      "message": "M51: RST at step 267 but no SET found"
-    },
-    {
-      "type": "NO_SET",
-      "device": "M52",
-      "message": "M52: RST at step 268 but no SET found"
-    },
-    {
-      "type": "NO_SET",
-      "device": "M53",
-      "message": "M53: RST at step 269 but no SET found"
-    },
-    {
-      "type": "NO_SET",
-      "device": "M54",
-      "message": "M54: RST at step 270 but no SET found"
-    },
-    {
-      "type": "NO_SET",
-      "device": "M55",
-      "message": "M55: RST at step 271 but no SET found"
-    },
-    {
-      "type": "NO_SET",
-      "device": "M56",
-      "message": "M56: RST at step 273 but no SET found"
-    },
-    {
-      "type": "NO_SET",
-      "device": "M57",
-      "message": "M57: RST at step 274 but no SET found"
-    },
-    {
-      "type": "NO_SET",
-      "device": "M58",
-      "message": "M58: RST at step 275 but no SET found"
-    },
-    {
-      "type": "NO_SET",
-      "device": "M59",
-      "message": "M59: RST at step 276 but no SET found"
-    },
-    {
-      "type": "NO_SET",
-      "device": "M64",
-      "message": "M64: RST at step 277 but no SET found"
-    },
-    {
-      "type": "NO_SET",
-      "device": "M65",
-      "message": "M65: RST at step 278 but no SET found"
-    },
-    {
-      "type": "NO_SET",
-      "device": "M66",
-      "message": "M66: RST at step 279 but no SET found"
-    },
-    {
-      "type": "NO_SET",
-      "device": "M67",
-      "message": "M67: RST at step 280 but no SET found"
-    },
-    {
-      "type": "NO_SET",
-      "device": "M68",
-      "message": "M68: RST at step 282 but no SET found"
-    },
-    {
-      "type": "NO_SET",
-      "device": "M69",
-      "message": "M69: RST at step 283 but no SET found"
-    },
-    {
-      "type": "NO_SET",
-      "device": "M70",
-      "message": "M70: RST at step 284 but no SET found"
-    },
-    {
-      "type": "NO_SET",
-      "device": "M71",
-      "message": "M71: RST at step 285 but no SET found"
-    },
-    {
-      "type": "NO_SET",
-      "device": "M72",
-      "message": "M72: RST at step 286 but no SET found"
-    },
-    {
-      "type": "NO_SET",
-      "device": "M73",
-      "message": "M73: RST at step 287 but no SET found"
-    },
-    {
-      "type": "NO_SET",
-      "device": "M74",
-      "message": "M74: RST at step 288 but no SET found"
-    },
-    {
-      "type": "NO_SET",
-      "device": "M75",
-      "message": "M75: RST at step 289 but no SET found"
-    },
-    {
-      "type": "NO_SET",
-      "device": "M76",
-      "message": "M76: RST at step 291 but no SET found"
-    },
-    {
-      "type": "NO_SET",
-      "device": "M80",
-      "message": "M80: RST at step 295 but no SET found"
-    },
-    {
-      "type": "NO_RST",
-      "device": "D7012",
-      "message": "D7012: SET at step 299 but no RST found"
-    },
-    {
-      "type": "NO_RST",
-      "device": "D8012",
-      "message": "D8012: SET at step 300 but no RST found"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "L1",
-      "message": "L1 appears in 3 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "L2",
-      "message": "L2 appears in 2 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "L80",
-      "message": "L80 appears in 3 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "L96",
-      "message": "L96 appears in 2 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M16",
-      "message": "M16 appears in 6 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "L0",
-      "message": "L0 appears in 2 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "L64",
-      "message": "L64 appears in 5 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "L65",
-      "message": "L65 appears in 4 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "L66",
-      "message": "L66 appears in 4 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "L67",
-      "message": "L67 appears in 4 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "L68",
-      "message": "L68 appears in 4 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "L69",
-      "message": "L69 appears in 4 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "L70",
-      "message": "L70 appears in 4 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "L71",
-      "message": "L71 appears in 4 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "L72",
-      "message": "L72 appears in 4 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "L73",
-      "message": "L73 appears in 4 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "L74",
-      "message": "L74 appears in 4 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "L78",
-      "message": "L78 appears in 3 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M17",
-      "message": "M17 appears in 5 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M18",
-      "message": "M18 appears in 6 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M19",
-      "message": "M19 appears in 6 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M20",
-      "message": "M20 appears in 6 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M21",
-      "message": "M21 appears in 6 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M22",
-      "message": "M22 appears in 5 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M23",
-      "message": "M23 appears in 6 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "T3",
-      "message": "T3 appears in 3 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M24",
-      "message": "M24 appears in 5 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M32",
-      "message": "M32 appears in 5 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "L79",
-      "message": "L79 appears in 3 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M33",
-      "message": "M33 appears in 4 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M34",
-      "message": "M34 appears in 5 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M35",
-      "message": "M35 appears in 5 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M36",
-      "message": "M36 appears in 5 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M37",
-      "message": "M37 appears in 5 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M38",
-      "message": "M38 appears in 4 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M39",
-      "message": "M39 appears in 5 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M40",
-      "message": "M40 appears in 4 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M0",
-      "message": "M0 appears in 2 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M48",
-      "message": "M48 appears in 2 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M49",
-      "message": "M49 appears in 2 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M50",
-      "message": "M50 appears in 2 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M51",
-      "message": "M51 appears in 2 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M52",
-      "message": "M52 appears in 2 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M53",
-      "message": "M53 appears in 2 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M54",
-      "message": "M54 appears in 2 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M55",
-      "message": "M55 appears in 2 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M56",
-      "message": "M56 appears in 2 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M57",
-      "message": "M57 appears in 2 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M58",
-      "message": "M58 appears in 2 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M59",
-      "message": "M59 appears in 2 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M64",
-      "message": "M64 appears in 2 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M65",
-      "message": "M65 appears in 2 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M66",
-      "message": "M66 appears in 2 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M67",
-      "message": "M67 appears in 2 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M68",
-      "message": "M68 appears in 2 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M69",
-      "message": "M69 appears in 2 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M70",
-      "message": "M70 appears in 2 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M71",
-      "message": "M71 appears in 2 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M72",
-      "message": "M72 appears in 2 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M73",
-      "message": "M73 appears in 2 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M74",
-      "message": "M74 appears in 2 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M75",
-      "message": "M75 appears in 2 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M76",
-      "message": "M76 appears in 2 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M77",
-      "message": "M77 appears in 3 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M78",
-      "message": "M78 appears in 3 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M79",
-      "message": "M79 appears in 3 different blocks"
-    },
-    {
-      "type": "DOUBLE_COIL_CANDIDATE",
-      "device": "M80",
-      "message": "M80 appears in 2 different blocks"
-    }
-  ],
-  "test_cases": [
-    {
-      "id": "TC_001",
-      "name": "MODE CONTROL 실행 검증",
-      "description": "Step 0~34: MODE CONTROL 블록 검증",
-      "precondition": {
-        "M1038": 1,
-        "M1536": 1,
-        "M1024": 1,
-        "M1025": 1,
-        "M1032": 1,
-        "M1033": 1,
-        "M1026": 1,
-        "M1537": 1
-      },
-      "expected": {
-        "L2": 0,
-        "L1": 1,
-        "L116": 1
-      },
-      "plc_write": [
+      "actions": [
         {
-          "device": "L2",
-          "value": 0
+          "instruction": "OR",
+          "device": "M18"
         },
         {
-          "device": "L1",
-          "value": 1
+          "instruction": "OUT",
+          "device": "M530"
         },
         {
-          "device": "L1",
-          "value": 0
+          "instruction": "OR",
+          "device": "M19"
         },
         {
-          "device": "L2",
-          "value": 1
+          "instruction": "OUT",
+          "device": "M531"
         },
         {
-          "device": "L116",
-          "value": 1
+          "instruction": "OR",
+          "device": "M20"
         },
         {
-          "device": "L116",
-          "value": 0
+          "instruction": "OUT",
+          "device": "M532"
         },
         {
-          "device": "M1038",
-          "value": 1
+          "instruction": "OR",
+          "device": "M21"
         },
         {
-          "device": "M1536",
-          "value": 1
+          "instruction": "OR",
+          "device": "M22"
         },
         {
-          "device": "M1024",
-          "value": 1
+          "instruction": "OUT",
+          "device": "M533"
         },
         {
-          "device": "M1025",
-          "value": 1
+          "instruction": "OR",
+          "device": "M34"
         },
         {
-          "device": "M1032",
-          "value": 1
+          "instruction": "OUT",
+          "device": "M534"
         },
         {
-          "device": "M1033",
-          "value": 1
+          "instruction": "OR",
+          "device": "M35"
         },
         {
-          "device": "M1026",
-          "value": 1
+          "instruction": "OUT",
+          "device": "M535"
         },
         {
-          "device": "M1537",
-          "value": 1
+          "instruction": "OR",
+          "device": "M36"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M536"
+        },
+        {
+          "instruction": "OR",
+          "device": "M37"
+        },
+        {
+          "instruction": "OR",
+          "device": "M38"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M537"
+        },
+        {
+          "instruction": "OR",
+          "device": "M19"
+        },
+        {
+          "instruction": "OR",
+          "device": "M20"
+        },
+        {
+          "instruction": "OR",
+          "device": "M21"
+        },
+        {
+          "instruction": "OR",
+          "device": "M22"
+        },
+        {
+          "instruction": "OR",
+          "device": "M23"
+        },
+        {
+          "instruction": "OR",
+          "device": "M24"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M540"
+        },
+        {
+          "instruction": "OR",
+          "device": "M35"
+        },
+        {
+          "instruction": "OR",
+          "device": "M36"
+        },
+        {
+          "instruction": "OR",
+          "device": "M37"
+        },
+        {
+          "instruction": "OR",
+          "device": "M38"
+        },
+        {
+          "instruction": "OR",
+          "device": "M39"
+        },
+        {
+          "instruction": "OR",
+          "device": "M40"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M541"
         }
-      ],
-      "plc_read": [
-        "L2",
-        "L1",
-        "L116",
-        "M1038",
-        "M1536",
-        "M1024",
-        "M1025",
-        "M1032",
-        "M1033",
-        "M1026",
-        "M1537"
-      ]
-    },
-    {
-      "id": "TC_002",
-      "name": "INTERLOCK CHECK 실행 검증",
-      "description": "Step 35~47: INTERLOCK CHECK 블록 검증",
-      "precondition": {
-        "L81": 1,
-        "L97": 1
-      },
-      "expected": {},
-      "plc_write": [
-        {
-          "device": "L81",
-          "value": 1
-        },
-        {
-          "device": "L97",
-          "value": 1
-        }
-      ],
-      "plc_read": [
-        "L81",
-        "L97"
-      ]
-    },
-    {
-      "id": "TC_003",
-      "name": "STEP L0 실행 검증",
-      "description": "Step 48~95: STEP L0 블록 검증",
-      "precondition": {
-        "M16": 1,
-        "M17": 1,
-        "M18": 1,
-        "M19": 1,
-        "M20": 1,
-        "M21": 1,
-        "M23": 1,
-        "M24": 1
-      },
-      "expected": {
-        "M17": 0,
-        "M16": 1,
-        "M18": 0,
-        "M19": 0,
-        "M20": 0,
-        "M21": 0,
-        "M23": 0,
-        "M22": 0,
-        "M24": 0
-      },
-      "plc_write": [
-        {
-          "device": "M17",
-          "value": 0
-        },
-        {
-          "device": "M16",
-          "value": 1
-        },
-        {
-          "device": "M18",
-          "value": 0
-        },
-        {
-          "device": "M17",
-          "value": 1
-        },
-        {
-          "device": "M19",
-          "value": 0
-        },
-        {
-          "device": "M18",
-          "value": 1
-        },
-        {
-          "device": "M20",
-          "value": 0
-        },
-        {
-          "device": "M19",
-          "value": 1
-        },
-        {
-          "device": "M21",
-          "value": 0
-        },
-        {
-          "device": "M20",
-          "value": 1
-        },
-        {
-          "device": "M23",
-          "value": 0
-        },
-        {
-          "device": "M21",
-          "value": 1
-        },
-        {
-          "device": "M22",
-          "value": 1
-        },
-        {
-          "device": "M24",
-          "value": 0
-        },
-        {
-          "device": "M23",
-          "value": 1
-        },
-        {
-          "device": "M16",
-          "value": 0
-        },
-        {
-          "device": "M24",
-          "value": 1
-        }
-      ],
-      "plc_read": [
-        "M17",
-        "M16",
-        "M18",
-        "M19",
-        "M20",
-        "M21",
-        "M23",
-        "M22",
-        "M24"
-      ]
-    },
-    {
-      "id": "TC_004",
-      "name": "STEP L1 실행 검증",
-      "description": "Step 96~143: STEP L1 블록 검증",
-      "precondition": {
-        "M32": 1,
-        "M33": 1,
-        "M34": 1,
-        "M35": 1,
-        "M36": 1,
-        "M37": 1,
-        "M39": 1,
-        "M40": 1
-      },
-      "expected": {
-        "M33": 0,
-        "M32": 1,
-        "M34": 0,
-        "M35": 0,
-        "M36": 0,
-        "M37": 0,
-        "M39": 0,
-        "M38": 0,
-        "M40": 0
-      },
-      "plc_write": [
-        {
-          "device": "M33",
-          "value": 0
-        },
-        {
-          "device": "M32",
-          "value": 1
-        },
-        {
-          "device": "M34",
-          "value": 0
-        },
-        {
-          "device": "M33",
-          "value": 1
-        },
-        {
-          "device": "M35",
-          "value": 0
-        },
-        {
-          "device": "M34",
-          "value": 1
-        },
-        {
-          "device": "M36",
-          "value": 0
-        },
-        {
-          "device": "M35",
-          "value": 1
-        },
-        {
-          "device": "M37",
-          "value": 0
-        },
-        {
-          "device": "M36",
-          "value": 1
-        },
-        {
-          "device": "M39",
-          "value": 0
-        },
-        {
-          "device": "M37",
-          "value": 1
-        },
-        {
-          "device": "M38",
-          "value": 1
-        },
-        {
-          "device": "M40",
-          "value": 0
-        },
-        {
-          "device": "M39",
-          "value": 1
-        },
-        {
-          "device": "M32",
-          "value": 0
-        },
-        {
-          "device": "M40",
-          "value": 1
-        }
-      ],
-      "plc_read": [
-        "M33",
-        "M32",
-        "M34",
-        "M35",
-        "M36",
-        "M37",
-        "M39",
-        "M38",
-        "M40"
-      ]
-    },
-    {
-      "id": "TC_005",
-      "name": "NG ALARM STOP 실행 검증",
-      "description": "Step 144~206: NG ALARM STOP 블록 검증",
-      "precondition": {
-        "L17": 1,
-        "L64": 1
-      },
-      "expected": {
-        "M18": 0,
-        "M34": 0,
-        "M19": 0,
-        "M35": 0,
-        "M20": 0,
-        "M36": 0,
-        "M21": 0,
-        "M37": 0,
-        "M22": 0,
-        "M38": 0,
-        "M23": 0,
-        "M39": 0,
-        "M16": 1,
-        "M32": 1,
-        "M17": 0,
-        "M24": 0,
-        "M33": 0,
-        "M40": 0
-      },
-      "plc_write": [
-        {
-          "device": "M18",
-          "value": 1
-        },
-        {
-          "device": "M34",
-          "value": 1
-        },
-        {
-          "device": "M19",
-          "value": 1
-        },
-        {
-          "device": "M35",
-          "value": 1
-        },
-        {
-          "device": "M20",
-          "value": 1
-        },
-        {
-          "device": "M36",
-          "value": 1
-        },
-        {
-          "device": "M21",
-          "value": 1
-        },
-        {
-          "device": "M37",
-          "value": 1
-        },
-        {
-          "device": "M22",
-          "value": 1
-        },
-        {
-          "device": "M38",
-          "value": 1
-        },
-        {
-          "device": "M23",
-          "value": 1
-        },
-        {
-          "device": "M39",
-          "value": 1
-        },
-        {
-          "device": "M16",
-          "value": 0
-        },
-        {
-          "device": "M32",
-          "value": 0
-        },
-        {
-          "device": "M16",
-          "value": 1
-        },
-        {
-          "device": "M17",
-          "value": 1
-        },
-        {
-          "device": "M18",
-          "value": 1
-        },
-        {
-          "device": "M19",
-          "value": 1
-        },
-        {
-          "device": "M20",
-          "value": 1
-        },
-        {
-          "device": "M21",
-          "value": 1
-        },
-        {
-          "device": "M22",
-          "value": 1
-        },
-        {
-          "device": "M23",
-          "value": 1
-        },
-        {
-          "device": "M24",
-          "value": 1
-        },
-        {
-          "device": "M16",
-          "value": 0
-        },
-        {
-          "device": "M32",
-          "value": 1
-        },
-        {
-          "device": "M33",
-          "value": 1
-        },
-        {
-          "device": "M34",
-          "value": 1
-        },
-        {
-          "device": "M35",
-          "value": 1
-        },
-        {
-          "device": "M36",
-          "value": 1
-        },
-        {
-          "device": "M37",
-          "value": 1
-        },
-        {
-          "device": "M38",
-          "value": 1
-        },
-        {
-          "device": "M39",
-          "value": 1
-        },
-        {
-          "device": "M40",
-          "value": 1
-        },
-        {
-          "device": "M32",
-          "value": 0
-        },
-        {
-          "device": "L17",
-          "value": 1
-        },
-        {
-          "device": "L64",
-          "value": 1
-        }
-      ],
-      "plc_read": [
-        "M18",
-        "M34",
-        "M19",
-        "M35",
-        "M20",
-        "M36",
-        "M21",
-        "M37",
-        "M22",
-        "M38",
-        "M23",
-        "M39",
-        "M16",
-        "M32",
-        "M17",
-        "M24",
-        "M33",
-        "M40",
-        "L17",
-        "L64"
-      ]
-    },
-    {
-      "id": "TC_006",
-      "name": "MANUAL MODE 실행 검증",
-      "description": "Step 207~239: MANUAL MODE 블록 검증",
-      "precondition": {
-        "M1039": 1,
-        "M1040": 1,
-        "M1041": 1,
-        "M1042": 1
-      },
-      "expected": {
-        "M18": 1,
-        "M16": 0,
-        "M34": 1,
-        "M32": 0,
-        "M19": 1,
-        "M35": 1,
-        "M20": 1,
-        "M36": 1,
-        "M21": 1,
-        "M37": 1
-      },
-      "plc_write": [
-        {
-          "device": "M18",
-          "value": 0
-        },
-        {
-          "device": "M16",
-          "value": 1
-        },
-        {
-          "device": "M34",
-          "value": 0
-        },
-        {
-          "device": "M32",
-          "value": 1
-        },
-        {
-          "device": "M19",
-          "value": 0
-        },
-        {
-          "device": "M16",
-          "value": 1
-        },
-        {
-          "device": "M35",
-          "value": 0
-        },
-        {
-          "device": "M32",
-          "value": 1
-        },
-        {
-          "device": "M20",
-          "value": 0
-        },
-        {
-          "device": "M16",
-          "value": 1
-        },
-        {
-          "device": "M36",
-          "value": 0
-        },
-        {
-          "device": "M32",
-          "value": 1
-        },
-        {
-          "device": "M21",
-          "value": 0
-        },
-        {
-          "device": "M16",
-          "value": 1
-        },
-        {
-          "device": "M37",
-          "value": 0
-        },
-        {
-          "device": "M32",
-          "value": 1
-        },
-        {
-          "device": "M1039",
-          "value": 1
-        },
-        {
-          "device": "M1040",
-          "value": 1
-        },
-        {
-          "device": "M1041",
-          "value": 1
-        },
-        {
-          "device": "M1042",
-          "value": 1
-        }
-      ],
-      "plc_read": [
-        "M18",
-        "M16",
-        "M34",
-        "M32",
-        "M19",
-        "M35",
-        "M20",
-        "M36",
-        "M21",
-        "M37",
-        "M1039",
-        "M1040",
-        "M1041",
-        "M1042"
-      ]
-    },
-    {
-      "id": "TC_007",
-      "name": "STOP 실행 검증",
-      "description": "Step 240~300: STOP 블록 검증",
-      "precondition": {
-        "M1044": 1,
-        "M0": 1
-      },
-      "expected": {
-        "M16": 1,
-        "M17": 0,
-        "M18": 0,
-        "M19": 0,
-        "M20": 0,
-        "M21": 0,
-        "M22": 0,
-        "M23": 0,
-        "M24": 0,
-        "M32": 1,
-        "M33": 0,
-        "M34": 0,
-        "M35": 0,
-        "M36": 0,
-        "M37": 0,
-        "M38": 0,
-        "M39": 0,
-        "M40": 0,
-        "M48": 0,
-        "M49": 0,
-        "M50": 0,
-        "M51": 0,
-        "M52": 0,
-        "M53": 0,
-        "M54": 0,
-        "M55": 0,
-        "M56": 0,
-        "M57": 0,
-        "M58": 0,
-        "M59": 0,
-        "M64": 0,
-        "M65": 0,
-        "M66": 0,
-        "M67": 0,
-        "M68": 0,
-        "M69": 0,
-        "M70": 0,
-        "M71": 0,
-        "M72": 0,
-        "M73": 0,
-        "M74": 0,
-        "M75": 0,
-        "M76": 0,
-        "M77": 0,
-        "M78": 0,
-        "M79": 0,
-        "M80": 0
-      },
-      "plc_write": [
-        {
-          "device": "M16",
-          "value": 1
-        },
-        {
-          "device": "M17",
-          "value": 1
-        },
-        {
-          "device": "M18",
-          "value": 1
-        },
-        {
-          "device": "M19",
-          "value": 1
-        },
-        {
-          "device": "M20",
-          "value": 1
-        },
-        {
-          "device": "M21",
-          "value": 1
-        },
-        {
-          "device": "M22",
-          "value": 1
-        },
-        {
-          "device": "M23",
-          "value": 1
-        },
-        {
-          "device": "M24",
-          "value": 1
-        },
-        {
-          "device": "M32",
-          "value": 1
-        },
-        {
-          "device": "M33",
-          "value": 1
-        },
-        {
-          "device": "M34",
-          "value": 1
-        },
-        {
-          "device": "M35",
-          "value": 1
-        },
-        {
-          "device": "M36",
-          "value": 1
-        },
-        {
-          "device": "M37",
-          "value": 1
-        },
-        {
-          "device": "M38",
-          "value": 1
-        },
-        {
-          "device": "M39",
-          "value": 1
-        },
-        {
-          "device": "M40",
-          "value": 1
-        },
-        {
-          "device": "M48",
-          "value": 1
-        },
-        {
-          "device": "M49",
-          "value": 1
-        },
-        {
-          "device": "M50",
-          "value": 1
-        },
-        {
-          "device": "M51",
-          "value": 1
-        },
-        {
-          "device": "M52",
-          "value": 1
-        },
-        {
-          "device": "M53",
-          "value": 1
-        },
-        {
-          "device": "M54",
-          "value": 1
-        },
-        {
-          "device": "M55",
-          "value": 1
-        },
-        {
-          "device": "M56",
-          "value": 1
-        },
-        {
-          "device": "M57",
-          "value": 1
-        },
-        {
-          "device": "M58",
-          "value": 1
-        },
-        {
-          "device": "M59",
-          "value": 1
-        },
-        {
-          "device": "M64",
-          "value": 1
-        },
-        {
-          "device": "M65",
-          "value": 1
-        },
-        {
-          "device": "M66",
-          "value": 1
-        },
-        {
-          "device": "M67",
-          "value": 1
-        },
-        {
-          "device": "M68",
-          "value": 1
-        },
-        {
-          "device": "M69",
-          "value": 1
-        },
-        {
-          "device": "M70",
-          "value": 1
-        },
-        {
-          "device": "M71",
-          "value": 1
-        },
-        {
-          "device": "M72",
-          "value": 1
-        },
-        {
-          "device": "M73",
-          "value": 1
-        },
-        {
-          "device": "M74",
-          "value": 1
-        },
-        {
-          "device": "M75",
-          "value": 1
-        },
-        {
-          "device": "M76",
-          "value": 1
-        },
-        {
-          "device": "M77",
-          "value": 1
-        },
-        {
-          "device": "M78",
-          "value": 1
-        },
-        {
-          "device": "M79",
-          "value": 1
-        },
-        {
-          "device": "M80",
-          "value": 1
-        },
-        {
-          "device": "M16",
-          "value": 0
-        },
-        {
-          "device": "M32",
-          "value": 0
-        },
-        {
-          "device": "M1044",
-          "value": 1
-        },
-        {
-          "device": "M0",
-          "value": 1
-        }
-      ],
-      "plc_read": [
-        "M16",
-        "M17",
-        "M18",
-        "M19",
-        "M20",
-        "M21",
-        "M22",
-        "M23",
-        "M24",
-        "M32",
-        "M33",
-        "M34",
-        "M35",
-        "M36",
-        "M37",
-        "M38",
-        "M39",
-        "M40",
-        "M48",
-        "M49",
-        "M50",
-        "M51",
-        "M52",
-        "M53",
-        "M54",
-        "M55",
-        "M56",
-        "M57",
-        "M58",
-        "M59",
-        "M64",
-        "M65",
-        "M66",
-        "M67",
-        "M68",
-        "M69",
-        "M70",
-        "M71",
-        "M72",
-        "M73",
-        "M74",
-        "M75",
-        "M76",
-        "M77",
-        "M78",
-        "M79",
-        "M80",
-        "M1044",
-        "M0"
-      ]
-    },
-    {
-      "id": "TC_008",
-      "name": "EMERGENCY STOP 실행 검증",
-      "description": "Step 301~356: EMERGENCY STOP 블록 검증",
-      "precondition": {
-        "M771": 0,
-        "M0": 1
-      },
-      "expected": {
-        "L64": 1,
-        "M16": 0,
-        "M17": 0,
-        "M18": 0,
-        "M19": 0,
-        "M20": 0,
-        "M21": 0,
-        "M22": 0,
-        "M23": 0,
-        "M24": 0,
-        "M32": 0,
-        "M33": 0,
-        "M34": 0,
-        "M35": 0,
-        "M36": 0,
-        "M37": 0,
-        "M38": 0,
-        "M39": 0,
-        "M40": 0,
-        "M48": 0,
-        "M49": 0,
-        "M50": 0,
-        "M51": 0,
-        "M52": 0,
-        "M53": 0,
-        "M54": 0,
-        "M55": 0,
-        "M56": 0,
-        "M57": 0,
-        "M58": 0,
-        "M59": 0,
-        "M64": 0,
-        "M65": 0,
-        "M66": 0,
-        "M67": 0,
-        "M68": 0,
-        "M69": 0,
-        "M70": 0,
-        "M71": 0,
-        "M72": 0,
-        "M73": 0,
-        "M74": 0,
-        "M75": 0,
-        "M76": 0,
-        "M77": 0,
-        "M78": 0,
-        "M79": 0,
-        "M80": 0
-      },
-      "plc_write": [
-        {
-          "device": "L64",
-          "value": 0
-        },
-        {
-          "device": "M16",
-          "value": 1
-        },
-        {
-          "device": "M17",
-          "value": 1
-        },
-        {
-          "device": "M18",
-          "value": 1
-        },
-        {
-          "device": "M19",
-          "value": 1
-        },
-        {
-          "device": "M20",
-          "value": 1
-        },
-        {
-          "device": "M21",
-          "value": 1
-        },
-        {
-          "device": "M22",
-          "value": 1
-        },
-        {
-          "device": "M23",
-          "value": 1
-        },
-        {
-          "device": "M24",
-          "value": 1
-        },
-        {
-          "device": "M32",
-          "value": 1
-        },
-        {
-          "device": "M33",
-          "value": 1
-        },
-        {
-          "device": "M34",
-          "value": 1
-        },
-        {
-          "device": "M35",
-          "value": 1
-        },
-        {
-          "device": "M36",
-          "value": 1
-        },
-        {
-          "device": "M37",
-          "value": 1
-        },
-        {
-          "device": "M38",
-          "value": 1
-        },
-        {
-          "device": "M39",
-          "value": 1
-        },
-        {
-          "device": "M40",
-          "value": 1
-        },
-        {
-          "device": "M48",
-          "value": 1
-        },
-        {
-          "device": "M49",
-          "value": 1
-        },
-        {
-          "device": "M50",
-          "value": 1
-        },
-        {
-          "device": "M51",
-          "value": 1
-        },
-        {
-          "device": "M52",
-          "value": 1
-        },
-        {
-          "device": "M53",
-          "value": 1
-        },
-        {
-          "device": "M54",
-          "value": 1
-        },
-        {
-          "device": "M55",
-          "value": 1
-        },
-        {
-          "device": "M56",
-          "value": 1
-        },
-        {
-          "device": "M57",
-          "value": 1
-        },
-        {
-          "device": "M58",
-          "value": 1
-        },
-        {
-          "device": "M59",
-          "value": 1
-        },
-        {
-          "device": "M64",
-          "value": 1
-        },
-        {
-          "device": "M65",
-          "value": 1
-        },
-        {
-          "device": "M66",
-          "value": 1
-        },
-        {
-          "device": "M67",
-          "value": 1
-        },
-        {
-          "device": "M68",
-          "value": 1
-        },
-        {
-          "device": "M69",
-          "value": 1
-        },
-        {
-          "device": "M70",
-          "value": 1
-        },
-        {
-          "device": "M71",
-          "value": 1
-        },
-        {
-          "device": "M72",
-          "value": 1
-        },
-        {
-          "device": "M73",
-          "value": 1
-        },
-        {
-          "device": "M74",
-          "value": 1
-        },
-        {
-          "device": "M75",
-          "value": 1
-        },
-        {
-          "device": "M76",
-          "value": 1
-        },
-        {
-          "device": "M77",
-          "value": 1
-        },
-        {
-          "device": "M78",
-          "value": 1
-        },
-        {
-          "device": "M79",
-          "value": 1
-        },
-        {
-          "device": "M80",
-          "value": 1
-        },
-        {
-          "device": "M771",
-          "value": 0
-        },
-        {
-          "device": "M0",
-          "value": 1
-        }
-      ],
-      "plc_read": [
-        "L64",
-        "M16",
-        "M17",
-        "M18",
-        "M19",
-        "M20",
-        "M21",
-        "M22",
-        "M23",
-        "M24",
-        "M32",
-        "M33",
-        "M34",
-        "M35",
-        "M36",
-        "M37",
-        "M38",
-        "M39",
-        "M40",
-        "M48",
-        "M49",
-        "M50",
-        "M51",
-        "M52",
-        "M53",
-        "M54",
-        "M55",
-        "M56",
-        "M57",
-        "M58",
-        "M59",
-        "M64",
-        "M65",
-        "M66",
-        "M67",
-        "M68",
-        "M69",
-        "M70",
-        "M71",
-        "M72",
-        "M73",
-        "M74",
-        "M75",
-        "M76",
-        "M77",
-        "M78",
-        "M79",
-        "M80",
-        "M771",
-        "M0"
-      ]
-    },
-    {
-      "id": "TC_009",
-      "name": "EXHAUST TIMER 실행 검증",
-      "description": "Step 357~360: EXHAUST TIMER 블록 검증",
-      "precondition": {
-        "M23": 1
-      },
-      "expected": {},
-      "plc_write": [
-        {
-          "device": "M23",
-          "value": 1
-        }
-      ],
-      "plc_read": [
-        "M23"
-      ]
-    },
-    {
-      "id": "TC_010",
-      "name": "LAMP CONTROL 실행 검증",
-      "description": "Step 361~402: LAMP CONTROL 블록 검증",
-      "precondition": {
-        "M16": 1,
-        "L64": 1
-      },
-      "expected": {},
-      "plc_write": [
-        {
-          "device": "M16",
-          "value": 1
-        },
-        {
-          "device": "L64",
-          "value": 1
-        }
-      ],
-      "plc_read": [
-        "M16",
-        "L64"
       ]
     }
   ]

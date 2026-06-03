@@ -1,0 +1,1765 @@
+﻿{
+    "meta":  {
+                 "source_file":  "ref_comment.csv",
+                 "total_devices":  439,
+                 "generated":  "2026-06-03"
+             },
+    "devices":  [
+                    {
+                        "Device":  "X0A0",
+                        "Comment":  "START PB L0"
+                    },
+                    {
+                        "Device":  "X0A1",
+                        "Comment":  "STOP PB L0"
+                    },
+                    {
+                        "Device":  "X0A2",
+                        "Comment":  "SAFETY RESET PB"
+                    },
+                    {
+                        "Device":  "X0A3",
+                        "Comment":  "EMERGENCY STOP"
+                    },
+                    {
+                        "Device":  "X0A4",
+                        "Comment":  "GUN COUPLER L0 G0"
+                    },
+                    {
+                        "Device":  "X0A5",
+                        "Comment":  "GUN COUPLER L0 G1"
+                    },
+                    {
+                        "Device":  "X0A6",
+                        "Comment":  "VACUUM PUMP FB L0"
+                    },
+                    {
+                        "Device":  "X0A7",
+                        "Comment":  "DOOR SENSOR L0"
+                    },
+                    {
+                        "Device":  "X0A8",
+                        "Comment":  "PRESSURE SW HIGH L0"
+                    },
+                    {
+                        "Device":  "X0A9",
+                        "Comment":  "PRESSURE SW LOW L0"
+                    },
+                    {
+                        "Device":  "X0AA",
+                        "Comment":  "REFRIG SUPPLY OK L0"
+                    },
+                    {
+                        "Device":  "X0AB",
+                        "Comment":  "SAFETY PLC HEALTHY"
+                    },
+                    {
+                        "Device":  "X0B0",
+                        "Comment":  "START PB L1"
+                    },
+                    {
+                        "Device":  "X0B1",
+                        "Comment":  "STOP PB L1"
+                    },
+                    {
+                        "Device":  "X0B3",
+                        "Comment":  "EMERGENCY STOP L1"
+                    },
+                    {
+                        "Device":  "X0B4",
+                        "Comment":  "GUN COUPLER L1 G0"
+                    },
+                    {
+                        "Device":  "X0B5",
+                        "Comment":  "GUN COUPLER L1 G1"
+                    },
+                    {
+                        "Device":  "X0B6",
+                        "Comment":  "VACUUM PUMP FB L1"
+                    },
+                    {
+                        "Device":  "X0B7",
+                        "Comment":  "DOOR SENSOR L1"
+                    },
+                    {
+                        "Device":  "X0B8",
+                        "Comment":  "PRESSURE SW HIGH L1"
+                    },
+                    {
+                        "Device":  "X0B9",
+                        "Comment":  "PRESSURE SW LOW L1"
+                    },
+                    {
+                        "Device":  "X0BA",
+                        "Comment":  "REFRIG SUPPLY OK L1"
+                    },
+                    {
+                        "Device":  "Y010",
+                        "Comment":  "VACUUM PUMP RUN L0"
+                    },
+                    {
+                        "Device":  "Y011",
+                        "Comment":  "LINE VACUUM SOL L0"
+                    },
+                    {
+                        "Device":  "Y012",
+                        "Comment":  "LINE STEM SOL L0"
+                    },
+                    {
+                        "Device":  "Y013",
+                        "Comment":  "REFRIG BASE SOL L0 G0"
+                    },
+                    {
+                        "Device":  "Y014",
+                        "Comment":  "REFRIG NORMAL SOL L0 G0"
+                    },
+                    {
+                        "Device":  "Y015",
+                        "Comment":  "OIL BASE SOL L0 G0"
+                    },
+                    {
+                        "Device":  "Y016",
+                        "Comment":  "OIL NORMAL SOL L0 G0"
+                    },
+                    {
+                        "Device":  "Y017",
+                        "Comment":  "REFRIG BASE SOL L0 G1"
+                    },
+                    {
+                        "Device":  "Y018",
+                        "Comment":  "REFRIG NORMAL SOL L0 G1"
+                    },
+                    {
+                        "Device":  "Y019",
+                        "Comment":  "OIL BASE SOL L0 G1"
+                    },
+                    {
+                        "Device":  "Y020",
+                        "Comment":  "VACUUM PUMP RUN L1"
+                    },
+                    {
+                        "Device":  "Y021",
+                        "Comment":  "LINE VACUUM SOL L1"
+                    },
+                    {
+                        "Device":  "Y022",
+                        "Comment":  "LINE STEM SOL L1"
+                    },
+                    {
+                        "Device":  "Y023",
+                        "Comment":  "REFRIG BASE SOL L1 G0"
+                    },
+                    {
+                        "Device":  "Y024",
+                        "Comment":  "REFRIG NORMAL SOL L1 G0"
+                    },
+                    {
+                        "Device":  "Y025",
+                        "Comment":  "OIL BASE SOL L1 G0"
+                    },
+                    {
+                        "Device":  "Y026",
+                        "Comment":  "OIL NORMAL SOL L1 G0"
+                    },
+                    {
+                        "Device":  "Y027",
+                        "Comment":  "REFRIG BASE SOL L1 G1"
+                    },
+                    {
+                        "Device":  "Y028",
+                        "Comment":  "REFRIG NORMAL SOL L1 G1"
+                    },
+                    {
+                        "Device":  "Y029",
+                        "Comment":  "OIL BASE SOL L1 G1"
+                    },
+                    {
+                        "Device":  "Y01A",
+                        "Comment":  "OIL NORMAL SOL L0 G1"
+                    },
+                    {
+                        "Device":  "Y01B",
+                        "Comment":  "EXHAUST SOL L0"
+                    },
+                    {
+                        "Device":  "Y01C",
+                        "Comment":  "SAFETY RESET ACK"
+                    },
+                    {
+                        "Device":  "Y01D",
+                        "Comment":  "BUZZER OUTPUT"
+                    },
+                    {
+                        "Device":  "Y01E",
+                        "Comment":  "LAMP GREEN"
+                    },
+                    {
+                        "Device":  "Y01F",
+                        "Comment":  "LAMP RED"
+                    },
+                    {
+                        "Device":  "Y02A",
+                        "Comment":  "OIL NORMAL SOL L1 G1"
+                    },
+                    {
+                        "Device":  "Y02B",
+                        "Comment":  "EXHAUST SOL L1"
+                    },
+                    {
+                        "Device":  "Y02C",
+                        "Comment":  "LAMP YELLOW"
+                    },
+                    {
+                        "Device":  "M0",
+                        "Comment":  "Always ON"
+                    },
+                    {
+                        "Device":  "M1",
+                        "Comment":  "Always OFF"
+                    },
+                    {
+                        "Device":  "M2",
+                        "Comment":  "Initial pulse 1scan"
+                    },
+                    {
+                        "Device":  "M16",
+                        "Comment":  "IDLE step L0"
+                    },
+                    {
+                        "Device":  "M17",
+                        "Comment":  "PRECHECK step L0"
+                    },
+                    {
+                        "Device":  "M18",
+                        "Comment":  "GUN VAC step L0"
+                    },
+                    {
+                        "Device":  "M19",
+                        "Comment":  "UNIT VAC step L0"
+                    },
+                    {
+                        "Device":  "M20",
+                        "Comment":  "VAC CHECK step L0"
+                    },
+                    {
+                        "Device":  "M21",
+                        "Comment":  "REFRIG FAST INJ L0"
+                    },
+                    {
+                        "Device":  "M22",
+                        "Comment":  "REFRIG NORMAL INJ L0"
+                    },
+                    {
+                        "Device":  "M23",
+                        "Comment":  "EXHAUST step L0"
+                    },
+                    {
+                        "Device":  "M24",
+                        "Comment":  "COMPLETE step L0"
+                    },
+                    {
+                        "Device":  "M25",
+                        "Comment":  "OIL FAST INJ step L0"
+                    },
+                    {
+                        "Device":  "M26",
+                        "Comment":  "OIL NORMAL INJ step L0"
+                    },
+                    {
+                        "Device":  "M32",
+                        "Comment":  "IDLE step L1"
+                    },
+                    {
+                        "Device":  "M33",
+                        "Comment":  "PRECHECK step L1"
+                    },
+                    {
+                        "Device":  "M34",
+                        "Comment":  "GUN VAC step L1"
+                    },
+                    {
+                        "Device":  "M35",
+                        "Comment":  "UNIT VAC step L1"
+                    },
+                    {
+                        "Device":  "M36",
+                        "Comment":  "VAC CHECK step L1"
+                    },
+                    {
+                        "Device":  "M37",
+                        "Comment":  "REFRIG FAST INJ L1"
+                    },
+                    {
+                        "Device":  "M38",
+                        "Comment":  "REFRIG NORMAL INJ L1"
+                    },
+                    {
+                        "Device":  "M39",
+                        "Comment":  "EXHAUST step L1"
+                    },
+                    {
+                        "Device":  "M40",
+                        "Comment":  "COMPLETE step L1"
+                    },
+                    {
+                        "Device":  "M41",
+                        "Comment":  "OIL FAST INJ step L1"
+                    },
+                    {
+                        "Device":  "M42",
+                        "Comment":  "OIL NORMAL INJ step L1"
+                    },
+                    {
+                        "Device":  "M48",
+                        "Comment":  "VACUUM PUMP RUN L0"
+                    },
+                    {
+                        "Device":  "M49",
+                        "Comment":  "LINE VACUUM SOL L0"
+                    },
+                    {
+                        "Device":  "M50",
+                        "Comment":  "LINE STEM SOL L0"
+                    },
+                    {
+                        "Device":  "M51",
+                        "Comment":  "EXHAUST SOL L0"
+                    },
+                    {
+                        "Device":  "M52",
+                        "Comment":  "REFRIG BASE SOL L0 G0"
+                    },
+                    {
+                        "Device":  "M53",
+                        "Comment":  "REFRIG NORMAL SOL L0 G0"
+                    },
+                    {
+                        "Device":  "M54",
+                        "Comment":  "OIL BASE SOL L0 G0"
+                    },
+                    {
+                        "Device":  "M55",
+                        "Comment":  "OIL NORMAL SOL L0 G0"
+                    },
+                    {
+                        "Device":  "M56",
+                        "Comment":  "REFRIG BASE SOL L0 G1"
+                    },
+                    {
+                        "Device":  "M57",
+                        "Comment":  "REFRIG NORMAL SOL L0 G1"
+                    },
+                    {
+                        "Device":  "M58",
+                        "Comment":  "OIL BASE SOL L0 G1"
+                    },
+                    {
+                        "Device":  "M59",
+                        "Comment":  "OIL NORMAL SOL L0 G1"
+                    },
+                    {
+                        "Device":  "M64",
+                        "Comment":  "VACUUM PUMP RUN L1"
+                    },
+                    {
+                        "Device":  "M65",
+                        "Comment":  "LINE VACUUM SOL L1"
+                    },
+                    {
+                        "Device":  "M66",
+                        "Comment":  "LINE STEM SOL L1"
+                    },
+                    {
+                        "Device":  "M67",
+                        "Comment":  "EXHAUST SOL L1"
+                    },
+                    {
+                        "Device":  "M68",
+                        "Comment":  "REFRIG BASE SOL L1 G0"
+                    },
+                    {
+                        "Device":  "M69",
+                        "Comment":  "REFRIG NORMAL SOL L1 G0"
+                    },
+                    {
+                        "Device":  "M70",
+                        "Comment":  "OIL BASE SOL L1 G0"
+                    },
+                    {
+                        "Device":  "M71",
+                        "Comment":  "OIL NORMAL SOL L1 G0"
+                    },
+                    {
+                        "Device":  "M72",
+                        "Comment":  "REFRIG BASE SOL L1 G1"
+                    },
+                    {
+                        "Device":  "M73",
+                        "Comment":  "REFRIG NORMAL SOL L1 G1"
+                    },
+                    {
+                        "Device":  "M74",
+                        "Comment":  "OIL BASE SOL L1 G1"
+                    },
+                    {
+                        "Device":  "M75",
+                        "Comment":  "OIL NORMAL SOL L1 G1"
+                    },
+                    {
+                        "Device":  "M76",
+                        "Comment":  "BUZZER"
+                    },
+                    {
+                        "Device":  "M77",
+                        "Comment":  "LAMP GREEN"
+                    },
+                    {
+                        "Device":  "M78",
+                        "Comment":  "LAMP RED"
+                    },
+                    {
+                        "Device":  "M79",
+                        "Comment":  "LAMP YELLOW"
+                    },
+                    {
+                        "Device":  "M80",
+                        "Comment":  "SAFETY RESET ACK"
+                    },
+                    {
+                        "Device":  "M96",
+                        "Comment":  "INJ ACTIVE L0 G0"
+                    },
+                    {
+                        "Device":  "M97",
+                        "Comment":  "INJ ACTIVE L0 G1"
+                    },
+                    {
+                        "Device":  "M98",
+                        "Comment":  "INJ ACTIVE L1 G0"
+                    },
+                    {
+                        "Device":  "M99",
+                        "Comment":  "INJ ACTIVE L1 G1"
+                    },
+                    {
+                        "Device":  "M500",
+                        "Comment":  "Buzzer mute flag"
+                    },
+                    {
+                        "Device":  "M502",
+                        "Comment":  "GUN VAC READY L0"
+                    },
+                    {
+                        "Device":  "M503",
+                        "Comment":  "UNIT VAC READY L0"
+                    },
+                    {
+                        "Device":  "M504",
+                        "Comment":  "VAC CHECK READY L0"
+                    },
+                    {
+                        "Device":  "M505",
+                        "Comment":  "INJECTION READY L0"
+                    },
+                    {
+                        "Device":  "M506",
+                        "Comment":  "GUN VAC READY L1"
+                    },
+                    {
+                        "Device":  "M507",
+                        "Comment":  "UNIT VAC READY L1"
+                    },
+                    {
+                        "Device":  "M508",
+                        "Comment":  "VAC CHECK READY L1"
+                    },
+                    {
+                        "Device":  "M509",
+                        "Comment":  "INJECTION READY L1"
+                    },
+                    {
+                        "Device":  "M520",
+                        "Comment":  "WARMUP L0"
+                    },
+                    {
+                        "Device":  "M521",
+                        "Comment":  "WARMUP L1"
+                    },
+                    {
+                        "Device":  "M522",
+                        "Comment":  "INJ WARMUP L0"
+                    },
+                    {
+                        "Device":  "M523",
+                        "Comment":  "INJ WARMUP L1"
+                    },
+                    {
+                        "Device":  "M530",
+                        "Comment":  "GUN VAC Lamp L0"
+                    },
+                    {
+                        "Device":  "M531",
+                        "Comment":  "UNIT VAC Lamp L0"
+                    },
+                    {
+                        "Device":  "M532",
+                        "Comment":  "VAC CHECK Lamp L0"
+                    },
+                    {
+                        "Device":  "M533",
+                        "Comment":  "INJECTION Lamp L0"
+                    },
+                    {
+                        "Device":  "M534",
+                        "Comment":  "GUN VAC Lamp L1"
+                    },
+                    {
+                        "Device":  "M535",
+                        "Comment":  "UNIT VAC Lamp L1"
+                    },
+                    {
+                        "Device":  "M536",
+                        "Comment":  "VAC CHECK Lamp L1"
+                    },
+                    {
+                        "Device":  "M537",
+                        "Comment":  "INJECTION Lamp L1"
+                    },
+                    {
+                        "Device":  "M540",
+                        "Comment":  "START Lamp L0"
+                    },
+                    {
+                        "Device":  "M541",
+                        "Comment":  "START Lamp L1"
+                    },
+                    {
+                        "Device":  "M600",
+                        "Comment":  "PLS mode toggle"
+                    },
+                    {
+                        "Device":  "M601",
+                        "Comment":  "PLS interlock toggle"
+                    },
+                    {
+                        "Device":  "M612",
+                        "Comment":  "GUN VAC toggle flag L0"
+                    },
+                    {
+                        "Device":  "M613",
+                        "Comment":  "UNIT VAC toggle flag L0"
+                    },
+                    {
+                        "Device":  "M614",
+                        "Comment":  "VAC CHECK toggle flag L0"
+                    },
+                    {
+                        "Device":  "M615",
+                        "Comment":  "INJ toggle flag L0"
+                    },
+                    {
+                        "Device":  "M616",
+                        "Comment":  "GUN VAC toggle flag L1"
+                    },
+                    {
+                        "Device":  "M617",
+                        "Comment":  "UNIT VAC toggle flag L1"
+                    },
+                    {
+                        "Device":  "M618",
+                        "Comment":  "VAC CHECK toggle flag L1"
+                    },
+                    {
+                        "Device":  "M619",
+                        "Comment":  "INJ toggle flag L1"
+                    },
+                    {
+                        "Device":  "M750",
+                        "Comment":  "PLS alarm reset"
+                    },
+                    {
+                        "Device":  "M768",
+                        "Comment":  "START PB L0 mirror"
+                    },
+                    {
+                        "Device":  "M769",
+                        "Comment":  "STOP PB L0 mirror"
+                    },
+                    {
+                        "Device":  "M770",
+                        "Comment":  "SAFETY RESET mirror"
+                    },
+                    {
+                        "Device":  "M771",
+                        "Comment":  "EMG STOP mirror"
+                    },
+                    {
+                        "Device":  "M772",
+                        "Comment":  "COUPLER L0 G0 mirror"
+                    },
+                    {
+                        "Device":  "M773",
+                        "Comment":  "COUPLER L0 G1 mirror"
+                    },
+                    {
+                        "Device":  "M774",
+                        "Comment":  "VAC PUMP FB L0 mirror"
+                    },
+                    {
+                        "Device":  "M775",
+                        "Comment":  "DOOR SENSOR L0 mirror"
+                    },
+                    {
+                        "Device":  "M776",
+                        "Comment":  "PRESSURE SW H L0 mir"
+                    },
+                    {
+                        "Device":  "M777",
+                        "Comment":  "PRESSURE SW L L0 mir"
+                    },
+                    {
+                        "Device":  "M778",
+                        "Comment":  "REFRIG SUPPLY L0 mir"
+                    },
+                    {
+                        "Device":  "M779",
+                        "Comment":  "SAFETY PLC HEALTHY"
+                    },
+                    {
+                        "Device":  "M784",
+                        "Comment":  "START PB L1 mirror"
+                    },
+                    {
+                        "Device":  "M785",
+                        "Comment":  "STOP PB L1 mirror"
+                    },
+                    {
+                        "Device":  "M787",
+                        "Comment":  "EMG STOP L1 mirror"
+                    },
+                    {
+                        "Device":  "M788",
+                        "Comment":  "COUPLER L1 G0 mirror"
+                    },
+                    {
+                        "Device":  "M789",
+                        "Comment":  "COUPLER L1 G1 mirror"
+                    },
+                    {
+                        "Device":  "M790",
+                        "Comment":  "VAC PUMP FB L1 mirror"
+                    },
+                    {
+                        "Device":  "M791",
+                        "Comment":  "DOOR SENSOR L1 mirror"
+                    },
+                    {
+                        "Device":  "M792",
+                        "Comment":  "PRESSURE SW H L1 mir"
+                    },
+                    {
+                        "Device":  "M793",
+                        "Comment":  "PRESSURE SW L L1 mir"
+                    },
+                    {
+                        "Device":  "M794",
+                        "Comment":  "REFRIG SUPPLY L1 mir"
+                    },
+                    {
+                        "Device":  "M1024",
+                        "Comment":  "LINE 0 SELECT HMI"
+                    },
+                    {
+                        "Device":  "M1025",
+                        "Comment":  "LINE 1 SELECT HMI"
+                    },
+                    {
+                        "Device":  "M1026",
+                        "Comment":  "INTERLOCK TOGGLE HMI"
+                    },
+                    {
+                        "Device":  "M1027",
+                        "Comment":  "ALARM RESET HMI"
+                    },
+                    {
+                        "Device":  "M1028",
+                        "Comment":  "BUZZER STOP HMI"
+                    },
+                    {
+                        "Device":  "M1032",
+                        "Comment":  "GUN SELECT A HMI"
+                    },
+                    {
+                        "Device":  "M1033",
+                        "Comment":  "GUN SELECT B HMI"
+                    },
+                    {
+                        "Device":  "M1037",
+                        "Comment":  "BARCODE TOGGLE HMI"
+                    },
+                    {
+                        "Device":  "M1038",
+                        "Comment":  "MANUAL AUTO TOGGLE"
+                    },
+                    {
+                        "Device":  "M1039",
+                        "Comment":  "GUN VAC MANUAL HMI"
+                    },
+                    {
+                        "Device":  "M1040",
+                        "Comment":  "UNIT VAC MANUAL HMI"
+                    },
+                    {
+                        "Device":  "M1041",
+                        "Comment":  "VAC CHECK MANUAL HMI"
+                    },
+                    {
+                        "Device":  "M1042",
+                        "Comment":  "INJECTION MANUAL HMI"
+                    },
+                    {
+                        "Device":  "M1043",
+                        "Comment":  "START L0 HMI"
+                    },
+                    {
+                        "Device":  "M1044",
+                        "Comment":  "STOP L0 HMI"
+                    },
+                    {
+                        "Device":  "M1045",
+                        "Comment":  "START L1 HMI"
+                    },
+                    {
+                        "Device":  "M1046",
+                        "Comment":  "STOP L1 HMI"
+                    },
+                    {
+                        "Device":  "L0",
+                        "Comment":  "System flag L0"
+                    },
+                    {
+                        "Device":  "L1",
+                        "Comment":  "System flag L1"
+                    },
+                    {
+                        "Device":  "L2",
+                        "Comment":  "System flag L2"
+                    },
+                    {
+                        "Device":  "L3",
+                        "Comment":  "System flag L3"
+                    },
+                    {
+                        "Device":  "L16",
+                        "Comment":  "Done/NG L0 10"
+                    },
+                    {
+                        "Device":  "L17",
+                        "Comment":  "Done/NG L0 11"
+                    },
+                    {
+                        "Device":  "L18",
+                        "Comment":  "Done/NG L0 12"
+                    },
+                    {
+                        "Device":  "L19",
+                        "Comment":  "Done/NG L0 13"
+                    },
+                    {
+                        "Device":  "L20",
+                        "Comment":  "Done/NG L0 14"
+                    },
+                    {
+                        "Device":  "L21",
+                        "Comment":  "Done/NG L0 15"
+                    },
+                    {
+                        "Device":  "L22",
+                        "Comment":  "Done/NG L0 16"
+                    },
+                    {
+                        "Device":  "L23",
+                        "Comment":  "Done/NG L0 17"
+                    },
+                    {
+                        "Device":  "L24",
+                        "Comment":  "Done/NG L0 18"
+                    },
+                    {
+                        "Device":  "L32",
+                        "Comment":  "Done/NG L1 20"
+                    },
+                    {
+                        "Device":  "L33",
+                        "Comment":  "Done/NG L1 21"
+                    },
+                    {
+                        "Device":  "L34",
+                        "Comment":  "Done/NG L1 22"
+                    },
+                    {
+                        "Device":  "L35",
+                        "Comment":  "Done/NG L1 23"
+                    },
+                    {
+                        "Device":  "L36",
+                        "Comment":  "Done/NG L1 24"
+                    },
+                    {
+                        "Device":  "L37",
+                        "Comment":  "Done/NG L1 25"
+                    },
+                    {
+                        "Device":  "L38",
+                        "Comment":  "Done/NG L1 26"
+                    },
+                    {
+                        "Device":  "L39",
+                        "Comment":  "Done/NG L1 27"
+                    },
+                    {
+                        "Device":  "L40",
+                        "Comment":  "Done/NG L1 28"
+                    },
+                    {
+                        "Device":  "L64",
+                        "Comment":  "Alarm latch 40"
+                    },
+                    {
+                        "Device":  "L65",
+                        "Comment":  "Alarm latch 41"
+                    },
+                    {
+                        "Device":  "L66",
+                        "Comment":  "Alarm latch 42"
+                    },
+                    {
+                        "Device":  "L67",
+                        "Comment":  "Alarm latch 43"
+                    },
+                    {
+                        "Device":  "L68",
+                        "Comment":  "Alarm latch 44"
+                    },
+                    {
+                        "Device":  "L69",
+                        "Comment":  "Alarm latch 45"
+                    },
+                    {
+                        "Device":  "L70",
+                        "Comment":  "Alarm latch 46"
+                    },
+                    {
+                        "Device":  "L71",
+                        "Comment":  "Alarm latch 47"
+                    },
+                    {
+                        "Device":  "L72",
+                        "Comment":  "Alarm latch 48"
+                    },
+                    {
+                        "Device":  "L73",
+                        "Comment":  "Alarm latch 49"
+                    },
+                    {
+                        "Device":  "L74",
+                        "Comment":  "Alarm latch 4A"
+                    },
+                    {
+                        "Device":  "L75",
+                        "Comment":  "Alarm latch 4B"
+                    },
+                    {
+                        "Device":  "L76",
+                        "Comment":  "Alarm latch 4C"
+                    },
+                    {
+                        "Device":  "L77",
+                        "Comment":  "Alarm latch 4D"
+                    },
+                    {
+                        "Device":  "L78",
+                        "Comment":  "Alarm latch 4E"
+                    },
+                    {
+                        "Device":  "L79",
+                        "Comment":  "Alarm latch 4F"
+                    },
+                    {
+                        "Device":  "L80",
+                        "Comment":  "Interlock L0 50"
+                    },
+                    {
+                        "Device":  "L81",
+                        "Comment":  "Interlock L0 51"
+                    },
+                    {
+                        "Device":  "L82",
+                        "Comment":  "Interlock L0 52"
+                    },
+                    {
+                        "Device":  "L83",
+                        "Comment":  "Interlock L0 53"
+                    },
+                    {
+                        "Device":  "L84",
+                        "Comment":  "Interlock L0 54"
+                    },
+                    {
+                        "Device":  "L85",
+                        "Comment":  "Interlock L0 55"
+                    },
+                    {
+                        "Device":  "L96",
+                        "Comment":  "Interlock L1 60"
+                    },
+                    {
+                        "Device":  "L97",
+                        "Comment":  "Interlock L1 61"
+                    },
+                    {
+                        "Device":  "L98",
+                        "Comment":  "Interlock L1 62"
+                    },
+                    {
+                        "Device":  "L99",
+                        "Comment":  "Interlock L1 63"
+                    },
+                    {
+                        "Device":  "L100",
+                        "Comment":  "Interlock L1 64"
+                    },
+                    {
+                        "Device":  "L101",
+                        "Comment":  "Interlock L1 65"
+                    },
+                    {
+                        "Device":  "L112",
+                        "Comment":  "HMI select 70"
+                    },
+                    {
+                        "Device":  "L113",
+                        "Comment":  "HMI select 71"
+                    },
+                    {
+                        "Device":  "L114",
+                        "Comment":  "HMI select 72"
+                    },
+                    {
+                        "Device":  "L115",
+                        "Comment":  "HMI select 73"
+                    },
+                    {
+                        "Device":  "L116",
+                        "Comment":  "HMI select 74"
+                    },
+                    {
+                        "Device":  "D0",
+                        "Comment":  "Model number L0 (16)"
+                    },
+                    {
+                        "Device":  "D2",
+                        "Comment":  "Gun vacuum time L0 (16)"
+                    },
+                    {
+                        "Device":  "D4",
+                        "Comment":  "Unit vacuum time L0 (16)"
+                    },
+                    {
+                        "Device":  "D6",
+                        "Comment":  "Vac check time L0 (16)"
+                    },
+                    {
+                        "Device":  "D8",
+                        "Comment":  "Exhaust time L0 (16)"
+                    },
+                    {
+                        "Device":  "D10",
+                        "Comment":  "Refrig fast stop L0 (16)"
+                    },
+                    {
+                        "Device":  "D12",
+                        "Comment":  "Oil fast stop L0 (16)"
+                    },
+                    {
+                        "Device":  "D14",
+                        "Comment":  "Bombe alarm setting (32)"
+                    },
+                    {
+                        "Device":  "D16",
+                        "Comment":  "Bombe used amount (32)"
+                    },
+                    {
+                        "Device":  "D18",
+                        "Comment":  "Pressure high limit L0"
+                    },
+                    {
+                        "Device":  "D20",
+                        "Comment":  "Pressure low limit L0"
+                    },
+                    {
+                        "Device":  "D22",
+                        "Comment":  "Vacuum setting L0 (32)"
+                    },
+                    {
+                        "Device":  "D24",
+                        "Comment":  "Vac check setting L0 (32)"
+                    },
+                    {
+                        "Device":  "D26",
+                        "Comment":  "Refrig tolerance L0 (16)"
+                    },
+                    {
+                        "Device":  "D28",
+                        "Comment":  "Oil tolerance L0 (16)"
+                    },
+                    {
+                        "Device":  "D30",
+                        "Comment":  "Model number L1 (16)"
+                    },
+                    {
+                        "Device":  "D32",
+                        "Comment":  "Gun vacuum time L1 (16)"
+                    },
+                    {
+                        "Device":  "D34",
+                        "Comment":  "Unit vacuum time L1 (16)"
+                    },
+                    {
+                        "Device":  "D36",
+                        "Comment":  "Vac check time L1 (16)"
+                    },
+                    {
+                        "Device":  "D38",
+                        "Comment":  "Exhaust time L1 (16)"
+                    },
+                    {
+                        "Device":  "D40",
+                        "Comment":  "Refrig fast stop L1 (16)"
+                    },
+                    {
+                        "Device":  "D42",
+                        "Comment":  "Oil fast stop L1 (16)"
+                    },
+                    {
+                        "Device":  "D50",
+                        "Comment":  "Vacuum setting L1 (32)"
+                    },
+                    {
+                        "Device":  "D52",
+                        "Comment":  "Vac check setting L1 (32)"
+                    },
+                    {
+                        "Device":  "D54",
+                        "Comment":  "Refrig tolerance L1 (16)"
+                    },
+                    {
+                        "Device":  "D56",
+                        "Comment":  "Oil tolerance L1 (16)"
+                    },
+                    {
+                        "Device":  "D60",
+                        "Comment":  "L0 Preset #1 (16)"
+                    },
+                    {
+                        "Device":  "D61",
+                        "Comment":  "L0 Preset #2 (16)"
+                    },
+                    {
+                        "Device":  "D62",
+                        "Comment":  "L0 Preset #3 (16)"
+                    },
+                    {
+                        "Device":  "D63",
+                        "Comment":  "L0 Preset #4 (16)"
+                    },
+                    {
+                        "Device":  "D64",
+                        "Comment":  "L0 Preset #5 (16)"
+                    },
+                    {
+                        "Device":  "D65",
+                        "Comment":  "L0 Preset #6 (16)"
+                    },
+                    {
+                        "Device":  "D66",
+                        "Comment":  "L0 Preset #7 (16)"
+                    },
+                    {
+                        "Device":  "D67",
+                        "Comment":  "L0 Preset #8 (16)"
+                    },
+                    {
+                        "Device":  "D68",
+                        "Comment":  "L0 Preset #9 (16)"
+                    },
+                    {
+                        "Device":  "D69",
+                        "Comment":  "L0 Preset #10 (16)"
+                    },
+                    {
+                        "Device":  "D70",
+                        "Comment":  "L0 Preset #11 (16)"
+                    },
+                    {
+                        "Device":  "D71",
+                        "Comment":  "L0 Preset #12 (16)"
+                    },
+                    {
+                        "Device":  "D72",
+                        "Comment":  "L0 Preset #13 (16)"
+                    },
+                    {
+                        "Device":  "D73",
+                        "Comment":  "L0 Preset #14 (16)"
+                    },
+                    {
+                        "Device":  "D74",
+                        "Comment":  "L0 Preset #15 (16)"
+                    },
+                    {
+                        "Device":  "D75",
+                        "Comment":  "L0 Preset #16 (16)"
+                    },
+                    {
+                        "Device":  "D76",
+                        "Comment":  "L0 Preset #17 (16)"
+                    },
+                    {
+                        "Device":  "D77",
+                        "Comment":  "L0 Preset #18 (16)"
+                    },
+                    {
+                        "Device":  "D78",
+                        "Comment":  "L0 Preset #19 (16)"
+                    },
+                    {
+                        "Device":  "D79",
+                        "Comment":  "L0 Preset #20 (16)"
+                    },
+                    {
+                        "Device":  "D80",
+                        "Comment":  "L0 Preset #21 (16)"
+                    },
+                    {
+                        "Device":  "D81",
+                        "Comment":  "L0 Preset #22 (16)"
+                    },
+                    {
+                        "Device":  "D82",
+                        "Comment":  "L0 Preset #23 (16)"
+                    },
+                    {
+                        "Device":  "D83",
+                        "Comment":  "L0 Preset #24 (16)"
+                    },
+                    {
+                        "Device":  "D84",
+                        "Comment":  "L0 Preset #25 (16)"
+                    },
+                    {
+                        "Device":  "D88",
+                        "Comment":  "L1 Preset #1 (16)"
+                    },
+                    {
+                        "Device":  "D89",
+                        "Comment":  "L1 Preset #2 (16)"
+                    },
+                    {
+                        "Device":  "D90",
+                        "Comment":  "L1 Preset #3 (16)"
+                    },
+                    {
+                        "Device":  "D91",
+                        "Comment":  "L1 Preset #4 (16)"
+                    },
+                    {
+                        "Device":  "D92",
+                        "Comment":  "L1 Preset #5 (16)"
+                    },
+                    {
+                        "Device":  "D93",
+                        "Comment":  "L1 Preset #6 (16)"
+                    },
+                    {
+                        "Device":  "D94",
+                        "Comment":  "L1 Preset #7 (16)"
+                    },
+                    {
+                        "Device":  "D95",
+                        "Comment":  "L1 Preset #8 (16)"
+                    },
+                    {
+                        "Device":  "D96",
+                        "Comment":  "L1 Preset #9 (16)"
+                    },
+                    {
+                        "Device":  "D97",
+                        "Comment":  "L1 Preset #10 (16)"
+                    },
+                    {
+                        "Device":  "D98",
+                        "Comment":  "L1 Preset #11 (16)"
+                    },
+                    {
+                        "Device":  "D99",
+                        "Comment":  "L1 Preset #12 (16)"
+                    },
+                    {
+                        "Device":  "D100",
+                        "Comment":  "L1 Preset #13 (16)"
+                    },
+                    {
+                        "Device":  "D101",
+                        "Comment":  "L1 Preset #14 (16)"
+                    },
+                    {
+                        "Device":  "D102",
+                        "Comment":  "L1 Preset #15 (16)"
+                    },
+                    {
+                        "Device":  "D103",
+                        "Comment":  "L1 Preset #16 (16)"
+                    },
+                    {
+                        "Device":  "D104",
+                        "Comment":  "L1 Preset #17 (16)"
+                    },
+                    {
+                        "Device":  "D105",
+                        "Comment":  "L1 Preset #18 (16)"
+                    },
+                    {
+                        "Device":  "D106",
+                        "Comment":  "L1 Preset #19 (16)"
+                    },
+                    {
+                        "Device":  "D107",
+                        "Comment":  "L1 Preset #20 (16)"
+                    },
+                    {
+                        "Device":  "D108",
+                        "Comment":  "L1 Preset #21 (16)"
+                    },
+                    {
+                        "Device":  "D109",
+                        "Comment":  "L1 Preset #22 (16)"
+                    },
+                    {
+                        "Device":  "D110",
+                        "Comment":  "L1 Preset #23 (16)"
+                    },
+                    {
+                        "Device":  "D111",
+                        "Comment":  "L1 Preset #24 (16)"
+                    },
+                    {
+                        "Device":  "D112",
+                        "Comment":  "L1 Preset #25 (16)"
+                    },
+                    {
+                        "Device":  "D116",
+                        "Comment":  "Refrigerant usage (32)"
+                    },
+                    {
+                        "Device":  "D118",
+                        "Comment":  "Total injection count"
+                    },
+                    {
+                        "Device":  "D122",
+                        "Comment":  "Current gun type (16)"
+                    },
+                    {
+                        "Device":  "D124",
+                        "Comment":  "Charging pulse L0 (32)"
+                    },
+                    {
+                        "Device":  "D126",
+                        "Comment":  "Injection time L0 (16)"
+                    },
+                    {
+                        "Device":  "D128",
+                        "Comment":  "Inj setting refrig L0 (32)"
+                    },
+                    {
+                        "Device":  "D130",
+                        "Comment":  "Actual inj volume L0 (32)"
+                    },
+                    {
+                        "Device":  "D132",
+                        "Comment":  "Oil setting amount L0 (32)"
+                    },
+                    {
+                        "Device":  "D134",
+                        "Comment":  "Actual oil volume L0 (32)"
+                    },
+                    {
+                        "Device":  "D136",
+                        "Comment":  "SCAN injection volume"
+                    },
+                    {
+                        "Device":  "D138",
+                        "Comment":  "Vacuum level L0 (32)"
+                    },
+                    {
+                        "Device":  "D140",
+                        "Comment":  "Temperature L0 (16)"
+                    },
+                    {
+                        "Device":  "D142",
+                        "Comment":  "Pressure L0 (16)"
+                    },
+                    {
+                        "Device":  "D144",
+                        "Comment":  "Vacuum level L1 (32)"
+                    },
+                    {
+                        "Device":  "D146",
+                        "Comment":  "Temperature L1 (16)"
+                    },
+                    {
+                        "Device":  "D148",
+                        "Comment":  "Pressure L1 (16)"
+                    },
+                    {
+                        "Device":  "D150",
+                        "Comment":  "AD CH0 raw L0 (16)"
+                    },
+                    {
+                        "Device":  "D152",
+                        "Comment":  "AD CH1 raw L0 (16)"
+                    },
+                    {
+                        "Device":  "D154",
+                        "Comment":  "AD CH2 raw L0 (16)"
+                    },
+                    {
+                        "Device":  "D156",
+                        "Comment":  "AD CH3 raw L0 (16)"
+                    },
+                    {
+                        "Device":  "D158",
+                        "Comment":  "AD CH4 raw L0 (16)"
+                    },
+                    {
+                        "Device":  "D160",
+                        "Comment":  "AD CH4 EU L0 (16)"
+                    },
+                    {
+                        "Device":  "D162",
+                        "Comment":  "AD CH0 raw L1 (16)"
+                    },
+                    {
+                        "Device":  "D164",
+                        "Comment":  "AD CH1 raw L1 (16)"
+                    },
+                    {
+                        "Device":  "D166",
+                        "Comment":  "AD CH2 raw L1 (16)"
+                    },
+                    {
+                        "Device":  "D168",
+                        "Comment":  "AD CH3 raw L1 (16)"
+                    },
+                    {
+                        "Device":  "D170",
+                        "Comment":  "AD CH4 raw L1 (16)"
+                    },
+                    {
+                        "Device":  "D172",
+                        "Comment":  "AD CH4 EU L1 (16)"
+                    },
+                    {
+                        "Device":  "D270",
+                        "Comment":  "Line count config"
+                    },
+                    {
+                        "Device":  "D272",
+                        "Comment":  "Gun per line config"
+                    },
+                    {
+                        "Device":  "D274",
+                        "Comment":  "Total gun count (auto)"
+                    },
+                    {
+                        "Device":  "D276",
+                        "Comment":  "Oil mode select"
+                    },
+                    {
+                        "Device":  "D280",
+                        "Comment":  "L0 SPC usage (32)"
+                    },
+                    {
+                        "Device":  "D282",
+                        "Comment":  "L0 SPC count (32)"
+                    },
+                    {
+                        "Device":  "D284",
+                        "Comment":  "L0 SPC pulse (32)"
+                    },
+                    {
+                        "Device":  "D286",
+                        "Comment":  "L0 SPC last vol (32)"
+                    },
+                    {
+                        "Device":  "D288",
+                        "Comment":  "L0 SPC set vol (32)"
+                    },
+                    {
+                        "Device":  "D290",
+                        "Comment":  "L1 SPC usage (32)"
+                    },
+                    {
+                        "Device":  "D292",
+                        "Comment":  "L1 SPC count (32)"
+                    },
+                    {
+                        "Device":  "D294",
+                        "Comment":  "L1 SPC pulse (32)"
+                    },
+                    {
+                        "Device":  "D296",
+                        "Comment":  "L1 SPC last vol (32)"
+                    },
+                    {
+                        "Device":  "D298",
+                        "Comment":  "L1 SPC set vol (32)"
+                    },
+                    {
+                        "Device":  "D300",
+                        "Comment":  "Scratch AD/vacchec"
+                    },
+                    {
+                        "Device":  "D302",
+                        "Comment":  "Scratch AD"
+                    },
+                    {
+                        "Device":  "D304",
+                        "Comment":  "Scratch vacchec ΔP"
+                    },
+                    {
+                        "Device":  "D306",
+                        "Comment":  "Scratch vacchec L1"
+                    },
+                    {
+                        "Device":  "D308",
+                        "Comment":  "Scratch vacchec L1"
+                    },
+                    {
+                        "Device":  "D310",
+                        "Comment":  "Scratch AD temp"
+                    },
+                    {
+                        "Device":  "D312",
+                        "Comment":  "Scratch AD temp"
+                    },
+                    {
+                        "Device":  "D314",
+                        "Comment":  "Scratch AD temp"
+                    },
+                    {
+                        "Device":  "D320",
+                        "Comment":  "Scratch AD vacuum"
+                    },
+                    {
+                        "Device":  "D322",
+                        "Comment":  "Scratch AD vacuum"
+                    },
+                    {
+                        "Device":  "D330",
+                        "Comment":  "Scratch AD L1 press"
+                    },
+                    {
+                        "Device":  "D332",
+                        "Comment":  "Scratch AD L1 press"
+                    },
+                    {
+                        "Device":  "D340",
+                        "Comment":  "Scratch AD L1 temp"
+                    },
+                    {
+                        "Device":  "D342",
+                        "Comment":  "Scratch AD L1 temp"
+                    },
+                    {
+                        "Device":  "D344",
+                        "Comment":  "Scratch AD L1 temp"
+                    },
+                    {
+                        "Device":  "D350",
+                        "Comment":  "Scratch AD L1 vac"
+                    },
+                    {
+                        "Device":  "D352",
+                        "Comment":  "Scratch AD L1 vac"
+                    },
+                    {
+                        "Device":  "D400",
+                        "Comment":  "Charging pulse L1 (32)"
+                    },
+                    {
+                        "Device":  "D402",
+                        "Comment":  "Injection time L1 (16)"
+                    },
+                    {
+                        "Device":  "D404",
+                        "Comment":  "Inj setting refrig L1 (32)"
+                    },
+                    {
+                        "Device":  "D406",
+                        "Comment":  "Actual inj volume L1 (32)"
+                    },
+                    {
+                        "Device":  "D408",
+                        "Comment":  "Oil setting amount L1 (32)"
+                    },
+                    {
+                        "Device":  "D410",
+                        "Comment":  "Actual oil volume L1 (32)"
+                    },
+                    {
+                        "Device":  "D6870",
+                        "Comment":  "PC Suffix write L1"
+                    },
+                    {
+                        "Device":  "D6980",
+                        "Comment":  "PC Barcode write L1"
+                    },
+                    {
+                        "Device":  "D7000",
+                        "Comment":  "Gas type PC L1"
+                    },
+                    {
+                        "Device":  "D7001",
+                        "Comment":  "Target amount PC L1"
+                    },
+                    {
+                        "Device":  "D7002",
+                        "Comment":  "Gas type echo L1"
+                    },
+                    {
+                        "Device":  "D7003",
+                        "Comment":  "Target amount echo L1"
+                    },
+                    {
+                        "Device":  "D7004",
+                        "Comment":  "Real amount PC L1"
+                    },
+                    {
+                        "Device":  "D7005",
+                        "Comment":  "Pressure low PC L1"
+                    },
+                    {
+                        "Device":  "D7006",
+                        "Comment":  "Pressure high PC L1"
+                    },
+                    {
+                        "Device":  "D7007",
+                        "Comment":  "Target pulse PC L1"
+                    },
+                    {
+                        "Device":  "D7008",
+                        "Comment":  "Temperature PC L1"
+                    },
+                    {
+                        "Device":  "D7009",
+                        "Comment":  "Barcode use flag PC"
+                    },
+                    {
+                        "Device":  "D7010",
+                        "Comment":  "Vacuum value PC L1 (32)"
+                    },
+                    {
+                        "Device":  "D7012",
+                        "Comment":  "Result code PC L1"
+                    },
+                    {
+                        "Device":  "D7013",
+                        "Comment":  "Vacuum setting PC L1 (32)"
+                    },
+                    {
+                        "Device":  "D7015",
+                        "Comment":  "Process code PC L1"
+                    },
+                    {
+                        "Device":  "D7016",
+                        "Comment":  "Info call PC L1"
+                    },
+                    {
+                        "Device":  "D7017",
+                        "Comment":  "Line code PC L1"
+                    },
+                    {
+                        "Device":  "D7018",
+                        "Comment":  "Not charge unit PC"
+                    },
+                    {
+                        "Device":  "D7020",
+                        "Comment":  "VAC SPC buffer L0"
+                    },
+                    {
+                        "Device":  "D7220",
+                        "Comment":  "Barcode display L1"
+                    },
+                    {
+                        "Device":  "D7870",
+                        "Comment":  "PC Suffix write L2"
+                    },
+                    {
+                        "Device":  "D7980",
+                        "Comment":  "PC Barcode write L2"
+                    },
+                    {
+                        "Device":  "D8000",
+                        "Comment":  "Gas type PC L2"
+                    },
+                    {
+                        "Device":  "D8001",
+                        "Comment":  "Target amount PC L2"
+                    },
+                    {
+                        "Device":  "D8002",
+                        "Comment":  "Gas type echo L2"
+                    },
+                    {
+                        "Device":  "D8003",
+                        "Comment":  "Target amount echo L2"
+                    },
+                    {
+                        "Device":  "D8004",
+                        "Comment":  "Real amount PC L2"
+                    },
+                    {
+                        "Device":  "D8005",
+                        "Comment":  "Pressure low PC L2"
+                    },
+                    {
+                        "Device":  "D8006",
+                        "Comment":  "Pressure high PC L2"
+                    },
+                    {
+                        "Device":  "D8008",
+                        "Comment":  "Temperature PC L2"
+                    },
+                    {
+                        "Device":  "D8009",
+                        "Comment":  "Barcode use flag L2"
+                    },
+                    {
+                        "Device":  "D8010",
+                        "Comment":  "Vacuum value PC L2 (32)"
+                    },
+                    {
+                        "Device":  "D8012",
+                        "Comment":  "Result code PC L2"
+                    },
+                    {
+                        "Device":  "D8013",
+                        "Comment":  "Vacuum setting PC L2 (32)"
+                    },
+                    {
+                        "Device":  "D8015",
+                        "Comment":  "Process code PC L2"
+                    },
+                    {
+                        "Device":  "D8016",
+                        "Comment":  "Info call PC L2"
+                    },
+                    {
+                        "Device":  "D8017",
+                        "Comment":  "Line code PC L2"
+                    },
+                    {
+                        "Device":  "D8018",
+                        "Comment":  "Not charge unit L2"
+                    },
+                    {
+                        "Device":  "D8020",
+                        "Comment":  "VAC SPC buffer L1"
+                    },
+                    {
+                        "Device":  "D8220",
+                        "Comment":  "Barcode display L2"
+                    },
+                    {
+                        "Device":  "T0",
+                        "Comment":  "Gun vacuum timer L0"
+                    },
+                    {
+                        "Device":  "T1",
+                        "Comment":  "Unit vacuum timer L0"
+                    },
+                    {
+                        "Device":  "T2",
+                        "Comment":  "Vac check timer L0"
+                    },
+                    {
+                        "Device":  "T3",
+                        "Comment":  "Exhaust timer L0"
+                    },
+                    {
+                        "Device":  "T4",
+                        "Comment":  "Refrig fast timer L0"
+                    },
+                    {
+                        "Device":  "T5",
+                        "Comment":  "Refrig normal timer L0"
+                    },
+                    {
+                        "Device":  "T6",
+                        "Comment":  "Oil injection timer L0"
+                    },
+                    {
+                        "Device":  "T7",
+                        "Comment":  "Grace timer L0"
+                    },
+                    {
+                        "Device":  "T8",
+                        "Comment":  "Gun vacuum timer L1"
+                    },
+                    {
+                        "Device":  "T9",
+                        "Comment":  "Unit vacuum timer L1"
+                    },
+                    {
+                        "Device":  "T10",
+                        "Comment":  "Inj warmup timer L0"
+                    },
+                    {
+                        "Device":  "T11",
+                        "Comment":  "Vac check timer L1"
+                    },
+                    {
+                        "Device":  "T12",
+                        "Comment":  "Exhaust timer L1"
+                    },
+                    {
+                        "Device":  "T13",
+                        "Comment":  "Refrig fast timer L1"
+                    },
+                    {
+                        "Device":  "T14",
+                        "Comment":  "Refrig normal timer L1"
+                    },
+                    {
+                        "Device":  "T15",
+                        "Comment":  "Oil injection timer L1"
+                    },
+                    {
+                        "Device":  "T16",
+                        "Comment":  "Inj warmup timer L1"
+                    },
+                    {
+                        "Device":  "T17",
+                        "Comment":  "Grace timer L1"
+                    },
+                    {
+                        "Device":  "T18",
+                        "Comment":  "VAC SPC logging L0 (OUTH)"
+                    },
+                    {
+                        "Device":  "T19",
+                        "Comment":  "VAC SPC logging L1 (OUTH)"
+                    }
+                ]
+}
