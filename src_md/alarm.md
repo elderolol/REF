@@ -1,7 +1,7 @@
 ---
-# alarm — IL Logic Map
+# REF_self_holding — IL Logic Map
 **CPU:** QCPU (Q mode) Q03UDV
-**Total Steps:** 86
+**Total Steps:** 84
 **Blocks:** 3
 **Generated:** 2026-06-03
 ---
@@ -9,21 +9,21 @@
 ## Block List
 | # | Name | Steps | Condition Device | Action Count |
 |---|------|-------|-----------------|--------------|
-| 1 | ALARM LATCH | 1–57 | LDI M771, LDI M779, LD L17 ... (+9) | 45 |
-| 2 | BUZZER | 59–79 | LD L64, LD M1028, LD M1028 | 18 |
-| 3 | ALARM RESET | 81–86 | LD M1027, LD M750, LD M750 | 3 |
+| 1 | ALARM LATCH | 1–59 | LDI M771, LDI M779, LD M817 ... (+9) | 47 |
+| 2 | BUZZER | 61–81 | LD M864, LD M1028, LD M1028 | 18 |
+| 3 | ALARM RESET | 83–84 | LD M1027 | 1 |
 
 ## Block Detail
 
-### Block 1: ALARM LATCH (Step 1–57)
+### Block 1: ALARM LATCH (Step 1–59)
 
 **Trigger Condition:**
 - LDI M771
 - LDI M779
-- LD L17
-- LD L19
-- LD L21
-- LD L23
+- LD M817
+- LD M819
+- LD M821
+- LD M823
 - LD M0
 - LD M0
 - LD M776
@@ -32,123 +32,97 @@
 - LD M791
 
 **Actions:**
-- SET L64
-- OR L65
-- ANI M750
-- OUT L65
-- OR L33
-- OR L66
-- ANI M750
-- OUT L66
-- OR L35
-- OR L67
-- ANI M750
-- OUT L67
-- OR L37
-- OR L68
-- ANI M750
-- OUT L68
-- OR L39
-- OR L69
-- ANI M750
-- OUT L69
-- OR L70
-- ANI M750
-- OUT L70
-- OR L71
-- ANI M750
-- OUT L71
+- OR M864
+- ANI M1027
+- OUT M864
+- OR M865
+- ANI M1027
+- OUT M865
+- OR M833
+- OR M866
+- ANI M1027
+- OUT M866
+- OR M835
+- OR M867
+- ANI M1027
+- OUT M867
+- OR M837
+- OR M868
+- ANI M1027
+- OUT M868
+- OR M839
+- OR M869
+- ANI M1027
+- OUT M869
+- OR M870
+- ANI M1027
+- OUT M870
+- OR M871
+- ANI M1027
+- OUT M871
 - OR M792
-- OR L72
-- ANI M750
-- OUT L72
+- OR M872
+- ANI M1027
+- OUT M872
 - OR M793
-- OR L73
-- ANI M750
-- OUT L73
+- OR M873
+- ANI M1027
+- OUT M873
 - LD< D156
 - OR> D156
-- OR L74
-- ANI M750
-- OUT L74
-- OR L78
-- ANI M750
-- OUT L78
-- OR L79
-- ANI M750
-- OUT L79
+- OR M874
+- ANI M1027
+- OUT M874
+- OR M878
+- ANI M1027
+- OUT M878
+- OR M879
+- ANI M1027
+- OUT M879
 
-### Block 2: BUZZER (Step 59–79)
+### Block 2: BUZZER (Step 61–81)
 
 **Trigger Condition:**
-- LD L64
+- LD M864
 - LD M1028
 - LD M1028
 
 **Actions:**
-- OR L65
-- OR L66
-- OR L67
-- OR L68
-- OR L69
-- OR L70
-- OR L71
-- OR L72
-- OR L73
-- OR L74
-- OR L76
-- OR L77
-- OR L78
-- OR L79
+- OR M865
+- OR M866
+- OR M867
+- OR M868
+- OR M869
+- OR M870
+- OR M871
+- OR M872
+- OR M873
+- OR M874
+- OR M876
+- OR M877
+- OR M878
+- OR M879
 - ANI M500
 - OUT M76
 - SET M500
 - RST M76
 
-### Block 3: ALARM RESET (Step 81–86)
+### Block 3: ALARM RESET (Step 83–84)
 
 **Trigger Condition:**
 - LD M1027
-- LD M750
-- LD M750
 
 **Actions:**
-- PLS M750
-- RST L64
-- RST L76
+- RST M876
 
 ## Device Map
 | Device | Type | SET Steps | RST Steps | OUT Steps | Read Steps |
 |--------|------|-----------|-----------|-----------|------------|
 | D156 | D |  |  |  | 2 |
-| L17 | L |  |  |  | 1 |
-| L19 | L |  |  |  | 1 |
-| L21 | L |  |  |  | 1 |
-| L23 | L |  |  |  | 1 |
-| L33 | L |  |  |  | 1 |
-| L35 | L |  |  |  | 1 |
-| L37 | L |  |  |  | 1 |
-| L39 | L |  |  |  | 1 |
-| L64 | L | 1 | 1 |  | 1 |
-| L65 | L |  |  | 1 | 2 |
-| L66 | L |  |  | 1 | 2 |
-| L67 | L |  |  | 1 | 2 |
-| L68 | L |  |  | 1 | 2 |
-| L69 | L |  |  | 1 | 2 |
-| L70 | L |  |  | 1 | 2 |
-| L71 | L |  |  | 1 | 2 |
-| L72 | L |  |  | 1 | 2 |
-| L73 | L |  |  | 1 | 2 |
-| L74 | L |  |  | 1 | 2 |
-| L76 | L |  | 1 |  | 1 |
-| L77 | L |  |  |  | 1 |
-| L78 | L |  |  | 1 | 2 |
-| L79 | L |  |  | 1 | 2 |
 | M0 | M |  |  |  | 3 |
-| M1027 | M |  |  |  | 1 |
+| M1027 | M |  |  |  | 14 |
 | M1028 | M |  |  |  | 2 |
 | M500 | M | 1 |  |  | 1 |
-| M750 | M |  |  |  | 15 |
 | M76 | M |  | 1 | 1 |  |
 | M771 | M |  |  |  | 1 |
 | M776 | M |  |  |  | 1 |
@@ -157,3 +131,26 @@
 | M791 | M |  |  |  | 1 |
 | M792 | M |  |  |  | 1 |
 | M793 | M |  |  |  | 1 |
+| M817 | M |  |  |  | 1 |
+| M819 | M |  |  |  | 1 |
+| M821 | M |  |  |  | 1 |
+| M823 | M |  |  |  | 1 |
+| M833 | M |  |  |  | 1 |
+| M835 | M |  |  |  | 1 |
+| M837 | M |  |  |  | 1 |
+| M839 | M |  |  |  | 1 |
+| M864 | M |  |  | 1 | 2 |
+| M865 | M |  |  | 1 | 2 |
+| M866 | M |  |  | 1 | 2 |
+| M867 | M |  |  | 1 | 2 |
+| M868 | M |  |  | 1 | 2 |
+| M869 | M |  |  | 1 | 2 |
+| M870 | M |  |  | 1 | 2 |
+| M871 | M |  |  | 1 | 2 |
+| M872 | M |  |  | 1 | 2 |
+| M873 | M |  |  | 1 | 2 |
+| M874 | M |  |  | 1 | 2 |
+| M876 | M |  | 1 |  | 1 |
+| M877 | M |  |  |  | 1 |
+| M878 | M |  |  | 1 | 2 |
+| M879 | M |  |  | 1 | 2 |

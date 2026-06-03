@@ -1,5 +1,5 @@
 ---
-# spc — IL Logic Map
+# REF_self_holding — IL Logic Map
 **CPU:** QCPU (Q mode) Q03UDV
 **Total Steps:** 54
 **Blocks:** 5
@@ -9,8 +9,8 @@
 ## Block List
 | # | Name | Steps | Condition Device | Action Count |
 |---|------|-------|-----------------|--------------|
-| 1 | L0 CYCLE DONE | 1–10 | LD L24, LD L24, LD L24 ... (+2) | 5 |
-| 2 | L1 CYCLE DONE | 12–21 | LD L40, LD L40, LD L40 ... (+2) | 5 |
+| 1 | L0 CYCLE DONE | 1–10 | LD M824, LD M824, LD M824 ... (+2) | 5 |
+| 2 | L1 CYCLE DONE | 12–21 | LD M840, LD M840, LD M840 ... (+2) | 5 |
 | 3 | DISPLAY BOMBE | 23–26 | LD M0 | 3 |
 | 4 | VAC SPC LOGGING | 28–49 | LD M18, LD M34, LD T18 ... (+4) | 15 |
 | 5 | VAC SPC CLEAR | 51–54 | LD M17 | 3 |
@@ -20,11 +20,11 @@
 ### Block 1: L0 CYCLE DONE (Step 1–10)
 
 **Trigger Condition:**
-- LD L24
-- LD L24
-- LD L24
-- LD L24
-- LD L24
+- LD M824
+- LD M824
+- LD M824
+- LD M824
+- LD M824
 
 **Actions:**
 - D+ D280
@@ -36,11 +36,11 @@
 ### Block 2: L1 CYCLE DONE (Step 12–21)
 
 **Trigger Condition:**
-- LD L40
-- LD L40
-- LD L40
-- LD L40
-- LD L40
+- LD M840
+- LD M840
+- LD M840
+- LD M840
+- LD M840
 
 **Actions:**
 - D+ D290
@@ -57,7 +57,7 @@
 **Actions:**
 - MOV D282
 - LDD>= D280
-- SET L75
+- SET M875
 
 ### Block 4: VAC SPC LOGGING (Step 28–49)
 
@@ -113,9 +113,6 @@
 | D406 | D |  |  |  | 1 |
 | D7020 | D |  |  |  | 1 |
 | K0 | K |  |  |  | 2 |
-| L24 | L |  |  |  | 5 |
-| L40 | L |  |  |  | 5 |
-| L75 | L | 1 |  |  |  |
 | M0 | M |  |  |  | 1 |
 | M17 | M |  |  |  | 1 |
 | M18 | M |  |  |  | 2 |
@@ -125,5 +122,8 @@
 | M34 | M |  |  |  | 2 |
 | M35 | M |  |  |  | 2 |
 | M36 | M |  |  |  | 2 |
+| M824 | M |  |  |  | 5 |
+| M840 | M |  |  |  | 5 |
+| M875 | M | 1 |  |  |  |
 | T18 | T |  |  |  | 3 |
 | T19 | T |  |  |  | 2 |

@@ -2,7 +2,7 @@
   "meta": {
     "source_file": "MAIN.csv",
     "cpu": "QCPU (Q mode) Q03UDV",
-    "total_steps": 710,
+    "total_steps": 713,
     "block_count": 14,
     "generated": "2026-06-03"
   },
@@ -11,7 +11,7 @@
       "id": 1,
       "name": "MODE CONTROL",
       "step_start": 1,
-      "step_end": 34,
+      "step_end": 38,
       "conditions": [
         {
           "instruction": "LD",
@@ -23,7 +23,15 @@
         },
         {
           "instruction": "LD",
+          "device": "M801"
+        },
+        {
+          "instruction": "LD",
           "device": "M1536"
+        },
+        {
+          "instruction": "LD",
+          "device": "M802"
         },
         {
           "instruction": "LD",
@@ -51,7 +59,7 @@
         },
         {
           "instruction": "LD",
-          "device": "M1537"
+          "device": "M916"
         }
       ],
       "actions": [
@@ -61,31 +69,39 @@
         },
         {
           "instruction": "AND",
-          "device": "L1"
-        },
-        {
-          "instruction": "SET",
-          "device": "L2"
-        },
-        {
-          "instruction": "RST",
-          "device": "L1"
+          "device": "M802"
         },
         {
           "instruction": "ANI",
-          "device": "L1"
+          "device": "M1536"
         },
         {
-          "instruction": "SET",
-          "device": "L1"
+          "instruction": "ORB",
+          "device": ""
         },
         {
-          "instruction": "RST",
-          "device": "L2"
+          "instruction": "OUT",
+          "device": "M801"
+        },
+        {
+          "instruction": "AND",
+          "device": "M801"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M1536"
+        },
+        {
+          "instruction": "ORB",
+          "device": ""
+        },
+        {
+          "instruction": "OUT",
+          "device": "M802"
         },
         {
           "instruction": "OR",
-          "device": "L112"
+          "device": "M912"
         },
         {
           "instruction": "ANI",
@@ -93,11 +109,11 @@
         },
         {
           "instruction": "OUT",
-          "device": "L112"
+          "device": "M912"
         },
         {
           "instruction": "OR",
-          "device": "L113"
+          "device": "M913"
         },
         {
           "instruction": "ANI",
@@ -105,11 +121,11 @@
         },
         {
           "instruction": "OUT",
-          "device": "L113"
+          "device": "M913"
         },
         {
           "instruction": "OR",
-          "device": "L114"
+          "device": "M914"
         },
         {
           "instruction": "ANI",
@@ -117,11 +133,11 @@
         },
         {
           "instruction": "OUT",
-          "device": "L114"
+          "device": "M914"
         },
         {
           "instruction": "OR",
-          "device": "L115"
+          "device": "M915"
         },
         {
           "instruction": "ANI",
@@ -129,93 +145,93 @@
         },
         {
           "instruction": "OUT",
-          "device": "L115"
+          "device": "M915"
         },
         {
           "instruction": "PLS",
           "device": "M1537"
         },
         {
-          "instruction": "AND",
-          "device": "L116"
-        },
-        {
-          "instruction": "RST",
-          "device": "L116"
+          "instruction": "ANI",
+          "device": "M916"
         },
         {
           "instruction": "ANI",
-          "device": "L116"
+          "device": "M1537"
         },
         {
-          "instruction": "SET",
-          "device": "L116"
+          "instruction": "ORB",
+          "device": ""
+        },
+        {
+          "instruction": "OUT",
+          "device": "M916"
         }
       ]
     },
     {
       "id": 2,
       "name": "INTERLOCK CHECK",
-      "step_start": 36,
-      "step_end": 47,
+      "step_start": 40,
+      "step_end": 51,
       "conditions": [
         {
           "instruction": "LD",
-          "device": "L81"
+          "device": "M881"
         },
         {
           "instruction": "LD",
-          "device": "L97"
+          "device": "M897"
         }
       ],
       "actions": [
         {
           "instruction": "AND",
-          "device": "L82"
+          "device": "M882"
         },
         {
           "instruction": "AND",
-          "device": "L83"
+          "device": "M883"
         },
         {
           "instruction": "AND",
-          "device": "L84"
+          "device": "M884"
         },
         {
           "instruction": "AND",
-          "device": "L85"
+          "device": "M885"
         },
         {
           "instruction": "OUT",
-          "device": "L80"
+          "device": "M880"
         },
         {
           "instruction": "AND",
-          "device": "L98"
+          "device": "M898"
         },
         {
           "instruction": "AND",
-          "device": "L99"
+          "device": "M899"
         },
         {
           "instruction": "AND",
-          "device": "L100"
+          "device": "M900"
         },
         {
           "instruction": "AND",
-          "device": "L101"
+          "device": "M901"
         },
         {
           "instruction": "OUT",
-          "device": "L96"
+          "device": "M896"
         }
       ]
     },
     {
       "id": 3,
       "name": "READY SET L0",
-      "step_start": 49,
-      "step_end": 64,
+      "step_start": 53,
+      "step_end": 68,
       "conditions": [
         {
           "instruction": "LD",
@@ -237,7 +253,7 @@
       "actions": [
         {
           "instruction": "AND",
-          "device": "L2"
+          "device": "M802"
         },
         {
           "instruction": "ANI",
@@ -249,7 +265,7 @@
         },
         {
           "instruction": "AND",
-          "device": "L2"
+          "device": "M802"
         },
         {
           "instruction": "ANI",
@@ -261,7 +277,7 @@
         },
         {
           "instruction": "AND",
-          "device": "L2"
+          "device": "M802"
         },
         {
           "instruction": "ANI",
@@ -273,7 +289,7 @@
         },
         {
           "instruction": "AND",
-          "device": "L2"
+          "device": "M802"
         },
         {
           "instruction": "ANI",
@@ -288,8 +304,8 @@
     {
       "id": 4,
       "name": "READY SET L1",
-      "step_start": 66,
-      "step_end": 81,
+      "step_start": 70,
+      "step_end": 85,
       "conditions": [
         {
           "instruction": "LD",
@@ -311,7 +327,7 @@
       "actions": [
         {
           "instruction": "AND",
-          "device": "L2"
+          "device": "M802"
         },
         {
           "instruction": "ANI",
@@ -323,7 +339,7 @@
         },
         {
           "instruction": "AND",
-          "device": "L2"
+          "device": "M802"
         },
         {
           "instruction": "ANI",
@@ -335,7 +351,7 @@
         },
         {
           "instruction": "AND",
-          "device": "L2"
+          "device": "M802"
         },
         {
           "instruction": "ANI",
@@ -347,7 +363,7 @@
         },
         {
           "instruction": "AND",
-          "device": "L2"
+          "device": "M802"
         },
         {
           "instruction": "ANI",
@@ -362,8 +378,8 @@
     {
       "id": 5,
       "name": "START EXEC L0",
-      "step_start": 83,
-      "step_end": 98,
+      "step_start": 87,
+      "step_end": 102,
       "conditions": [
         {
           "instruction": "LD",
@@ -436,8 +452,8 @@
     {
       "id": 6,
       "name": "START EXEC L1",
-      "step_start": 100,
-      "step_end": 115,
+      "step_start": 104,
+      "step_end": 119,
       "conditions": [
         {
           "instruction": "LD",
@@ -510,8 +526,8 @@
     {
       "id": 7,
       "name": "STEP L0",
-      "step_start": 117,
-      "step_end": 285,
+      "step_start": 121,
+      "step_end": 289,
       "conditions": [
         {
           "instruction": "LD",
@@ -569,7 +585,7 @@
         },
         {
           "instruction": "ANI",
-          "device": "L64"
+          "device": "M864"
         },
         {
           "instruction": "OUT",
@@ -577,11 +593,11 @@
         },
         {
           "instruction": "AND",
-          "device": "L0"
+          "device": "M800"
         },
         {
           "instruction": "AND",
-          "device": "L80"
+          "device": "M880"
         },
         {
           "instruction": "AND",
@@ -589,55 +605,55 @@
         },
         {
           "instruction": "AND",
-          "device": "L1"
+          "device": "M801"
         },
         {
           "instruction": "ANI",
-          "device": "L64"
+          "device": "M864"
         },
         {
           "instruction": "ANI",
-          "device": "L65"
+          "device": "M865"
         },
         {
           "instruction": "ANI",
-          "device": "L66"
+          "device": "M866"
         },
         {
           "instruction": "ANI",
-          "device": "L67"
+          "device": "M867"
         },
         {
           "instruction": "ANI",
-          "device": "L68"
+          "device": "M868"
         },
         {
           "instruction": "ANI",
-          "device": "L69"
+          "device": "M869"
         },
         {
           "instruction": "ANI",
-          "device": "L70"
+          "device": "M870"
         },
         {
           "instruction": "ANI",
-          "device": "L71"
+          "device": "M871"
         },
         {
           "instruction": "ANI",
-          "device": "L72"
+          "device": "M872"
         },
         {
           "instruction": "ANI",
-          "device": "L73"
+          "device": "M873"
         },
         {
           "instruction": "ANI",
-          "device": "L74"
+          "device": "M874"
         },
         {
           "instruction": "ANI",
-          "device": "L78"
+          "device": "M878"
         },
         {
           "instruction": "OR",
@@ -649,55 +665,55 @@
         },
         {
           "instruction": "ANI",
-          "device": "L64"
+          "device": "M864"
         },
         {
           "instruction": "ANI",
-          "device": "L64"
+          "device": "M864"
         },
         {
           "instruction": "ANI",
-          "device": "L65"
+          "device": "M865"
         },
         {
           "instruction": "ANI",
-          "device": "L66"
+          "device": "M866"
         },
         {
           "instruction": "ANI",
-          "device": "L67"
+          "device": "M867"
         },
         {
           "instruction": "ANI",
-          "device": "L68"
+          "device": "M868"
         },
         {
           "instruction": "ANI",
-          "device": "L69"
+          "device": "M869"
         },
         {
           "instruction": "ANI",
-          "device": "L70"
+          "device": "M870"
         },
         {
           "instruction": "ANI",
-          "device": "L71"
+          "device": "M871"
         },
         {
           "instruction": "ANI",
-          "device": "L72"
+          "device": "M872"
         },
         {
           "instruction": "ANI",
-          "device": "L73"
+          "device": "M873"
         },
         {
           "instruction": "ANI",
-          "device": "L74"
+          "device": "M874"
         },
         {
           "instruction": "ANI",
-          "device": "L78"
+          "device": "M878"
         },
         {
           "instruction": "OUT",
@@ -713,55 +729,55 @@
         },
         {
           "instruction": "ANI",
-          "device": "L64"
+          "device": "M864"
         },
         {
           "instruction": "ANI",
-          "device": "L64"
+          "device": "M864"
         },
         {
           "instruction": "ANI",
-          "device": "L65"
+          "device": "M865"
         },
         {
           "instruction": "ANI",
-          "device": "L66"
+          "device": "M866"
         },
         {
           "instruction": "ANI",
-          "device": "L67"
+          "device": "M867"
         },
         {
           "instruction": "ANI",
-          "device": "L68"
+          "device": "M868"
         },
         {
           "instruction": "ANI",
-          "device": "L69"
+          "device": "M869"
         },
         {
           "instruction": "ANI",
-          "device": "L70"
+          "device": "M870"
         },
         {
           "instruction": "ANI",
-          "device": "L71"
+          "device": "M871"
         },
         {
           "instruction": "ANI",
-          "device": "L72"
+          "device": "M872"
         },
         {
           "instruction": "ANI",
-          "device": "L73"
+          "device": "M873"
         },
         {
           "instruction": "ANI",
-          "device": "L74"
+          "device": "M874"
         },
         {
           "instruction": "ANI",
-          "device": "L78"
+          "device": "M878"
         },
         {
           "instruction": "OUT",
@@ -769,7 +785,7 @@
         },
         {
           "instruction": "AND",
-          "device": "L16"
+          "device": "M816"
         },
         {
           "instruction": "OR",
@@ -781,55 +797,55 @@
         },
         {
           "instruction": "ANI",
-          "device": "L64"
+          "device": "M864"
         },
         {
           "instruction": "ANI",
-          "device": "L64"
+          "device": "M864"
         },
         {
           "instruction": "ANI",
-          "device": "L65"
+          "device": "M865"
         },
         {
           "instruction": "ANI",
-          "device": "L66"
+          "device": "M866"
         },
         {
           "instruction": "ANI",
-          "device": "L67"
+          "device": "M867"
         },
         {
           "instruction": "ANI",
-          "device": "L68"
+          "device": "M868"
         },
         {
           "instruction": "ANI",
-          "device": "L69"
+          "device": "M869"
         },
         {
           "instruction": "ANI",
-          "device": "L70"
+          "device": "M870"
         },
         {
           "instruction": "ANI",
-          "device": "L71"
+          "device": "M871"
         },
         {
           "instruction": "ANI",
-          "device": "L72"
+          "device": "M872"
         },
         {
           "instruction": "ANI",
-          "device": "L73"
+          "device": "M873"
         },
         {
           "instruction": "ANI",
-          "device": "L74"
+          "device": "M874"
         },
         {
           "instruction": "ANI",
-          "device": "L78"
+          "device": "M878"
         },
         {
           "instruction": "OUT",
@@ -837,7 +853,7 @@
         },
         {
           "instruction": "AND",
-          "device": "L18"
+          "device": "M818"
         },
         {
           "instruction": "OR",
@@ -849,55 +865,55 @@
         },
         {
           "instruction": "ANI",
-          "device": "L64"
+          "device": "M864"
         },
         {
           "instruction": "ANI",
-          "device": "L64"
+          "device": "M864"
         },
         {
           "instruction": "ANI",
-          "device": "L65"
+          "device": "M865"
         },
         {
           "instruction": "ANI",
-          "device": "L66"
+          "device": "M866"
         },
         {
           "instruction": "ANI",
-          "device": "L67"
+          "device": "M867"
         },
         {
           "instruction": "ANI",
-          "device": "L68"
+          "device": "M868"
         },
         {
           "instruction": "ANI",
-          "device": "L69"
+          "device": "M869"
         },
         {
           "instruction": "ANI",
-          "device": "L70"
+          "device": "M870"
         },
         {
           "instruction": "ANI",
-          "device": "L71"
+          "device": "M871"
         },
         {
           "instruction": "ANI",
-          "device": "L72"
+          "device": "M872"
         },
         {
           "instruction": "ANI",
-          "device": "L73"
+          "device": "M873"
         },
         {
           "instruction": "ANI",
-          "device": "L74"
+          "device": "M874"
         },
         {
           "instruction": "ANI",
-          "device": "L78"
+          "device": "M878"
         },
         {
           "instruction": "OUT",
@@ -905,7 +921,7 @@
         },
         {
           "instruction": "AND",
-          "device": "L20"
+          "device": "M820"
         },
         {
           "instruction": "OR",
@@ -917,55 +933,55 @@
         },
         {
           "instruction": "ANI",
-          "device": "L64"
+          "device": "M864"
         },
         {
           "instruction": "ANI",
-          "device": "L64"
+          "device": "M864"
         },
         {
           "instruction": "ANI",
-          "device": "L65"
+          "device": "M865"
         },
         {
           "instruction": "ANI",
-          "device": "L66"
+          "device": "M866"
         },
         {
           "instruction": "ANI",
-          "device": "L67"
+          "device": "M867"
         },
         {
           "instruction": "ANI",
-          "device": "L68"
+          "device": "M868"
         },
         {
           "instruction": "ANI",
-          "device": "L69"
+          "device": "M869"
         },
         {
           "instruction": "ANI",
-          "device": "L70"
+          "device": "M870"
         },
         {
           "instruction": "ANI",
-          "device": "L71"
+          "device": "M871"
         },
         {
           "instruction": "ANI",
-          "device": "L72"
+          "device": "M872"
         },
         {
           "instruction": "ANI",
-          "device": "L73"
+          "device": "M873"
         },
         {
           "instruction": "ANI",
-          "device": "L74"
+          "device": "M874"
         },
         {
           "instruction": "ANI",
-          "device": "L78"
+          "device": "M878"
         },
         {
           "instruction": "OUT",
@@ -973,7 +989,7 @@
         },
         {
           "instruction": "AND",
-          "device": "L20"
+          "device": "M820"
         },
         {
           "instruction": "OR",
@@ -985,55 +1001,55 @@
         },
         {
           "instruction": "ANI",
-          "device": "L64"
+          "device": "M864"
         },
         {
           "instruction": "ANI",
-          "device": "L64"
+          "device": "M864"
         },
         {
           "instruction": "ANI",
-          "device": "L65"
+          "device": "M865"
         },
         {
           "instruction": "ANI",
-          "device": "L66"
+          "device": "M866"
         },
         {
           "instruction": "ANI",
-          "device": "L67"
+          "device": "M867"
         },
         {
           "instruction": "ANI",
-          "device": "L68"
+          "device": "M868"
         },
         {
           "instruction": "ANI",
-          "device": "L69"
+          "device": "M869"
         },
         {
           "instruction": "ANI",
-          "device": "L70"
+          "device": "M870"
         },
         {
           "instruction": "ANI",
-          "device": "L71"
+          "device": "M871"
         },
         {
           "instruction": "ANI",
-          "device": "L72"
+          "device": "M872"
         },
         {
           "instruction": "ANI",
-          "device": "L73"
+          "device": "M873"
         },
         {
           "instruction": "ANI",
-          "device": "L74"
+          "device": "M874"
         },
         {
           "instruction": "ANI",
-          "device": "L78"
+          "device": "M878"
         },
         {
           "instruction": "OUT",
@@ -1045,7 +1061,7 @@
         },
         {
           "instruction": "AND",
-          "device": "L22"
+          "device": "M822"
         },
         {
           "instruction": "OR",
@@ -1057,55 +1073,55 @@
         },
         {
           "instruction": "ANI",
-          "device": "L64"
+          "device": "M864"
         },
         {
           "instruction": "ANI",
-          "device": "L64"
+          "device": "M864"
         },
         {
           "instruction": "ANI",
-          "device": "L65"
+          "device": "M865"
         },
         {
           "instruction": "ANI",
-          "device": "L66"
+          "device": "M866"
         },
         {
           "instruction": "ANI",
-          "device": "L67"
+          "device": "M867"
         },
         {
           "instruction": "ANI",
-          "device": "L68"
+          "device": "M868"
         },
         {
           "instruction": "ANI",
-          "device": "L69"
+          "device": "M869"
         },
         {
           "instruction": "ANI",
-          "device": "L70"
+          "device": "M870"
         },
         {
           "instruction": "ANI",
-          "device": "L71"
+          "device": "M871"
         },
         {
           "instruction": "ANI",
-          "device": "L72"
+          "device": "M872"
         },
         {
           "instruction": "ANI",
-          "device": "L73"
+          "device": "M873"
         },
         {
           "instruction": "ANI",
-          "device": "L74"
+          "device": "M874"
         },
         {
           "instruction": "ANI",
-          "device": "L78"
+          "device": "M878"
         },
         {
           "instruction": "OUT",
@@ -1125,55 +1141,55 @@
         },
         {
           "instruction": "ANI",
-          "device": "L64"
+          "device": "M864"
         },
         {
           "instruction": "ANI",
-          "device": "L64"
+          "device": "M864"
         },
         {
           "instruction": "ANI",
-          "device": "L65"
+          "device": "M865"
         },
         {
           "instruction": "ANI",
-          "device": "L66"
+          "device": "M866"
         },
         {
           "instruction": "ANI",
-          "device": "L67"
+          "device": "M867"
         },
         {
           "instruction": "ANI",
-          "device": "L68"
+          "device": "M868"
         },
         {
           "instruction": "ANI",
-          "device": "L69"
+          "device": "M869"
         },
         {
           "instruction": "ANI",
-          "device": "L70"
+          "device": "M870"
         },
         {
           "instruction": "ANI",
-          "device": "L71"
+          "device": "M871"
         },
         {
           "instruction": "ANI",
-          "device": "L72"
+          "device": "M872"
         },
         {
           "instruction": "ANI",
-          "device": "L73"
+          "device": "M873"
         },
         {
           "instruction": "ANI",
-          "device": "L74"
+          "device": "M874"
         },
         {
           "instruction": "ANI",
-          "device": "L78"
+          "device": "M878"
         },
         {
           "instruction": "OUT",
@@ -1185,7 +1201,7 @@
         },
         {
           "instruction": "SET",
-          "device": "L24"
+          "device": "M824"
         },
         {
           "instruction": "MOV",
@@ -1196,8 +1212,8 @@
     {
       "id": 8,
       "name": "STEP L1",
-      "step_start": 287,
-      "step_end": 455,
+      "step_start": 291,
+      "step_end": 459,
       "conditions": [
         {
           "instruction": "LD",
@@ -1255,7 +1271,7 @@
         },
         {
           "instruction": "ANI",
-          "device": "L64"
+          "device": "M864"
         },
         {
           "instruction": "OUT",
@@ -1263,11 +1279,11 @@
         },
         {
           "instruction": "AND",
-          "device": "L0"
+          "device": "M800"
         },
         {
           "instruction": "AND",
-          "device": "L96"
+          "device": "M896"
         },
         {
           "instruction": "AND",
@@ -1275,55 +1291,55 @@
         },
         {
           "instruction": "AND",
-          "device": "L1"
+          "device": "M801"
         },
         {
           "instruction": "ANI",
-          "device": "L64"
+          "device": "M864"
         },
         {
           "instruction": "ANI",
-          "device": "L65"
+          "device": "M865"
         },
         {
           "instruction": "ANI",
-          "device": "L66"
+          "device": "M866"
         },
         {
           "instruction": "ANI",
-          "device": "L67"
+          "device": "M867"
         },
         {
           "instruction": "ANI",
-          "device": "L68"
+          "device": "M868"
         },
         {
           "instruction": "ANI",
-          "device": "L69"
+          "device": "M869"
         },
         {
           "instruction": "ANI",
-          "device": "L70"
+          "device": "M870"
         },
         {
           "instruction": "ANI",
-          "device": "L71"
+          "device": "M871"
         },
         {
           "instruction": "ANI",
-          "device": "L72"
+          "device": "M872"
         },
         {
           "instruction": "ANI",
-          "device": "L73"
+          "device": "M873"
         },
         {
           "instruction": "ANI",
-          "device": "L74"
+          "device": "M874"
         },
         {
           "instruction": "ANI",
-          "device": "L79"
+          "device": "M879"
         },
         {
           "instruction": "OR",
@@ -1335,55 +1351,55 @@
         },
         {
           "instruction": "ANI",
-          "device": "L64"
+          "device": "M864"
         },
         {
           "instruction": "ANI",
-          "device": "L64"
+          "device": "M864"
         },
         {
           "instruction": "ANI",
-          "device": "L65"
+          "device": "M865"
         },
         {
           "instruction": "ANI",
-          "device": "L66"
+          "device": "M866"
         },
         {
           "instruction": "ANI",
-          "device": "L67"
+          "device": "M867"
         },
         {
           "instruction": "ANI",
-          "device": "L68"
+          "device": "M868"
         },
         {
           "instruction": "ANI",
-          "device": "L69"
+          "device": "M869"
         },
         {
           "instruction": "ANI",
-          "device": "L70"
+          "device": "M870"
         },
         {
           "instruction": "ANI",
-          "device": "L71"
+          "device": "M871"
         },
         {
           "instruction": "ANI",
-          "device": "L72"
+          "device": "M872"
         },
         {
           "instruction": "ANI",
-          "device": "L73"
+          "device": "M873"
         },
         {
           "instruction": "ANI",
-          "device": "L74"
+          "device": "M874"
         },
         {
           "instruction": "ANI",
-          "device": "L79"
+          "device": "M879"
         },
         {
           "instruction": "OUT",
@@ -1399,55 +1415,55 @@
         },
         {
           "instruction": "ANI",
-          "device": "L64"
+          "device": "M864"
         },
         {
           "instruction": "ANI",
-          "device": "L64"
+          "device": "M864"
         },
         {
           "instruction": "ANI",
-          "device": "L65"
+          "device": "M865"
         },
         {
           "instruction": "ANI",
-          "device": "L66"
+          "device": "M866"
         },
         {
           "instruction": "ANI",
-          "device": "L67"
+          "device": "M867"
         },
         {
           "instruction": "ANI",
-          "device": "L68"
+          "device": "M868"
         },
         {
           "instruction": "ANI",
-          "device": "L69"
+          "device": "M869"
         },
         {
           "instruction": "ANI",
-          "device": "L70"
+          "device": "M870"
         },
         {
           "instruction": "ANI",
-          "device": "L71"
+          "device": "M871"
         },
         {
           "instruction": "ANI",
-          "device": "L72"
+          "device": "M872"
         },
         {
           "instruction": "ANI",
-          "device": "L73"
+          "device": "M873"
         },
         {
           "instruction": "ANI",
-          "device": "L74"
+          "device": "M874"
         },
         {
           "instruction": "ANI",
-          "device": "L79"
+          "device": "M879"
         },
         {
           "instruction": "OUT",
@@ -1455,7 +1471,7 @@
         },
         {
           "instruction": "AND",
-          "device": "L32"
+          "device": "M832"
         },
         {
           "instruction": "OR",
@@ -1467,55 +1483,55 @@
         },
         {
           "instruction": "ANI",
-          "device": "L64"
+          "device": "M864"
         },
         {
           "instruction": "ANI",
-          "device": "L64"
+          "device": "M864"
         },
         {
           "instruction": "ANI",
-          "device": "L65"
+          "device": "M865"
         },
         {
           "instruction": "ANI",
-          "device": "L66"
+          "device": "M866"
         },
         {
           "instruction": "ANI",
-          "device": "L67"
+          "device": "M867"
         },
         {
           "instruction": "ANI",
-          "device": "L68"
+          "device": "M868"
         },
         {
           "instruction": "ANI",
-          "device": "L69"
+          "device": "M869"
         },
         {
           "instruction": "ANI",
-          "device": "L70"
+          "device": "M870"
         },
         {
           "instruction": "ANI",
-          "device": "L71"
+          "device": "M871"
         },
         {
           "instruction": "ANI",
-          "device": "L72"
+          "device": "M872"
         },
         {
           "instruction": "ANI",
-          "device": "L73"
+          "device": "M873"
         },
         {
           "instruction": "ANI",
-          "device": "L74"
+          "device": "M874"
         },
         {
           "instruction": "ANI",
-          "device": "L79"
+          "device": "M879"
         },
         {
           "instruction": "OUT",
@@ -1523,7 +1539,7 @@
         },
         {
           "instruction": "AND",
-          "device": "L34"
+          "device": "M834"
         },
         {
           "instruction": "OR",
@@ -1535,55 +1551,55 @@
         },
         {
           "instruction": "ANI",
-          "device": "L64"
+          "device": "M864"
         },
         {
           "instruction": "ANI",
-          "device": "L64"
+          "device": "M864"
         },
         {
           "instruction": "ANI",
-          "device": "L65"
+          "device": "M865"
         },
         {
           "instruction": "ANI",
-          "device": "L66"
+          "device": "M866"
         },
         {
           "instruction": "ANI",
-          "device": "L67"
+          "device": "M867"
         },
         {
           "instruction": "ANI",
-          "device": "L68"
+          "device": "M868"
         },
         {
           "instruction": "ANI",
-          "device": "L69"
+          "device": "M869"
         },
         {
           "instruction": "ANI",
-          "device": "L70"
+          "device": "M870"
         },
         {
           "instruction": "ANI",
-          "device": "L71"
+          "device": "M871"
         },
         {
           "instruction": "ANI",
-          "device": "L72"
+          "device": "M872"
         },
         {
           "instruction": "ANI",
-          "device": "L73"
+          "device": "M873"
         },
         {
           "instruction": "ANI",
-          "device": "L74"
+          "device": "M874"
         },
         {
           "instruction": "ANI",
-          "device": "L79"
+          "device": "M879"
         },
         {
           "instruction": "OUT",
@@ -1591,7 +1607,7 @@
         },
         {
           "instruction": "AND",
-          "device": "L36"
+          "device": "M836"
         },
         {
           "instruction": "OR",
@@ -1603,55 +1619,55 @@
         },
         {
           "instruction": "ANI",
-          "device": "L64"
+          "device": "M864"
         },
         {
           "instruction": "ANI",
-          "device": "L64"
+          "device": "M864"
         },
         {
           "instruction": "ANI",
-          "device": "L65"
+          "device": "M865"
         },
         {
           "instruction": "ANI",
-          "device": "L66"
+          "device": "M866"
         },
         {
           "instruction": "ANI",
-          "device": "L67"
+          "device": "M867"
         },
         {
           "instruction": "ANI",
-          "device": "L68"
+          "device": "M868"
         },
         {
           "instruction": "ANI",
-          "device": "L69"
+          "device": "M869"
         },
         {
           "instruction": "ANI",
-          "device": "L70"
+          "device": "M870"
         },
         {
           "instruction": "ANI",
-          "device": "L71"
+          "device": "M871"
         },
         {
           "instruction": "ANI",
-          "device": "L72"
+          "device": "M872"
         },
         {
           "instruction": "ANI",
-          "device": "L73"
+          "device": "M873"
         },
         {
           "instruction": "ANI",
-          "device": "L74"
+          "device": "M874"
         },
         {
           "instruction": "ANI",
-          "device": "L79"
+          "device": "M879"
         },
         {
           "instruction": "OUT",
@@ -1659,7 +1675,7 @@
         },
         {
           "instruction": "AND",
-          "device": "L36"
+          "device": "M836"
         },
         {
           "instruction": "OR",
@@ -1671,55 +1687,55 @@
         },
         {
           "instruction": "ANI",
-          "device": "L64"
+          "device": "M864"
         },
         {
           "instruction": "ANI",
-          "device": "L64"
+          "device": "M864"
         },
         {
           "instruction": "ANI",
-          "device": "L65"
+          "device": "M865"
         },
         {
           "instruction": "ANI",
-          "device": "L66"
+          "device": "M866"
         },
         {
           "instruction": "ANI",
-          "device": "L67"
+          "device": "M867"
         },
         {
           "instruction": "ANI",
-          "device": "L68"
+          "device": "M868"
         },
         {
           "instruction": "ANI",
-          "device": "L69"
+          "device": "M869"
         },
         {
           "instruction": "ANI",
-          "device": "L70"
+          "device": "M870"
         },
         {
           "instruction": "ANI",
-          "device": "L71"
+          "device": "M871"
         },
         {
           "instruction": "ANI",
-          "device": "L72"
+          "device": "M872"
         },
         {
           "instruction": "ANI",
-          "device": "L73"
+          "device": "M873"
         },
         {
           "instruction": "ANI",
-          "device": "L74"
+          "device": "M874"
         },
         {
           "instruction": "ANI",
-          "device": "L79"
+          "device": "M879"
         },
         {
           "instruction": "OUT",
@@ -1731,7 +1747,7 @@
         },
         {
           "instruction": "AND",
-          "device": "L38"
+          "device": "M838"
         },
         {
           "instruction": "OR",
@@ -1743,55 +1759,55 @@
         },
         {
           "instruction": "ANI",
-          "device": "L64"
+          "device": "M864"
         },
         {
           "instruction": "ANI",
-          "device": "L64"
+          "device": "M864"
         },
         {
           "instruction": "ANI",
-          "device": "L65"
+          "device": "M865"
         },
         {
           "instruction": "ANI",
-          "device": "L66"
+          "device": "M866"
         },
         {
           "instruction": "ANI",
-          "device": "L67"
+          "device": "M867"
         },
         {
           "instruction": "ANI",
-          "device": "L68"
+          "device": "M868"
         },
         {
           "instruction": "ANI",
-          "device": "L69"
+          "device": "M869"
         },
         {
           "instruction": "ANI",
-          "device": "L70"
+          "device": "M870"
         },
         {
           "instruction": "ANI",
-          "device": "L71"
+          "device": "M871"
         },
         {
           "instruction": "ANI",
-          "device": "L72"
+          "device": "M872"
         },
         {
           "instruction": "ANI",
-          "device": "L73"
+          "device": "M873"
         },
         {
           "instruction": "ANI",
-          "device": "L74"
+          "device": "M874"
         },
         {
           "instruction": "ANI",
-          "device": "L79"
+          "device": "M879"
         },
         {
           "instruction": "OUT",
@@ -1811,55 +1827,55 @@
         },
         {
           "instruction": "ANI",
-          "device": "L64"
+          "device": "M864"
         },
         {
           "instruction": "ANI",
-          "device": "L64"
+          "device": "M864"
         },
         {
           "instruction": "ANI",
-          "device": "L65"
+          "device": "M865"
         },
         {
           "instruction": "ANI",
-          "device": "L66"
+          "device": "M866"
         },
         {
           "instruction": "ANI",
-          "device": "L67"
+          "device": "M867"
         },
         {
           "instruction": "ANI",
-          "device": "L68"
+          "device": "M868"
         },
         {
           "instruction": "ANI",
-          "device": "L69"
+          "device": "M869"
         },
         {
           "instruction": "ANI",
-          "device": "L70"
+          "device": "M870"
         },
         {
           "instruction": "ANI",
-          "device": "L71"
+          "device": "M871"
         },
         {
           "instruction": "ANI",
-          "device": "L72"
+          "device": "M872"
         },
         {
           "instruction": "ANI",
-          "device": "L73"
+          "device": "M873"
         },
         {
           "instruction": "ANI",
-          "device": "L74"
+          "device": "M874"
         },
         {
           "instruction": "ANI",
-          "device": "L79"
+          "device": "M879"
         },
         {
           "instruction": "OUT",
@@ -1871,7 +1887,7 @@
         },
         {
           "instruction": "SET",
-          "device": "L40"
+          "device": "M840"
         },
         {
           "instruction": "MOV",
@@ -1882,32 +1898,32 @@
     {
       "id": 9,
       "name": "NG ALARM STOP",
-      "step_start": 457,
-      "step_end": 502,
+      "step_start": 461,
+      "step_end": 506,
       "conditions": [
         {
           "instruction": "LD",
-          "device": "L17"
+          "device": "M817"
         },
         {
           "instruction": "LD",
-          "device": "L19"
+          "device": "M819"
         },
         {
           "instruction": "LD",
-          "device": "L21"
+          "device": "M821"
         },
         {
           "instruction": "LD",
-          "device": "L23"
+          "device": "M823"
         },
         {
           "instruction": "LD",
-          "device": "L17"
+          "device": "M817"
         },
         {
           "instruction": "LD",
-          "device": "L17"
+          "device": "M817"
         }
       ],
       "actions": [
@@ -1945,63 +1961,63 @@
         },
         {
           "instruction": "OR",
-          "device": "L19"
+          "device": "M819"
         },
         {
           "instruction": "OR",
-          "device": "L21"
+          "device": "M821"
         },
         {
           "instruction": "OR",
-          "device": "L23"
+          "device": "M823"
         },
         {
           "instruction": "OR",
-          "device": "L64"
+          "device": "M864"
         },
         {
           "instruction": "OR",
-          "device": "L65"
+          "device": "M865"
         },
         {
           "instruction": "OR",
-          "device": "L66"
+          "device": "M866"
         },
         {
           "instruction": "OR",
-          "device": "L67"
+          "device": "M867"
         },
         {
           "instruction": "OR",
-          "device": "L68"
+          "device": "M868"
         },
         {
           "instruction": "OR",
-          "device": "L69"
+          "device": "M869"
         },
         {
           "instruction": "OR",
-          "device": "L70"
+          "device": "M870"
         },
         {
           "instruction": "OR",
-          "device": "L71"
+          "device": "M871"
         },
         {
           "instruction": "OR",
-          "device": "L72"
+          "device": "M872"
         },
         {
           "instruction": "OR",
-          "device": "L73"
+          "device": "M873"
         },
         {
           "instruction": "OR",
-          "device": "L74"
+          "device": "M874"
         },
         {
           "instruction": "OR",
-          "device": "L78"
+          "device": "M878"
         },
         {
           "instruction": "SET",
@@ -2009,63 +2025,63 @@
         },
         {
           "instruction": "OR",
-          "device": "L19"
+          "device": "M819"
         },
         {
           "instruction": "OR",
-          "device": "L21"
+          "device": "M821"
         },
         {
           "instruction": "OR",
-          "device": "L23"
+          "device": "M823"
         },
         {
           "instruction": "OR",
-          "device": "L64"
+          "device": "M864"
         },
         {
           "instruction": "OR",
-          "device": "L65"
+          "device": "M865"
         },
         {
           "instruction": "OR",
-          "device": "L66"
+          "device": "M866"
         },
         {
           "instruction": "OR",
-          "device": "L67"
+          "device": "M867"
         },
         {
           "instruction": "OR",
-          "device": "L68"
+          "device": "M868"
         },
         {
           "instruction": "OR",
-          "device": "L69"
+          "device": "M869"
         },
         {
           "instruction": "OR",
-          "device": "L70"
+          "device": "M870"
         },
         {
           "instruction": "OR",
-          "device": "L71"
+          "device": "M871"
         },
         {
           "instruction": "OR",
-          "device": "L72"
+          "device": "M872"
         },
         {
           "instruction": "OR",
-          "device": "L73"
+          "device": "M873"
         },
         {
           "instruction": "OR",
-          "device": "L74"
+          "device": "M874"
         },
         {
           "instruction": "OR",
-          "device": "L79"
+          "device": "M879"
         },
         {
           "instruction": "SET",
@@ -2076,8 +2092,8 @@
     {
       "id": 10,
       "name": "STOP",
-      "step_start": 504,
-      "step_end": 563,
+      "step_start": 508,
+      "step_end": 567,
       "conditions": [
         {
           "instruction": "LD",
@@ -2326,8 +2342,8 @@
     {
       "id": 11,
       "name": "EMERGENCY STOP",
-      "step_start": 565,
-      "step_end": 621,
+      "step_start": 569,
+      "step_end": 624,
       "conditions": [
         {
           "instruction": "LDI",
@@ -2359,10 +2375,6 @@
         }
       ],
       "actions": [
-        {
-          "instruction": "SET",
-          "device": "L64"
-        },
         {
           "instruction": "MOV",
           "device": "K6 D7012"
@@ -2564,8 +2576,8 @@
     {
       "id": 12,
       "name": "EXHAUST TIMER",
-      "step_start": 623,
-      "step_end": 626,
+      "step_start": 626,
+      "step_end": 629,
       "conditions": [
         {
           "instruction": "LD",
@@ -2590,8 +2602,8 @@
     {
       "id": 13,
       "name": "LAMP CONTROL",
-      "step_start": 628,
-      "step_end": 667,
+      "step_start": 631,
+      "step_end": 670,
       "conditions": [
         {
           "instruction": "LD",
@@ -2599,7 +2611,7 @@
         },
         {
           "instruction": "LD",
-          "device": "L64"
+          "device": "M864"
         },
         {
           "instruction": "LD",
@@ -2641,55 +2653,55 @@
         },
         {
           "instruction": "ANI",
-          "device": "L64"
+          "device": "M864"
         },
         {
           "instruction": "ANI",
-          "device": "L65"
+          "device": "M865"
         },
         {
           "instruction": "ANI",
-          "device": "L66"
+          "device": "M866"
         },
         {
           "instruction": "ANI",
-          "device": "L67"
+          "device": "M867"
         },
         {
           "instruction": "ANI",
-          "device": "L68"
+          "device": "M868"
         },
         {
           "instruction": "ANI",
-          "device": "L69"
+          "device": "M869"
         },
         {
           "instruction": "ANI",
-          "device": "L70"
+          "device": "M870"
         },
         {
           "instruction": "ANI",
-          "device": "L71"
+          "device": "M871"
         },
         {
           "instruction": "ANI",
-          "device": "L72"
+          "device": "M872"
         },
         {
           "instruction": "ANI",
-          "device": "L73"
+          "device": "M873"
         },
         {
           "instruction": "ANI",
-          "device": "L74"
+          "device": "M874"
         },
         {
           "instruction": "ANI",
-          "device": "L78"
+          "device": "M878"
         },
         {
           "instruction": "ANI",
-          "device": "L79"
+          "device": "M879"
         },
         {
           "instruction": "OUT",
@@ -2697,51 +2709,51 @@
         },
         {
           "instruction": "OR",
-          "device": "L65"
+          "device": "M865"
         },
         {
           "instruction": "OR",
-          "device": "L66"
+          "device": "M866"
         },
         {
           "instruction": "OR",
-          "device": "L67"
+          "device": "M867"
         },
         {
           "instruction": "OR",
-          "device": "L68"
+          "device": "M868"
         },
         {
           "instruction": "OR",
-          "device": "L69"
+          "device": "M869"
         },
         {
           "instruction": "OR",
-          "device": "L70"
+          "device": "M870"
         },
         {
           "instruction": "OR",
-          "device": "L71"
+          "device": "M871"
         },
         {
           "instruction": "OR",
-          "device": "L72"
+          "device": "M872"
         },
         {
           "instruction": "OR",
-          "device": "L73"
+          "device": "M873"
         },
         {
           "instruction": "OR",
-          "device": "L74"
+          "device": "M874"
         },
         {
           "instruction": "OR",
-          "device": "L78"
+          "device": "M878"
         },
         {
           "instruction": "OR",
-          "device": "L79"
+          "device": "M879"
         },
         {
           "instruction": "OUT",
@@ -2749,7 +2761,7 @@
         },
         {
           "instruction": "ANI",
-          "device": "L80"
+          "device": "M880"
         },
         {
           "instruction": "OUT",
@@ -2760,8 +2772,8 @@
     {
       "id": 14,
       "name": "HMI LAMP",
-      "step_start": 669,
-      "step_end": 710,
+      "step_start": 672,
+      "step_end": 713,
       "conditions": [
         {
           "instruction": "LD",

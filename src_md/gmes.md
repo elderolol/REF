@@ -1,5 +1,5 @@
 ---
-# gmes — IL Logic Map
+# REF_self_holding — IL Logic Map
 **CPU:** QCPU (Q mode) Q03UDV
 **Total Steps:** 81
 **Blocks:** 2
@@ -26,8 +26,8 @@
 - LD M0
 - LD M0
 - LD M0
-- LD L3
-- LDI L3
+- LD M803
+- LDI M803
 - LD M16
 - LDI M16
 - LD M18
@@ -72,8 +72,8 @@
 - LD M0
 - LD M0
 - LD M0
-- LD L3
-- LDI L3
+- LD M803
+- LDI M803
 - LD M32
 - LDI M32
 - LD M34
@@ -130,7 +130,6 @@
 | K2 | K |  |  |  | 5 |
 | K3 | K |  |  |  | 2 |
 | K4 | K |  |  |  | 2 |
-| L3 | L |  |  |  | 4 |
 | M0 | M |  |  |  | 12 |
 | M16 | M |  |  |  | 3 |
 | M18 | M |  |  |  | 1 |
@@ -146,3 +145,4 @@
 | M37 | M |  |  |  | 1 |
 | M38 | M |  |  |  | 1 |
 | M39 | M |  |  |  | 3 |
+| M803 | M |  |  |  | 4 |

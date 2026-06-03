@@ -51,11 +51,11 @@
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
@@ -221,11 +221,11 @@
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",

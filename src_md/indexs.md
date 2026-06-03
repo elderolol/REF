@@ -1,7 +1,7 @@
 ---
-# indexs — IL Logic Map
+# REF_self_holding — IL Logic Map
 **CPU:** QCPU (Q mode) Q03UDV
-**Total Steps:** 647
+**Total Steps:** 495
 **Blocks:** 8
 **Generated:** 2026-06-03
 ---
@@ -9,701 +9,549 @@
 ## Block List
 | # | Name | Steps | Condition Device | Action Count |
 |---|------|-------|-----------------|--------------|
-| 1 | PC DATA CHECK | 1–10 | LD L3, LD L3 | 8 |
-| 2 | AUTO BARCODE | 12–15 |  | 4 |
-| 3 | BARCODE L1 (D60~D84) | 17–166 | LD L3, LD L3, LD L3 ... (+22) | 125 |
-| 4 | BARCODE L2 (D88~D112) | 168–317 | LD L3, LD L3, LD L3 ... (+22) | 125 |
-| 5 | MANUAL MODEL L0 | 319–468 | LDI L3, LDI L3, LDI L3 ... (+22) | 125 |
-| 6 | MANUAL MODEL L1 | 470–619 | LDI L3, LDI L3, LDI L3 ... (+22) | 125 |
-| 7 | BARCODE RESET | 621–635 | LD L24, LD L40 | 13 |
-| 8 | BARCODE MODEL CLEANUP | 637–647 | LD L3, LD L17 | 9 |
+| 1 | PC DATA CHECK | 1–8 | LD M803, LD M803 | 6 |
+| 2 | AUTO BARCODE | 10–13 |  | 4 |
+| 3 | BARCODE L1 (D60~D84) | 15–114 | LD M803, LD M803, LD M803 ... (+22) | 75 |
+| 4 | BARCODE L2 (D88~D112) | 116–215 | LD M803, LD M803, LD M803 ... (+22) | 75 |
+| 5 | MANUAL MODEL L0 | 217–341 | LDI M803, LDI M803, LDI M803 ... (+22) | 100 |
+| 6 | MANUAL MODEL L1 | 343–467 | LDI M803, LDI M803, LDI M803 ... (+22) | 100 |
+| 7 | BARCODE RESET | 469–483 | LD M824, LD M840 | 13 |
+| 8 | BARCODE MODEL CLEANUP | 485–495 | LD M803, LD M817 | 9 |
 
 ## Block Detail
 
-### Block 1: PC DATA CHECK (Step 1–10)
+### Block 1: PC DATA CHECK (Step 1–8)
 
 **Trigger Condition:**
-- LD L3
-- LD L3
+- LD M803
+- LD M803
 
 **Actions:**
-- LDD> D7001
-- LD<> D7000
-- ANB 
-- SET L76
-- LDD> D8001
-- LD<> D8000
-- ANB 
-- SET L76
+- AND> D7001
+- AND<> D7000
+- AND> D8001
+- AND<> D8000
+- ORB 
+- SET M876
 
-### Block 2: AUTO BARCODE (Step 12–15)
+### Block 2: AUTO BARCODE (Step 10–13)
 
 **Trigger Condition:**
 
 **Actions:**
-- LDD> D7001
+- LD> D7001
 - BMOV D6980
-- LDD> D8001
+- LD> D8001
 - BMOV D7980
 
-### Block 3: BARCODE L1 (D60~D84) (Step 17–166)
+### Block 3: BARCODE L1 (D60~D84) (Step 15–114)
 
 **Trigger Condition:**
-- LD L3
-- LD L3
-- LD L3
-- LD L3
-- LD L3
-- LD L3
-- LD L3
-- LD L3
-- LD L3
-- LD L3
-- LD L3
-- LD L3
-- LD L3
-- LD L3
-- LD L3
-- LD L3
-- LD L3
-- LD L3
-- LD L3
-- LD L3
-- LD L3
-- LD L3
-- LD L3
-- LD L3
-- LD L3
+- LD M803
+- LD M803
+- LD M803
+- LD M803
+- LD M803
+- LD M803
+- LD M803
+- LD M803
+- LD M803
+- LD M803
+- LD M803
+- LD M803
+- LD M803
+- LD M803
+- LD M803
+- LD M803
+- LD M803
+- LD M803
+- LD M803
+- LD M803
+- LD M803
+- LD M803
+- LD M803
+- LD M803
+- LD M803
 
 **Actions:**
-- LDD> D7001
-- ANB 
-- LDD= D7001
-- ANB 
+- AND> D7001
+- AND= D7001
 - MOV K1
-- LDD> D7001
-- ANB 
-- LDD= D7001
-- ANB 
+- AND> D7001
+- AND= D7001
 - MOV K2
-- LDD> D7001
-- ANB 
-- LDD= D7001
-- ANB 
+- AND> D7001
+- AND= D7001
 - MOV K3
-- LDD> D7001
-- ANB 
-- LDD= D7001
-- ANB 
+- AND> D7001
+- AND= D7001
 - MOV K4
-- LDD> D7001
-- ANB 
-- LDD= D7001
-- ANB 
+- AND> D7001
+- AND= D7001
 - MOV K5
-- LDD> D7001
-- ANB 
-- LDD= D7001
-- ANB 
+- AND> D7001
+- AND= D7001
 - MOV K6
-- LDD> D7001
-- ANB 
-- LDD= D7001
-- ANB 
+- AND> D7001
+- AND= D7001
 - MOV K7
-- LDD> D7001
-- ANB 
-- LDD= D7001
-- ANB 
+- AND> D7001
+- AND= D7001
 - MOV K8
-- LDD> D7001
-- ANB 
-- LDD= D7001
-- ANB 
+- AND> D7001
+- AND= D7001
 - MOV K9
-- LDD> D7001
-- ANB 
-- LDD= D7001
-- ANB 
+- AND> D7001
+- AND= D7001
 - MOV K10
-- LDD> D7001
-- ANB 
-- LDD= D7001
-- ANB 
+- AND> D7001
+- AND= D7001
 - MOV K11
-- LDD> D7001
-- ANB 
-- LDD= D7001
-- ANB 
+- AND> D7001
+- AND= D7001
 - MOV K12
-- LDD> D7001
-- ANB 
-- LDD= D7001
-- ANB 
+- AND> D7001
+- AND= D7001
 - MOV K13
-- LDD> D7001
-- ANB 
-- LDD= D7001
-- ANB 
+- AND> D7001
+- AND= D7001
 - MOV K14
-- LDD> D7001
-- ANB 
-- LDD= D7001
-- ANB 
+- AND> D7001
+- AND= D7001
 - MOV K15
-- LDD> D7001
-- ANB 
-- LDD= D7001
-- ANB 
+- AND> D7001
+- AND= D7001
 - MOV K16
-- LDD> D7001
-- ANB 
-- LDD= D7001
-- ANB 
+- AND> D7001
+- AND= D7001
 - MOV K17
-- LDD> D7001
-- ANB 
-- LDD= D7001
-- ANB 
+- AND> D7001
+- AND= D7001
 - MOV K18
-- LDD> D7001
-- ANB 
-- LDD= D7001
-- ANB 
+- AND> D7001
+- AND= D7001
 - MOV K19
-- LDD> D7001
-- ANB 
-- LDD= D7001
-- ANB 
+- AND> D7001
+- AND= D7001
 - MOV K20
-- LDD> D7001
-- ANB 
-- LDD= D7001
-- ANB 
+- AND> D7001
+- AND= D7001
 - MOV K21
-- LDD> D7001
-- ANB 
-- LDD= D7001
-- ANB 
+- AND> D7001
+- AND= D7001
 - MOV K22
-- LDD> D7001
-- ANB 
-- LDD= D7001
-- ANB 
+- AND> D7001
+- AND= D7001
 - MOV K23
-- LDD> D7001
-- ANB 
-- LDD= D7001
-- ANB 
+- AND> D7001
+- AND= D7001
 - MOV K24
-- LDD> D7001
-- ANB 
-- LDD= D7001
-- ANB 
+- AND> D7001
+- AND= D7001
 - MOV K25
 
-### Block 4: BARCODE L2 (D88~D112) (Step 168–317)
+### Block 4: BARCODE L2 (D88~D112) (Step 116–215)
 
 **Trigger Condition:**
-- LD L3
-- LD L3
-- LD L3
-- LD L3
-- LD L3
-- LD L3
-- LD L3
-- LD L3
-- LD L3
-- LD L3
-- LD L3
-- LD L3
-- LD L3
-- LD L3
-- LD L3
-- LD L3
-- LD L3
-- LD L3
-- LD L3
-- LD L3
-- LD L3
-- LD L3
-- LD L3
-- LD L3
-- LD L3
+- LD M803
+- LD M803
+- LD M803
+- LD M803
+- LD M803
+- LD M803
+- LD M803
+- LD M803
+- LD M803
+- LD M803
+- LD M803
+- LD M803
+- LD M803
+- LD M803
+- LD M803
+- LD M803
+- LD M803
+- LD M803
+- LD M803
+- LD M803
+- LD M803
+- LD M803
+- LD M803
+- LD M803
+- LD M803
 
 **Actions:**
-- LDD> D8001
-- ANB 
-- LDD= D8001
-- ANB 
+- AND> D8001
+- AND= D8001
 - MOV K1
-- LDD> D8001
-- ANB 
-- LDD= D8001
-- ANB 
+- AND> D8001
+- AND= D8001
 - MOV K2
-- LDD> D8001
-- ANB 
-- LDD= D8001
-- ANB 
+- AND> D8001
+- AND= D8001
 - MOV K3
-- LDD> D8001
-- ANB 
-- LDD= D8001
-- ANB 
+- AND> D8001
+- AND= D8001
 - MOV K4
-- LDD> D8001
-- ANB 
-- LDD= D8001
-- ANB 
+- AND> D8001
+- AND= D8001
 - MOV K5
-- LDD> D8001
-- ANB 
-- LDD= D8001
-- ANB 
+- AND> D8001
+- AND= D8001
 - MOV K6
-- LDD> D8001
-- ANB 
-- LDD= D8001
-- ANB 
+- AND> D8001
+- AND= D8001
 - MOV K7
-- LDD> D8001
-- ANB 
-- LDD= D8001
-- ANB 
+- AND> D8001
+- AND= D8001
 - MOV K8
-- LDD> D8001
-- ANB 
-- LDD= D8001
-- ANB 
+- AND> D8001
+- AND= D8001
 - MOV K9
-- LDD> D8001
-- ANB 
-- LDD= D8001
-- ANB 
+- AND> D8001
+- AND= D8001
 - MOV K10
-- LDD> D8001
-- ANB 
-- LDD= D8001
-- ANB 
+- AND> D8001
+- AND= D8001
 - MOV K11
-- LDD> D8001
-- ANB 
-- LDD= D8001
-- ANB 
+- AND> D8001
+- AND= D8001
 - MOV K12
-- LDD> D8001
-- ANB 
-- LDD= D8001
-- ANB 
+- AND> D8001
+- AND= D8001
 - MOV K13
-- LDD> D8001
-- ANB 
-- LDD= D8001
-- ANB 
+- AND> D8001
+- AND= D8001
 - MOV K14
-- LDD> D8001
-- ANB 
-- LDD= D8001
-- ANB 
+- AND> D8001
+- AND= D8001
 - MOV K15
-- LDD> D8001
-- ANB 
-- LDD= D8001
-- ANB 
+- AND> D8001
+- AND= D8001
 - MOV K16
-- LDD> D8001
-- ANB 
-- LDD= D8001
-- ANB 
+- AND> D8001
+- AND= D8001
 - MOV K17
-- LDD> D8001
-- ANB 
-- LDD= D8001
-- ANB 
+- AND> D8001
+- AND= D8001
 - MOV K18
-- LDD> D8001
-- ANB 
-- LDD= D8001
-- ANB 
+- AND> D8001
+- AND= D8001
 - MOV K19
-- LDD> D8001
-- ANB 
-- LDD= D8001
-- ANB 
+- AND> D8001
+- AND= D8001
 - MOV K20
-- LDD> D8001
-- ANB 
-- LDD= D8001
-- ANB 
+- AND> D8001
+- AND= D8001
 - MOV K21
-- LDD> D8001
-- ANB 
-- LDD= D8001
-- ANB 
+- AND> D8001
+- AND= D8001
 - MOV K22
-- LDD> D8001
-- ANB 
-- LDD= D8001
-- ANB 
+- AND> D8001
+- AND= D8001
 - MOV K23
-- LDD> D8001
-- ANB 
-- LDD= D8001
-- ANB 
+- AND> D8001
+- AND= D8001
 - MOV K24
-- LDD> D8001
-- ANB 
-- LDD= D8001
-- ANB 
+- AND> D8001
+- AND= D8001
 - MOV K25
 
-### Block 5: MANUAL MODEL L0 (Step 319–468)
+### Block 5: MANUAL MODEL L0 (Step 217–341)
 
 **Trigger Condition:**
-- LDI L3
-- LDI L3
-- LDI L3
-- LDI L3
-- LDI L3
-- LDI L3
-- LDI L3
-- LDI L3
-- LDI L3
-- LDI L3
-- LDI L3
-- LDI L3
-- LDI L3
-- LDI L3
-- LDI L3
-- LDI L3
-- LDI L3
-- LDI L3
-- LDI L3
-- LDI L3
-- LDI L3
-- LDI L3
-- LDI L3
-- LDI L3
-- LDI L3
+- LDI M803
+- LDI M803
+- LDI M803
+- LDI M803
+- LDI M803
+- LDI M803
+- LDI M803
+- LDI M803
+- LDI M803
+- LDI M803
+- LDI M803
+- LDI M803
+- LDI M803
+- LDI M803
+- LDI M803
+- LDI M803
+- LDI M803
+- LDI M803
+- LDI M803
+- LDI M803
+- LDI M803
+- LDI M803
+- LDI M803
+- LDI M803
+- LDI M803
 
 **Actions:**
 - AND> D0
 - AND<= D0
-- LD= D0
-- ANB 
+- AND= D0
 - MOV D60
 - AND> D0
 - AND<= D0
-- LD= D0
-- ANB 
+- AND= D0
 - MOV D61
 - AND> D0
 - AND<= D0
-- LD= D0
-- ANB 
+- AND= D0
 - MOV D62
 - AND> D0
 - AND<= D0
-- LD= D0
-- ANB 
+- AND= D0
 - MOV D63
 - AND> D0
 - AND<= D0
-- LD= D0
-- ANB 
+- AND= D0
 - MOV D64
 - AND> D0
 - AND<= D0
-- LD= D0
-- ANB 
+- AND= D0
 - MOV D65
 - AND> D0
 - AND<= D0
-- LD= D0
-- ANB 
+- AND= D0
 - MOV D66
 - AND> D0
 - AND<= D0
-- LD= D0
-- ANB 
+- AND= D0
 - MOV D67
 - AND> D0
 - AND<= D0
-- LD= D0
-- ANB 
+- AND= D0
 - MOV D68
 - AND> D0
 - AND<= D0
-- LD= D0
-- ANB 
+- AND= D0
 - MOV D69
 - AND> D0
 - AND<= D0
-- LD= D0
-- ANB 
+- AND= D0
 - MOV D70
 - AND> D0
 - AND<= D0
-- LD= D0
-- ANB 
+- AND= D0
 - MOV D71
 - AND> D0
 - AND<= D0
-- LD= D0
-- ANB 
+- AND= D0
 - MOV D72
 - AND> D0
 - AND<= D0
-- LD= D0
-- ANB 
+- AND= D0
 - MOV D73
 - AND> D0
 - AND<= D0
-- LD= D0
-- ANB 
+- AND= D0
 - MOV D74
 - AND> D0
 - AND<= D0
-- LD= D0
-- ANB 
+- AND= D0
 - MOV D75
 - AND> D0
 - AND<= D0
-- LD= D0
-- ANB 
+- AND= D0
 - MOV D76
 - AND> D0
 - AND<= D0
-- LD= D0
-- ANB 
+- AND= D0
 - MOV D77
 - AND> D0
 - AND<= D0
-- LD= D0
-- ANB 
+- AND= D0
 - MOV D78
 - AND> D0
 - AND<= D0
-- LD= D0
-- ANB 
+- AND= D0
 - MOV D79
 - AND> D0
 - AND<= D0
-- LD= D0
-- ANB 
+- AND= D0
 - MOV D80
 - AND> D0
 - AND<= D0
-- LD= D0
-- ANB 
+- AND= D0
 - MOV D81
 - AND> D0
 - AND<= D0
-- LD= D0
-- ANB 
+- AND= D0
 - MOV D82
 - AND> D0
 - AND<= D0
-- LD= D0
-- ANB 
+- AND= D0
 - MOV D83
 - AND> D0
 - AND<= D0
-- LD= D0
-- ANB 
+- AND= D0
 - MOV D84
 
-### Block 6: MANUAL MODEL L1 (Step 470–619)
+### Block 6: MANUAL MODEL L1 (Step 343–467)
 
 **Trigger Condition:**
-- LDI L3
-- LDI L3
-- LDI L3
-- LDI L3
-- LDI L3
-- LDI L3
-- LDI L3
-- LDI L3
-- LDI L3
-- LDI L3
-- LDI L3
-- LDI L3
-- LDI L3
-- LDI L3
-- LDI L3
-- LDI L3
-- LDI L3
-- LDI L3
-- LDI L3
-- LDI L3
-- LDI L3
-- LDI L3
-- LDI L3
-- LDI L3
-- LDI L3
+- LDI M803
+- LDI M803
+- LDI M803
+- LDI M803
+- LDI M803
+- LDI M803
+- LDI M803
+- LDI M803
+- LDI M803
+- LDI M803
+- LDI M803
+- LDI M803
+- LDI M803
+- LDI M803
+- LDI M803
+- LDI M803
+- LDI M803
+- LDI M803
+- LDI M803
+- LDI M803
+- LDI M803
+- LDI M803
+- LDI M803
+- LDI M803
+- LDI M803
 
 **Actions:**
 - AND> D30
 - AND<= D30
-- LD= D30
-- ANB 
+- AND= D30
 - MOV D88
 - AND> D30
 - AND<= D30
-- LD= D30
-- ANB 
+- AND= D30
 - MOV D89
 - AND> D30
 - AND<= D30
-- LD= D30
-- ANB 
+- AND= D30
 - MOV D90
 - AND> D30
 - AND<= D30
-- LD= D30
-- ANB 
+- AND= D30
 - MOV D91
 - AND> D30
 - AND<= D30
-- LD= D30
-- ANB 
+- AND= D30
 - MOV D92
 - AND> D30
 - AND<= D30
-- LD= D30
-- ANB 
+- AND= D30
 - MOV D93
 - AND> D30
 - AND<= D30
-- LD= D30
-- ANB 
+- AND= D30
 - MOV D94
 - AND> D30
 - AND<= D30
-- LD= D30
-- ANB 
+- AND= D30
 - MOV D95
 - AND> D30
 - AND<= D30
-- LD= D30
-- ANB 
+- AND= D30
 - MOV D96
 - AND> D30
 - AND<= D30
-- LD= D30
-- ANB 
+- AND= D30
 - MOV D97
 - AND> D30
 - AND<= D30
-- LD= D30
-- ANB 
+- AND= D30
 - MOV D98
 - AND> D30
 - AND<= D30
-- LD= D30
-- ANB 
+- AND= D30
 - MOV D99
 - AND> D30
 - AND<= D30
-- LD= D30
-- ANB 
+- AND= D30
 - MOV D100
 - AND> D30
 - AND<= D30
-- LD= D30
-- ANB 
+- AND= D30
 - MOV D101
 - AND> D30
 - AND<= D30
-- LD= D30
-- ANB 
+- AND= D30
 - MOV D102
 - AND> D30
 - AND<= D30
-- LD= D30
-- ANB 
+- AND= D30
 - MOV D103
 - AND> D30
 - AND<= D30
-- LD= D30
-- ANB 
+- AND= D30
 - MOV D104
 - AND> D30
 - AND<= D30
-- LD= D30
-- ANB 
+- AND= D30
 - MOV D105
 - AND> D30
 - AND<= D30
-- LD= D30
-- ANB 
+- AND= D30
 - MOV D106
 - AND> D30
 - AND<= D30
-- LD= D30
-- ANB 
+- AND= D30
 - MOV D107
 - AND> D30
 - AND<= D30
-- LD= D30
-- ANB 
+- AND= D30
 - MOV D108
 - AND> D30
 - AND<= D30
-- LD= D30
-- ANB 
+- AND= D30
 - MOV D109
 - AND> D30
 - AND<= D30
-- LD= D30
-- ANB 
+- AND= D30
 - MOV D110
 - AND> D30
 - AND<= D30
-- LD= D30
-- ANB 
+- AND= D30
 - MOV D111
 - AND> D30
 - AND<= D30
-- LD= D30
-- ANB 
+- AND= D30
 - MOV D112
 
-### Block 7: BARCODE RESET (Step 621–635)
+### Block 7: BARCODE RESET (Step 469–483)
 
 **Trigger Condition:**
-- LD L24
-- LD L40
+- LD M824
+- LD M840
 
 **Actions:**
 - AND M16
 - AND M32
 - ORB 
-- OR L17
-- OR L19
-- OR L21
-- OR L23
-- OR L64
+- OR M817
+- OR M819
+- OR M821
+- OR M823
+- OR M864
 - MOV K0
 - MOV K0
 - MOV K0
 - MOV K0
 - MOV K0
 
-### Block 8: BARCODE MODEL CLEANUP (Step 637–647)
+### Block 8: BARCODE MODEL CLEANUP (Step 485–495)
 
 **Trigger Condition:**
-- LD L3
-- LD L17
+- LD M803
+- LD M817
 
 **Actions:**
-- OR L19
-- OR L21
-- OR L23
-- OR L24
-- OR L40
-- OR L64
+- OR M819
+- OR M821
+- OR M823
+- OR M824
+- OR M840
+- OR M864
 - ANB 
 - RST D0
 - RST D30
@@ -795,14 +643,14 @@
 | K7 | K |  |  |  | 2 |
 | K8 | K |  |  |  | 2 |
 | K9 | K |  |  |  | 2 |
-| L17 | L |  |  |  | 2 |
-| L19 | L |  |  |  | 2 |
-| L21 | L |  |  |  | 2 |
-| L23 | L |  |  |  | 2 |
-| L24 | L |  |  |  | 2 |
-| L3 | L |  |  |  | 103 |
-| L40 | L |  |  |  | 2 |
-| L64 | L |  |  |  | 2 |
-| L76 | L | 2 |  |  |  |
 | M16 | M |  |  |  | 1 |
 | M32 | M |  |  |  | 1 |
+| M803 | M |  |  |  | 103 |
+| M817 | M |  |  |  | 2 |
+| M819 | M |  |  |  | 2 |
+| M821 | M |  |  |  | 2 |
+| M823 | M |  |  |  | 2 |
+| M824 | M |  |  |  | 2 |
+| M840 | M |  |  |  | 2 |
+| M864 | M |  |  |  | 2 |
+| M876 | M | 1 |  |  |  |

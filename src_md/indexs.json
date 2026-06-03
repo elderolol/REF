@@ -2,7 +2,7 @@
   "meta": {
     "source_file": "indexs.csv",
     "cpu": "QCPU (Q mode) Q03UDV",
-    "total_steps": 647,
+    "total_steps": 495,
     "block_count": 8,
     "generated": "2026-06-03"
   },
@@ -11,61 +11,53 @@
       "id": 1,
       "name": "PC DATA CHECK",
       "step_start": 1,
-      "step_end": 10,
+      "step_end": 8,
       "conditions": [
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         }
       ],
       "actions": [
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D7001"
         },
         {
-          "instruction": "LD<>",
+          "instruction": "AND<>",
           "device": "D7000"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "SET",
-          "device": "L76"
-        },
-        {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D8001"
         },
         {
-          "instruction": "LD<>",
+          "instruction": "AND<>",
           "device": "D8000"
         },
         {
-          "instruction": "ANB",
+          "instruction": "ORB",
           "device": ""
         },
         {
           "instruction": "SET",
-          "device": "L76"
+          "device": "M876"
         }
       ]
     },
     {
       "id": 2,
       "name": "AUTO BARCODE",
-      "step_start": 12,
-      "step_end": 15,
+      "step_start": 10,
+      "step_end": 13,
       "conditions": [],
       "actions": [
         {
-          "instruction": "LDD>",
+          "instruction": "LD>",
           "device": "D7001"
         },
         {
@@ -73,7 +65,7 @@
           "device": "D6980"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "LD>",
           "device": "D8001"
         },
         {
@@ -85,606 +77,406 @@
     {
       "id": 3,
       "name": "BARCODE L1 (D60~D84)",
-      "step_start": 17,
-      "step_end": 166,
+      "step_start": 15,
+      "step_end": 114,
       "conditions": [
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         }
       ],
       "actions": [
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D7001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D7001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K1"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D7001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D7001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K2"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D7001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D7001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K3"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D7001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D7001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K4"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D7001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D7001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K5"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D7001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D7001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K6"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D7001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D7001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K7"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D7001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D7001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K8"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D7001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D7001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K9"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D7001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D7001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K10"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D7001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D7001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K11"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D7001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D7001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K12"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D7001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D7001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K13"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D7001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D7001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K14"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D7001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D7001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K15"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D7001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D7001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K16"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D7001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D7001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K17"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D7001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D7001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K18"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D7001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D7001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K19"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D7001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D7001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K20"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D7001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D7001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K21"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D7001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D7001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K22"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D7001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D7001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K23"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D7001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D7001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K24"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D7001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D7001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -695,606 +487,406 @@
     {
       "id": 4,
       "name": "BARCODE L2 (D88~D112)",
-      "step_start": 168,
-      "step_end": 317,
+      "step_start": 116,
+      "step_end": 215,
       "conditions": [
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         }
       ],
       "actions": [
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D8001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D8001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K1"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D8001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D8001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K2"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D8001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D8001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K3"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D8001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D8001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K4"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D8001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D8001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K5"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D8001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D8001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K6"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D8001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D8001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K7"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D8001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D8001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K8"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D8001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D8001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K9"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D8001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D8001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K10"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D8001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D8001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K11"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D8001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D8001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K12"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D8001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D8001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K13"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D8001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D8001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K14"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D8001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D8001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K15"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D8001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D8001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K16"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D8001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D8001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K17"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D8001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D8001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K18"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D8001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D8001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K19"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D8001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D8001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K20"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D8001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D8001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K21"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D8001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D8001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K22"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D8001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D8001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K23"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D8001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D8001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
           "device": "K24"
         },
         {
-          "instruction": "LDD>",
+          "instruction": "AND>",
           "device": "D8001"
         },
         {
-          "instruction": "ANB",
-          "device": ""
-        },
-        {
-          "instruction": "LDD=",
+          "instruction": "AND=",
           "device": "D8001"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -1305,108 +897,108 @@
     {
       "id": 5,
       "name": "MANUAL MODEL L0",
-      "step_start": 319,
-      "step_end": 468,
+      "step_start": 217,
+      "step_end": 341,
       "conditions": [
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         }
       ],
       "actions": [
@@ -1419,12 +1011,8 @@
           "device": "D0"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D0"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -1439,12 +1027,8 @@
           "device": "D0"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D0"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -1459,12 +1043,8 @@
           "device": "D0"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D0"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -1479,12 +1059,8 @@
           "device": "D0"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D0"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -1499,12 +1075,8 @@
           "device": "D0"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D0"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -1519,12 +1091,8 @@
           "device": "D0"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D0"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -1539,12 +1107,8 @@
           "device": "D0"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D0"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -1559,12 +1123,8 @@
           "device": "D0"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D0"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -1579,12 +1139,8 @@
           "device": "D0"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D0"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -1599,12 +1155,8 @@
           "device": "D0"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D0"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -1619,12 +1171,8 @@
           "device": "D0"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D0"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -1639,12 +1187,8 @@
           "device": "D0"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D0"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -1659,12 +1203,8 @@
           "device": "D0"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D0"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -1679,12 +1219,8 @@
           "device": "D0"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D0"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -1699,12 +1235,8 @@
           "device": "D0"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D0"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -1719,12 +1251,8 @@
           "device": "D0"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D0"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -1739,12 +1267,8 @@
           "device": "D0"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D0"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -1759,12 +1283,8 @@
           "device": "D0"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D0"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -1779,12 +1299,8 @@
           "device": "D0"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D0"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -1799,12 +1315,8 @@
           "device": "D0"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D0"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -1819,12 +1331,8 @@
           "device": "D0"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D0"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -1839,12 +1347,8 @@
           "device": "D0"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D0"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -1859,12 +1363,8 @@
           "device": "D0"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D0"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -1879,12 +1379,8 @@
           "device": "D0"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D0"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -1899,12 +1395,8 @@
           "device": "D0"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D0"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -1915,108 +1407,108 @@
     {
       "id": 6,
       "name": "MANUAL MODEL L1",
-      "step_start": 470,
-      "step_end": 619,
+      "step_start": 343,
+      "step_end": 467,
       "conditions": [
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LDI",
-          "device": "L3"
+          "device": "M803"
         }
       ],
       "actions": [
@@ -2029,12 +1521,8 @@
           "device": "D30"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D30"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -2049,12 +1537,8 @@
           "device": "D30"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D30"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -2069,12 +1553,8 @@
           "device": "D30"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D30"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -2089,12 +1569,8 @@
           "device": "D30"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D30"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -2109,12 +1585,8 @@
           "device": "D30"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D30"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -2129,12 +1601,8 @@
           "device": "D30"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D30"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -2149,12 +1617,8 @@
           "device": "D30"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D30"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -2169,12 +1633,8 @@
           "device": "D30"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D30"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -2189,12 +1649,8 @@
           "device": "D30"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D30"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -2209,12 +1665,8 @@
           "device": "D30"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D30"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -2229,12 +1681,8 @@
           "device": "D30"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D30"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -2249,12 +1697,8 @@
           "device": "D30"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D30"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -2269,12 +1713,8 @@
           "device": "D30"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D30"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -2289,12 +1729,8 @@
           "device": "D30"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D30"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -2309,12 +1745,8 @@
           "device": "D30"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D30"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -2329,12 +1761,8 @@
           "device": "D30"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D30"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -2349,12 +1777,8 @@
           "device": "D30"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D30"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -2369,12 +1793,8 @@
           "device": "D30"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D30"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -2389,12 +1809,8 @@
           "device": "D30"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D30"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -2409,12 +1825,8 @@
           "device": "D30"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D30"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -2429,12 +1841,8 @@
           "device": "D30"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D30"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -2449,12 +1857,8 @@
           "device": "D30"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D30"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -2469,12 +1873,8 @@
           "device": "D30"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D30"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -2489,12 +1889,8 @@
           "device": "D30"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D30"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -2509,12 +1905,8 @@
           "device": "D30"
         },
         {
-          "instruction": "LD=",
+          "instruction": "AND=",
           "device": "D30"
-        },
-        {
-          "instruction": "ANB",
-          "device": ""
         },
         {
           "instruction": "MOV",
@@ -2525,16 +1917,16 @@
     {
       "id": 7,
       "name": "BARCODE RESET",
-      "step_start": 621,
-      "step_end": 635,
+      "step_start": 469,
+      "step_end": 483,
       "conditions": [
         {
           "instruction": "LD",
-          "device": "L24"
+          "device": "M824"
         },
         {
           "instruction": "LD",
-          "device": "L40"
+          "device": "M840"
         }
       ],
       "actions": [
@@ -2552,23 +1944,23 @@
         },
         {
           "instruction": "OR",
-          "device": "L17"
+          "device": "M817"
         },
         {
           "instruction": "OR",
-          "device": "L19"
+          "device": "M819"
         },
         {
           "instruction": "OR",
-          "device": "L21"
+          "device": "M821"
         },
         {
           "instruction": "OR",
-          "device": "L23"
+          "device": "M823"
         },
         {
           "instruction": "OR",
-          "device": "L64"
+          "device": "M864"
         },
         {
           "instruction": "MOV",
@@ -2595,42 +1987,42 @@
     {
       "id": 8,
       "name": "BARCODE MODEL CLEANUP",
-      "step_start": 637,
-      "step_end": 647,
+      "step_start": 485,
+      "step_end": 495,
       "conditions": [
         {
           "instruction": "LD",
-          "device": "L3"
+          "device": "M803"
         },
         {
           "instruction": "LD",
-          "device": "L17"
+          "device": "M817"
         }
       ],
       "actions": [
         {
           "instruction": "OR",
-          "device": "L19"
+          "device": "M819"
         },
         {
           "instruction": "OR",
-          "device": "L21"
+          "device": "M821"
         },
         {
           "instruction": "OR",
-          "device": "L23"
+          "device": "M823"
         },
         {
           "instruction": "OR",
-          "device": "L24"
+          "device": "M824"
         },
         {
           "instruction": "OR",
-          "device": "L40"
+          "device": "M840"
         },
         {
           "instruction": "OR",
-          "device": "L64"
+          "device": "M864"
         },
         {
           "instruction": "ANB",

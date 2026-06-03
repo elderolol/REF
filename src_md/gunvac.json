@@ -2,7 +2,7 @@
   "meta": {
     "source_file": "gunvac.csv",
     "cpu": "QCPU (Q mode) Q03UDV",
-    "total_steps": 71,
+    "total_steps": 85,
     "block_count": 2,
     "generated": "2026-06-03"
   },
@@ -11,7 +11,7 @@
       "id": 1,
       "name": "GUN VACUUM (Line 0)",
       "step_start": 1,
-      "step_end": 35,
+      "step_end": 42,
       "conditions": [
         {
           "instruction": "LD",
@@ -19,7 +19,7 @@
         },
         {
           "instruction": "LD",
-          "device": "M18"
+          "device": "T0"
         },
         {
           "instruction": "LD",
@@ -31,11 +31,19 @@
         },
         {
           "instruction": "LD",
-          "device": "L114"
+          "device": "M18"
         },
         {
           "instruction": "LD",
-          "device": "L115"
+          "device": "M914"
+        },
+        {
+          "instruction": "LD",
+          "device": "M915"
+        },
+        {
+          "instruction": "LD",
+          "device": "M18"
         },
         {
           "instruction": "LD",
@@ -56,12 +64,32 @@
           "device": "T0"
         },
         {
+          "instruction": "AND<=",
+          "device": "D160"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M100"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M881"
+        },
+        {
+          "instruction": "ANI",
+          "device": "T7"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M100"
+        },
+        {
           "instruction": "OUT",
           "device": "M49"
         },
         {
           "instruction": "ANI",
-          "device": "L81"
+          "device": "M881"
         },
         {
           "instruction": "SET",
@@ -93,42 +121,42 @@
         },
         {
           "instruction": "SET",
-          "device": "L17"
-        },
-        {
-          "instruction": "RST",
-          "device": "M49"
-        },
-        {
-          "instruction": "RST",
-          "device": "M18"
+          "device": "M817"
         },
         {
           "instruction": "AND",
           "device": "T0"
         },
         {
-          "instruction": "ANDD<=",
+          "instruction": "AND<=",
+          "device": "D160"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M816"
+        },
+        {
+          "instruction": "AND",
+          "device": "T0"
+        },
+        {
+          "instruction": "AND<=",
           "device": "D160"
         },
         {
           "instruction": "RST",
-          "device": "M49"
-        },
-        {
-          "instruction": "SET",
-          "device": "L16"
+          "device": "M18"
         },
         {
           "instruction": "RST",
-          "device": "M18"
+          "device": "M49"
         },
         {
           "instruction": "AND",
           "device": "T0"
         },
         {
-          "instruction": "ANDD>",
+          "instruction": "AND>",
           "device": "D160"
         },
         {
@@ -137,11 +165,11 @@
         },
         {
           "instruction": "SET",
-          "device": "L17"
+          "device": "M817"
         },
         {
-          "instruction": "SET",
-          "device": "L66"
+          "instruction": "OUT",
+          "device": "M866"
         },
         {
           "instruction": "SET",
@@ -149,19 +177,19 @@
         },
         {
           "instruction": "RST",
-          "device": "M49"
+          "device": "M18"
         },
         {
           "instruction": "RST",
-          "device": "M18"
+          "device": "M49"
         }
       ]
     },
     {
       "id": 2,
       "name": "GUN VACUUM (Line 1)",
-      "step_start": 37,
-      "step_end": 71,
+      "step_start": 44,
+      "step_end": 85,
       "conditions": [
         {
           "instruction": "LD",
@@ -169,7 +197,7 @@
         },
         {
           "instruction": "LD",
-          "device": "M34"
+          "device": "T8"
         },
         {
           "instruction": "LD",
@@ -181,11 +209,19 @@
         },
         {
           "instruction": "LD",
-          "device": "L114"
+          "device": "M34"
         },
         {
           "instruction": "LD",
-          "device": "L115"
+          "device": "M914"
+        },
+        {
+          "instruction": "LD",
+          "device": "M915"
+        },
+        {
+          "instruction": "LD",
+          "device": "M34"
         },
         {
           "instruction": "LD",
@@ -206,12 +242,32 @@
           "device": "T8"
         },
         {
+          "instruction": "AND<=",
+          "device": "D172"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M101"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M897"
+        },
+        {
+          "instruction": "ANI",
+          "device": "T17"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M101"
+        },
+        {
           "instruction": "OUT",
           "device": "M65"
         },
         {
           "instruction": "ANI",
-          "device": "L97"
+          "device": "M897"
         },
         {
           "instruction": "SET",
@@ -243,42 +299,42 @@
         },
         {
           "instruction": "SET",
-          "device": "L33"
-        },
-        {
-          "instruction": "RST",
-          "device": "M65"
-        },
-        {
-          "instruction": "RST",
-          "device": "M34"
+          "device": "M833"
         },
         {
           "instruction": "AND",
           "device": "T8"
         },
         {
-          "instruction": "ANDD<=",
+          "instruction": "AND<=",
+          "device": "D172"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M832"
+        },
+        {
+          "instruction": "AND",
+          "device": "T8"
+        },
+        {
+          "instruction": "AND<=",
           "device": "D172"
         },
         {
           "instruction": "RST",
-          "device": "M65"
-        },
-        {
-          "instruction": "SET",
-          "device": "L32"
+          "device": "M34"
         },
         {
           "instruction": "RST",
-          "device": "M34"
+          "device": "M65"
         },
         {
           "instruction": "AND",
           "device": "T8"
         },
         {
-          "instruction": "ANDD>",
+          "instruction": "AND>",
           "device": "D172"
         },
         {
@@ -287,11 +343,11 @@
         },
         {
           "instruction": "SET",
-          "device": "L33"
+          "device": "M833"
         },
         {
-          "instruction": "SET",
-          "device": "L66"
+          "instruction": "OUT",
+          "device": "M866"
         },
         {
           "instruction": "SET",
@@ -299,11 +355,11 @@
         },
         {
           "instruction": "RST",
-          "device": "M65"
+          "device": "M34"
         },
         {
           "instruction": "RST",
-          "device": "M34"
+          "device": "M65"
         }
       ]
     }

@@ -1,5 +1,5 @@
 def M(h): return f"M{int(h,16)}"
-def L(h): return f"L{int(h,16)}"
+def L(h): return f"M{800 + int(h,16)}"
 def l1(s): return f"{int(s,16)+0x10:X}"
 st = 0; lines = []
 def a(i,d): global st; lines.append(f'"{st}"\t""\t"{i}"\t"{d}"\t""\t""\t""'); st += 1
@@ -12,17 +12,20 @@ def wr(p):
     c = "\r\n".join(lines) + "\r\n"
     with open(p, "wb") as f: f.write(b'\xff\xfe'); f.write(c.encode('utf-16-le'))
 
-hd("MAIN")
+hd("REF_self_holding")
 al("MODE CONTROL")
 a("LD", M("40E")); a("PLS", M("600"))
-a("LD", M("600")); a("AND", L("1")); a("SET", L("2")); a("RST", L("1"))
-a("LD", M("600")); a("ANI", L("1")); a("SET", L("1")); a("RST", L("2"))
+# L1/L2 self-holding toggle: (M1536·L2) + (L1·/M1536)
+a("LD", M("600")); a("AND", L("2")); a("LD", L("1")); a("ANI", M("600")); a("ORB",""); a("OUT", L("1"))
+# L2: (M1536·L1) + (L2·/M1536)
+a("LD", M("600")); a("AND", L("1")); a("LD", L("2")); a("ANI", M("600")); a("ORB",""); a("OUT", L("2"))
 a("LD", M("400")); a("OR", L("70")); a("ANI", M("401")); a("OUT", L("70"))
 a("LD", M("401")); a("OR", L("71")); a("ANI", M("400")); a("OUT", L("71"))
 a("LD", M("408")); a("OR", L("72")); a("ANI", M("409")); a("OUT", L("72"))
 a("LD", M("409")); a("OR", L("73")); a("ANI", M("408")); a("OUT", L("73"))
-a("LD", M("402")); a("PLS", M("601")); a("LD", M("601")); a("AND", L("74")); a("RST", L("74"))
-a("LD", M("601")); a("ANI", L("74")); a("SET", L("74"))
+# L116 self-holding complement toggle: (M1537·/L116) + (L116·/M1537)
+a("LD", M("402")); a("PLS", M("601"))
+a("LD", M("601")); a("ANI", L("74")); a("LD", L("74")); a("ANI", M("601")); a("ORB",""); a("OUT", L("74"))
 
 al("INTERLOCK CHECK")
 a("LD", L("51")); a("AND", L("52")); a("AND", L("53")); a("AND", L("54")); a("AND", L("55")); a("OUT", L("50"))
@@ -214,7 +217,6 @@ a("LD", M("28")); a("MOV", "K1"); ac("D8012")
 
 # ===== NG ALARM STOP =====
 # Self-holding: active steps turn off via alarm ANI in each step's self-hold rung
-# Result codes: L17→K3 Gun vacuum NG, L19→K4 Unit vacuum NG, L21→K5 Vacuum check NG, L23→K2 Charging NG
 al("NG ALARM STOP")
 a("LD", L("11")); a("MOV", "K3"); ac("D7012"); a("MOV", "K3"); ac("D8012")
 a("LD", L("13")); a("MOV", "K4"); ac("D7012"); a("MOV", "K4"); ac("D8012")
@@ -243,7 +245,7 @@ a("MOV","K6 D7012"); a("MOV","K6 D8012")
 
 # ===== EMERGENCY STOP =====
 al("EMERGENCY STOP")
-a("LDI",M("303")); a("SET",L("40"))
+a("LDI",M("303"))
 a("MOV","K6 D7012"); a("MOV","K6 D8012")
 for cs in range(0,len(all_sh),8):
     if cs>0: a("LD","M0")

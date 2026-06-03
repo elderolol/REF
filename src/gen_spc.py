@@ -1,4 +1,4 @@
-# SPC — Cycle done accumulation + VAC SPC logging
+﻿# SPC ??Cycle done accumulation + VAC SPC logging
 st = 0; lines = []
 def a(i,d): global st; lines.append(f'"{st}"\t""\t"{i}"\t"{d}"\t""\t""\t""'); st += 1
 def ac(d): lines.append(f'""\t""\t""\t"{d}"\t""\t""\t""')
@@ -10,28 +10,28 @@ def wr(p):
     c = "\r\n".join(lines) + "\r\n"
     with open(p, "wb") as f: f.write(b'\xff\xfe'); f.write(c.encode('utf-16-le'))
 
-hd("spc")
+hd("REF_self_holding")
 
 # ===== L0 CYCLE DONE =====
 al("L0 CYCLE DONE")
-a("LD", "L24"); a("D+", "D280"); ac("D130"); ac("D280")
-a("LD", "L24"); a("D+", "D282"); ac("K1"); ac("D282")
-a("LD", "L24"); a("D+", "D284"); ac("D124"); ac("D284")
-a("LD", "L24"); a("DMOV", "D130"); ac("D286")
-a("LD", "L24"); a("DMOV", "D128"); ac("D288")
+a("LD", "M824"); a("D+", "D280"); ac("D130"); ac("D280")
+a("LD", "M824"); a("D+", "D282"); ac("K1"); ac("D282")
+a("LD", "M824"); a("D+", "D284"); ac("D124"); ac("D284")
+a("LD", "M824"); a("DMOV", "D130"); ac("D286")
+a("LD", "M824"); a("DMOV", "D128"); ac("D288")
 
 # ===== L1 CYCLE DONE =====
 al("L1 CYCLE DONE")
-a("LD", "L40"); a("D+", "D290"); ac("D406"); ac("D290")
-a("LD", "L40"); a("D+", "D292"); ac("K1"); ac("D292")
-a("LD", "L40"); a("D+", "D294"); ac("D400"); ac("D294")
-a("LD", "L40"); a("DMOV", "D406"); ac("D296")
-a("LD", "L40"); a("DMOV", "D128"); ac("D298")
+a("LD", "M840"); a("D+", "D290"); ac("D406"); ac("D290")
+a("LD", "M840"); a("D+", "D292"); ac("K1"); ac("D292")
+a("LD", "M840"); a("D+", "D294"); ac("D400"); ac("D294")
+a("LD", "M840"); a("DMOV", "D406"); ac("D296")
+a("LD", "M840"); a("DMOV", "D128"); ac("D298")
 
 # ===== DISPLAY BOMBE =====
 al("DISPLAY BOMBE")
 a("LD", "M0"); a("MOV", "D282"); ac("D88")
-a("LDD>=", "D280"); ac("D14"); a("SET", "L75")
+a("LDD>=", "D280"); ac("D14"); a("SET", "M875")
 
 # ===== VAC SPC LOGGING =====
 al("VAC SPC LOGGING")
@@ -53,3 +53,4 @@ a("FMOV", "K0"); ac("D8020"); ac("K200")
 
 a("END","")
 wr("F:\\WorkSpace\\REF\\src\\spc.csv")
+

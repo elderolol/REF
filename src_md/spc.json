@@ -15,23 +15,23 @@
       "conditions": [
         {
           "instruction": "LD",
-          "device": "L24"
+          "device": "M824"
         },
         {
           "instruction": "LD",
-          "device": "L24"
+          "device": "M824"
         },
         {
           "instruction": "LD",
-          "device": "L24"
+          "device": "M824"
         },
         {
           "instruction": "LD",
-          "device": "L24"
+          "device": "M824"
         },
         {
           "instruction": "LD",
-          "device": "L24"
+          "device": "M824"
         }
       ],
       "actions": [
@@ -65,23 +65,23 @@
       "conditions": [
         {
           "instruction": "LD",
-          "device": "L40"
+          "device": "M840"
         },
         {
           "instruction": "LD",
-          "device": "L40"
+          "device": "M840"
         },
         {
           "instruction": "LD",
-          "device": "L40"
+          "device": "M840"
         },
         {
           "instruction": "LD",
-          "device": "L40"
+          "device": "M840"
         },
         {
           "instruction": "LD",
-          "device": "L40"
+          "device": "M840"
         }
       ],
       "actions": [
@@ -129,7 +129,7 @@
         },
         {
           "instruction": "SET",
-          "device": "L75"
+          "device": "M875"
         }
       ]
     },

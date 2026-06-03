@@ -2,7 +2,7 @@
   "meta": {
     "source_file": "vacchec.csv",
     "cpu": "QCPU (Q mode) Q03UDV",
-    "total_steps": 43,
+    "total_steps": 47,
     "block_count": 2,
     "generated": "2026-06-03"
   },
@@ -11,8 +11,16 @@
       "id": 1,
       "name": "VAC CHECK L0",
       "step_start": 1,
-      "step_end": 21,
+      "step_end": 23,
       "conditions": [
+        {
+          "instruction": "LD",
+          "device": "M20"
+        },
+        {
+          "instruction": "LD",
+          "device": "M20"
+        },
         {
           "instruction": "LD",
           "device": "M20"
@@ -48,65 +56,73 @@
           "device": "T2"
         },
         {
+          "instruction": "D-",
+          "device": "D300"
+        },
+        {
           "instruction": "AND",
           "device": "M775"
         },
         {
-          "instruction": "SET",
-          "device": "L78"
+          "instruction": "OUT",
+          "device": "M878"
         },
         {
-          "instruction": "SET",
-          "device": "L21"
+          "instruction": "AND",
+          "device": "M775"
         },
         {
-          "instruction": "RST",
-          "device": "M20"
+          "instruction": "AND>",
+          "device": "D304"
         },
         {
-          "instruction": "D-",
-          "device": "D300"
+          "instruction": "ORB",
+          "device": ""
+        },
+        {
+          "instruction": "OUT",
+          "device": "M821"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D304"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M868"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M775"
         },
         {
           "instruction": "AND",
           "device": "T2"
         },
         {
-          "instruction": "ANDD<=",
+          "instruction": "AND<=",
           "device": "D304"
         },
         {
-          "instruction": "SET",
-          "device": "L20"
-        },
-        {
-          "instruction": "RST",
-          "device": "M20"
-        },
-        {
-          "instruction": "ANDD>",
-          "device": "D304"
-        },
-        {
-          "instruction": "SET",
-          "device": "L21"
-        },
-        {
-          "instruction": "SET",
-          "device": "L68"
-        },
-        {
-          "instruction": "RST",
-          "device": "M20"
+          "instruction": "OUT",
+          "device": "M820"
         }
       ]
     },
     {
       "id": 2,
       "name": "VAC CHECK L1",
-      "step_start": 23,
-      "step_end": 43,
+      "step_start": 25,
+      "step_end": 47,
       "conditions": [
+        {
+          "instruction": "LD",
+          "device": "M36"
+        },
+        {
+          "instruction": "LD",
+          "device": "M36"
+        },
         {
           "instruction": "LD",
           "device": "M36"
@@ -142,56 +158,56 @@
           "device": "T11"
         },
         {
+          "instruction": "D-",
+          "device": "D306"
+        },
+        {
           "instruction": "AND",
           "device": "M791"
         },
         {
-          "instruction": "SET",
-          "device": "L79"
+          "instruction": "OUT",
+          "device": "M879"
         },
         {
-          "instruction": "SET",
-          "device": "L37"
+          "instruction": "AND",
+          "device": "M791"
         },
         {
-          "instruction": "RST",
-          "device": "M36"
+          "instruction": "AND>",
+          "device": "D308"
         },
         {
-          "instruction": "D-",
-          "device": "D306"
+          "instruction": "ORB",
+          "device": ""
+        },
+        {
+          "instruction": "OUT",
+          "device": "M837"
+        },
+        {
+          "instruction": "AND>",
+          "device": "D308"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M868"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M791"
         },
         {
           "instruction": "AND",
           "device": "T11"
         },
         {
-          "instruction": "ANDD<=",
+          "instruction": "AND<=",
           "device": "D308"
         },
         {
-          "instruction": "SET",
-          "device": "L36"
-        },
-        {
-          "instruction": "RST",
-          "device": "M36"
-        },
-        {
-          "instruction": "ANDD>",
-          "device": "D308"
-        },
-        {
-          "instruction": "SET",
-          "device": "L37"
-        },
-        {
-          "instruction": "SET",
-          "device": "L68"
-        },
-        {
-          "instruction": "RST",
-          "device": "M36"
+          "instruction": "OUT",
+          "device": "M836"
         }
       ]
     }

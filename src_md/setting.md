@@ -1,5 +1,5 @@
 ---
-# setting — IL Logic Map
+# REF_self_holding — IL Logic Map
 **CPU:** QCPU (Q mode) Q03UDV
 **Total Steps:** 4
 **Blocks:** 1

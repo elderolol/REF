@@ -1,5 +1,5 @@
-# GMES — PC communication + result code
-# Model/injection → indexs.csv, VAC SPC → spc.csv
+﻿# GMES ??PC communication + result code
+# Model/injection ??indexs.csv, VAC SPC ??spc.csv
 st = 0; lines = []
 def a(i,d): global st; lines.append(f'"{st}"\t""\t"{i}"\t"{d}"\t""\t""\t""'); st += 1
 def ac(d): lines.append(f'""\t""\t""\t"{d}"\t""\t""\t""')
@@ -11,11 +11,11 @@ def wr(p):
     c = "\r\n".join(lines) + "\r\n"
     with open(p, "wb") as f: f.write(b'\xff\xfe'); f.write(c.encode('utf-16-le'))
 
-hd("gmes")
+hd("REF_self_holding")
 
 # ===== PC COMM L1 =====
 al("PC COMM L1")
-# D7002/D7003: D7001 non-zero → update continuously
+# D7002/D7003: D7001 non-zero ??update continuously
 a("LD>", "D7001"); ac("K0")
 a("MOV", "D7000"); ac("D7002")
 a("MOV", "D7001"); ac("D7003")
@@ -29,8 +29,8 @@ a("LD", "M0"); a("DMOV", "D160"); ac("D7010")
 a("LD", "M0"); a("DMOV", "D22"); ac("D7013")
 a("LD", "M0"); a("MOV", "K1"); ac("D7017")
 a("LD", "M0"); a("MOV", "K0"); ac("D7018")
-a("LD", "L3"); a("MOV", "K1"); ac("D7009")
-a("LDI", "L3"); a("MOV", "K2"); ac("D7009")
+a("LD", "M803"); a("MOV", "K1"); ac("D7009")
+a("LDI", "M803"); a("MOV", "K2"); ac("D7009")
 a("LD", "M16"); a("MOV", "K0"); ac("D7016")
 a("LDI", "M16"); a("MOV", "K1"); ac("D7016")
 a("LD", "M18"); a("MOV", "K1"); ac("D7015")
@@ -41,7 +41,7 @@ a("LD", "M16"); a("MOV", "K0"); ac("D7015")
 
 # ===== PC COMM L2 =====
 al("PC COMM L2")
-# D8002/D8003: D8001 non-zero → update continuously
+# D8002/D8003: D8001 non-zero ??update continuously
 a("LD>", "D8001"); ac("K0")
 a("MOV", "D8000"); ac("D8002")
 a("MOV", "D8001"); ac("D8003")
@@ -55,8 +55,8 @@ a("LD", "M0"); a("DMOV", "D172"); ac("D8010")
 a("LD", "M0"); a("DMOV", "D50"); ac("D8013")
 a("LD", "M0"); a("MOV", "K2"); ac("D8017")
 a("LD", "M0"); a("MOV", "K0"); ac("D8018")
-a("LD", "L3"); a("MOV", "K1"); ac("D8009")
-a("LDI", "L3"); a("MOV", "K2"); ac("D8009")
+a("LD", "M803"); a("MOV", "K1"); ac("D8009")
+a("LDI", "M803"); a("MOV", "K2"); ac("D8009")
 a("LD", "M32"); a("MOV", "K0"); ac("D8016")
 a("LDI", "M32"); a("MOV", "K1"); ac("D8016")
 a("LD", "M34"); a("MOV", "K1"); ac("D8015")
@@ -67,3 +67,4 @@ a("LD", "M32"); a("MOV", "K0"); ac("D8015")
 
 a("END","")
 wr("F:\\WorkSpace\\REF\\src\\gmes.csv")
+
