@@ -30,3 +30,4 @@ Rules:
 - Skip files: `ref_comment.csv`
 - Skip folders: `src/set_reset/`
 - Always run `graphify update src_md` after conversion.
+- Generated CSVs: MAIN.csv from `gen_main_final.py`, alarm.csv from `gen_alarm.py`, vacchec.csv from `gen_vacchec.py`, gunvac.csv from `gen_gunvac.py`, unitvac.csv from `gen_unitvac.py`, refinj.csv from `gen_refinj.py`, indexs.csv from `gen_indexs.py`, spc.csv from `gen_spc.py`, gmes.csv from `gen_gmes.py`. Run all gen*.py before convert_to_md.py.

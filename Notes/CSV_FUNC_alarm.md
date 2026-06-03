@@ -11,6 +11,12 @@
 모든 알람 조건을 감시하고, 알람 발생 시 Latch, Buzzer/Lamp 출력 제어,
 Alarm Reset 처리, 출력 Interlock (알람 중 모든 출력 차단) 담당.
 
+> **2024.06 Refactoring**:  
+> - Alarm latch: SET/RST → **self-holding OUT** (`LD cond OR self ANI M1027 OUT M8xx`)
+> - L device → **M8xx** 마이그레이션 (L64→M864, L65→M865, ... L79→M879)
+> - PLS M750 제거. **M1027** (HMI alarm reset momentary) 직접 ANI로 latch clear
+> - alarm.csv SET/RST: **5개→3개** (M500 SET, M76/M876 RST만 잔존)
+
 ---
 
 ## 2. Inputs

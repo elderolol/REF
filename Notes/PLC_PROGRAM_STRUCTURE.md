@@ -86,37 +86,32 @@ Gun Global Index = Line × GunPerLine(D230) + GunLocal
 
 > **HMI 버튼은 전부 Momentary (누를 때만 ON, 떼면 OFF).**  
 > 상태 기억이 필요한 버튼은 PLC에서 Self-Hold / Toggle / Oneshot 처리.  
-> 정전 유지가 필요한 상태는 **L device** 사용 (→ `DEVICE_MAP.md` §1 L Device 참조).
+> **2024.06 Refactoring**: 모든 L device → M8xx로 마이그레이션.  
+> 정전 유지 불필요 (M device, 전원 ON 시 OFF). 알람 래치는 self-holding OUT 사용.
 
 | HMI Button | M_Addr | PLC 처리 | 상태 저장 |
 |------------|:------:|:--------:|:---------:|
-| **LINE 0 SELECT** | `M400` | Self-Hold | `L70` |
-| **LINE 1 SELECT** | `M401` | Self-Hold | `L71` |
-| INTERLOCK USE/NOT USE | `M402` | Toggle | `L74` |
-| ALARM RESET | `M403` | Oneshot | — |
-| BUZZER STOP | `M404` | Oneshot | — |
-| USER SETTING SCREEN | `M405` | Oneshot | — |
-| PARAMETER SETTING SCREEN | `M406` | Oneshot | — |
-| ALARM SCREEN | `M407` | Oneshot | — |
-| **GUN SELECT A** (현재 Line내) | `M408` | Self-Hold | `L72` |
-| **GUN SELECT B** (현재 Line내) | `M409` | Self-Hold | `L73` |
-| NUMBER OF INJECTIONS RESET | `M40A` | Oneshot | — |
-| MODEL SELECT | `M40B` | Oneshot | — |
-| VACUUM PUMP ON/OFF | `M40C` | Toggle | L bit |
-| BARCODE USE/NOT USE | `M40D` | Toggle | `L3` |
-| MANUAL/AUTO | `M40E` | Toggle | `L1/L2` |
-| GUN VACUUM (Manual) | `M40F` | Oneshot | — |
-| UNIT VACUUM (Manual) | `M410` | Oneshot | — |
-| VACUUM CHECK (Manual) | `M411` | Oneshot | — |
-| REFRIGER INJECTION (Manual) | `M412` | Oneshot | — |
-| **START (Line 0)** | `M413` | Rising Edge | — |
-| **STOP (Line 0)** | `M414` | Rising Edge | — |
-| **START (Line 1)** | `M415` | Rising Edge | — |
-| **STOP (Line 1)** | `M416` | Rising Edge | — |
+| **LINE 0 SELECT** | `M1024` | Self-Hold | `M912` |
+| **LINE 1 SELECT** | `M1025` | Self-Hold | `M913` |
+| INTERLOCK USE/NOT USE | `M1026` | Toggle (PLS) | `M916` |
+| ALARM RESET | `M1027` | 직접 ANI (self-holding latch 해제) | — |
+| BUZZER STOP | `M1028` | SET M500 (mute flag) | — |
+| **GUN SELECT A** (현재 Line내) | `M1032` | Self-Hold | `M914` |
+| **GUN SELECT B** (현재 Line내) | `M1033` | Self-Hold | `M915` |
+| BARCODE USE/NOT USE | `M1037` | Toggle | `M803` |
+| MANUAL/AUTO | `M1038` | Toggle (PLS) | `M801/M802` |
+| GUN VACUUM (Manual) | `M1039` | SET ready flag | — |
+| UNIT VACUUM (Manual) | `M1040` | SET ready flag | — |
+| VACUUM CHECK (Manual) | `M1041` | SET ready flag | — |
+| REFRIGER INJECTION (Manual) | `M1042` | SET ready flag | — |
+| **START (Line 0)** | `M1043` | SET step + RST ready | — |
+| **STOP (Line 0)** | `M1044` | Bulk RST steps | — |
+| **START (Line 1)** | `M1045` | SET step + RST ready | — |
+| **STOP (Line 1)** | `M1046` | Bulk RST steps | — |
 
-> **Line Select**: `M400/M401` 로 활성 Line을 선택 (PLC Self-Hold → L70/L71). D228 값에 따라 1 Line 구성 시 Line 1 버튼 비활성.  
-> **Gun Select**: `M408/M409` 로 현재 선택된 Line 내에서 Gun 선택 (PLC Self-Hold → L72/L73). D230 값에 따라 1 Gun/Line 구성 시 Gun B 버튼 비활성.  
-> **Line Current**: PLC 내부에서 현재 HMI 제어 대상 Line을 L bit로 유지 (L70=Line0 Active, L71=Line1 Active).
+> **Line Select**: HMI로 활성 Line 선택 (PLC Self-Hold → M912/M913).
+> **Gun Select**: 현재 Line 내 Gun 선택 (PLC Self-Hold → M914/M915).
+> **Alarm Reset**: PLS M750 제거됨. M1027 직접 ANI로 self-holding latch 해제.
 
 ### 1-2. 물리적 I/O 추정 (2 Line 기준, 참고용)
 
@@ -145,7 +140,7 @@ Gun Global Index = Line × GunPerLine(D230) + GunLocal
 | Safety PLC Healthy | `M30B` (← X0B) | Safety → Main |
 | Safety Reset Request (Hard) | `M302` (← X02) | Push Button → Main |
 | Main → Safety Reset Ack | `M50` → Y1C | Main → Safety |
-| Emergency Stop Active | `L40` | Internal latch |
+| Emergency Stop Active | `M864` | Self-holding alarm latch |
 
 ---
 
@@ -192,10 +187,12 @@ REF/
 
 ### 3-1. 핵심 할당 원칙
 
+> **2024.06 Refactoring**: L device 사용 중단. 모든 Bit는 M device 사용.
+> ALARM LATCH는 self-holding OUT (SET/RST 제거). 디버깅 편의성 향상.
+
 | Device | 용도 | Retentive |
 |:------:|------|:---------:|
-| **L** | 정전유지 Bit (Done/NG, 알람 Latch, 운전모드, Line/Gun 선택) | Y (전체 래치) |
-| **M** | Volatile Bit (Step 상태, Solenoid Coil Image, HMI 버퍼, DI Mirror) | N |
+| **M** | 모든 Bit (Step, Done/NG, 알람, 토글, 인터록, 솔레노이드) | N |
 | **D** | 파라미터 / 설정 / 누계 / 통신 (D0~D299) | Y (전체 래치) |
 | **D** | Scratch / Temp (D300~) | N |
 | **X** | 물리적 입력 — `input.csv` 통해 M Mirror | — |
@@ -205,16 +202,17 @@ REF/
 
 | Range | 용도 |
 |:-----:|------|
-| L0~L9 | System (InitDone, Auto/Manual Mode, Barcode Flag) |
-| L10~L19 | Line 0 Done/NG (GunVac, UnitVac, VacCheck, Inj, Cycle) |
-| L20~L29 | Line 1 Done/NG |
-| L30~L3F | 예비 |
-| L40~L4F | Alarm Latch (EMG, Safety, Timeout, Leak, Pressure, Temp...) |
-| L50~L5F | Line 0 Interlock Status |
-| L60~L6F | Line 1 Interlock Status |
-| L70~L7F | HMI Select (Line, Gun, Interlock Flag) |
-| L80~L8F | SPC 누계 플래그 |
-| L90~L999 | 예비 |
+> **2024.06 Refactoring**: All L → M8xx 마이그레이션. 아래는 매핑 참조.
+
+| Former L | New M | 용도 |
+|:--------:|:-----:|------|
+| L0~L3 | M800~M803 | System (InitDone, Auto/Manual, Barcode) |
+| L10~L19 | M816~M824 | Line 0 Done/NG (GunVac, UnitVac, VacCheck, Inj, Cycle) |
+| L20~L29 | M832~M840 | Line 1 Done/NG |
+| L40~L4F | M864~M879 | Alarm Latch (self-holding OUT) |
+| L50~L5F | M880~M895 | Line 0 Interlock |
+| L60~L6F | M896~M911 | Line 1 Interlock |
+| L70~L74 | M912~M916 | HMI Select (Line, Gun, Interlock Flag) |
 
 ### 3-3. M Device 요약 (Volatile Bit)
 

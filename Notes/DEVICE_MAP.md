@@ -1,100 +1,94 @@
 ﻿# Device Map — REFRIGER CHARGING MACHINE Standard Program
 
 > **Target PLC**: Mitsubishi QCPU (Q mode) Q03UDV  
+> **Refactoring Note (2024.06)**: All L devices migrated to M800-M916 (self-holding refactoring).  
+> L device retention is unnecessary — M devices reset on power cycle, simplifying debugging.  
 > **Device 할당 원칙**:
-> - **L device**: 정전 유지가 필요한 Bit (Done/NG 상태, 알람 래치, 운전 모드)
-> - **M device**: 정전 유지 불필요한 Bit (Step 상태, HMI 버튼 원본, 출력 코일 이미지)
+> - **M device (M0-M916)**: 모든 Bit (Step, 결과래치, 알람, 토글, 인터록)
 > - **D device**: 짝수 주소 할당, 16-bit도 Dn+1 예약 (32-bit 확장 대비)
 > - **X/Y device**: `input.csv` / `output.csv` 로 매핑. 프로그램 내 직접 참조 없음.
 
 ---
 
-## 1. L Device — Latch Bit (정전 유지)
+## 1. M8xx Device — Former L Device (Migrated, Volatile)
 
-> **PLC 파라미터 설정**: `L0 ~ L999` 전 범위 Battery Backup (래치)  
-> 전원 OFF 후에도 상태 유지가 필요한 Bit만 L에 할당.
+> **2024.06 Refactoring**: L device 전량 M8xx로 마이그레이션.  
+> 정전 유지 불필요 (M device, 전원 ON 시 OFF). 디버깅 편의성 향상.  
+> 매핑 규칙: `M8xx = Lxx` (예: L64 → M864)
 
-| Addr | 용도 | 상세 | Retentive |
-|:----:|------|------|:---------:|
-| **L0** | System | 초기화 완료 (InitDone) | Y |
-| **L1** | System | Auto Mode (M54 → toggle → L1) | Y |
-| **L2** | System | Manual Mode | Y |
-| **L3** | System | Barcode Use Flag | Y |
-| **L4~L9** | System | 예비 | Y |
+| M Addr | Former L | 용도 | 상세 |
+|:------:|:--------:|------|------|
+| **M800** | L0 | System | 초기화 완료 (InitDone, idata INIT SET) |
+| **M801** | L1 | System | Auto Mode (HMI PLS toggle) |
+| **M802** | L2 | System | Manual Mode |
+| **M803** | L3 | System | Barcode Use Flag |
+| **M804~M815** | L4~L15 | — | 예비 |
 | | | | |
-| **Line 0 — Done/NG (Retentive)** | | | |
-| **L10** | Done/NG L0 | GunVac Done | Y |
-| **L11** | Done/NG L0 | GunVac NG | Y |
-| **L12** | Done/NG L0 | UnitVac Done | Y |
-| **L13** | Done/NG L0 | UnitVac NG | Y |
-| **L14** | Done/NG L0 | VacCheck Done | Y |
-| **L15** | Done/NG L0 | VacCheck NG | Y |
-| **L16** | Done/NG L0 | Injection Done | Y |
-| **L17** | Done/NG L0 | Injection NG | Y |
-| **L18** | Done/NG L0 | Cycle Done | Y |
-| **L19** | Done/NG L0 | Cycle NG | Y |
+| **Line 0 — Done/NG** | | | |
+| **M816** | L16 | Done/NG L0 | GunVac Done (OUT, gunvac) |
+| **M817** | L17 | Done/NG L0 | GunVac NG (SET, gunvac) |
+| **M818** | L18 | Done/NG L0 | UnitVac Done (OUT, unitvac) |
+| **M819** | L19 | Done/NG L0 | UnitVac NG (SET, unitvac) |
+| **M820** | L20 | Done/NG L0 | VacCheck OK (OUT, vacchec) |
+| **M821** | L21 | Done/NG L0 | VacCheck NG (OUT, vacchec) |
+| **M822** | L22 | Done/NG L0 | Injection Done (SET, refinj) |
+| **M823** | L23 | Done/NG L0 | Injection NG (alarm trigger) |
+| **M824** | L24 | Done/NG L0 | Cycle Complete L0 (SET, refinj) |
 | | | | |
-| **Line 1 — Done/NG (Retentive)** | | | |
-| **L20** | Done/NG L1 | GunVac Done | Y |
-| **L21** | Done/NG L1 | GunVac NG | Y |
-| **L22** | Done/NG L1 | UnitVac Done | Y |
-| **L23** | Done/NG L1 | UnitVac NG | Y |
-| **L24** | Done/NG L1 | VacCheck Done | Y |
-| **L25** | Done/NG L1 | VacCheck NG | Y |
-| **L26** | Done/NG L1 | Injection Done | Y |
-| **L27** | Done/NG L1 | Injection NG | Y |
-| **L28** | Done/NG L1 | Cycle Done | Y |
-| **L29** | Done/NG L1 | Cycle NG | Y |
+| **Line 1 — Done/NG** | | | |
+| **M832** | L32 | Done/NG L1 | GunVac Done (OUT, gunvac) |
+| **M833** | L33 | Done/NG L1 | GunVac NG (SET, gunvac) |
+| **M834** | L34 | Done/NG L1 | UnitVac Done (OUT, unitvac) |
+| **M835** | L35 | Done/NG L1 | UnitVac NG (SET, unitvac) |
+| **M836** | L36 | Done/NG L1 | VacCheck OK (OUT, vacchec) |
+| **M837** | L37 | Done/NG L1 | VacCheck NG (OUT, vacchec) |
+| **M838** | L38 | Done/NG L1 | Injection Done (SET, refinj) |
+| **M839** | L39 | Done/NG L1 | Injection NG (alarm trigger) |
+| **M840** | L40 | Done/NG L1 | Cycle Complete L1 (SET, refinj) |
 | | | | |
-| **Alarm Latch (Retentive)** | | | |
-| **L40** | Alarm | Emergency Stop (전체 정지) | Y |
-| **L41** | Alarm | Safety PLC Fault | Y |
-| **L42** | Alarm | Gun Vacuum Timeout | Y |
-| **L43** | Alarm | Unit Vacuum Timeout | Y |
-| **L44** | Alarm | Vacuum Leak (ΔP 초과) | Y |
-| **L45** | Alarm | Injection Timeout | Y |
-| **L46** | Alarm | Injection Over (±공차 초과) | Y |
-| **L47** | Alarm | Injection Under (±공차 미달) | Y |
-| **L48** | Alarm | Pressure High | Y |
-| **L49** | Alarm | Pressure Low | Y |
-| **L4A** | Alarm | Temperature Abnormal | Y |
-| **L4B** | Alarm | Refriger Bombe Low | Y |
-| **L4C** | Alarm | **Model Not Selected** (Auto START시 D0=0) | Y |
-| **L4D** | Alarm | **Inj Amount Zero** (Auto START시 D128=0) | Y |
-| **L4E** | Alarm | Door Open (방폭) | Y |
-| **L4F** | Alarm | SPARE | Y |
+| **Alarm Latch (self-holding OUT)** | | | |
+| **M864** | L64 | Alarm | Emergency Stop (self-holding, alarm.csv) |
+| **M865** | L65 | Alarm | Door Open (self-holding) |
+| **M866** | L66 | Alarm | Gun Vacuum Timeout (self-holding) |
+| **M867** | L67 | Alarm | Unit Vacuum Timeout (self-holding) |
+| **M868** | L68 | Alarm | Vacuum Leak (self-holding) |
+| **M869** | L69 | Alarm | Injection Timeout (self-holding) |
+| **M870** | L70 | Alarm | Injection Over (self-holding) |
+| **M871** | L71 | Alarm | Injection Under (self-holding) |
+| **M872** | L72 | Alarm | Pressure High (self-holding) |
+| **M873** | L73 | Alarm | Pressure Low (self-holding) |
+| **M874** | L74 | Alarm | Temperature Abnormal (self-holding) |
+| **M875** | L75 | Alarm | Refriger Bombe Low (SET, spc) |
+| **M876** | L76 | Alarm | Model Not Selected (SET, indexs) |
+| **M877** | L77 | Alarm | Inj Amount Zero (SET, indexs) |
+| **M878** | L78 | Alarm | Door Open (self-holding) |
+| **M879** | L79 | Alarm | SPARE (self-holding) |
 | | | | |
-| **Line 0 — Interlock (Retentive)** | | | |
-| **L50** | Interlock L0 | Interlock Active (전체 조건 AND) | Y |
-| **L51** | Interlock L0 | Safety OK | Y |
-| **L52** | Interlock L0 | Vacuum Pump FB | Y |
-| **L53** | Interlock L0 | Pressure Normal | Y |
-| **L54** | Interlock L0 | Gun Connected (Coupler) | Y |
-| **L55** | Interlock L0 | Refriger Supply OK | Y |
-| **L56~L5F** | Interlock L0 | 예비 | Y |
+| **Line 0 — Interlock** | | | |
+| **M880** | L80 | Interlock L0 | Interlock Active (전체 조건 AND) |
+| **M881** | L81 | Interlock L0 | Safety OK |
+| **M882** | L82 | Interlock L0 | Vacuum Pump FB |
+| **M883** | L83 | Interlock L0 | Pressure Normal |
+| **M884** | L84 | Interlock L0 | Gun Connected |
+| **M885** | L85 | Interlock L0 | Refriger Supply OK |
+| **M886~M895** | L86~L95 | — | 예비 |
 | | | | |
-| **Line 1 — Interlock (Retentive)** | | | |
-| **L60** | Interlock L1 | Interlock Active | Y |
-| **L61** | Interlock L1 | Safety OK | Y |
-| **L62** | Interlock L1 | Vacuum Pump FB | Y |
-| **L63** | Interlock L1 | Pressure Normal | Y |
-| **L64** | Interlock L1 | Gun Connected (Coupler) | Y |
-| **L65** | Interlock L1 | Refriger Supply OK | Y |
-| **L66~L6F** | Interlock L1 | 예비 | Y |
+| **Line 1 — Interlock** | | | |
+| **M896** | L96 | Interlock L1 | Interlock Active |
+| **M897** | L97 | Interlock L1 | Safety OK |
+| **M898** | L98 | Interlock L1 | Vacuum Pump FB |
+| **M899** | L99 | Interlock L1 | Pressure Normal |
+| **M900** | L100 | Interlock L1 | Gun Connected |
+| **M901** | L101 | Interlock L1 | Refriger Supply OK |
+| **M902~M911** | L102~L111 | — | 예비 |
 | | | | |
-| **Line Select / 상태 (Retentive)** | | | |
-| **L70** | HMI | HMI Active Line = 0 | Y |
-| **L71** | HMI | HMI Active Line = 1 | Y |
-| **L72** | HMI | HMI Active Gun A (현재 Line 내) | Y |
-| **L73** | HMI | HMI Active Gun B (현재 Line 내) | Y |
-| **L74** | HMI | Interlock Use Flag | Y |
-| **L75~L7F** | HMI | 예비 | Y |
-| | | | |
-| **Cycle 누계 (Retentive)** | | | |
-| **L80~L8F** | SPC | 각종 누계/통계 플래그 | Y |
-| | | | |
-| **예비** | | | |
-| **L90~L999** | 예비 | 확장 예비 영역 | Y |
+| **Line Select / 상태** | | | |
+| **M912** | L112 | HMI | Active Line = 0 (self-holding toggle) |
+| **M913** | L113 | HMI | Active Line = 1 (self-holding toggle) |
+| **M914** | L114 | HMI | Active Gun A (self-holding toggle) |
+| **M915** | L115 | HMI | Active Gun B (self-holding toggle) |
+| **M916** | L116 | HMI | Interlock Use Flag (self-holding toggle) |
+| **M917~M999** | — | — | 예비 |
 
 ---
 
@@ -268,36 +262,50 @@
 | **M31A** | REFRIG_SUPPLY_OK_L1 | X1A |
 | **M31B~M31F** | SPARE_DI_L1 | X1B~X1F |
 
-### 2-6. HMI Button Buffer (M400~M41F)
+### 2-6. HMI Button Buffer (M1024~M1046)
 
-> HMI momentary 입력을 1 scan 동안 유지. 상태 기억/토글은 PLC 로직 처리.
+> HMI momentary 입력. 상태 기억/토글은 PLC self-holding OUT으로 처리.
 
 | Addr | HMI Button | Action | Note |
 |:----:|------------|:------:|------|
-| **M400** | LINE 0 SELECT | Momentary | → PLC Self-Hold (L70) |
-| **M401** | LINE 1 SELECT | Momentary | → PLC Self-Hold (L71) |
-| **M402** | INTERLOCK USE/NOT USE | Momentary | → PLC Toggle (L74) |
-| **M403** | ALARM RESET | Momentary | → 1-Shot |
-| **M404** | BUZZER STOP | Momentary | → 1-Shot |
-| **M405** | USER SETTING SCREEN | Momentary | → 1-Shot |
-| **M406** | PARAMETER SETTING SCREEN | Momentary | → 1-Shot |
-| **M407** | ALARM SCREEN | Momentary | → 1-Shot |
-| **M408** | GUN SELECT A | Momentary | → PLC Self-Hold (L72) |
-| **M409** | GUN SELECT B | Momentary | → PLC Self-Hold (L73) |
-| **M40A** | INJECTION COUNT RESET | Momentary | → 1-Shot |
-| **M40B** | MODEL SELECT | Momentary | → 1-Shot |
-| **M40C** | VACUUM PUMP ON/OFF | Momentary | → PLC Toggle |
-| **M40D** | BARCODE USE/NOT USE | Momentary | → PLC Toggle (L3) |
-| **M40E** | MANUAL/AUTO | Momentary | → PLC Toggle (L1/L2) |
-| **M40F** | GUN VACUUM (Manual) | Momentary | → 1-Shot (수동) |
-| **M410** | UNIT VACUUM (Manual) | Momentary | → 1-Shot (수동) |
-| **M411** | VACUUM CHECK (Manual) | Momentary | → 1-Shot (수동) |
-| **M412** | REFRIG INJECTION (Manual) | Momentary | → 1-Shot (수동) |
-| **M413** | START (Line 0) | Momentary | → Rising Edge (자동) |
-| **M414** | STOP (Line 0) | Momentary | → Rising Edge |
-| **M415** | START (Line 1) | Momentary | → Rising Edge (자동) |
-| **M416** | STOP (Line 1) | Momentary | → Rising Edge |
-| **M417~M41F** | 예비 | — | |
+| **M1024** | LINE 0 SELECT | Momentary | → PLC Self-Hold (M912) |
+| **M1025** | LINE 1 SELECT | Momentary | → PLC Self-Hold (M913) |
+| **M1026** | INTERLOCK USE/NOT USE | Momentary | → PLC Toggle (M916, PLS 필요) |
+| **M1027** | ALARM RESET | Momentary | → 직접 alarm latch self-holding 해제 (ANI M1027) |
+| **M1028** | BUZZER STOP | Momentary | → SET M500 (buzzer mute) |
+| | ... | | |
+| **M1038** | MANUAL/AUTO | Momentary | → PLC Toggle (M801/M802, PLS 필요) |
+| **M1039~M1042** | MANUAL STEP | Momentary | → SET ready flag |
+| **M1043** | START (Line 0) | Momentary | → SET step bit + RST ready |
+| **M1044** | STOP (Line 0) | Momentary | → Bulk RST steps |
+| **M1045** | START (Line 1) | Momentary | → SET step bit + RST ready |
+| **M1046** | STOP (Line 1) | Momentary | → Bulk RST steps |
+| | | | |
+
+### 2-6b. HMI Lamp Bits (M530~M541)
+
+> HMI GOT가 읽어서 버튼 백라이트에 반영. MAIN.csv가 갱신.
+
+| Addr | Lamp | 점등 조건 |
+|:----:|------|----------|
+| **M530** | GUN VAC Lamp L0 | M502(READY) OR M18(GUN VAC) |
+| **M531** | UNIT VAC Lamp L0 | M503(READY) OR M19(UNIT VAC) |
+| **M532** | VAC CHECK Lamp L0 | M504(READY) OR M20(VAC CHECK) |
+| **M533** | INJECTION Lamp L0 | M505(READY) OR M21/M22(INJ) |
+| **M534** | GUN VAC Lamp L1 | M506(READY) OR M34 |
+| **M535** | UNIT VAC Lamp L1 | M507(READY) OR M35 |
+| **M536** | VAC CHECK Lamp L1 | M508(READY) OR M36 |
+| **M537** | INJECTION Lamp L1 | M509(READY) OR M37/M38 |
+| **M540** | START Lamp L0 | M18~M24 (any L0 step) |
+| **M541** | START Lamp L1 | M34~M40 (any L1 step) |
+
+### 2-7. Communication Flags (M500~M50F) + Function Flags (M502~M509)
+
+| Addr | Signal | Note |
+|:----:|--------|------|
+| **M500** | Buzzer mute flag | SET by M1028 BUZZER STOP |
+| **M502~M505** | Manual step ready L0 | SET by HMI, RST by START EXEC |
+| **M506~M509** | Manual step ready L1 | SET by HMI, RST by START EXEC |
 ### 2-6b. HMI Lamp Bits (M530~M541)
 
 > HMI GOT가 읽어서 버튼 백라이트에 반영. MAIN.csv가 갱신.
@@ -597,14 +605,18 @@
 
 | Device | Range | 용도 | Retentive |
 |:------:|:-----:|------|:---------:|
-| **L** | L0~L999 | 정전유지 Bit (Done/NG/알람/상태) | Y (전체 래치) |
 | **M** | M0~M9 | System Flags | N |
-| **M** | M10~M29 | Step State (Line 0/1) | N |
-| **M** | M30~M6F | Solenoid Coil Images + Injection Active | N |
-| **M** | M300~M31F | Physical Input Mirrors (input.csv) | N |
-| **M** | M400~M41F | HMI Button Buffer | N |
-| **M** | M500~M50F | Communication Flags | N |
-| **M** | M600~ | 예비 | N |
+| **M** | M10~M42 | Step State (Line 0/1) | N |
+| **M** | M48~M80 | Solenoid Coil Images + Safety | N |
+| **M** | M96~M99 | Injection Active Flags | N |
+| **M** | M100~M103 | Scratch (temp flags) | N |
+| **M** | M500 | Buzzer mute | N |
+| **M** | M502~M509 | Manual step ready | N |
+| **M** | M530~M541 | HMI Lamp bits | N |
+| **M** | M600~M601 | PLS toggle intermediate | N |
+| **M** | M768~M799 | Physical Input Mirrors | N |
+| **M** | M800~M916 | Former L devices (Done/NG/알람/토글/인터록) | N |
+| **M** | M1024~M1046 | HMI Button Buffer | N |
 | **D** | D0~D299 | 파라미터 / 설정 / 누계 / 통신 | Y (전체 래치) |
 | **D** | D300~D32F | HSC Parameters (D310~D31F) | N |
 | **D** | D330~D6979 | Scratch / Temp / 예비 | N |
@@ -616,7 +628,7 @@
 
 ---
 
-## 4. Timer 할당 (T)
+## 3. Timer 할당 (T)
 
 | Addr | 용도 | Time Base | 소속 |
 |:----:|------|:---------:|:----:|
