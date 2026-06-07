@@ -1,7 +1,8 @@
 ﻿# REFRIGER CHARGING MACHINE — Operation Scenario
 
-> 작성일: 2026-06-05
-> Re-planned from scratch (Session 1). This document supersedes all prior versions.
+> 작성일: 2026-06-05 | 구현일: 2026-06-06
+> Re-planned from scratch (Session 1). This document is the **design reference**.
+> 실제 구현은 `Notes/REF_DOCUMENT.md` 와 `src/gen_*.py` 참조.
 > **PLC**: Mitsubishi QCPU (Q mode) Q03UDV | **Tool**: GX Works2 IL
 
 ---

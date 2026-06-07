@@ -580,6 +580,78 @@
       "norm_label": "blocks"
     },
     {
+      "label": "oilinj.json",
+      "file_type": "code",
+      "source_file": "oilinj.json",
+      "source_location": "L1",
+      "id": "oilinj_json_oilinj",
+      "community": 40,
+      "norm_label": "oilinj.json"
+    },
+    {
+      "label": "meta",
+      "file_type": "code",
+      "source_file": "oilinj.json",
+      "source_location": "L2",
+      "id": "oilinj_meta",
+      "community": 40,
+      "norm_label": "meta"
+    },
+    {
+      "label": "source_file",
+      "file_type": "code",
+      "source_file": "oilinj.json",
+      "source_location": "L3",
+      "id": "oilinj_meta_source_file",
+      "community": 40,
+      "norm_label": "source_file"
+    },
+    {
+      "label": "cpu",
+      "file_type": "code",
+      "source_file": "oilinj.json",
+      "source_location": "L4",
+      "id": "oilinj_meta_cpu",
+      "community": 40,
+      "norm_label": "cpu"
+    },
+    {
+      "label": "total_steps",
+      "file_type": "code",
+      "source_file": "oilinj.json",
+      "source_location": "L5",
+      "id": "oilinj_meta_total_steps",
+      "community": 40,
+      "norm_label": "total_steps"
+    },
+    {
+      "label": "block_count",
+      "file_type": "code",
+      "source_file": "oilinj.json",
+      "source_location": "L6",
+      "id": "oilinj_meta_block_count",
+      "community": 40,
+      "norm_label": "block_count"
+    },
+    {
+      "label": "generated",
+      "file_type": "code",
+      "source_file": "oilinj.json",
+      "source_location": "L7",
+      "id": "oilinj_meta_generated",
+      "community": 40,
+      "norm_label": "generated"
+    },
+    {
+      "label": "blocks",
+      "file_type": "code",
+      "source_file": "oilinj.json",
+      "source_location": "L9",
+      "id": "oilinj_blocks",
+      "community": 40,
+      "norm_label": "blocks"
+    },
+    {
       "label": "ref_comment.json",
       "file_type": "code",
       "source_file": "ref_comment.json",
@@ -1044,7 +1116,7 @@
       "source_file": "MAIN.md",
       "source_location": "L1",
       "id": "main_md_main",
-      "community": 0,
+      "community": 41,
       "norm_label": "main.md"
     },
     {
@@ -1053,7 +1125,7 @@
       "source_file": "MAIN.md",
       "source_location": "L2",
       "id": "main_ref_self_holding_il_logic_map",
-      "community": 0,
+      "community": 41,
       "norm_label": "ref_self_holding \u2014 il logic map"
     },
     {
@@ -1062,151 +1134,205 @@
       "source_file": "MAIN.md",
       "source_location": "L9",
       "id": "main_block_list",
-      "community": 0,
+      "community": 41,
       "norm_label": "block list"
     },
     {
       "label": "Block Detail",
       "file_type": "document",
       "source_file": "MAIN.md",
-      "source_location": "L27",
+      "source_location": "L33",
       "id": "main_block_detail",
       "community": 0,
       "norm_label": "block detail"
     },
     {
-      "label": "Block 1: MODE CONTROL (Step 1\u201338)",
+      "label": "Block 1: SYSTEM FLAGS (Step 1\u20136)",
       "file_type": "document",
       "source_file": "MAIN.md",
-      "source_location": "L29",
-      "id": "main_block_1_mode_control_step_1_38",
+      "source_location": "L35",
+      "id": "main_block_1_system_flags_step_1_6",
       "community": 0,
-      "norm_label": "block 1: mode control (step 1\u201338)"
+      "norm_label": "block 1: system flags (step 1\u20136)"
     },
     {
-      "label": "Block 2: INTERLOCK CHECK (Step 40\u201351)",
+      "label": "Block 2: POWER-ON DEFAULTS (Step 8\u201323)",
       "file_type": "document",
       "source_file": "MAIN.md",
-      "source_location": "L73",
-      "id": "main_block_2_interlock_check_step_40_51",
+      "source_location": "L47",
+      "id": "main_block_2_power_on_defaults_step_8_23",
       "community": 0,
-      "norm_label": "block 2: interlock check (step 40\u201351)"
+      "norm_label": "block 2: power-on defaults (step 8\u201323)"
     },
     {
-      "label": "Block 3: READY SET L0 (Step 53\u201368)",
+      "label": "Block 3: MODE CONTROL (Step 25\u201336)",
       "file_type": "document",
       "source_file": "MAIN.md",
-      "source_location": "L91",
-      "id": "main_block_3_ready_set_l0_step_53_68",
+      "source_location": "L69",
+      "id": "main_block_3_mode_control_step_25_36",
       "community": 0,
-      "norm_label": "block 3: ready set l0 (step 53\u201368)"
+      "norm_label": "block 3: mode control (step 25\u201336)"
     },
     {
-      "label": "Block 4: READY SET L1 (Step 70\u201385)",
+      "label": "Block 4: GUN SELECT (Step 38\u201351)",
       "file_type": "document",
       "source_file": "MAIN.md",
-      "source_location": "L113",
-      "id": "main_block_4_ready_set_l1_step_70_85",
+      "source_location": "L87",
+      "id": "main_block_4_gun_select_step_38_51",
       "community": 0,
-      "norm_label": "block 4: ready set l1 (step 70\u201385)"
+      "norm_label": "block 4: gun select (step 38\u201351)"
     },
     {
-      "label": "Block 5: START EXEC L0 (Step 87\u2013102)",
+      "label": "Block 5: OIL+REFRIG ENABLE (Step 53\u201360)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L107",
+      "id": "main_block_5_oil_refrig_enable_step_53_60",
+      "community": 0,
+      "norm_label": "block 5: oil+refrig enable (step 53\u201360)"
+    },
+    {
+      "label": "Block 6: INTERLOCK ENABLE (Step 62\u201369)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L121",
+      "id": "main_block_6_interlock_enable_step_62_69",
+      "community": 0,
+      "norm_label": "block 6: interlock enable (step 62\u201369)"
+    },
+    {
+      "label": "Block 7: READY SET (Step 71\u2013122)",
       "file_type": "document",
       "source_file": "MAIN.md",
       "source_location": "L135",
-      "id": "main_block_5_start_exec_l0_step_87_102",
+      "id": "main_block_7_ready_set_step_71_122",
       "community": 0,
-      "norm_label": "block 5: start exec l0 (step 87\u2013102)"
+      "norm_label": "block 7: ready set (step 71\u2013122)"
     },
     {
-      "label": "Block 6: START EXEC L1 (Step 104\u2013119)",
+      "label": "Block 8: MANUAL START ENTRY (Step 124\u2013200)",
       "file_type": "document",
       "source_file": "MAIN.md",
-      "source_location": "L157",
-      "id": "main_block_6_start_exec_l1_step_104_119",
+      "source_location": "L193",
+      "id": "main_block_8_manual_start_entry_step_124_200",
       "community": 0,
-      "norm_label": "block 6: start exec l1 (step 104\u2013119)"
+      "norm_label": "block 8: manual start entry (step 124\u2013200)"
     },
     {
-      "label": "Block 7: STEP L0 (Step 121\u2013289)",
+      "label": "Block 9: AUTO START (Step 202\u2013227)",
       "file_type": "document",
       "source_file": "MAIN.md",
-      "source_location": "L179",
-      "id": "main_block_7_step_l0_step_121_289",
+      "source_location": "L276",
+      "id": "main_block_9_auto_start_step_202_227",
       "community": 0,
-      "norm_label": "block 7: step l0 (step 121\u2013289)"
+      "norm_label": "block 9: auto start (step 202\u2013227)"
     },
     {
-      "label": "Block 8: STEP L1 (Step 291\u2013459)",
+      "label": "Block 10: AUTO CHAIN WARMUP (Step 229\u2013390)",
       "file_type": "document",
       "source_file": "MAIN.md",
-      "source_location": "L354",
-      "id": "main_block_8_step_l1_step_291_459",
+      "source_location": "L308",
+      "id": "main_block_10_auto_chain_warmup_step_229_390",
       "community": 0,
-      "norm_label": "block 8: step l1 (step 291\u2013459)"
+      "norm_label": "block 10: auto chain warmup (step 229\u2013390)"
     },
     {
-      "label": "Block 9: NG ALARM STOP (Step 461\u2013506)",
+      "label": "Block 11: STEP L1 (Step 392\u2013583)",
       "file_type": "document",
       "source_file": "MAIN.md",
-      "source_location": "L529",
-      "id": "main_block_9_ng_alarm_stop_step_461_506",
+      "source_location": "L476",
+      "id": "main_block_11_step_l1_step_392_583",
       "community": 0,
-      "norm_label": "block 9: ng alarm stop (step 461\u2013506)"
+      "norm_label": "block 11: step l1 (step 392\u2013583)"
     },
     {
-      "label": "Block 10: STOP (Step 508\u2013567)",
+      "label": "Block 12: STEP L2 (Step 585\u2013776)",
       "file_type": "document",
       "source_file": "MAIN.md",
-      "source_location": "L581",
-      "id": "main_block_10_stop_step_508_567",
+      "source_location": "L674",
+      "id": "main_block_12_step_l2_step_585_776",
       "community": 0,
-      "norm_label": "block 10: stop (step 508\u2013567)"
+      "norm_label": "block 12: step l2 (step 585\u2013776)"
     },
     {
-      "label": "Block 11: EMERGENCY STOP (Step 569\u2013624)",
+      "label": "Block 13: STEP L3 (Step 778\u2013820)",
       "file_type": "document",
       "source_file": "MAIN.md",
-      "source_location": "L647",
-      "id": "main_block_11_emergency_stop_step_569_624",
+      "source_location": "L872",
+      "id": "main_block_13_step_l3_step_778_820",
       "community": 0,
-      "norm_label": "block 11: emergency stop (step 569\u2013624)"
+      "norm_label": "block 13: step l3 (step 778\u2013820)"
     },
     {
-      "label": "Block 12: EXHAUST TIMER (Step 626\u2013629)",
+      "label": "Block 14: INTERLOCK CHECK (Step 822\u2013833)",
       "file_type": "document",
       "source_file": "MAIN.md",
-      "source_location": "L709",
-      "id": "main_block_12_exhaust_timer_step_626_629",
+      "source_location": "L921",
+      "id": "main_block_14_interlock_check_step_822_833",
       "community": 0,
-      "norm_label": "block 12: exhaust timer (step 626\u2013629)"
+      "norm_label": "block 14: interlock check (step 822\u2013833)"
     },
     {
-      "label": "Block 13: LAMP CONTROL (Step 631\u2013670)",
+      "label": "Block 15: NG ALARM STOP (Step 835\u2013873)",
       "file_type": "document",
       "source_file": "MAIN.md",
-      "source_location": "L719",
-      "id": "main_block_13_lamp_control_step_631_670",
+      "source_location": "L939",
+      "id": "main_block_15_ng_alarm_stop_step_835_873",
       "community": 0,
-      "norm_label": "block 13: lamp control (step 631\u2013670)"
+      "norm_label": "block 15: ng alarm stop (step 835\u2013873)"
     },
     {
-      "label": "Block 14: HMI LAMP (Step 672\u2013713)",
+      "label": "Block 16: STOP (Step 875\u2013888)",
       "file_type": "document",
       "source_file": "MAIN.md",
-      "source_location": "L765",
-      "id": "main_block_14_hmi_lamp_step_672_713",
+      "source_location": "L984",
+      "id": "main_block_16_stop_step_875_888",
       "community": 0,
-      "norm_label": "block 14: hmi lamp (step 672\u2013713)"
+      "norm_label": "block 16: stop (step 875\u2013888)"
+    },
+    {
+      "label": "Block 17: EMERGENCY STOP (Step 890\u2013940)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L1004",
+      "id": "main_block_17_emergency_stop_step_890_940",
+      "community": 0,
+      "norm_label": "block 17: emergency stop (step 890\u2013940)"
+    },
+    {
+      "label": "Block 18: LAMP CONTROL (Step 942\u20131025)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L1061",
+      "id": "main_block_18_lamp_control_step_942_1025",
+      "community": 0,
+      "norm_label": "block 18: lamp control (step 942\u20131025)"
+    },
+    {
+      "label": "Block 19: STOPWATCH (Step 1027\u20131039)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L1151",
+      "id": "main_block_19_stopwatch_step_1027_1039",
+      "community": 0,
+      "norm_label": "block 19: stopwatch (step 1027\u20131039)"
+    },
+    {
+      "label": "Block 20: VACUUM PUMP (Step 1041\u20131048)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L1170",
+      "id": "main_block_20_vacuum_pump_step_1041_1048",
+      "community": 0,
+      "norm_label": "block 20: vacuum pump (step 1041\u20131048)"
     },
     {
       "label": "Device Map",
       "file_type": "document",
       "source_file": "MAIN.md",
-      "source_location": "L813",
+      "source_location": "L1184",
       "id": "main_device_map",
-      "community": 0,
+      "community": 41,
       "norm_label": "device map"
     },
     {
@@ -1219,13 +1345,13 @@
       "norm_label": "ad.md"
     },
     {
-      "label": "ad \u2014 IL Logic Map",
+      "label": "REF_self_holding \u2014 IL Logic Map",
       "file_type": "document",
       "source_file": "ad.md",
       "source_location": "L2",
-      "id": "ad_ad_il_logic_map",
+      "id": "ad_ref_self_holding_il_logic_map",
       "community": 3,
-      "norm_label": "ad \u2014 il logic map"
+      "norm_label": "ref_self_holding \u2014 il logic map"
     },
     {
       "label": "Block List",
@@ -1240,16 +1366,25 @@
       "label": "Block Detail",
       "file_type": "document",
       "source_file": "ad.md",
-      "source_location": "L13",
+      "source_location": "L14",
       "id": "ad_block_detail",
       "community": 3,
       "norm_label": "block detail"
     },
     {
+      "label": "Block 1: ANALOG RAW TO EU (Step 1\u201314)",
+      "file_type": "document",
+      "source_file": "ad.md",
+      "source_location": "L16",
+      "id": "ad_block_1_analog_raw_to_eu_step_1_14",
+      "community": 3,
+      "norm_label": "block 1: analog raw to eu (step 1\u201314)"
+    },
+    {
       "label": "Device Map",
       "file_type": "document",
       "source_file": "ad.md",
-      "source_location": "L15",
+      "source_location": "L36",
       "id": "ad_device_map",
       "community": 3,
       "norm_label": "device map"
@@ -1285,43 +1420,70 @@
       "label": "Block Detail",
       "file_type": "document",
       "source_file": "alarm.md",
-      "source_location": "L16",
+      "source_location": "L19",
       "id": "alarm_block_detail",
       "community": 5,
       "norm_label": "block detail"
     },
     {
-      "label": "Block 1: ALARM LATCH (Step 1\u201359)",
+      "label": "Block 1: SHARED ALARMS (Step 1\u201317)",
       "file_type": "document",
       "source_file": "alarm.md",
-      "source_location": "L18",
-      "id": "alarm_block_1_alarm_latch_step_1_59",
+      "source_location": "L21",
+      "id": "alarm_block_1_shared_alarms_step_1_17",
       "community": 5,
-      "norm_label": "block 1: alarm latch (step 1\u201359)"
+      "norm_label": "block 1: shared alarms (step 1\u201317)"
     },
     {
-      "label": "Block 2: BUZZER (Step 61\u201381)",
+      "label": "Block 2: L1 ALARMS (Step 19\u201365)",
       "file_type": "document",
       "source_file": "alarm.md",
-      "source_location": "L83",
-      "id": "alarm_block_2_buzzer_step_61_81",
+      "source_location": "L44",
+      "id": "alarm_block_2_l1_alarms_step_19_65",
       "community": 5,
-      "norm_label": "block 2: buzzer (step 61\u201381)"
+      "norm_label": "block 2: l1 alarms (step 19\u201365)"
     },
     {
-      "label": "Block 3: ALARM RESET (Step 83\u201386)",
+      "label": "Block 3: L2 ALARMS (Step 67\u2013113)",
       "file_type": "document",
       "source_file": "alarm.md",
-      "source_location": "L110",
-      "id": "alarm_block_3_alarm_reset_step_83_86",
+      "source_location": "L97",
+      "id": "alarm_block_3_l2_alarms_step_67_113",
       "community": 5,
-      "norm_label": "block 3: alarm reset (step 83\u201386)"
+      "norm_label": "block 3: l2 alarms (step 67\u2013113)"
+    },
+    {
+      "label": "Block 4: L3 OIL ALARMS (Step 115\u2013123)",
+      "file_type": "document",
+      "source_file": "alarm.md",
+      "source_location": "L150",
+      "id": "alarm_block_4_l3_oil_alarms_step_115_123",
+      "community": 5,
+      "norm_label": "block 4: l3 oil alarms (step 115\u2013123)"
+    },
+    {
+      "label": "Block 5: BUZZER (Step 125\u2013156)",
+      "file_type": "document",
+      "source_file": "alarm.md",
+      "source_location": "L165",
+      "id": "alarm_block_5_buzzer_step_125_156",
+      "community": 5,
+      "norm_label": "block 5: buzzer (step 125\u2013156)"
+    },
+    {
+      "label": "Block 6: ALARM RESET (Step 158\u2013159)",
+      "file_type": "document",
+      "source_file": "alarm.md",
+      "source_location": "L203",
+      "id": "alarm_block_6_alarm_reset_step_158_159",
+      "community": 5,
+      "norm_label": "block 6: alarm reset (step 158\u2013159)"
     },
     {
       "label": "Device Map",
       "file_type": "document",
       "source_file": "alarm.md",
-      "source_location": "L120",
+      "source_location": "L211",
       "id": "alarm_device_map",
       "community": 5,
       "norm_label": "device map"
@@ -1357,34 +1519,79 @@
       "label": "Block Detail",
       "file_type": "document",
       "source_file": "gmes.md",
-      "source_location": "L15",
+      "source_location": "L20",
       "id": "gmes_block_detail",
       "community": 4,
       "norm_label": "block detail"
     },
     {
-      "label": "Block 1: PC COMM L1 (Step 1\u201340)",
+      "label": "Block 1: L1 CYCLE DONE SPC (Step 1\u201316)",
       "file_type": "document",
       "source_file": "gmes.md",
-      "source_location": "L17",
-      "id": "gmes_block_1_pc_comm_l1_step_1_40",
+      "source_location": "L22",
+      "id": "gmes_block_1_l1_cycle_done_spc_step_1_16",
       "community": 4,
-      "norm_label": "block 1: pc comm l1 (step 1\u201340)"
+      "norm_label": "block 1: l1 cycle done spc (step 1\u201316)"
     },
     {
-      "label": "Block 2: PC COMM L2 (Step 42\u201381)",
+      "label": "Block 2: L2 CYCLE DONE SPC (Step 18\u201329)",
       "file_type": "document",
       "source_file": "gmes.md",
-      "source_location": "L63",
-      "id": "gmes_block_2_pc_comm_l2_step_42_81",
+      "source_location": "L44",
+      "id": "gmes_block_2_l2_cycle_done_spc_step_18_29",
       "community": 4,
-      "norm_label": "block 2: pc comm l2 (step 42\u201381)"
+      "norm_label": "block 2: l2 cycle done spc (step 18\u201329)"
+    },
+    {
+      "label": "Block 3: VAC SPC LOGGING (Step 31\u201378)",
+      "file_type": "document",
+      "source_file": "gmes.md",
+      "source_location": "L62",
+      "id": "gmes_block_3_vac_spc_logging_step_31_78",
+      "community": 4,
+      "norm_label": "block 3: vac spc logging (step 31\u201378)"
+    },
+    {
+      "label": "Block 4: VAC SPC CLEAR (Step 80\u201383)",
+      "file_type": "document",
+      "source_file": "gmes.md",
+      "source_location": "L116",
+      "id": "gmes_block_4_vac_spc_clear_step_80_83",
+      "community": 4,
+      "norm_label": "block 4: vac spc clear (step 80\u201383)"
+    },
+    {
+      "label": "Block 5: PC COMM STATUS (Step 85\u2013150)",
+      "file_type": "document",
+      "source_file": "gmes.md",
+      "source_location": "L126",
+      "id": "gmes_block_5_pc_comm_status_step_85_150",
+      "community": 4,
+      "norm_label": "block 5: pc comm status (step 85\u2013150)"
+    },
+    {
+      "label": "Block 6: INJECTION COUNT RESET (Step 152\u2013155)",
+      "file_type": "document",
+      "source_file": "gmes.md",
+      "source_location": "L198",
+      "id": "gmes_block_6_injection_count_reset_step_152_155",
+      "community": 4,
+      "norm_label": "block 6: injection count reset (step 152\u2013155)"
+    },
+    {
+      "label": "Block 7: REFRIGERANT USAGE RESET (Step 157\u2013160)",
+      "file_type": "document",
+      "source_file": "gmes.md",
+      "source_location": "L208",
+      "id": "gmes_block_7_refrigerant_usage_reset_step_157_160",
+      "community": 4,
+      "norm_label": "block 7: refrigerant usage reset (step 157\u2013160)"
     },
     {
       "label": "Device Map",
       "file_type": "document",
       "source_file": "gmes.md",
-      "source_location": "L109",
+      "source_location": "L218",
       "id": "gmes_device_map",
       "community": 4,
       "norm_label": "device map"
@@ -1426,28 +1633,28 @@
       "norm_label": "block detail"
     },
     {
-      "label": "Block 1: GUN VACUUM (Line 0) (Step 1\u201342)",
+      "label": "Block 1: GUN VAC L1 (Step 1\u201320)",
       "file_type": "document",
       "source_file": "gunvac.md",
       "source_location": "L17",
-      "id": "gunvac_block_1_gun_vacuum_line_0_step_1_42",
+      "id": "gunvac_block_1_gun_vac_l1_step_1_20",
       "community": 8,
-      "norm_label": "block 1: gun vacuum (line 0) (step 1\u201342)"
+      "norm_label": "block 1: gun vac l1 (step 1\u201320)"
     },
     {
-      "label": "Block 2: GUN VACUUM (Line 1) (Step 44\u201385)",
+      "label": "Block 2: GUN VAC L2 (Step 22\u201341)",
       "file_type": "document",
       "source_file": "gunvac.md",
-      "source_location": "L65",
-      "id": "gunvac_block_2_gun_vacuum_line_1_step_44_85",
+      "source_location": "L43",
+      "id": "gunvac_block_2_gun_vac_l2_step_22_41",
       "community": 8,
-      "norm_label": "block 2: gun vacuum (line 1) (step 44\u201385)"
+      "norm_label": "block 2: gun vac l2 (step 22\u201341)"
     },
     {
       "label": "Device Map",
       "file_type": "document",
       "source_file": "gunvac.md",
-      "source_location": "L113",
+      "source_location": "L69",
       "id": "gunvac_device_map",
       "community": 8,
       "norm_label": "device map"
@@ -1483,79 +1690,61 @@
       "label": "Block Detail",
       "file_type": "document",
       "source_file": "idata.md",
-      "source_location": "L20",
+      "source_location": "L18",
       "id": "idata_block_detail",
       "community": 2,
       "norm_label": "block detail"
     },
     {
-      "label": "Block 1: SYSTEM FLAGS (Step 1\u20139)",
+      "label": "Block 1: SYSTEM FLAGS (Step 1\u20138)",
       "file_type": "document",
       "source_file": "idata.md",
-      "source_location": "L22",
-      "id": "idata_block_1_system_flags_step_1_9",
+      "source_location": "L20",
+      "id": "idata_block_1_system_flags_step_1_8",
       "community": 2,
-      "norm_label": "block 1: system flags (step 1\u20139)"
+      "norm_label": "block 1: system flags (step 1\u20138)"
     },
     {
-      "label": "Block 2: INPUT MAPPING L0 (Step 98\u2013129)",
+      "label": "Block 2: INPUT MAPPING (X \u2192 M) (Step 10\u201365)",
       "file_type": "document",
       "source_file": "idata.md",
-      "source_location": "L37",
-      "id": "idata_block_2_input_mapping_l0_step_98_129",
+      "source_location": "L34",
+      "id": "idata_block_2_input_mapping_x_m_step_10_65",
       "community": 2,
-      "norm_label": "block 2: input mapping l0 (step 98\u2013129)"
+      "norm_label": "block 2: input mapping (x \u2192 m) (step 10\u201365)"
     },
     {
-      "label": "Block 3: INPUT MAPPING L1 (Step 131\u2013162)",
+      "label": "Block 3: INTERLOCK WIRING (Step 67\u201386)",
       "file_type": "document",
       "source_file": "idata.md",
-      "source_location": "L75",
-      "id": "idata_block_3_input_mapping_l1_step_131_162",
+      "source_location": "L96",
+      "id": "idata_block_3_interlock_wiring_step_67_86",
       "community": 2,
-      "norm_label": "block 3: input mapping l1 (step 131\u2013162)"
+      "norm_label": "block 3: interlock wiring (step 67\u201386)"
     },
     {
-      "label": "Block 4: OUTPUT MAPPING L0 (Step 164\u2013189)",
+      "label": "Block 4: OUTPUT MAPPING (M \u2192 Y) (Step 88\u2013127)",
       "file_type": "document",
       "source_file": "idata.md",
-      "source_location": "L113",
-      "id": "idata_block_4_output_mapping_l0_step_164_189",
+      "source_location": "L122",
+      "id": "idata_block_4_output_mapping_m_y_step_88_127",
       "community": 2,
-      "norm_label": "block 4: output mapping l0 (step 164\u2013189)"
+      "norm_label": "block 4: output mapping (m \u2192 y) (step 88\u2013127)"
     },
     {
-      "label": "Block 5: GLOBAL OUTPUTS (Step 191\u2013198)",
+      "label": "Block 5: HMI BUTTON BUFFER (Step 129\u2013166)",
       "file_type": "document",
       "source_file": "idata.md",
-      "source_location": "L145",
-      "id": "idata_block_5_global_outputs_step_191_198",
+      "source_location": "L168",
+      "id": "idata_block_5_hmi_button_buffer_step_129_166",
       "community": 2,
-      "norm_label": "block 5: global outputs (step 191\u2013198)"
-    },
-    {
-      "label": "Block 6: OUTPUT MAPPING L1 (Step 200\u2013223)",
-      "file_type": "document",
-      "source_file": "idata.md",
-      "source_location": "L159",
-      "id": "idata_block_6_output_mapping_l1_step_200_223",
-      "community": 2,
-      "norm_label": "block 6: output mapping l1 (step 200\u2013223)"
-    },
-    {
-      "label": "Block 7: CONFIG VALIDATION (Step 225\u2013232)",
-      "file_type": "document",
-      "source_file": "idata.md",
-      "source_location": "L189",
-      "id": "idata_block_7_config_validation_step_225_232",
-      "community": 2,
-      "norm_label": "block 7: config validation (step 225\u2013232)"
+      "norm_label": "block 5: hmi button buffer (step 129\u2013166)"
     },
     {
       "label": "Device Map",
       "file_type": "document",
       "source_file": "idata.md",
-      "source_location": "L203",
+      "source_location": "L212",
       "id": "idata_device_map",
       "community": 2,
       "norm_label": "device map"
@@ -1591,90 +1780,135 @@
       "label": "Block Detail",
       "file_type": "document",
       "source_file": "indexs.md",
-      "source_location": "L21",
+      "source_location": "L19",
       "id": "indexs_block_detail",
       "community": 25,
       "norm_label": "block detail"
     },
     {
-      "label": "Block 1: PC DATA CHECK (Step 1\u20138)",
+      "label": "Block 1: BARCODE COPY L1 (Step 1\u20132)",
       "file_type": "document",
       "source_file": "indexs.md",
-      "source_location": "L23",
-      "id": "indexs_block_1_pc_data_check_step_1_8",
+      "source_location": "L21",
+      "id": "indexs_block_1_barcode_copy_l1_step_1_2",
       "community": 25,
-      "norm_label": "block 1: pc data check (step 1\u20138)"
+      "norm_label": "block 1: barcode copy l1 (step 1\u20132)"
     },
     {
-      "label": "Block 2: AUTO BARCODE (Step 10\u201313)",
+      "label": "Block 2: BARCODE COPY L2 (Step 4\u20135)",
+      "file_type": "document",
+      "source_file": "indexs.md",
+      "source_location": "L29",
+      "id": "indexs_block_2_barcode_copy_l2_step_4_5",
+      "community": 25,
+      "norm_label": "block 2: barcode copy l2 (step 4\u20135)"
+    },
+    {
+      "label": "Block 3: L1 MODEL LOOKUP (Step 7\u2013256)",
       "file_type": "document",
       "source_file": "indexs.md",
       "source_location": "L37",
-      "id": "indexs_block_2_auto_barcode_step_10_13",
+      "id": "indexs_block_3_l1_model_lookup_step_7_256",
       "community": 25,
-      "norm_label": "block 2: auto barcode (step 10\u201313)"
+      "norm_label": "block 3: l1 model lookup (step 7\u2013256)"
     },
     {
-      "label": "Block 3: BARCODE L1 (D60~D84) (Step 15\u2013114)",
+      "label": "Block 4: L2 MODEL LOOKUP (Step 258\u2013507)",
       "file_type": "document",
       "source_file": "indexs.md",
-      "source_location": "L47",
-      "id": "indexs_block_3_barcode_l1_d60_d84_step_15_114",
+      "source_location": "L293",
+      "id": "indexs_block_4_l2_model_lookup_step_258_507",
       "community": 25,
-      "norm_label": "block 3: barcode l1 (d60~d84) (step 15\u2013114)"
+      "norm_label": "block 4: l2 model lookup (step 258\u2013507)"
     },
     {
-      "label": "Block 4: BARCODE L2 (D88~D112) (Step 116\u2013215)",
+      "label": "Block 5: BARCODE CLEAR (Step 509\u2013532)",
       "file_type": "document",
       "source_file": "indexs.md",
-      "source_location": "L153",
-      "id": "indexs_block_4_barcode_l2_d88_d112_step_116_215",
+      "source_location": "L549",
+      "id": "indexs_block_5_barcode_clear_step_509_532",
       "community": 25,
-      "norm_label": "block 4: barcode l2 (d88~d112) (step 116\u2013215)"
+      "norm_label": "block 5: barcode clear (step 509\u2013532)"
     },
     {
-      "label": "Block 5: MANUAL MODEL L0 (Step 217\u2013341)",
+      "label": "Block 6: DISPLAY CORRECTION (Step 534\u2013687)",
       "file_type": "document",
       "source_file": "indexs.md",
-      "source_location": "L259",
-      "id": "indexs_block_5_manual_model_l0_step_217_341",
+      "source_location": "L579",
+      "id": "indexs_block_6_display_correction_step_534_687",
       "community": 25,
-      "norm_label": "block 5: manual model l0 (step 217\u2013341)"
-    },
-    {
-      "label": "Block 6: MANUAL MODEL L1 (Step 343\u2013467)",
-      "file_type": "document",
-      "source_file": "indexs.md",
-      "source_location": "L390",
-      "id": "indexs_block_6_manual_model_l1_step_343_467",
-      "community": 25,
-      "norm_label": "block 6: manual model l1 (step 343\u2013467)"
-    },
-    {
-      "label": "Block 7: BARCODE RESET (Step 469\u2013483)",
-      "file_type": "document",
-      "source_file": "indexs.md",
-      "source_location": "L521",
-      "id": "indexs_block_7_barcode_reset_step_469_483",
-      "community": 25,
-      "norm_label": "block 7: barcode reset (step 469\u2013483)"
-    },
-    {
-      "label": "Block 8: BARCODE MODEL CLEANUP (Step 485\u2013495)",
-      "file_type": "document",
-      "source_file": "indexs.md",
-      "source_location": "L542",
-      "id": "indexs_block_8_barcode_model_cleanup_step_485_495",
-      "community": 25,
-      "norm_label": "block 8: barcode model cleanup (step 485\u2013495)"
+      "norm_label": "block 6: display correction (step 534\u2013687)"
     },
     {
       "label": "Device Map",
       "file_type": "document",
       "source_file": "indexs.md",
-      "source_location": "L559",
+      "source_location": "L739",
       "id": "indexs_device_map",
       "community": 25,
+      "norm_label": "device map"
+    },
+    {
+      "label": "oilinj.md",
+      "file_type": "document",
+      "source_file": "oilinj.md",
+      "source_location": "L1",
+      "id": "oilinj_md_oilinj",
+      "community": 39,
+      "norm_label": "oilinj.md"
+    },
+    {
+      "label": "REF_self_holding \u2014 IL Logic Map",
+      "file_type": "document",
+      "source_file": "oilinj.md",
+      "source_location": "L2",
+      "id": "oilinj_ref_self_holding_il_logic_map",
+      "community": 39,
+      "norm_label": "ref_self_holding \u2014 il logic map"
+    },
+    {
+      "label": "Block List",
+      "file_type": "document",
+      "source_file": "oilinj.md",
+      "source_location": "L9",
+      "id": "oilinj_block_list",
+      "community": 39,
+      "norm_label": "block list"
+    },
+    {
+      "label": "Block Detail",
+      "file_type": "document",
+      "source_file": "oilinj.md",
+      "source_location": "L15",
+      "id": "oilinj_block_detail",
+      "community": 39,
+      "norm_label": "block detail"
+    },
+    {
+      "label": "Block 1: OIL FAST (Step 1\u201350)",
+      "file_type": "document",
+      "source_file": "oilinj.md",
+      "source_location": "L17",
+      "id": "oilinj_block_1_oil_fast_step_1_50",
+      "community": 39,
+      "norm_label": "block 1: oil fast (step 1\u201350)"
+    },
+    {
+      "label": "Block 2: OIL BASE (Step 52\u2013112)",
+      "file_type": "document",
+      "source_file": "oilinj.md",
+      "source_location": "L73",
+      "id": "oilinj_block_2_oil_base_step_52_112",
+      "community": 39,
+      "norm_label": "block 2: oil base (step 52\u2013112)"
+    },
+    {
+      "label": "Device Map",
+      "file_type": "document",
+      "source_file": "oilinj.md",
+      "source_location": "L140",
+      "id": "oilinj_device_map",
+      "community": 39,
       "norm_label": "device map"
     },
     {
@@ -1735,106 +1969,70 @@
       "label": "Block Detail",
       "file_type": "document",
       "source_file": "refinj.md",
-      "source_location": "L23",
+      "source_location": "L19",
       "id": "refinj_block_detail",
       "community": 1,
       "norm_label": "block detail"
     },
     {
-      "label": "Block 1: L0 REFRIG FAST (Step 1\u201325)",
+      "label": "Block 1: L1 REFRIG FAST (Step 1\u201318)",
       "file_type": "document",
       "source_file": "refinj.md",
-      "source_location": "L25",
-      "id": "refinj_block_1_l0_refrig_fast_step_1_25",
+      "source_location": "L21",
+      "id": "refinj_block_1_l1_refrig_fast_step_1_18",
       "community": 1,
-      "norm_label": "block 1: l0 refrig fast (step 1\u201325)"
+      "norm_label": "block 1: l1 refrig fast (step 1\u201318)"
     },
     {
-      "label": "Block 2: L0 REFRIG NORMAL (Step 27\u201341)",
+      "label": "Block 2: L1 REFRIG BASE (Step 20\u201341)",
       "file_type": "document",
       "source_file": "refinj.md",
-      "source_location": "L56",
-      "id": "refinj_block_2_l0_refrig_normal_step_27_41",
+      "source_location": "L45",
+      "id": "refinj_block_2_l1_refrig_base_step_20_41",
       "community": 1,
-      "norm_label": "block 2: l0 refrig normal (step 27\u201341)"
+      "norm_label": "block 2: l1 refrig base (step 20\u201341)"
     },
     {
-      "label": "Block 3: L0 OIL FAST (Step 43\u201361)",
+      "label": "Block 3: L1 EXHAUST (Step 43\u201350)",
       "file_type": "document",
       "source_file": "refinj.md",
-      "source_location": "L77",
-      "id": "refinj_block_3_l0_oil_fast_step_43_61",
+      "source_location": "L73",
+      "id": "refinj_block_3_l1_exhaust_step_43_50",
       "community": 1,
-      "norm_label": "block 3: l0 oil fast (step 43\u201361)"
+      "norm_label": "block 3: l1 exhaust (step 43\u201350)"
     },
     {
-      "label": "Block 4: L0 OIL NORMAL (Step 63\u201375)",
+      "label": "Block 4: L2 REFRIG FAST (Step 52\u201369)",
       "file_type": "document",
       "source_file": "refinj.md",
-      "source_location": "L102",
-      "id": "refinj_block_4_l0_oil_normal_step_63_75",
+      "source_location": "L87",
+      "id": "refinj_block_4_l2_refrig_fast_step_52_69",
       "community": 1,
-      "norm_label": "block 4: l0 oil normal (step 63\u201375)"
+      "norm_label": "block 4: l2 refrig fast (step 52\u201369)"
     },
     {
-      "label": "Block 5: L0 EXHAUST (Step 77\u201385)",
+      "label": "Block 5: L2 REFRIG BASE (Step 71\u201392)",
       "file_type": "document",
       "source_file": "refinj.md",
-      "source_location": "L121",
-      "id": "refinj_block_5_l0_exhaust_step_77_85",
+      "source_location": "L111",
+      "id": "refinj_block_5_l2_refrig_base_step_71_92",
       "community": 1,
-      "norm_label": "block 5: l0 exhaust (step 77\u201385)"
+      "norm_label": "block 5: l2 refrig base (step 71\u201392)"
     },
     {
-      "label": "Block 6: L1 REFRIG FAST (Step 87\u2013123)",
+      "label": "Block 6: L2 EXHAUST (Step 94\u2013101)",
       "file_type": "document",
       "source_file": "refinj.md",
-      "source_location": "L136",
-      "id": "refinj_block_6_l1_refrig_fast_step_87_123",
+      "source_location": "L139",
+      "id": "refinj_block_6_l2_exhaust_step_94_101",
       "community": 1,
-      "norm_label": "block 6: l1 refrig fast (step 87\u2013123)"
-    },
-    {
-      "label": "Block 7: L1 REFRIG NORMAL (Step 125\u2013139)",
-      "file_type": "document",
-      "source_file": "refinj.md",
-      "source_location": "L179",
-      "id": "refinj_block_7_l1_refrig_normal_step_125_139",
-      "community": 1,
-      "norm_label": "block 7: l1 refrig normal (step 125\u2013139)"
-    },
-    {
-      "label": "Block 8: L1 OIL FAST (Step 141\u2013165)",
-      "file_type": "document",
-      "source_file": "refinj.md",
-      "source_location": "L200",
-      "id": "refinj_block_8_l1_oil_fast_step_141_165",
-      "community": 1,
-      "norm_label": "block 8: l1 oil fast (step 141\u2013165)"
-    },
-    {
-      "label": "Block 9: L1 OIL NORMAL (Step 167\u2013179)",
-      "file_type": "document",
-      "source_file": "refinj.md",
-      "source_location": "L231",
-      "id": "refinj_block_9_l1_oil_normal_step_167_179",
-      "community": 1,
-      "norm_label": "block 9: l1 oil normal (step 167\u2013179)"
-    },
-    {
-      "label": "Block 10: L1 EXHAUST (Step 181\u2013189)",
-      "file_type": "document",
-      "source_file": "refinj.md",
-      "source_location": "L250",
-      "id": "refinj_block_10_l1_exhaust_step_181_189",
-      "community": 1,
-      "norm_label": "block 10: l1 exhaust (step 181\u2013189)"
+      "norm_label": "block 6: l2 exhaust (step 94\u2013101)"
     },
     {
       "label": "Device Map",
       "file_type": "document",
       "source_file": "refinj.md",
-      "source_location": "L265",
+      "source_location": "L153",
       "id": "refinj_device_map",
       "community": 1,
       "norm_label": "device map"
@@ -1849,13 +2047,13 @@
       "norm_label": "setting.md"
     },
     {
-      "label": "setting \u2014 IL Logic Map",
+      "label": "REF_self_holding \u2014 IL Logic Map",
       "file_type": "document",
       "source_file": "setting.md",
       "source_location": "L2",
-      "id": "setting_setting_il_logic_map",
+      "id": "setting_ref_self_holding_il_logic_map",
       "community": 6,
-      "norm_label": "setting \u2014 il logic map"
+      "norm_label": "ref_self_holding \u2014 il logic map"
     },
     {
       "label": "Block List",
@@ -1876,19 +2074,19 @@
       "norm_label": "block detail"
     },
     {
-      "label": "Block 1: CONFIG SYNC (Step 1\u20134)",
+      "label": "Block 1: CONFIG SYNC (Step 1\u201316)",
       "file_type": "document",
       "source_file": "setting.md",
       "source_location": "L16",
-      "id": "setting_block_1_config_sync_step_1_4",
+      "id": "setting_block_1_config_sync_step_1_16",
       "community": 6,
-      "norm_label": "block 1: config sync (step 1\u20134)"
+      "norm_label": "block 1: config sync (step 1\u201316)"
     },
     {
       "label": "Device Map",
       "file_type": "document",
       "source_file": "setting.md",
-      "source_location": "L26",
+      "source_location": "L38",
       "id": "setting_device_map",
       "community": 6,
       "norm_label": "device map"
@@ -2020,28 +2218,28 @@
       "norm_label": "block detail"
     },
     {
-      "label": "Block 1: UNIT VACUUM (Line 0) (Step 1\u201350)",
+      "label": "Block 1: UNIT VAC L1 (Step 1\u201325)",
       "file_type": "document",
       "source_file": "unitvac.md",
       "source_location": "L17",
-      "id": "unitvac_block_1_unit_vacuum_line_0_step_1_50",
+      "id": "unitvac_block_1_unit_vac_l1_step_1_25",
       "community": 9,
-      "norm_label": "block 1: unit vacuum (line 0) (step 1\u201350)"
+      "norm_label": "block 1: unit vac l1 (step 1\u201325)"
     },
     {
-      "label": "Block 2: UNIT VACUUM (Line 1) (Step 52\u2013101)",
+      "label": "Block 2: UNIT VAC L2 (Step 27\u201351)",
       "file_type": "document",
       "source_file": "unitvac.md",
-      "source_location": "L73",
-      "id": "unitvac_block_2_unit_vacuum_line_1_step_52_101",
+      "source_location": "L48",
+      "id": "unitvac_block_2_unit_vac_l2_step_27_51",
       "community": 9,
-      "norm_label": "block 2: unit vacuum (line 1) (step 52\u2013101)"
+      "norm_label": "block 2: unit vac l2 (step 27\u201351)"
     },
     {
       "label": "Device Map",
       "file_type": "document",
       "source_file": "unitvac.md",
-      "source_location": "L129",
+      "source_location": "L79",
       "id": "unitvac_device_map",
       "community": 9,
       "norm_label": "device map"
@@ -2083,31 +2281,1669 @@
       "norm_label": "block detail"
     },
     {
+      "label": "Block 1: VAC CHECK L1 (Step 1\u201325)",
+      "file_type": "document",
+      "source_file": "vacchec.md",
+      "source_location": "L17",
+      "id": "vacchec_block_1_vac_check_l1_step_1_25",
+      "community": 10,
+      "norm_label": "block 1: vac check l1 (step 1\u201325)"
+    },
+    {
+      "label": "Block 2: VAC CHECK L2 (Step 27\u201351)",
+      "file_type": "document",
+      "source_file": "vacchec.md",
+      "source_location": "L48",
+      "id": "vacchec_block_2_vac_check_l2_step_27_51",
+      "community": 10,
+      "norm_label": "block 2: vac check l2 (step 27\u201351)"
+    },
+    {
+      "label": "Device Map",
+      "file_type": "document",
+      "source_file": "vacchec.md",
+      "source_location": "L79",
+      "id": "vacchec_device_map",
+      "community": 10,
+      "norm_label": "device map"
+    },
+    {
+      "label": "Block 2: POWER-ON DEFAULTS (Step 8\u201321)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L45",
+      "community": 0,
+      "norm_label": "block 2: power-on defaults (step 8\u201321)",
+      "id": "main_block_2_power_on_defaults_step_8_21"
+    },
+    {
+      "label": "Block 3: MODE CONTROL (Step 23\u201334)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L65",
+      "community": 0,
+      "norm_label": "block 3: mode control (step 23\u201334)",
+      "id": "main_block_3_mode_control_step_23_34"
+    },
+    {
+      "label": "Block 4: GUN SELECT (Step 36\u201349)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L83",
+      "community": 0,
+      "norm_label": "block 4: gun select (step 36\u201349)",
+      "id": "main_block_4_gun_select_step_36_49"
+    },
+    {
+      "label": "Block 5: OIL+REFRIG ENABLE (Step 51\u201358)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L103",
+      "community": 0,
+      "norm_label": "block 5: oil+refrig enable (step 51\u201358)",
+      "id": "main_block_5_oil_refrig_enable_step_51_58"
+    },
+    {
+      "label": "Block 6: READY SET (Step 60\u2013111)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L117",
+      "community": 0,
+      "norm_label": "block 6: ready set (step 60\u2013111)",
+      "id": "main_block_6_ready_set_step_60_111"
+    },
+    {
+      "label": "Block 7: MANUAL START ENTRY (Step 113\u2013189)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L175",
+      "community": 0,
+      "norm_label": "block 7: manual start entry (step 113\u2013189)",
+      "id": "main_block_7_manual_start_entry_step_113_189"
+    },
+    {
+      "label": "Block 8: AUTO START (Step 191\u2013212)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L258",
+      "community": 0,
+      "norm_label": "block 8: auto start (step 191\u2013212)",
+      "id": "main_block_8_auto_start_step_191_212"
+    },
+    {
+      "label": "Block 9: AUTO CHAIN WARMUP (Step 214\u2013332)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L286",
+      "community": 0,
+      "norm_label": "block 9: auto chain warmup (step 214\u2013332)",
+      "id": "main_block_9_auto_chain_warmup_step_214_332"
+    },
+    {
+      "label": "Block 10: STEP L1 (Step 334\u2013534)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L411",
+      "community": 0,
+      "norm_label": "block 10: step l1 (step 334\u2013534)",
+      "id": "main_block_10_step_l1_step_334_534"
+    },
+    {
+      "label": "Block 11: STEP L2 (Step 536\u2013736)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L618",
+      "community": 0,
+      "norm_label": "block 11: step l2 (step 536\u2013736)",
+      "id": "main_block_11_step_l2_step_536_736"
+    },
+    {
+      "label": "Block 12: STEP L3 (Step 738\u2013783)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L825",
+      "community": 0,
+      "norm_label": "block 12: step l3 (step 738\u2013783)",
+      "id": "main_block_12_step_l3_step_738_783"
+    },
+    {
+      "label": "Block 13: INTERLOCK CHECK (Step 785\u2013796)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L877",
+      "community": 0,
+      "norm_label": "block 13: interlock check (step 785\u2013796)",
+      "id": "main_block_13_interlock_check_step_785_796"
+    },
+    {
+      "label": "Block 14: NG ALARM STOP (Step 798\u2013836)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L895",
+      "community": 0,
+      "norm_label": "block 14: ng alarm stop (step 798\u2013836)",
+      "id": "main_block_14_ng_alarm_stop_step_798_836"
+    },
+    {
+      "label": "Block 15: STOP (Step 838\u2013851)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L940",
+      "community": 0,
+      "norm_label": "block 15: stop (step 838\u2013851)",
+      "id": "main_block_15_stop_step_838_851"
+    },
+    {
+      "label": "Block 16: EMERGENCY STOP (Step 853\u2013903)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L960",
+      "community": 0,
+      "norm_label": "block 16: emergency stop (step 853\u2013903)",
+      "id": "main_block_16_emergency_stop_step_853_903"
+    },
+    {
+      "label": "Block 17: LAMP CONTROL (Step 905\u2013994)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L1017",
+      "community": 0,
+      "norm_label": "block 17: lamp control (step 905\u2013994)",
+      "id": "main_block_17_lamp_control_step_905_994"
+    },
+    {
+      "label": "Block 18: VACUUM PUMP (Step 996\u20131003)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L1113",
+      "community": 0,
+      "norm_label": "block 18: vacuum pump (step 996\u20131003)",
+      "id": "main_block_18_vacuum_pump_step_996_1003"
+    },
+    {
+      "label": "Block 1: SHARED ALARMS (Step 1\u201316)",
+      "file_type": "document",
+      "source_file": "alarm.md",
+      "source_location": "L21",
+      "community": 5,
+      "norm_label": "block 1: shared alarms (step 1\u201316)",
+      "id": "alarm_block_1_shared_alarms_step_1_16"
+    },
+    {
+      "label": "Block 2: L1 ALARMS (Step 18\u201368)",
+      "file_type": "document",
+      "source_file": "alarm.md",
+      "source_location": "L43",
+      "community": 5,
+      "norm_label": "block 2: l1 alarms (step 18\u201368)",
+      "id": "alarm_block_2_l1_alarms_step_18_68"
+    },
+    {
+      "label": "Block 3: L2 ALARMS (Step 70\u2013120)",
+      "file_type": "document",
+      "source_file": "alarm.md",
+      "source_location": "L100",
+      "community": 5,
+      "norm_label": "block 3: l2 alarms (step 70\u2013120)",
+      "id": "alarm_block_3_l2_alarms_step_70_120"
+    },
+    {
+      "label": "Block 4: L3 OIL ALARMS (Step 122\u2013134)",
+      "file_type": "document",
+      "source_file": "alarm.md",
+      "source_location": "L157",
+      "community": 5,
+      "norm_label": "block 4: l3 oil alarms (step 122\u2013134)",
+      "id": "alarm_block_4_l3_oil_alarms_step_122_134"
+    },
+    {
+      "label": "Block 5: BUZZER (Step 136\u2013170)",
+      "file_type": "document",
+      "source_file": "alarm.md",
+      "source_location": "L176",
+      "community": 5,
+      "norm_label": "block 5: buzzer (step 136\u2013170)",
+      "id": "alarm_block_5_buzzer_step_136_170"
+    },
+    {
+      "label": "Block 6: ALARM RESET (Step 172\u2013173)",
+      "file_type": "document",
+      "source_file": "alarm.md",
+      "source_location": "L217",
+      "community": 5,
+      "norm_label": "block 6: alarm reset (step 172\u2013173)",
+      "id": "alarm_block_6_alarm_reset_step_172_173"
+    },
+    {
+      "label": "Block 1: L1 CYCLE DONE SPC (Step 1\u201312)",
+      "file_type": "document",
+      "source_file": "gmes.md",
+      "source_location": "L20",
+      "community": 4,
+      "norm_label": "block 1: l1 cycle done spc (step 1\u201312)",
+      "id": "gmes_block_1_l1_cycle_done_spc_step_1_12"
+    },
+    {
+      "label": "Block 2: L2 CYCLE DONE SPC (Step 14\u201325)",
+      "file_type": "document",
+      "source_file": "gmes.md",
+      "source_location": "L38",
+      "community": 4,
+      "norm_label": "block 2: l2 cycle done spc (step 14\u201325)",
+      "id": "gmes_block_2_l2_cycle_done_spc_step_14_25"
+    },
+    {
+      "label": "Block 3: VAC SPC LOGGING (Step 27\u201374)",
+      "file_type": "document",
+      "source_file": "gmes.md",
+      "source_location": "L56",
+      "community": 4,
+      "norm_label": "block 3: vac spc logging (step 27\u201374)",
+      "id": "gmes_block_3_vac_spc_logging_step_27_74"
+    },
+    {
+      "label": "Block 4: VAC SPC CLEAR (Step 76\u201379)",
+      "file_type": "document",
+      "source_file": "gmes.md",
+      "source_location": "L110",
+      "community": 4,
+      "norm_label": "block 4: vac spc clear (step 76\u201379)",
+      "id": "gmes_block_4_vac_spc_clear_step_76_79"
+    },
+    {
+      "label": "Block 5: PC COMM STATUS (Step 81\u2013146)",
+      "file_type": "document",
+      "source_file": "gmes.md",
+      "source_location": "L120",
+      "community": 4,
+      "norm_label": "block 5: pc comm status (step 81\u2013146)",
+      "id": "gmes_block_5_pc_comm_status_step_81_146"
+    },
+    {
+      "label": "Block 1: GUN VAC L1 (Step 1\u201322)",
+      "file_type": "document",
+      "source_file": "gunvac.md",
+      "source_location": "L17",
+      "community": 8,
+      "norm_label": "block 1: gun vac l1 (step 1\u201322)",
+      "id": "gunvac_block_1_gun_vac_l1_step_1_22"
+    },
+    {
+      "label": "Block 2: GUN VAC L2 (Step 24\u201345)",
+      "file_type": "document",
+      "source_file": "gunvac.md",
+      "source_location": "L45",
+      "community": 8,
+      "norm_label": "block 2: gun vac l2 (step 24\u201345)",
+      "id": "gunvac_block_2_gun_vac_l2_step_24_45"
+    },
+    {
+      "label": "Block 5: HMI BUTTON BUFFER (Step 129\u2013156)",
+      "file_type": "document",
+      "source_file": "idata.md",
+      "source_location": "L168",
+      "community": 2,
+      "norm_label": "block 5: hmi button buffer (step 129\u2013156)",
+      "id": "idata_block_5_hmi_button_buffer_step_129_156"
+    },
+    {
+      "label": "Block 1: L1 MODEL LOOKUP (Step 1\u2013250)",
+      "file_type": "document",
+      "source_file": "indexs.md",
+      "source_location": "L19",
+      "community": 25,
+      "norm_label": "block 1: l1 model lookup (step 1\u2013250)",
+      "id": "indexs_block_1_l1_model_lookup_step_1_250"
+    },
+    {
+      "label": "Block 2: L2 MODEL LOOKUP (Step 252\u2013501)",
+      "file_type": "document",
+      "source_file": "indexs.md",
+      "source_location": "L275",
+      "community": 25,
+      "norm_label": "block 2: l2 model lookup (step 252\u2013501)",
+      "id": "indexs_block_2_l2_model_lookup_step_252_501"
+    },
+    {
+      "label": "Block 3: BARCODE CLEAR (Step 503\u2013524)",
+      "file_type": "document",
+      "source_file": "indexs.md",
+      "source_location": "L531",
+      "community": 25,
+      "norm_label": "block 3: barcode clear (step 503\u2013524)",
+      "id": "indexs_block_3_barcode_clear_step_503_524"
+    },
+    {
+      "label": "Block 4: DISPLAY CORRECTION (Step 526\u2013679)",
+      "file_type": "document",
+      "source_file": "indexs.md",
+      "source_location": "L559",
+      "community": 25,
+      "norm_label": "block 4: display correction (step 526\u2013679)",
+      "id": "indexs_block_4_display_correction_step_526_679"
+    },
+    {
+      "label": "Block 2: POWER-ON DEFAULTS (Step 8\u201317)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L45",
+      "community": 0,
+      "norm_label": "block 2: power-on defaults (step 8\u201317)",
+      "id": "main_block_2_power_on_defaults_step_8_17"
+    },
+    {
+      "label": "Block 3: MODE CONTROL (Step 19\u201330)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L61",
+      "community": 0,
+      "norm_label": "block 3: mode control (step 19\u201330)",
+      "id": "main_block_3_mode_control_step_19_30"
+    },
+    {
+      "label": "Block 4: GUN SELECT (Step 32\u201345)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L79",
+      "community": 0,
+      "norm_label": "block 4: gun select (step 32\u201345)",
+      "id": "main_block_4_gun_select_step_32_45"
+    },
+    {
+      "label": "Block 5: OIL+REFRIG ENABLE (Step 47\u201354)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L99",
+      "community": 0,
+      "norm_label": "block 5: oil+refrig enable (step 47\u201354)",
+      "id": "main_block_5_oil_refrig_enable_step_47_54"
+    },
+    {
+      "label": "Block 6: READY SET (Step 56\u2013107)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L113",
+      "community": 0,
+      "norm_label": "block 6: ready set (step 56\u2013107)",
+      "id": "main_block_6_ready_set_step_56_107"
+    },
+    {
+      "label": "Block 7: MANUAL START ENTRY (Step 109\u2013185)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L171",
+      "community": 0,
+      "norm_label": "block 7: manual start entry (step 109\u2013185)",
+      "id": "main_block_7_manual_start_entry_step_109_185"
+    },
+    {
+      "label": "Block 8: AUTO START (Step 187\u2013208)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L254",
+      "community": 0,
+      "norm_label": "block 8: auto start (step 187\u2013208)",
+      "id": "main_block_8_auto_start_step_187_208"
+    },
+    {
+      "label": "Block 9: AUTO CHAIN WARMUP (Step 210\u2013328)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L282",
+      "community": 0,
+      "norm_label": "block 9: auto chain warmup (step 210\u2013328)",
+      "id": "main_block_9_auto_chain_warmup_step_210_328"
+    },
+    {
+      "label": "Block 10: STEP L1 (Step 330\u2013530)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L407",
+      "community": 0,
+      "norm_label": "block 10: step l1 (step 330\u2013530)",
+      "id": "main_block_10_step_l1_step_330_530"
+    },
+    {
+      "label": "Block 11: STEP L2 (Step 532\u2013732)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L614",
+      "community": 0,
+      "norm_label": "block 11: step l2 (step 532\u2013732)",
+      "id": "main_block_11_step_l2_step_532_732"
+    },
+    {
+      "label": "Block 12: STEP L3 (Step 734\u2013779)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L821",
+      "community": 0,
+      "norm_label": "block 12: step l3 (step 734\u2013779)",
+      "id": "main_block_12_step_l3_step_734_779"
+    },
+    {
+      "label": "Block 13: INTERLOCK CHECK (Step 781\u2013792)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L873",
+      "community": 0,
+      "norm_label": "block 13: interlock check (step 781\u2013792)",
+      "id": "main_block_13_interlock_check_step_781_792"
+    },
+    {
+      "label": "Block 14: NG ALARM STOP (Step 794\u2013832)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L891",
+      "community": 0,
+      "norm_label": "block 14: ng alarm stop (step 794\u2013832)",
+      "id": "main_block_14_ng_alarm_stop_step_794_832"
+    },
+    {
+      "label": "Block 15: STOP (Step 834\u2013847)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L936",
+      "community": 0,
+      "norm_label": "block 15: stop (step 834\u2013847)",
+      "id": "main_block_15_stop_step_834_847"
+    },
+    {
+      "label": "Block 16: EMERGENCY STOP (Step 849\u2013899)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L956",
+      "community": 0,
+      "norm_label": "block 16: emergency stop (step 849\u2013899)",
+      "id": "main_block_16_emergency_stop_step_849_899"
+    },
+    {
+      "label": "Block 17: LAMP CONTROL (Step 901\u2013990)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L1013",
+      "community": 0,
+      "norm_label": "block 17: lamp control (step 901\u2013990)",
+      "id": "main_block_17_lamp_control_step_901_990"
+    },
+    {
+      "label": "Block 18: VACUUM PUMP (Step 992\u2013999)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L1109",
+      "community": 0,
+      "norm_label": "block 18: vacuum pump (step 992\u2013999)",
+      "id": "main_block_18_vacuum_pump_step_992_999"
+    },
+    {
+      "label": "Block 3: VAC SPC LOGGING (Step 27\u201372)",
+      "file_type": "document",
+      "source_file": "gmes.md",
+      "source_location": "L56",
+      "community": 4,
+      "norm_label": "block 3: vac spc logging (step 27\u201372)",
+      "id": "gmes_block_3_vac_spc_logging_step_27_72"
+    },
+    {
+      "label": "Block 4: VAC SPC CLEAR (Step 74\u201377)",
+      "file_type": "document",
+      "source_file": "gmes.md",
+      "source_location": "L108",
+      "community": 4,
+      "norm_label": "block 4: vac spc clear (step 74\u201377)",
+      "id": "gmes_block_4_vac_spc_clear_step_74_77"
+    },
+    {
+      "label": "Block 5: PC COMM STATUS (Step 79\u2013144)",
+      "file_type": "document",
+      "source_file": "gmes.md",
+      "source_location": "L118",
+      "community": 4,
+      "norm_label": "block 5: pc comm status (step 79\u2013144)",
+      "id": "gmes_block_5_pc_comm_status_step_79_144"
+    },
+    {
+      "label": "Block 5: HMI BUTTON BUFFER (Step 129\u2013154)",
+      "file_type": "document",
+      "source_file": "idata.md",
+      "source_location": "L168",
+      "community": 2,
+      "norm_label": "block 5: hmi button buffer (step 129\u2013154)",
+      "id": "idata_block_5_hmi_button_buffer_step_129_154"
+    },
+    {
+      "label": "Block 9: AUTO CHAIN WARMUP (Step 210\u2013315)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L282",
+      "community": 0,
+      "norm_label": "block 9: auto chain warmup (step 210\u2013315)",
+      "id": "main_block_9_auto_chain_warmup_step_210_315"
+    },
+    {
+      "label": "Block 10: STEP L1 (Step 317\u2013383)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L394",
+      "community": 0,
+      "norm_label": "block 10: step l1 (step 317\u2013383)",
+      "id": "main_block_10_step_l1_step_317_383"
+    },
+    {
+      "label": "Block 11: STEP L2 (Step 385\u2013451)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L467",
+      "community": 0,
+      "norm_label": "block 11: step l2 (step 385\u2013451)",
+      "id": "main_block_11_step_l2_step_385_451"
+    },
+    {
+      "label": "Block 12: STEP L3 (Step 453\u2013498)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L540",
+      "community": 0,
+      "norm_label": "block 12: step l3 (step 453\u2013498)",
+      "id": "main_block_12_step_l3_step_453_498"
+    },
+    {
+      "label": "Block 13: INTERLOCK CHECK (Step 500\u2013511)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L592",
+      "community": 0,
+      "norm_label": "block 13: interlock check (step 500\u2013511)",
+      "id": "main_block_13_interlock_check_step_500_511"
+    },
+    {
+      "label": "Block 14: NG ALARM STOP (Step 513\u2013551)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L610",
+      "community": 0,
+      "norm_label": "block 14: ng alarm stop (step 513\u2013551)",
+      "id": "main_block_14_ng_alarm_stop_step_513_551"
+    },
+    {
+      "label": "Block 15: STOP (Step 553\u2013566)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L655",
+      "community": 0,
+      "norm_label": "block 15: stop (step 553\u2013566)",
+      "id": "main_block_15_stop_step_553_566"
+    },
+    {
+      "label": "Block 16: EMERGENCY STOP (Step 568\u2013618)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L675",
+      "community": 0,
+      "norm_label": "block 16: emergency stop (step 568\u2013618)",
+      "id": "main_block_16_emergency_stop_step_568_618"
+    },
+    {
+      "label": "Block 17: LAMP CONTROL (Step 620\u2013709)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L732",
+      "community": 0,
+      "norm_label": "block 17: lamp control (step 620\u2013709)",
+      "id": "main_block_17_lamp_control_step_620_709"
+    },
+    {
+      "label": "Block 18: VACUUM PUMP (Step 711\u2013718)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L828",
+      "community": 0,
+      "norm_label": "block 18: vacuum pump (step 711\u2013718)",
+      "id": "main_block_18_vacuum_pump_step_711_718"
+    },
+    {
+      "label": "Block 1: GUN VAC L1 (Step 1\u201323)",
+      "file_type": "document",
+      "source_file": "gunvac.md",
+      "source_location": "L17",
+      "community": 8,
+      "norm_label": "block 1: gun vac l1 (step 1\u201323)",
+      "id": "gunvac_block_1_gun_vac_l1_step_1_23"
+    },
+    {
+      "label": "Block 2: GUN VAC L2 (Step 25\u201347)",
+      "file_type": "document",
+      "source_file": "gunvac.md",
+      "source_location": "L46",
+      "community": 8,
+      "norm_label": "block 2: gun vac l2 (step 25\u201347)",
+      "id": "gunvac_block_2_gun_vac_l2_step_25_47"
+    },
+    {
+      "label": "Block 1: OIL FAST (Step 1\u201352)",
+      "file_type": "document",
+      "source_file": "oilinj.md",
+      "source_location": "L17",
+      "community": 39,
+      "norm_label": "block 1: oil fast (step 1\u201352)",
+      "id": "oilinj_block_1_oil_fast_step_1_52"
+    },
+    {
+      "label": "Block 2: OIL BASE (Step 54\u2013116)",
+      "file_type": "document",
+      "source_file": "oilinj.md",
+      "source_location": "L75",
+      "community": 39,
+      "norm_label": "block 2: oil base (step 54\u2013116)",
+      "id": "oilinj_block_2_oil_base_step_54_116"
+    },
+    {
+      "label": "Block 1: L1 REFRIG FAST (Step 1\u201319)",
+      "file_type": "document",
+      "source_file": "refinj.md",
+      "source_location": "L21",
+      "community": 1,
+      "norm_label": "block 1: l1 refrig fast (step 1\u201319)",
+      "id": "refinj_block_1_l1_refrig_fast_step_1_19"
+    },
+    {
+      "label": "Block 2: L1 REFRIG BASE (Step 21\u201343)",
+      "file_type": "document",
+      "source_file": "refinj.md",
+      "source_location": "L46",
+      "community": 1,
+      "norm_label": "block 2: l1 refrig base (step 21\u201343)",
+      "id": "refinj_block_2_l1_refrig_base_step_21_43"
+    },
+    {
+      "label": "Block 3: L1 EXHAUST (Step 45\u201353)",
+      "file_type": "document",
+      "source_file": "refinj.md",
+      "source_location": "L75",
+      "community": 1,
+      "norm_label": "block 3: l1 exhaust (step 45\u201353)",
+      "id": "refinj_block_3_l1_exhaust_step_45_53"
+    },
+    {
+      "label": "Block 4: L2 REFRIG FAST (Step 55\u201373)",
+      "file_type": "document",
+      "source_file": "refinj.md",
+      "source_location": "L90",
+      "community": 1,
+      "norm_label": "block 4: l2 refrig fast (step 55\u201373)",
+      "id": "refinj_block_4_l2_refrig_fast_step_55_73"
+    },
+    {
+      "label": "Block 5: L2 REFRIG BASE (Step 75\u201397)",
+      "file_type": "document",
+      "source_file": "refinj.md",
+      "source_location": "L115",
+      "community": 1,
+      "norm_label": "block 5: l2 refrig base (step 75\u201397)",
+      "id": "refinj_block_5_l2_refrig_base_step_75_97"
+    },
+    {
+      "label": "Block 6: L2 EXHAUST (Step 99\u2013107)",
+      "file_type": "document",
+      "source_file": "refinj.md",
+      "source_location": "L144",
+      "community": 1,
+      "norm_label": "block 6: l2 exhaust (step 99\u2013107)",
+      "id": "refinj_block_6_l2_exhaust_step_99_107"
+    },
+    {
+      "label": "Block 1: UNIT VAC L1 (Step 1\u201326)",
+      "file_type": "document",
+      "source_file": "unitvac.md",
+      "source_location": "L17",
+      "community": 9,
+      "norm_label": "block 1: unit vac l1 (step 1\u201326)",
+      "id": "unitvac_block_1_unit_vac_l1_step_1_26"
+    },
+    {
+      "label": "Block 2: UNIT VAC L2 (Step 28\u201353)",
+      "file_type": "document",
+      "source_file": "unitvac.md",
+      "source_location": "L49",
+      "community": 9,
+      "norm_label": "block 2: unit vac l2 (step 28\u201353)",
+      "id": "unitvac_block_2_unit_vac_l2_step_28_53"
+    },
+    {
+      "label": "Block 1: VAC CHECK L1 (Step 1\u201326)",
+      "file_type": "document",
+      "source_file": "vacchec.md",
+      "source_location": "L17",
+      "community": 10,
+      "norm_label": "block 1: vac check l1 (step 1\u201326)",
+      "id": "vacchec_block_1_vac_check_l1_step_1_26"
+    },
+    {
+      "label": "Block 2: VAC CHECK L2 (Step 28\u201353)",
+      "file_type": "document",
+      "source_file": "vacchec.md",
+      "source_location": "L49",
+      "community": 10,
+      "norm_label": "block 2: vac check l2 (step 28\u201353)",
+      "id": "vacchec_block_2_vac_check_l2_step_28_53"
+    },
+    {
+      "label": "Block 6: READY SET (Step 56\u2013105)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L113",
+      "community": 0,
+      "norm_label": "block 6: ready set (step 56\u2013105)",
+      "id": "main_block_6_ready_set_step_56_105"
+    },
+    {
+      "label": "Block 7: MANUAL START ENTRY (Step 107\u2013183)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L169",
+      "community": 0,
+      "norm_label": "block 7: manual start entry (step 107\u2013183)",
+      "id": "main_block_7_manual_start_entry_step_107_183"
+    },
+    {
+      "label": "Block 8: AUTO START (Step 185\u2013206)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L252",
+      "community": 0,
+      "norm_label": "block 8: auto start (step 185\u2013206)",
+      "id": "main_block_8_auto_start_step_185_206"
+    },
+    {
+      "label": "Block 9: AUTO CHAIN WARMUP (Step 208\u2013313)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L280",
+      "community": 0,
+      "norm_label": "block 9: auto chain warmup (step 208\u2013313)",
+      "id": "main_block_9_auto_chain_warmup_step_208_313"
+    },
+    {
+      "label": "Block 10: STEP L1 (Step 315\u2013381)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L392",
+      "community": 0,
+      "norm_label": "block 10: step l1 (step 315\u2013381)",
+      "id": "main_block_10_step_l1_step_315_381"
+    },
+    {
+      "label": "Block 11: STEP L2 (Step 383\u2013449)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L465",
+      "community": 0,
+      "norm_label": "block 11: step l2 (step 383\u2013449)",
+      "id": "main_block_11_step_l2_step_383_449"
+    },
+    {
+      "label": "Block 12: STEP L3 (Step 451\u2013496)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L538",
+      "community": 0,
+      "norm_label": "block 12: step l3 (step 451\u2013496)",
+      "id": "main_block_12_step_l3_step_451_496"
+    },
+    {
+      "label": "Block 13: INTERLOCK CHECK (Step 498\u2013509)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L590",
+      "community": 0,
+      "norm_label": "block 13: interlock check (step 498\u2013509)",
+      "id": "main_block_13_interlock_check_step_498_509"
+    },
+    {
+      "label": "Block 14: NG ALARM STOP (Step 511\u2013545)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L608",
+      "community": 0,
+      "norm_label": "block 14: ng alarm stop (step 511\u2013545)",
+      "id": "main_block_14_ng_alarm_stop_step_511_545"
+    },
+    {
+      "label": "Block 15: STOP (Step 547\u2013560)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L649",
+      "community": 0,
+      "norm_label": "block 15: stop (step 547\u2013560)",
+      "id": "main_block_15_stop_step_547_560"
+    },
+    {
+      "label": "Block 16: EMERGENCY STOP (Step 562\u2013608)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L669",
+      "community": 0,
+      "norm_label": "block 16: emergency stop (step 562\u2013608)",
+      "id": "main_block_16_emergency_stop_step_562_608"
+    },
+    {
+      "label": "Block 17: LAMP CONTROL (Step 610\u2013699)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L722",
+      "community": 0,
+      "norm_label": "block 17: lamp control (step 610\u2013699)",
+      "id": "main_block_17_lamp_control_step_610_699"
+    },
+    {
+      "label": "Block 18: VACUUM PUMP (Step 701\u2013708)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L818",
+      "community": 0,
+      "norm_label": "block 18: vacuum pump (step 701\u2013708)",
+      "id": "main_block_18_vacuum_pump_step_701_708"
+    },
+    {
+      "label": "Block 1: GUN VAC L1 (M12) (Step 1\u201325)",
+      "file_type": "document",
+      "source_file": "gunvac.md",
+      "source_location": "L17",
+      "community": 8,
+      "norm_label": "block 1: gun vac l1 (m12) (step 1\u201325)",
+      "id": "gunvac_block_1_gun_vac_l1_m12_step_1_25"
+    },
+    {
+      "label": "Block 2: GUN VAC L2 (M32) (Step 27\u201351)",
+      "file_type": "document",
+      "source_file": "gunvac.md",
+      "source_location": "L48",
+      "community": 8,
+      "norm_label": "block 2: gun vac l2 (m32) (step 27\u201351)",
+      "id": "gunvac_block_2_gun_vac_l2_m32_step_27_51"
+    },
+    {
+      "label": "Block 4: OUTPUT MAPPING (M \u2192 Y) (Step 88\u2013121)",
+      "file_type": "document",
+      "source_file": "idata.md",
+      "source_location": "L122",
+      "community": 2,
+      "norm_label": "block 4: output mapping (m \u2192 y) (step 88\u2013121)",
+      "id": "idata_block_4_output_mapping_m_y_step_88_121"
+    },
+    {
+      "label": "Block 5: HMI BUTTON BUFFER (Step 123\u2013148)",
+      "file_type": "document",
+      "source_file": "idata.md",
+      "source_location": "L162",
+      "community": 2,
+      "norm_label": "block 5: hmi button buffer (step 123\u2013148)",
+      "id": "idata_block_5_hmi_button_buffer_step_123_148"
+    },
+    {
+      "label": "Block 1: OIL FAST (Step 1\u201327)",
+      "file_type": "document",
+      "source_file": "oilinj.md",
+      "source_location": "L18",
+      "community": 39,
+      "norm_label": "block 1: oil fast (step 1\u201327)",
+      "id": "oilinj_block_1_oil_fast_step_1_27"
+    },
+    {
+      "label": "Block 2: OIL BASE (Step 29\u201365)",
+      "file_type": "document",
+      "source_file": "oilinj.md",
+      "source_location": "L51",
+      "community": 39,
+      "norm_label": "block 2: oil base (step 29\u201365)",
+      "id": "oilinj_block_2_oil_base_step_29_65"
+    },
+    {
+      "label": "Block 3: OIL COMPLETE (Step 67\u201368)",
+      "file_type": "document",
+      "source_file": "oilinj.md",
+      "source_location": "L94",
+      "community": 39,
+      "norm_label": "block 3: oil complete (step 67\u201368)",
+      "id": "oilinj_block_3_oil_complete_step_67_68"
+    },
+    {
+      "label": "Block 1: L1 REFRIG FAST (Step 1\u201321)",
+      "file_type": "document",
+      "source_file": "refinj.md",
+      "source_location": "L21",
+      "community": 1,
+      "norm_label": "block 1: l1 refrig fast (step 1\u201321)",
+      "id": "refinj_block_1_l1_refrig_fast_step_1_21"
+    },
+    {
+      "label": "Block 2: L1 REFRIG BASE (Step 23\u201347)",
+      "file_type": "document",
+      "source_file": "refinj.md",
+      "source_location": "L48",
+      "community": 1,
+      "norm_label": "block 2: l1 refrig base (step 23\u201347)",
+      "id": "refinj_block_2_l1_refrig_base_step_23_47"
+    },
+    {
+      "label": "Block 3: L1 EXHAUST (Step 49\u201357)",
+      "file_type": "document",
+      "source_file": "refinj.md",
+      "source_location": "L79",
+      "community": 1,
+      "norm_label": "block 3: l1 exhaust (step 49\u201357)",
+      "id": "refinj_block_3_l1_exhaust_step_49_57"
+    },
+    {
+      "label": "Block 4: L2 REFRIG FAST (Step 59\u201378)",
+      "file_type": "document",
+      "source_file": "refinj.md",
+      "source_location": "L94",
+      "community": 1,
+      "norm_label": "block 4: l2 refrig fast (step 59\u201378)",
+      "id": "refinj_block_4_l2_refrig_fast_step_59_78"
+    },
+    {
+      "label": "Block 5: L2 REFRIG BASE (Step 80\u2013102)",
+      "file_type": "document",
+      "source_file": "refinj.md",
+      "source_location": "L120",
+      "community": 1,
+      "norm_label": "block 5: l2 refrig base (step 80\u2013102)",
+      "id": "refinj_block_5_l2_refrig_base_step_80_102"
+    },
+    {
+      "label": "Block 6: L2 EXHAUST (Step 104\u2013112)",
+      "file_type": "document",
+      "source_file": "refinj.md",
+      "source_location": "L149",
+      "community": 1,
+      "norm_label": "block 6: l2 exhaust (step 104\u2013112)",
+      "id": "refinj_block_6_l2_exhaust_step_104_112"
+    },
+    {
+      "label": "Block 1: UNIT VAC L1 (M13) (Step 1\u201330)",
+      "file_type": "document",
+      "source_file": "unitvac.md",
+      "source_location": "L17",
+      "community": 9,
+      "norm_label": "block 1: unit vac l1 (m13) (step 1\u201330)",
+      "id": "unitvac_block_1_unit_vac_l1_m13_step_1_30"
+    },
+    {
+      "label": "Block 2: UNIT VAC L2 (M33) (Step 32\u201361)",
+      "file_type": "document",
+      "source_file": "unitvac.md",
+      "source_location": "L53",
+      "community": 9,
+      "norm_label": "block 2: unit vac l2 (m33) (step 32\u201361)",
+      "id": "unitvac_block_2_unit_vac_l2_m33_step_32_61"
+    },
+    {
+      "label": "Block 1: VAC CHECK L1 (M14) (Step 1\u201317)",
+      "file_type": "document",
+      "source_file": "vacchec.md",
+      "source_location": "L17",
+      "community": 10,
+      "norm_label": "block 1: vac check l1 (m14) (step 1\u201317)",
+      "id": "vacchec_block_1_vac_check_l1_m14_step_1_17"
+    },
+    {
+      "label": "Block 2: VAC CHECK L2 (M34) (Step 19\u201335)",
+      "file_type": "document",
+      "source_file": "vacchec.md",
+      "source_location": "L40",
+      "community": 10,
+      "norm_label": "block 2: vac check l2 (m34) (step 19\u201335)",
+      "id": "vacchec_block_2_vac_check_l2_m34_step_19_35"
+    },
+    {
+      "label": "Block 2: POWER-ON DEFAULTS (Step 8\u201315)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L44",
+      "community": 0,
+      "norm_label": "block 2: power-on defaults (step 8\u201315)",
+      "id": "main_block_2_power_on_defaults_step_8_15"
+    },
+    {
+      "label": "Block 3: MODE CONTROL (Step 17\u201328)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L58",
+      "community": 0,
+      "norm_label": "block 3: mode control (step 17\u201328)",
+      "id": "main_block_3_mode_control_step_17_28"
+    },
+    {
+      "label": "Block 4: GUN SELECT (Step 30\u201343)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L76",
+      "community": 0,
+      "norm_label": "block 4: gun select (step 30\u201343)",
+      "id": "main_block_4_gun_select_step_30_43"
+    },
+    {
+      "label": "Block 5: READY SET (Step 45\u201394)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L96",
+      "community": 0,
+      "norm_label": "block 5: ready set (step 45\u201394)",
+      "id": "main_block_5_ready_set_step_45_94"
+    },
+    {
+      "label": "Block 6: MANUAL START ENTRY (Step 96\u2013171)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L152",
+      "community": 0,
+      "norm_label": "block 6: manual start entry (step 96\u2013171)",
+      "id": "main_block_6_manual_start_entry_step_96_171"
+    },
+    {
+      "label": "Block 7: AUTO START (Step 173\u2013194)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L234",
+      "community": 0,
+      "norm_label": "block 7: auto start (step 173\u2013194)",
+      "id": "main_block_7_auto_start_step_173_194"
+    },
+    {
+      "label": "Block 8: AUTO CHAIN WARMUP (Step 196\u2013285)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L262",
+      "community": 0,
+      "norm_label": "block 8: auto chain warmup (step 196\u2013285)",
+      "id": "main_block_8_auto_chain_warmup_step_196_285"
+    },
+    {
+      "label": "Block 9: STEP L1 (Step 287\u2013353)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L358",
+      "community": 0,
+      "norm_label": "block 9: step l1 (step 287\u2013353)",
+      "id": "main_block_9_step_l1_step_287_353"
+    },
+    {
+      "label": "Block 10: STEP L2 (Step 355\u2013421)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L431",
+      "community": 0,
+      "norm_label": "block 10: step l2 (step 355\u2013421)",
+      "id": "main_block_10_step_l2_step_355_421"
+    },
+    {
+      "label": "Block 11: STEP L3 (Step 423\u2013468)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L504",
+      "community": 0,
+      "norm_label": "block 11: step l3 (step 423\u2013468)",
+      "id": "main_block_11_step_l3_step_423_468"
+    },
+    {
+      "label": "Block 12: INTERLOCK CHECK (Step 470\u2013481)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L556",
+      "community": 0,
+      "norm_label": "block 12: interlock check (step 470\u2013481)",
+      "id": "main_block_12_interlock_check_step_470_481"
+    },
+    {
+      "label": "Block 13: NG ALARM STOP (Step 483\u2013517)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L574",
+      "community": 0,
+      "norm_label": "block 13: ng alarm stop (step 483\u2013517)",
+      "id": "main_block_13_ng_alarm_stop_step_483_517"
+    },
+    {
+      "label": "Block 14: STOP (Step 519\u2013532)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L615",
+      "community": 0,
+      "norm_label": "block 14: stop (step 519\u2013532)",
+      "id": "main_block_14_stop_step_519_532"
+    },
+    {
+      "label": "Block 15: EMERGENCY STOP (Step 534\u2013580)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L635",
+      "community": 0,
+      "norm_label": "block 15: emergency stop (step 534\u2013580)",
+      "id": "main_block_15_emergency_stop_step_534_580"
+    },
+    {
+      "label": "Block 16: LAMP CONTROL (Step 582\u2013671)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L688",
+      "community": 0,
+      "norm_label": "block 16: lamp control (step 582\u2013671)",
+      "id": "main_block_16_lamp_control_step_582_671"
+    },
+    {
+      "label": "Block 17: VACUUM PUMP (Step 673\u2013680)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L784",
+      "community": 0,
+      "norm_label": "block 17: vacuum pump (step 673\u2013680)",
+      "id": "main_block_17_vacuum_pump_step_673_680"
+    },
+    {
+      "label": "Block 3: VAC SPC LOGGING (Step 27\u201352)",
+      "file_type": "document",
+      "source_file": "gmes.md",
+      "source_location": "L56",
+      "community": 4,
+      "norm_label": "block 3: vac spc logging (step 27\u201352)",
+      "id": "gmes_block_3_vac_spc_logging_step_27_52"
+    },
+    {
+      "label": "Block 4: VAC SPC CLEAR (Step 54\u201357)",
+      "file_type": "document",
+      "source_file": "gmes.md",
+      "source_location": "L88",
+      "community": 4,
+      "norm_label": "block 4: vac spc clear (step 54\u201357)",
+      "id": "gmes_block_4_vac_spc_clear_step_54_57"
+    },
+    {
+      "label": "Block 5: PC COMM STATUS (Step 59\u2013124)",
+      "file_type": "document",
+      "source_file": "gmes.md",
+      "source_location": "L98",
+      "community": 4,
+      "norm_label": "block 5: pc comm status (step 59\u2013124)",
+      "id": "gmes_block_5_pc_comm_status_step_59_124"
+    },
+    {
+      "label": "Block 1: MODE CONTROL (Step 1\u201338)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L29",
+      "community": 0,
+      "norm_label": "block 1: mode control (step 1\u201338)",
+      "id": "main_block_1_mode_control_step_1_38"
+    },
+    {
+      "label": "Block 2: INTERLOCK CHECK (Step 40\u201351)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L73",
+      "community": 0,
+      "norm_label": "block 2: interlock check (step 40\u201351)",
+      "id": "main_block_2_interlock_check_step_40_51"
+    },
+    {
+      "label": "Block 3: READY SET L0 (Step 53\u201368)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L91",
+      "community": 0,
+      "norm_label": "block 3: ready set l0 (step 53\u201368)",
+      "id": "main_block_3_ready_set_l0_step_53_68"
+    },
+    {
+      "label": "Block 4: READY SET L1 (Step 70\u201385)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L113",
+      "community": 0,
+      "norm_label": "block 4: ready set l1 (step 70\u201385)",
+      "id": "main_block_4_ready_set_l1_step_70_85"
+    },
+    {
+      "label": "Block 5: START EXEC L0 (Step 87\u2013102)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L135",
+      "community": 0,
+      "norm_label": "block 5: start exec l0 (step 87\u2013102)",
+      "id": "main_block_5_start_exec_l0_step_87_102"
+    },
+    {
+      "label": "Block 6: START EXEC L1 (Step 104\u2013119)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L157",
+      "community": 0,
+      "norm_label": "block 6: start exec l1 (step 104\u2013119)",
+      "id": "main_block_6_start_exec_l1_step_104_119"
+    },
+    {
+      "label": "Block 7: STEP L0 (Step 121\u2013289)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L179",
+      "community": 0,
+      "norm_label": "block 7: step l0 (step 121\u2013289)",
+      "id": "main_block_7_step_l0_step_121_289"
+    },
+    {
+      "label": "Block 8: STEP L1 (Step 291\u2013459)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L354",
+      "community": 0,
+      "norm_label": "block 8: step l1 (step 291\u2013459)",
+      "id": "main_block_8_step_l1_step_291_459"
+    },
+    {
+      "label": "Block 9: NG ALARM STOP (Step 461\u2013506)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L529",
+      "community": 0,
+      "norm_label": "block 9: ng alarm stop (step 461\u2013506)",
+      "id": "main_block_9_ng_alarm_stop_step_461_506"
+    },
+    {
+      "label": "Block 10: STOP (Step 508\u2013567)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L581",
+      "community": 0,
+      "norm_label": "block 10: stop (step 508\u2013567)",
+      "id": "main_block_10_stop_step_508_567"
+    },
+    {
+      "label": "Block 11: EMERGENCY STOP (Step 569\u2013624)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L647",
+      "community": 0,
+      "norm_label": "block 11: emergency stop (step 569\u2013624)",
+      "id": "main_block_11_emergency_stop_step_569_624"
+    },
+    {
+      "label": "Block 12: EXHAUST TIMER (Step 626\u2013629)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L709",
+      "community": 0,
+      "norm_label": "block 12: exhaust timer (step 626\u2013629)",
+      "id": "main_block_12_exhaust_timer_step_626_629"
+    },
+    {
+      "label": "Block 13: LAMP CONTROL (Step 631\u2013670)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L719",
+      "community": 0,
+      "norm_label": "block 13: lamp control (step 631\u2013670)",
+      "id": "main_block_13_lamp_control_step_631_670"
+    },
+    {
+      "label": "Block 14: HMI LAMP (Step 672\u2013713)",
+      "file_type": "document",
+      "source_file": "MAIN.md",
+      "source_location": "L765",
+      "community": 0,
+      "norm_label": "block 14: hmi lamp (step 672\u2013713)",
+      "id": "main_block_14_hmi_lamp_step_672_713"
+    },
+    {
+      "label": "ad \u2014 IL Logic Map",
+      "file_type": "document",
+      "source_file": "ad.md",
+      "source_location": "L2",
+      "community": 3,
+      "norm_label": "ad \u2014 il logic map",
+      "id": "ad_ad_il_logic_map"
+    },
+    {
+      "label": "Block 1: ALARM LATCH (Step 1\u201359)",
+      "file_type": "document",
+      "source_file": "alarm.md",
+      "source_location": "L18",
+      "community": 5,
+      "norm_label": "block 1: alarm latch (step 1\u201359)",
+      "id": "alarm_block_1_alarm_latch_step_1_59"
+    },
+    {
+      "label": "Block 2: BUZZER (Step 61\u201381)",
+      "file_type": "document",
+      "source_file": "alarm.md",
+      "source_location": "L83",
+      "community": 5,
+      "norm_label": "block 2: buzzer (step 61\u201381)",
+      "id": "alarm_block_2_buzzer_step_61_81"
+    },
+    {
+      "label": "Block 3: ALARM RESET (Step 83\u201386)",
+      "file_type": "document",
+      "source_file": "alarm.md",
+      "source_location": "L110",
+      "community": 5,
+      "norm_label": "block 3: alarm reset (step 83\u201386)",
+      "id": "alarm_block_3_alarm_reset_step_83_86"
+    },
+    {
+      "label": "Block 1: PC COMM L1 (Step 1\u201340)",
+      "file_type": "document",
+      "source_file": "gmes.md",
+      "source_location": "L17",
+      "community": 4,
+      "norm_label": "block 1: pc comm l1 (step 1\u201340)",
+      "id": "gmes_block_1_pc_comm_l1_step_1_40"
+    },
+    {
+      "label": "Block 2: PC COMM L2 (Step 42\u201381)",
+      "file_type": "document",
+      "source_file": "gmes.md",
+      "source_location": "L63",
+      "community": 4,
+      "norm_label": "block 2: pc comm l2 (step 42\u201381)",
+      "id": "gmes_block_2_pc_comm_l2_step_42_81"
+    },
+    {
+      "label": "Block 1: GUN VACUUM (Line 0) (Step 1\u201342)",
+      "file_type": "document",
+      "source_file": "gunvac.md",
+      "source_location": "L17",
+      "community": 8,
+      "norm_label": "block 1: gun vacuum (line 0) (step 1\u201342)",
+      "id": "gunvac_block_1_gun_vacuum_line_0_step_1_42"
+    },
+    {
+      "label": "Block 2: GUN VACUUM (Line 1) (Step 44\u201385)",
+      "file_type": "document",
+      "source_file": "gunvac.md",
+      "source_location": "L65",
+      "community": 8,
+      "norm_label": "block 2: gun vacuum (line 1) (step 44\u201385)",
+      "id": "gunvac_block_2_gun_vacuum_line_1_step_44_85"
+    },
+    {
+      "label": "Block 1: SYSTEM FLAGS (Step 1\u20139)",
+      "file_type": "document",
+      "source_file": "idata.md",
+      "source_location": "L22",
+      "community": 2,
+      "norm_label": "block 1: system flags (step 1\u20139)",
+      "id": "idata_block_1_system_flags_step_1_9"
+    },
+    {
+      "label": "Block 2: INPUT MAPPING L0 (Step 98\u2013129)",
+      "file_type": "document",
+      "source_file": "idata.md",
+      "source_location": "L37",
+      "community": 2,
+      "norm_label": "block 2: input mapping l0 (step 98\u2013129)",
+      "id": "idata_block_2_input_mapping_l0_step_98_129"
+    },
+    {
+      "label": "Block 3: INPUT MAPPING L1 (Step 131\u2013162)",
+      "file_type": "document",
+      "source_file": "idata.md",
+      "source_location": "L75",
+      "community": 2,
+      "norm_label": "block 3: input mapping l1 (step 131\u2013162)",
+      "id": "idata_block_3_input_mapping_l1_step_131_162"
+    },
+    {
+      "label": "Block 4: OUTPUT MAPPING L0 (Step 164\u2013189)",
+      "file_type": "document",
+      "source_file": "idata.md",
+      "source_location": "L113",
+      "community": 2,
+      "norm_label": "block 4: output mapping l0 (step 164\u2013189)",
+      "id": "idata_block_4_output_mapping_l0_step_164_189"
+    },
+    {
+      "label": "Block 5: GLOBAL OUTPUTS (Step 191\u2013198)",
+      "file_type": "document",
+      "source_file": "idata.md",
+      "source_location": "L145",
+      "community": 2,
+      "norm_label": "block 5: global outputs (step 191\u2013198)",
+      "id": "idata_block_5_global_outputs_step_191_198"
+    },
+    {
+      "label": "Block 6: OUTPUT MAPPING L1 (Step 200\u2013223)",
+      "file_type": "document",
+      "source_file": "idata.md",
+      "source_location": "L159",
+      "community": 2,
+      "norm_label": "block 6: output mapping l1 (step 200\u2013223)",
+      "id": "idata_block_6_output_mapping_l1_step_200_223"
+    },
+    {
+      "label": "Block 7: CONFIG VALIDATION (Step 225\u2013232)",
+      "file_type": "document",
+      "source_file": "idata.md",
+      "source_location": "L189",
+      "community": 2,
+      "norm_label": "block 7: config validation (step 225\u2013232)",
+      "id": "idata_block_7_config_validation_step_225_232"
+    },
+    {
+      "label": "Block 1: PC DATA CHECK (Step 1\u20138)",
+      "file_type": "document",
+      "source_file": "indexs.md",
+      "source_location": "L23",
+      "community": 25,
+      "norm_label": "block 1: pc data check (step 1\u20138)",
+      "id": "indexs_block_1_pc_data_check_step_1_8"
+    },
+    {
+      "label": "Block 2: AUTO BARCODE (Step 10\u201313)",
+      "file_type": "document",
+      "source_file": "indexs.md",
+      "source_location": "L37",
+      "community": 25,
+      "norm_label": "block 2: auto barcode (step 10\u201313)",
+      "id": "indexs_block_2_auto_barcode_step_10_13"
+    },
+    {
+      "label": "Block 3: BARCODE L1 (D60~D84) (Step 15\u2013114)",
+      "file_type": "document",
+      "source_file": "indexs.md",
+      "source_location": "L47",
+      "community": 25,
+      "norm_label": "block 3: barcode l1 (d60~d84) (step 15\u2013114)",
+      "id": "indexs_block_3_barcode_l1_d60_d84_step_15_114"
+    },
+    {
+      "label": "Block 4: BARCODE L2 (D88~D112) (Step 116\u2013215)",
+      "file_type": "document",
+      "source_file": "indexs.md",
+      "source_location": "L153",
+      "community": 25,
+      "norm_label": "block 4: barcode l2 (d88~d112) (step 116\u2013215)",
+      "id": "indexs_block_4_barcode_l2_d88_d112_step_116_215"
+    },
+    {
+      "label": "Block 5: MANUAL MODEL L0 (Step 217\u2013341)",
+      "file_type": "document",
+      "source_file": "indexs.md",
+      "source_location": "L259",
+      "community": 25,
+      "norm_label": "block 5: manual model l0 (step 217\u2013341)",
+      "id": "indexs_block_5_manual_model_l0_step_217_341"
+    },
+    {
+      "label": "Block 6: MANUAL MODEL L1 (Step 343\u2013467)",
+      "file_type": "document",
+      "source_file": "indexs.md",
+      "source_location": "L390",
+      "community": 25,
+      "norm_label": "block 6: manual model l1 (step 343\u2013467)",
+      "id": "indexs_block_6_manual_model_l1_step_343_467"
+    },
+    {
+      "label": "Block 7: BARCODE RESET (Step 469\u2013483)",
+      "file_type": "document",
+      "source_file": "indexs.md",
+      "source_location": "L521",
+      "community": 25,
+      "norm_label": "block 7: barcode reset (step 469\u2013483)",
+      "id": "indexs_block_7_barcode_reset_step_469_483"
+    },
+    {
+      "label": "Block 8: BARCODE MODEL CLEANUP (Step 485\u2013495)",
+      "file_type": "document",
+      "source_file": "indexs.md",
+      "source_location": "L542",
+      "community": 25,
+      "norm_label": "block 8: barcode model cleanup (step 485\u2013495)",
+      "id": "indexs_block_8_barcode_model_cleanup_step_485_495"
+    },
+    {
+      "label": "Block 1: L0 REFRIG FAST (Step 1\u201325)",
+      "file_type": "document",
+      "source_file": "refinj.md",
+      "source_location": "L25",
+      "community": 1,
+      "norm_label": "block 1: l0 refrig fast (step 1\u201325)",
+      "id": "refinj_block_1_l0_refrig_fast_step_1_25"
+    },
+    {
+      "label": "Block 2: L0 REFRIG NORMAL (Step 27\u201341)",
+      "file_type": "document",
+      "source_file": "refinj.md",
+      "source_location": "L56",
+      "community": 1,
+      "norm_label": "block 2: l0 refrig normal (step 27\u201341)",
+      "id": "refinj_block_2_l0_refrig_normal_step_27_41"
+    },
+    {
+      "label": "Block 3: L0 OIL FAST (Step 43\u201361)",
+      "file_type": "document",
+      "source_file": "refinj.md",
+      "source_location": "L77",
+      "community": 1,
+      "norm_label": "block 3: l0 oil fast (step 43\u201361)",
+      "id": "refinj_block_3_l0_oil_fast_step_43_61"
+    },
+    {
+      "label": "Block 4: L0 OIL NORMAL (Step 63\u201375)",
+      "file_type": "document",
+      "source_file": "refinj.md",
+      "source_location": "L102",
+      "community": 1,
+      "norm_label": "block 4: l0 oil normal (step 63\u201375)",
+      "id": "refinj_block_4_l0_oil_normal_step_63_75"
+    },
+    {
+      "label": "Block 5: L0 EXHAUST (Step 77\u201385)",
+      "file_type": "document",
+      "source_file": "refinj.md",
+      "source_location": "L121",
+      "community": 1,
+      "norm_label": "block 5: l0 exhaust (step 77\u201385)",
+      "id": "refinj_block_5_l0_exhaust_step_77_85"
+    },
+    {
+      "label": "Block 6: L1 REFRIG FAST (Step 87\u2013123)",
+      "file_type": "document",
+      "source_file": "refinj.md",
+      "source_location": "L136",
+      "community": 1,
+      "norm_label": "block 6: l1 refrig fast (step 87\u2013123)",
+      "id": "refinj_block_6_l1_refrig_fast_step_87_123"
+    },
+    {
+      "label": "Block 7: L1 REFRIG NORMAL (Step 125\u2013139)",
+      "file_type": "document",
+      "source_file": "refinj.md",
+      "source_location": "L179",
+      "community": 1,
+      "norm_label": "block 7: l1 refrig normal (step 125\u2013139)",
+      "id": "refinj_block_7_l1_refrig_normal_step_125_139"
+    },
+    {
+      "label": "Block 8: L1 OIL FAST (Step 141\u2013165)",
+      "file_type": "document",
+      "source_file": "refinj.md",
+      "source_location": "L200",
+      "community": 1,
+      "norm_label": "block 8: l1 oil fast (step 141\u2013165)",
+      "id": "refinj_block_8_l1_oil_fast_step_141_165"
+    },
+    {
+      "label": "Block 9: L1 OIL NORMAL (Step 167\u2013179)",
+      "file_type": "document",
+      "source_file": "refinj.md",
+      "source_location": "L231",
+      "community": 1,
+      "norm_label": "block 9: l1 oil normal (step 167\u2013179)",
+      "id": "refinj_block_9_l1_oil_normal_step_167_179"
+    },
+    {
+      "label": "Block 10: L1 EXHAUST (Step 181\u2013189)",
+      "file_type": "document",
+      "source_file": "refinj.md",
+      "source_location": "L250",
+      "community": 1,
+      "norm_label": "block 10: l1 exhaust (step 181\u2013189)",
+      "id": "refinj_block_10_l1_exhaust_step_181_189"
+    },
+    {
+      "label": "setting \u2014 IL Logic Map",
+      "file_type": "document",
+      "source_file": "setting.md",
+      "source_location": "L2",
+      "community": 6,
+      "norm_label": "setting \u2014 il logic map",
+      "id": "setting_setting_il_logic_map"
+    },
+    {
+      "label": "Block 1: CONFIG SYNC (Step 1\u20134)",
+      "file_type": "document",
+      "source_file": "setting.md",
+      "source_location": "L16",
+      "community": 6,
+      "norm_label": "block 1: config sync (step 1\u20134)",
+      "id": "setting_block_1_config_sync_step_1_4"
+    },
+    {
+      "label": "Block 1: UNIT VACUUM (Line 0) (Step 1\u201350)",
+      "file_type": "document",
+      "source_file": "unitvac.md",
+      "source_location": "L17",
+      "community": 9,
+      "norm_label": "block 1: unit vacuum (line 0) (step 1\u201350)",
+      "id": "unitvac_block_1_unit_vacuum_line_0_step_1_50"
+    },
+    {
+      "label": "Block 2: UNIT VACUUM (Line 1) (Step 52\u2013101)",
+      "file_type": "document",
+      "source_file": "unitvac.md",
+      "source_location": "L73",
+      "community": 9,
+      "norm_label": "block 2: unit vacuum (line 1) (step 52\u2013101)",
+      "id": "unitvac_block_2_unit_vacuum_line_1_step_52_101"
+    },
+    {
       "label": "Block 1: VAC CHECK L0 (Step 1\u201323)",
       "file_type": "document",
       "source_file": "vacchec.md",
       "source_location": "L17",
-      "id": "vacchec_block_1_vac_check_l0_step_1_23",
       "community": 10,
-      "norm_label": "block 1: vac check l0 (step 1\u201323)"
+      "norm_label": "block 1: vac check l0 (step 1\u201323)",
+      "id": "vacchec_block_1_vac_check_l0_step_1_23"
     },
     {
       "label": "Block 2: VAC CHECK L1 (Step 25\u201347)",
       "file_type": "document",
       "source_file": "vacchec.md",
       "source_location": "L46",
-      "id": "vacchec_block_2_vac_check_l1_step_25_47",
       "community": 10,
-      "norm_label": "block 2: vac check l1 (step 25\u201347)"
-    },
-    {
-      "label": "Device Map",
-      "file_type": "document",
-      "source_file": "vacchec.md",
-      "source_location": "L75",
-      "id": "vacchec_device_map",
-      "community": 10,
-      "norm_label": "device map"
+      "norm_label": "block 2: vac check l1 (step 25\u201347)",
+      "id": "vacchec_block_2_vac_check_l1_step_25_47"
     },
     {
       "label": "Block 2: INPUT MAPPING L0 (Step 8\u2013129)",
@@ -2195,7 +4031,7 @@
       "file_type": "document",
       "source_file": "MAIN.md",
       "source_location": "L2",
-      "community": 0,
+      "community": 41,
       "norm_label": "main \u2014 il logic map",
       "id": "main_main_il_logic_map"
     },
@@ -3581,7 +5417,7 @@
       "file_type": "document",
       "source_file": "MAIN.md",
       "source_location": "L478",
-      "community": 0,
+      "community": 41,
       "norm_label": "device map",
       "id": "main_md_main_device_map"
     },
@@ -4654,6 +6490,76 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "oilinj.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "oilinj_json_oilinj",
+      "target": "oilinj_blocks"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "oilinj.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "oilinj_json_oilinj",
+      "target": "oilinj_meta"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "oilinj.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "oilinj_meta",
+      "target": "oilinj_meta_block_count"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "oilinj.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "oilinj_meta",
+      "target": "oilinj_meta_cpu"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "oilinj.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "oilinj_meta",
+      "target": "oilinj_meta_generated"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "oilinj.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "oilinj_meta",
+      "target": "oilinj_meta_source_file"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "oilinj.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "oilinj_meta",
+      "target": "oilinj_meta_total_steps"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "ref_comment.json",
       "source_location": "L7",
       "weight": 1.0,
@@ -5175,11 +7081,71 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "MAIN.md",
+      "source_location": "L308",
+      "weight": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_10_auto_chain_warmup_step_229_390",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
       "source_location": "L431",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "main_block_detail",
       "target": "main_block_10_lamp_control_step_361_402"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L392",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_10_step_l1_step_315_381"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L394",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_10_step_l1_step_317_383"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L407",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_10_step_l1_step_330_530"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L411",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_10_step_l1_step_334_534"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L431",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_10_step_l2_step_355_421"
     },
     {
       "relation": "contains",
@@ -5215,6 +7181,66 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "MAIN.md",
+      "source_location": "L476",
+      "weight": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_11_step_l1_step_392_583",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L465",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_11_step_l2_step_383_449"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L467",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_11_step_l2_step_385_451"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L614",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_11_step_l2_step_532_732"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L618",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_11_step_l2_step_536_736"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L504",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_11_step_l3_step_423_468"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
       "source_location": "L709",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -5230,6 +7256,106 @@
       "confidence_score": 1.0,
       "source": "main_block_detail",
       "target": "main_block_12_exhaust_timer_step_627_630"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L556",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_12_interlock_check_step_470_481"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L674",
+      "weight": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_12_step_l2_step_585_776",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L538",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_12_step_l3_step_451_496"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L540",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_12_step_l3_step_453_498"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L821",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_12_step_l3_step_734_779"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L825",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_12_step_l3_step_738_783"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L590",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_13_interlock_check_step_498_509"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L592",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_13_interlock_check_step_500_511"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L873",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_13_interlock_check_step_781_792"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L877",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_13_interlock_check_step_785_796"
     },
     {
       "relation": "contains",
@@ -5255,6 +7381,26 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "MAIN.md",
+      "source_location": "L574",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_13_ng_alarm_stop_step_483_517"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L872",
+      "weight": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_13_step_l3_step_778_820",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
       "source_location": "L765",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -5270,6 +7416,306 @@
       "confidence_score": 1.0,
       "source": "main_block_detail",
       "target": "main_block_14_hmi_lamp_step_673_714"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L921",
+      "weight": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_14_interlock_check_step_822_833",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L608",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_14_ng_alarm_stop_step_511_545"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L610",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_14_ng_alarm_stop_step_513_551"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L891",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_14_ng_alarm_stop_step_794_832"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L895",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_14_ng_alarm_stop_step_798_836"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L615",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_14_stop_step_519_532"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L635",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_15_emergency_stop_step_534_580"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L939",
+      "weight": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_15_ng_alarm_stop_step_835_873",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L649",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_15_stop_step_547_560"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L655",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_15_stop_step_553_566"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L936",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_15_stop_step_834_847"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L940",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_15_stop_step_838_851"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L669",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_16_emergency_stop_step_562_608"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L675",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_16_emergency_stop_step_568_618"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L956",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_16_emergency_stop_step_849_899"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L960",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_16_emergency_stop_step_853_903"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L688",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_16_lamp_control_step_582_671"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L984",
+      "weight": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_16_stop_step_875_888",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L1004",
+      "weight": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_17_emergency_stop_step_890_940",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L722",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_17_lamp_control_step_610_699"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L732",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_17_lamp_control_step_620_709"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L1013",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_17_lamp_control_step_901_990"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L1017",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_17_lamp_control_step_905_994"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L784",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_17_vacuum_pump_step_673_680"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L1061",
+      "weight": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_18_lamp_control_step_942_1025",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L818",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_18_vacuum_pump_step_701_708"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L828",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_18_vacuum_pump_step_711_718"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L1109",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_18_vacuum_pump_step_992_999"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L1113",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_18_vacuum_pump_step_996_1003"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L1151",
+      "weight": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_19_stopwatch_step_1027_1039",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -5295,6 +7741,26 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "MAIN.md",
+      "source_location": "L32",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_1_system_flags_step_1_6"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L1170",
+      "weight": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_20_vacuum_pump_step_1041_1048",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
       "source_location": "L65",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -5315,6 +7781,86 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "MAIN.md",
+      "source_location": "L44",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_2_power_on_defaults_step_8_15"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L45",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_2_power_on_defaults_step_8_17"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L45",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_2_power_on_defaults_step_8_21"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_2_power_on_defaults_step_8_23",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L58",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_3_mode_control_step_17_28"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L61",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_3_mode_control_step_19_30"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L65",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_3_mode_control_step_23_34"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_3_mode_control_step_25_36",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
       "source_location": "L91",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -5330,6 +7876,46 @@
       "confidence_score": 1.0,
       "source": "main_block_detail",
       "target": "main_block_3_step_l0_step_48_95"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L76",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_4_gun_select_step_30_43"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L79",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_4_gun_select_step_32_45"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L83",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_4_gun_select_step_36_49"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L87",
+      "weight": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_4_gun_select_step_38_51",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -5365,11 +7951,61 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "MAIN.md",
+      "source_location": "L99",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_5_oil_refrig_enable_step_47_54"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L103",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_5_oil_refrig_enable_step_51_58"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L107",
+      "weight": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_5_oil_refrig_enable_step_53_60",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L96",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_5_ready_set_step_45_94"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
       "source_location": "L135",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "main_block_detail",
       "target": "main_block_5_start_exec_l0_step_87_102"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L121",
+      "weight": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_6_interlock_enable_step_62_69",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -5385,11 +8021,101 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "MAIN.md",
+      "source_location": "L152",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_6_manual_start_entry_step_96_171"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L113",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_6_ready_set_step_56_105"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L113",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_6_ready_set_step_56_107"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L117",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_6_ready_set_step_60_111"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
       "source_location": "L157",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "main_block_detail",
       "target": "main_block_6_start_exec_l1_step_104_119"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L234",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_7_auto_start_step_173_194"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L169",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_7_manual_start_entry_step_107_183"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L171",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_7_manual_start_entry_step_109_185"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L175",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_7_manual_start_entry_step_113_189"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L135",
+      "weight": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_7_ready_set_step_71_122",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -5415,6 +8141,46 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "MAIN.md",
+      "source_location": "L262",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_8_auto_chain_warmup_step_196_285"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L252",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_8_auto_start_step_185_206"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L254",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_8_auto_start_step_187_208"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L258",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_8_auto_start_step_191_212"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
       "source_location": "L361",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -5425,11 +8191,71 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "MAIN.md",
+      "source_location": "L193",
+      "weight": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_8_manual_start_entry_step_124_200",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
       "source_location": "L354",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "main_block_detail",
       "target": "main_block_8_step_l1_step_291_459"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L280",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_9_auto_chain_warmup_step_208_313"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L282",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_9_auto_chain_warmup_step_210_315"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L282",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_9_auto_chain_warmup_step_210_328"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L286",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_9_auto_chain_warmup_step_214_332"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L276",
+      "weight": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_9_auto_start_step_202_227",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -5450,6 +8276,16 @@
       "confidence_score": 1.0,
       "source": "main_block_detail",
       "target": "main_block_9_ng_alarm_stop_step_461_506"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MAIN.md",
+      "source_location": "L358",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "main_block_detail",
+      "target": "main_block_9_step_l1_step_287_353"
     },
     {
       "relation": "contains",
@@ -5485,11 +8321,41 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "ad.md",
-      "source_location": "L20",
+      "source_location": "L2",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "ad_ad_il_logic_map",
+      "source": "ad_md_ad",
+      "target": "ad_ref_self_holding_il_logic_map"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ad.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "ad_ref_self_holding_il_logic_map",
       "target": "ad_block_detail"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ad.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "ad_ref_self_holding_il_logic_map",
+      "target": "ad_block_list"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ad.md",
+      "source_location": "L36",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "ad_ref_self_holding_il_logic_map",
+      "target": "ad_device_map"
     },
     {
       "relation": "contains",
@@ -5505,21 +8371,21 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "ad.md",
-      "source_location": "L15",
+      "source_location": "L20",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "ad_ad_il_logic_map",
-      "target": "ad_device_map"
+      "target": "ad_block_detail"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "ad.md",
-      "source_location": "L117",
+      "source_location": "L16",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "ad_ad_il_logic_map",
-      "target": "ad_md_ad_device_map"
+      "source": "ad_block_detail",
+      "target": "ad_block_1_analog_raw_to_eu_step_1_14"
     },
     {
       "relation": "contains",
@@ -5590,6 +8456,16 @@
       "confidence_score": 1.0,
       "source": "ad_block_detail",
       "target": "ad_block_7_display_mirror_step_46_59"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ad.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "ad_ad_il_logic_map",
+      "target": "ad_device_map"
     },
     {
       "relation": "contains",
@@ -5695,6 +8571,26 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "alarm.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "alarm_block_detail",
+      "target": "alarm_block_1_shared_alarms_step_1_16"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "alarm.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "alarm_block_detail",
+      "target": "alarm_block_1_shared_alarms_step_1_17",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "alarm.md",
       "source_location": "L56",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -5725,6 +8621,26 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "alarm.md",
+      "source_location": "L43",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "alarm_block_detail",
+      "target": "alarm_block_2_l1_alarms_step_18_68"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "alarm.md",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "alarm_block_detail",
+      "target": "alarm_block_2_l1_alarms_step_19_65",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "alarm.md",
       "source_location": "L78",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -5750,6 +8666,86 @@
       "confidence_score": 1.0,
       "source": "alarm_block_detail",
       "target": "alarm_block_3_alarm_reset_step_83_86"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "alarm.md",
+      "source_location": "L97",
+      "weight": 1.0,
+      "source": "alarm_block_detail",
+      "target": "alarm_block_3_l2_alarms_step_67_113",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "alarm.md",
+      "source_location": "L100",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "alarm_block_detail",
+      "target": "alarm_block_3_l2_alarms_step_70_120"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "alarm.md",
+      "source_location": "L150",
+      "weight": 1.0,
+      "source": "alarm_block_detail",
+      "target": "alarm_block_4_l3_oil_alarms_step_115_123",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "alarm.md",
+      "source_location": "L157",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "alarm_block_detail",
+      "target": "alarm_block_4_l3_oil_alarms_step_122_134"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "alarm.md",
+      "source_location": "L165",
+      "weight": 1.0,
+      "source": "alarm_block_detail",
+      "target": "alarm_block_5_buzzer_step_125_156",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "alarm.md",
+      "source_location": "L176",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "alarm_block_detail",
+      "target": "alarm_block_5_buzzer_step_136_170"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "alarm.md",
+      "source_location": "L203",
+      "weight": 1.0,
+      "source": "alarm_block_detail",
+      "target": "alarm_block_6_alarm_reset_step_158_159",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "alarm.md",
+      "source_location": "L217",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "alarm_block_detail",
+      "target": "alarm_block_6_alarm_reset_step_172_173"
     },
     {
       "relation": "contains",
@@ -5825,6 +8821,26 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "gmes.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gmes_block_detail",
+      "target": "gmes_block_1_l1_cycle_done_spc_step_1_12"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gmes.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "gmes_block_detail",
+      "target": "gmes_block_1_l1_cycle_done_spc_step_1_16",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gmes.md",
       "source_location": "L21",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -5840,6 +8856,26 @@
       "confidence_score": 1.0,
       "source": "gmes_block_detail",
       "target": "gmes_block_1_pc_comm_l1_step_1_40"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gmes.md",
+      "source_location": "L38",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gmes_block_detail",
+      "target": "gmes_block_2_l2_cycle_done_spc_step_14_25"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gmes.md",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "gmes_block_detail",
+      "target": "gmes_block_2_l2_cycle_done_spc_step_18_29",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -5875,11 +8911,131 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "gmes.md",
+      "source_location": "L56",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gmes_block_detail",
+      "target": "gmes_block_3_vac_spc_logging_step_27_52"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gmes.md",
+      "source_location": "L56",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gmes_block_detail",
+      "target": "gmes_block_3_vac_spc_logging_step_27_72"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gmes.md",
+      "source_location": "L56",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gmes_block_detail",
+      "target": "gmes_block_3_vac_spc_logging_step_27_74"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gmes.md",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "gmes_block_detail",
+      "target": "gmes_block_3_vac_spc_logging_step_31_78",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gmes.md",
       "source_location": "L121",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "gmes_block_detail",
       "target": "gmes_block_4_auto_barcode_step_85_89"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gmes.md",
+      "source_location": "L88",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gmes_block_detail",
+      "target": "gmes_block_4_vac_spc_clear_step_54_57"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gmes.md",
+      "source_location": "L108",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gmes_block_detail",
+      "target": "gmes_block_4_vac_spc_clear_step_74_77"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gmes.md",
+      "source_location": "L110",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gmes_block_detail",
+      "target": "gmes_block_4_vac_spc_clear_step_76_79"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gmes.md",
+      "source_location": "L116",
+      "weight": 1.0,
+      "source": "gmes_block_detail",
+      "target": "gmes_block_4_vac_spc_clear_step_80_83",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gmes.md",
+      "source_location": "L98",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gmes_block_detail",
+      "target": "gmes_block_5_pc_comm_status_step_59_124"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gmes.md",
+      "source_location": "L118",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gmes_block_detail",
+      "target": "gmes_block_5_pc_comm_status_step_79_144"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gmes.md",
+      "source_location": "L120",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gmes_block_detail",
+      "target": "gmes_block_5_pc_comm_status_step_81_146"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gmes.md",
+      "source_location": "L126",
+      "weight": 1.0,
+      "source": "gmes_block_detail",
+      "target": "gmes_block_5_pc_comm_status_step_85_150",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -5895,11 +9051,31 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "gmes.md",
+      "source_location": "L198",
+      "weight": 1.0,
+      "source": "gmes_block_detail",
+      "target": "gmes_block_6_injection_count_reset_step_152_155",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gmes.md",
       "source_location": "L141",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "gmes_block_detail",
       "target": "gmes_block_6_result_code_step_95_100"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gmes.md",
+      "source_location": "L208",
+      "weight": 1.0,
+      "source": "gmes_block_detail",
+      "target": "gmes_block_7_refrigerant_usage_reset_step_157_160",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -5989,6 +9165,46 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "gunvac_block_detail",
+      "target": "gunvac_block_1_gun_vac_l1_m12_step_1_25"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gunvac.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "gunvac_block_detail",
+      "target": "gunvac_block_1_gun_vac_l1_step_1_20",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gunvac.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gunvac_block_detail",
+      "target": "gunvac_block_1_gun_vac_l1_step_1_22"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gunvac.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gunvac_block_detail",
+      "target": "gunvac_block_1_gun_vac_l1_step_1_23"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gunvac.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gunvac_block_detail",
       "target": "gunvac_block_1_gun_vacuum_line_0_step_0_35"
     },
     {
@@ -6000,6 +9216,46 @@
       "confidence_score": 1.0,
       "source": "gunvac_block_detail",
       "target": "gunvac_block_1_gun_vacuum_line_0_step_1_42"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gunvac.md",
+      "source_location": "L48",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gunvac_block_detail",
+      "target": "gunvac_block_2_gun_vac_l2_m32_step_27_51"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gunvac.md",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "gunvac_block_detail",
+      "target": "gunvac_block_2_gun_vac_l2_step_22_41",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gunvac.md",
+      "source_location": "L45",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gunvac_block_detail",
+      "target": "gunvac_block_2_gun_vac_l2_step_24_45"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gunvac.md",
+      "source_location": "L46",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gunvac_block_detail",
+      "target": "gunvac_block_2_gun_vac_l2_step_25_47"
     },
     {
       "relation": "contains",
@@ -6125,6 +9381,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "idata.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "idata_block_detail",
+      "target": "idata_block_1_system_flags_step_1_8"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "idata.md",
       "source_location": "L22",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -6167,9 +9433,19 @@
       "source_file": "idata.md",
       "source_location": "L37",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "idata_block_detail",
-      "target": "idata_block_2_input_mapping_l0_step_98_129",
-      "confidence_score": 1.0
+      "target": "idata_block_2_input_mapping_l0_step_98_129"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "idata.md",
+      "source_location": "L34",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "idata_block_detail",
+      "target": "idata_block_2_input_mapping_x_m_step_10_65"
     },
     {
       "relation": "contains",
@@ -6205,6 +9481,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "idata.md",
+      "source_location": "L96",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "idata_block_detail",
+      "target": "idata_block_3_interlock_wiring_step_67_86"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "idata.md",
       "source_location": "L168",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -6235,11 +9521,71 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "idata.md",
+      "source_location": "L122",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "idata_block_detail",
+      "target": "idata_block_4_output_mapping_m_y_step_88_121"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "idata.md",
+      "source_location": "L122",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "idata_block_detail",
+      "target": "idata_block_4_output_mapping_m_y_step_88_127"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "idata.md",
       "source_location": "L149",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "idata_block_detail",
       "target": "idata_block_5_global_outputs_step_191_198"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "idata.md",
+      "source_location": "L162",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "idata_block_detail",
+      "target": "idata_block_5_hmi_button_buffer_step_123_148"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "idata.md",
+      "source_location": "L168",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "idata_block_detail",
+      "target": "idata_block_5_hmi_button_buffer_step_129_154"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "idata.md",
+      "source_location": "L168",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "idata_block_detail",
+      "target": "idata_block_5_hmi_button_buffer_step_129_156"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "idata.md",
+      "source_location": "L168",
+      "weight": 1.0,
+      "source": "idata_block_detail",
+      "target": "idata_block_5_hmi_button_buffer_step_129_166",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -6425,6 +9771,26 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "indexs.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "indexs_block_detail",
+      "target": "indexs_block_1_barcode_copy_l1_step_1_2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "indexs.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "indexs_block_detail",
+      "target": "indexs_block_1_l1_model_lookup_step_1_250"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "indexs.md",
       "source_location": "L23",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -6465,6 +9831,36 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "indexs.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "indexs_block_detail",
+      "target": "indexs_block_2_barcode_copy_l2_step_4_5",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "indexs.md",
+      "source_location": "L275",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "indexs_block_detail",
+      "target": "indexs_block_2_l2_model_lookup_step_252_501"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "indexs.md",
+      "source_location": "L531",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "indexs_block_detail",
+      "target": "indexs_block_3_barcode_clear_step_503_524"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "indexs.md",
       "source_location": "L47",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -6480,6 +9876,16 @@
       "confidence_score": 1.0,
       "source": "indexs_block_detail",
       "target": "indexs_block_3_barcode_l1_d60_d84_step_17_166"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "indexs.md",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "indexs_block_detail",
+      "target": "indexs_block_3_l1_model_lookup_step_7_256",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -6505,6 +9911,36 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "indexs.md",
+      "source_location": "L559",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "indexs_block_detail",
+      "target": "indexs_block_4_display_correction_step_526_679"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "indexs.md",
+      "source_location": "L293",
+      "weight": 1.0,
+      "source": "indexs_block_detail",
+      "target": "indexs_block_4_l2_model_lookup_step_258_507",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "indexs.md",
+      "source_location": "L549",
+      "weight": 1.0,
+      "source": "indexs_block_detail",
+      "target": "indexs_block_5_barcode_clear_step_509_532",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "indexs.md",
       "source_location": "L259",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -6520,6 +9956,16 @@
       "confidence_score": 1.0,
       "source": "indexs_block_detail",
       "target": "indexs_block_5_manual_model_l0_step_319_468"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "indexs.md",
+      "source_location": "L579",
+      "weight": 1.0,
+      "source": "indexs_block_detail",
+      "target": "indexs_block_6_display_correction_step_534_687",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -6600,6 +10046,116 @@
       "confidence_score": 1.0,
       "source": "indexs_indexs_il_logic_map",
       "target": "indexs_device_map"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "oilinj.md",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "oilinj_md_oilinj",
+      "target": "oilinj_ref_self_holding_il_logic_map"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "oilinj.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "oilinj_ref_self_holding_il_logic_map",
+      "target": "oilinj_block_detail"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "oilinj.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "oilinj_ref_self_holding_il_logic_map",
+      "target": "oilinj_block_list"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "oilinj.md",
+      "source_location": "L102",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "oilinj_ref_self_holding_il_logic_map",
+      "target": "oilinj_device_map"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "oilinj.md",
+      "source_location": "L18",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "oilinj_block_detail",
+      "target": "oilinj_block_1_oil_fast_step_1_27"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "oilinj.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "oilinj_block_detail",
+      "target": "oilinj_block_1_oil_fast_step_1_50"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "oilinj.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "oilinj_block_detail",
+      "target": "oilinj_block_1_oil_fast_step_1_52"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "oilinj.md",
+      "source_location": "L51",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "oilinj_block_detail",
+      "target": "oilinj_block_2_oil_base_step_29_65"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "oilinj.md",
+      "source_location": "L73",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "oilinj_block_detail",
+      "target": "oilinj_block_2_oil_base_step_52_112"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "oilinj.md",
+      "source_location": "L75",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "oilinj_block_detail",
+      "target": "oilinj_block_2_oil_base_step_54_116"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "oilinj.md",
+      "source_location": "L94",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "oilinj_block_detail",
+      "target": "oilinj_block_3_oil_complete_step_67_68"
     },
     {
       "relation": "contains",
@@ -6725,6 +10281,36 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "refinj.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "refinj_block_detail",
+      "target": "refinj_block_1_l1_refrig_fast_step_1_18"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "refinj.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "refinj_block_detail",
+      "target": "refinj_block_1_l1_refrig_fast_step_1_19"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "refinj.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "refinj_block_detail",
+      "target": "refinj_block_1_l1_refrig_fast_step_1_21"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "refinj.md",
       "source_location": "L56",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -6740,6 +10326,36 @@
       "confidence_score": 1.0,
       "source": "refinj_block_detail",
       "target": "refinj_block_2_l0_refrig_normal_step_27_41"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "refinj.md",
+      "source_location": "L45",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "refinj_block_detail",
+      "target": "refinj_block_2_l1_refrig_base_step_20_41"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "refinj.md",
+      "source_location": "L46",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "refinj_block_detail",
+      "target": "refinj_block_2_l1_refrig_base_step_21_43"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "refinj.md",
+      "source_location": "L48",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "refinj_block_detail",
+      "target": "refinj_block_2_l1_refrig_base_step_23_47"
     },
     {
       "relation": "contains",
@@ -6765,6 +10381,36 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "refinj.md",
+      "source_location": "L73",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "refinj_block_detail",
+      "target": "refinj_block_3_l1_exhaust_step_43_50"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "refinj.md",
+      "source_location": "L75",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "refinj_block_detail",
+      "target": "refinj_block_3_l1_exhaust_step_45_53"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "refinj.md",
+      "source_location": "L79",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "refinj_block_detail",
+      "target": "refinj_block_3_l1_exhaust_step_49_57"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "refinj.md",
       "source_location": "L92",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -6780,6 +10426,36 @@
       "confidence_score": 1.0,
       "source": "refinj_block_detail",
       "target": "refinj_block_4_l0_oil_normal_step_63_75"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "refinj.md",
+      "source_location": "L87",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "refinj_block_detail",
+      "target": "refinj_block_4_l2_refrig_fast_step_52_69"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "refinj.md",
+      "source_location": "L90",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "refinj_block_detail",
+      "target": "refinj_block_4_l2_refrig_fast_step_55_73"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "refinj.md",
+      "source_location": "L94",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "refinj_block_detail",
+      "target": "refinj_block_4_l2_refrig_fast_step_59_78"
     },
     {
       "relation": "contains",
@@ -6805,6 +10481,36 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "refinj.md",
+      "source_location": "L111",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "refinj_block_detail",
+      "target": "refinj_block_5_l2_refrig_base_step_71_92"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "refinj.md",
+      "source_location": "L115",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "refinj_block_detail",
+      "target": "refinj_block_5_l2_refrig_base_step_75_97"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "refinj.md",
+      "source_location": "L120",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "refinj_block_detail",
+      "target": "refinj_block_5_l2_refrig_base_step_80_102"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "refinj.md",
       "source_location": "L119",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -6820,6 +10526,36 @@
       "confidence_score": 1.0,
       "source": "refinj_block_detail",
       "target": "refinj_block_6_l1_refrig_fast_step_87_123"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "refinj.md",
+      "source_location": "L149",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "refinj_block_detail",
+      "target": "refinj_block_6_l2_exhaust_step_104_112"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "refinj.md",
+      "source_location": "L139",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "refinj_block_detail",
+      "target": "refinj_block_6_l2_exhaust_step_94_101"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "refinj.md",
+      "source_location": "L144",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "refinj_block_detail",
+      "target": "refinj_block_6_l2_exhaust_step_99_107"
     },
     {
       "relation": "contains",
@@ -6909,17 +10645,47 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "setting_md_setting",
+      "target": "setting_ref_self_holding_il_logic_map"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "setting.md",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "setting_md_setting",
       "target": "setting_setting_il_logic_map"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "setting.md",
-      "source_location": "L16",
+      "source_location": "L14",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "setting_setting_il_logic_map",
+      "source": "setting_ref_self_holding_il_logic_map",
       "target": "setting_block_detail"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "setting.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "setting_ref_self_holding_il_logic_map",
+      "target": "setting_block_list"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "setting.md",
+      "source_location": "L38",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "setting_ref_self_holding_il_logic_map",
+      "target": "setting_device_map"
     },
     {
       "relation": "contains",
@@ -6935,31 +10701,21 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "setting.md",
-      "source_location": "L26",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "setting_setting_il_logic_map",
-      "target": "setting_device_map"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "setting.md",
-      "source_location": "L59",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "setting_setting_il_logic_map",
-      "target": "setting_md_setting_device_map"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "setting.md",
       "source_location": "L18",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "setting_block_detail",
       "target": "setting_block_1_config_sync_step_0_4"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "setting.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "setting_block_detail",
+      "target": "setting_block_1_config_sync_step_1_16"
     },
     {
       "relation": "contains",
@@ -6990,6 +10746,26 @@
       "confidence_score": 1.0,
       "source": "setting_block_detail",
       "target": "setting_block_3_display_mirror_step_12_25"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "setting.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "setting_setting_il_logic_map",
+      "target": "setting_block_detail"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "setting.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "setting_setting_il_logic_map",
+      "target": "setting_device_map"
     },
     {
       "relation": "contains",
@@ -7219,6 +10995,36 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "unitvac_block_detail",
+      "target": "unitvac_block_1_unit_vac_l1_m13_step_1_30"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "unitvac.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "unitvac_block_detail",
+      "target": "unitvac_block_1_unit_vac_l1_step_1_25"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "unitvac.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "unitvac_block_detail",
+      "target": "unitvac_block_1_unit_vac_l1_step_1_26"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "unitvac.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "unitvac_block_detail",
       "target": "unitvac_block_1_unit_vacuum_line_0_step_0_39"
     },
     {
@@ -7230,6 +11036,36 @@
       "confidence_score": 1.0,
       "source": "unitvac_block_detail",
       "target": "unitvac_block_1_unit_vacuum_line_0_step_1_50"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "unitvac.md",
+      "source_location": "L53",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "unitvac_block_detail",
+      "target": "unitvac_block_2_unit_vac_l2_m33_step_32_61"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "unitvac.md",
+      "source_location": "L48",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "unitvac_block_detail",
+      "target": "unitvac_block_2_unit_vac_l2_step_27_51"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "unitvac.md",
+      "source_location": "L49",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "unitvac_block_detail",
+      "target": "unitvac_block_2_unit_vac_l2_step_28_53"
     },
     {
       "relation": "contains",
@@ -7355,6 +11191,36 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "vacchec.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "vacchec_block_detail",
+      "target": "vacchec_block_1_vac_check_l1_m14_step_1_17"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vacchec.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "vacchec_block_detail",
+      "target": "vacchec_block_1_vac_check_l1_step_1_25"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vacchec.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "vacchec_block_detail",
+      "target": "vacchec_block_1_vac_check_l1_step_1_26"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vacchec.md",
       "source_location": "L44",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -7375,6 +11241,36 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "vacchec.md",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "vacchec_block_detail",
+      "target": "vacchec_block_2_vac_check_l2_m34_step_19_35"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vacchec.md",
+      "source_location": "L48",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "vacchec_block_detail",
+      "target": "vacchec_block_2_vac_check_l2_step_27_51"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vacchec.md",
+      "source_location": "L49",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "vacchec_block_detail",
+      "target": "vacchec_block_2_vac_check_l2_step_28_53"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vacchec.md",
       "source_location": "L15",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -7390,6 +11286,26 @@
       "confidence_score": 1.0,
       "source": "vacchec_vacchec_il_logic_map",
       "target": "vacchec_device_map"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ad.md",
+      "source_location": "L117",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "ad_ad_il_logic_map",
+      "target": "ad_md_ad_device_map"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "setting.md",
+      "source_location": "L59",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "setting_setting_il_logic_map",
+      "target": "setting_md_setting_device_map"
     },
     {
       "relation": "contains",
@@ -8533,5 +12449,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "ae89646c9e5ef465744ca80260d8b97a2c243a1c"
+  "built_at_commit": "35a5d8ffc731a53b64270a40671e175155a3efaf"
 }

@@ -1,6 +1,4 @@
-﻿# ALARM LATCH ??self-holding conversion
-# M865-M879 use self-holding OUT (LD cond OR self ANI reset)
-# M864 keeps SET/RST (also SET in gen_main_final.py EMERGENCY STOP)
+﻿# ALARM — Per-line + L3 oil alarms, buzzer (M69), lamp colors
 st = 0; lines = []
 def a(i,d): global st; lines.append(f'"{st}"\t""\t"{i}"\t"{d}"\t""\t""\t""'); st += 1
 def ac(d): lines.append(f'""\t""\t""\t"{d}"\t""\t""\t""')
@@ -12,68 +10,56 @@ def wr(p):
     c = "\r\n".join(lines) + "\r\n"
     with open(p, "wb") as f: f.write(b'\xff\xfe'); f.write(c.encode('utf-16-le'))
 
-R = "M1027"  # alarm reset (HMI momentary button, no PLS needed)
-
+R = "M410"
 hd("REF_self_holding")
-al("ALARM LATCH")
-# M864: emergency stop ??self-holding (MAIN no longer SETs it directly)
-a("LDI", "M771"); a("OR", "M864"); a("ANI", R); a("OUT", "M864")
 
-# M865: door open ??self-holding
-a("LDI", "M779"); a("OR", "M865"); a("ANI", R); a("OUT", "M865")
+al("SHARED ALARMS")
+a("LDI","M770"); a("OR","M300"); a("ANI",R); a("OUT","M300")
+a("LDI","M771"); a("AND","M522"); a("OR","M301"); a("ANI",R); a("OUT","M301")
+a("LDD>=","D300"); ac("D210"); a("OR","M302"); a("ANI",R); a("OUT","M302")
+a("LDI","M772"); a("OR","M303"); a("ANI",R); a("OUT","M303")
 
-# M866: M817 OR M833 (vac mismatch)
-a("LD", "M817"); a("OR", "M833"); a("OR", "M866"); a("ANI", R); a("OUT", "M866")
+al("L1 ALARMS")
+a("LD","M12"); a("AND","T1"); a("OR","M310"); a("ANI",R); a("OUT","M310")
+a("LD","M13"); a("AND","T2"); a("OR","M311"); a("ANI",R); a("OUT","M311")
+a("LD","M109"); a("OR","M312"); a("ANI",R); a("OUT","M312")
+a("LD","M110"); a("OR","M313"); a("ANI",R); a("OUT","M313")
+a("LD","M314"); a("OR","M314"); a("ANI",R); a("OUT","M314")    # L1 amount NG
+a("LDD>=","D26"); ac("D28"); a("OR","M316"); a("ANI",R); a("OUT","M316")
+a("LDD<=","D26"); ac("D30"); a("OR","M317"); a("ANI",R); a("OUT","M317")
+a("LDD<","D28"); ac("K-200"); a("OR>","D28"); a("LDD>","D28"); ac("K800"); a("ORB","")
+a("OR","M318"); a("ANI",R); a("OUT","M318")
+a("LD","M11"); a("AND=","D0"); ac("K0"); a("OR","M319"); a("ANI",R); a("OUT","M319")
+a("LD","M11"); a("LDD=","D12"); ac("K0"); a("OR","M320"); a("ANI",R); a("OUT","M320")
 
-# M867: M819 OR M835
-a("LD", "M819"); a("OR", "M835"); a("OR", "M867"); a("ANI", R); a("OUT", "M867")
+al("L2 ALARMS")
+a("LD","M32"); a("AND","T7"); a("OR","M330"); a("ANI",R); a("OUT","M330")
+a("LD","M33"); a("AND","T8"); a("OR","M331"); a("ANI",R); a("OUT","M331")
+a("LD","M125"); a("OR","M332"); a("ANI",R); a("OUT","M332")
+a("LD","M126"); a("OR","M333"); a("ANI",R); a("OUT","M333")
+a("LD","M334"); a("OR","M334"); a("ANI",R); a("OUT","M334")    # L2 amount NG
+a("LDD>=","D58"); ac("D60"); a("OR","M336"); a("ANI",R); a("OUT","M336")
+a("LDD<=","D58"); ac("D62"); a("OR","M337"); a("ANI",R); a("OUT","M337")
+a("LDD<","D60"); ac("K-200"); a("OR>","D60"); a("LDD>","D60"); ac("K800"); a("ORB","")
+a("OR","M338"); a("ANI",R); a("OUT","M338")
+a("LD","M31"); a("AND=","D32"); ac("K0"); a("OR","M339"); a("ANI",R); a("OUT","M339")
+a("LD","M31"); a("LDD=","D44"); ac("K0"); a("OR","M340"); a("ANI",R); a("OUT","M340")
 
-# M868: M821 OR M837
-a("LD", "M821"); a("OR", "M837"); a("OR", "M868"); a("ANI", R); a("OUT", "M868")
+al("L3 OIL ALARMS")
+a("LD","M51"); a("AND","T13"); a("OR","M350"); a("ANI",R); a("OUT","M350")
+a("LD","M351"); a("OR","M351"); a("ANI",R); a("OUT","M351")    # oil amount NG
 
-# M869: M823 OR M839
-a("LD", "M823"); a("OR", "M839"); a("OR", "M869"); a("ANI", R); a("OUT", "M869")
-
-# M870: always-on alarm (unconditional self-hold)
-a("LD", "M0"); a("OR", "M870"); a("ANI", R); a("OUT", "M870")
-
-# M871: always-on alarm (unconditional self-hold)
-a("LD", "M0"); a("OR", "M871"); a("ANI", R); a("OUT", "M871")
-
-# M872: M776 OR M792
-a("LD", "M776"); a("OR", "M792"); a("OR", "M872"); a("ANI", R); a("OUT", "M872")
-
-# M873: M777 OR M793
-a("LD", "M777"); a("OR", "M793"); a("OR", "M873"); a("ANI", R); a("OUT", "M873")
-
-# M874: D156 < -200 OR D156 > 800
-a("LD<", "D156"); ac("K-200"); a("OR>", "D156"); ac("K800")
-a("OR", "M874"); a("ANI", R); a("OUT", "M874")
-
-# M878: always-on alarm
-a("LD", "M0"); a("OR", "M878"); a("ANI", R); a("OUT", "M878")
-
-# M879: M791
-a("LD", "M791"); a("OR", "M879"); a("ANI", R); a("OUT", "M879")
-
-# ===== BUZZER =====
 al("BUZZER")
-a("LD", "M864"); a("OR", "M865"); a("OR", "M866"); a("OR", "M867")
-a("OR", "M868"); a("OR", "M869"); a("OR", "M870"); a("OR", "M871")
-a("OR", "M872"); a("OR", "M873"); a("OR", "M874")
-a("OR", "M876"); a("OR", "M877"); a("OR", "M878"); a("OR", "M879")
-a("ANI", "M500"); a("OUT", "M76")
+a("LD","M300")
+for b in ["301","302","303","310","311","312","313","314","316","317","318","319","320",
+          "330","331","332","333","334","336","337","338","339","340","350","351"]:
+    a("OR",("M"+b))
+a("ANI","M500"); a("OUT","M69")     # M69 = BUZZER
+a("LD","M411"); a("SET","M500")
+a("LD","M411"); a("RST","M69")
 
-# Buzzer silence
-a("LD", "M1028"); a("SET", "M500")
-a("LD", "M1028"); a("RST", "M76")
-
-# ===== ALARM RESET =====
-# M1027 is HMI momentary button — direct use, no PLS needed
 al("ALARM RESET")
-# M876 SET by indexs PC DATA CHECK
-a("LD", R); a("RST", "M876")
+a("LD",R); a("RST","M500")
 
 a("END","")
 wr("F:\\WorkSpace\\REF\\src\\alarm.csv")
-

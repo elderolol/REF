@@ -2,212 +2,228 @@
   "meta": {
     "source_file": "vacchec.csv",
     "cpu": "QCPU (Q mode) Q03UDV",
-    "total_steps": 47,
+    "total_steps": 51,
     "block_count": 2,
-    "generated": "2026-06-03"
+    "generated": "2026-06-06"
   },
   "blocks": [
     {
       "id": 1,
-      "name": "VAC CHECK L0",
+      "name": "VAC CHECK L1",
       "step_start": 1,
-      "step_end": 23,
+      "step_end": 25,
       "conditions": [
         {
           "instruction": "LD",
-          "device": "M20"
+          "device": "M14"
         },
         {
           "instruction": "LD",
-          "device": "M20"
+          "device": "M14"
         },
         {
           "instruction": "LD",
-          "device": "M20"
+          "device": "M14"
         },
         {
           "instruction": "LD",
-          "device": "M20"
+          "device": "M14"
         },
         {
           "instruction": "LD",
-          "device": "M20"
-        },
-        {
-          "instruction": "LD",
-          "device": "M20"
-        },
-        {
-          "instruction": "LD",
-          "device": "M20"
-        },
-        {
-          "instruction": "LD",
-          "device": "M20"
+          "device": "M14"
         }
       ],
       "actions": [
         {
-          "instruction": "DMOV",
-          "device": "D160"
+          "instruction": "OUT",
+          "device": "M60"
         },
         {
           "instruction": "OUT",
-          "device": "T2"
+          "device": "M61"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M68"
+        },
+        {
+          "instruction": "DMOV",
+          "device": "D30"
+        },
+        {
+          "instruction": "OUT",
+          "device": "T3"
         },
         {
           "instruction": "D-",
-          "device": "D300"
+          "device": "D600"
         },
         {
           "instruction": "AND",
-          "device": "M775"
+          "device": "T3"
+        },
+        {
+          "instruction": "LDD<=",
+          "device": "D602"
         },
         {
           "instruction": "OUT",
-          "device": "M878"
+          "device": "M103"
+        },
+        {
+          "instruction": "RST",
+          "device": "M60"
+        },
+        {
+          "instruction": "RST",
+          "device": "M61"
+        },
+        {
+          "instruction": "RST",
+          "device": "M68"
         },
         {
           "instruction": "AND",
-          "device": "M775"
+          "device": "T3"
         },
         {
-          "instruction": "AND>",
-          "device": "D304"
+          "instruction": "LDD>",
+          "device": "D602"
         },
         {
-          "instruction": "ORB",
-          "device": ""
+          "instruction": "SET",
+          "device": "M109"
         },
         {
-          "instruction": "OUT",
-          "device": "M821"
+          "instruction": "SET",
+          "device": "M312"
         },
         {
-          "instruction": "AND>",
-          "device": "D304"
+          "instruction": "RST",
+          "device": "M14"
         },
         {
-          "instruction": "OUT",
-          "device": "M868"
+          "instruction": "RST",
+          "device": "M60"
         },
         {
-          "instruction": "ANI",
-          "device": "M775"
+          "instruction": "RST",
+          "device": "M61"
         },
         {
-          "instruction": "AND",
-          "device": "T2"
-        },
-        {
-          "instruction": "AND<=",
-          "device": "D304"
-        },
-        {
-          "instruction": "OUT",
-          "device": "M820"
+          "instruction": "RST",
+          "device": "M68"
         }
       ]
     },
     {
       "id": 2,
-      "name": "VAC CHECK L1",
-      "step_start": 25,
-      "step_end": 47,
+      "name": "VAC CHECK L2",
+      "step_start": 27,
+      "step_end": 51,
       "conditions": [
         {
           "instruction": "LD",
-          "device": "M36"
+          "device": "M34"
         },
         {
           "instruction": "LD",
-          "device": "M36"
+          "device": "M34"
         },
         {
           "instruction": "LD",
-          "device": "M36"
+          "device": "M34"
         },
         {
           "instruction": "LD",
-          "device": "M36"
+          "device": "M34"
         },
         {
           "instruction": "LD",
-          "device": "M36"
-        },
-        {
-          "instruction": "LD",
-          "device": "M36"
-        },
-        {
-          "instruction": "LD",
-          "device": "M36"
-        },
-        {
-          "instruction": "LD",
-          "device": "M36"
+          "device": "M34"
         }
       ],
       "actions": [
         {
-          "instruction": "DMOV",
-          "device": "D172"
+          "instruction": "OUT",
+          "device": "M70"
         },
         {
           "instruction": "OUT",
-          "device": "T11"
+          "device": "M71"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M68"
+        },
+        {
+          "instruction": "DMOV",
+          "device": "D62"
+        },
+        {
+          "instruction": "OUT",
+          "device": "T9"
         },
         {
           "instruction": "D-",
-          "device": "D306"
+          "device": "D610"
         },
         {
           "instruction": "AND",
-          "device": "M791"
+          "device": "T9"
+        },
+        {
+          "instruction": "LDD<=",
+          "device": "D612"
         },
         {
           "instruction": "OUT",
-          "device": "M879"
+          "device": "M119"
+        },
+        {
+          "instruction": "RST",
+          "device": "M70"
+        },
+        {
+          "instruction": "RST",
+          "device": "M71"
+        },
+        {
+          "instruction": "RST",
+          "device": "M68"
         },
         {
           "instruction": "AND",
-          "device": "M791"
+          "device": "T9"
         },
         {
-          "instruction": "AND>",
-          "device": "D308"
+          "instruction": "LDD>",
+          "device": "D612"
         },
         {
-          "instruction": "ORB",
-          "device": ""
+          "instruction": "SET",
+          "device": "M125"
         },
         {
-          "instruction": "OUT",
-          "device": "M837"
+          "instruction": "SET",
+          "device": "M332"
         },
         {
-          "instruction": "AND>",
-          "device": "D308"
+          "instruction": "RST",
+          "device": "M34"
         },
         {
-          "instruction": "OUT",
-          "device": "M868"
+          "instruction": "RST",
+          "device": "M70"
         },
         {
-          "instruction": "ANI",
-          "device": "M791"
+          "instruction": "RST",
+          "device": "M71"
         },
         {
-          "instruction": "AND",
-          "device": "T11"
-        },
-        {
-          "instruction": "AND<=",
-          "device": "D308"
-        },
-        {
-          "instruction": "OUT",
-          "device": "M836"
+          "instruction": "RST",
+          "device": "M68"
         }
       ]
     }

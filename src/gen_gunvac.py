@@ -1,6 +1,5 @@
-﻿# GUN VACUUM ??self-holding OUT conversion
-# Results: M816/M832 OUT (single condition), M817/M833 SET (multi-condition), M866 OUT (alarm.csv self-holds)
-# Solenoids M49/M65: OUT (step tracking) + RST (immediate off)
+﻿# GUN VACUUM — L1: M12, L2: M32
+# Results: L1 M101(OK), M108(NG)  L2 M117(OK), M124(NG)
 st = 0; lines = []
 def a(i,d): global st; lines.append(f'"{st}"\t""\t"{i}"\t"{d}"\t""\t""\t""'); st += 1
 def ac(d): lines.append(f'""\t""\t""\t"{d}"\t""\t""\t""')
@@ -13,33 +12,26 @@ def wr(p):
     with open(p, "wb") as f: f.write(b'\xff\xfe'); f.write(c.encode('utf-16-le'))
 
 hd("REF_self_holding")
-al("GUN VACUUM (Line 0)")
-a("LD", "M18"); a("OUT", "T0"); ac("D2")
-# vac_complete flag for M49 tracking
-a("LD", "T0"); a("AND<=", "D160"); ac("D22"); a("OUT", "M100")
-# M49 solenoid: OUT follows step state minus completion
-a("LD", "M18"); a("ANI", "M881"); a("ANI", "T7"); a("ANI", "M100"); a("OUT", "M49")
-# Interlock fail ??restart init
-a("LD", "M18"); a("ANI", "M881"); a("SET", "M16"); a("RST", "M18"); a("RST", "M49")
-# Vac switch mismatch ??M817 NG result (persistent, let alarm.csv capture)
-a("LD", "M18"); a("LD", "M914"); a("ANI", "M772"); a("LD", "M915"); a("ANI", "M773"); a("ORB",""); a("ANB",""); a("SET", "M817")
-# Vac complete ??M816 OK result (one-shot, MAIN captures)
-a("LD", "M18"); a("AND", "T0"); a("AND<=", "D160"); ac("D22"); a("OUT", "M816")
-a("LD", "M18"); a("AND", "T0"); a("AND<=", "D160"); ac("D22"); a("RST", "M18"); a("RST", "M49")
-# Timeout
-a("LD", "M18"); a("AND", "T0"); a("AND>", "D160"); ac("D22"); a("OUT", "T7"); ac("K100")
-a("LD", "T7"); a("SET", "M817"); a("OUT", "M866"); a("SET", "M76"); a("RST", "M18"); a("RST", "M49")
 
-al("GUN VACUUM (Line 1)")
-a("LD", "M34"); a("OUT", "T8"); ac("D32")
-a("LD", "T8"); a("AND<=", "D172"); ac("D50"); a("OUT", "M101")
-a("LD", "M34"); a("ANI", "M897"); a("ANI", "T17"); a("ANI", "M101"); a("OUT", "M65")
-a("LD", "M34"); a("ANI", "M897"); a("SET", "M32"); a("RST", "M34"); a("RST", "M65")
-a("LD", "M34"); a("LD", "M914"); a("ANI", "M788"); a("LD", "M915"); a("ANI", "M789"); a("ORB",""); a("ANB",""); a("SET", "M833")
-a("LD", "M34"); a("AND", "T8"); a("AND<=", "D172"); ac("D50"); a("OUT", "M832")
-a("LD", "M34"); a("AND", "T8"); a("AND<=", "D172"); ac("D50"); a("RST", "M34"); a("RST", "M65")
-a("LD", "M34"); a("AND", "T8"); a("AND>", "D172"); ac("D50"); a("OUT", "T17"); ac("K100")
-a("LD", "T17"); a("SET", "M833"); a("OUT", "M866"); a("SET", "M76"); a("RST", "M34"); a("RST", "M65")
+al("GUN VAC L1")
+a("LD","M12"); a("OUT","M60"); a("OUT","T1"); ac("D2")
+a("LD","M12"); a("AND","T1")
+a("OUT","M101")    # Gun vac OK, timer only (no vacuum check)
+# NG timeout: timer done + grace → NG
+a("LD","M12"); a("AND","T1")
+a("OUT","T15"); ac("K100")
+a("LD","T15"); a("SET","M108"); a("SET","M310"); a("RST","M12"); a("RST","M60")
+a("LD","M12"); a("ANI","M80"); a("SET","M108"); a("SET","M310"); a("RST","M12"); a("RST","M60")
+
+al("GUN VAC L2")
+a("LD","M32"); a("OUT","M70"); a("OUT","T7"); ac("D34")
+a("LD","M32"); a("AND","T7")
+a("OUT","M117")    # L2 Gun vac OK, timer only
+# L2 NG timeout
+a("LD","M32"); a("AND","T7")
+a("OUT","T16"); ac("K100")
+a("LD","T16"); a("SET","M124"); a("SET","M330"); a("RST","M32"); a("RST","M70")
+a("LD","M32"); a("ANI","M90"); a("SET","M124"); a("SET","M330"); a("RST","M32"); a("RST","M70")
+
 a("END","")
 wr("F:\\WorkSpace\\REF\\src\\gunvac.csv")
-

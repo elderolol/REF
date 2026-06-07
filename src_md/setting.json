@@ -2,17 +2,41 @@
   "meta": {
     "source_file": "setting.csv",
     "cpu": "QCPU (Q mode) Q03UDV",
-    "total_steps": 4,
+    "total_steps": 16,
     "block_count": 1,
-    "generated": "2026-06-03"
+    "generated": "2026-06-06"
   },
   "blocks": [
     {
       "id": 1,
       "name": "CONFIG SYNC",
       "step_start": 1,
-      "step_end": 4,
+      "step_end": 16,
       "conditions": [
+        {
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "instruction": "LD",
+          "device": "M0"
+        },
         {
           "instruction": "LD",
           "device": "M0"
@@ -25,11 +49,35 @@
       "actions": [
         {
           "instruction": "MOV",
-          "device": "D270"
+          "device": "D2"
         },
         {
-          "instruction": "D*",
-          "device": "D274"
+          "instruction": "MOV",
+          "device": "D4"
+        },
+        {
+          "instruction": "MOV",
+          "device": "D6"
+        },
+        {
+          "instruction": "MOV",
+          "device": "D8"
+        },
+        {
+          "instruction": "MOV",
+          "device": "D22"
+        },
+        {
+          "instruction": "MOV",
+          "device": "D24"
+        },
+        {
+          "instruction": "MOV",
+          "device": "D26"
+        },
+        {
+          "instruction": "MOV",
+          "device": "D28"
         }
       ]
     }

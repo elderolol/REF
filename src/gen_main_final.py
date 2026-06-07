@@ -1,6 +1,6 @@
-def M(h): return f"M{int(h,16)}"
-def L(h): return f"M{800 + int(h,16)}"
-def l1(s): return f"{int(s,16)+0x10:X}"
+# MAIN — Step Machine, Mode, Gun Select, Ready, Interlock, Stop/EMG, Lamps
+# L1=M10~M18, L2=M30~M38, L3=M50~M53 (shared oil)
+# Auto: PRECHECK→GUNVAC→UNITVAC→VACCHECK→[OIL→]REFRIG→EXHAUST→COMPLETE→IDLE
 st = 0; lines = []
 def a(i,d): global st; lines.append(f'"{st}"\t""\t"{i}"\t"{d}"\t""\t""\t""'); st += 1
 def ac(d): lines.append(f'""\t""\t""\t"{d}"\t""\t""\t""')
@@ -13,283 +13,336 @@ def wr(p):
     with open(p, "wb") as f: f.write(b'\xff\xfe'); f.write(c.encode('utf-16-le'))
 
 hd("REF_self_holding")
+
+# === SYSTEM FLAGS ===
+al("SYSTEM FLAGS")
+a("LD","SM400"); a("OUT","M0")
+a("LD","SM401"); a("OUT","M1")
+a("LD","SM402"); a("OUT","M2")
+
+# === POWER-ON DEFAULTS ===
+al("POWER-ON DEFAULTS")
+a("LD","M2"); a("SET","M200"); a("RST","M201")   # MANUAL
+a("LD","M2"); a("SET","M210"); a("RST","M211")   # GUN A
+a("LD","M2"); a("SET","M520")                     # Barcode used
+a("LD","M2"); a("SET","M521")                     # Oil+Refrig enabled
+a("LD","M2"); a("SET","M522")                     # Interlock used
+a("LD","M2"); a("SET","M10"); a("SET","M30"); a("SET","M50")   # IDLE init
+
+# === MODE CONTROL (IDLE only) ===
 al("MODE CONTROL")
-a("LD", M("40E")); a("PLS", M("600"))
-# L1/L2 self-holding toggle: (M1536·L2) + (L1·/M1536)
-a("LD", M("600")); a("AND", L("2")); a("LD", L("1")); a("ANI", M("600")); a("ORB",""); a("OUT", L("1"))
-# L2: (M1536·L1) + (L2·/M1536)
-a("LD", M("600")); a("AND", L("1")); a("LD", L("2")); a("ANI", M("600")); a("ORB",""); a("OUT", L("2"))
-a("LD", M("400")); a("OR", L("70")); a("ANI", M("401")); a("OUT", L("70"))
-a("LD", M("401")); a("OR", L("71")); a("ANI", M("400")); a("OUT", L("71"))
-a("LD", M("408")); a("OR", L("72")); a("ANI", M("409")); a("OUT", L("72"))
-a("LD", M("409")); a("OR", L("73")); a("ANI", M("408")); a("OUT", L("73"))
-# L116 self-holding complement toggle: (M1537·/L116) + (L116·/M1537)
-a("LD", M("402")); a("PLS", M("601"))
-a("LD", M("601")); a("ANI", L("74")); a("LD", L("74")); a("ANI", M("601")); a("ORB",""); a("OUT", L("74"))
+a("LD","M402"); a("PLS","M600")
+a("LD","M600"); a("AND","M200"); a("AND","M10"); a("SET","M201"); a("RST","M200")
+a("LD","M600"); a("AND","M201"); a("AND","M10"); a("SET","M200"); a("RST","M201")
 
-al("INTERLOCK CHECK")
-a("LD", L("51")); a("AND", L("52")); a("AND", L("53")); a("AND", L("54")); a("AND", L("55")); a("OUT", L("50"))
-a("LD", L("61")); a("AND", L("62")); a("AND", L("63")); a("AND", L("64")); a("AND", L("65")); a("OUT", L("60"))
+# === GUN SELECT (IDLE only) ===
+al("GUN SELECT")
+a("LD","M400"); a("PLS","M601")
+a("LD","M601"); a("AND","M10"); a("AND","M30"); a("SET","M210"); a("RST","M211")
+a("LD","M401"); a("PLS","M602")
+a("LD","M602"); a("AND","M10"); a("AND","M30"); a("SET","M211"); a("RST","M210")
 
-l0_al = ["40","41","42","43","44","45","46","47","48","49","4A","4E"]
-l1_al = ["40","41","42","43","44","45","46","47","48","49","4A","4F"]
+# === OIL+REFRIG ENABLE TOGGLE ===
+al("OIL+REFRIG ENABLE")
+a("LD","M415"); a("PLS","M621")
+a("LD","M621"); a("ANI","M521"); a("SET","M521")
+a("LD","M621"); a("AND","M521"); a("RST","M521")
 
-# ===== READY + START for Manual Mode =====
-al("READY SET L0")
-a("LD", M("40F")); a("AND", L("2")); a("ANI", M("12")); a("SET", "M502")
-a("LD", M("410")); a("AND", L("2")); a("ANI", M("13")); a("SET", "M503")
-a("LD", M("411")); a("AND", L("2")); a("ANI", M("14")); a("SET", "M504")
-a("LD", M("412")); a("AND", L("2")); a("ANI", M("15")); a("SET", "M505")
+# === INTERLOCK USE/NOT USE TOGGLE ===
+al("INTERLOCK ENABLE")
+a("LD","M413"); a("PLS","M622")
+a("LD","M622"); a("ANI","M522"); a("SET","M522")
+a("LD","M622"); a("AND","M522"); a("RST","M522")
 
-al("READY SET L1")
-a("LD", M("40F")); a("AND", L("2")); a("ANI", M("22")); a("SET", "M506")
-a("LD", M("410")); a("AND", L("2")); a("ANI", M("23")); a("SET", "M507")
-a("LD", M("411")); a("AND", L("2")); a("ANI", M("24")); a("SET", "M508")
-a("LD", M("412")); a("AND", L("2")); a("ANI", M("25")); a("SET", "M509")
+# === READY SET (Manual Mode, toggle) ===
+al("READY SET")
+a("LD","M403"); a("PLS","M603")
+a("LD","M603"); a("AND","M200"); a("ANI","M220"); a("SET","M220")
+a("LD","M603"); a("AND","M200"); a("AND","M220"); a("RST","M220")
+a("LD","M404"); a("PLS","M604")
+a("LD","M604"); a("AND","M200"); a("ANI","M221"); a("SET","M221")
+a("LD","M604"); a("AND","M200"); a("AND","M221"); a("RST","M221")
+a("LD","M405"); a("PLS","M605")
+a("LD","M605"); a("AND","M200"); a("ANI","M222"); a("SET","M222")
+a("LD","M605"); a("AND","M200"); a("AND","M222"); a("RST","M222")
+a("LD","M406"); a("PLS","M606")
+a("LD","M606"); a("AND","M200"); a("ANI","M520"); a("ANI","M223"); a("SET","M223")  # REFRIG INJ
+a("LD","M606"); a("AND","M200"); a("AND","M223"); a("RST","M223")
+a("LD","M407"); a("PLS","M607")
+a("LD","M607"); a("AND","M200"); a("ANI","M520"); a("ANI","M224"); a("SET","M224")  # OIL INJ
+a("LD","M607"); a("AND","M200"); a("AND","M224"); a("RST","M224")
 
-al("START EXEC L0")
-a("LD", M("413")); a("AND", "M502"); a("SET", M("12")); a("RST", "M502")
-a("LD", M("413")); a("AND", "M503"); a("SET", M("13")); a("RST", "M503")
-a("LD", M("413")); a("AND", "M504"); a("SET", M("14")); a("RST", "M504")
-a("LD", M("413")); a("AND", "M505"); a("SET", M("15")); a("RST", "M505")
+# === MANUAL START with WARMUP T0 ===
+al("MANUAL START ENTRY")
+a("LD","M408"); a("AND","M220"); a("PLS","M610")
+a("LD","M408"); a("AND","M221"); a("PLS","M611")
+a("LD","M408"); a("AND","M222"); a("PLS","M612")
+a("LD","M408"); a("AND","M223"); a("PLS","M613")
+a("LD","M408"); a("AND","M224"); a("PLS","M614")
+a("LD","M610"); a("OR","M611"); a("OR","M612"); a("OR","M613"); a("OR","M614")
+a("SET","M453")
+a("LD","M453"); a("OUT","T0"); ac("K5")
+# GUN VAC
+a("LD","M610"); a("AND","T0"); a("AND","M210"); a("RST","M220"); a("SET","M12"); a("RST","M453")
+a("LD","M610"); a("AND","T0"); a("AND","M211"); a("RST","M220"); a("SET","M32"); a("RST","M453")
+# UNIT VAC
+a("LD","M611"); a("AND","T0"); a("AND","M210"); a("RST","M221"); a("SET","M13"); a("RST","M453")
+a("LD","M611"); a("AND","T0"); a("AND","M211"); a("RST","M221"); a("SET","M33"); a("RST","M453")
+# VAC CHECK
+a("LD","M612"); a("AND","T0"); a("AND","M210"); a("RST","M222"); a("SET","M14"); a("RST","M453")
+a("LD","M612"); a("AND","T0"); a("AND","M211"); a("RST","M222"); a("SET","M34"); a("RST","M453")
+# REFRIG INJ (M15→M16 for L1, M35→M36 for L2)
+a("LD","M613"); a("AND","T0"); a("AND","M210"); a("RST","M223"); a("SET","M15"); a("RST","M453")
+a("LD","M613"); a("AND","T0"); a("AND","M211"); a("RST","M223"); a("SET","M35"); a("RST","M453")
+# OIL INJ (L3 chain, only if M521 enabled)
+a("LD","M614"); a("AND","T0"); a("AND","M521"); a("RST","M224"); a("SET","M51"); a("RST","M453")
 
-al("START EXEC L1")
-a("LD", M("415")); a("AND", "M506"); a("SET", M("22")); a("RST", "M506")
-a("LD", M("415")); a("AND", "M507"); a("SET", M("23")); a("RST", "M507")
-a("LD", M("415")); a("AND", "M508"); a("SET", M("24")); a("RST", "M508")
-a("LD", M("415")); a("AND", "M509"); a("SET", M("25")); a("RST", "M509")
+# === AUTO START → PRECHECK ===
+al("AUTO START")
+a("LD","M408"); a("AND","M201"); a("AND","M210"); a("AND","M10"); a("PLS","M615")
+a("LD","M408"); a("AND","M201"); a("AND","M211"); a("AND","M30"); a("PLS","M616")
+a("LD","M615"); a("SET","M453")
+a("LD","M616"); a("SET","M453")
+a("LD","M615"); a("AND","T0"); a("SET","M11"); a("RST","M453")
+a("LD","M616"); a("AND","T0"); a("SET","M31"); a("RST","M453")
+# Stopwatch start: auto cycle begin
+a("LD","M615"); a("OR","M616"); a("SET","M490"); a("MOV","K0"); ac("D244")
 
-# ===== SELF-HOLDING STEP MACHINE L0 =====
-al("STEP L0")
-# M16 (init): M24 cycle complete OR self-hold, release when M17 active
-a("LD", M("18"))
-a("OR", M("10"))
-a("ANI", M("11"))
-a("ANI", L("40"))
-a("OUT", M("10"))
+# === AUTO CHAIN WARMUP ===
+al("AUTO CHAIN WARMUP")
+# PRECHECK done → GUN VAC (auto mode only)
+a("LD","M11"); a("AND","M100"); a("AND","M201"); a("SET","M460")
+a("LD","M460"); a("OUT","T0"); ac("K5")
+a("LD","M460"); a("AND","T0"); a("SET","M12"); a("RST","M11"); a("RST","M460")
+a("LD","M31"); a("AND","M116"); a("AND","M201"); a("SET","M467")
+a("LD","M467"); a("OUT","T0"); ac("K5")
+a("LD","M467"); a("AND","T0"); a("SET","M32"); a("RST","M31"); a("RST","M467")
+# GUN VAC done → UNIT VAC (auto mode only)
+a("LD","M12"); a("AND","M101"); a("AND","M201"); a("SET","M461")
+a("LD","M461"); a("OUT","T0"); ac("K5")
+a("LD","M461"); a("AND","T0"); a("SET","M13"); a("RST","M12"); a("RST","M461")
+a("LD","M32"); a("AND","M117"); a("AND","M201"); a("SET","M468")
+a("LD","M468"); a("OUT","T0"); ac("K5")
+a("LD","M468"); a("AND","T0"); a("SET","M33"); a("RST","M32"); a("RST","M468")
+# UNIT VAC done → VAC CHECK (auto mode only)
+a("LD","M13"); a("AND","M102"); a("AND","M201"); a("SET","M462")
+a("LD","M462"); a("OUT","T0"); ac("K5")
+a("LD","M462"); a("AND","T0"); a("SET","M14"); a("RST","M13"); a("RST","M462")
+a("LD","M33"); a("AND","M118"); a("AND","M201"); a("SET","M469")
+a("LD","M469"); a("OUT","T0"); ac("K5")
+a("LD","M469"); a("AND","T0"); a("SET","M34"); a("RST","M33"); a("RST","M469")
+# VAC CHECK done → OIL or REFRIG (auto only)
+a("LD","M14"); a("AND","M103"); a("AND","M201")
+a("LD","M34"); a("AND","M119"); a("AND","M201")
+a("ORB","")
+a("SET","M463")
+a("LD","M463"); a("OUT","T0"); ac("K5")
+a("LD","M463"); a("AND","T0"); a("AND","M210"); a("AND","M521"); a("LDD>=","D18"); ac("K1")
+a("SET","M51"); a("RST","M14"); a("RST","M463")
+a("LD","M463"); a("AND","T0"); a("AND","M211"); a("AND","M521"); a("LDD>=","D50"); ac("K1")
+a("SET","M51"); a("RST","M34"); a("RST","M463")
+a("LD","M463"); a("AND","T0"); a("AND","M210"); a("LDD>=","D18"); ac("K1"); a("ANI","M0")
+a("SET","M15"); a("RST","M14"); a("RST","M463")
+a("LD","M463"); a("AND","T0"); a("AND","M211"); a("LDD>=","D50"); ac("K1"); a("ANI","M0")
+a("SET","M35"); a("RST","M34"); a("RST","M463")
+a("LD","M463"); a("AND","T0"); a("AND","M210"); a("ANI","M521"); a("SET","M15"); a("RST","M14"); a("RST","M463")
+a("LD","M463"); a("AND","T0"); a("AND","M211"); a("ANI","M521"); a("SET","M35"); a("RST","M34"); a("RST","M463")
+# OIL COMPLETE → REFRIG (auto only)
+a("LD","M53"); a("AND","M201"); a("AND","M521"); a("SET","M464")
+a("LD","M464"); a("OUT","T0"); ac("K5")
+a("LD","M464"); a("AND","T0"); a("AND","M210"); a("SET","M15"); a("RST","M53"); a("RST","M464")
+a("LD","M464"); a("AND","T0"); a("AND","M211"); a("SET","M35"); a("RST","M53"); a("RST","M464")
+# REFRIG BASE done → EXHAUST
+a("LD","M16"); a("AND","M105"); a("AND","M201"); a("SET","M465")
+a("LD","M465"); a("OUT","T0"); ac("K5")
+a("LD","M465"); a("AND","T0"); a("SET","M17"); a("RST","M16"); a("RST","M465")
+a("LD","M36"); a("AND","M121"); a("AND","M201"); a("SET","M466")
+a("LD","M466"); a("OUT","T0"); ac("K5")
+a("LD","M466"); a("AND","T0"); a("SET","M37"); a("RST","M36"); a("RST","M466")
 
-# M17: M16 AND start_conditions, release when M18 active
-a("LD", M("10")); a("AND", L("0")); a("AND", L("50")); a("AND", M("413")); a("AND", L("1"))
-for la in l0_al: a("ANI", L(la))
-a("OR", M("11"))
-a("ANI", M("12"))
-a("ANI", L("40"))
-for la in l0_al: a("ANI", L(la))
-a("OUT", M("11"))
+# ==========================================
+# STEP MACHINE L1 (M10~M18)
+# ==========================================
+l1_al = ["300","301","302","303","310","311","312","313","314","316","317","318","319","320"]
+l2_al = ["300","301","302","303","330","331","332","333","334","336","337","338","339","340"]
 
-# M18: M17 unconditional, release when M19 active
-a("LD", M("11"))
-a("OR", M("12"))
-a("ANI", M("13"))
-a("ANI", L("40"))
-for la in l0_al: a("ANI", L(la))
-a("OUT", M("12"))
-
-# M19: M18 AND L16, release when M20 active
-a("LD", M("12")); a("AND", L("10"))
-a("OR", M("13"))
-a("ANI", M("14"))
-a("ANI", L("40"))
-for la in l0_al: a("ANI", L(la))
-a("OUT", M("13"))
-
-# M20: M19 AND L18, release when M21 active
-a("LD", M("13")); a("AND", L("12"))
-a("OR", M("14"))
-a("ANI", M("15"))
-a("ANI", L("40"))
-for la in l0_al: a("ANI", L(la))
-a("OUT", M("14"))
-
-# M21: M20 AND L20, release when M23 active
-a("LD", M("14")); a("AND", L("14"))
-a("OR", M("15"))
-a("ANI", M("17"))
-a("ANI", L("40"))
-for la in l0_al: a("ANI", L(la))
-a("OUT", M("15"))
-
-# M22: parallel branch (same trigger as M21, release when M23 active)
-a("LD", M("14")); a("AND", L("14"))
-a("OR", M("16"))
-a("ANI", M("17"))
-a("ANI", L("40"))
-for la in l0_al: a("ANI", L(la))
-a("OUT", M("16"))
-
-# M23: M21 OR M22 AND L22, release when M24 active
-a("LD", M("15")); a("OR", M("16")); a("AND", L("16"))
-a("OR", M("17"))
-a("ANI", M("18"))
-a("ANI", L("40"))
-for la in l0_al: a("ANI", L(la))
-a("OUT", M("17"))
-
-# M24: M23 AND T3, release when M16 active (cycle complete)
-a("LD", M("17")); a("AND", "T3")
-a("OR", M("18"))
-a("ANI", M("10"))
-a("ANI", L("40"))
-for la in l0_al: a("ANI", L(la))
-a("OUT", M("18"))
-# L24 cycle complete pulse
-a("LD", M("17")); a("AND", "T3"); a("SET", L("18"))
-# Result code K1: normal complete
-a("LD", M("18")); a("MOV", "K1"); ac("D7012")
-
-# ===== SELF-HOLDING STEP MACHINE L1 =====
 al("STEP L1")
-# M32 (init): M40 cycle complete OR self-hold, release when M33 active
-a("LD", M("28"))
-a("OR", M("20"))
-a("ANI", M("21"))
-a("ANI", L("40"))
-a("OUT", M("20"))
+a("LD","M17"); a("AND","M106")
+a("OR","M18"); a("ANI","M10"); a("ANI","M450")
+for la in l1_al: a("ANI",("M"+la))
+a("OUT","M18")
+a("LD","M17"); a("AND","M106"); a("SET","M107")
+a("LD","M18"); a("MOV","K1"); ac("D1000")
 
-# M33: M32 AND start_conditions, release when M34 active
-a("LD", M("20")); a("AND", L("0")); a("AND", L("60")); a("AND", M("415")); a("AND", L("1"))
-for la in l1_al: a("ANI", L(la))
-a("OR", M("21"))
-a("ANI", M("22"))
-a("ANI", L("40"))
-for la in l1_al: a("ANI", L(la))
-a("OUT", M("21"))
+a("LD","M17"); a("OR","M17"); a("ANI","M18"); a("ANI","M450")
+for la in l1_al: a("ANI",("M"+la))
+a("OUT","M17")
+a("LD","M16"); a("OR","M16"); a("ANI","M17"); a("ANI","M450")
+for la in l1_al: a("ANI",("M"+la))
+a("OUT","M16")
+a("LD","M15"); a("OR","M15"); a("ANI","M16"); a("ANI","M450")
+for la in l1_al: a("ANI",("M"+la))
+a("OUT","M15")
+a("LD","M14"); a("OR","M14"); a("ANI","M15"); a("ANI","M51"); a("ANI","M450")
+for la in l1_al: a("ANI",("M"+la))
+a("OUT","M14")
+a("LD","M13"); a("OR","M13"); a("ANI","M14"); a("ANI","M450")
+for la in l1_al: a("ANI",("M"+la))
+a("OUT","M13")
+a("LD","M12"); a("OR","M12"); a("ANI","M13"); a("ANI","M450")
+for la in l1_al: a("ANI",("M"+la))
+a("OUT","M12")
+a("LD","M11"); a("OR","M11"); a("ANI","M12"); a("ANI","M450")
+for la in l1_al: a("ANI",("M"+la))
+a("OUT","M11")
+# PRECHECK OK: interlock OK, model>0, target>0
+a("LD","M11"); a("AND","M80"); a("LD>","D0"); ac("K0"); a("ANB","")
+a("LDD>=","D12"); ac("K1"); a("ANB",""); a("OUT","M100")
 
-# M34: M33 unconditional, release when M35 active
-a("LD", M("21"))
-a("OR", M("22"))
-a("ANI", M("23"))
-a("ANI", L("40"))
-for la in l1_al: a("ANI", L(la))
-a("OUT", M("22"))
+a("LD","M18"); a("OR","M10")
+a("ANI","M11"); a("ANI","M12"); a("ANI","M13"); a("ANI","M14"); a("ANI","M15"); a("ANI","M16")
+a("ANI","M450")
+for la in l1_al: a("ANI",("M"+la))
+a("OUT","M10")
+a("LD","M10"); a("MOV","K0"); ac("D0")
 
-# M35: M34 AND L32, release when M36 active
-a("LD", M("22")); a("AND", L("20"))
-a("OR", M("23"))
-a("ANI", M("24"))
-a("ANI", L("40"))
-for la in l1_al: a("ANI", L(la))
-a("OUT", M("23"))
+# ==========================================
+# STEP MACHINE L2 (M30~M38)
+# ==========================================
+al("STEP L2")
+a("LD","M37"); a("AND","M122")
+a("OR","M38"); a("ANI","M30"); a("ANI","M451")
+for la in l2_al: a("ANI",("M"+la))
+a("OUT","M38")
+a("LD","M37"); a("AND","M122"); a("SET","M123")
+a("LD","M38"); a("MOV","K1"); ac("D1200")
 
-# M36: M35 AND L34, release when M37 active
-a("LD", M("23")); a("AND", L("22"))
-a("OR", M("24"))
-a("ANI", M("25"))
-a("ANI", L("40"))
-for la in l1_al: a("ANI", L(la))
-a("OUT", M("24"))
+a("LD","M37"); a("OR","M37"); a("ANI","M38"); a("ANI","M451")
+for la in l2_al: a("ANI",("M"+la))
+a("OUT","M37")
+a("LD","M36"); a("OR","M36"); a("ANI","M37"); a("ANI","M451")
+for la in l2_al: a("ANI",("M"+la))
+a("OUT","M36")
+a("LD","M35"); a("OR","M35"); a("ANI","M36"); a("ANI","M451")
+for la in l2_al: a("ANI",("M"+la))
+a("OUT","M35")
+a("LD","M34"); a("OR","M34"); a("ANI","M35"); a("ANI","M51"); a("ANI","M451")
+for la in l2_al: a("ANI",("M"+la))
+a("OUT","M34")
+a("LD","M33"); a("OR","M33"); a("ANI","M34"); a("ANI","M451")
+for la in l2_al: a("ANI",("M"+la))
+a("OUT","M33")
+a("LD","M32"); a("OR","M32"); a("ANI","M33"); a("ANI","M451")
+for la in l2_al: a("ANI",("M"+la))
+a("OUT","M32")
+a("LD","M31"); a("OR","M31"); a("ANI","M32"); a("ANI","M451")
+for la in l2_al: a("ANI",("M"+la))
+a("OUT","M31")
+a("LD","M31"); a("AND","M90"); a("LD>","D32"); ac("K0"); a("ANB","")
+a("LDD>=","D44"); ac("K1"); a("ANB",""); a("OUT","M116")
 
-# M37: M36 AND L36, release when M39 active
-a("LD", M("24")); a("AND", L("24"))
-a("OR", M("25"))
-a("ANI", M("27"))
-a("ANI", L("40"))
-for la in l1_al: a("ANI", L(la))
-a("OUT", M("25"))
+a("LD","M38"); a("OR","M30")
+a("ANI","M31"); a("ANI","M32"); a("ANI","M33"); a("ANI","M34"); a("ANI","M35"); a("ANI","M36")
+a("ANI","M451")
+for la in l2_al: a("ANI",("M"+la))
+a("OUT","M30")
+a("LD","M30"); a("MOV","K0"); ac("D32")    # reset L2 model# on IDLE
 
-# M38: parallel branch (same trigger as M37, release when M39 active)
-a("LD", M("24")); a("AND", L("24"))
-a("OR", M("26"))
-a("ANI", M("27"))
-a("ANI", L("40"))
-for la in l1_al: a("ANI", L(la))
-a("OUT", M("26"))
+# ==========================================
+# STEP MACHINE L3 (M50~M53) — Oil
+# ==========================================
+l3_al = ["300","301","302","303","350","351"]
+al("STEP L3")
+a("LD","M52"); a("AND","M146")            # M146 = OIL BASE OK
+a("OR","M53"); a("ANI","M50"); a("ANI","M450"); a("ANI","M451")
+for la in l3_al: a("ANI",("M"+la))
+a("OUT","M53")
+a("LD","M52"); a("AND","M146"); a("SET","M147")   # OIL COMPLETE
 
-# M39: M37 OR M38 AND L38, release when M40 active
-a("LD", M("25")); a("OR", M("26")); a("AND", L("26"))
-a("OR", M("27"))
-a("ANI", M("28"))
-a("ANI", L("40"))
-for la in l1_al: a("ANI", L(la))
-a("OUT", M("27"))
+a("LD","M51"); a("AND","M145")            # M145 = OIL FAST OK
+a("OR","M52"); a("ANI","M53"); a("ANI","M450"); a("ANI","M451")
+for la in l3_al: a("ANI",("M"+la))
+a("OUT","M52")
 
-# M40: M39 AND T3, release when M32 active (cycle complete)
-a("LD", M("27")); a("AND", "T3")
-a("OR", M("28"))
-a("ANI", M("20"))
-a("ANI", L("40"))
-for la in l1_al: a("ANI", L(la))
-a("OUT", M("28"))
-# L40 cycle complete pulse
-a("LD", M("27")); a("AND", "T3"); a("SET", L("28"))
-# Result code K1: normal complete
-a("LD", M("28")); a("MOV", "K1"); ac("D8012")
+a("LD","M51"); a("OUT","M51")
 
-# ===== NG ALARM STOP =====
-# Self-holding: active steps turn off via alarm ANI in each step's self-hold rung
+a("LD","M53"); a("OR","M50")
+a("ANI","M51"); a("ANI","M450"); a("ANI","M451")
+for la in l3_al: a("ANI",("M"+la))
+a("OUT","M50")
+
+# === INTERLOCK CHECK ===
+al("INTERLOCK CHECK")
+a("LD","M81"); a("AND","M82"); a("AND","M83"); a("AND","M84"); a("AND","M85"); a("OUT","M80")
+a("LD","M91"); a("AND","M92"); a("AND","M93"); a("AND","M94"); a("AND","M95"); a("OUT","M90")
+
+# === NG ALARM STOP ===
 al("NG ALARM STOP")
-a("LD", L("11")); a("MOV", "K3"); ac("D7012"); a("MOV", "K3"); ac("D8012")
-a("LD", L("13")); a("MOV", "K4"); ac("D7012"); a("MOV", "K4"); ac("D8012")
-a("LD", L("15")); a("MOV", "K5"); ac("D7012"); a("MOV", "K5"); ac("D8012")
-a("LD", L("17")); a("MOV", "K2"); ac("D7012"); a("MOV", "K2"); ac("D8012")
-a("LD", L("11")); a("OR", L("13")); a("OR", L("15")); a("OR", L("17"))
-for la in l0_al: a("OR", L(la))
-a("SET", M("10"))
-a("LD", L("11")); a("OR", L("13")); a("OR", L("15")); a("OR", L("17"))
-for la in l1_al: a("OR", L(la))
-a("SET", M("20"))
+a("LD","M108"); a("OR","M109"); a("OR","M111") ; a("LD","M310"); a("OR","M311"); a("OR","M312")
+a("ORB",""); a("SET","M450")
+a("LD","M124"); a("OR","M125"); a("OR","M127") ; a("LD","M330"); a("OR","M331"); a("OR","M332")
+a("ORB",""); a("SET","M451")
+a("LD","M450"); a("RST","M12"); a("RST","M13"); a("RST","M14"); a("RST","M15"); a("RST","M16"); a("SET","M17")
+a("LD","M451"); a("RST","M32"); a("RST","M33"); a("RST","M34"); a("RST","M35"); a("RST","M36"); a("SET","M37")
+a("LD","M450"); a("OR","M451")
+a("RST","M51"); a("RST","M52"); a("SET","M53")
+a("RST","M65"); a("RST","M66"); a("RST","M75"); a("RST","M76")
 
-# ===== STOP =====
+# === STOP ===
 al("STOP")
-all_sh = ["10","11","12","13","14","15","16","17","18","20","21","22","23","24","25","26","27","28"]
-all_so = ["30","31","32","33","34","35","36","37","38","39","3A","3B","40","41","42","43","44","45","46","47","48","49","4A","4B","4C","4D","4E","4F","50"]
-a("LD", M("414")); a("OR", M("301"))
-for cs in range(0,len(all_sh),8):
-    if cs>0: a("LD","M0")
-    for s in all_sh[cs:cs+8]: a("RST",M(s))
-for cs in range(0,len(all_so),8):
-    a("LD","M0")
-    for s in all_so[cs:cs+8]: a("RST",M(s))
-a("LD","M0"); a("SET",M("10")); a("SET",M("20"))
-a("MOV","K6 D7012"); a("MOV","K6 D8012")
+a("LD","M409"); a("AND","M210"); a("SET","M450")
+a("LD","M409"); a("AND","M211"); a("SET","M451")
+a("LD","M10"); a("RST","M450")
+a("LD","M30"); a("RST","M451")
+a("LD","M450"); a("MOV","K6"); ac("D1000")
+a("LD","M451"); a("MOV","K6"); ac("D1200")
 
-# ===== EMERGENCY STOP =====
+# === EMERGENCY STOP ===
 al("EMERGENCY STOP")
-a("LDI",M("303"))
-a("MOV","K6 D7012"); a("MOV","K6 D8012")
-for cs in range(0,len(all_sh),8):
-    if cs>0: a("LD","M0")
-    for s in all_sh[cs:cs+8]: a("RST",M(s))
-for cs in range(0,len(all_so),8):
-    a("LD","M0")
-    for s in all_so[cs:cs+8]: a("RST",M(s))
+a("LDI","M770"); a("OR","M452"); a("ANI","M410"); a("OUT","M452")
+all_steps = ["10","11","12","13","14","15","16","17","18","30","31","32","33","34","35","36","37","38","50","51","52","53"]
+a("LD","M452")
+for i,s in enumerate(all_steps):
+    if i>0 and i%8==0: a("LD","M452")
+    a("RST",("M"+s))
+all_sols = ["60","61","62","63","64","65","66","68","69","70","71","72","73","74","75","76"]
+a("LD","M452")
+for i,s in enumerate(all_sols):
+    if i>0 and i%8==0: a("LD","M452")
+    a("RST",("M"+s))
+a("LD","M452"); a("MOV","K6"); ac("D1000")
+a("LD","M452"); a("MOV","K6"); ac("D1200")
 
-# ===== EXHAUST TIMER =====
-al("EXHAUST TIMER")
-a("LD",M("17")); a("OUT","T3"); ac("D8")
-a("LD",M("27")); a("OUT","T3"); ac("D38")
-
-# ===== LAMP CONTROL =====
+# === LAMP CONTROL ===
 al("LAMP CONTROL")
-# GREEN
-all_al = ["40","41","42","43","44","45","46","47","48","49","4A","4E","4F"]
-a("LD",M("10"))
-for s in ["11","12","13","14","15","16","17","18"]: a("OR",M(s))
-for la in all_al: a("ANI",L(la))
-a("OUT",M("4D"))
-# RED
-a("LD",L(all_al[0]))
-for la in all_al[1:]: a("OR",L(la))
-a("OUT",M("4E"))
-# YELLOW
-a("LD",M("10")); a("ANI",L("50")); a("OUT",M("4F"))
+a("LD","M12"); a("OR","M13"); a("OR","M14"); a("OR","M15"); a("OR","M16"); a("OR","M17")
+a("LD","M32"); a("OR","M33"); a("OR","M34"); a("OR","M35"); a("OR","M36"); a("OR","M37")
+a("ORB",""); a("LD","M51"); a("OR","M52"); a("ORB","")
+all_al_l = l1_al + l2_al + l3_al
+for la in all_al_l: a("ANI",("M"+la))
+a("OUT","M77")
+a("LD","M300")
+for b in ["301","302","303","310","311","312","313","314","316","317","318","319","320","330","331","332","333","334","336","337","338","339","340","350","351"]:
+    a("OR",("M"+b))
+a("OUT","M78")
+a("LD","M10"); a("LD","M30"); a("ORB",""); a("ANI","M80"); a("ANI","M90"); a("OUT","M79")
 
-# ===== HMI LAMP BITS =====
-al("HMI LAMP")
-a("LD","M502"); a("OR",M("12")); a("OUT","M530")
-a("LD","M503"); a("OR",M("13")); a("OUT","M531")
-a("LD","M504"); a("OR",M("14")); a("OUT","M532")
-a("LD","M505"); a("OR",M("15")); a("OR",M("16")); a("OUT","M533")
-a("LD","M506"); a("OR",M("22")); a("OUT","M534")
-a("LD","M507"); a("OR",M("23")); a("OUT","M535")
-a("LD","M508"); a("OR",M("24")); a("OUT","M536")
-a("LD","M509"); a("OR",M("25")); a("OR",M("26")); a("OUT","M537")
-a("LD",M("12"))
-for s in ["13","14","15","16","17","18"]: a("OR",M(s))
-a("OUT","M540")
-a("LD",M("22"))
-for s in ["23","24","25","26","27","28"]: a("OR",M(s))
-a("OUT","M541")
+# === STOPWATCH (0.1sec, auto cycle only) ===
+al("STOPWATCH")
+# Active: auto cycle start → IDLE
+a("LD","M490"); a("ANI","T22"); a("OUT","T22"); ac("K1")    # 100ms self-reset
+a("LD","T22"); a("D+","D244"); ac("K1"); ac("D244")         # +0.1 sec
+# Stop on IDLE
+a("LD","M10"); a("OR","M30"); a("RST","M490")
+# Also stop on cycle complete/NG
+a("LD","M450"); a("OR","M451"); a("RST","M490")
+a("LD","M452"); a("RST","M490")
+
+# === VACUUM PUMP ===
+al("VACUUM PUMP")
+a("LD","M412"); a("PLS","M620")
+a("LD","M620"); a("ANI","M67"); a("SET","M67")
+a("LD","M620"); a("AND","M67"); a("RST","M67")
 
 a("END","")
 wr("F:\\WorkSpace\\REF\\src\\MAIN.csv")

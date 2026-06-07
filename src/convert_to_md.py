@@ -161,6 +161,11 @@ if __name__ == '__main__':
     skip_files = {'ref_comment.csv'}
     skip_dirs = {'set_reset'}
 
+    # Only convert CSV files generated from gen_*.py scripts
+    gen_files = {'MAIN.csv', 'alarm.csv', 'refinj.csv', 'oilinj.csv',
+                 'gunvac.csv', 'unitvac.csv', 'vacchec.csv',
+                 'gmes.csv', 'indexs.csv', 'ad.csv',
+                 'idata.csv', 'setting.csv', 'ref_comment.csv'}
     for fname in os.listdir(src_dir):
         if not fname.endswith('.csv'):
             continue
@@ -168,6 +173,10 @@ if __name__ == '__main__':
             continue
         fpath = os.path.join(src_dir, fname)
         if os.path.isdir(fpath):
+            continue
+        # Skip unknown CSV files
+        if fname not in gen_files and not fname.startswith('gen_'):
+            print(f'Skipping unknown CSV: {fname}')
             continue
 
         basename = fname[:-4]

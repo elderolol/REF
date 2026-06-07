@@ -2,9 +2,76 @@
   "meta": {
     "source_file": "ad.csv",
     "cpu": "QCPU (Q mode) Q03UDV",
-    "total_steps": 0,
-    "block_count": 0,
-    "generated": "2026-06-03"
+    "total_steps": 14,
+    "block_count": 1,
+    "generated": "2026-06-06"
   },
-  "blocks": []
+  "blocks": [
+    {
+      "id": 1,
+      "name": "ANALOG RAW TO EU",
+      "step_start": 1,
+      "step_end": 14,
+      "conditions": [
+        {
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "instruction": "LD",
+          "device": "M0"
+        }
+      ],
+      "actions": [
+        {
+          "instruction": "MOV",
+          "device": "D100"
+        },
+        {
+          "instruction": "MOV",
+          "device": "D102"
+        },
+        {
+          "instruction": "DMOV",
+          "device": "D104"
+        },
+        {
+          "instruction": "MOV",
+          "device": "D110"
+        },
+        {
+          "instruction": "MOV",
+          "device": "D112"
+        },
+        {
+          "instruction": "DMOV",
+          "device": "D114"
+        },
+        {
+          "instruction": "MOV",
+          "device": "D120"
+        }
+      ]
+    }
+  ]
 }

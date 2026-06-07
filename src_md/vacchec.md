@@ -1,96 +1,102 @@
 ---
 # REF_self_holding — IL Logic Map
 **CPU:** QCPU (Q mode) Q03UDV
-**Total Steps:** 47
+**Total Steps:** 51
 **Blocks:** 2
-**Generated:** 2026-06-03
+**Generated:** 2026-06-06
 ---
 
 ## Block List
 | # | Name | Steps | Condition Device | Action Count |
 |---|------|-------|-----------------|--------------|
-| 1 | VAC CHECK L0 | 1–23 | LD M20, LD M20, LD M20 ... (+5) | 15 |
-| 2 | VAC CHECK L1 | 25–47 | LD M36, LD M36, LD M36 ... (+5) | 15 |
+| 1 | VAC CHECK L1 | 1–25 | LD M14, LD M14, LD M14 ... (+2) | 20 |
+| 2 | VAC CHECK L2 | 27–51 | LD M34, LD M34, LD M34 ... (+2) | 20 |
 
 ## Block Detail
 
-### Block 1: VAC CHECK L0 (Step 1–23)
+### Block 1: VAC CHECK L1 (Step 1–25)
 
 **Trigger Condition:**
-- LD M20
-- LD M20
-- LD M20
-- LD M20
-- LD M20
-- LD M20
-- LD M20
-- LD M20
+- LD M14
+- LD M14
+- LD M14
+- LD M14
+- LD M14
 
 **Actions:**
-- DMOV D160
-- OUT T2
-- D- D300
-- AND M775
-- OUT M878
-- AND M775
-- AND> D304
-- ORB 
-- OUT M821
-- AND> D304
-- OUT M868
-- ANI M775
-- AND T2
-- AND<= D304
-- OUT M820
+- OUT M60
+- OUT M61
+- OUT M68
+- DMOV D30
+- OUT T3
+- D- D600
+- AND T3
+- LDD<= D602
+- OUT M103
+- RST M60
+- RST M61
+- RST M68
+- AND T3
+- LDD> D602
+- SET M109
+- SET M312
+- RST M14
+- RST M60
+- RST M61
+- RST M68
 
-### Block 2: VAC CHECK L1 (Step 25–47)
+### Block 2: VAC CHECK L2 (Step 27–51)
 
 **Trigger Condition:**
-- LD M36
-- LD M36
-- LD M36
-- LD M36
-- LD M36
-- LD M36
-- LD M36
-- LD M36
+- LD M34
+- LD M34
+- LD M34
+- LD M34
+- LD M34
 
 **Actions:**
-- DMOV D172
-- OUT T11
-- D- D306
-- AND M791
-- OUT M879
-- AND M791
-- AND> D308
-- ORB 
-- OUT M837
-- AND> D308
-- OUT M868
-- ANI M791
-- AND T11
-- AND<= D308
-- OUT M836
+- OUT M70
+- OUT M71
+- OUT M68
+- DMOV D62
+- OUT T9
+- D- D610
+- AND T9
+- LDD<= D612
+- OUT M119
+- RST M70
+- RST M71
+- RST M68
+- AND T9
+- LDD> D612
+- SET M125
+- SET M332
+- RST M34
+- RST M70
+- RST M71
+- RST M68
 
 ## Device Map
 | Device | Type | SET Steps | RST Steps | OUT Steps | Read Steps |
 |--------|------|-----------|-----------|-----------|------------|
-| D160 | D |  |  |  | 1 |
-| D172 | D |  |  |  | 1 |
-| D300 | D |  |  |  | 1 |
-| D304 | D |  |  |  | 3 |
-| D306 | D |  |  |  | 1 |
-| D308 | D |  |  |  | 3 |
-| M20 | M |  |  |  | 8 |
-| M36 | M |  |  |  | 8 |
-| M775 | M |  |  |  | 3 |
-| M791 | M |  |  |  | 3 |
-| M820 | M |  |  | 1 |  |
-| M821 | M |  |  | 1 |  |
-| M836 | M |  |  | 1 |  |
-| M837 | M |  |  | 1 |  |
-| M868 | M |  |  | 2 |  |
-| M878 | M |  |  | 1 |  |
-| M879 | M |  |  | 1 |  |
-| T11 | T |  |  | 1 | 1 |
-| T2 | T |  |  | 1 | 1 |
+| D30 | D |  |  |  | 1 |
+| D600 | D |  |  |  | 1 |
+| D602 | D |  |  |  | 2 |
+| D610 | D |  |  |  | 1 |
+| D612 | D |  |  |  | 2 |
+| D62 | D |  |  |  | 1 |
+| M103 | M |  |  | 1 |  |
+| M109 | M | 1 |  |  |  |
+| M119 | M |  |  | 1 |  |
+| M125 | M | 1 |  |  |  |
+| M14 | M |  | 1 |  | 5 |
+| M312 | M | 1 |  |  |  |
+| M332 | M | 1 |  |  |  |
+| M34 | M |  | 1 |  | 5 |
+| M60 | M |  | 2 | 1 |  |
+| M61 | M |  | 2 | 1 |  |
+| M68 | M |  | 4 | 2 |  |
+| M70 | M |  | 2 | 1 |  |
+| M71 | M |  | 2 | 1 |  |
+| T3 | T |  |  | 1 | 2 |
+| T9 | T |  |  | 1 | 2 |

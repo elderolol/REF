@@ -1,4 +1,8 @@
-﻿# REFRIGERANT INJECTION ??self-holding OUT conversion
+﻿# REFRIG INJECTION — H+L solenoid only (no gas type branching)
+# L1: M15(FAST)→M16(BASE)→EXHAUST  L2: M35(FAST)→M36(BASE)→EXHAUST
+# Results: L1=M100-M111 (PRECHECK OK~VAC NG), L2=M116-M127
+# M104=REFRIG FAST OK, M105=REFRIG BASE OK, M106=EXHAUST OK
+# M110=INJ NG L1, M120=REFRIG FAST OK L2, M121=REFRIG BASE OK L2, M122=EXHAUST OK L2, M126=INJ NG L2
 st = 0; lines = []
 def a(i,d): global st; lines.append(f'"{st}"\t""\t"{i}"\t"{d}"\t""\t""\t""'); st += 1
 def ac(d): lines.append(f'""\t""\t""\t"{d}"\t""\t""\t""')
@@ -12,94 +16,51 @@ def wr(p):
 
 hd("REF_self_holding")
 
-# ===== L0 REFRIG FAST =====
-al("L0 REFRIG FAST")
-# M52 timer coil = M21 step active + RST on completion
-a("LD", "M21"); a("OUT", "M52")
-# M96 solenoid = M21 step active + RST on completion  
-a("LD", "M21"); a("OUT", "M96")
-a("LD", "M21"); a("OUT", "T4"); ac("K3000")
-# D62=1 (gas type 1) AND target reached ??refrig normal
-a("LD", "M21"); a("LD=", "D62"); ac("K1"); a("AND>=", "D124"); ac("D10"); a("ANB",""); a("RST", "M52"); a("SET", "M22")
-# D62=0 (gas type 0) AND target reached ??exhaust (skip refrig normal)
-a("LD", "M21"); a("LD=", "D62"); ac("K0"); a("AND>=", "D124"); ac("D64"); a("ANB",""); a("RST", "M52"); a("RST", "M96"); a("SET", "M23")
-# T4 timeout ??exhaust + alarm
-a("LD", "M21"); a("AND", "T4"); a("RST", "M52"); a("RST", "M96"); a("SET", "M23"); a("SET", "M869")
-
-# ===== L0 REFRIG NORMAL =====
-al("L0 REFRIG NORMAL")
-a("LD", "M22"); a("OUT", "M53")
-a("LD", "M22"); a("OUT", "T5"); ac("K3000")
-a("LD", "M22"); a("AND>=", "D124"); ac("D64"); a("RST", "M53"); a("RST", "M96"); a("SET", "M23")
-a("LD", "M22"); a("AND", "T5"); a("RST", "M53"); a("RST", "M96"); a("SET", "M23"); a("SET", "M869")
-
-# ===== L0 OIL FAST =====
-al("L0 OIL FAST")
-a("LD", "M25"); a("OUT", "M54")
-a("LD", "M25"); a("OUT", "T6"); ac("K3000")
-# D62=1 AND target reached ??oil normal
-a("LD", "M25"); a("LD=", "D62"); ac("K1"); a("AND>=", "D124"); ac("D12"); a("ANB",""); a("RST", "M54"); a("SET", "M26")
-# D124 >= D72 (oil target) ??repeat refrig fast
-a("LD", "M25"); a("AND>=", "D124"); ac("D72"); a("RST", "M54"); a("SET", "M21")
-# T6 timeout ??exhaust + alarm
-a("LD", "M25"); a("AND", "T6"); a("RST", "M54"); a("SET", "M23"); a("SET", "M869")
-
-# ===== L0 OIL NORMAL =====
-al("L0 OIL NORMAL")
-a("LD", "M26"); a("OUT", "M55")
-a("LD", "M26"); a("OUT", "T6"); ac("K3000")
-a("LD", "M26"); a("AND>=", "D124"); ac("D72"); a("RST", "M55"); a("SET", "M21")
-a("LD", "M26"); a("AND", "T6"); a("RST", "M55"); a("SET", "M23"); a("SET", "M869")
-
-# ===== L0 EXHAUST =====
-al("L0 EXHAUST")
-a("LD", "M23"); a("OUT", "M51")
-a("LD", "M23"); a("OUT", "T3"); ac("D8")
-a("LD", "M23"); a("AND", "T3"); a("RST", "M51"); a("SET", "M822"); a("RST", "M23")
-
-# ===== L1 REFRIG FAST =====
 al("L1 REFRIG FAST")
-a("LD", "M37"); a("OUT", "M68")
-a("LD", "M37"); a("OUT", "M98")
-a("LD", "M37"); a("OUT", "T13"); ac("K3000")
-# M872/M873 gas type check for L1
-a("LD", "M37"); a("LD", "M872"); a("LD=", "D90"); ac("K1"); a("ANB",""); a("LD", "M873"); a("LD=", "D104"); ac("K1"); a("ANB",""); a("ORB",""); a("ANB","")
-a("AND>=", "D400"); ac("D10"); a("RST", "M68"); a("SET", "M38")
-# Gas type 0
-a("LD", "M37"); a("LD", "M872"); a("LD=", "D90"); ac("K0"); a("ANB",""); a("LD", "M873"); a("LD=", "D104"); ac("K0"); a("ANB",""); a("ORB",""); a("ANB","")
-a("AND>=", "D400"); ac("D64"); a("RST", "M68"); a("RST", "M98"); a("SET", "M39")
-# Timeout
-a("LD", "M37"); a("AND", "T13"); a("RST", "M68"); a("RST", "M98"); a("SET", "M39"); a("SET", "M869")
+a("LD","M15"); a("OUT","M62"); a("OUT","M63")
+a("LD","M15"); a("OUT","T4"); ac("K3000")
+a("LD","M15"); a("LDD>=","D150"); ac("D10")
+a("RST","M62"); a("SET","M104"); a("SET","M16")    # FAST done, goto BASE
+a("LD","M15"); a("AND","T4")
+a("RST","M62"); a("RST","M63"); a("SET","M313"); a("SET","M110"); a("SET","M17"); a("RST","M15")
 
-# ===== L1 REFRIG NORMAL =====
-al("L1 REFRIG NORMAL")
-a("LD", "M38"); a("OUT", "M69")
-a("LD", "M38"); a("OUT", "T14"); ac("K3000")
-a("LD", "M38"); a("AND>=", "D400"); ac("D64"); a("RST", "M69"); a("RST", "M98"); a("SET", "M39")
-a("LD", "M38"); a("AND", "T14"); a("RST", "M69"); a("RST", "M98"); a("SET", "M39"); a("SET", "M869")
+al("L1 REFRIG BASE")
+a("LD","M16"); a("OUT","M63")
+a("LD","M16"); a("OUT","T5"); ac("K3000")
+a("LD","M16"); a("LDD>=","D150"); ac("D12")
+a("RST","M63"); a("SET","M105"); a("SET","M17")    # BASE OK, goto EXHAUST
+a("LD","M16"); a("AND","T5")
+a("RST","M63"); a("SET","M313"); a("SET","M110"); a("SET","M17"); a("RST","M16")
+a("LD","M16"); a("LDD>","D150"); ac("D14"); a("SET","M314")  # amount NG (over)
+a("LD","M17"); a("LDD<","D150"); ac("D12"); a("SET","M314")  # amount NG (under)
 
-# ===== L1 OIL FAST =====
-al("L1 OIL FAST")
-a("LD", "M41"); a("OUT", "M70")
-a("LD", "M41"); a("OUT", "T15"); ac("K3000")
-a("LD", "M41"); a("LD", "M872"); a("LD=", "D90"); ac("K1"); a("ANB",""); a("LD", "M873"); a("LD=", "D104"); ac("K1"); a("ANB",""); a("ORB",""); a("ANB","")
-a("AND>=", "D400"); ac("D12"); a("RST", "M70"); a("SET", "M42")
-a("LD", "M41"); a("AND>=", "D400"); ac("D72"); a("RST", "M70"); a("SET", "M37")
-a("LD", "M41"); a("AND", "T15"); a("RST", "M70"); a("SET", "M39"); a("SET", "M869")
-
-# ===== L1 OIL NORMAL =====
-al("L1 OIL NORMAL")
-a("LD", "M42"); a("OUT", "M71")
-a("LD", "M42"); a("OUT", "T15"); ac("K3000")
-a("LD", "M42"); a("AND>=", "D400"); ac("D72"); a("RST", "M71"); a("SET", "M37")
-a("LD", "M42"); a("AND", "T15"); a("RST", "M71"); a("SET", "M39"); a("SET", "M869")
-
-# ===== L1 EXHAUST =====
 al("L1 EXHAUST")
-a("LD", "M39"); a("OUT", "M67")
-a("LD", "M39"); a("OUT", "T12"); ac("D38")
-a("LD", "M39"); a("AND", "T12"); a("RST", "M67"); a("SET", "M838"); a("RST", "M39")
+a("LD","M17"); a("OUT","M64")
+a("LD","M17"); a("OUT","T6"); ac("D8")
+a("LD","M17"); a("AND","T6"); a("RST","M64"); a("SET","M106")
+
+al("L2 REFRIG FAST")
+a("LD","M35"); a("OUT","M72"); a("OUT","M73")
+a("LD","M35"); a("OUT","T10"); ac("K3000")
+a("LD","M35"); a("LDD>=","D170"); ac("D42")
+a("RST","M72"); a("SET","M120"); a("SET","M36")
+a("LD","M35"); a("AND","T10")
+a("RST","M72"); a("RST","M73"); a("SET","M333"); a("SET","M126"); a("SET","M37"); a("RST","M35")
+
+al("L2 REFRIG BASE")
+a("LD","M36"); a("OUT","M73")
+a("LD","M36"); a("OUT","T11"); ac("K3000")
+a("LD","M36"); a("LDD>=","D170"); ac("D44")
+a("RST","M73"); a("SET","M121"); a("SET","M37")
+a("LD","M36"); a("AND","T11")
+a("RST","M73"); a("SET","M333"); a("SET","M126"); a("SET","M37"); a("RST","M36")
+a("LD","M36"); a("LDD>","D170"); ac("D46"); a("SET","M334")
+a("LD","M37"); a("LDD<","D170"); ac("D44"); a("SET","M334")
+
+al("L2 EXHAUST")
+a("LD","M37"); a("OUT","M74")
+a("LD","M37"); a("OUT","T12"); ac("D40")
+a("LD","M37"); a("AND","T12"); a("RST","M74"); a("SET","M122")
 
 a("END","")
 wr("F:\\WorkSpace\\REF\\src\\refinj.csv")
-

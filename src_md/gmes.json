@@ -2,122 +2,124 @@
   "meta": {
     "source_file": "gmes.csv",
     "cpu": "QCPU (Q mode) Q03UDV",
-    "total_steps": 81,
-    "block_count": 2,
-    "generated": "2026-06-03"
+    "total_steps": 160,
+    "block_count": 7,
+    "generated": "2026-06-06"
   },
   "blocks": [
     {
       "id": 1,
-      "name": "PC COMM L1",
+      "name": "L1 CYCLE DONE SPC",
       "step_start": 1,
-      "step_end": 40,
+      "step_end": 16,
       "conditions": [
         {
           "instruction": "LD",
-          "device": "M23"
+          "device": "M107"
         },
         {
           "instruction": "LD",
-          "device": "M23"
+          "device": "M107"
         },
         {
           "instruction": "LD",
-          "device": "M23"
+          "device": "M107"
         },
         {
           "instruction": "LD",
-          "device": "M0"
+          "device": "M107"
         },
         {
           "instruction": "LD",
-          "device": "M0"
+          "device": "M107"
         },
         {
           "instruction": "LD",
-          "device": "M0"
+          "device": "M107"
         },
         {
           "instruction": "LD",
-          "device": "M0"
-        },
-        {
-          "instruction": "LD",
-          "device": "M0"
-        },
-        {
-          "instruction": "LD",
-          "device": "M0"
-        },
-        {
-          "instruction": "LD",
-          "device": "M803"
-        },
-        {
-          "instruction": "LDI",
-          "device": "M803"
-        },
-        {
-          "instruction": "LD",
-          "device": "M16"
-        },
-        {
-          "instruction": "LDI",
-          "device": "M16"
-        },
-        {
-          "instruction": "LD",
-          "device": "M18"
-        },
-        {
-          "instruction": "LD",
-          "device": "M19"
-        },
-        {
-          "instruction": "LD",
-          "device": "M20"
-        },
-        {
-          "instruction": "LD",
-          "device": "M21"
-        },
-        {
-          "instruction": "LD",
-          "device": "M16"
+          "device": "M123"
         }
       ],
       "actions": [
         {
-          "instruction": "LD>",
-          "device": "D7001"
+          "instruction": "D+",
+          "device": "D300"
         },
         {
-          "instruction": "MOV",
-          "device": "D7000"
+          "instruction": "D+",
+          "device": "D202"
         },
         {
-          "instruction": "MOV",
-          "device": "D7001"
+          "instruction": "D+",
+          "device": "D204"
         },
         {
           "instruction": "DMOV",
           "device": "D130"
         },
         {
-          "instruction": "MOV",
-          "device": "D142"
+          "instruction": "DMOV",
+          "device": "D12"
         },
         {
-          "instruction": "MOV",
-          "device": "D142"
+          "instruction": "LDD>=",
+          "device": "D300"
         },
         {
-          "instruction": "MOV",
-          "device": "D7007"
+          "instruction": "SET",
+          "device": "M302"
         },
         {
-          "instruction": "MOV",
-          "device": "D140"
+          "instruction": "D+",
+          "device": "D240"
+        },
+        {
+          "instruction": "D+",
+          "device": "D242"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "L2 CYCLE DONE SPC",
+      "step_start": 18,
+      "step_end": 29,
+      "conditions": [
+        {
+          "instruction": "LD",
+          "device": "M123"
+        },
+        {
+          "instruction": "LD",
+          "device": "M123"
+        },
+        {
+          "instruction": "LD",
+          "device": "M123"
+        },
+        {
+          "instruction": "LD",
+          "device": "M123"
+        },
+        {
+          "instruction": "LD",
+          "device": "M123"
+        }
+      ],
+      "actions": [
+        {
+          "instruction": "D+",
+          "device": "D220"
+        },
+        {
+          "instruction": "D+",
+          "device": "D222"
+        },
+        {
+          "instruction": "D+",
+          "device": "D224"
         },
         {
           "instruction": "DMOV",
@@ -125,115 +127,299 @@
         },
         {
           "instruction": "DMOV",
-          "device": "D22"
+          "device": "D44"
         },
         {
-          "instruction": "MOV",
-          "device": "K1"
+          "instruction": "LDD>=",
+          "device": "D220"
         },
         {
-          "instruction": "MOV",
+          "instruction": "SET",
+          "device": "M302"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "VAC SPC LOGGING",
+      "step_start": 31,
+      "step_end": 78,
+      "conditions": [
+        {
+          "instruction": "LD",
+          "device": "M12"
+        },
+        {
+          "instruction": "LD",
+          "device": "M470"
+        },
+        {
+          "instruction": "LD",
+          "device": "M14"
+        },
+        {
+          "instruction": "LD",
+          "device": "M480"
+        },
+        {
+          "instruction": "LD",
+          "device": "M481"
+        },
+        {
+          "instruction": "LD",
+          "device": "M450"
+        },
+        {
+          "instruction": "LD",
+          "device": "M452"
+        },
+        {
+          "instruction": "LD",
+          "device": "T18"
+        },
+        {
+          "instruction": "LD",
+          "device": "T18"
+        },
+        {
+          "instruction": "LD",
+          "device": "M32"
+        },
+        {
+          "instruction": "LD",
+          "device": "M471"
+        },
+        {
+          "instruction": "LD",
+          "device": "M34"
+        },
+        {
+          "instruction": "LD",
+          "device": "M482"
+        },
+        {
+          "instruction": "LD",
+          "device": "M483"
+        },
+        {
+          "instruction": "LD",
+          "device": "M451"
+        },
+        {
+          "instruction": "LD",
+          "device": "M452"
+        },
+        {
+          "instruction": "LD",
+          "device": "T19"
+        },
+        {
+          "instruction": "LD",
+          "device": "T19"
+        }
+      ],
+      "actions": [
+        {
+          "instruction": "AND",
+          "device": "M201"
+        },
+        {
+          "instruction": "SET",
+          "device": "M470"
+        },
+        {
+          "instruction": "OUTH",
+          "device": "T18"
+        },
+        {
+          "instruction": "PLS",
+          "device": "M480"
+        },
+        {
+          "instruction": "SET",
+          "device": "M481"
+        },
+        {
+          "instruction": "OUT",
+          "device": "T20"
+        },
+        {
+          "instruction": "AND",
+          "device": "T20"
+        },
+        {
+          "instruction": "RST",
+          "device": "M470"
+        },
+        {
+          "instruction": "RST",
+          "device": "M481"
+        },
+        {
+          "instruction": "RST",
+          "device": "M470"
+        },
+        {
+          "instruction": "RST",
+          "device": "M481"
+        },
+        {
+          "instruction": "RST",
+          "device": "M470"
+        },
+        {
+          "instruction": "RST",
+          "device": "M481"
+        },
+        {
+          "instruction": "BMOV",
+          "device": "D7020"
+        },
+        {
+          "instruction": "DMOV",
+          "device": "D30"
+        },
+        {
+          "instruction": "AND",
+          "device": "M201"
+        },
+        {
+          "instruction": "SET",
+          "device": "M471"
+        },
+        {
+          "instruction": "OUTH",
+          "device": "T19"
+        },
+        {
+          "instruction": "PLS",
+          "device": "M482"
+        },
+        {
+          "instruction": "SET",
+          "device": "M483"
+        },
+        {
+          "instruction": "OUT",
+          "device": "T21"
+        },
+        {
+          "instruction": "AND",
+          "device": "T21"
+        },
+        {
+          "instruction": "RST",
+          "device": "M471"
+        },
+        {
+          "instruction": "RST",
+          "device": "M483"
+        },
+        {
+          "instruction": "RST",
+          "device": "M471"
+        },
+        {
+          "instruction": "RST",
+          "device": "M483"
+        },
+        {
+          "instruction": "RST",
+          "device": "M471"
+        },
+        {
+          "instruction": "RST",
+          "device": "M483"
+        },
+        {
+          "instruction": "BMOV",
+          "device": "D8020"
+        },
+        {
+          "instruction": "DMOV",
+          "device": "D62"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "VAC SPC CLEAR",
+      "step_start": 80,
+      "step_end": 83,
+      "conditions": [
+        {
+          "instruction": "LD",
+          "device": "M11"
+        },
+        {
+          "instruction": "LD",
+          "device": "M31"
+        }
+      ],
+      "actions": [
+        {
+          "instruction": "FMOV",
           "device": "K0"
         },
         {
-          "instruction": "MOV",
-          "device": "K1"
-        },
-        {
-          "instruction": "MOV",
-          "device": "K2"
-        },
-        {
-          "instruction": "MOV",
-          "device": "K0"
-        },
-        {
-          "instruction": "MOV",
-          "device": "K1"
-        },
-        {
-          "instruction": "MOV",
-          "device": "K1"
-        },
-        {
-          "instruction": "MOV",
-          "device": "K2"
-        },
-        {
-          "instruction": "MOV",
-          "device": "K3"
-        },
-        {
-          "instruction": "OR",
-          "device": "M22"
-        },
-        {
-          "instruction": "MOV",
-          "device": "K4"
-        },
-        {
-          "instruction": "MOV",
+          "instruction": "FMOV",
           "device": "K0"
         }
       ]
     },
     {
-      "id": 2,
-      "name": "PC COMM L2",
-      "step_start": 42,
-      "step_end": 81,
+      "id": 5,
+      "name": "PC COMM STATUS",
+      "step_start": 85,
+      "step_end": 150,
       "conditions": [
         {
           "instruction": "LD",
-          "device": "M39"
+          "device": "M10"
         },
         {
           "instruction": "LD",
-          "device": "M39"
+          "device": "M11"
         },
         {
           "instruction": "LD",
-          "device": "M39"
+          "device": "M12"
         },
         {
           "instruction": "LD",
-          "device": "M0"
+          "device": "M13"
         },
         {
           "instruction": "LD",
-          "device": "M0"
+          "device": "M14"
         },
         {
           "instruction": "LD",
-          "device": "M0"
+          "device": "M15"
         },
         {
           "instruction": "LD",
-          "device": "M0"
+          "device": "M17"
         },
         {
           "instruction": "LD",
-          "device": "M0"
+          "device": "M18"
         },
         {
           "instruction": "LD",
-          "device": "M0"
+          "device": "M30"
         },
         {
           "instruction": "LD",
-          "device": "M803"
-        },
-        {
-          "instruction": "LDI",
-          "device": "M803"
+          "device": "M31"
         },
         {
           "instruction": "LD",
           "device": "M32"
         },
         {
-          "instruction": "LDI",
-          "device": "M32"
+          "instruction": "LD",
+          "device": "M33"
         },
         {
           "instruction": "LD",
@@ -245,81 +431,81 @@
         },
         {
           "instruction": "LD",
-          "device": "M36"
-        },
-        {
-          "instruction": "LD",
           "device": "M37"
         },
         {
           "instruction": "LD",
-          "device": "M32"
+          "device": "M38"
+        },
+        {
+          "instruction": "LD",
+          "device": "M50"
+        },
+        {
+          "instruction": "LD",
+          "device": "M51"
+        },
+        {
+          "instruction": "LD",
+          "device": "M52"
+        },
+        {
+          "instruction": "LD",
+          "device": "M53"
+        },
+        {
+          "instruction": "LD",
+          "device": "M520"
+        },
+        {
+          "instruction": "LDI",
+          "device": "M520"
+        },
+        {
+          "instruction": "LD",
+          "device": "M210"
+        },
+        {
+          "instruction": "LD",
+          "device": "M211"
+        },
+        {
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "instruction": "LD",
+          "device": "M0"
+        },
+        {
+          "instruction": "LD",
+          "device": "M0"
         }
       ],
       "actions": [
         {
-          "instruction": "LD>",
-          "device": "D8001"
-        },
-        {
-          "instruction": "MOV",
-          "device": "D8000"
-        },
-        {
-          "instruction": "MOV",
-          "device": "D8001"
-        },
-        {
-          "instruction": "DMOV",
-          "device": "D406"
-        },
-        {
-          "instruction": "MOV",
-          "device": "D148"
-        },
-        {
-          "instruction": "MOV",
-          "device": "D148"
-        },
-        {
-          "instruction": "MOV",
-          "device": "D8007"
-        },
-        {
-          "instruction": "MOV",
-          "device": "D146"
-        },
-        {
-          "instruction": "DMOV",
-          "device": "D172"
-        },
-        {
-          "instruction": "DMOV",
-          "device": "D50"
-        },
-        {
-          "instruction": "MOV",
-          "device": "K2"
-        },
-        {
           "instruction": "MOV",
           "device": "K0"
-        },
-        {
-          "instruction": "MOV",
-          "device": "K1"
-        },
-        {
-          "instruction": "MOV",
-          "device": "K2"
-        },
-        {
-          "instruction": "MOV",
-          "device": "K0"
-        },
-        {
-          "instruction": "MOV",
-          "device": "K1"
         },
         {
           "instruction": "MOV",
@@ -334,15 +520,175 @@
           "device": "K3"
         },
         {
+          "instruction": "MOV",
+          "device": "K4"
+        },
+        {
           "instruction": "OR",
-          "device": "M38"
+          "device": "M16"
+        },
+        {
+          "instruction": "MOV",
+          "device": "K5"
+        },
+        {
+          "instruction": "MOV",
+          "device": "K6"
+        },
+        {
+          "instruction": "MOV",
+          "device": "K7"
+        },
+        {
+          "instruction": "MOV",
+          "device": "K0"
+        },
+        {
+          "instruction": "MOV",
+          "device": "K1"
+        },
+        {
+          "instruction": "MOV",
+          "device": "K2"
+        },
+        {
+          "instruction": "MOV",
+          "device": "K3"
         },
         {
           "instruction": "MOV",
           "device": "K4"
         },
         {
+          "instruction": "OR",
+          "device": "M36"
+        },
+        {
           "instruction": "MOV",
+          "device": "K5"
+        },
+        {
+          "instruction": "MOV",
+          "device": "K6"
+        },
+        {
+          "instruction": "MOV",
+          "device": "K7"
+        },
+        {
+          "instruction": "MOV",
+          "device": "K0"
+        },
+        {
+          "instruction": "MOV",
+          "device": "K1"
+        },
+        {
+          "instruction": "MOV",
+          "device": "K2"
+        },
+        {
+          "instruction": "MOV",
+          "device": "K3"
+        },
+        {
+          "instruction": "MOV",
+          "device": "K1"
+        },
+        {
+          "instruction": "MOV",
+          "device": "K2"
+        },
+        {
+          "instruction": "MOV",
+          "device": "K1"
+        },
+        {
+          "instruction": "MOV",
+          "device": "K2"
+        },
+        {
+          "instruction": "DMOV",
+          "device": "D30"
+        },
+        {
+          "instruction": "DMOV",
+          "device": "D62"
+        },
+        {
+          "instruction": "MOV",
+          "device": "D0"
+        },
+        {
+          "instruction": "MOV",
+          "device": "D32"
+        },
+        {
+          "instruction": "DMOV",
+          "device": "D12"
+        },
+        {
+          "instruction": "DMOV",
+          "device": "D44"
+        },
+        {
+          "instruction": "DMOV",
+          "device": "D150"
+        },
+        {
+          "instruction": "DMOV",
+          "device": "D170"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "INJECTION COUNT RESET",
+      "step_start": 152,
+      "step_end": 155,
+      "conditions": [
+        {
+          "instruction": "LD",
+          "device": "M414"
+        },
+        {
+          "instruction": "LD",
+          "device": "M416"
+        }
+      ],
+      "actions": [
+        {
+          "instruction": "MOV",
+          "device": "K0"
+        },
+        {
+          "instruction": "MOV",
+          "device": "K0"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "REFRIGERANT USAGE RESET",
+      "step_start": 157,
+      "step_end": 160,
+      "conditions": [
+        {
+          "instruction": "LD",
+          "device": "M417"
+        },
+        {
+          "instruction": "LD",
+          "device": "M418"
+        }
+      ],
+      "actions": [
+        {
+          "instruction": "DMOV",
+          "device": "K0"
+        },
+        {
+          "instruction": "DMOV",
           "device": "K0"
         }
       ]

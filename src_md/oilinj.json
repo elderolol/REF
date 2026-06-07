@@ -1,0 +1,475 @@
+{
+  "meta": {
+    "source_file": "oilinj.csv",
+    "cpu": "QCPU (Q mode) Q03UDV",
+    "total_steps": 112,
+    "block_count": 2,
+    "generated": "2026-06-06"
+  },
+  "blocks": [
+    {
+      "id": 1,
+      "name": "OIL FAST",
+      "step_start": 1,
+      "step_end": 50,
+      "conditions": [
+        {
+          "instruction": "LD",
+          "device": "M51"
+        },
+        {
+          "instruction": "LD",
+          "device": "M51"
+        },
+        {
+          "instruction": "LD",
+          "device": "M51"
+        },
+        {
+          "instruction": "LD",
+          "device": "M51"
+        },
+        {
+          "instruction": "LD",
+          "device": "M210"
+        },
+        {
+          "instruction": "LD",
+          "device": "M211"
+        },
+        {
+          "instruction": "LD",
+          "device": "M51"
+        },
+        {
+          "instruction": "LD",
+          "device": "M210"
+        },
+        {
+          "instruction": "LD",
+          "device": "M211"
+        },
+        {
+          "instruction": "LD",
+          "device": "M51"
+        },
+        {
+          "instruction": "LD",
+          "device": "M51"
+        }
+      ],
+      "actions": [
+        {
+          "instruction": "AND",
+          "device": "M210"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M65"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M66"
+        },
+        {
+          "instruction": "AND",
+          "device": "M211"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M75"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M76"
+        },
+        {
+          "instruction": "OUT",
+          "device": "T13"
+        },
+        {
+          "instruction": "LDD>=",
+          "device": "D180"
+        },
+        {
+          "instruction": "LDD>=",
+          "device": "D180"
+        },
+        {
+          "instruction": "ORB",
+          "device": ""
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "AND",
+          "device": "M210"
+        },
+        {
+          "instruction": "RST",
+          "device": "M65"
+        },
+        {
+          "instruction": "SET",
+          "device": "M145"
+        },
+        {
+          "instruction": "SET",
+          "device": "M52"
+        },
+        {
+          "instruction": "LDD>=",
+          "device": "D180"
+        },
+        {
+          "instruction": "LDD>=",
+          "device": "D180"
+        },
+        {
+          "instruction": "ORB",
+          "device": ""
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "AND",
+          "device": "M211"
+        },
+        {
+          "instruction": "RST",
+          "device": "M75"
+        },
+        {
+          "instruction": "SET",
+          "device": "M145"
+        },
+        {
+          "instruction": "SET",
+          "device": "M52"
+        },
+        {
+          "instruction": "AND",
+          "device": "T13"
+        },
+        {
+          "instruction": "AND",
+          "device": "M210"
+        },
+        {
+          "instruction": "RST",
+          "device": "M65"
+        },
+        {
+          "instruction": "RST",
+          "device": "M66"
+        },
+        {
+          "instruction": "SET",
+          "device": "M350"
+        },
+        {
+          "instruction": "SET",
+          "device": "M145"
+        },
+        {
+          "instruction": "SET",
+          "device": "M53"
+        },
+        {
+          "instruction": "RST",
+          "device": "M51"
+        },
+        {
+          "instruction": "AND",
+          "device": "T13"
+        },
+        {
+          "instruction": "AND",
+          "device": "M211"
+        },
+        {
+          "instruction": "RST",
+          "device": "M75"
+        },
+        {
+          "instruction": "RST",
+          "device": "M76"
+        },
+        {
+          "instruction": "SET",
+          "device": "M350"
+        },
+        {
+          "instruction": "SET",
+          "device": "M145"
+        },
+        {
+          "instruction": "SET",
+          "device": "M53"
+        },
+        {
+          "instruction": "RST",
+          "device": "M51"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "OIL BASE",
+      "step_start": 52,
+      "step_end": 112,
+      "conditions": [
+        {
+          "instruction": "LD",
+          "device": "M52"
+        },
+        {
+          "instruction": "LD",
+          "device": "M52"
+        },
+        {
+          "instruction": "LD",
+          "device": "M52"
+        },
+        {
+          "instruction": "LD",
+          "device": "M52"
+        },
+        {
+          "instruction": "LD",
+          "device": "M210"
+        },
+        {
+          "instruction": "LD",
+          "device": "M211"
+        },
+        {
+          "instruction": "LD",
+          "device": "M52"
+        },
+        {
+          "instruction": "LD",
+          "device": "M210"
+        },
+        {
+          "instruction": "LD",
+          "device": "M211"
+        },
+        {
+          "instruction": "LD",
+          "device": "M52"
+        },
+        {
+          "instruction": "LD",
+          "device": "M52"
+        },
+        {
+          "instruction": "LD",
+          "device": "M52"
+        },
+        {
+          "instruction": "LD",
+          "device": "M210"
+        },
+        {
+          "instruction": "LD",
+          "device": "M211"
+        },
+        {
+          "instruction": "LD",
+          "device": "M53"
+        },
+        {
+          "instruction": "LD",
+          "device": "M53"
+        }
+      ],
+      "actions": [
+        {
+          "instruction": "AND",
+          "device": "M210"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M66"
+        },
+        {
+          "instruction": "AND",
+          "device": "M211"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M76"
+        },
+        {
+          "instruction": "OUT",
+          "device": "T14"
+        },
+        {
+          "instruction": "LDD>=",
+          "device": "D180"
+        },
+        {
+          "instruction": "LDD>=",
+          "device": "D180"
+        },
+        {
+          "instruction": "ORB",
+          "device": ""
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "AND",
+          "device": "M210"
+        },
+        {
+          "instruction": "RST",
+          "device": "M66"
+        },
+        {
+          "instruction": "SET",
+          "device": "M146"
+        },
+        {
+          "instruction": "SET",
+          "device": "M53"
+        },
+        {
+          "instruction": "LDD>=",
+          "device": "D180"
+        },
+        {
+          "instruction": "LDD>=",
+          "device": "D180"
+        },
+        {
+          "instruction": "ORB",
+          "device": ""
+        },
+        {
+          "instruction": "ANB",
+          "device": ""
+        },
+        {
+          "instruction": "AND",
+          "device": "M211"
+        },
+        {
+          "instruction": "RST",
+          "device": "M76"
+        },
+        {
+          "instruction": "SET",
+          "device": "M146"
+        },
+        {
+          "instruction": "SET",
+          "device": "M53"
+        },
+        {
+          "instruction": "AND",
+          "device": "T14"
+        },
+        {
+          "instruction": "AND",
+          "device": "M210"
+        },
+        {
+          "instruction": "RST",
+          "device": "M66"
+        },
+        {
+          "instruction": "SET",
+          "device": "M350"
+        },
+        {
+          "instruction": "SET",
+          "device": "M146"
+        },
+        {
+          "instruction": "SET",
+          "device": "M53"
+        },
+        {
+          "instruction": "RST",
+          "device": "M52"
+        },
+        {
+          "instruction": "AND",
+          "device": "T14"
+        },
+        {
+          "instruction": "AND",
+          "device": "M211"
+        },
+        {
+          "instruction": "RST",
+          "device": "M76"
+        },
+        {
+          "instruction": "SET",
+          "device": "M350"
+        },
+        {
+          "instruction": "SET",
+          "device": "M146"
+        },
+        {
+          "instruction": "SET",
+          "device": "M53"
+        },
+        {
+          "instruction": "RST",
+          "device": "M52"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D180"
+        },
+        {
+          "instruction": "LDD>",
+          "device": "D180"
+        },
+        {
+          "instruction": "ORB",
+          "device": ""
+        },
+        {
+          "instruction": "SET",
+          "device": "M351"
+        },
+        {
+          "instruction": "AND",
+          "device": "M210"
+        },
+        {
+          "instruction": "LDD<",
+          "device": "D180"
+        },
+        {
+          "instruction": "SET",
+          "device": "M351"
+        },
+        {
+          "instruction": "AND",
+          "device": "M211"
+        },
+        {
+          "instruction": "LDD<",
+          "device": "D180"
+        },
+        {
+          "instruction": "SET",
+          "device": "M351"
+        }
+      ]
+    }
+  ]
+}

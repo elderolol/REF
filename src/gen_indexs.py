@@ -1,5 +1,8 @@
-﻿# INDEXS ??Model selection + injection setpoint lookup
-# Fixed: LDD>+ANB ??ANDD> (cleaner IL for GXW CSV import)
+﻿# INDEXS — Barcode copy + Model lookup (barcode/manual)
+# PC writes barcode → D6980-D6999(L1)/D7980-D7999(L2)
+# PLC copies to D7220-D7239/D8220-D8239 for HMI display
+# Model lookup uses D7000-D7001/D8000-D8001 (validated barcode target)
+# Tables: L1 D300-D524, L2 D550-D774 (25x9)
 st = 0; lines = []
 def a(i,d): global st; lines.append(f'"{st}"\t""\t"{i}"\t"{d}"\t""\t""\t""'); st += 1
 def ac(d): lines.append(f'""\t""\t""\t"{d}"\t""\t""\t""')
@@ -13,71 +16,71 @@ def wr(p):
 
 hd("REF_self_holding")
 
-# ===== PC DATA CHECK =====
-# D7000=1 (Line0), D8000=2 (Line1): validate data integrity
-# Combined into single rung with ORB to eliminate double-coil
-al("PC DATA CHECK")
-a("LD", "M803"); a("AND>", "D7001"); ac("K0"); a("AND<>", "D7000"); ac("K1")
-a("LD", "M803"); a("AND>", "D8001"); ac("K0"); a("AND<>", "D8000"); ac("K2")
-a("ORB", ""); a("SET", "M876")
+al("BARCODE COPY L1")
+# New barcode from PC (D6980-D6999) → copy to HMI display (D7220-D7239)
+a("LD>","D6980"); ac("K0")
+a("BMOV","D6980"); ac("D7220"); ac("K20")
 
-# ===== AUTO BARCODE =====
-al("AUTO BARCODE")
-a("LD>", "D7001"); ac("K0")
-a("BMOV", "D6980"); ac("D7220"); ac("K20")
-a("LD>", "D8001"); ac("K0")
-a("BMOV", "D7980"); ac("D8220"); ac("K20")
+al("BARCODE COPY L2")
+a("LD>","D7980"); ac("K0")
+a("BMOV","D7980"); ac("D8220"); ac("K20")
 
-# ===== BARCODE L1 (D7001 ??D60~D84) =====
-al("BARCODE L1 (D60~D84)")
+al("L1 MODEL LOOKUP")
+# Barcode mode: D7001 = validated barcode target → find matching model row
 for k in range(1, 26):
-    dev = f"D{59 + k}"
-    a("LD", "M803"); a("AND>", "D7001"); ac("K0"); a("AND=", "D7001"); ac(dev)
-    a("MOV", f"K{k}"); ac("D0")
-
-# ===== BARCODE L2 (D8001 ??D88~D112) =====
-al("BARCODE L2 (D88~D112)")
+    base = 300 + (k-1) * 9
+    a("LD","M520"); a("LDD>=","D7000"); ac("K1"); a("ANDD=","D7001"); ac(f"D{base+1}")
+    a("MOV",f"K{k}"); ac("D0")
+# Both modes: D0==model# → load target + apply correction
 for k in range(1, 26):
-    dev = f"D{87 + k}"
-    a("LD", "M803"); a("AND>", "D8001"); ac("K0"); a("AND=", "D8001"); ac(dev)
-    a("MOV", f"K{k}"); ac("D30")
+    base = 300 + (k-1) * 9
+    a("LD","M0"); a("AND=","D0"); ac(f"K{k}")
+    a("DMOV",f"D{base+1}"); ac("D102")
+    a("D+",f"D{base+3}"); ac("D102"); ac("D12")
+    a("DMOV",f"D{base+5}"); ac("D104")
+    a("D+",f"D{base+7}"); ac("D104"); ac("D18")
 
-# ===== MANUAL MODEL L0 (D0 ??D128 via D60~D84) =====
-al("MANUAL MODEL L0")
+al("L2 MODEL LOOKUP")
 for k in range(1, 26):
-    dev = f"D{59 + k}"
-    a("LDI", "M803"); a("AND>", "D0"); ac("K0"); a("AND<=", "D0"); ac("K25")
-    a("AND=", "D0"); ac(f"K{k}")
-    a("MOV", dev); ac("D128")
-
-# ===== MANUAL MODEL L1 (D30 ??D404 via D88~D112) =====
-al("MANUAL MODEL L1")
+    base = 550 + (k-1) * 9
+    a("LD","M520"); a("LDD>=","D8000"); ac("K1"); a("ANDD=","D8001"); ac(f"D{base+1}")
+    a("MOV",f"K{k}"); ac("D32")
 for k in range(1, 26):
-    dev = f"D{87 + k}"
-    a("LDI", "M803"); a("AND>", "D30"); ac("K0"); a("AND<=", "D30"); ac("K25")
-    a("AND=", "D30"); ac(f"K{k}")
-    a("MOV", dev); ac("D404")
+    base = 550 + (k-1) * 9
+    a("LD","M0"); a("AND=","D32"); ac(f"K{k}")
+    a("DMOV",f"D{base+1}"); ac("D112")
+    a("D+",f"D{base+3}"); ac("D112"); ac("D44")
+    a("DMOV",f"D{base+5}"); ac("D114")
+    a("D+",f"D{base+7}"); ac("D114"); ac("D50")
 
-# ===== BARCODE RESET =====
-al("BARCODE RESET")
-a("LD", "M824"); a("AND", "M16")
-a("LD", "M840"); a("AND", "M32")
-a("ORB", "")
-a("OR", "M817"); a("OR", "M819"); a("OR", "M821"); a("OR", "M823"); a("OR", "M864")
-a("MOV", "K0"); ac("D6890")
-a("MOV", "K0"); ac("D7000")
-a("MOV", "K0"); ac("D7001")
-a("MOV", "K0"); ac("D8000")
-a("MOV", "K0"); ac("D8001")
+al("BARCODE CLEAR")
+# Cycle complete/NG → clear PC barcode buffer (barcode mode only)
+a("LD","M107"); a("OR","M123")
+a("OR","M108"); a("OR","M109")
+a("OR","M124"); a("OR","M125")
+a("OR","M300")
+a("FMOV","K0"); ac("D6980"); ac("K20")
+a("FMOV","K0"); ac("D7980"); ac("K20")
+a("MOV","K0"); ac("D7000"); a("MOV","K0"); ac("D7001")
+a("MOV","K0"); ac("D8000"); a("MOV","K0"); ac("D8001")
+# Reset model# on barcode mode + NG/complete
+a("LD","M520")
+a("LD","M107"); a("OR","M123")
+a("OR","M108"); a("OR","M109"); a("OR","M124"); a("OR","M125")
+a("OR","M300")
+a("ANB",""); a("RST","D0"); a("RST","D32")
 
-# ===== BARCODE MODEL CLEANUP =====
-al("BARCODE MODEL CLEANUP")
-a("LD", "M803")
-a("LD", "M817"); a("OR", "M819"); a("OR", "M821"); a("OR", "M823")
-a("OR", "M824"); a("OR", "M840"); a("OR", "M864")
-a("ANB", "")
-a("RST", "D0"); a("RST", "D30")
+al("DISPLAY CORRECTION")
+a("LD","M0"); a("DMOV","D12"); ac("D100")
+for k in range(1,26):
+    base = 300 + (k-1)*9
+    a("LD","M0"); a("AND=","D0"); ac(f"K{k}")
+    a("D+",f"D{base+4}"); ac("D100"); ac("D100")
+a("LD","M0"); a("DMOV","D44"); ac("D110")
+for k in range(1,26):
+    base = 550 + (k-1)*9
+    a("LD","M0"); a("AND=","D32"); ac(f"K{k}")
+    a("D+",f"D{base+4}"); ac("D110"); ac("D110")
 
 a("END","")
 wr("F:\\WorkSpace\\REF\\src\\indexs.csv")
-

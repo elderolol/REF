@@ -1,606 +1,1033 @@
 ---
 # REF_self_holding — IL Logic Map
 **CPU:** QCPU (Q mode) Q03UDV
-**Total Steps:** 713
-**Blocks:** 14
-**Generated:** 2026-06-03
+**Total Steps:** 1048
+**Blocks:** 20
+**Generated:** 2026-06-06
 ---
 
 ## Block List
 | # | Name | Steps | Condition Device | Action Count |
 |---|------|-------|-----------------|--------------|
-| 1 | MODE CONTROL | 1–38 | LD M1038, LD M1536, LD M801 ... (+9) | 26 |
-| 2 | INTERLOCK CHECK | 40–51 | LD M881, LD M897 | 10 |
-| 3 | READY SET L0 | 53–68 | LD M1039, LD M1040, LD M1041 ... (+1) | 12 |
-| 4 | READY SET L1 | 70–85 | LD M1039, LD M1040, LD M1041 ... (+1) | 12 |
-| 5 | START EXEC L0 | 87–102 | LD M1043, LD M1043, LD M1043 ... (+1) | 12 |
-| 6 | START EXEC L1 | 104–119 | LD M1045, LD M1045, LD M1045 ... (+1) | 12 |
-| 7 | STEP L0 | 121–289 | LD M24, LD M16, LD M17 ... (+8) | 158 |
-| 8 | STEP L1 | 291–459 | LD M40, LD M32, LD M33 ... (+8) | 158 |
-| 9 | NG ALARM STOP | 461–506 | LD M817, LD M819, LD M821 ... (+3) | 40 |
-| 10 | STOP | 508–567 | LD M1044, LD M0, LD M0 ... (+5) | 52 |
-| 11 | EMERGENCY STOP | 569–624 | LDI M771, LD M0, LD M0 ... (+4) | 49 |
-| 12 | EXHAUST TIMER | 626–629 | LD M23, LD M39 | 2 |
-| 13 | LAMP CONTROL | 631–670 | LD M16, LD M864, LD M16 | 37 |
-| 14 | HMI LAMP | 672–713 | LD M502, LD M503, LD M504 ... (+7) | 32 |
+| 1 | SYSTEM FLAGS | 1–6 | LD SM400, LD SM401, LD SM402 | 3 |
+| 2 | POWER-ON DEFAULTS | 8–23 | LD M2, LD M2, LD M2 ... (+3) | 10 |
+| 3 | MODE CONTROL | 25–36 | LD M402, LD M600, LD M600 | 9 |
+| 4 | GUN SELECT | 38–51 | LD M400, LD M601, LD M401 ... (+1) | 10 |
+| 5 | OIL+REFRIG ENABLE | 53–60 | LD M415, LD M621, LD M621 | 5 |
+| 6 | INTERLOCK ENABLE | 62–69 | LD M413, LD M622, LD M622 | 5 |
+| 7 | READY SET | 71–122 | LD M403, LD M603, LD M603 ... (+12) | 37 |
+| 8 | MANUAL START ENTRY | 124–200 | LD M408, LD M408, LD M408 ... (+13) | 61 |
+| 9 | AUTO START | 202–227 | LD M408, LD M408, LD M615 ... (+4) | 19 |
+| 10 | AUTO CHAIN WARMUP | 229–390 | LD M11, LD M460, LD M460 ... (+34) | 125 |
+| 11 | STEP L1 | 392–583 | LD M17, LD M17, LD M18 ... (+10) | 179 |
+| 12 | STEP L2 | 585–776 | LD M37, LD M37, LD M38 ... (+10) | 179 |
+| 13 | STEP L3 | 778–820 | LD M52, LD M52, LD M51 ... (+2) | 38 |
+| 14 | INTERLOCK CHECK | 822–833 | LD M81, LD M91 | 10 |
+| 15 | NG ALARM STOP | 835–873 | LD M108, LD M310, LD M124 ... (+4) | 32 |
+| 16 | STOP | 875–888 | LD M409, LD M409, LD M10 ... (+3) | 8 |
+| 17 | EMERGENCY STOP | 890–940 | LDI M770, LD M452, LD M452 ... (+5) | 43 |
+| 18 | LAMP CONTROL | 942–1025 | LD M12, LD M32, LD M51 ... (+3) | 78 |
+| 19 | STOPWATCH | 1027–1039 | LD M490, LD T22, LD M10 ... (+2) | 8 |
+| 20 | VACUUM PUMP | 1041–1048 | LD M412, LD M620, LD M620 | 5 |
 
 ## Block Detail
 
-### Block 1: MODE CONTROL (Step 1–38)
+### Block 1: SYSTEM FLAGS (Step 1–6)
 
 **Trigger Condition:**
-- LD M1038
-- LD M1536
-- LD M801
-- LD M1536
-- LD M802
-- LD M1024
-- LD M1025
-- LD M1032
-- LD M1033
-- LD M1026
-- LD M1537
-- LD M916
+- LD SM400
+- LD SM401
+- LD SM402
 
 **Actions:**
-- PLS M1536
-- AND M802
-- ANI M1536
-- ORB 
-- OUT M801
-- AND M801
-- ANI M1536
-- ORB 
-- OUT M802
-- OR M912
-- ANI M1025
-- OUT M912
-- OR M913
-- ANI M1024
-- OUT M913
-- OR M914
-- ANI M1033
-- OUT M914
-- OR M915
-- ANI M1032
-- OUT M915
-- PLS M1537
-- ANI M916
-- ANI M1537
-- ORB 
-- OUT M916
+- OUT M0
+- OUT M1
+- OUT M2
 
-### Block 2: INTERLOCK CHECK (Step 40–51)
+### Block 2: POWER-ON DEFAULTS (Step 8–23)
 
 **Trigger Condition:**
-- LD M881
-- LD M897
+- LD M2
+- LD M2
+- LD M2
+- LD M2
+- LD M2
+- LD M2
 
 **Actions:**
-- AND M882
-- AND M883
-- AND M884
-- AND M885
-- OUT M880
-- AND M898
-- AND M899
-- AND M900
-- AND M901
-- OUT M896
+- SET M200
+- RST M201
+- SET M210
+- RST M211
+- SET M520
+- SET M521
+- SET M522
+- SET M10
+- SET M30
+- SET M50
 
-### Block 3: READY SET L0 (Step 53–68)
+### Block 3: MODE CONTROL (Step 25–36)
 
 **Trigger Condition:**
-- LD M1039
-- LD M1040
-- LD M1041
-- LD M1042
+- LD M402
+- LD M600
+- LD M600
 
 **Actions:**
-- AND M802
-- ANI M18
-- SET M502
-- AND M802
-- ANI M19
-- SET M503
-- AND M802
-- ANI M20
-- SET M504
-- AND M802
-- ANI M21
-- SET M505
+- PLS M600
+- AND M200
+- AND M10
+- SET M201
+- RST M200
+- AND M201
+- AND M10
+- SET M200
+- RST M201
 
-### Block 4: READY SET L1 (Step 70–85)
+### Block 4: GUN SELECT (Step 38–51)
 
 **Trigger Condition:**
-- LD M1039
-- LD M1040
-- LD M1041
-- LD M1042
+- LD M400
+- LD M601
+- LD M401
+- LD M602
 
 **Actions:**
-- AND M802
-- ANI M34
-- SET M506
-- AND M802
-- ANI M35
-- SET M507
-- AND M802
-- ANI M36
-- SET M508
-- AND M802
-- ANI M37
-- SET M509
+- PLS M601
+- AND M10
+- AND M30
+- SET M210
+- RST M211
+- PLS M602
+- AND M10
+- AND M30
+- SET M211
+- RST M210
 
-### Block 5: START EXEC L0 (Step 87–102)
+### Block 5: OIL+REFRIG ENABLE (Step 53–60)
 
 **Trigger Condition:**
-- LD M1043
-- LD M1043
-- LD M1043
-- LD M1043
+- LD M415
+- LD M621
+- LD M621
 
 **Actions:**
-- AND M502
-- SET M18
-- RST M502
-- AND M503
-- SET M19
-- RST M503
-- AND M504
-- SET M20
-- RST M504
-- AND M505
-- SET M21
-- RST M505
+- PLS M621
+- ANI M521
+- SET M521
+- AND M521
+- RST M521
 
-### Block 6: START EXEC L1 (Step 104–119)
+### Block 6: INTERLOCK ENABLE (Step 62–69)
 
 **Trigger Condition:**
-- LD M1045
-- LD M1045
-- LD M1045
-- LD M1045
+- LD M413
+- LD M622
+- LD M622
 
 **Actions:**
-- AND M506
+- PLS M622
+- ANI M522
+- SET M522
+- AND M522
+- RST M522
+
+### Block 7: READY SET (Step 71–122)
+
+**Trigger Condition:**
+- LD M403
+- LD M603
+- LD M603
+- LD M404
+- LD M604
+- LD M604
+- LD M405
+- LD M605
+- LD M605
+- LD M406
+- LD M606
+- LD M606
+- LD M407
+- LD M607
+- LD M607
+
+**Actions:**
+- PLS M603
+- AND M200
+- ANI M220
+- SET M220
+- AND M200
+- AND M220
+- RST M220
+- PLS M604
+- AND M200
+- ANI M221
+- SET M221
+- AND M200
+- AND M221
+- RST M221
+- PLS M605
+- AND M200
+- ANI M222
+- SET M222
+- AND M200
+- AND M222
+- RST M222
+- PLS M606
+- AND M200
+- ANI M520
+- ANI M223
+- SET M223
+- AND M200
+- AND M223
+- RST M223
+- PLS M607
+- AND M200
+- ANI M520
+- ANI M224
+- SET M224
+- AND M200
+- AND M224
+- RST M224
+
+### Block 8: MANUAL START ENTRY (Step 124–200)
+
+**Trigger Condition:**
+- LD M408
+- LD M408
+- LD M408
+- LD M408
+- LD M408
+- LD M610
+- LD M453
+- LD M610
+- LD M610
+- LD M611
+- LD M611
+- LD M612
+- LD M612
+- LD M613
+- LD M613
+- LD M614
+
+**Actions:**
+- AND M220
+- PLS M610
+- AND M221
+- PLS M611
+- AND M222
+- PLS M612
+- AND M223
+- PLS M613
+- AND M224
+- PLS M614
+- OR M611
+- OR M612
+- OR M613
+- OR M614
+- SET M453
+- OUT T0
+- AND T0
+- AND M210
+- RST M220
+- SET M12
+- RST M453
+- AND T0
+- AND M211
+- RST M220
+- SET M32
+- RST M453
+- AND T0
+- AND M210
+- RST M221
+- SET M13
+- RST M453
+- AND T0
+- AND M211
+- RST M221
+- SET M33
+- RST M453
+- AND T0
+- AND M210
+- RST M222
+- SET M14
+- RST M453
+- AND T0
+- AND M211
+- RST M222
 - SET M34
-- RST M506
-- AND M507
+- RST M453
+- AND T0
+- AND M210
+- RST M223
+- SET M15
+- RST M453
+- AND T0
+- AND M211
+- RST M223
 - SET M35
-- RST M507
-- AND M508
-- SET M36
-- RST M508
-- AND M509
-- SET M37
-- RST M509
+- RST M453
+- AND T0
+- AND M521
+- RST M224
+- SET M51
+- RST M453
 
-### Block 7: STEP L0 (Step 121–289)
+### Block 9: AUTO START (Step 202–227)
 
 **Trigger Condition:**
-- LD M24
+- LD M408
+- LD M408
+- LD M615
+- LD M616
+- LD M615
+- LD M616
+- LD M615
+
+**Actions:**
+- AND M201
+- AND M210
+- AND M10
+- PLS M615
+- AND M201
+- AND M211
+- AND M30
+- PLS M616
+- SET M453
+- SET M453
+- AND T0
+- SET M11
+- RST M453
+- AND T0
+- SET M31
+- RST M453
+- OR M616
+- SET M490
+- MOV K0
+
+### Block 10: AUTO CHAIN WARMUP (Step 229–390)
+
+**Trigger Condition:**
+- LD M11
+- LD M460
+- LD M460
+- LD M31
+- LD M467
+- LD M467
+- LD M12
+- LD M461
+- LD M461
+- LD M32
+- LD M468
+- LD M468
+- LD M13
+- LD M462
+- LD M462
+- LD M33
+- LD M469
+- LD M469
+- LD M14
+- LD M34
+- LD M463
+- LD M463
+- LD M463
+- LD M463
+- LD M463
+- LD M463
+- LD M463
+- LD M53
+- LD M464
+- LD M464
+- LD M464
 - LD M16
+- LD M465
+- LD M465
+- LD M36
+- LD M466
+- LD M466
+
+**Actions:**
+- AND M100
+- AND M201
+- SET M460
+- OUT T0
+- AND T0
+- SET M12
+- RST M11
+- RST M460
+- AND M116
+- AND M201
+- SET M467
+- OUT T0
+- AND T0
+- SET M32
+- RST M31
+- RST M467
+- AND M101
+- AND M201
+- SET M461
+- OUT T0
+- AND T0
+- SET M13
+- RST M12
+- RST M461
+- AND M117
+- AND M201
+- SET M468
+- OUT T0
+- AND T0
+- SET M33
+- RST M32
+- RST M468
+- AND M102
+- AND M201
+- SET M462
+- OUT T0
+- AND T0
+- SET M14
+- RST M13
+- RST M462
+- AND M118
+- AND M201
+- SET M469
+- OUT T0
+- AND T0
+- SET M34
+- RST M33
+- RST M469
+- AND M103
+- AND M201
+- AND M119
+- AND M201
+- ORB 
+- SET M463
+- OUT T0
+- AND T0
+- AND M210
+- AND M521
+- LDD>= D18
+- SET M51
+- RST M14
+- RST M463
+- AND T0
+- AND M211
+- AND M521
+- LDD>= D50
+- SET M51
+- RST M34
+- RST M463
+- AND T0
+- AND M210
+- LDD>= D18
+- ANI M0
+- SET M15
+- RST M14
+- RST M463
+- AND T0
+- AND M211
+- LDD>= D50
+- ANI M0
+- SET M35
+- RST M34
+- RST M463
+- AND T0
+- AND M210
+- ANI M521
+- SET M15
+- RST M14
+- RST M463
+- AND T0
+- AND M211
+- ANI M521
+- SET M35
+- RST M34
+- RST M463
+- AND M201
+- AND M521
+- SET M464
+- OUT T0
+- AND T0
+- AND M210
+- SET M15
+- RST M53
+- RST M464
+- AND T0
+- AND M211
+- SET M35
+- RST M53
+- RST M464
+- AND M105
+- AND M201
+- SET M465
+- OUT T0
+- AND T0
+- SET M17
+- RST M16
+- RST M465
+- AND M121
+- AND M201
+- SET M466
+- OUT T0
+- AND T0
+- SET M37
+- RST M36
+- RST M466
+
+### Block 11: STEP L1 (Step 392–583)
+
+**Trigger Condition:**
+- LD M17
 - LD M17
 - LD M18
-- LD M19
-- LD M20
-- LD M20
-- LD M21
-- LD M23
-- LD M23
-- LD M24
+- LD M17
+- LD M16
+- LD M15
+- LD M14
+- LD M13
+- LD M12
+- LD M11
+- LD M11
+- LD M18
+- LD M10
 
 **Actions:**
-- OR M16
-- ANI M17
-- ANI M864
-- OUT M16
-- AND M800
-- AND M880
-- AND M1043
-- AND M801
-- ANI M864
-- ANI M865
-- ANI M866
-- ANI M867
-- ANI M868
-- ANI M869
-- ANI M870
-- ANI M871
-- ANI M872
-- ANI M873
-- ANI M874
-- ANI M878
+- AND M106
+- OR M18
+- ANI M10
+- ANI M450
+- ANI M300
+- ANI M301
+- ANI M302
+- ANI M303
+- ANI M310
+- ANI M311
+- ANI M312
+- ANI M313
+- ANI M314
+- ANI M316
+- ANI M317
+- ANI M318
+- ANI M319
+- ANI M320
+- OUT M18
+- AND M106
+- SET M107
+- MOV K1
 - OR M17
 - ANI M18
-- ANI M864
-- ANI M864
-- ANI M865
-- ANI M866
-- ANI M867
-- ANI M868
-- ANI M869
-- ANI M870
-- ANI M871
-- ANI M872
-- ANI M873
-- ANI M874
-- ANI M878
+- ANI M450
+- ANI M300
+- ANI M301
+- ANI M302
+- ANI M303
+- ANI M310
+- ANI M311
+- ANI M312
+- ANI M313
+- ANI M314
+- ANI M316
+- ANI M317
+- ANI M318
+- ANI M319
+- ANI M320
 - OUT M17
-- OR M18
-- ANI M19
-- ANI M864
-- ANI M864
-- ANI M865
-- ANI M866
-- ANI M867
-- ANI M868
-- ANI M869
-- ANI M870
-- ANI M871
-- ANI M872
-- ANI M873
-- ANI M874
-- ANI M878
-- OUT M18
-- AND M816
-- OR M19
-- ANI M20
-- ANI M864
-- ANI M864
-- ANI M865
-- ANI M866
-- ANI M867
-- ANI M868
-- ANI M869
-- ANI M870
-- ANI M871
-- ANI M872
-- ANI M873
-- ANI M874
-- ANI M878
-- OUT M19
-- AND M818
-- OR M20
-- ANI M21
-- ANI M864
-- ANI M864
-- ANI M865
-- ANI M866
-- ANI M867
-- ANI M868
-- ANI M869
-- ANI M870
-- ANI M871
-- ANI M872
-- ANI M873
-- ANI M874
-- ANI M878
-- OUT M20
-- AND M820
-- OR M21
-- ANI M23
-- ANI M864
-- ANI M864
-- ANI M865
-- ANI M866
-- ANI M867
-- ANI M868
-- ANI M869
-- ANI M870
-- ANI M871
-- ANI M872
-- ANI M873
-- ANI M874
-- ANI M878
-- OUT M21
-- AND M820
-- OR M22
-- ANI M23
-- ANI M864
-- ANI M864
-- ANI M865
-- ANI M866
-- ANI M867
-- ANI M868
-- ANI M869
-- ANI M870
-- ANI M871
-- ANI M872
-- ANI M873
-- ANI M874
-- ANI M878
-- OUT M22
-- OR M22
-- AND M822
-- OR M23
-- ANI M24
-- ANI M864
-- ANI M864
-- ANI M865
-- ANI M866
-- ANI M867
-- ANI M868
-- ANI M869
-- ANI M870
-- ANI M871
-- ANI M872
-- ANI M873
-- ANI M874
-- ANI M878
-- OUT M23
-- AND T3
-- OR M24
+- OR M16
+- ANI M17
+- ANI M450
+- ANI M300
+- ANI M301
+- ANI M302
+- ANI M303
+- ANI M310
+- ANI M311
+- ANI M312
+- ANI M313
+- ANI M314
+- ANI M316
+- ANI M317
+- ANI M318
+- ANI M319
+- ANI M320
+- OUT M16
+- OR M15
 - ANI M16
-- ANI M864
-- ANI M864
-- ANI M865
-- ANI M866
-- ANI M867
-- ANI M868
-- ANI M869
-- ANI M870
-- ANI M871
-- ANI M872
-- ANI M873
-- ANI M874
-- ANI M878
-- OUT M24
-- AND T3
-- SET M824
-- MOV K1
+- ANI M450
+- ANI M300
+- ANI M301
+- ANI M302
+- ANI M303
+- ANI M310
+- ANI M311
+- ANI M312
+- ANI M313
+- ANI M314
+- ANI M316
+- ANI M317
+- ANI M318
+- ANI M319
+- ANI M320
+- OUT M15
+- OR M14
+- ANI M15
+- ANI M51
+- ANI M450
+- ANI M300
+- ANI M301
+- ANI M302
+- ANI M303
+- ANI M310
+- ANI M311
+- ANI M312
+- ANI M313
+- ANI M314
+- ANI M316
+- ANI M317
+- ANI M318
+- ANI M319
+- ANI M320
+- OUT M14
+- OR M13
+- ANI M14
+- ANI M450
+- ANI M300
+- ANI M301
+- ANI M302
+- ANI M303
+- ANI M310
+- ANI M311
+- ANI M312
+- ANI M313
+- ANI M314
+- ANI M316
+- ANI M317
+- ANI M318
+- ANI M319
+- ANI M320
+- OUT M13
+- OR M12
+- ANI M13
+- ANI M450
+- ANI M300
+- ANI M301
+- ANI M302
+- ANI M303
+- ANI M310
+- ANI M311
+- ANI M312
+- ANI M313
+- ANI M314
+- ANI M316
+- ANI M317
+- ANI M318
+- ANI M319
+- ANI M320
+- OUT M12
+- OR M11
+- ANI M12
+- ANI M450
+- ANI M300
+- ANI M301
+- ANI M302
+- ANI M303
+- ANI M310
+- ANI M311
+- ANI M312
+- ANI M313
+- ANI M314
+- ANI M316
+- ANI M317
+- ANI M318
+- ANI M319
+- ANI M320
+- OUT M11
+- AND M80
+- LD> D0
+- ANB 
+- LDD>= D12
+- ANB 
+- OUT M100
+- OR M10
+- ANI M11
+- ANI M12
+- ANI M13
+- ANI M14
+- ANI M15
+- ANI M16
+- ANI M450
+- ANI M300
+- ANI M301
+- ANI M302
+- ANI M303
+- ANI M310
+- ANI M311
+- ANI M312
+- ANI M313
+- ANI M314
+- ANI M316
+- ANI M317
+- ANI M318
+- ANI M319
+- ANI M320
+- OUT M10
+- MOV K0
 
-### Block 8: STEP L1 (Step 291–459)
+### Block 12: STEP L2 (Step 585–776)
 
 **Trigger Condition:**
-- LD M40
-- LD M32
-- LD M33
-- LD M34
-- LD M35
-- LD M36
-- LD M36
 - LD M37
-- LD M39
-- LD M39
-- LD M40
+- LD M37
+- LD M38
+- LD M37
+- LD M36
+- LD M35
+- LD M34
+- LD M33
+- LD M32
+- LD M31
+- LD M31
+- LD M38
+- LD M30
 
 **Actions:**
-- OR M32
-- ANI M33
-- ANI M864
-- OUT M32
-- AND M800
-- AND M896
-- AND M1045
-- AND M801
-- ANI M864
-- ANI M865
-- ANI M866
-- ANI M867
-- ANI M868
-- ANI M869
-- ANI M870
-- ANI M871
-- ANI M872
-- ANI M873
-- ANI M874
-- ANI M879
-- OR M33
-- ANI M34
-- ANI M864
-- ANI M864
-- ANI M865
-- ANI M866
-- ANI M867
-- ANI M868
-- ANI M869
-- ANI M870
-- ANI M871
-- ANI M872
-- ANI M873
-- ANI M874
-- ANI M879
-- OUT M33
-- OR M34
-- ANI M35
-- ANI M864
-- ANI M864
-- ANI M865
-- ANI M866
-- ANI M867
-- ANI M868
-- ANI M869
-- ANI M870
-- ANI M871
-- ANI M872
-- ANI M873
-- ANI M874
-- ANI M879
-- OUT M34
-- AND M832
-- OR M35
-- ANI M36
-- ANI M864
-- ANI M864
-- ANI M865
-- ANI M866
-- ANI M867
-- ANI M868
-- ANI M869
-- ANI M870
-- ANI M871
-- ANI M872
-- ANI M873
-- ANI M874
-- ANI M879
-- OUT M35
-- AND M834
+- AND M122
+- OR M38
+- ANI M30
+- ANI M451
+- ANI M300
+- ANI M301
+- ANI M302
+- ANI M303
+- ANI M330
+- ANI M331
+- ANI M332
+- ANI M333
+- ANI M334
+- ANI M336
+- ANI M337
+- ANI M338
+- ANI M339
+- ANI M340
+- OUT M38
+- AND M122
+- SET M123
+- MOV K1
+- OR M37
+- ANI M38
+- ANI M451
+- ANI M300
+- ANI M301
+- ANI M302
+- ANI M303
+- ANI M330
+- ANI M331
+- ANI M332
+- ANI M333
+- ANI M334
+- ANI M336
+- ANI M337
+- ANI M338
+- ANI M339
+- ANI M340
+- OUT M37
 - OR M36
 - ANI M37
-- ANI M864
-- ANI M864
-- ANI M865
-- ANI M866
-- ANI M867
-- ANI M868
-- ANI M869
-- ANI M870
-- ANI M871
-- ANI M872
-- ANI M873
-- ANI M874
-- ANI M879
+- ANI M451
+- ANI M300
+- ANI M301
+- ANI M302
+- ANI M303
+- ANI M330
+- ANI M331
+- ANI M332
+- ANI M333
+- ANI M334
+- ANI M336
+- ANI M337
+- ANI M338
+- ANI M339
+- ANI M340
 - OUT M36
-- AND M836
-- OR M37
-- ANI M39
-- ANI M864
-- ANI M864
-- ANI M865
-- ANI M866
-- ANI M867
-- ANI M868
-- ANI M869
-- ANI M870
-- ANI M871
-- ANI M872
-- ANI M873
-- ANI M874
-- ANI M879
-- OUT M37
-- AND M836
-- OR M38
-- ANI M39
-- ANI M864
-- ANI M864
-- ANI M865
-- ANI M866
-- ANI M867
-- ANI M868
-- ANI M869
-- ANI M870
-- ANI M871
-- ANI M872
-- ANI M873
-- ANI M874
-- ANI M879
-- OUT M38
-- OR M38
-- AND M838
-- OR M39
-- ANI M40
-- ANI M864
-- ANI M864
-- ANI M865
-- ANI M866
-- ANI M867
-- ANI M868
-- ANI M869
-- ANI M870
-- ANI M871
-- ANI M872
-- ANI M873
-- ANI M874
-- ANI M879
-- OUT M39
-- AND T3
-- OR M40
+- OR M35
+- ANI M36
+- ANI M451
+- ANI M300
+- ANI M301
+- ANI M302
+- ANI M303
+- ANI M330
+- ANI M331
+- ANI M332
+- ANI M333
+- ANI M334
+- ANI M336
+- ANI M337
+- ANI M338
+- ANI M339
+- ANI M340
+- OUT M35
+- OR M34
+- ANI M35
+- ANI M51
+- ANI M451
+- ANI M300
+- ANI M301
+- ANI M302
+- ANI M303
+- ANI M330
+- ANI M331
+- ANI M332
+- ANI M333
+- ANI M334
+- ANI M336
+- ANI M337
+- ANI M338
+- ANI M339
+- ANI M340
+- OUT M34
+- OR M33
+- ANI M34
+- ANI M451
+- ANI M300
+- ANI M301
+- ANI M302
+- ANI M303
+- ANI M330
+- ANI M331
+- ANI M332
+- ANI M333
+- ANI M334
+- ANI M336
+- ANI M337
+- ANI M338
+- ANI M339
+- ANI M340
+- OUT M33
+- OR M32
+- ANI M33
+- ANI M451
+- ANI M300
+- ANI M301
+- ANI M302
+- ANI M303
+- ANI M330
+- ANI M331
+- ANI M332
+- ANI M333
+- ANI M334
+- ANI M336
+- ANI M337
+- ANI M338
+- ANI M339
+- ANI M340
+- OUT M32
+- OR M31
 - ANI M32
-- ANI M864
-- ANI M864
-- ANI M865
-- ANI M866
-- ANI M867
-- ANI M868
-- ANI M869
-- ANI M870
-- ANI M871
-- ANI M872
-- ANI M873
-- ANI M874
-- ANI M879
-- OUT M40
-- AND T3
-- SET M840
-- MOV K1
+- ANI M451
+- ANI M300
+- ANI M301
+- ANI M302
+- ANI M303
+- ANI M330
+- ANI M331
+- ANI M332
+- ANI M333
+- ANI M334
+- ANI M336
+- ANI M337
+- ANI M338
+- ANI M339
+- ANI M340
+- OUT M31
+- AND M90
+- LD> D32
+- ANB 
+- LDD>= D44
+- ANB 
+- OUT M116
+- OR M30
+- ANI M31
+- ANI M32
+- ANI M33
+- ANI M34
+- ANI M35
+- ANI M36
+- ANI M451
+- ANI M300
+- ANI M301
+- ANI M302
+- ANI M303
+- ANI M330
+- ANI M331
+- ANI M332
+- ANI M333
+- ANI M334
+- ANI M336
+- ANI M337
+- ANI M338
+- ANI M339
+- ANI M340
+- OUT M30
+- MOV K0
 
-### Block 9: NG ALARM STOP (Step 461–506)
-
-**Trigger Condition:**
-- LD M817
-- LD M819
-- LD M821
-- LD M823
-- LD M817
-- LD M817
-
-**Actions:**
-- MOV K3
-- MOV K3
-- MOV K4
-- MOV K4
-- MOV K5
-- MOV K5
-- MOV K2
-- MOV K2
-- OR M819
-- OR M821
-- OR M823
-- OR M864
-- OR M865
-- OR M866
-- OR M867
-- OR M868
-- OR M869
-- OR M870
-- OR M871
-- OR M872
-- OR M873
-- OR M874
-- OR M878
-- SET M16
-- OR M819
-- OR M821
-- OR M823
-- OR M864
-- OR M865
-- OR M866
-- OR M867
-- OR M868
-- OR M869
-- OR M870
-- OR M871
-- OR M872
-- OR M873
-- OR M874
-- OR M879
-- SET M32
-
-### Block 10: STOP (Step 508–567)
+### Block 13: STEP L3 (Step 778–820)
 
 **Trigger Condition:**
-- LD M1044
-- LD M0
-- LD M0
-- LD M0
-- LD M0
-- LD M0
-- LD M0
-- LD M0
+- LD M52
+- LD M52
+- LD M51
+- LD M51
+- LD M53
 
 **Actions:**
-- OR M769
+- AND M146
+- OR M53
+- ANI M50
+- ANI M450
+- ANI M451
+- ANI M300
+- ANI M301
+- ANI M302
+- ANI M303
+- ANI M350
+- ANI M351
+- OUT M53
+- AND M146
+- SET M147
+- AND M145
+- OR M52
+- ANI M53
+- ANI M450
+- ANI M451
+- ANI M300
+- ANI M301
+- ANI M302
+- ANI M303
+- ANI M350
+- ANI M351
+- OUT M52
+- OUT M51
+- OR M50
+- ANI M51
+- ANI M450
+- ANI M451
+- ANI M300
+- ANI M301
+- ANI M302
+- ANI M303
+- ANI M350
+- ANI M351
+- OUT M50
+
+### Block 14: INTERLOCK CHECK (Step 822–833)
+
+**Trigger Condition:**
+- LD M81
+- LD M91
+
+**Actions:**
+- AND M82
+- AND M83
+- AND M84
+- AND M85
+- OUT M80
+- AND M92
+- AND M93
+- AND M94
+- AND M95
+- OUT M90
+
+### Block 15: NG ALARM STOP (Step 835–873)
+
+**Trigger Condition:**
+- LD M108
+- LD M310
+- LD M124
+- LD M330
+- LD M450
+- LD M451
+- LD M450
+
+**Actions:**
+- OR M109
+- OR M111
+- OR M311
+- OR M312
+- ORB 
+- SET M450
+- OR M125
+- OR M127
+- OR M331
+- OR M332
+- ORB 
+- SET M451
+- RST M12
+- RST M13
+- RST M14
+- RST M15
+- RST M16
+- SET M17
+- RST M32
+- RST M33
+- RST M34
+- RST M35
+- RST M36
+- SET M37
+- OR M451
+- RST M51
+- RST M52
+- SET M53
+- RST M65
+- RST M66
+- RST M75
+- RST M76
+
+### Block 16: STOP (Step 875–888)
+
+**Trigger Condition:**
+- LD M409
+- LD M409
+- LD M10
+- LD M30
+- LD M450
+- LD M451
+
+**Actions:**
+- AND M210
+- SET M450
+- AND M211
+- SET M451
+- RST M450
+- RST M451
+- MOV K6
+- MOV K6
+
+### Block 17: EMERGENCY STOP (Step 890–940)
+
+**Trigger Condition:**
+- LDI M770
+- LD M452
+- LD M452
+- LD M452
+- LD M452
+- LD M452
+- LD M452
+- LD M452
+
+**Actions:**
+- OR M452
+- ANI M410
+- OUT M452
+- RST M10
+- RST M11
+- RST M12
+- RST M13
+- RST M14
+- RST M15
 - RST M16
 - RST M17
 - RST M18
-- RST M19
-- RST M20
-- RST M21
-- RST M22
-- RST M23
-- RST M24
+- RST M30
+- RST M31
 - RST M32
 - RST M33
 - RST M34
@@ -608,24 +1035,17 @@
 - RST M36
 - RST M37
 - RST M38
-- RST M39
-- RST M40
-- RST M48
-- RST M49
 - RST M50
 - RST M51
 - RST M52
 - RST M53
-- RST M54
-- RST M55
-- RST M56
-- RST M57
-- RST M58
-- RST M59
+- RST M60
+- RST M61
+- RST M62
+- RST M63
 - RST M64
 - RST M65
 - RST M66
-- RST M67
 - RST M68
 - RST M69
 - RST M70
@@ -635,319 +1055,313 @@
 - RST M74
 - RST M75
 - RST M76
-- RST M77
-- RST M78
-- RST M79
-- RST M80
-- SET M16
-- SET M32
-- MOV K6 D7012
-- MOV K6 D8012
+- MOV K6
+- MOV K6
 
-### Block 11: EMERGENCY STOP (Step 569–624)
+### Block 18: LAMP CONTROL (Step 942–1025)
 
 **Trigger Condition:**
-- LDI M771
-- LD M0
-- LD M0
-- LD M0
-- LD M0
-- LD M0
-- LD M0
+- LD M12
+- LD M32
+- LD M51
+- LD M300
+- LD M10
+- LD M30
 
 **Actions:**
-- MOV K6 D7012
-- MOV K6 D8012
-- RST M16
-- RST M17
-- RST M18
-- RST M19
-- RST M20
-- RST M21
-- RST M22
-- RST M23
-- RST M24
-- RST M32
-- RST M33
-- RST M34
-- RST M35
-- RST M36
-- RST M37
-- RST M38
-- RST M39
-- RST M40
-- RST M48
-- RST M49
-- RST M50
-- RST M51
-- RST M52
-- RST M53
-- RST M54
-- RST M55
-- RST M56
-- RST M57
-- RST M58
-- RST M59
-- RST M64
-- RST M65
-- RST M66
-- RST M67
-- RST M68
-- RST M69
-- RST M70
-- RST M71
-- RST M72
-- RST M73
-- RST M74
-- RST M75
-- RST M76
-- RST M77
-- RST M78
-- RST M79
-- RST M80
-
-### Block 12: EXHAUST TIMER (Step 626–629)
-
-**Trigger Condition:**
-- LD M23
-- LD M39
-
-**Actions:**
-- OUT T3
-- OUT T3
-
-### Block 13: LAMP CONTROL (Step 631–670)
-
-**Trigger Condition:**
-- LD M16
-- LD M864
-- LD M16
-
-**Actions:**
+- OR M13
+- OR M14
+- OR M15
+- OR M16
 - OR M17
-- OR M18
-- OR M19
-- OR M20
-- OR M21
-- OR M22
-- OR M23
-- OR M24
-- ANI M864
-- ANI M865
-- ANI M866
-- ANI M867
-- ANI M868
-- ANI M869
-- ANI M870
-- ANI M871
-- ANI M872
-- ANI M873
-- ANI M874
-- ANI M878
-- ANI M879
+- OR M33
+- OR M34
+- OR M35
+- OR M36
+- OR M37
+- ORB 
+- OR M52
+- ORB 
+- ANI M300
+- ANI M301
+- ANI M302
+- ANI M303
+- ANI M310
+- ANI M311
+- ANI M312
+- ANI M313
+- ANI M314
+- ANI M316
+- ANI M317
+- ANI M318
+- ANI M319
+- ANI M320
+- ANI M300
+- ANI M301
+- ANI M302
+- ANI M303
+- ANI M330
+- ANI M331
+- ANI M332
+- ANI M333
+- ANI M334
+- ANI M336
+- ANI M337
+- ANI M338
+- ANI M339
+- ANI M340
+- ANI M300
+- ANI M301
+- ANI M302
+- ANI M303
+- ANI M350
+- ANI M351
 - OUT M77
-- OR M865
-- OR M866
-- OR M867
-- OR M868
-- OR M869
-- OR M870
-- OR M871
-- OR M872
-- OR M873
-- OR M874
-- OR M878
-- OR M879
+- OR M301
+- OR M302
+- OR M303
+- OR M310
+- OR M311
+- OR M312
+- OR M313
+- OR M314
+- OR M316
+- OR M317
+- OR M318
+- OR M319
+- OR M320
+- OR M330
+- OR M331
+- OR M332
+- OR M333
+- OR M334
+- OR M336
+- OR M337
+- OR M338
+- OR M339
+- OR M340
+- OR M350
+- OR M351
 - OUT M78
-- ANI M880
+- ORB 
+- ANI M80
+- ANI M90
 - OUT M79
 
-### Block 14: HMI LAMP (Step 672–713)
+### Block 19: STOPWATCH (Step 1027–1039)
 
 **Trigger Condition:**
-- LD M502
-- LD M503
-- LD M504
-- LD M505
-- LD M506
-- LD M507
-- LD M508
-- LD M509
-- LD M18
-- LD M34
+- LD M490
+- LD T22
+- LD M10
+- LD M450
+- LD M452
 
 **Actions:**
-- OR M18
-- OUT M530
-- OR M19
-- OUT M531
-- OR M20
-- OUT M532
-- OR M21
-- OR M22
-- OUT M533
-- OR M34
-- OUT M534
-- OR M35
-- OUT M535
-- OR M36
-- OUT M536
-- OR M37
-- OR M38
-- OUT M537
-- OR M19
-- OR M20
-- OR M21
-- OR M22
-- OR M23
-- OR M24
-- OUT M540
-- OR M35
-- OR M36
-- OR M37
-- OR M38
-- OR M39
-- OR M40
-- OUT M541
+- ANI T22
+- OUT T22
+- D+ D244
+- OR M30
+- RST M490
+- OR M451
+- RST M490
+- RST M490
+
+### Block 20: VACUUM PUMP (Step 1041–1048)
+
+**Trigger Condition:**
+- LD M412
+- LD M620
+- LD M620
+
+**Actions:**
+- PLS M620
+- ANI M67
+- SET M67
+- AND M67
+- RST M67
 
 ## Device Map
 | Device | Type | SET Steps | RST Steps | OUT Steps | Read Steps |
 |--------|------|-----------|-----------|-----------|------------|
+| D0 | D |  |  |  | 1 |
+| D12 | D |  |  |  | 1 |
+| D18 | D |  |  |  | 2 |
+| D244 | D |  |  |  | 1 |
+| D32 | D |  |  |  | 1 |
+| D44 | D |  |  |  | 1 |
+| D50 | D |  |  |  | 2 |
+| K0 | K |  |  |  | 3 |
 | K1 | K |  |  |  | 2 |
-| K2 | K |  |  |  | 2 |
-| K3 | K |  |  |  | 2 |
-| K4 | K |  |  |  | 2 |
-| K5 | K |  |  |  | 2 |
-| K6 D7012 | K |  |  |  | 2 |
-| K6 D8012 | K |  |  |  | 2 |
-| M0 | M |  |  |  | 13 |
-| M1024 | M |  |  |  | 2 |
-| M1025 | M |  |  |  | 2 |
-| M1026 | M |  |  |  | 1 |
-| M1032 | M |  |  |  | 2 |
-| M1033 | M |  |  |  | 2 |
-| M1038 | M |  |  |  | 1 |
-| M1039 | M |  |  |  | 2 |
-| M1040 | M |  |  |  | 2 |
-| M1041 | M |  |  |  | 2 |
-| M1042 | M |  |  |  | 2 |
-| M1043 | M |  |  |  | 5 |
-| M1044 | M |  |  |  | 1 |
-| M1045 | M |  |  |  | 5 |
-| M1536 | M |  |  |  | 5 |
-| M1537 | M |  |  |  | 3 |
-| M16 | M | 2 | 2 | 1 | 5 |
-| M17 | M |  | 2 | 1 | 4 |
-| M18 | M | 1 | 2 | 1 | 7 |
-| M19 | M | 1 | 2 | 1 | 7 |
-| M20 | M | 1 | 2 | 1 | 8 |
-| M21 | M | 1 | 2 | 1 | 7 |
-| M22 | M |  | 2 | 1 | 5 |
-| M23 | M |  | 2 | 1 | 8 |
-| M24 | M |  | 2 | 1 | 6 |
-| M32 | M | 2 | 2 | 1 | 3 |
-| M33 | M |  | 2 | 1 | 3 |
-| M34 | M | 1 | 2 | 1 | 6 |
-| M35 | M | 1 | 2 | 1 | 6 |
-| M36 | M | 1 | 2 | 1 | 7 |
-| M37 | M | 1 | 2 | 1 | 6 |
-| M38 | M |  | 2 | 1 | 4 |
-| M39 | M |  | 2 | 1 | 7 |
-| M40 | M |  | 2 | 1 | 5 |
-| M48 | M |  | 2 |  |  |
-| M49 | M |  | 2 |  |  |
-| M50 | M |  | 2 |  |  |
-| M502 | M | 1 | 1 |  | 2 |
-| M503 | M | 1 | 1 |  | 2 |
-| M504 | M | 1 | 1 |  | 2 |
-| M505 | M | 1 | 1 |  | 2 |
-| M506 | M | 1 | 1 |  | 2 |
-| M507 | M | 1 | 1 |  | 2 |
-| M508 | M | 1 | 1 |  | 2 |
-| M509 | M | 1 | 1 |  | 2 |
-| M51 | M |  | 2 |  |  |
-| M52 | M |  | 2 |  |  |
-| M53 | M |  | 2 |  |  |
-| M530 | M |  |  | 1 |  |
-| M531 | M |  |  | 1 |  |
-| M532 | M |  |  | 1 |  |
-| M533 | M |  |  | 1 |  |
-| M534 | M |  |  | 1 |  |
-| M535 | M |  |  | 1 |  |
-| M536 | M |  |  | 1 |  |
-| M537 | M |  |  | 1 |  |
-| M54 | M |  | 2 |  |  |
-| M540 | M |  |  | 1 |  |
-| M541 | M |  |  | 1 |  |
-| M55 | M |  | 2 |  |  |
-| M56 | M |  | 2 |  |  |
-| M57 | M |  | 2 |  |  |
-| M58 | M |  | 2 |  |  |
-| M59 | M |  | 2 |  |  |
-| M64 | M |  | 2 |  |  |
+| K6 | K |  |  |  | 4 |
+| M0 | M |  |  | 1 | 2 |
+| M1 | M |  |  | 1 |  |
+| M10 | M | 1 | 1 | 1 | 11 |
+| M100 | M |  |  | 1 | 1 |
+| M101 | M |  |  |  | 1 |
+| M102 | M |  |  |  | 1 |
+| M103 | M |  |  |  | 1 |
+| M105 | M |  |  |  | 1 |
+| M106 | M |  |  |  | 2 |
+| M107 | M | 1 |  |  |  |
+| M108 | M |  |  |  | 1 |
+| M109 | M |  |  |  | 1 |
+| M11 | M | 1 | 2 | 1 | 5 |
+| M111 | M |  |  |  | 1 |
+| M116 | M |  |  | 1 | 1 |
+| M117 | M |  |  |  | 1 |
+| M118 | M |  |  |  | 1 |
+| M119 | M |  |  |  | 1 |
+| M12 | M | 2 | 3 | 1 | 6 |
+| M121 | M |  |  |  | 1 |
+| M122 | M |  |  |  | 2 |
+| M123 | M | 1 |  |  |  |
+| M124 | M |  |  |  | 1 |
+| M125 | M |  |  |  | 1 |
+| M127 | M |  |  |  | 1 |
+| M13 | M | 2 | 3 | 1 | 6 |
+| M14 | M | 2 | 5 | 1 | 6 |
+| M145 | M |  |  |  | 1 |
+| M146 | M |  |  |  | 2 |
+| M147 | M | 1 |  |  |  |
+| M15 | M | 4 | 2 | 1 | 5 |
+| M16 | M |  | 3 | 1 | 6 |
+| M17 | M | 2 | 1 | 1 | 6 |
+| M18 | M |  | 1 | 1 | 4 |
+| M2 | M |  |  | 1 | 6 |
+| M200 | M | 2 | 1 |  | 11 |
+| M201 | M | 1 | 2 |  | 14 |
+| M210 | M | 2 | 1 |  | 10 |
+| M211 | M | 1 | 2 |  | 10 |
+| M220 | M | 1 | 3 |  | 3 |
+| M221 | M | 1 | 3 |  | 3 |
+| M222 | M | 1 | 3 |  | 3 |
+| M223 | M | 1 | 3 |  | 3 |
+| M224 | M | 1 | 2 |  | 3 |
+| M30 | M | 1 | 1 | 1 | 9 |
+| M300 | M |  |  |  | 25 |
+| M301 | M |  |  |  | 25 |
+| M302 | M |  |  |  | 25 |
+| M303 | M |  |  |  | 25 |
+| M31 | M | 1 | 2 | 1 | 5 |
+| M310 | M |  |  |  | 12 |
+| M311 | M |  |  |  | 12 |
+| M312 | M |  |  |  | 12 |
+| M313 | M |  |  |  | 11 |
+| M314 | M |  |  |  | 11 |
+| M316 | M |  |  |  | 11 |
+| M317 | M |  |  |  | 11 |
+| M318 | M |  |  |  | 11 |
+| M319 | M |  |  |  | 11 |
+| M32 | M | 2 | 3 | 1 | 6 |
+| M320 | M |  |  |  | 11 |
+| M33 | M | 2 | 3 | 1 | 6 |
+| M330 | M |  |  |  | 12 |
+| M331 | M |  |  |  | 12 |
+| M332 | M |  |  |  | 12 |
+| M333 | M |  |  |  | 11 |
+| M334 | M |  |  |  | 11 |
+| M336 | M |  |  |  | 11 |
+| M337 | M |  |  |  | 11 |
+| M338 | M |  |  |  | 11 |
+| M339 | M |  |  |  | 11 |
+| M34 | M | 2 | 5 | 1 | 6 |
+| M340 | M |  |  |  | 11 |
+| M35 | M | 4 | 2 | 1 | 5 |
+| M350 | M |  |  |  | 5 |
+| M351 | M |  |  |  | 5 |
+| M36 | M |  | 3 | 1 | 6 |
+| M37 | M | 2 | 1 | 1 | 6 |
+| M38 | M |  | 1 | 1 | 4 |
+| M400 | M |  |  |  | 1 |
+| M401 | M |  |  |  | 1 |
+| M402 | M |  |  |  | 1 |
+| M403 | M |  |  |  | 1 |
+| M404 | M |  |  |  | 1 |
+| M405 | M |  |  |  | 1 |
+| M406 | M |  |  |  | 1 |
+| M407 | M |  |  |  | 1 |
+| M408 | M |  |  |  | 7 |
+| M409 | M |  |  |  | 2 |
+| M410 | M |  |  |  | 1 |
+| M412 | M |  |  |  | 1 |
+| M413 | M |  |  |  | 1 |
+| M415 | M |  |  |  | 1 |
+| M450 | M | 2 | 1 |  | 16 |
+| M451 | M | 2 | 1 |  | 16 |
+| M452 | M |  |  | 1 | 9 |
+| M453 | M | 3 | 11 |  | 1 |
+| M460 | M | 1 | 1 |  | 2 |
+| M461 | M | 1 | 1 |  | 2 |
+| M462 | M | 1 | 1 |  | 2 |
+| M463 | M | 1 | 6 |  | 7 |
+| M464 | M | 1 | 2 |  | 3 |
+| M465 | M | 1 | 1 |  | 2 |
+| M466 | M | 1 | 1 |  | 2 |
+| M467 | M | 1 | 1 |  | 2 |
+| M468 | M | 1 | 1 |  | 2 |
+| M469 | M | 1 | 1 |  | 2 |
+| M490 | M | 1 | 3 |  | 1 |
+| M50 | M | 1 | 1 | 1 | 2 |
+| M51 | M | 3 | 2 | 1 | 6 |
+| M52 | M |  | 2 | 1 | 4 |
+| M520 | M | 1 |  |  | 2 |
+| M521 | M | 2 | 1 |  | 8 |
+| M522 | M | 2 | 1 |  | 2 |
+| M53 | M | 1 | 3 | 1 | 4 |
+| M60 | M |  | 1 |  |  |
+| M600 | M |  |  |  | 3 |
+| M601 | M |  |  |  | 2 |
+| M602 | M |  |  |  | 2 |
+| M603 | M |  |  |  | 3 |
+| M604 | M |  |  |  | 3 |
+| M605 | M |  |  |  | 3 |
+| M606 | M |  |  |  | 3 |
+| M607 | M |  |  |  | 3 |
+| M61 | M |  | 1 |  |  |
+| M610 | M |  |  |  | 4 |
+| M611 | M |  |  |  | 4 |
+| M612 | M |  |  |  | 4 |
+| M613 | M |  |  |  | 4 |
+| M614 | M |  |  |  | 3 |
+| M615 | M |  |  |  | 4 |
+| M616 | M |  |  |  | 4 |
+| M62 | M |  | 1 |  |  |
+| M620 | M |  |  |  | 3 |
+| M621 | M |  |  |  | 3 |
+| M622 | M |  |  |  | 3 |
+| M63 | M |  | 1 |  |  |
+| M64 | M |  | 1 |  |  |
 | M65 | M |  | 2 |  |  |
 | M66 | M |  | 2 |  |  |
-| M67 | M |  | 2 |  |  |
-| M68 | M |  | 2 |  |  |
-| M69 | M |  | 2 |  |  |
-| M70 | M |  | 2 |  |  |
-| M71 | M |  | 2 |  |  |
-| M72 | M |  | 2 |  |  |
-| M73 | M |  | 2 |  |  |
-| M74 | M |  | 2 |  |  |
+| M67 | M | 1 | 1 |  | 2 |
+| M68 | M |  | 1 |  |  |
+| M69 | M |  | 1 |  |  |
+| M70 | M |  | 1 |  |  |
+| M71 | M |  | 1 |  |  |
+| M72 | M |  | 1 |  |  |
+| M73 | M |  | 1 |  |  |
+| M74 | M |  | 1 |  |  |
 | M75 | M |  | 2 |  |  |
 | M76 | M |  | 2 |  |  |
-| M769 | M |  |  |  | 1 |
-| M77 | M |  | 2 | 1 |  |
-| M771 | M |  |  |  | 1 |
-| M78 | M |  | 2 | 1 |  |
-| M79 | M |  | 2 | 1 |  |
-| M80 | M |  | 2 |  |  |
-| M800 | M |  |  |  | 2 |
-| M801 | M |  |  | 1 | 4 |
-| M802 | M |  |  | 1 | 10 |
-| M816 | M |  |  |  | 1 |
-| M817 | M |  |  |  | 3 |
-| M818 | M |  |  |  | 1 |
-| M819 | M |  |  |  | 3 |
-| M820 | M |  |  |  | 2 |
-| M821 | M |  |  |  | 3 |
-| M822 | M |  |  |  | 1 |
-| M823 | M |  |  |  | 3 |
-| M824 | M | 1 |  |  |  |
-| M832 | M |  |  |  | 1 |
-| M834 | M |  |  |  | 1 |
-| M836 | M |  |  |  | 2 |
-| M838 | M |  |  |  | 1 |
-| M840 | M | 1 |  |  |  |
-| M864 | M |  |  |  | 40 |
-| M865 | M |  |  |  | 22 |
-| M866 | M |  |  |  | 22 |
-| M867 | M |  |  |  | 22 |
-| M868 | M |  |  |  | 22 |
-| M869 | M |  |  |  | 22 |
-| M870 | M |  |  |  | 22 |
-| M871 | M |  |  |  | 22 |
-| M872 | M |  |  |  | 22 |
-| M873 | M |  |  |  | 22 |
-| M874 | M |  |  |  | 22 |
-| M878 | M |  |  |  | 12 |
-| M879 | M |  |  |  | 12 |
-| M880 | M |  |  | 1 | 2 |
-| M881 | M |  |  |  | 1 |
-| M882 | M |  |  |  | 1 |
-| M883 | M |  |  |  | 1 |
-| M884 | M |  |  |  | 1 |
-| M885 | M |  |  |  | 1 |
-| M896 | M |  |  | 1 | 1 |
-| M897 | M |  |  |  | 1 |
-| M898 | M |  |  |  | 1 |
-| M899 | M |  |  |  | 1 |
-| M900 | M |  |  |  | 1 |
-| M901 | M |  |  |  | 1 |
-| M912 | M |  |  | 1 | 1 |
-| M913 | M |  |  | 1 | 1 |
-| M914 | M |  |  | 1 | 1 |
-| M915 | M |  |  | 1 | 1 |
-| M916 | M |  |  | 1 | 2 |
-| T3 | T |  |  | 2 | 4 |
+| M77 | M |  |  | 1 |  |
+| M770 | M |  |  |  | 1 |
+| M78 | M |  |  | 1 |  |
+| M79 | M |  |  | 1 |  |
+| M80 | M |  |  | 1 | 2 |
+| M81 | M |  |  |  | 1 |
+| M82 | M |  |  |  | 1 |
+| M83 | M |  |  |  | 1 |
+| M84 | M |  |  |  | 1 |
+| M85 | M |  |  |  | 1 |
+| M90 | M |  |  | 1 | 2 |
+| M91 | M |  |  |  | 1 |
+| M92 | M |  |  |  | 1 |
+| M93 | M |  |  |  | 1 |
+| M94 | M |  |  |  | 1 |
+| M95 | M |  |  |  | 1 |
+| SM400 | ? |  |  |  | 1 |
+| SM401 | ? |  |  |  | 1 |
+| SM402 | ? |  |  |  | 1 |
+| T0 | T |  |  | 11 | 27 |
+| T22 | T |  |  | 1 | 2 |

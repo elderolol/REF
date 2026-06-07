@@ -1,161 +1,101 @@
 ---
 # REF_self_holding — IL Logic Map
 **CPU:** QCPU (Q mode) Q03UDV
-**Total Steps:** 101
+**Total Steps:** 51
 **Blocks:** 2
-**Generated:** 2026-06-03
+**Generated:** 2026-06-06
 ---
 
 ## Block List
 | # | Name | Steps | Condition Device | Action Count |
 |---|------|-------|-----------------|--------------|
-| 1 | UNIT VACUUM (Line 0) | 1–50 | LD M19, LD T1, LD M19 ... (+9) | 38 |
-| 2 | UNIT VACUUM (Line 1) | 52–101 | LD M35, LD T9, LD M35 ... (+9) | 38 |
+| 1 | UNIT VAC L1 | 1–25 | LD M13, LD M13, LD M13 ... (+2) | 20 |
+| 2 | UNIT VAC L2 | 27–51 | LD M33, LD M33, LD M33 ... (+2) | 20 |
 
 ## Block Detail
 
-### Block 1: UNIT VACUUM (Line 0) (Step 1–50)
+### Block 1: UNIT VAC L1 (Step 1–25)
 
 **Trigger Condition:**
-- LD M19
-- LD T1
-- LD M19
-- LD M19
-- LD M19
-- LD M19
-- LD M914
-- LD M915
-- LD M19
-- LD M19
-- LD M19
-- LD T7
+- LD M13
+- LD M13
+- LD M13
+- LD T15
+- LD M13
 
 **Actions:**
-- OUT T1
-- AND<= D160
+- OUT M60
+- OUT M61
+- OUT T2
+- AND T2
+- LDD<= D30
 - OUT M102
-- ANI M881
-- ANI T7
-- ANI M102
-- OUT M50
-- ANI M881
-- ANI T7
-- ANI M102
-- OUT M49
-- ANI M881
-- SET M16
-- RST M19
-- RST M49
-- RST M50
-- ANI M772
-- ANI M773
-- ORB 
-- ANB 
-- SET M819
-- AND T1
-- AND<= D160
-- OUT M818
-- AND T1
-- AND<= D160
-- RST M19
-- RST M49
-- RST M50
-- AND T1
-- AND> D160
-- OUT T7
-- SET M819
-- OUT M867
-- SET M76
-- RST M19
-- RST M49
-- RST M50
+- AND T2
+- LDD> D30
+- OUT T15
+- SET M109
+- SET M311
+- RST M13
+- RST M60
+- RST M61
+- ANI M80
+- SET M109
+- SET M311
+- RST M13
+- RST M60
+- RST M61
 
-### Block 2: UNIT VACUUM (Line 1) (Step 52–101)
+### Block 2: UNIT VAC L2 (Step 27–51)
 
 **Trigger Condition:**
-- LD M35
-- LD T9
-- LD M35
-- LD M35
-- LD M35
-- LD M35
-- LD M914
-- LD M915
-- LD M35
-- LD M35
-- LD M35
-- LD T17
+- LD M33
+- LD M33
+- LD M33
+- LD T16
+- LD M33
 
 **Actions:**
-- OUT T9
-- AND<= D172
-- OUT M103
-- ANI M897
-- ANI T17
-- ANI M103
-- OUT M66
-- ANI M897
-- ANI T17
-- ANI M103
-- OUT M65
-- ANI M897
-- SET M32
-- RST M35
-- RST M65
-- RST M66
-- ANI M788
-- ANI M789
-- ORB 
-- ANB 
-- SET M835
-- AND T9
-- AND<= D172
-- OUT M834
-- AND T9
-- AND<= D172
-- RST M35
-- RST M65
-- RST M66
-- AND T9
-- AND> D172
-- OUT T17
-- SET M835
-- OUT M867
-- SET M76
-- RST M35
-- RST M65
-- RST M66
+- OUT M70
+- OUT M71
+- OUT T8
+- AND T8
+- LDD<= D62
+- OUT M118
+- AND T8
+- LDD> D62
+- OUT T16
+- SET M125
+- SET M331
+- RST M33
+- RST M70
+- RST M71
+- ANI M90
+- SET M125
+- SET M331
+- RST M33
+- RST M70
+- RST M71
 
 ## Device Map
 | Device | Type | SET Steps | RST Steps | OUT Steps | Read Steps |
 |--------|------|-----------|-----------|-----------|------------|
-| D160 | D |  |  |  | 4 |
-| D172 | D |  |  |  | 4 |
-| M102 | M |  |  | 1 | 2 |
-| M103 | M |  |  | 1 | 2 |
-| M16 | M | 1 |  |  |  |
-| M19 | M |  | 3 |  | 8 |
-| M32 | M | 1 |  |  |  |
-| M35 | M |  | 3 |  | 8 |
-| M49 | M |  | 3 | 1 |  |
-| M50 | M |  | 3 | 1 |  |
-| M65 | M |  | 3 | 1 |  |
-| M66 | M |  | 3 | 1 |  |
-| M76 | M | 2 |  |  |  |
-| M772 | M |  |  |  | 1 |
-| M773 | M |  |  |  | 1 |
-| M788 | M |  |  |  | 1 |
-| M789 | M |  |  |  | 1 |
-| M818 | M |  |  | 1 |  |
-| M819 | M | 2 |  |  |  |
-| M834 | M |  |  | 1 |  |
-| M835 | M | 2 |  |  |  |
-| M867 | M |  |  | 2 |  |
-| M881 | M |  |  |  | 3 |
-| M897 | M |  |  |  | 3 |
-| M914 | M |  |  |  | 2 |
-| M915 | M |  |  |  | 2 |
-| T1 | T |  |  | 1 | 4 |
-| T17 | T |  |  | 1 | 3 |
-| T7 | T |  |  | 1 | 3 |
-| T9 | T |  |  | 1 | 4 |
+| D30 | D |  |  |  | 2 |
+| D62 | D |  |  |  | 2 |
+| M102 | M |  |  | 1 |  |
+| M109 | M | 2 |  |  |  |
+| M118 | M |  |  | 1 |  |
+| M125 | M | 2 |  |  |  |
+| M13 | M |  | 2 |  | 4 |
+| M311 | M | 2 |  |  |  |
+| M33 | M |  | 2 |  | 4 |
+| M331 | M | 2 |  |  |  |
+| M60 | M |  | 2 | 1 |  |
+| M61 | M |  | 2 | 1 |  |
+| M70 | M |  | 2 | 1 |  |
+| M71 | M |  | 2 | 1 |  |
+| M80 | M |  |  |  | 1 |
+| M90 | M |  |  |  | 1 |
+| T15 | T |  |  | 1 | 1 |
+| T16 | T |  |  | 1 | 1 |
+| T2 | T |  |  | 1 | 2 |
+| T8 | T |  |  | 1 | 2 |

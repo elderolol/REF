@@ -2,16 +2,16 @@
   "meta": {
     "source_file": "idata.csv",
     "cpu": "QCPU (Q mode) Q03UDV",
-    "total_steps": 232,
-    "block_count": 8,
-    "generated": "2026-06-03"
+    "total_steps": 166,
+    "block_count": 5,
+    "generated": "2026-06-06"
   },
   "blocks": [
     {
       "id": 1,
       "name": "SYSTEM FLAGS",
       "step_start": 1,
-      "step_end": 6,
+      "step_end": 8,
       "conditions": [
         {
           "instruction": "LD",
@@ -24,6 +24,10 @@
         {
           "instruction": "LD",
           "device": "SM402"
+        },
+        {
+          "instruction": "LD",
+          "device": "SM412"
         }
       ],
       "actions": [
@@ -38,32 +42,18 @@
         {
           "instruction": "OUT",
           "device": "M2"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M3"
         }
       ]
     },
     {
       "id": 2,
-      "name": "INIT FIRST SCAN",
-      "step_start": 8,
-      "step_end": 9,
-      "conditions": [
-        {
-          "instruction": "LD",
-          "device": "M2"
-        }
-      ],
-      "actions": [
-        {
-          "instruction": "SET",
-          "device": "M800"
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "name": "INPUT MAPPING L0",
-      "step_start": 98,
-      "step_end": 129,
+      "name": "INPUT MAPPING (X → M)",
+      "step_start": 10,
+      "step_end": 65,
       "conditions": [
         {
           "instruction": "LD",
@@ -128,6 +118,54 @@
         {
           "instruction": "LD",
           "device": "X0AF"
+        },
+        {
+          "instruction": "LD",
+          "device": "X0B0"
+        },
+        {
+          "instruction": "LD",
+          "device": "X0B1"
+        },
+        {
+          "instruction": "LD",
+          "device": "X0B2"
+        },
+        {
+          "instruction": "LD",
+          "device": "X0B3"
+        },
+        {
+          "instruction": "LD",
+          "device": "X0B4"
+        },
+        {
+          "instruction": "LD",
+          "device": "X0B5"
+        },
+        {
+          "instruction": "LD",
+          "device": "X0B6"
+        },
+        {
+          "instruction": "LD",
+          "device": "X0B7"
+        },
+        {
+          "instruction": "LD",
+          "device": "X0B8"
+        },
+        {
+          "instruction": "LD",
+          "device": "X0B9"
+        },
+        {
+          "instruction": "LD",
+          "device": "X0BA"
+        },
+        {
+          "instruction": "LD",
+          "device": "X0BB"
         }
       ],
       "actions": [
@@ -194,81 +232,7 @@
         {
           "instruction": "OUT",
           "device": "M783"
-        }
-      ]
-    },
-    {
-      "id": 4,
-      "name": "INPUT MAPPING L1",
-      "step_start": 131,
-      "step_end": 162,
-      "conditions": [
-        {
-          "instruction": "LD",
-          "device": "X0B0"
         },
-        {
-          "instruction": "LD",
-          "device": "X0B1"
-        },
-        {
-          "instruction": "LD",
-          "device": "X0B2"
-        },
-        {
-          "instruction": "LD",
-          "device": "X0B3"
-        },
-        {
-          "instruction": "LD",
-          "device": "X0B4"
-        },
-        {
-          "instruction": "LD",
-          "device": "X0B5"
-        },
-        {
-          "instruction": "LD",
-          "device": "X0B6"
-        },
-        {
-          "instruction": "LD",
-          "device": "X0B7"
-        },
-        {
-          "instruction": "LD",
-          "device": "X0B8"
-        },
-        {
-          "instruction": "LD",
-          "device": "X0B9"
-        },
-        {
-          "instruction": "LD",
-          "device": "X0BA"
-        },
-        {
-          "instruction": "LD",
-          "device": "X0BB"
-        },
-        {
-          "instruction": "LD",
-          "device": "X0BC"
-        },
-        {
-          "instruction": "LD",
-          "device": "X0BD"
-        },
-        {
-          "instruction": "LD",
-          "device": "X0BE"
-        },
-        {
-          "instruction": "LD",
-          "device": "X0BF"
-        }
-      ],
-      "actions": [
         {
           "instruction": "OUT",
           "device": "M784"
@@ -316,210 +280,124 @@
         {
           "instruction": "OUT",
           "device": "M795"
-        },
-        {
-          "instruction": "OUT",
-          "device": "M796"
-        },
-        {
-          "instruction": "OUT",
-          "device": "M797"
-        },
-        {
-          "instruction": "OUT",
-          "device": "M798"
-        },
-        {
-          "instruction": "OUT",
-          "device": "M799"
         }
       ]
     },
     {
-      "id": 5,
-      "name": "OUTPUT MAPPING L0",
-      "step_start": 164,
-      "step_end": 189,
+      "id": 3,
+      "name": "INTERLOCK WIRING",
+      "step_start": 67,
+      "step_end": 86,
       "conditions": [
         {
           "instruction": "LD",
-          "device": "M48"
+          "device": "M780"
         },
         {
           "instruction": "LD",
-          "device": "M49"
+          "device": "M781"
         },
         {
           "instruction": "LD",
-          "device": "M50"
+          "device": "M782"
         },
         {
           "instruction": "LD",
-          "device": "M51"
+          "device": "M783"
         },
         {
           "instruction": "LD",
-          "device": "M52"
+          "device": "M0"
         },
         {
           "instruction": "LD",
-          "device": "M53"
+          "device": "M791"
         },
         {
           "instruction": "LD",
-          "device": "M54"
+          "device": "M792"
         },
         {
           "instruction": "LD",
-          "device": "M55"
+          "device": "M793"
         },
         {
           "instruction": "LD",
-          "device": "M56"
+          "device": "M794"
         },
         {
           "instruction": "LD",
-          "device": "M57"
-        },
-        {
-          "instruction": "LD",
-          "device": "M58"
-        },
-        {
-          "instruction": "LD",
-          "device": "M59"
-        },
-        {
-          "instruction": "LD",
-          "device": "M80"
+          "device": "M0"
         }
       ],
       "actions": [
         {
           "instruction": "OUT",
-          "device": "Y010"
+          "device": "M81"
         },
         {
           "instruction": "OUT",
-          "device": "Y011"
+          "device": "M82"
         },
         {
           "instruction": "OUT",
-          "device": "Y012"
+          "device": "M83"
         },
         {
           "instruction": "OUT",
-          "device": "Y01B"
+          "device": "M84"
         },
         {
           "instruction": "OUT",
-          "device": "Y013"
+          "device": "M85"
         },
         {
           "instruction": "OUT",
-          "device": "Y014"
+          "device": "M91"
         },
         {
           "instruction": "OUT",
-          "device": "Y015"
+          "device": "M92"
         },
         {
           "instruction": "OUT",
-          "device": "Y016"
+          "device": "M93"
         },
         {
           "instruction": "OUT",
-          "device": "Y017"
+          "device": "M94"
         },
         {
           "instruction": "OUT",
-          "device": "Y018"
-        },
-        {
-          "instruction": "OUT",
-          "device": "Y019"
-        },
-        {
-          "instruction": "OUT",
-          "device": "Y01A"
-        },
-        {
-          "instruction": "OUT",
-          "device": "Y01C"
+          "device": "M95"
         }
       ]
     },
     {
-      "id": 6,
-      "name": "GLOBAL OUTPUTS",
-      "step_start": 191,
-      "step_end": 198,
+      "id": 4,
+      "name": "OUTPUT MAPPING (M → Y)",
+      "step_start": 88,
+      "step_end": 127,
       "conditions": [
         {
           "instruction": "LD",
-          "device": "M76"
+          "device": "M60"
         },
         {
           "instruction": "LD",
-          "device": "M77"
+          "device": "M61"
         },
         {
           "instruction": "LD",
-          "device": "M78"
+          "device": "M62"
         },
         {
           "instruction": "LD",
-          "device": "M79"
-        }
-      ],
-      "actions": [
-        {
-          "instruction": "OUT",
-          "device": "Y01D"
+          "device": "M63"
         },
-        {
-          "instruction": "OUT",
-          "device": "Y01E"
-        },
-        {
-          "instruction": "OUT",
-          "device": "Y01F"
-        },
-        {
-          "instruction": "OUT",
-          "device": "Y02C"
-        }
-      ]
-    },
-    {
-      "id": 7,
-      "name": "OUTPUT MAPPING L1",
-      "step_start": 200,
-      "step_end": 223,
-      "conditions": [
         {
           "instruction": "LD",
           "device": "M64"
-        },
-        {
-          "instruction": "LD",
-          "device": "M65"
-        },
-        {
-          "instruction": "LD",
-          "device": "M66"
-        },
-        {
-          "instruction": "LD",
-          "device": "M67"
-        },
-        {
-          "instruction": "LD",
-          "device": "M68"
-        },
-        {
-          "instruction": "LD",
-          "device": "M69"
         },
         {
           "instruction": "LD",
@@ -543,7 +421,43 @@
         },
         {
           "instruction": "LD",
+          "device": "M65"
+        },
+        {
+          "instruction": "LD",
+          "device": "M66"
+        },
+        {
+          "instruction": "LD",
           "device": "M75"
+        },
+        {
+          "instruction": "LD",
+          "device": "M76"
+        },
+        {
+          "instruction": "LD",
+          "device": "M69"
+        },
+        {
+          "instruction": "LD",
+          "device": "M77"
+        },
+        {
+          "instruction": "LD",
+          "device": "M78"
+        },
+        {
+          "instruction": "LD",
+          "device": "M79"
+        },
+        {
+          "instruction": "LD",
+          "device": "M67"
+        },
+        {
+          "instruction": "LD",
+          "device": "M68"
         }
       ],
       "actions": [
@@ -561,15 +475,31 @@
         },
         {
           "instruction": "OUT",
-          "device": "Y02B"
-        },
-        {
-          "instruction": "OUT",
           "device": "Y023"
         },
         {
           "instruction": "OUT",
           "device": "Y024"
+        },
+        {
+          "instruction": "OUT",
+          "device": "Y030"
+        },
+        {
+          "instruction": "OUT",
+          "device": "Y031"
+        },
+        {
+          "instruction": "OUT",
+          "device": "Y032"
+        },
+        {
+          "instruction": "OUT",
+          "device": "Y033"
+        },
+        {
+          "instruction": "OUT",
+          "device": "Y034"
         },
         {
           "instruction": "OUT",
@@ -581,10 +511,6 @@
         },
         {
           "instruction": "OUT",
-          "device": "Y027"
-        },
-        {
-          "instruction": "OUT",
           "device": "Y028"
         },
         {
@@ -593,48 +519,189 @@
         },
         {
           "instruction": "OUT",
-          "device": "Y02A"
+          "device": "Y040"
+        },
+        {
+          "instruction": "OUT",
+          "device": "Y041"
+        },
+        {
+          "instruction": "OUT",
+          "device": "Y042"
+        },
+        {
+          "instruction": "OUT",
+          "device": "Y043"
+        },
+        {
+          "instruction": "OUT",
+          "device": "Y044"
+        },
+        {
+          "instruction": "OUT",
+          "device": "Y027"
         }
       ]
     },
     {
-      "id": 8,
-      "name": "CONFIG VALIDATION",
-      "step_start": 225,
-      "step_end": 232,
-      "conditions": [],
+      "id": 5,
+      "name": "HMI BUTTON BUFFER",
+      "step_start": 129,
+      "step_end": 166,
+      "conditions": [
+        {
+          "instruction": "LD",
+          "device": "M400"
+        },
+        {
+          "instruction": "LD",
+          "device": "M401"
+        },
+        {
+          "instruction": "LD",
+          "device": "M402"
+        },
+        {
+          "instruction": "LD",
+          "device": "M403"
+        },
+        {
+          "instruction": "LD",
+          "device": "M404"
+        },
+        {
+          "instruction": "LD",
+          "device": "M405"
+        },
+        {
+          "instruction": "LD",
+          "device": "M406"
+        },
+        {
+          "instruction": "LD",
+          "device": "M407"
+        },
+        {
+          "instruction": "LD",
+          "device": "M408"
+        },
+        {
+          "instruction": "LD",
+          "device": "M409"
+        },
+        {
+          "instruction": "LD",
+          "device": "M410"
+        },
+        {
+          "instruction": "LD",
+          "device": "M411"
+        },
+        {
+          "instruction": "LD",
+          "device": "M412"
+        },
+        {
+          "instruction": "LD",
+          "device": "M413"
+        },
+        {
+          "instruction": "LD",
+          "device": "M414"
+        },
+        {
+          "instruction": "LD",
+          "device": "M415"
+        },
+        {
+          "instruction": "LD",
+          "device": "M416"
+        },
+        {
+          "instruction": "LD",
+          "device": "M417"
+        },
+        {
+          "instruction": "LD",
+          "device": "M418"
+        }
+      ],
       "actions": [
         {
-          "instruction": "LD<",
-          "device": "D270"
+          "instruction": "OUT",
+          "device": "M400"
         },
         {
-          "instruction": "MOV",
-          "device": "K1 D270"
+          "instruction": "OUT",
+          "device": "M401"
         },
         {
-          "instruction": "LD>",
-          "device": "D270"
+          "instruction": "OUT",
+          "device": "M402"
         },
         {
-          "instruction": "MOV",
-          "device": "K2 D270"
+          "instruction": "OUT",
+          "device": "M403"
         },
         {
-          "instruction": "LD<",
-          "device": "D272"
+          "instruction": "OUT",
+          "device": "M404"
         },
         {
-          "instruction": "MOV",
-          "device": "K1 D272"
+          "instruction": "OUT",
+          "device": "M405"
         },
         {
-          "instruction": "LD>",
-          "device": "D272"
+          "instruction": "OUT",
+          "device": "M406"
         },
         {
-          "instruction": "MOV",
-          "device": "K2 D272"
+          "instruction": "OUT",
+          "device": "M407"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M408"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M409"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M410"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M411"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M412"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M413"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M414"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M415"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M416"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M417"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M418"
         }
       ]
     }

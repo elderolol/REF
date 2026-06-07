@@ -1,7 +1,5 @@
-﻿# VAC CHECK ??self-holding OUT conversion
-# Result latches use OUT (MAIN's self-holding captures one-shot)
-# Alarm triggers use OUT (alarm.csv self-holds)
-# No explicit step RST needed ??MAIN's step self-holding handles release
+﻿# VAC CHECK — L1: M14, L2: M34. VAC+STEM SOL ON + LINE VAC SOL(M68) ON
+# Results: L1 M103(OK), M109(NG/leak)  L2 M119(OK), M125(NG/leak)
 st = 0; lines = []
 def a(i,d): global st; lines.append(f'"{st}"\t""\t"{i}"\t"{d}"\t""\t""\t""'); st += 1
 def ac(d): lines.append(f'""\t""\t""\t"{d}"\t""\t""\t""')
@@ -14,41 +12,26 @@ def wr(p):
     with open(p, "wb") as f: f.write(b'\xff\xfe'); f.write(c.encode('utf-16-le'))
 
 hd("REF_self_holding")
-al("VAC CHECK L0")
-
-# Save initial vacuum, start timer
-a("LD", "M20"); a("DMOV", "D160"); ac("D300")
-a("LD", "M20"); a("OUT", "T2"); ac("D6")
-# Delta = initial - current
-a("LD", "M20"); a("D-", "D300"); ac("D160"); ac("D304")
-
-# Interlock: M775 ON at entry ??NG (immediate, no timer wait)
-# M878: alarm condition (alarm.csv self-holds: LD M0 OR M878 ANI M750)
-a("LD", "M20"); a("AND", "M775"); a("OUT", "M878")
-# M821: NG result (M775 OR leak) ??ORB for two conditions
-a("LD", "M20"); a("AND", "M775")
-a("LD", "M20"); a("AND>", "D304"); ac("D24"); a("ORB",""); a("OUT", "M821")
-# M868: alarm trigger only on leak (not on interlock)
-a("LD", "M20"); a("AND>", "D304"); ac("D24"); a("OUT", "M868")
-
-# OK: timer expired AND vacuum stable, NOT interlock
-a("LD", "M20"); a("ANI", "M775"); a("AND", "T2"); a("AND<=", "D304"); ac("K5"); a("OUT", "M820")
 
 al("VAC CHECK L1")
-a("LD", "M36"); a("DMOV", "D172"); ac("D306")
-a("LD", "M36"); a("OUT", "T11"); ac("D36")
-a("LD", "M36"); a("D-", "D306"); ac("D172"); ac("D308")
+a("LD","M14"); a("OUT","M60"); a("OUT","M61"); a("OUT","M68")
+a("LD","M14"); a("DMOV","D30"); ac("D600"); a("OUT","T3"); ac("D6")
+a("LD","M14"); a("D-","D600"); ac("D30"); ac("D602")
+a("LD","M14"); a("AND","T3"); a("LDD<=","D602"); ac("D24")
+a("OUT","M103")    # Vac check OK, step released by warmup chain
+a("RST","M60"); a("RST","M61"); a("RST","M68")
+a("LD","M14"); a("AND","T3"); a("LDD>","D602"); ac("D24")
+a("SET","M109"); a("SET","M312"); a("RST","M14"); a("RST","M60"); a("RST","M61"); a("RST","M68")
 
-# Interlock
-a("LD", "M36"); a("AND", "M791"); a("OUT", "M879")
-a("LD", "M36"); a("AND", "M791")
-a("LD", "M36"); a("AND>", "D308"); ac("D52"); a("ORB",""); a("OUT", "M837")
-# M868 also for L1 leak
-a("LD", "M36"); a("AND>", "D308"); ac("D52"); a("OUT", "M868")
-
-# OK
-a("LD", "M36"); a("ANI", "M791"); a("AND", "T11"); a("AND<=", "D308"); ac("K5"); a("OUT", "M836")
+al("VAC CHECK L2")
+a("LD","M34"); a("OUT","M70"); a("OUT","M71"); a("OUT","M68")
+a("LD","M34"); a("DMOV","D62"); ac("D610"); a("OUT","T9"); ac("D38")
+a("LD","M34"); a("D-","D610"); ac("D62"); ac("D612")
+a("LD","M34"); a("AND","T9"); a("LDD<=","D612"); ac("D56")
+a("OUT","M119")    # L2 Vac check OK, step released by warmup chain
+a("RST","M70"); a("RST","M71"); a("RST","M68")
+a("LD","M34"); a("AND","T9"); a("LDD>","D612"); ac("D56")
+a("SET","M125"); a("SET","M332"); a("RST","M34"); a("RST","M70"); a("RST","M71"); a("RST","M68")
 
 a("END","")
 wr("F:\\WorkSpace\\REF\\src\\vacchec.csv")
-
