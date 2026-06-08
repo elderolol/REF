@@ -17,6 +17,7 @@ hd("REF_self_holding")
 al("OIL FAST")
 a("LD","M51"); a("AND","M210"); a("OUT","M65"); a("OUT","M66")
 a("LD","M51"); a("AND","M211"); a("OUT","M75"); a("OUT","M76")
+a("LD","M51"); a("SET","M96"); a("SET","M97")       # HYDRO PUMP + OIL LINE SOL
 a("LD","M51"); a("OUT","T13"); ac("K3000")
 # Count >= fast_stop
 a("LD","M51")
@@ -31,30 +32,31 @@ a("ORB",""); a("ANB","")
 a("AND","M211"); a("RST","M75"); a("SET","M145"); a("SET","M52")
 # Timeout
 a("LD","M51"); a("AND","T13")
-a("AND","M210"); a("RST","M65"); a("RST","M66"); a("SET","M350"); a("SET","M145"); a("SET","M53"); a("RST","M51")
+a("AND","M210"); a("RST","M65"); a("RST","M66"); a("SET","M350"); a("SET","M145"); a("SET","M53"); a("RST","M51"); a("RST","M96"); a("RST","M97")
 a("LD","M51"); a("AND","T13")
-a("AND","M211"); a("RST","M75"); a("RST","M76"); a("SET","M350"); a("SET","M145"); a("SET","M53"); a("RST","M51")
+a("AND","M211"); a("RST","M75"); a("RST","M76"); a("SET","M350"); a("SET","M145"); a("SET","M53"); a("RST","M51"); a("RST","M96"); a("RST","M97")
 
 al("OIL BASE")
 a("LD","M52"); a("AND","M210"); a("OUT","M66")
 a("LD","M52"); a("AND","M211"); a("OUT","M76")
+a("LD","M52"); a("SET","M96"); a("SET","M97")       # HYDRO PUMP + OIL LINE SOL
 a("LD","M52"); a("OUT","T14"); ac("K3000")
 # Count >= target
 a("LD","M52")
 a("LD","M210"); a("LDD>=","D180"); ac("D18")
 a("LD","M211"); a("LDD>=","D180"); ac("D50")
 a("ORB",""); a("ANB","")
-a("AND","M210"); a("RST","M66"); a("SET","M146"); a("SET","M53")
+a("AND","M210"); a("RST","M66"); a("SET","M146"); a("SET","M53"); a("RST","M96"); a("RST","M97")
 a("LD","M52")
 a("LD","M210"); a("LDD>=","D180"); ac("D18")
 a("LD","M211"); a("LDD>=","D180"); ac("D50")
 a("ORB",""); a("ANB","")
-a("AND","M211"); a("RST","M76"); a("SET","M146"); a("SET","M53")
+a("AND","M211"); a("RST","M76"); a("SET","M146"); a("SET","M53"); a("RST","M96"); a("RST","M97")
 # Timeout
 a("LD","M52"); a("AND","T14")
-a("AND","M210"); a("RST","M66"); a("SET","M350"); a("SET","M146"); a("SET","M53"); a("RST","M52")
+a("AND","M210"); a("RST","M66"); a("SET","M350"); a("SET","M146"); a("SET","M53"); a("RST","M52"); a("RST","M96"); a("RST","M97")
 a("LD","M52"); a("AND","T14")
-a("AND","M211"); a("RST","M76"); a("SET","M350"); a("SET","M146"); a("SET","M53"); a("RST","M52")
+a("AND","M211"); a("RST","M76"); a("SET","M350"); a("SET","M146"); a("SET","M53"); a("RST","M52"); a("RST","M96"); a("RST","M97")
 # Tolerance
 a("LD","M52")
 a("LD","M210"); a("LDD>","D180"); ac("D20")
@@ -64,4 +66,4 @@ a("LD","M53"); a("AND","M210"); a("LDD<","D180"); ac("D18"); a("SET","M351")  # 
 a("LD","M53"); a("AND","M211"); a("LDD<","D180"); ac("D50"); a("SET","M351")
 
 a("END","")
-wr("F:\\WorkSpace\\REF\\src\\oilinj.csv")
+wr("C:/WorkSpace/2L2GOIL/src\\oilinj.csv")

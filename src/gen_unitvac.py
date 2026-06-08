@@ -1,4 +1,4 @@
-﻿# UNIT VACUUM — L1: M13, L2: M33
+# UNIT VACUUM ? L1: M13, L2: M33
 # Results: L1 M102(OK), M109(NG)  L2 M118(OK), M125(NG)
 st = 0; lines = []
 def a(i,d): global st; lines.append(f'"{st}"\t""\t"{i}"\t"{d}"\t""\t""\t""'); st += 1
@@ -32,4 +32,4 @@ a("LD","T16"); a("SET","M125"); a("SET","M331"); a("RST","M33"); a("RST","M70");
 a("LD","M33"); a("ANI","M90"); a("SET","M125"); a("SET","M331"); a("RST","M33"); a("RST","M70"); a("RST","M71")
 
 a("END","")
-wr("F:\\WorkSpace\\REF\\src\\unitvac.csv")
+wr("C:\\WorkSpace\\REF\\src\\unitvac.csv")

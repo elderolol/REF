@@ -2,9 +2,9 @@
   "meta": {
     "source_file": "MAIN.csv",
     "cpu": "QCPU (Q mode) Q03UDV",
-    "total_steps": 1048,
-    "block_count": 20,
-    "generated": "2026-06-06"
+    "total_steps": 1087,
+    "block_count": 22,
+    "generated": "2026-06-08"
   },
   "blocks": [
     {
@@ -545,7 +545,7 @@
       "id": 8,
       "name": "MANUAL START ENTRY",
       "step_start": 124,
-      "step_end": 200,
+      "step_end": 201,
       "conditions": [
         {
           "instruction": "LD",
@@ -846,6 +846,10 @@
           "device": "M521"
         },
         {
+          "instruction": "ANI",
+          "device": "M304"
+        },
+        {
           "instruction": "RST",
           "device": "M224"
         },
@@ -862,8 +866,8 @@
     {
       "id": 9,
       "name": "AUTO START",
-      "step_start": 202,
-      "step_end": 227,
+      "step_start": 203,
+      "step_end": 228,
       "conditions": [
         {
           "instruction": "LD",
@@ -976,8 +980,8 @@
     {
       "id": 10,
       "name": "AUTO CHAIN WARMUP",
-      "step_start": 229,
-      "step_end": 390,
+      "step_start": 230,
+      "step_end": 393,
       "conditions": [
         {
           "instruction": "LD",
@@ -1366,6 +1370,10 @@
           "device": "D18"
         },
         {
+          "instruction": "ANI",
+          "device": "M304"
+        },
+        {
           "instruction": "SET",
           "device": "M51"
         },
@@ -1392,6 +1400,10 @@
         {
           "instruction": "LDD>=",
           "device": "D50"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M304"
         },
         {
           "instruction": "SET",
@@ -1634,8 +1646,8 @@
     {
       "id": 11,
       "name": "STEP L1",
-      "step_start": 392,
-      "step_end": 583,
+      "step_start": 395,
+      "step_end": 586,
       "conditions": [
         {
           "instruction": "LD",
@@ -2412,8 +2424,8 @@
     {
       "id": 12,
       "name": "STEP L2",
-      "step_start": 585,
-      "step_end": 776,
+      "step_start": 588,
+      "step_end": 779,
       "conditions": [
         {
           "instruction": "LD",
@@ -3190,8 +3202,8 @@
     {
       "id": 13,
       "name": "STEP L3",
-      "step_start": 778,
-      "step_end": 820,
+      "step_start": 781,
+      "step_end": 826,
       "conditions": [
         {
           "instruction": "LD",
@@ -3250,6 +3262,10 @@
         {
           "instruction": "ANI",
           "device": "M303"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M304"
         },
         {
           "instruction": "ANI",
@@ -3309,6 +3325,10 @@
         },
         {
           "instruction": "ANI",
+          "device": "M304"
+        },
+        {
+          "instruction": "ANI",
           "device": "M350"
         },
         {
@@ -3357,6 +3377,10 @@
         },
         {
           "instruction": "ANI",
+          "device": "M304"
+        },
+        {
+          "instruction": "ANI",
           "device": "M350"
         },
         {
@@ -3372,8 +3396,8 @@
     {
       "id": 14,
       "name": "INTERLOCK CHECK",
-      "step_start": 822,
-      "step_end": 833,
+      "step_start": 828,
+      "step_end": 839,
       "conditions": [
         {
           "instruction": "LD",
@@ -3430,8 +3454,8 @@
     {
       "id": 15,
       "name": "NG ALARM STOP",
-      "step_start": 835,
-      "step_end": 873,
+      "step_start": 841,
+      "step_end": 881,
       "conditions": [
         {
           "instruction": "LD",
@@ -3590,14 +3614,22 @@
         {
           "instruction": "RST",
           "device": "M76"
+        },
+        {
+          "instruction": "RST",
+          "device": "M96"
+        },
+        {
+          "instruction": "RST",
+          "device": "M97"
         }
       ]
     },
     {
       "id": 16,
       "name": "STOP",
-      "step_start": 875,
-      "step_end": 888,
+      "step_start": 883,
+      "step_end": 896,
       "conditions": [
         {
           "instruction": "LD",
@@ -3662,12 +3694,16 @@
     {
       "id": 17,
       "name": "EMERGENCY STOP",
-      "step_start": 890,
-      "step_end": 940,
+      "step_start": 898,
+      "step_end": 951,
       "conditions": [
         {
           "instruction": "LDI",
           "device": "M770"
+        },
+        {
+          "instruction": "LD",
+          "device": "M452"
         },
         {
           "instruction": "LD",
@@ -3864,6 +3900,14 @@
           "device": "M76"
         },
         {
+          "instruction": "RST",
+          "device": "M96"
+        },
+        {
+          "instruction": "RST",
+          "device": "M97"
+        },
+        {
           "instruction": "MOV",
           "device": "K6"
         },
@@ -3876,8 +3920,8 @@
     {
       "id": 18,
       "name": "LAMP CONTROL",
-      "step_start": 942,
-      "step_end": 1025,
+      "step_start": 953,
+      "step_end": 1038,
       "conditions": [
         {
           "instruction": "LD",
@@ -4087,6 +4131,10 @@
         },
         {
           "instruction": "ANI",
+          "device": "M304"
+        },
+        {
+          "instruction": "ANI",
           "device": "M350"
         },
         {
@@ -4108,6 +4156,10 @@
         {
           "instruction": "OR",
           "device": "M303"
+        },
+        {
+          "instruction": "OR",
+          "device": "M304"
         },
         {
           "instruction": "OR",
@@ -4222,8 +4274,8 @@
     {
       "id": 19,
       "name": "STOPWATCH",
-      "step_start": 1027,
-      "step_end": 1039,
+      "step_start": 1040,
+      "step_end": 1052,
       "conditions": [
         {
           "instruction": "LD",
@@ -4284,8 +4336,8 @@
     {
       "id": 20,
       "name": "VACUUM PUMP",
-      "step_start": 1041,
-      "step_end": 1048,
+      "step_start": 1054,
+      "step_end": 1061,
       "conditions": [
         {
           "instruction": "LD",
@@ -4320,6 +4372,122 @@
         {
           "instruction": "RST",
           "device": "M67"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "name": "HYDRO PUMP",
+      "step_start": 1063,
+      "step_end": 1080,
+      "conditions": [
+        {
+          "instruction": "LD",
+          "device": "M419"
+        },
+        {
+          "instruction": "LD",
+          "device": "M623"
+        },
+        {
+          "instruction": "LD",
+          "device": "M623"
+        },
+        {
+          "instruction": "LD",
+          "device": "M51"
+        },
+        {
+          "instruction": "LD",
+          "device": "M52"
+        }
+      ],
+      "actions": [
+        {
+          "instruction": "PLS",
+          "device": "M623"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M96"
+        },
+        {
+          "instruction": "SET",
+          "device": "M96"
+        },
+        {
+          "instruction": "SET",
+          "device": "M97"
+        },
+        {
+          "instruction": "AND",
+          "device": "M96"
+        },
+        {
+          "instruction": "RST",
+          "device": "M96"
+        },
+        {
+          "instruction": "RST",
+          "device": "M97"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M304"
+        },
+        {
+          "instruction": "SET",
+          "device": "M96"
+        },
+        {
+          "instruction": "SET",
+          "device": "M97"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M304"
+        },
+        {
+          "instruction": "SET",
+          "device": "M96"
+        },
+        {
+          "instruction": "SET",
+          "device": "M97"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "name": "HEATER RELAY",
+      "step_start": 1082,
+      "step_end": 1087,
+      "conditions": [
+        {
+          "instruction": "LD",
+          "device": "M2"
+        },
+        {
+          "instruction": "LD",
+          "device": "M210"
+        },
+        {
+          "instruction": "LD",
+          "device": "M211"
+        }
+      ],
+      "actions": [
+        {
+          "instruction": "RST",
+          "device": "M98"
+        },
+        {
+          "instruction": "RST",
+          "device": "M98"
+        },
+        {
+          "instruction": "SET",
+          "device": "M98"
         }
       ]
     }

@@ -1,9 +1,9 @@
 ---
 # REF_self_holding — IL Logic Map
 **CPU:** QCPU (Q mode) Q03UDV
-**Total Steps:** 166
+**Total Steps:** 174
 **Blocks:** 5
-**Generated:** 2026-06-06
+**Generated:** 2026-06-08
 ---
 
 ## Block List
@@ -12,8 +12,8 @@
 | 1 | SYSTEM FLAGS | 1–8 | LD SM400, LD SM401, LD SM402 ... (+1) | 4 |
 | 2 | INPUT MAPPING (X → M) | 10–65 | LD X0A0, LD X0A1, LD X0A2 ... (+25) | 28 |
 | 3 | INTERLOCK WIRING | 67–86 | LD M780, LD M781, LD M782 ... (+7) | 10 |
-| 4 | OUTPUT MAPPING (M → Y) | 88–127 | LD M60, LD M61, LD M62 ... (+17) | 20 |
-| 5 | HMI BUTTON BUFFER | 129–166 | LD M400, LD M401, LD M402 ... (+16) | 19 |
+| 4 | OUTPUT MAPPING (M → Y) | 88–133 | LD M60, LD M61, LD M62 ... (+20) | 23 |
+| 5 | HMI BUTTON BUFFER | 135–174 | LD M400, LD M401, LD M402 ... (+17) | 20 |
 
 ## Block Detail
 
@@ -119,7 +119,7 @@
 - OUT M94
 - OUT M95
 
-### Block 4: OUTPUT MAPPING (M → Y) (Step 88–127)
+### Block 4: OUTPUT MAPPING (M → Y) (Step 88–133)
 
 **Trigger Condition:**
 - LD M60
@@ -141,6 +141,9 @@
 - LD M78
 - LD M79
 - LD M67
+- LD M96
+- LD M97
+- LD M98
 - LD M68
 
 **Actions:**
@@ -163,9 +166,12 @@
 - OUT Y042
 - OUT Y043
 - OUT Y044
+- OUT Y045
+- OUT Y046
+- OUT Y047
 - OUT Y027
 
-### Block 5: HMI BUTTON BUFFER (Step 129–166)
+### Block 5: HMI BUTTON BUFFER (Step 135–174)
 
 **Trigger Condition:**
 - LD M400
@@ -187,6 +193,7 @@
 - LD M416
 - LD M417
 - LD M418
+- LD M419
 
 **Actions:**
 - OUT M400
@@ -208,6 +215,7 @@
 - OUT M416
 - OUT M417
 - OUT M418
+- OUT M419
 
 ## Device Map
 | Device | Type | SET Steps | RST Steps | OUT Steps | Read Steps |
@@ -235,6 +243,7 @@
 | M416 | M |  |  | 1 | 1 |
 | M417 | M |  |  | 1 | 1 |
 | M418 | M |  |  | 1 | 1 |
+| M419 | M |  |  | 1 | 1 |
 | M60 | M |  |  |  | 1 |
 | M61 | M |  |  |  | 1 |
 | M62 | M |  |  |  | 1 |
@@ -293,6 +302,9 @@
 | M93 | M |  |  | 1 |  |
 | M94 | M |  |  | 1 |  |
 | M95 | M |  |  | 1 |  |
+| M96 | M |  |  |  | 1 |
+| M97 | M |  |  |  | 1 |
+| M98 | M |  |  |  | 1 |
 | SM400 | ? |  |  |  | 1 |
 | SM401 | ? |  |  |  | 1 |
 | SM402 | ? |  |  |  | 1 |
@@ -345,3 +357,6 @@
 | Y042 | Y |  |  | 1 |  |
 | Y043 | Y |  |  | 1 |  |
 | Y044 | Y |  |  | 1 |  |
+| Y045 | Y |  |  | 1 |  |
+| Y046 | Y |  |  | 1 |  |
+| Y047 | Y |  |  | 1 |  |

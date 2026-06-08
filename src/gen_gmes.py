@@ -1,4 +1,4 @@
-﻿# GMES — PC communication + SPC logging (merged)
+# GMES ? PC communication + SPC logging (merged)
 # L1 results: M100-M111, L2 results: M116-M127
 # SPC: L1 D7020-D7219, L2 D8020-D8219
 st = 0; lines = []
@@ -104,4 +104,4 @@ a("LD","M417"); a("DMOV","K0"); ac("D200")   # L1 usage reset
 a("LD","M418"); a("DMOV","K0"); ac("D220")   # L2 usage reset
 
 a("END","")
-wr("F:\\WorkSpace\\REF\\src\\gmes.csv")
+wr("C:\\WorkSpace\\REF\\src\\gmes.csv")

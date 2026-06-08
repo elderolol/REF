@@ -1,16 +1,16 @@
-# Graph Report - src_md  (2026-06-06)
+# Graph Report - src_md  (2026-06-08)
 
 ## Corpus Check
-- 30 files · ~44,149 words
+- 30 files · ~45,021 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 658 nodes · 652 edges · 43 communities (42 shown, 1 thin omitted)
+- 749 nodes · 750 edges · 44 communities (43 shown, 1 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `35a5d8ff`
+- Built from commit: `e62bb827`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -57,19 +57,20 @@
 - [[_COMMUNITY_Community 39|Community 39]]
 - [[_COMMUNITY_Community 40|Community 40]]
 - [[_COMMUNITY_Community 41|Community 41]]
+- [[_COMMUNITY_Community 42|Community 42]]
 - [[_COMMUNITY_Community 445|Community 445]]
 
 ## God Nodes (most connected - your core abstractions)
-1. `Block Detail` - 123 edges
+1. `Block Detail` - 138 edges
 2. `Block Detail` - 40 edges
-3. `Block Detail` - 35 edges
-4. `Block Detail` - 28 edges
+3. `Block Detail` - 39 edges
+4. `Block Detail` - 29 edges
 5. `Block Detail` - 28 edges
-6. `Block Detail` - 23 edges
-7. `Block Detail` - 14 edges
-8. `Block Detail` - 12 edges
-9. `Block Detail` - 12 edges
-10. `Block Detail` - 11 edges
+6. `Block Detail` - 28 edges
+7. `Block Detail` - 18 edges
+8. `Block Detail` - 15 edges
+9. `Block Detail` - 14 edges
+10. `Block Detail` - 12 edges
 
 ## Surprising Connections (you probably didn't know these)
 - None detected - all connections are within the same source files.
@@ -77,11 +78,11 @@
 ## Import Cycles
 - None detected.
 
-## Communities (43 total, 1 thin omitted)
+## Communities (44 total, 1 thin omitted)
 
 ### Community 0 - "Community 0"
-Cohesion: 0.02
-Nodes (122): Block 10: AUTO CHAIN WARMUP (Step 229–390), Block 10: LAMP CONTROL (Step 361–402), Block 10: STEP L1 (Step 315–381), Block 10: STEP L1 (Step 317–383), Block 10: STEP L1 (Step 330–530), Block 10: STEP L1 (Step 334–534), Block 10: STEP L2 (Step 355–421), Block 10: STOP (Step 508–567) (+114 more)
+Cohesion: 0.01
+Nodes (137): Block 10: AUTO CHAIN WARMUP (Step 229–390), Block 10: AUTO CHAIN WARMUP (Step 230–393), Block 10: LAMP CONTROL (Step 361–402), Block 10: STEP L1 (Step 315–381), Block 10: STEP L1 (Step 317–383), Block 10: STEP L1 (Step 330–530), Block 10: STEP L1 (Step 334–534), Block 10: STEP L2 (Step 355–421) (+129 more)
 
 ### Community 1 - "Community 1"
 Cohesion: 0.05
@@ -89,7 +90,7 @@ Nodes (44): Block 10: L1 EXHAUST (Step 129–138), Block 10: L1 EXHAUST (Step 18
 
 ### Community 2 - "Community 2"
 Cohesion: 0.05
-Nodes (39): Block 1: SYSTEM FLAGS (Step 0–6), Block 1: SYSTEM FLAGS (Step 1–6), Block 1: SYSTEM FLAGS (Step 1–8), Block 1: SYSTEM FLAGS (Step 1–9), Block 2: INIT FIRST SCAN (Step 7–96), Block 2: INIT FIRST SCAN (Step 8–96), Block 2: INPUT MAPPING L0 (Step 8–129), Block 2: INPUT MAPPING L0 (Step 98–129) (+31 more)
+Nodes (43): Block 1: SYSTEM FLAGS (Step 0–6), Block 1: SYSTEM FLAGS (Step 1–6), Block 1: SYSTEM FLAGS (Step 1–8), Block 1: SYSTEM FLAGS (Step 1–9), Block 2: INIT FIRST SCAN (Step 7–96), Block 2: INIT FIRST SCAN (Step 8–96), Block 2: INPUT MAPPING L0 (Step 8–129), Block 2: INPUT MAPPING L0 (Step 98–129) (+35 more)
 
 ### Community 3 - "Community 3"
 Cohesion: 0.16
@@ -100,8 +101,8 @@ Cohesion: 0.07
 Nodes (32): Block 1: L1 CYCLE DONE SPC (Step 1–12), Block 1: L1 CYCLE DONE SPC (Step 1–16), Block 1: PC COMM L1 (Step 0–39), Block 1: PC COMM L1 (Step 1–40), Block 2: L2 CYCLE DONE SPC (Step 14–25), Block 2: L2 CYCLE DONE SPC (Step 18–29), Block 2: PC COMM L2 (Step 40–79), Block 2: PC COMM L2 (Step 42–81) (+24 more)
 
 ### Community 5 - "Community 5"
-Cohesion: 0.08
-Nodes (27): alarm — IL Logic Map, Block 1: ALARM LATCH (Step 0–32), Block 1: ALARM LATCH (Step 1–57), Block 1: ALARM LATCH (Step 1–59), Block 1: SHARED ALARMS (Step 1–16), Block 1: SHARED ALARMS (Step 1–17), Block 2: BUZZER (Step 33–49), Block 2: BUZZER (Step 59–79) (+19 more)
+Cohesion: 0.06
+Nodes (33): alarm — IL Logic Map, Block 1: ALARM LATCH (Step 0–32), Block 1: ALARM LATCH (Step 1–57), Block 1: ALARM LATCH (Step 1–59), Block 1: SHARED ALARMS (Step 1–16), Block 1: SHARED ALARMS (Step 1–17), Block 1: SHARED ALARMS (Step 1–21), Block 2: BUZZER (Step 33–49) (+25 more)
 
 ### Community 6 - "Community 6"
 Cohesion: 0.21
@@ -132,52 +133,52 @@ Cohesion: 0.13
 Nodes (14): Device Map, Block 10: LAMP CONTROL (Step 361–402), Block 1: MODE CONTROL (Step 0–34), Block 2: INTERLOCK CHECK (Step 35–47), Block 3: STEP L0 (Step 48–95), Block 4: STEP L1 (Step 96–143), Block 5: NG ALARM STOP (Step 144–206), Block 6: MANUAL MODE (Step 207–239) (+6 more)
 
 ### Community 13 - "Community 13"
-Cohesion: 0.13
-Nodes (14): Device Map, Block 10: L1 EXHAUST (Step 129–138), Block 1: L0 REFRIG FAST (Step 0–25), Block 2: L0 REFRIG NORMAL (Step 26–35), Block 3: L0 OIL FAST (Step 36–51), Block 4: L0 OIL NORMAL (Step 52–59), Block 5: L0 EXHAUST (Step 60–68), Block 6: L1 REFRIG FAST (Step 69–94) (+6 more)
+Cohesion: 0.09
+Nodes (22): Device Map, Block 10: L1 EXHAUST (Step 129–138), Block 1: L0 REFRIG FAST (Step 0–25), Block 1: L1 REFRIG FAST (Step 1–18), Block 2: L0 REFRIG NORMAL (Step 26–35), Block 2: L1 REFRIG BASE (Step 20–41), Block 3: L0 OIL FAST (Step 36–51), Block 3: L1 EXHAUST (Step 43–50) (+14 more)
 
 ### Community 14 - "Community 14"
 Cohesion: 0.15
 Nodes (12): Device Map, Block 1: SYSTEM FLAGS (Step 0–6), Block 2: INIT FIRST SCAN (Step 7–96), Block 3: INPUT MAPPING L0 (Step 97–129), Block 4: INPUT MAPPING L1 (Step 130–162), Block 5: OUTPUT MAPPING L0 (Step 163–189), Block 6: GLOBAL OUTPUTS (Step 190–198), Block 7: OUTPUT MAPPING L1 (Step 199–223) (+4 more)
 
 ### Community 15 - "Community 15"
-Cohesion: 0.17
-Nodes (11): Device Map, ad — IL Logic Map, Block 1: L0 PRESSURE (Step 0–6), Block 2: L0 TEMPERATURE (Step 7–15), Block 3: L0 VACUUM (Step 16–22), Block 4: L1 PRESSURE (Step 23–29), Block 5: L1 TEMPERATURE (Step 30–38), Block 6: L1 VACUUM (Step 39–45) (+3 more)
+Cohesion: 0.13
+Nodes (14): Device Map, ad — IL Logic Map, Block 1: ANALOG RAW TO EU (Step 1–14), Block 1: L0 PRESSURE (Step 0–6), Block 2: L0 TEMPERATURE (Step 7–15), Block 3: L0 VACUUM (Step 16–22), Block 4: L1 PRESSURE (Step 23–29), Block 5: L1 TEMPERATURE (Step 30–38) (+6 more)
 
 ### Community 16 - "Community 16"
-Cohesion: 0.18
-Nodes (10): Device Map, Block 1: PC COMM L1 (Step 0–39), Block 2: PC COMM L2 (Step 40–79), Block 3: GAS TYPE MAP (Step 80–84), Block 4: AUTO BARCODE (Step 85–89), Block 5: VAC SPC DATA (Step 90–94), Block 6: RESULT CODE (Step 95–100), Block Detail (+2 more)
+Cohesion: 0.10
+Nodes (19): Device Map, Block 1: L1 CYCLE DONE SPC (Step 1–16), Block 1: PC COMM L1 (Step 0–39), Block 2: L2 CYCLE DONE SPC (Step 18–29), Block 2: PC COMM L2 (Step 40–79), Block 3: GAS TYPE MAP (Step 80–84), Block 3: VAC SPC LOGGING (Step 31–78), Block 4: AUTO BARCODE (Step 85–89) (+11 more)
 
 ### Community 17 - "Community 17"
 Cohesion: 0.25
 Nodes (7): Device Map, alarm — IL Logic Map, Block 1: ALARM LATCH (Step 0–32), Block 2: BUZZER (Step 33–49), Block 3: ALARM RESET (Step 50–85), Block Detail, Block List
 
 ### Community 18 - "Community 18"
-Cohesion: 0.25
-Nodes (7): Device Map, Block 1: CONFIG SYNC (Step 0–4), Block 2: GUN SETTINGS SYNC (Step 5–11), Block 3: DISPLAY MIRROR (Step 12–25), Block Detail, Block List, setting — IL Logic Map
+Cohesion: 0.18
+Nodes (10): Device Map, Block 1: CONFIG SYNC (Step 0–4), Block 1: CONFIG SYNC (Step 1–16), Block 2: GUN SETTINGS SYNC (Step 5–11), Block 3: DISPLAY MIRROR (Step 12–25), Block Detail, Block List, Device Map (+2 more)
 
 ### Community 19 - "Community 19"
-Cohesion: 0.25
-Nodes (7): Device Map, Block 1: L0 CYCLE DONE (Step 0–10), Block 2: L1 CYCLE DONE (Step 11–21), Block 3: DISPLAY BOMBE (Step 22–27), Block Detail, Block List, spc — IL Logic Map
+Cohesion: 0.13
+Nodes (14): Device Map, Block 1: L0 CYCLE DONE (Step 0–10), Block 1: L0 CYCLE DONE (Step 1–10), Block 2: L1 CYCLE DONE (Step 11–21), Block 2: L1 CYCLE DONE (Step 12–21), Block 3: DISPLAY BOMBE (Step 22–27), Block 3: DISPLAY BOMBE (Step 23–26), Block 4: VAC SPC LOGGING (Step 28–49) (+6 more)
 
 ### Community 20 - "Community 20"
-Cohesion: 0.29
-Nodes (6): Device Map, Block 1: GUN VACUUM (Line 0) (Step 0–35), Block 2: GUN VACUUM (Line 1) (Step 36–72), Block Detail, Block List, gunvac — IL Logic Map
+Cohesion: 0.18
+Nodes (10): Device Map, Block 1: GUN VAC L1 (Step 1–20), Block 1: GUN VACUUM (Line 0) (Step 0–35), Block 2: GUN VAC L2 (Step 22–41), Block 2: GUN VACUUM (Line 1) (Step 36–72), Block Detail, Block List, Device Map (+2 more)
 
 ### Community 21 - "Community 21"
-Cohesion: 0.29
-Nodes (6): Device Map, Block 1: UNIT VACUUM (Line 0) (Step 0–39), Block 2: UNIT VACUUM (Line 1) (Step 40–80), Block Detail, Block List, unitvac — IL Logic Map
+Cohesion: 0.18
+Nodes (10): Device Map, Block 1: UNIT VAC L1 (Step 1–25), Block 1: UNIT VACUUM (Line 0) (Step 0–39), Block 2: UNIT VAC L2 (Step 27–51), Block 2: UNIT VACUUM (Line 1) (Step 40–80), Block Detail, Block List, Device Map (+2 more)
 
 ### Community 22 - "Community 22"
-Cohesion: 0.29
-Nodes (6): Device Map, Block 1: VAC CHECK L0 (Step 0–21), Block 2: VAC CHECK L1 (Step 22–44), Block Detail, Block List, vacchec — IL Logic Map
+Cohesion: 0.18
+Nodes (10): Device Map, Block 1: VAC CHECK L0 (Step 0–21), Block 1: VAC CHECK L1 (Step 1–25), Block 2: VAC CHECK L1 (Step 22–44), Block 2: VAC CHECK L2 (Step 27–51), Block Detail, Block List, Device Map (+2 more)
 
 ### Community 23 - "Community 23"
-Cohesion: 0.33
-Nodes (5): Device Map, 485 — IL Logic Map, Block 1: RS-485 DATA MIRROR (Step 0–25), Block Detail, Block List
+Cohesion: 0.25
+Nodes (6): Device Map, 485 — IL Logic Map, Block 1: RS-485 DATA MIRROR (Step 0–25), Block Detail, Block List, Device Map
 
 ### Community 24 - "Community 24"
-Cohesion: 0.33
-Nodes (5): devices, meta, generated, source_file, total_devices
+Cohesion: 0.18
+Nodes (10): Block 1: BARCODE COPY L1 (Step 1–2), Block 2: BARCODE COPY L2 (Step 4–5), Block 3: L1 MODEL LOOKUP (Step 7–256), Block 4: L2 MODEL LOOKUP (Step 258–507), Block 5: BARCODE CLEAR (Step 509–532), Block 6: DISPLAY CORRECTION (Step 534–687), Block Detail, Block List (+2 more)
 
 ### Community 25 - "Community 25"
 Cohesion: 0.07
@@ -236,8 +237,8 @@ Cohesion: 0.25
 Nodes (7): blocks, meta, block_count, cpu, generated, source_file, total_steps
 
 ### Community 39 - "Community 39"
-Cohesion: 0.17
-Nodes (11): Block 1: OIL FAST (Step 1–27), Block 1: OIL FAST (Step 1–50), Block 1: OIL FAST (Step 1–52), Block 2: OIL BASE (Step 29–65), Block 2: OIL BASE (Step 52–112), Block 2: OIL BASE (Step 54–116), Block 3: OIL COMPLETE (Step 67–68), Block Detail (+3 more)
+Cohesion: 0.14
+Nodes (13): Block 1: OIL FAST (Step 1–27), Block 1: OIL FAST (Step 1–50), Block 1: OIL FAST (Step 1–52), Block 1: OIL FAST (Step 1–57), Block 2: OIL BASE (Step 29–65), Block 2: OIL BASE (Step 52–112), Block 2: OIL BASE (Step 54–116), Block 2: OIL BASE (Step 59–130) (+5 more)
 
 ### Community 40 - "Community 40"
 Cohesion: 0.25
@@ -247,8 +248,12 @@ Nodes (7): blocks, meta, block_count, cpu, generated, source_file, total_steps
 Cohesion: 0.47
 Nodes (5): Block List, Device Map, MAIN — IL Logic Map, Device Map, REF_self_holding — IL Logic Map
 
+### Community 42 - "Community 42"
+Cohesion: 0.33
+Nodes (5): devices, meta, generated, source_file, total_devices
+
 ## Knowledge Gaps
-- **512 isolated node(s):** `source_file`, `cpu`, `total_steps`, `block_count`, `generated` (+507 more)
+- **574 isolated node(s):** `source_file`, `cpu`, `total_steps`, `block_count`, `generated` (+569 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **1 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -256,16 +261,16 @@ Nodes (5): Block List, Device Map, MAIN — IL Logic Map, Device Map, REF_self_h
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Block Detail` connect `Community 0` to `Community 41`?**
-  _High betweenness centrality (0.037) - this node is a cross-community bridge._
+  _High betweenness centrality (0.036) - this node is a cross-community bridge._
 - **What connects `source_file`, `cpu`, `total_steps` to the rest of the system?**
-  _512 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _574 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
-  _Cohesion score 0.01639344262295082 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.014598540145985401 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.047474747474747475 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
-  _Cohesion score 0.05384615384615385 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.048625792811839326 - nodes in this community are weakly interconnected._
 - **Should `Community 4` be split into smaller, more focused modules?**
   _Cohesion score 0.06628787878787878 - nodes in this community are weakly interconnected._
 - **Should `Community 5` be split into smaller, more focused modules?**
-  _Cohesion score 0.07936507936507936 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06417112299465241 - nodes in this community are weakly interconnected._

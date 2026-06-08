@@ -2,16 +2,16 @@
   "meta": {
     "source_file": "alarm.csv",
     "cpu": "QCPU (Q mode) Q03UDV",
-    "total_steps": 159,
+    "total_steps": 164,
     "block_count": 6,
-    "generated": "2026-06-06"
+    "generated": "2026-06-08"
   },
   "blocks": [
     {
       "id": 1,
       "name": "SHARED ALARMS",
       "step_start": 1,
-      "step_end": 17,
+      "step_end": 21,
       "conditions": [
         {
           "instruction": "LDI",
@@ -20,6 +20,10 @@
         {
           "instruction": "LDI",
           "device": "M771"
+        },
+        {
+          "instruction": "LDI",
+          "device": "M772"
         },
         {
           "instruction": "LDI",
@@ -82,14 +86,26 @@
         {
           "instruction": "OUT",
           "device": "M303"
+        },
+        {
+          "instruction": "OR",
+          "device": "M304"
+        },
+        {
+          "instruction": "ANI",
+          "device": "M410"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M304"
         }
       ]
     },
     {
       "id": 2,
       "name": "L1 ALARMS",
-      "step_start": 19,
-      "step_end": 65,
+      "step_start": 23,
+      "step_end": 69,
       "conditions": [
         {
           "instruction": "LD",
@@ -286,8 +302,8 @@
     {
       "id": 3,
       "name": "L2 ALARMS",
-      "step_start": 67,
-      "step_end": 113,
+      "step_start": 71,
+      "step_end": 117,
       "conditions": [
         {
           "instruction": "LD",
@@ -484,8 +500,8 @@
     {
       "id": 4,
       "name": "L3 OIL ALARMS",
-      "step_start": 115,
-      "step_end": 123,
+      "step_start": 119,
+      "step_end": 127,
       "conditions": [
         {
           "instruction": "LD",
@@ -530,8 +546,8 @@
     {
       "id": 5,
       "name": "BUZZER",
-      "step_start": 125,
-      "step_end": 156,
+      "step_start": 129,
+      "step_end": 161,
       "conditions": [
         {
           "instruction": "LD",
@@ -558,6 +574,10 @@
         {
           "instruction": "OR",
           "device": "M303"
+        },
+        {
+          "instruction": "OR",
+          "device": "M304"
         },
         {
           "instruction": "OR",
@@ -668,8 +688,8 @@
     {
       "id": 6,
       "name": "ALARM RESET",
-      "step_start": 158,
-      "step_end": 159,
+      "step_start": 163,
+      "step_end": 164,
       "conditions": [
         {
           "instruction": "LD",

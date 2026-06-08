@@ -1,4 +1,4 @@
-# AD — Analog EU scaling (raw → engineering units)
+# AD ??Analog EU scaling (raw ??engineering units)
 # D100 = Pressure L1, D102 = Temperature L1, D104-D105 = Vacuum L1 (32-bit)
 # D110 = Pressure L2, D112 = Temperature L2, D114-D115 = Vacuum L2
 # D120 = Temperature L3
@@ -18,11 +18,11 @@ def wr(p):
 hd("REF_self_holding")
 
 al("ANALOG RAW TO EU")
-# L1 Pressure: raw D100 → scaled → D44
+# L1 Pressure: raw D100 ??scaled ??D44
 a("LD","M0"); a("MOV","D100"); ac("D26")
-# L1 Temperature: raw D102 → scaled → D46
+# L1 Temperature: raw D102 ??scaled ??D46
 a("LD","M0"); a("MOV","D102"); ac("D28")
-# L1 Vacuum: raw D104-D105 → scaled → D48-D49
+# L1 Vacuum: raw D104-D105 ??scaled ??D48-D49
 a("LD","M0"); a("DMOV","D104"); ac("D30")
 # L2 Pressure
 a("LD","M0"); a("MOV","D110"); ac("D58")
@@ -34,4 +34,4 @@ a("LD","M0"); a("DMOV","D114"); ac("D62")
 a("LD","M0"); a("MOV","D120"); ac("D60")
 
 a("END","")
-wr("F:\\WorkSpace\\REF\\src\\ad.csv")
+wr("C:\\WorkSpace\\REF\\src\\ad.csv")

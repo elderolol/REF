@@ -156,8 +156,8 @@ def convert_csv_to_md_json(csv_path, md_path, json_path):
 
 
 if __name__ == '__main__':
-    src_dir = 'F:/WorkSpace/REF/src'
-    dst_dir = 'F:/WorkSpace/REF/src_md'
+    src_dir = 'C:/WorkSpace/2L2GOIL/src'
+    dst_dir = 'C:/WorkSpace/2L2GOIL/src_md'
     skip_files = {'ref_comment.csv'}
     skip_dirs = {'set_reset'}
 

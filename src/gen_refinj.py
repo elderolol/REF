@@ -1,5 +1,5 @@
-ï»¿# REFRIG INJECTION â€” H+L solenoid only (no gas type branching)
-# L1: M15(FAST)â†’M16(BASE)â†’EXHAUST  L2: M35(FAST)â†’M36(BASE)â†’EXHAUST
+# REFRIG INJECTION ? H+L solenoid only (no gas type branching)
+# L1: M15(FAST)¡æM16(BASE)¡æEXHAUST  L2: M35(FAST)¡æM36(BASE)¡æEXHAUST
 # Results: L1=M100-M111 (PRECHECK OK~VAC NG), L2=M116-M127
 # M104=REFRIG FAST OK, M105=REFRIG BASE OK, M106=EXHAUST OK
 # M110=INJ NG L1, M120=REFRIG FAST OK L2, M121=REFRIG BASE OK L2, M122=EXHAUST OK L2, M126=INJ NG L2
@@ -63,4 +63,4 @@ a("LD","M37"); a("OUT","T12"); ac("D40")
 a("LD","M37"); a("AND","T12"); a("RST","M74"); a("SET","M122")
 
 a("END","")
-wr("F:\\WorkSpace\\REF\\src\\refinj.csv")
+wr("C:\\WorkSpace\\REF\\src\\refinj.csv")

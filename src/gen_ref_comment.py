@@ -1,4 +1,4 @@
-# REF_COMMENT — Device Comments (decimal addresses)
+# REF_COMMENT ??Device Comments (decimal addresses)
 st = 0; lines = []
 def a(i,d): global st; lines.append(f'"{st}"\t""\t"{i}"\t"{d}"\t""\t""\t""'); st += 1
 def ac(d): lines.append(f'""\t""\t""\t"{d}"\t""\t""\t""')
@@ -120,4 +120,4 @@ com("D8001","PC L2 barcode target"); com("D8020","L2 SPC log");
 com("D8220","L2 barcode display (20w)");
 
 a("END","")
-wr("F:\\WorkSpace\\REF\\src\\ref_comment.csv")
+wr("C:\\WorkSpace\\REF\\src\\ref_comment.csv")

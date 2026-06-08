@@ -1,9 +1,9 @@
 ---
 # REF_self_holding — IL Logic Map
 **CPU:** QCPU (Q mode) Q03UDV
-**Total Steps:** 1048
-**Blocks:** 20
-**Generated:** 2026-06-06
+**Total Steps:** 1087
+**Blocks:** 22
+**Generated:** 2026-06-08
 ---
 
 ## Block List
@@ -16,19 +16,21 @@
 | 5 | OIL+REFRIG ENABLE | 53–60 | LD M415, LD M621, LD M621 | 5 |
 | 6 | INTERLOCK ENABLE | 62–69 | LD M413, LD M622, LD M622 | 5 |
 | 7 | READY SET | 71–122 | LD M403, LD M603, LD M603 ... (+12) | 37 |
-| 8 | MANUAL START ENTRY | 124–200 | LD M408, LD M408, LD M408 ... (+13) | 61 |
-| 9 | AUTO START | 202–227 | LD M408, LD M408, LD M615 ... (+4) | 19 |
-| 10 | AUTO CHAIN WARMUP | 229–390 | LD M11, LD M460, LD M460 ... (+34) | 125 |
-| 11 | STEP L1 | 392–583 | LD M17, LD M17, LD M18 ... (+10) | 179 |
-| 12 | STEP L2 | 585–776 | LD M37, LD M37, LD M38 ... (+10) | 179 |
-| 13 | STEP L3 | 778–820 | LD M52, LD M52, LD M51 ... (+2) | 38 |
-| 14 | INTERLOCK CHECK | 822–833 | LD M81, LD M91 | 10 |
-| 15 | NG ALARM STOP | 835–873 | LD M108, LD M310, LD M124 ... (+4) | 32 |
-| 16 | STOP | 875–888 | LD M409, LD M409, LD M10 ... (+3) | 8 |
-| 17 | EMERGENCY STOP | 890–940 | LDI M770, LD M452, LD M452 ... (+5) | 43 |
-| 18 | LAMP CONTROL | 942–1025 | LD M12, LD M32, LD M51 ... (+3) | 78 |
-| 19 | STOPWATCH | 1027–1039 | LD M490, LD T22, LD M10 ... (+2) | 8 |
-| 20 | VACUUM PUMP | 1041–1048 | LD M412, LD M620, LD M620 | 5 |
+| 8 | MANUAL START ENTRY | 124–201 | LD M408, LD M408, LD M408 ... (+13) | 62 |
+| 9 | AUTO START | 203–228 | LD M408, LD M408, LD M615 ... (+4) | 19 |
+| 10 | AUTO CHAIN WARMUP | 230–393 | LD M11, LD M460, LD M460 ... (+34) | 127 |
+| 11 | STEP L1 | 395–586 | LD M17, LD M17, LD M18 ... (+10) | 179 |
+| 12 | STEP L2 | 588–779 | LD M37, LD M37, LD M38 ... (+10) | 179 |
+| 13 | STEP L3 | 781–826 | LD M52, LD M52, LD M51 ... (+2) | 41 |
+| 14 | INTERLOCK CHECK | 828–839 | LD M81, LD M91 | 10 |
+| 15 | NG ALARM STOP | 841–881 | LD M108, LD M310, LD M124 ... (+4) | 34 |
+| 16 | STOP | 883–896 | LD M409, LD M409, LD M10 ... (+3) | 8 |
+| 17 | EMERGENCY STOP | 898–951 | LDI M770, LD M452, LD M452 ... (+6) | 45 |
+| 18 | LAMP CONTROL | 953–1038 | LD M12, LD M32, LD M51 ... (+3) | 80 |
+| 19 | STOPWATCH | 1040–1052 | LD M490, LD T22, LD M10 ... (+2) | 8 |
+| 20 | VACUUM PUMP | 1054–1061 | LD M412, LD M620, LD M620 | 5 |
+| 21 | HYDRO PUMP | 1063–1080 | LD M419, LD M623, LD M623 ... (+2) | 13 |
+| 22 | HEATER RELAY | 1082–1087 | LD M2, LD M210, LD M211 | 3 |
 
 ## Block Detail
 
@@ -190,7 +192,7 @@
 - AND M224
 - RST M224
 
-### Block 8: MANUAL START ENTRY (Step 124–200)
+### Block 8: MANUAL START ENTRY (Step 124–201)
 
 **Trigger Condition:**
 - LD M408
@@ -269,11 +271,12 @@
 - RST M453
 - AND T0
 - AND M521
+- ANI M304
 - RST M224
 - SET M51
 - RST M453
 
-### Block 9: AUTO START (Step 202–227)
+### Block 9: AUTO START (Step 203–228)
 
 **Trigger Condition:**
 - LD M408
@@ -305,7 +308,7 @@
 - SET M490
 - MOV K0
 
-### Block 10: AUTO CHAIN WARMUP (Step 229–390)
+### Block 10: AUTO CHAIN WARMUP (Step 230–393)
 
 **Trigger Condition:**
 - LD M11
@@ -406,6 +409,7 @@
 - AND M210
 - AND M521
 - LDD>= D18
+- ANI M304
 - SET M51
 - RST M14
 - RST M463
@@ -413,6 +417,7 @@
 - AND M211
 - AND M521
 - LDD>= D50
+- ANI M304
 - SET M51
 - RST M34
 - RST M463
@@ -473,7 +478,7 @@
 - RST M36
 - RST M466
 
-### Block 11: STEP L1 (Step 392–583)
+### Block 11: STEP L1 (Step 395–586)
 
 **Trigger Condition:**
 - LD M17
@@ -671,7 +676,7 @@
 - OUT M10
 - MOV K0
 
-### Block 12: STEP L2 (Step 585–776)
+### Block 12: STEP L2 (Step 588–779)
 
 **Trigger Condition:**
 - LD M37
@@ -869,7 +874,7 @@
 - OUT M30
 - MOV K0
 
-### Block 13: STEP L3 (Step 778–820)
+### Block 13: STEP L3 (Step 781–826)
 
 **Trigger Condition:**
 - LD M52
@@ -888,6 +893,7 @@
 - ANI M301
 - ANI M302
 - ANI M303
+- ANI M304
 - ANI M350
 - ANI M351
 - OUT M53
@@ -902,6 +908,7 @@
 - ANI M301
 - ANI M302
 - ANI M303
+- ANI M304
 - ANI M350
 - ANI M351
 - OUT M52
@@ -914,11 +921,12 @@
 - ANI M301
 - ANI M302
 - ANI M303
+- ANI M304
 - ANI M350
 - ANI M351
 - OUT M50
 
-### Block 14: INTERLOCK CHECK (Step 822–833)
+### Block 14: INTERLOCK CHECK (Step 828–839)
 
 **Trigger Condition:**
 - LD M81
@@ -936,7 +944,7 @@
 - AND M95
 - OUT M90
 
-### Block 15: NG ALARM STOP (Step 835–873)
+### Block 15: NG ALARM STOP (Step 841–881)
 
 **Trigger Condition:**
 - LD M108
@@ -980,8 +988,10 @@
 - RST M66
 - RST M75
 - RST M76
+- RST M96
+- RST M97
 
-### Block 16: STOP (Step 875–888)
+### Block 16: STOP (Step 883–896)
 
 **Trigger Condition:**
 - LD M409
@@ -1001,10 +1011,11 @@
 - MOV K6
 - MOV K6
 
-### Block 17: EMERGENCY STOP (Step 890–940)
+### Block 17: EMERGENCY STOP (Step 898–951)
 
 **Trigger Condition:**
 - LDI M770
+- LD M452
 - LD M452
 - LD M452
 - LD M452
@@ -1055,10 +1066,12 @@
 - RST M74
 - RST M75
 - RST M76
+- RST M96
+- RST M97
 - MOV K6
 - MOV K6
 
-### Block 18: LAMP CONTROL (Step 942–1025)
+### Block 18: LAMP CONTROL (Step 953–1038)
 
 **Trigger Condition:**
 - LD M12
@@ -1114,12 +1127,14 @@
 - ANI M301
 - ANI M302
 - ANI M303
+- ANI M304
 - ANI M350
 - ANI M351
 - OUT M77
 - OR M301
 - OR M302
 - OR M303
+- OR M304
 - OR M310
 - OR M311
 - OR M312
@@ -1148,7 +1163,7 @@
 - ANI M90
 - OUT M79
 
-### Block 19: STOPWATCH (Step 1027–1039)
+### Block 19: STOPWATCH (Step 1040–1052)
 
 **Trigger Condition:**
 - LD M490
@@ -1167,7 +1182,7 @@
 - RST M490
 - RST M490
 
-### Block 20: VACUUM PUMP (Step 1041–1048)
+### Block 20: VACUUM PUMP (Step 1054–1061)
 
 **Trigger Condition:**
 - LD M412
@@ -1180,6 +1195,42 @@
 - SET M67
 - AND M67
 - RST M67
+
+### Block 21: HYDRO PUMP (Step 1063–1080)
+
+**Trigger Condition:**
+- LD M419
+- LD M623
+- LD M623
+- LD M51
+- LD M52
+
+**Actions:**
+- PLS M623
+- ANI M96
+- SET M96
+- SET M97
+- AND M96
+- RST M96
+- RST M97
+- ANI M304
+- SET M96
+- SET M97
+- ANI M304
+- SET M96
+- SET M97
+
+### Block 22: HEATER RELAY (Step 1082–1087)
+
+**Trigger Condition:**
+- LD M2
+- LD M210
+- LD M211
+
+**Actions:**
+- RST M98
+- RST M98
+- SET M98
 
 ## Device Map
 | Device | Type | SET Steps | RST Steps | OUT Steps | Read Steps |
@@ -1228,11 +1279,11 @@
 | M16 | M |  | 3 | 1 | 6 |
 | M17 | M | 2 | 1 | 1 | 6 |
 | M18 | M |  | 1 | 1 | 4 |
-| M2 | M |  |  | 1 | 6 |
+| M2 | M |  |  | 1 | 7 |
 | M200 | M | 2 | 1 |  | 11 |
 | M201 | M | 1 | 2 |  | 14 |
-| M210 | M | 2 | 1 |  | 10 |
-| M211 | M | 1 | 2 |  | 10 |
+| M210 | M | 2 | 1 |  | 11 |
+| M211 | M | 1 | 2 |  | 11 |
 | M220 | M | 1 | 3 |  | 3 |
 | M221 | M | 1 | 3 |  | 3 |
 | M222 | M | 1 | 3 |  | 3 |
@@ -1243,6 +1294,7 @@
 | M301 | M |  |  |  | 25 |
 | M302 | M |  |  |  | 25 |
 | M303 | M |  |  |  | 25 |
+| M304 | M |  |  |  | 10 |
 | M31 | M | 1 | 2 | 1 | 5 |
 | M310 | M |  |  |  | 12 |
 | M311 | M |  |  |  | 12 |
@@ -1287,9 +1339,10 @@
 | M412 | M |  |  |  | 1 |
 | M413 | M |  |  |  | 1 |
 | M415 | M |  |  |  | 1 |
+| M419 | M |  |  |  | 1 |
 | M450 | M | 2 | 1 |  | 16 |
 | M451 | M | 2 | 1 |  | 16 |
-| M452 | M |  |  | 1 | 9 |
+| M452 | M |  |  | 1 | 10 |
 | M453 | M | 3 | 11 |  | 1 |
 | M460 | M | 1 | 1 |  | 2 |
 | M461 | M | 1 | 1 |  | 2 |
@@ -1303,8 +1356,8 @@
 | M469 | M | 1 | 1 |  | 2 |
 | M490 | M | 1 | 3 |  | 1 |
 | M50 | M | 1 | 1 | 1 | 2 |
-| M51 | M | 3 | 2 | 1 | 6 |
-| M52 | M |  | 2 | 1 | 4 |
+| M51 | M | 3 | 2 | 1 | 7 |
+| M52 | M |  | 2 | 1 | 5 |
 | M520 | M | 1 |  |  | 2 |
 | M521 | M | 2 | 1 |  | 8 |
 | M522 | M | 2 | 1 |  | 2 |
@@ -1330,6 +1383,7 @@
 | M620 | M |  |  |  | 3 |
 | M621 | M |  |  |  | 3 |
 | M622 | M |  |  |  | 3 |
+| M623 | M |  |  |  | 3 |
 | M63 | M |  | 1 |  |  |
 | M64 | M |  | 1 |  |  |
 | M65 | M |  | 2 |  |  |
@@ -1360,6 +1414,9 @@
 | M93 | M |  |  |  | 1 |
 | M94 | M |  |  |  | 1 |
 | M95 | M |  |  |  | 1 |
+| M96 | M | 3 | 3 |  | 2 |
+| M97 | M | 3 | 3 |  |  |
+| M98 | M | 1 | 2 |  |  |
 | SM400 | ? |  |  |  | 1 |
 | SM401 | ? |  |  |  | 1 |
 | SM402 | ? |  |  |  | 1 |

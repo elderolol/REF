@@ -2,9 +2,9 @@
   "meta": {
     "source_file": "idata.csv",
     "cpu": "QCPU (Q mode) Q03UDV",
-    "total_steps": 166,
+    "total_steps": 174,
     "block_count": 5,
-    "generated": "2026-06-06"
+    "generated": "2026-06-08"
   },
   "blocks": [
     {
@@ -377,7 +377,7 @@
       "id": 4,
       "name": "OUTPUT MAPPING (M → Y)",
       "step_start": 88,
-      "step_end": 127,
+      "step_end": 133,
       "conditions": [
         {
           "instruction": "LD",
@@ -454,6 +454,18 @@
         {
           "instruction": "LD",
           "device": "M67"
+        },
+        {
+          "instruction": "LD",
+          "device": "M96"
+        },
+        {
+          "instruction": "LD",
+          "device": "M97"
+        },
+        {
+          "instruction": "LD",
+          "device": "M98"
         },
         {
           "instruction": "LD",
@@ -539,6 +551,18 @@
         },
         {
           "instruction": "OUT",
+          "device": "Y045"
+        },
+        {
+          "instruction": "OUT",
+          "device": "Y046"
+        },
+        {
+          "instruction": "OUT",
+          "device": "Y047"
+        },
+        {
+          "instruction": "OUT",
           "device": "Y027"
         }
       ]
@@ -546,8 +570,8 @@
     {
       "id": 5,
       "name": "HMI BUTTON BUFFER",
-      "step_start": 129,
-      "step_end": 166,
+      "step_start": 135,
+      "step_end": 174,
       "conditions": [
         {
           "instruction": "LD",
@@ -624,6 +648,10 @@
         {
           "instruction": "LD",
           "device": "M418"
+        },
+        {
+          "instruction": "LD",
+          "device": "M419"
         }
       ],
       "actions": [
@@ -702,6 +730,10 @@
         {
           "instruction": "OUT",
           "device": "M418"
+        },
+        {
+          "instruction": "OUT",
+          "device": "M419"
         }
       ]
     }

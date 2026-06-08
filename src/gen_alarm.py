@@ -18,6 +18,7 @@ a("LDI","M770"); a("OR","M300"); a("ANI",R); a("OUT","M300")
 a("LDI","M771"); a("AND","M522"); a("OR","M301"); a("ANI",R); a("OUT","M301")
 a("LDD>=","D300"); ac("D210"); a("OR","M302"); a("ANI",R); a("OUT","M302")
 a("LDI","M772"); a("OR","M303"); a("ANI",R); a("OUT","M303")
+a("LDI","M772"); a("OR","M304"); a("ANI",R); a("OUT","M304")   # HYDRO PUMP TRIP
 
 al("L1 ALARMS")
 a("LD","M12"); a("AND","T1"); a("OR","M310"); a("ANI",R); a("OUT","M310")
@@ -51,7 +52,7 @@ a("LD","M351"); a("OR","M351"); a("ANI",R); a("OUT","M351")    # oil amount NG
 
 al("BUZZER")
 a("LD","M300")
-for b in ["301","302","303","310","311","312","313","314","316","317","318","319","320",
+for b in ["301","302","303","304","310","311","312","313","314","316","317","318","319","320",
           "330","331","332","333","334","336","337","338","339","340","350","351"]:
     a("OR",("M"+b))
 a("ANI","M500"); a("OUT","M69")     # M69 = BUZZER
@@ -62,4 +63,4 @@ al("ALARM RESET")
 a("LD",R); a("RST","M500")
 
 a("END","")
-wr("F:\\WorkSpace\\REF\\src\\alarm.csv")
+wr("C:/WorkSpace/2L2GOIL/src\\alarm.csv")

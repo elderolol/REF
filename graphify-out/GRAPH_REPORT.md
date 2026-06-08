@@ -1,45 +1,50 @@
-# Graph Report - F:/WorkSpace/REF  (2026-06-06)
+# Graph Report - l_2l2goil  (2026-06-08)
 
 ## Corpus Check
-- 55 files · ~52,235 words
+- 41 files · ~59,836 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 3868 nodes · 6630 edges · 485 communities (471 shown, 14 thin omitted)
-- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 180 edges (avg confidence: 0.87)
+- 4026 nodes · 6824 edges · 489 communities (471 shown, 18 thin omitted)
+- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 179 edges (avg confidence: 0.87)
 - Token cost: 0 input · 0 output
 
+## Graph Freshness
+- Built from commit: `e62bb827`
+- Run `git rev-parse HEAD` and compare to check if the graph is stale.
+- Run `graphify update .` after code changes (no API cost).
+
 ## Community Hubs (Navigation)
-- [[_COMMUNITY_HMI Screen & Machine Controls|HMI Screen & Machine Controls]]
-- [[_COMMUNITY_Setting D-Register Operations|Setting D-Register Operations]]
-- [[_COMMUNITY_OpenCode Configuration|OpenCode Configuration]]
-- [[_COMMUNITY_Oil Injection HMI|Oil Injection HMI]]
-- [[_COMMUNITY_PLC Control Logic Chunks|PLC Control Logic Chunks]]
-- [[_COMMUNITY_AD Function Specifications|AD Function Specifications]]
-- [[_COMMUNITY_Alarm System Planning|Alarm System Planning]]
-- [[_COMMUNITY_Barcode Logic & Model Table|Barcode Logic & Model Table]]
-- [[_COMMUNITY_485 Communication Registers|485 Communication Registers]]
-- [[_COMMUNITY_Control Nodes (N-Series)|Control Nodes (N-Series)]]
-- [[_COMMUNITY_System Architecture Concepts|System Architecture Concepts]]
-- [[_COMMUNITY_Sensor & Configuration Specs|Sensor & Configuration Specs]]
-- [[_COMMUNITY_Core PLC Architecture|Core PLC Architecture]]
-- [[_COMMUNITY_REF Documentation|REF Documentation]]
-- [[_COMMUNITY_Subsystem Components|Subsystem Components]]
-- [[_COMMUNITY_Gun Vacuum Process|Gun Vacuum Process]]
-- [[_COMMUNITY_Alarm Thresholds & Conditions|Alarm Thresholds & Conditions]]
-- [[_COMMUNITY_IO Mapping & HMI Buffers|I/O Mapping & HMI Buffers]]
-- [[_COMMUNITY_Alarm Latch & GMES Logic|Alarm Latch & GMES Logic]]
-- [[_COMMUNITY_Project Conventions & Tools|Project Conventions & Tools]]
-- [[_COMMUNITY_AD Display Mirror & SPC|AD Display Mirror & SPC]]
-- [[_COMMUNITY_IData Initialization Logic|IData Initialization Logic]]
-- [[_COMMUNITY_485 Comm & Analog Sensors|485 Comm & Analog Sensors]]
-- [[_COMMUNITY_Refrigerant Injection Control|Refrigerant Injection Control]]
-- [[_COMMUNITY_Alarm Lamp Control & GMES|Alarm Lamp Control & GMES]]
-- [[_COMMUNITY_GMES Branching & Refrig Exhaust|GMES Branching & Refrig Exhaust]]
-- [[_COMMUNITY_Device Map Documentation|Device Map Documentation]]
-- [[_COMMUNITY_Alarm Function Specifications|Alarm Function Specifications]]
-- [[_COMMUNITY_IData Device Map|IData Device Map]]
-- [[_COMMUNITY_MAIN Program Structure|MAIN Program Structure]]
+- [[_COMMUNITY_Community 0|Community 0]]
+- [[_COMMUNITY_Community 1|Community 1]]
+- [[_COMMUNITY_Community 2|Community 2]]
+- [[_COMMUNITY_Community 3|Community 3]]
+- [[_COMMUNITY_Community 4|Community 4]]
+- [[_COMMUNITY_Community 5|Community 5]]
+- [[_COMMUNITY_Community 6|Community 6]]
+- [[_COMMUNITY_Community 7|Community 7]]
+- [[_COMMUNITY_Community 8|Community 8]]
+- [[_COMMUNITY_Community 9|Community 9]]
+- [[_COMMUNITY_Community 10|Community 10]]
+- [[_COMMUNITY_Community 11|Community 11]]
+- [[_COMMUNITY_Community 12|Community 12]]
+- [[_COMMUNITY_Community 13|Community 13]]
+- [[_COMMUNITY_Community 14|Community 14]]
+- [[_COMMUNITY_Community 15|Community 15]]
+- [[_COMMUNITY_Community 16|Community 16]]
+- [[_COMMUNITY_Community 17|Community 17]]
+- [[_COMMUNITY_Community 18|Community 18]]
+- [[_COMMUNITY_Community 19|Community 19]]
+- [[_COMMUNITY_Community 20|Community 20]]
+- [[_COMMUNITY_Community 21|Community 21]]
+- [[_COMMUNITY_Community 22|Community 22]]
+- [[_COMMUNITY_Community 23|Community 23]]
+- [[_COMMUNITY_Community 24|Community 24]]
+- [[_COMMUNITY_Community 25|Community 25]]
+- [[_COMMUNITY_Community 26|Community 26]]
+- [[_COMMUNITY_Community 27|Community 27]]
+- [[_COMMUNITY_Community 28|Community 28]]
+- [[_COMMUNITY_Community 29|Community 29]]
 - [[_COMMUNITY_Community 30|Community 30]]
 - [[_COMMUNITY_Community 31|Community 31]]
 - [[_COMMUNITY_Community 32|Community 32]]
@@ -494,11 +499,15 @@
 - [[_COMMUNITY_Community 482|Community 482]]
 - [[_COMMUNITY_Community 483|Community 483]]
 - [[_COMMUNITY_Community 484|Community 484]]
+- [[_COMMUNITY_Community 485|Community 485]]
+- [[_COMMUNITY_Community 486|Community 486]]
+- [[_COMMUNITY_Community 487|Community 487]]
+- [[_COMMUNITY_Community 488|Community 488]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `REFRIGER CHARGING MACHINE — Function Spec: ad.csv` - 90 edges
-2. `device_map` - 83 edges
-3. `device_map` - 83 edges
+2. `Device Map` - 84 edges
+3. `Device Map` - 84 edges
 4. `device_map` - 83 edges
 5. `device_map` - 83 edges
 6. `read_steps` - 82 edges
@@ -527,131 +536,131 @@
 - **Vacuum Operation Chain (GUN→UNIT→CHECK)** — src_md_gunvac, src_md_unitvac, src_md_vacchec, Step_Machine [EXTRACTED 1.00]
 - **I/O Mapping & HMI Buffer (X→M→Y)** — src_md_idata, src_md_MAIN, HMI_Button_Map, Solenoid_Control [EXTRACTED 1.00]
 
-## Communities (485 total, 14 thin omitted)
+## Communities (489 total, 18 thin omitted)
 
-### Community 0 - "HMI Screen & Machine Controls"
+### Community 0 - "Community 0"
 Cohesion: 0.05
 Nodes (74): REFRIGER CHARGING MACHINE - 2LINE4GUN Configuration, 알람 화면 (Alarm Screen) Button, 부저 정지 (Buzzer Stop) Button, 주입건 A (Injection Gun A), 주입건 C (Injection Gun C), 주입건 D (Injection Gun D), 주입량 설정화면 (Injection Amount Setting Screen) Button, 인터락 미사용 (Interlock Not Used) Button (+66 more)
 
-### Community 1 - "Setting D-Register Operations"
-Cohesion: 0.05
-Nodes (74): out_steps, read_steps, rst_steps, set_steps, type, out_steps, read_steps, rst_steps (+66 more)
+### Community 1 - "Community 1"
+Cohesion: 0.25
+Nodes (9): out_steps, read_steps, rst_steps, set_steps, type, D156, M0, out_steps (+1 more)
 
-### Community 2 - "OpenCode Configuration"
+### Community 2 - "Community 2"
 Cohesion: 0.05
 Nodes (54): agent, build, explore, general, plan, model, command, type (+46 more)
 
-### Community 3 - "Oil Injection HMI"
+### Community 3 - "Community 3"
 Cohesion: 0.06
 Nodes (44): 2LINE2GUN_OIL Operation Screen (Unit 2), 자동스탭 (Auto Step), 차징시간 (Charging Time), 컨베어 인터록 사용 (Conveyor Interlock Use), R32건 (R32 Gun), R410A건 (R410A Gun), 건 선택 (Gun Selection), 모델 선택 (Model Selection) (+36 more)
 
-### Community 4 - "PLC Control Logic Chunks"
-Cohesion: 0.07
-Nodes (40): REFRIGER CHARGING MACHINE, ALARM_RESET, BARCODE_USE, BUZZER_STOP, GUN_EXHAUST, INTERLOCK_NOT_USED, MANUAL_MODE, PRODUCT_EXHAUST (+32 more)
+### Community 4 - "Community 4"
+Cohesion: 0.06
+Nodes (41): REFRIGER CHARGING MACHINE, ALARM_RESET, BARCODE_USE, BUZZER_STOP, GUN_EXHAUST, INTERLOCK_NOT_USED, MANUAL_MODE, PRODUCT_EXHAUST (+33 more)
 
-### Community 5 - "AD Function Specifications"
+### Community 5 - "Community 5"
 Cohesion: 0.07
 Nodes (37): 1. Purpose, 2. Inputs, 3. Outputs, 5. Filtering, 7. IL Mnemonics, code:block5 (Filtered = α × CurrentRaw + (1 - α) × PreviousFiltered), REFRIGER CHARGING MACHINE — Function Spec: ad.csv, 10. IL Mnemonics (+29 more)
 
-### Community 6 - "Alarm System Planning"
+### Community 6 - "Community 6"
 Cohesion: 0.08
 Nodes (31): Alarm Page Navigation by D Register, Alarm Per-Line Separation Plan, ALARM RESET (per-line), Alarm Per-Line Separation Plan, Bombe — configurable (depends on D330), Buzzer (M4C → Y30) — single, shared, code:block1 (L40 OR L41 OR L42 OR L43 OR L44 OR L45 OR L46 OR L47), Current (direct execute) (+23 more)
 
-### Community 7 - "Barcode Logic & Model Table"
-Cohesion: 0.07
-Nodes (30): 6-1. Barcode = Not Used (수동 모드), 6-2. Barcode = Used (PC 연동 모드), 6. Barcode Model Lookup Logic, code:block1 (사용자가 MODEL 버튼(M40B)을 누름 → HMI 숫자 입력창 표시), code:block2 (PC가 Ethernet으로 D180/D230 (Barcode Write Area)에 직접 기록), 1-1. Gun Type (솔레노이드 구조), 1-2. Oil Mode (주입 모드), 1-3. 방폭 Type (Enclosure) (+22 more)
+### Community 7 - "Community 7"
+Cohesion: 0.18
+Nodes (11): 6-1. Barcode = Not Used (수동 모드), 6-2. Barcode = Used (PC 연동 모드), code:block1 (사용자가 MODEL 버튼(M40B)을 누름 → HMI 숫자 입력창 표시), code:block2 (PC가 Ethernet으로 D180/D230 (Barcode Write Area)에 직접 기록), 3-1. 저장된 Preset Data 구조, 3-2. Barcode = Not Used (수동 모드), 3-3. Barcode = Used (PC 연동 모드), 3-4. 비교 요약 (+3 more)
 
-### Community 8 - "485 Communication Registers"
+### Community 8 - "Community 8"
 Cohesion: 0.10
 Nodes (30): out_steps, read_steps, rst_steps, set_steps, type, out_steps, read_steps, rst_steps (+22 more)
 
-### Community 9 - "Control Nodes (N-Series)"
-Cohesion: 0.13
-Nodes (27): LS IXP2-1200 HMI, Mitsubishi PLC, Operation Screen, Parameter Setting Screen, User Setting Screen, Alarm Screen, Screen Navigation Flow, Momentary Button Rule (+19 more)
+### Community 9 - "Community 9"
+Cohesion: 0.09
+Nodes (35): LS IXP2-1200 HMI, Mitsubishi PLC, Operation Screen, Parameter Setting Screen, User Setting Screen, Alarm Screen, Screen Navigation Flow, Momentary Button Rule (+27 more)
 
-### Community 10 - "System Architecture Concepts"
+### Community 10 - "Community 10"
 Cohesion: 0.08
 Nodes (28): Alarm Detection and Handling System, Analog Input Processing (AI Raw → EU Scaling), Barcode PC↔PLC Data Flow (Write Area → Working Area → Clear), System Configuration Registers (D330-D339), D (Data Register) Device Map (Even-Address Rule), Line Independence Principle, Per-Line Parameter Register Layout (D0-D29 L0, D30-D59 L1), Line/Gun System Configuration (Supports 1L/1G ~ 2L/4G) (+20 more)
 
-### Community 11 - "Sensor & Configuration Specs"
+### Community 11 - "Community 11"
 Cohesion: 0.08
 Nodes (26): 6. 센서 Type 선택 아키텍처 (미래 확장), code:block6 ([Dxxx Sensor Type Select]), 4-1. System Configuration (D270~D276), 4-2. Parameter Settings — Line 0 (D0~D29), 4-3. Parameter Settings — Line 1 (D30~D59), 4. Parameters 관리, 3-10. SPC 누계 — Line 1 (D290~D299), 3-11. HSC Parameters (D310~D31F) (+18 more)
 
-### Community 12 - "Core PLC Architecture"
-Cohesion: 0.12
-Nodes (21): AGENTS.md — Project Conventions & Work Rules, Alarm System (Shared + L1 + L2 + L3), Auto Mode Sequence, Barcode Flow (PC→PLC→Model Lookup), D-Register Map (32-bit ready, L1 D0-D31 / L2 D32-D63), GX Works2 IL Specification, Interlock System (Per-line AND chain), Manual Mode Single-Step (+13 more)
+### Community 12 - "Community 12"
+Cohesion: 0.18
+Nodes (10): Barcode Flow (PC→PLC→Model Lookup), D-Register Map (32-bit ready, L1 D0-D31 / L2 D32-D63), Model Table (25 models/gun, 9 words/row), blocks, meta, block_count, cpu, generated (+2 more)
 
-### Community 13 - "REF Documentation"
-Cohesion: 0.10
-Nodes (20): Additional Device Types (not in MAIN.csv), code:block1 (REF/), code:block2 (FF FE  4D 00 43 00 5F 00 …      ← BOM, then "MC_..." in UTF-), Development Rules, Device Prefix Frequency (MAIN.csv), Directory Structure, External Reference, File Format (GX Works2 IL CSV) (+12 more)
+### Community 13 - "Community 13"
+Cohesion: 0.05
+Nodes (42): 10. File Map (12 CSV), 10. File Map (12 .il), 1. System Overview, 2. Step Machine, 3. Operation Modes, 4. HMI Buttons, 5. Model Table & Injection Amount, 6. Stop / Emergency / NG (+34 more)
 
-### Community 14 - "Subsystem Components"
-Cohesion: 0.27
-Nodes (13): Emergency Stop (IEC 60204-1 compliant), Flow Meter HSC (High-Speed Counter), IL Coding Rules (Self-Holding, HMI, Rung Order), L0/L1 Mirror Convention (offset +16), Solenoid Control (FAST+BASE H+L structure), Step Machine (M10–M53, L1/L2/L3), MAIN.md — Step Machine, Mode Control, Lamps, Alarm Latch Relays L64-L79 (+5 more)
+### Community 14 - "Community 14"
+Cohesion: 0.08
+Nodes (24): Alarm Latches, Analog Raw (D00100-D00120), Barcode / PC / SPC, Counter (C) — Not used in current project, Counter / Statistics, Data Registers (D) — 5-digit zero-padded, HMI Buttons, I/O (P) (+16 more)
 
-### Community 15 - "Gun Vacuum Process"
+### Community 15 - "Community 15"
 Cohesion: 0.12
 Nodes (19): D160~D161 (Current Vacuum EU Line 0), D22 (Unit Vacuum Setting Value), Gun Vacuum Process, L10 (GunVac Done Line 0), L11 (GunVac NG Line 0), L12 (UnitVac Done Line 0), L13 (UnitVac NG Line 0), L42 GunVac Timeout Alarm (Latch) (+11 more)
 
-### Community 16 - "Alarm Thresholds & Conditions"
+### Community 16 - "Community 16"
 Cohesion: 0.11
 Nodes (18): Alarm Conditions, D14 (Bombe Alarm Setting), D16 (Refriger Used Amount), L11/L21 (GunVac NG), L13/L23 (UnitVac NG), L15/L25 (Vacuum Leak), L17/L27 (Injection NG), L40 EMG Stop Alarm Latch (+10 more)
 
-### Community 17 - "I/O Mapping & HMI Buffers"
+### Community 17 - "Community 17"
 Cohesion: 0.12
 Nodes (18): X (Digital Input) Device Map, Y (Digital Output) Device Map, Error/Alarm Handling System, Gun Coupler Sensor Interlock, HMI Button → PLC Internal Relay Mapping, Interlock System (per Line), Main Sequence Step Control (per Line), Main Sequence Flow Diagram (A3 Visual) (+10 more)
 
-### Community 18 - "Alarm Latch & GMES Logic"
-Cohesion: 0.17
-Nodes (18): Alarm Latch System (L40~L4E — 15 Alarm Types), Conditional Jump Type Branching (CJ), Done/Fail Flags (L10~L29 — Per Step, Per Line), gmes.csv — Main Sequence Controller, Interlock Check (Safety, Vacuum, Pressure, Coupler, Supply), Per-Line Interlock Chain, Auto/Manual Mode Toggle, PC Communication (D7000/D8000 Gas Type, D7001/D8001 Target, D7012 Result, D7015 Process Code) (+10 more)
+### Community 18 - "Community 18"
+Cohesion: 0.18
+Nodes (17): Alarm Latch System (L40~L4E — 15 Alarm Types), Conditional Jump Type Branching (CJ), Done/Fail Flags (L10~L29 — Per Step, Per Line), gmes.csv — Main Sequence Controller, Interlock Check (Safety, Vacuum, Pressure, Coupler, Supply), Per-Line Interlock Chain, Auto/Manual Mode Toggle, PC Communication (D7000/D8000 Gas Type, D7001/D8001 Target, D7012 Result, D7015 Process Code) (+9 more)
 
-### Community 19 - "Project Conventions & Tools"
-Cohesion: 0.15
-Nodes (17): Graphify Query/Path/Explain Commands, Graphify Post-Modification Update Hook, Device/Operand Notation Rules (X/Y hex, M/D decimal, constants K/H/E), Graphify Knowledge Graph Tool, GX Works2 IL CSV Format Specification, IL Instruction Mnemonics Catalog (46 distinct, Sequence + Basic), MAIN.csv Reference Export (3607 lines), MELSEC-Q/L Programming Manual (Common Instruction) (+9 more)
+### Community 19 - "Community 19"
+Cohesion: 0.05
+Nodes (41): 10. Increment / Decrement Instructions, 11. BIN Arithmetic Instructions, 12. BCD Arithmetic Instructions, 13. Logic Operation Instructions, 14. Rotation Instructions, 15. Move / Shift Instructions, 16. Exchange Instructions, 17. Branch / Program Flow Instructions (+33 more)
 
-### Community 20 - "AD Display Mirror & SPC"
+### Community 20 - "Community 20"
 Cohesion: 0.13
 Nodes (16): 4-4. Display Mirror, code:block4 (D138 ← D160~D161  // L0 Current Vacuum (Display)), 1. Purpose, 2. Inputs, 3. Outputs, 4-1. L0 Total Usage Accumulation, 4-2. L1 Total Usage Accumulation, 4-3. Display Mirror (+8 more)
 
-### Community 21 - "IData Initialization Logic"
+### Community 21 - "Community 21"
 Cohesion: 0.12
 Nodes (16): 1. Purpose, 2. Inputs, 3. Outputs, 4. Initialization Logic (First Scan Only), 5-1. X → M Mapping (Input Scan), 5-2. M → Y Mapping (Output Scan), 5-3. System Flags, 5. Main Scan Logic (Always ON, SM400) (+8 more)
 
-### Community 22 - "485 Comm & Analog Sensors"
+### Community 22 - "Community 22"
 Cohesion: 0.13
 Nodes (16): 485.csv Module, Analog Sensors, D150 (L0 CH0 AD Raw), D152 (L0 CH0 EU Value), D154 (L0 CH1 AD Raw), D156 (L0 CH1 EU Value), D158 (L0 CH2 AD Raw), D160~D161 (L0 CH2 EU Value) (+8 more)
 
-### Community 23 - "Refrigerant Injection Control"
+### Community 23 - "Community 23"
 Cohesion: 0.12
 Nodes (16): D128 (Injection Setting Amount Refrig), D130 (Actual Injection Volume Refrig), Gun Type Branching, HSC Pulse Accumulation, L16 (Injection Done L0), L17 (Injection NG L0), L45 Injection Timeout Alarm, L46 Injection Over Alarm (+8 more)
 
-### Community 24 - "Alarm Lamp Control & GMES"
+### Community 24 - "Community 24"
 Cohesion: 0.12
 Nodes (15): 6. Lamp Control, code:block2 (// GREEN Lamp: Running + No Alarm), 1. Purpose, 2. Inputs, 3. Outputs, 6-1. L0 Interlock (L50~L55), 6-2. L1 Interlock (L60~L65), 6. Interlock 체크 (+7 more)
 
-### Community 25 - "GMES Branching & Refrig Exhaust"
-Cohesion: 0.16
-Nodes (16): CJ Conditional Branching (Line/Gun/Oil Mode Skip), Gas Exhaust (Post-Injection, Timer T3), Injection Type 0 — 1-Sol Base (Single Solenoid), Injection Type 1 — H+L Fast+Normal (Dual Solenoid with Speed Transition), Gun Type Injection Branching (1-Sol vs H+L), Oil Mode (D276=1 — Oil Injection Before Refrigerant), refinj.csv — Refrigerant and Oil Injection, Injection Tolerance Check (±g, Over/Under Detection) (+8 more)
+### Community 25 - "Community 25"
+Cohesion: 0.21
+Nodes (12): Gas Exhaust (Post-Injection, Timer T3), Injection Type 0 — 1-Sol Base (Single Solenoid), Injection Type 1 — H+L Fast+Normal (Dual Solenoid with Speed Transition), Gun Type Injection Branching (1-Sol vs H+L), refinj.csv — Refrigerant and Oil Injection, Injection Tolerance Check (±g, Over/Under Detection), Injection Tolerance Done/NG Check, Volume Calculation (HSC Pulse × Scale Factor × Correction) (+4 more)
 
-### Community 26 - "Device Map Documentation"
+### Community 26 - "Community 26"
 Cohesion: 0.16
 Nodes (15): 1. L Device — Latch Bit (정전 유지), 2-1. System Flags (M0~M9), 2-2. Step State — Line 0 (M10~M19), 2-2b. WARMUP Flags (M520~M521), 2-2b. WARMUP Flags (M520~M521), 2-3. Step State — Line 1 (M20~M29), 2-5. Physical Input Mirrors (M300~M31F), 2-6. HMI Button Buffer (M400~M41F) (+7 more)
 
-### Community 27 - "Alarm Function Specifications"
+### Community 27 - "Community 27"
 Cohesion: 0.13
 Nodes (14): 10. IL Mnemonics, 1. Purpose, 2. Inputs, 3. Outputs, 4. Alarm Detection & Latch Logic, 5. Buzzer Control, 7. Alarm Reset Logic, 8. Output Interlock (+6 more)
 
-### Community 28 - "IData Device Map"
-Cohesion: 0.13
-Nodes (14): blocks, M75, M76, device_map, out_steps, read_steps, rst_steps, set_steps (+6 more)
+### Community 28 - "Community 28"
+Cohesion: 0.33
+Nodes (6): M75, out_steps, read_steps, rst_steps, set_steps, type
 
-### Community 29 - "MAIN Program Structure"
-Cohesion: 0.13
-Nodes (14): Block 10: LAMP CONTROL (Step 361–402), Block 1: MODE CONTROL (Step 0–34), Block 2: INTERLOCK CHECK (Step 35–47), Block 3: STEP L0 (Step 48–95), Block 4: STEP L1 (Step 96–143), Block 5: NG ALARM STOP (Step 144–206), Block 6: MANUAL MODE (Step 207–239), Block 7: STOP (Step 240–300) (+6 more)
+### Community 29 - "Community 29"
+Cohesion: 0.06
+Nodes (33): Block 10: AUTO CHAIN WARMUP (Step 230–393), Block 10: LAMP CONTROL (Step 361–402), Block 11: STEP L1 (Step 395–586), Block 12: STEP L2 (Step 588–779), Block 13: STEP L3 (Step 781–826), Block 14: INTERLOCK CHECK (Step 828–839), Block 15: NG ALARM STOP (Step 841–881), Block 16: STOP (Step 883–896) (+25 more)
 
 ### Community 30 - "Community 30"
-Cohesion: 0.13
-Nodes (14): Block 10: L1 EXHAUST (Step 129–138), Block 1: L0 REFRIG FAST (Step 0–25), Block 2: L0 REFRIG NORMAL (Step 26–35), Block 3: L0 OIL FAST (Step 36–51), Block 4: L0 OIL NORMAL (Step 52–59), Block 5: L0 EXHAUST (Step 60–68), Block 6: L1 REFRIG FAST (Step 69–94), Block 7: L1 REFRIG NORMAL (Step 95–104) (+6 more)
+Cohesion: 0.09
+Nodes (22): Block 10: L1 EXHAUST (Step 129–138), Block 1: L0 REFRIG FAST (Step 0–25), Block 1: L1 REFRIG FAST (Step 1–18), Block 2: L0 REFRIG NORMAL (Step 26–35), Block 2: L1 REFRIG BASE (Step 20–41), Block 3: L0 OIL FAST (Step 36–51), Block 3: L1 EXHAUST (Step 43–50), Block 4: L0 OIL NORMAL (Step 52–59) (+14 more)
 
 ### Community 31 - "Community 31"
 Cohesion: 0.18
@@ -666,20 +675,20 @@ Cohesion: 0.14
 Nodes (14): 6-1. Sequence Instructions (confirmed in MAIN.csv + MELSEC manual), 6-2. Basic Instructions (confirmed in MAIN.csv + MELSEC manual), 6-3. Notation Rules, 6. Instruction Mnemonics, 7-1. Observed device prefixes, 7-2. Notation rules, 7. Device / Operand Notation, Association Instructions (+6 more)
 
 ### Community 34 - "Community 34"
-Cohesion: 0.15
-Nodes (12): Emergency Stop, Exhaust Timer T3, Interlock Check, Lamp Control, blocks, meta, block_count, cpu (+4 more)
+Cohesion: 0.13
+Nodes (15): Alarm Latch Relays L64-L79, Emergency Stop, Exhaust Timer T3, Interlock Check, Lamp Control, blocks, meta, block_count (+7 more)
 
 ### Community 35 - "Community 35"
-Cohesion: 0.14
-Nodes (12): Block 1: GUN VACUUM (Line 0) (Step 0–35), Block 2: GUN VACUUM (Line 1) (Step 36–72), Block Detail, Block List, gunvac — IL Logic Map, Device Map, Block 1: UNIT VACUUM (Line 0) (Step 0–39), Block 2: UNIT VACUUM (Line 1) (Step 40–80) (+4 more)
+Cohesion: 0.22
+Nodes (10): Block 1: GUN VAC L1 (Step 1–20), Block 1: GUN VACUUM (Line 0) (Step 0–35), Block 2: GUN VAC L2 (Step 22–41), Block 2: GUN VACUUM (Line 1) (Step 36–72), Block Detail, Block List, Device Map, gunvac — IL Logic Map (+2 more)
 
 ### Community 36 - "Community 36"
-Cohesion: 0.14
-Nodes (14): device_map, L16, L71, M0, out_steps, read_steps, rst_steps, set_steps (+6 more)
+Cohesion: 0.12
+Nodes (17): Block List, Device Map, L16, M16, idata — IL Logic Map, out_steps, read_steps, rst_steps (+9 more)
 
 ### Community 37 - "Community 37"
-Cohesion: 0.14
-Nodes (14): L1, L115, M34, out_steps, read_steps, rst_steps, set_steps, type (+6 more)
+Cohesion: 0.15
+Nodes (13): L115, M1026, out_steps, read_steps, rst_steps, set_steps, type, type (+5 more)
 
 ### Community 38 - "Community 38"
 Cohesion: 0.15
@@ -702,52 +711,52 @@ Cohesion: 0.22
 Nodes (13): Alarm-Only Design — No Interlock, No Emergency Stop, Door Limit Sensor (좌/우, 방폭 전용), Door Open Alarm, 방폭 Explosion-Proof Type, 비방폭 Non-Explosion-Proof Type, Design Choice: Alarm Without Emergency Stop or Interlock, Door Limit Sensor Subsystem (방폭 전용), Door Open Alarm (M-relay Latch) (+5 more)
 
 ### Community 43 - "Community 43"
-Cohesion: 0.15
-Nodes (12): Block 1: SYSTEM FLAGS (Step 0–6), Block 2: INIT FIRST SCAN (Step 7–96), Block 3: INPUT MAPPING L0 (Step 97–129), Block 4: INPUT MAPPING L1 (Step 130–162), Block 5: OUTPUT MAPPING L0 (Step 163–189), Block 6: GLOBAL OUTPUTS (Step 190–198), Block 7: OUTPUT MAPPING L1 (Step 199–223), Block 8: CONFIG VALIDATION (Step 224–233) (+4 more)
+Cohesion: 0.14
+Nodes (14): Block 1: SYSTEM FLAGS (Step 0–6), Block 1: SYSTEM FLAGS (Step 1–8), Block 2: INIT FIRST SCAN (Step 7–96), Block 2: INPUT MAPPING (X → M) (Step 10–65), Block 3: INPUT MAPPING L0 (Step 97–129), Block 3: INTERLOCK WIRING (Step 67–86), Block 4: INPUT MAPPING L1 (Step 130–162), Block 4: OUTPUT MAPPING (M → Y) (Step 88–133) (+6 more)
 
 ### Community 44 - "Community 44"
-Cohesion: 0.15
-Nodes (13): L0, M35, out_steps, read_steps, rst_steps, set_steps, type, rst_steps (+5 more)
+Cohesion: 0.33
+Nodes (6): L64, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 45 - "Community 45"
-Cohesion: 0.15
-Nodes (13): L32, M55, out_steps, read_steps, rst_steps, set_steps, type, set_steps (+5 more)
+Cohesion: 0.33
+Nodes (6): L32, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 46 - "Community 46"
-Cohesion: 0.15
-Nodes (13): L66, M52, out_steps, read_steps, rst_steps, set_steps, type, read_steps (+5 more)
+Cohesion: 0.33
+Nodes (6): L66, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 47 - "Community 47"
-Cohesion: 0.15
-Nodes (13): M19, M22, out_steps, out_steps, read_steps, rst_steps, set_steps, type (+5 more)
+Cohesion: 0.11
+Nodes (19): L0, L39, M24, out_steps, read_steps, rst_steps, set_steps, type (+11 more)
 
 ### Community 48 - "Community 48"
-Cohesion: 0.15
-Nodes (13): M24, M67, type, out_steps, read_steps, rst_steps, set_steps, type (+5 more)
+Cohesion: 0.11
+Nodes (19): L20, M55, M68, out_steps, read_steps, rst_steps, set_steps, type (+11 more)
 
 ### Community 49 - "Community 49"
 Cohesion: 0.15
-Nodes (13): device_map, L114, M40, out_steps, read_steps, rst_steps, set_steps, type (+5 more)
+Nodes (13): L114, M21, out_steps, read_steps, rst_steps, set_steps, type, set_steps (+5 more)
 
 ### Community 50 - "Community 50"
-Cohesion: 0.15
-Nodes (13): L116, L79, out_steps, read_steps, rst_steps, set_steps, type, rst_steps (+5 more)
+Cohesion: 0.33
+Nodes (6): L116, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 51 - "Community 51"
-Cohesion: 0.15
-Nodes (13): L2, M769, read_steps, out_steps, read_steps, rst_steps, set_steps, type (+5 more)
+Cohesion: 0.33
+Nodes (6): L2, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 52 - "Community 52"
-Cohesion: 0.15
-Nodes (13): L36, M33, device_map, out_steps, read_steps, rst_steps, set_steps, type (+5 more)
+Cohesion: 0.33
+Nodes (6): L36, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 53 - "Community 53"
-Cohesion: 0.15
-Nodes (13): L98, M17, set_steps, out_steps, read_steps, rst_steps, set_steps, type (+5 more)
+Cohesion: 0.33
+Nodes (6): L98, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 54 - "Community 54"
-Cohesion: 0.15
-Nodes (13): M1026, M20, type, out_steps, read_steps, rst_steps, set_steps, type (+5 more)
+Cohesion: 0.33
+Nodes (6): L78, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 55 - "Community 55"
 Cohesion: 0.21
@@ -758,16 +767,16 @@ Cohesion: 0.17
 Nodes (11): 10. Field Content Constraints, 12. Checklist for Generating or Modifying This Format, 13. Parsing Notes (LLM-Specific), 1. File Encoding and BOM, 2. Overall File Structure (order is fixed, NO blank rows), 8. Step No. Rules, 9. END Instruction, code:block1 ([Row 1]   Program name (title)        ← see §3-1) (+3 more)
 
 ### Community 57 - "Community 57"
-Cohesion: 0.21
-Nodes (11): 485.md — Self-Holding (Placeholder), blocks, meta, block_count, cpu, generated, source_file, total_steps (+3 more)
+Cohesion: 0.11
+Nodes (20): 485.md — Self-Holding (Placeholder), blocks, meta, block_count, cpu, generated, source_file, total_steps (+12 more)
 
 ### Community 58 - "Community 58"
-Cohesion: 0.17
-Nodes (11): ad — IL Logic Map, Block 1: L0 PRESSURE (Step 0–6), Block 2: L0 TEMPERATURE (Step 7–15), Block 3: L0 VACUUM (Step 16–22), Block 4: L1 PRESSURE (Step 23–29), Block 5: L1 TEMPERATURE (Step 30–38), Block 6: L1 VACUUM (Step 39–45), Block 7: DISPLAY MIRROR (Step 46–59) (+3 more)
+Cohesion: 0.15
+Nodes (14): ad — IL Logic Map, Block 1: ANALOG RAW TO EU (Step 1–14), Block 1: L0 PRESSURE (Step 0–6), Block 2: L0 TEMPERATURE (Step 7–15), Block 3: L0 VACUUM (Step 16–22), Block 4: L1 PRESSURE (Step 23–29), Block 5: L1 TEMPERATURE (Step 30–38), Block 6: L1 VACUUM (Step 39–45) (+6 more)
 
 ### Community 59 - "Community 59"
-Cohesion: 0.21
-Nodes (10): Gun Settings D62 D124, blocks, meta, block_count, cpu, generated, source_file, total_steps (+2 more)
+Cohesion: 0.24
+Nodes (9): blocks, meta, block_count, cpu, generated, source_file, total_steps, test_cases (+1 more)
 
 ### Community 60 - "Community 60"
 Cohesion: 0.21
@@ -786,40 +795,40 @@ Cohesion: 0.20
 Nodes (11): 1-Line 1-Gun Machine Configuration, Operation Screen - 1 Line 1 Gun Variant, HMI Bottom Action Bar (Manual Mode, Gun Exhaust, Product Exhaust, Vacuum Check, Refriger Injection, Start, Stop), Injection Parameters Display Group (Model, Set Amount, Charging Pulse, Vacuum Pump, Actual Amount, Injection Time), Navigation Buttons (Injection Amount Setting, Operation Setting, Alarm Screen), Production Quantity Counter with Reset, Real-Time Sensor Readouts Group (Vacuum Torr, Scan Info, Pressure kgf/cm², Temperature ℃), HMI Top Control Bar (Unit Pass, Interlock, Alarm Reset, Buzzer Stop, Navigation) (+3 more)
 
 ### Community 64 - "Community 64"
-Cohesion: 0.24
-Nodes (9): blocks, meta, block_count, cpu, generated, source_file, total_steps, test_cases (+1 more)
+Cohesion: 0.15
+Nodes (17): Graphify Query/Path/Explain Commands, Graphify Post-Modification Update Hook, Device/Operand Notation Rules (X/Y hex, M/D decimal, constants K/H/E), Graphify Knowledge Graph Tool, GX Works2 IL CSV Format Specification, IL Instruction Mnemonics Catalog (46 distinct, Sequence + Basic), MAIN.csv Reference Export (3607 lines), MELSEC-Q/L Programming Manual (Common Instruction) (+9 more)
 
 ### Community 65 - "Community 65"
-Cohesion: 0.18
-Nodes (10): blocks, L17, device_map, out_steps, read_steps, rst_steps, set_steps, type (+2 more)
+Cohesion: 0.29
+Nodes (7): L17, out_steps, read_steps, rst_steps, set_steps, type, read_steps
 
 ### Community 66 - "Community 66"
-Cohesion: 0.18
-Nodes (10): Block 1: PC COMM L1 (Step 0–39), Block 2: PC COMM L2 (Step 40–79), Block 3: GAS TYPE MAP (Step 80–84), Block 4: AUTO BARCODE (Step 85–89), Block 5: VAC SPC DATA (Step 90–94), Block 6: RESULT CODE (Step 95–100), Block Detail, Block List (+2 more)
+Cohesion: 0.11
+Nodes (19): Block 1: L1 CYCLE DONE SPC (Step 1–16), Block 1: PC COMM L1 (Step 0–39), Block 2: L2 CYCLE DONE SPC (Step 18–29), Block 2: PC COMM L2 (Step 40–79), Block 3: GAS TYPE MAP (Step 80–84), Block 3: VAC SPC LOGGING (Step 31–78), Block 4: AUTO BARCODE (Step 85–89), Block 4: VAC SPC CLEAR (Step 80–83) (+11 more)
 
 ### Community 67 - "Community 67"
-Cohesion: 0.18
-Nodes (10): blocks, M35, device_map, out_steps, read_steps, rst_steps, set_steps, type (+2 more)
+Cohesion: 0.33
+Nodes (6): M35, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 68 - "Community 68"
-Cohesion: 0.18
-Nodes (10): blocks, M32, device_map, out_steps, read_steps, rst_steps, set_steps, type (+2 more)
+Cohesion: 0.25
+Nodes (8): M32, T0, out_steps, read_steps, rst_steps, set_steps, type, out_steps
 
 ### Community 69 - "Community 69"
-Cohesion: 0.18
-Nodes (10): blocks, M38, device_map, out_steps, read_steps, rst_steps, set_steps, type (+2 more)
+Cohesion: 0.25
+Nodes (8): M38, T4, out_steps, read_steps, rst_steps, set_steps, type, type
 
 ### Community 70 - "Community 70"
-Cohesion: 0.18
-Nodes (10): blocks, T7, device_map, out_steps, read_steps, rst_steps, set_steps, type (+2 more)
+Cohesion: 0.33
+Nodes (6): T7, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 71 - "Community 71"
 Cohesion: 0.20
 Nodes (10): D172~D173 (Current Vacuum EU Line 1), L14 (VacCheck Done Line 0), L15 (VacCheck NG Line 0), L44 Vacuum Leak Alarm, M14 (Step: VAC CHECK Line 0), M24 (Step: VAC CHECK Line 1), M307 (DOOR_SENSOR_L0), M317 (DOOR_SENSOR_L1) (+2 more)
 
 ### Community 72 - "Community 72"
-Cohesion: 0.20
-Nodes (9): HMI Button Map (M400–M418), meta, block_count, cpu, generated, source_file, total_steps, Input Mapping M768-M799 (+1 more)
+Cohesion: 0.10
+Nodes (19): L70, M37, device_map, out_steps, read_steps, rst_steps, set_steps, type (+11 more)
 
 ### Community 73 - "Community 73"
 Cohesion: 0.20
@@ -854,8 +863,8 @@ Cohesion: 0.31
 Nodes (9): 4-1. Type 0 (1-Sol Base) + D276=0 (REF Only), 4-2. Type 0 (1-Sol Base) + D276=1 (REF+OIL), 4-3. Type 1 (H+L Fast+Normal) + D276=0 (REF Only), 4-4. Type 1 (H+L) + D276=1 (REF+OIL), 4. Injection Sequences, code:block1 (VacCheck Done), code:block2 (VacCheck Done), code:block3 (VacCheck Done) (+1 more)
 
 ### Community 81 - "Community 81"
-Cohesion: 0.22
-Nodes (8): 1. Purpose, 2. Inputs, 3. Outputs, 5. User Settings — Gun별 (D60~D115), 7. Range Check, 8. IL Mnemonics, REFRIGER CHARGING MACHINE — Function Spec: setting.csv, 각 필드 설명
+Cohesion: 0.20
+Nodes (9): 1. Purpose, 2. Inputs, 3. Outputs, 5. User Settings — Gun별 (D60~D115), 6. Barcode Model Lookup Logic, 7. Range Check, 8. IL Mnemonics, REFRIGER CHARGING MACHINE — Function Spec: setting.csv (+1 more)
 
 ### Community 82 - "Community 82"
 Cohesion: 0.33
@@ -866,12 +875,12 @@ Cohesion: 0.22
 Nodes (9): 0-1. 지원 구성, 0-1. 지원 구성 (Variations), 0-2. 구성 파라미터 (PLC D-Register), 0-3. Line / Gun 개념, 0-4. Gun Type, 0-5. Gun Index 공식, 0. 시스템 구성 (System Configuration), code:block1 (Line 1 ──┬── Gun A ──┐) (+1 more)
 
 ### Community 84 - "Community 84"
-Cohesion: 0.25
-Nodes (9): out_steps, read_steps, rst_steps, set_steps, type, D280, M0, out_steps (+1 more)
+Cohesion: 0.29
+Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D280, out_steps
 
 ### Community 85 - "Community 85"
-Cohesion: 0.29
-Nodes (8): Auto Mode — Full Sequence Execution, PC Barcode Data Flow (D7000/D7001 Write, D7012/D7015 Read), Manual Mode — Individual Function Execution, Config Validation (D270/D272 Range Check, D274 Recalc), Barcode Model Lookup (Preset Table Comparison), setting.csv — Parameter and Configuration Management, Configuration D270/D272/D276 (Line Count, Gun Per Line, Oil Mode), Injection Model (Preset Data Table — Manual vs Barcode)
+Cohesion: 0.20
+Nodes (10): Auto Mode — Full Sequence Execution, CJ Conditional Branching (Line/Gun/Oil Mode Skip), Manual Mode — Individual Function Execution, Config Validation (D270/D272 Range Check, D274 Recalc), Oil Mode (D276=1 — Oil Injection Before Refrigerant), Configuration D270/D272/D276 (Line Count, Gun Per Line, Oil Mode), Injection Model (Preset Data Table — Manual vs Barcode), Oil Mode (D276 — REF Only vs REF+OIL Injection Order) (+2 more)
 
 ### Community 86 - "Community 86"
 Cohesion: 0.25
@@ -886,60 +895,60 @@ Cohesion: 0.25
 Nodes (8): 3-1. M (Internal Relay) — Bit Device (0~), 3-1. 핵심 할당 원칙, 3-2. L Device 요약 (정전유지 Bit), 3-3. M Device 요약 (Volatile Bit), 3-3. T (Timer) — 100ms 설정, 3-4. X (Digital Input) — Hex Address, 3-5. Y (Digital Output) — Hex Address, 3. 디바이스 맵 (Device Map)
 
 ### Community 89 - "Community 89"
-Cohesion: 0.29
-Nodes (7): reason, state, updatedAt, sessionID, sources, background-task, updatedAt
+Cohesion: 0.08
+Nodes (25): 1. File Encoding, 2. File Structure, 3. Line Types, 4. Instruction Set, 5. Device Notation, 6. Comparison Operand Order ⚠️, 7. Rung Rules, 8. Observed Patterns (+17 more)
 
 ### Community 90 - "Community 90"
-Cohesion: 0.25
-Nodes (7): reason, state, updatedAt, sessionID, sources, background-task, updatedAt
+Cohesion: 0.10
+Nodes (20): 10. HMI Lamp Backlight, 14. Flow Meter (HSC), 15. Solenoids & Motor, 16. Digital Inputs (DI), 18. SPC, 19. D-Register Map (L1 D00000-D00031 / L2 D00032-D00063), 19. D-Register Map (L1 D0-D31 / L2 D32-D63), 20. File Structure (12 CSVs) (+12 more)
 
 ### Community 91 - "Community 91"
-Cohesion: 0.29
-Nodes (7): reason, state, updatedAt, sessionID, sources, background-task, updatedAt
+Cohesion: 0.13
+Nodes (20): Alarm System (Shared + L1 + L2 + L3), Auto Mode Sequence, Emergency Stop (IEC 60204-1 compliant), Flow Meter HSC (High-Speed Counter), IL Coding Rules (Self-Holding, HMI, Rung Order), Interlock System (Per-line AND chain), L0/L1 Mirror Convention (offset +16), Manual Mode Single-Step (+12 more)
 
 ### Community 92 - "Community 92"
-Cohesion: 0.25
-Nodes (7): reason, state, updatedAt, sessionID, sources, background-task, updatedAt
+Cohesion: 0.24
+Nodes (10): AGENTS.md — Project Conventions & Work Rules, GX Works2 IL Specification, HMI Button Map (M400–M418), QCPU (Q mode) Q03UDV PLC, REFRIGER CHARGING MACHINE — HMI Hardware Spec, REF_DOCUMENT — System Architecture Reference, Solenoid Control (FAST+BASE H+L structure), blocks (+2 more)
 
 ### Community 93 - "Community 93"
-Cohesion: 0.25
-Nodes (8): out_steps, read_steps, rst_steps, set_steps, type, device_map, D340, M0
+Cohesion: 0.33
+Nodes (6): out_steps, read_steps, rst_steps, set_steps, type, D340
 
 ### Community 94 - "Community 94"
-Cohesion: 0.25
-Nodes (7): alarm — IL Logic Map, Block 1: ALARM LATCH (Step 0–32), Block 2: BUZZER (Step 33–49), Block 3: ALARM RESET (Step 50–85), Block Detail, Block List, Device Map
+Cohesion: 0.14
+Nodes (15): alarm — IL Logic Map, Block 1: ALARM LATCH (Step 0–32), Block 1: SHARED ALARMS (Step 1–21), Block 2: BUZZER (Step 33–49), Block 2: L1 ALARMS (Step 23–69), Block 3: ALARM RESET (Step 50–85), Block 3: L2 ALARMS (Step 71–117), Block 4: L3 OIL ALARMS (Step 119–127) (+7 more)
 
 ### Community 95 - "Community 95"
-Cohesion: 0.25
-Nodes (8): L64, L70, rst_steps, out_steps, read_steps, rst_steps, set_steps, type
+Cohesion: 0.33
+Nodes (6): L70, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 96 - "Community 96"
-Cohesion: 0.25
-Nodes (8): M0, M21, read_steps, out_steps, read_steps, rst_steps, set_steps, type
+Cohesion: 0.33
+Nodes (6): M21, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 97 - "Community 97"
-Cohesion: 0.25
-Nodes (8): M76, T0, out_steps, read_steps, rst_steps, set_steps, type, set_steps
+Cohesion: 0.33
+Nodes (6): M76, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 98 - "Community 98"
-Cohesion: 0.25
-Nodes (8): M42, T4, out_steps, read_steps, rst_steps, set_steps, type, set_steps
+Cohesion: 0.33
+Nodes (6): M42, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 99 - "Community 99"
-Cohesion: 0.25
-Nodes (7): Block 1: CONFIG SYNC (Step 0–4), Block 2: GUN SETTINGS SYNC (Step 5–11), Block 3: DISPLAY MIRROR (Step 12–25), Block Detail, Block List, Device Map, setting — IL Logic Map
+Cohesion: 0.22
+Nodes (10): Block 1: CONFIG SYNC (Step 0–4), Block 1: CONFIG SYNC (Step 1–16), Block 2: GUN SETTINGS SYNC (Step 5–11), Block 3: DISPLAY MIRROR (Step 12–25), Block Detail, Block List, Device Map, Device Map (+2 more)
 
 ### Community 100 - "Community 100"
-Cohesion: 0.25
-Nodes (7): Block 1: L0 CYCLE DONE (Step 0–10), Block 2: L1 CYCLE DONE (Step 11–21), Block 3: DISPLAY BOMBE (Step 22–27), Block Detail, Block List, Device Map, spc — IL Logic Map
+Cohesion: 0.15
+Nodes (14): Block 1: L0 CYCLE DONE (Step 0–10), Block 1: L0 CYCLE DONE (Step 1–10), Block 2: L1 CYCLE DONE (Step 11–21), Block 2: L1 CYCLE DONE (Step 12–21), Block 3: DISPLAY BOMBE (Step 22–27), Block 3: DISPLAY BOMBE (Step 23–26), Block 4: VAC SPC LOGGING (Step 28–49), Block 5: VAC SPC CLEAR (Step 51–54) (+6 more)
 
 ### Community 101 - "Community 101"
-Cohesion: 0.25
-Nodes (8): M788, T1, out_steps, read_steps, rst_steps, set_steps, type, type
+Cohesion: 0.33
+Nodes (6): M788, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 102 - "Community 102"
-Cohesion: 0.25
-Nodes (8): L68, T2, out_steps, read_steps, rst_steps, set_steps, type, read_steps
+Cohesion: 0.33
+Nodes (6): L68, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 103 - "Community 103"
 Cohesion: 0.33
@@ -958,212 +967,212 @@ Cohesion: 0.29
 Nodes (7): 11-1. Rung boundary identification, 11-2. Rung internal structure (canonical order), 11-4. Rung-boundary decision table, 11-5. Constraints summary, 11. Rung Composition Rules, code:block12 ([1] Load                  — LD / LDI / LDP / LDF            ), code:block18 (- Every rung starts with exactly one load instruction (LD / )
 
 ### Community 107 - "Community 107"
-Cohesion: 0.33
-Nodes (6): state, updatedAt, sessionID, sources, background-task, updatedAt
+Cohesion: 0.18
+Nodes (10): Block 1: BARCODE COPY L1 (Step 1–2), Block 2: BARCODE COPY L2 (Step 4–5), Block 3: L1 MODEL LOOKUP (Step 7–256), Block 4: L2 MODEL LOOKUP (Step 258–507), Block 5: BARCODE CLEAR (Step 509–532), Block 6: DISPLAY CORRECTION (Step 534–687), Block Detail, Block List (+2 more)
 
 ### Community 108 - "Community 108"
-Cohesion: 0.33
-Nodes (6): state, updatedAt, sessionID, sources, background-task, updatedAt
+Cohesion: 0.22
+Nodes (10): Block 1: UNIT VAC L1 (Step 1–25), Block 1: UNIT VACUUM (Line 0) (Step 0–39), Block 2: UNIT VAC L2 (Step 27–51), Block 2: UNIT VACUUM (Line 1) (Step 40–80), Block Detail, Block List, Device Map, Device Map (+2 more)
 
 ### Community 109 - "Community 109"
-Cohesion: 0.33
-Nodes (6): state, updatedAt, sessionID, sources, background-task, updatedAt
+Cohesion: 0.25
+Nodes (8): 1-1. Gun Type (솔레노이드 구조), 1-2. Oil Mode (주입 모드), 1-3. 방폭 Type (Enclosure), 1-4. 냉매 Type, 1-5. HMI Screen Type, 1-6. Reset Type, 1-7. 공정 Step Type (시퀀스), 1. 장비 Type 일람
 
 ### Community 110 - "Community 110"
-Cohesion: 0.33
-Nodes (6): state, updatedAt, sessionID, sources, background-task, updatedAt
+Cohesion: 0.29
+Nodes (7): 11. Alarm System, Buzzer Control, L1 Alarms, L2 Alarms, L3 Oil Alarms, Shared Alarms (system-wide), Structure
 
 ### Community 111 - "Community 111"
 Cohesion: 0.29
-Nodes (6): state, updatedAt, sessionID, sources, background-task, updatedAt
+Nodes (6): Block 1: OIL FAST (Step 1–57), Block 2: OIL BASE (Step 59–130), Block Detail, Block List, Device Map, REF_self_holding — IL Logic Map
 
 ### Community 112 - "Community 112"
-Cohesion: 0.33
-Nodes (6): state, updatedAt, sessionID, sources, background-task, updatedAt
+Cohesion: 0.29
+Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D160, device_map
 
 ### Community 113 - "Community 113"
-Cohesion: 0.33
-Nodes (6): state, updatedAt, sessionID, sources, background-task, updatedAt
+Cohesion: 0.29
+Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D168, rst_steps
 
 ### Community 114 - "Community 114"
-Cohesion: 0.33
-Nodes (6): state, updatedAt, sessionID, sources, background-task, updatedAt
+Cohesion: 0.29
+Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D172, set_steps
 
 ### Community 115 - "Community 115"
-Cohesion: 0.33
-Nodes (6): state, updatedAt, sessionID, sources, background-task, updatedAt
+Cohesion: 0.29
+Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D64, read_steps
 
 ### Community 116 - "Community 116"
-Cohesion: 0.29
-Nodes (6): state, updatedAt, sessionID, sources, background-task, updatedAt
+Cohesion: 0.33
+Nodes (6): 2-1. Manual 모드, 2-2. Auto 모드, 2. Manual / Auto 동작 시나리오, code:block1 (① MANUAL/AUTO 버튼 → MANUAL 상태), code:block2 (① MANUAL/AUTO 버튼 → AUTO 상태), REFRIGER CHARGING MACHINE — Operation Scenario
 
 ### Community 117 - "Community 117"
 Cohesion: 0.29
 Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D162, rst_steps
 
 ### Community 118 - "Community 118"
-Cohesion: 0.29
-Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D150, type
+Cohesion: 0.33
+Nodes (6): out_steps, read_steps, rst_steps, set_steps, type, D150
 
 ### Community 119 - "Community 119"
-Cohesion: 0.29
-Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D152, rst_steps
+Cohesion: 0.33
+Nodes (6): out_steps, read_steps, rst_steps, set_steps, type, D152
 
 ### Community 120 - "Community 120"
-Cohesion: 0.29
-Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D154, set_steps
+Cohesion: 0.25
+Nodes (8): out_steps, read_steps, rst_steps, set_steps, type, D154, M0, device_map
 
 ### Community 121 - "Community 121"
 Cohesion: 0.29
-Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D158, out_steps
+Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D158, set_steps
 
 ### Community 122 - "Community 122"
-Cohesion: 0.29
-Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D160, device_map
+Cohesion: 0.33
+Nodes (6): out_steps, read_steps, rst_steps, set_steps, type, D160
 
 ### Community 123 - "Community 123"
-Cohesion: 0.29
-Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D172, read_steps
+Cohesion: 0.33
+Nodes (6): out_steps, read_steps, rst_steps, set_steps, type, D172
 
 ### Community 124 - "Community 124"
-Cohesion: 0.29
-Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D156, read_steps
+Cohesion: 0.33
+Nodes (6): out_steps, read_steps, rst_steps, set_steps, type, D156
 
 ### Community 125 - "Community 125"
-Cohesion: 0.29
-Nodes (7): device_map, M76, out_steps, read_steps, rst_steps, set_steps, type
+Cohesion: 0.25
+Nodes (8): L64, M76, device_map, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 126 - "Community 126"
-Cohesion: 0.29
-Nodes (7): L21, out_steps, read_steps, rst_steps, set_steps, type, set_steps
+Cohesion: 0.33
+Nodes (6): L21, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 127 - "Community 127"
 Cohesion: 0.29
-Nodes (7): L23, out_steps, read_steps, rst_steps, set_steps, type, type
+Nodes (7): L23, out_steps, read_steps, rst_steps, set_steps, type, rst_steps
 
 ### Community 128 - "Community 128"
-Cohesion: 0.29
-Nodes (7): L65, out_steps, out_steps, read_steps, rst_steps, set_steps, type
+Cohesion: 0.33
+Nodes (6): L65, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 129 - "Community 129"
 Cohesion: 0.29
 Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D140, out_steps
 
 ### Community 130 - "Community 130"
-Cohesion: 0.29
-Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, device_map, D146
+Cohesion: 0.33
+Nodes (6): out_steps, read_steps, rst_steps, set_steps, type, D146
 
 ### Community 131 - "Community 131"
 Cohesion: 0.29
-Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D148, set_steps
+Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D148, rst_steps
 
 ### Community 132 - "Community 132"
-Cohesion: 0.29
-Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D7001, type
+Cohesion: 0.33
+Nodes (6): out_steps, read_steps, rst_steps, set_steps, type, D7001
 
 ### Community 133 - "Community 133"
-Cohesion: 0.29
-Nodes (7): M32, rst_steps, out_steps, read_steps, rst_steps, set_steps, type
+Cohesion: 0.33
+Nodes (6): M32, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 134 - "Community 134"
 Cohesion: 0.29
-Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D172, out_steps
+Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D172, read_steps
 
 ### Community 135 - "Community 135"
-Cohesion: 0.29
-Nodes (7): device_map, L32, out_steps, read_steps, rst_steps, set_steps, type
+Cohesion: 0.33
+Nodes (6): L32, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 136 - "Community 136"
-Cohesion: 0.29
-Nodes (7): L115, out_steps, read_steps, rst_steps, set_steps, type, type
+Cohesion: 0.33
+Nodes (6): L115, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 137 - "Community 137"
-Cohesion: 0.29
-Nodes (7): L17, out_steps, read_steps, rst_steps, set_steps, type, rst_steps
+Cohesion: 0.33
+Nodes (6): L17, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 138 - "Community 138"
 Cohesion: 0.29
-Nodes (7): L66, out_steps, read_steps, rst_steps, set_steps, type, read_steps
+Nodes (7): L66, out_steps, read_steps, rst_steps, set_steps, type, rst_steps
 
 ### Community 139 - "Community 139"
 Cohesion: 0.29
-Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D62, type
+Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D62, rst_steps
 
 ### Community 140 - "Community 140"
-Cohesion: 0.29
-Nodes (7): device_map, L69, out_steps, read_steps, rst_steps, set_steps, type
+Cohesion: 0.33
+Nodes (6): L69, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 141 - "Community 141"
 Cohesion: 0.29
-Nodes (7): M23, out_steps, read_steps, rst_steps, set_steps, type, read_steps
+Nodes (7): M23, out_steps, read_steps, rst_steps, set_steps, type, out_steps
 
 ### Community 142 - "Community 142"
-Cohesion: 0.29
-Nodes (7): M37, out_steps, read_steps, rst_steps, set_steps, type, rst_steps
+Cohesion: 0.33
+Nodes (6): M37, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 143 - "Community 143"
-Cohesion: 0.29
-Nodes (7): M70, out_steps, read_steps, rst_steps, set_steps, type, out_steps
+Cohesion: 0.33
+Nodes (6): M70, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 144 - "Community 144"
-Cohesion: 0.29
-Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D128, rst_steps
+Cohesion: 0.25
+Nodes (9): out_steps, read_steps, rst_steps, set_steps, type, D128, M0, read_steps (+1 more)
 
 ### Community 145 - "Community 145"
 Cohesion: 0.29
-Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D130, set_steps
+Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D130, rst_steps
 
 ### Community 146 - "Community 146"
 Cohesion: 0.29
-Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D282, device_map
+Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D282, set_steps
 
 ### Community 147 - "Community 147"
-Cohesion: 0.29
-Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D290, type
+Cohesion: 0.33
+Nodes (6): out_steps, read_steps, rst_steps, set_steps, type, D290
 
 ### Community 148 - "Community 148"
 Cohesion: 0.29
-Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D160, set_steps
+Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D160, read_steps
 
 ### Community 149 - "Community 149"
 Cohesion: 0.29
-Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D172, out_steps
+Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D172, rst_steps
 
 ### Community 150 - "Community 150"
-Cohesion: 0.29
-Nodes (7): device_map, M49, out_steps, read_steps, rst_steps, set_steps, type
+Cohesion: 0.33
+Nodes (6): M49, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 151 - "Community 151"
-Cohesion: 0.29
-Nodes (7): L115, out_steps, read_steps, rst_steps, set_steps, type, read_steps
+Cohesion: 0.33
+Nodes (6): L115, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 152 - "Community 152"
 Cohesion: 0.29
-Nodes (7): L19, out_steps, read_steps, rst_steps, set_steps, type, rst_steps
+Nodes (7): L19, out_steps, read_steps, rst_steps, set_steps, type, set_steps
 
 ### Community 153 - "Community 153"
-Cohesion: 0.29
-Nodes (6): Block 1: VAC CHECK L0 (Step 0–21), Block 2: VAC CHECK L1 (Step 22–44), Block Detail, Block List, Device Map, vacchec — IL Logic Map
+Cohesion: 0.22
+Nodes (10): Block 1: VAC CHECK L0 (Step 0–21), Block 1: VAC CHECK L1 (Step 1–25), Block 2: VAC CHECK L1 (Step 22–44), Block 2: VAC CHECK L2 (Step 27–51), Block Detail, Block List, Device Map, Device Map (+2 more)
 
 ### Community 154 - "Community 154"
-Cohesion: 0.29
-Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D160, type
+Cohesion: 0.33
+Nodes (6): out_steps, read_steps, rst_steps, set_steps, type, D160
 
 ### Community 155 - "Community 155"
 Cohesion: 0.29
-Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D300, set_steps
+Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D300, rst_steps
 
 ### Community 156 - "Community 156"
 Cohesion: 0.29
-Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D308, rst_steps
+Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D308, set_steps
 
 ### Community 157 - "Community 157"
-Cohesion: 0.29
-Nodes (7): device_map, L78, out_steps, read_steps, rst_steps, set_steps, type
+Cohesion: 0.33
+Nodes (6): L78, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 158 - "Community 158"
 Cohesion: 0.29
-Nodes (7): L37, out_steps, read_steps, rst_steps, set_steps, type, out_steps
+Nodes (7): L37, device_map, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 159 - "Community 159"
 Cohesion: 0.33
@@ -1182,12 +1191,12 @@ Cohesion: 0.33
 Nodes (6): 5-1. Solenoid 동작 요약, 5-2. GUN VACUUM, 5-3. UNIT VACUUM, 5. 진공 시퀀스 상세 (gunvac.csv / unitvac.csv), code:block6 (┌──────────┐     ┌──────────┐     ┌───────────┐), code:block7 (HMI Write → M400~M416 (Momentary) → PLC Self-Hold/Toggle → L)
 
 ### Community 163 - "Community 163"
-Cohesion: 0.40
-Nodes (5): state, sessionID, sources, background-task, updatedAt
+Cohesion: 0.25
+Nodes (8): out_steps, read_steps, rst_steps, set_steps, type, D142, M0, read_steps
 
 ### Community 164 - "Community 164"
-Cohesion: 0.33
-Nodes (5): 485 — IL Logic Map, Block 1: RS-485 DATA MIRROR (Step 0–25), Block Detail, Block List, Device Map
+Cohesion: 0.32
+Nodes (7): 485 — IL Logic Map, Block 1: RS-485 DATA MIRROR (Step 0–25), Block Detail, Block List, Device Map, Device Map, REF_self_holding — IL Logic Map
 
 ### Community 165 - "Community 165"
 Cohesion: 0.33
@@ -1234,8 +1243,8 @@ Cohesion: 0.33
 Nodes (6): out_steps, read_steps, rst_steps, set_steps, type, D166
 
 ### Community 176 - "Community 176"
-Cohesion: 0.33
-Nodes (6): out_steps, read_steps, rst_steps, set_steps, type, D168
+Cohesion: 0.29
+Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D168, out_steps
 
 ### Community 177 - "Community 177"
 Cohesion: 0.33
@@ -1246,12 +1255,12 @@ Cohesion: 0.33
 Nodes (6): out_steps, read_steps, rst_steps, set_steps, type, D300
 
 ### Community 179 - "Community 179"
-Cohesion: 0.33
-Nodes (6): out_steps, read_steps, rst_steps, set_steps, type, D302
+Cohesion: 0.29
+Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D302, rst_steps
 
 ### Community 180 - "Community 180"
-Cohesion: 0.33
-Nodes (6): out_steps, read_steps, rst_steps, set_steps, type, D310
+Cohesion: 0.29
+Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D310, type
 
 ### Community 181 - "Community 181"
 Cohesion: 0.33
@@ -1270,8 +1279,8 @@ Cohesion: 0.33
 Nodes (6): out_steps, read_steps, rst_steps, set_steps, type, D322
 
 ### Community 185 - "Community 185"
-Cohesion: 0.33
-Nodes (6): out_steps, read_steps, rst_steps, set_steps, type, D330
+Cohesion: 0.29
+Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D330, read_steps
 
 ### Community 186 - "Community 186"
 Cohesion: 0.33
@@ -1294,8 +1303,8 @@ Cohesion: 0.33
 Nodes (6): out_steps, read_steps, rst_steps, set_steps, type, D352
 
 ### Community 191 - "Community 191"
-Cohesion: 0.33
-Nodes (6): L19, out_steps, read_steps, rst_steps, set_steps, type
+Cohesion: 0.29
+Nodes (7): L19, out_steps, read_steps, rst_steps, set_steps, type, out_steps
 
 ### Community 192 - "Community 192"
 Cohesion: 0.33
@@ -1306,8 +1315,8 @@ Cohesion: 0.33
 Nodes (6): L35, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 194 - "Community 194"
-Cohesion: 0.33
-Nodes (6): L37, out_steps, read_steps, rst_steps, set_steps, type
+Cohesion: 0.29
+Nodes (7): L37, out_steps, read_steps, rst_steps, set_steps, type, set_steps
 
 ### Community 195 - "Community 195"
 Cohesion: 0.33
@@ -1346,8 +1355,8 @@ Cohesion: 0.33
 Nodes (6): L74, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 204 - "Community 204"
-Cohesion: 0.33
-Nodes (6): L78, out_steps, read_steps, rst_steps, set_steps, type
+Cohesion: 0.29
+Nodes (7): L78, type, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 205 - "Community 205"
 Cohesion: 0.33
@@ -1398,16 +1407,16 @@ Cohesion: 0.33
 Nodes (6): M793, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 217 - "Community 217"
-Cohesion: 0.33
-Nodes (6): meta, block_count, cpu, generated, source_file, total_steps
+Cohesion: 0.24
+Nodes (9): blocks, meta, block_count, cpu, generated, source_file, total_steps, test_cases (+1 more)
 
 ### Community 218 - "Community 218"
-Cohesion: 0.33
-Nodes (6): out_steps, read_steps, rst_steps, set_steps, type, D130
+Cohesion: 0.29
+Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D130, device_map
 
 ### Community 219 - "Community 219"
 Cohesion: 0.33
-Nodes (6): out_steps, read_steps, rst_steps, set_steps, type, D142
+Nodes (6): L71, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 220 - "Community 220"
 Cohesion: 0.33
@@ -1418,8 +1427,8 @@ Cohesion: 0.33
 Nodes (6): out_steps, read_steps, rst_steps, set_steps, type, D172
 
 ### Community 222 - "Community 222"
-Cohesion: 0.33
-Nodes (6): out_steps, read_steps, rst_steps, set_steps, type, D22
+Cohesion: 0.29
+Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D22, type
 
 ### Community 223 - "Community 223"
 Cohesion: 0.33
@@ -1447,15 +1456,15 @@ Nodes (6): out_steps, read_steps, rst_steps, set_steps, type, D8001
 
 ### Community 229 - "Community 229"
 Cohesion: 0.33
-Nodes (6): K0, out_steps, read_steps, rst_steps, set_steps, type
+Nodes (6): M76, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 230 - "Community 230"
-Cohesion: 0.33
-Nodes (6): K1, out_steps, read_steps, rst_steps, set_steps, type
+Cohesion: 0.15
+Nodes (13): L79, L99, read_steps, out_steps, read_steps, rst_steps, set_steps, type (+5 more)
 
 ### Community 231 - "Community 231"
-Cohesion: 0.33
-Nodes (6): K2, out_steps, read_steps, rst_steps, set_steps, type
+Cohesion: 0.29
+Nodes (7): K2, out_steps, read_steps, rst_steps, set_steps, type, set_steps
 
 ### Community 232 - "Community 232"
 Cohesion: 0.33
@@ -1514,24 +1523,24 @@ Cohesion: 0.33
 Nodes (6): M40, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 246 - "Community 246"
-Cohesion: 0.33
-Nodes (6): meta, block_count, cpu, generated, source_file, total_steps
+Cohesion: 0.19
+Nodes (11): blocks, meta, block_count, cpu, generated, source_file, total_steps, test_cases (+3 more)
 
 ### Community 247 - "Community 247"
-Cohesion: 0.33
-Nodes (6): out_steps, read_steps, rst_steps, set_steps, type, D160
+Cohesion: 0.29
+Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D160, type
 
 ### Community 248 - "Community 248"
-Cohesion: 0.33
-Nodes (6): L114, out_steps, read_steps, rst_steps, set_steps, type
+Cohesion: 0.29
+Nodes (7): L114, out_steps, read_steps, rst_steps, set_steps, type, set_steps
 
 ### Community 249 - "Community 249"
 Cohesion: 0.33
 Nodes (6): L16, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 250 - "Community 250"
-Cohesion: 0.33
-Nodes (6): L33, out_steps, read_steps, rst_steps, set_steps, type
+Cohesion: 0.29
+Nodes (7): L33, device_map, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 251 - "Community 251"
 Cohesion: 0.33
@@ -1582,8 +1591,8 @@ Cohesion: 0.33
 Nodes (6): T7, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 263 - "Community 263"
-Cohesion: 0.33
-Nodes (6): meta, block_count, cpu, generated, source_file, total_steps
+Cohesion: 0.24
+Nodes (9): blocks, meta, block_count, cpu, generated, source_file, total_steps, test_cases (+1 more)
 
 ### Community 264 - "Community 264"
 Cohesion: 0.33
@@ -1599,15 +1608,15 @@ Nodes (6): L19, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 267 - "Community 267"
 Cohesion: 0.33
-Nodes (6): L20, out_steps, read_steps, rst_steps, set_steps, type
+Nodes (6): K0, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 268 - "Community 268"
-Cohesion: 0.33
-Nodes (6): L21, out_steps, read_steps, rst_steps, set_steps, type
+Cohesion: 0.14
+Nodes (14): L22, M0, M21, out_steps, read_steps, rst_steps, set_steps, type (+6 more)
 
 ### Community 269 - "Community 269"
 Cohesion: 0.33
-Nodes (6): L22, out_steps, read_steps, rst_steps, set_steps, type
+Nodes (6): K1, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 270 - "Community 270"
 Cohesion: 0.33
@@ -1643,7 +1652,7 @@ Nodes (6): L38, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 278 - "Community 278"
 Cohesion: 0.33
-Nodes (6): L39, out_steps, read_steps, rst_steps, set_steps, type
+Nodes (6): M17, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 279 - "Community 279"
 Cohesion: 0.33
@@ -1651,7 +1660,7 @@ Nodes (6): L40, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 280 - "Community 280"
 Cohesion: 0.33
-Nodes (6): L64, out_steps, read_steps, rst_steps, set_steps, type
+Nodes (6): M33, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 281 - "Community 281"
 Cohesion: 0.33
@@ -1663,7 +1672,7 @@ Nodes (6): L67, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 283 - "Community 283"
 Cohesion: 0.33
-Nodes (6): L68, out_steps, read_steps, rst_steps, set_steps, type
+Nodes (6): M34, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 284 - "Community 284"
 Cohesion: 0.33
@@ -1671,7 +1680,7 @@ Nodes (6): L69, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 285 - "Community 285"
 Cohesion: 0.33
-Nodes (6): L70, out_steps, read_steps, rst_steps, set_steps, type
+Nodes (6): L21, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 286 - "Community 286"
 Cohesion: 0.33
@@ -1679,7 +1688,7 @@ Nodes (6): L72, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 287 - "Community 287"
 Cohesion: 0.33
-Nodes (6): L73, out_steps, read_steps, rst_steps, set_steps, type
+Nodes (6): M40, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 288 - "Community 288"
 Cohesion: 0.33
@@ -1687,7 +1696,7 @@ Nodes (6): M1, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 289 - "Community 289"
 Cohesion: 0.33
-Nodes (6): M16, out_steps, read_steps, rst_steps, set_steps, type
+Nodes (6): L73, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 290 - "Community 290"
 Cohesion: 0.33
@@ -1703,19 +1712,19 @@ Nodes (6): M2, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 293 - "Community 293"
 Cohesion: 0.33
-Nodes (6): M20, out_steps, read_steps, rst_steps, set_steps, type
+Nodes (6): M769, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 294 - "Community 294"
 Cohesion: 0.33
-Nodes (6): M21, out_steps, read_steps, rst_steps, set_steps, type
+Nodes (6): M58, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 295 - "Community 295"
 Cohesion: 0.33
 Nodes (6): M23, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 296 - "Community 296"
-Cohesion: 0.33
-Nodes (6): M32, out_steps, read_steps, rst_steps, set_steps, type
+Cohesion: 0.11
+Nodes (19): M32, M54, M67, rst_steps, out_steps, read_steps, rst_steps, set_steps (+11 more)
 
 ### Community 297 - "Community 297"
 Cohesion: 0.33
@@ -1731,7 +1740,7 @@ Nodes (6): M36, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 300 - "Community 300"
 Cohesion: 0.33
-Nodes (6): M37, out_steps, read_steps, rst_steps, set_steps, type
+Nodes (6): M19, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 301 - "Community 301"
 Cohesion: 0.33
@@ -1743,7 +1752,7 @@ Nodes (6): M39, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 303 - "Community 303"
 Cohesion: 0.33
-Nodes (6): M40, out_steps, read_steps, rst_steps, set_steps, type
+Nodes (5): devices, meta, generated, source_file, total_devices
 
 ### Community 304 - "Community 304"
 Cohesion: 0.33
@@ -1754,8 +1763,8 @@ Cohesion: 0.33
 Nodes (6): M49, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 306 - "Community 306"
-Cohesion: 0.33
-Nodes (6): M50, out_steps, read_steps, rst_steps, set_steps, type
+Cohesion: 0.11
+Nodes (19): L68, M22, M50, out_steps, read_steps, rst_steps, set_steps, type (+11 more)
 
 ### Community 307 - "Community 307"
 Cohesion: 0.33
@@ -1767,7 +1776,7 @@ Nodes (6): M53, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 309 - "Community 309"
 Cohesion: 0.33
-Nodes (6): M54, out_steps, read_steps, rst_steps, set_steps, type
+Nodes (6): M20, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 310 - "Community 310"
 Cohesion: 0.33
@@ -1779,7 +1788,7 @@ Nodes (6): M57, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 312 - "Community 312"
 Cohesion: 0.33
-Nodes (6): M58, out_steps, read_steps, rst_steps, set_steps, type
+Nodes (6): out_steps, read_steps, rst_steps, set_steps, type, D152
 
 ### Community 313 - "Community 313"
 Cohesion: 0.33
@@ -1799,11 +1808,11 @@ Nodes (6): M66, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 317 - "Community 317"
 Cohesion: 0.33
-Nodes (6): M68, out_steps, read_steps, rst_steps, set_steps, type
+Nodes (6): M35, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 318 - "Community 318"
 Cohesion: 0.33
-Nodes (6): M69, out_steps, read_steps, rst_steps, set_steps, type
+Nodes (6): out_steps, read_steps, rst_steps, set_steps, type, D164
 
 ### Community 319 - "Community 319"
 Cohesion: 0.33
@@ -1854,24 +1863,24 @@ Cohesion: 0.33
 Nodes (6): SM402, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 331 - "Community 331"
-Cohesion: 0.33
-Nodes (6): L0, out_steps, read_steps, rst_steps, set_steps, type
+Cohesion: 0.12
+Nodes (17): Block List, Device Map, L64, L74, out_steps, read_steps, rst_steps, set_steps (+9 more)
 
 ### Community 332 - "Community 332"
 Cohesion: 0.33
 Nodes (6): L100, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 333 - "Community 333"
-Cohesion: 0.33
-Nodes (6): L101, out_steps, read_steps, rst_steps, set_steps, type
+Cohesion: 0.14
+Nodes (14): L1, L101, L112, out_steps, read_steps, rst_steps, set_steps, type (+6 more)
 
 ### Community 334 - "Community 334"
 Cohesion: 0.33
-Nodes (6): L112, out_steps, read_steps, rst_steps, set_steps, type
+Nodes (6): M40, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 335 - "Community 335"
 Cohesion: 0.33
-Nodes (6): L113, out_steps, read_steps, rst_steps, set_steps, type
+Nodes (6): out_steps, read_steps, rst_steps, set_steps, type, D270
 
 ### Community 336 - "Community 336"
 Cohesion: 0.33
@@ -1882,8 +1891,8 @@ Cohesion: 0.33
 Nodes (6): L17, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 338 - "Community 338"
-Cohesion: 0.33
-Nodes (6): L18, out_steps, read_steps, rst_steps, set_steps, type
+Cohesion: 0.15
+Nodes (13): L18, M1039, out_steps, read_steps, rst_steps, set_steps, type, rst_steps (+5 more)
 
 ### Community 339 - "Community 339"
 Cohesion: 0.33
@@ -1915,11 +1924,11 @@ Nodes (6): L34, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 346 - "Community 346"
 Cohesion: 0.33
-Nodes (6): L38, out_steps, read_steps, rst_steps, set_steps, type
+Nodes (6): out_steps, read_steps, rst_steps, set_steps, type, D274
 
 ### Community 347 - "Community 347"
 Cohesion: 0.33
-Nodes (6): L64, out_steps, read_steps, rst_steps, set_steps, type
+Nodes (6): M52, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 348 - "Community 348"
 Cohesion: 0.33
@@ -1939,7 +1948,7 @@ Nodes (6): L68, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 352 - "Community 352"
 Cohesion: 0.33
-Nodes (6): L69, out_steps, read_steps, rst_steps, set_steps, type
+Nodes (6): out_steps, read_steps, rst_steps, set_steps, type, D62
 
 ### Community 353 - "Community 353"
 Cohesion: 0.33
@@ -1959,23 +1968,23 @@ Nodes (6): L73, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 357 - "Community 357"
 Cohesion: 0.33
-Nodes (6): L74, out_steps, read_steps, rst_steps, set_steps, type
+Nodes (6): M69, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 358 - "Community 358"
 Cohesion: 0.33
-Nodes (6): L78, out_steps, read_steps, rst_steps, set_steps, type
+Nodes (6): out_steps, read_steps, rst_steps, set_steps, type, D72
 
 ### Community 359 - "Community 359"
 Cohesion: 0.33
-Nodes (6): L80, out_steps, read_steps, rst_steps, set_steps, type
+Nodes (6): L0, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 360 - "Community 360"
 Cohesion: 0.33
-Nodes (6): L81, out_steps, read_steps, rst_steps, set_steps, type
+Nodes (6): 12. Interlock, EMG-Level Stops, L1 Interlock (AND chain M00050), L1 Interlock (AND chain M80), L2 Interlock (AND chain M0005A), L2 Interlock (AND chain M90)
 
 ### Community 361 - "Community 361"
-Cohesion: 0.33
-Nodes (6): L82, out_steps, read_steps, rst_steps, set_steps, type
+Cohesion: 0.15
+Nodes (13): L69, L82, device_map, out_steps, read_steps, rst_steps, set_steps, type (+5 more)
 
 ### Community 362 - "Community 362"
 Cohesion: 0.33
@@ -1983,11 +1992,11 @@ Nodes (6): L83, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 363 - "Community 363"
 Cohesion: 0.33
-Nodes (6): L84, out_steps, read_steps, rst_steps, set_steps, type
+Nodes (6): 13. Injection Quantity, Barcode Not Used (M00208=OFF), Barcode Not Used (M520=OFF), Barcode Used (M00208=ON, power-on default), Barcode Used (M520=ON, power-on default), Model Table (25 models per gun, 9 words/row)
 
 ### Community 364 - "Community 364"
-Cohesion: 0.33
-Nodes (6): L85, out_steps, read_steps, rst_steps, set_steps, type
+Cohesion: 0.50
+Nodes (4): 4-1. Function 버튼 동작, 4-2. HMI Lamp 매핑, 4-3. READY 플래그 (M502~M509), 4. Manual Mode 상세 — READY-START 2단계
 
 ### Community 365 - "Community 365"
 Cohesion: 0.33
@@ -1999,19 +2008,15 @@ Nodes (6): L97, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 367 - "Community 367"
 Cohesion: 0.33
-Nodes (6): L99, out_steps, read_steps, rst_steps, set_steps, type
+Nodes (6): L113, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 368 - "Community 368"
-Cohesion: 0.33
-Nodes (6): M0, out_steps, read_steps, rst_steps, set_steps, type
+Cohesion: 0.67
+Nodes (3): 3. Step Machine, Solenoid Activation by Step, Step OK/Fail Flags
 
 ### Community 369 - "Community 369"
 Cohesion: 0.33
 Nodes (6): M1024, out_steps, read_steps, rst_steps, set_steps, type
-
-### Community 370 - "Community 370"
-Cohesion: 0.33
-Nodes (6): M1025, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 371 - "Community 371"
 Cohesion: 0.33
@@ -2023,11 +2028,11 @@ Nodes (6): M1033, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 373 - "Community 373"
 Cohesion: 0.33
-Nodes (6): M1038, out_steps, read_steps, rst_steps, set_steps, type
+Nodes (6): L38, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 374 - "Community 374"
 Cohesion: 0.33
-Nodes (6): M1039, out_steps, read_steps, rst_steps, set_steps, type
+Nodes (6): L80, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 375 - "Community 375"
 Cohesion: 0.33
@@ -2035,7 +2040,7 @@ Nodes (6): M1040, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 376 - "Community 376"
 Cohesion: 0.33
-Nodes (6): M1041, out_steps, read_steps, rst_steps, set_steps, type
+Nodes (6): L81, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 377 - "Community 377"
 Cohesion: 0.33
@@ -2075,7 +2080,7 @@ Nodes (6): M19, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 386 - "Community 386"
 Cohesion: 0.33
-Nodes (6): M21, out_steps, read_steps, rst_steps, set_steps, type
+Nodes (6): L84, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 387 - "Community 387"
 Cohesion: 0.33
@@ -2123,11 +2128,11 @@ Nodes (6): T3, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 398 - "Community 398"
 Cohesion: 0.33
-Nodes (6): meta, block_count, cpu, generated, source_file, total_steps
+Nodes (6): L85, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 399 - "Community 399"
-Cohesion: 0.33
-Nodes (6): out_steps, read_steps, rst_steps, set_steps, type, D124
+Cohesion: 0.29
+Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D124, read_steps
 
 ### Community 400 - "Community 400"
 Cohesion: 0.33
@@ -2210,12 +2215,12 @@ Cohesion: 0.33
 Nodes (6): T3, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 420 - "Community 420"
-Cohesion: 0.33
-Nodes (6): T5, out_steps, read_steps, rst_steps, set_steps, type
+Cohesion: 0.18
+Nodes (10): blocks, T5, device_map, out_steps, read_steps, rst_steps, set_steps, type (+2 more)
 
 ### Community 421 - "Community 421"
-Cohesion: 0.33
-Nodes (6): T6, out_steps, read_steps, rst_steps, set_steps, type
+Cohesion: 0.29
+Nodes (7): T6, set_steps, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 422 - "Community 422"
 Cohesion: 0.33
@@ -2246,20 +2251,20 @@ Cohesion: 0.33
 Nodes (6): L75, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 429 - "Community 429"
-Cohesion: 0.33
-Nodes (6): L114, out_steps, read_steps, rst_steps, set_steps, type
+Cohesion: 0.25
+Nodes (8): L114, T1, device_map, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 430 - "Community 430"
-Cohesion: 0.33
-Nodes (6): L18, out_steps, read_steps, rst_steps, set_steps, type
+Cohesion: 0.29
+Nodes (7): L18, out_steps, read_steps, rst_steps, set_steps, type, type
 
 ### Community 431 - "Community 431"
 Cohesion: 0.33
 Nodes (6): L34, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 432 - "Community 432"
-Cohesion: 0.33
-Nodes (6): L35, out_steps, read_steps, rst_steps, set_steps, type
+Cohesion: 0.29
+Nodes (7): L35, out_steps, read_steps, rst_steps, set_steps, type, out_steps
 
 ### Community 433 - "Community 433"
 Cohesion: 0.33
@@ -2314,28 +2319,28 @@ Cohesion: 0.33
 Nodes (6): M789, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 446 - "Community 446"
-Cohesion: 0.33
-Nodes (6): meta, block_count, cpu, generated, source_file, total_steps
+Cohesion: 0.24
+Nodes (9): blocks, meta, block_count, cpu, generated, source_file, total_steps, test_cases (+1 more)
 
 ### Community 447 - "Community 447"
-Cohesion: 0.33
-Nodes (6): out_steps, read_steps, rst_steps, set_steps, type, D172
+Cohesion: 0.29
+Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D172, type
 
 ### Community 448 - "Community 448"
 Cohesion: 0.33
 Nodes (6): out_steps, read_steps, rst_steps, set_steps, type, D304
 
 ### Community 449 - "Community 449"
-Cohesion: 0.33
-Nodes (6): out_steps, read_steps, rst_steps, set_steps, type, D306
+Cohesion: 0.29
+Nodes (7): out_steps, read_steps, rst_steps, set_steps, type, D306, read_steps
 
 ### Community 450 - "Community 450"
 Cohesion: 0.33
 Nodes (6): L20, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 451 - "Community 451"
-Cohesion: 0.33
-Nodes (6): L21, out_steps, read_steps, rst_steps, set_steps, type
+Cohesion: 0.25
+Nodes (8): L21, T2, out_steps, read_steps, rst_steps, set_steps, type, out_steps
 
 ### Community 452 - "Community 452"
 Cohesion: 0.33
@@ -2362,12 +2367,12 @@ Cohesion: 0.33
 Nodes (6): M791, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 458 - "Community 458"
-Cohesion: 0.33
-Nodes (6): meta, block_count, cpu, generated, source_file, total_steps
+Cohesion: 0.24
+Nodes (9): blocks, meta, block_count, cpu, generated, source_file, total_steps, test_cases (+1 more)
 
 ### Community 459 - "Community 459"
-Cohesion: 0.40
-Nodes (4): Communication, graphify, Project Conventions, Work Mode
+Cohesion: 0.33
+Nodes (5): Communication, CSV → MD/JSON Conversion, graphify, Project Conventions, Work Mode
 
 ### Community 460 - "Community 460"
 Cohesion: 0.50
@@ -2382,32 +2387,36 @@ Cohesion: 0.40
 Nodes (5): 3-4. D Device 요약 (Data Register), Configuration (D270~D278), Parameter — Line 0 (D0~D29), Parameter — Line 1 (D30~D59), User Settings — Gun당 14 words (D60~D115)
 
 ### Community 463 - "Community 463"
-Cohesion: 0.40
-Nodes (4): blocks, device_map, test_cases, warnings
+Cohesion: 0.33
+Nodes (6): M0, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 464 - "Community 464"
-Cohesion: 0.67
-Nodes (4): SPC Accumulation (Total Usage, Count, Pulse per Line), Bombe Alarm (Usage ≥ Setting → L4B), spc.csv — SPC Data Accumulation, SPC Accumulator Registers (D280~D299)
+Cohesion: 0.38
+Nodes (7): PC Barcode Data Flow (D7000/D7001 Write, D7012/D7015 Read), Barcode Model Lookup (Preset Table Comparison), setting.csv — Parameter and Configuration Management, SPC Accumulation (Total Usage, Count, Pulse per Line), Bombe Alarm (Usage ≥ Setting → L4B), spc.csv — SPC Data Accumulation, SPC Accumulator Registers (D280~D299)
 
 ### Community 465 - "Community 465"
 Cohesion: 0.50
 Nodes (4): 14. Official Manual Reference & List Mode Format, code:block20 ([List Mode]), Extended Instruction Set, List Mode (IL) Column Mapping
 
 ### Community 466 - "Community 466"
-Cohesion: 0.50
-Nodes (4): 1-1. Display Items, 1-2. Labels, 1-3. Buttons, 1. Operation Screen
+Cohesion: 0.33
+Nodes (6): M1025, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 467 - "Community 467"
-Cohesion: 0.50
-Nodes (4): 7-1. Door Limit Sensor (방폭 전용), 7-2. Current Behavior, 7-3. Mapping, 7. Explosion-Proof / Non-Explosion-Proof Configuration
+Cohesion: 0.33
+Nodes (6): M1038, out_steps, read_steps, rst_steps, set_steps, type
 
 ### Community 468 - "Community 468"
-Cohesion: 0.50
+Cohesion: 0.40
 Nodes (4): OpenCode Package Configuration, dependencies, @kilocode/plugin, @opencode-ai/plugin
 
 ### Community 469 - "Community 469"
-Cohesion: 1.00
-Nodes (3): Background Task State Tracking, Omo Run Continuation Session State, Sisyphus Run Continuation Session State
+Cohesion: 0.33
+Nodes (6): M1041, out_steps, read_steps, rst_steps, set_steps, type
+
+### Community 485 - "Community 485"
+Cohesion: 0.33
+Nodes (6): M20, out_steps, read_steps, rst_steps, set_steps, type
 
 ## Ambiguous Edges - Review These
 - `Line 1 (라인1)` → `인터락 미사용 (Interlock Not Used) Button`  [AMBIGUOUS]
@@ -2416,9 +2425,9 @@ Nodes (3): Background Task State Tracking, Omo Run Continuation Session State, S
    · relation: safety_override
 
 ## Knowledge Gaps
-- **2591 isolated node(s):** `sessionID`, `state`, `updatedAt`, `sessionID`, `state` (+2586 more)
+- **2736 isolated node(s):** `@opencode-ai/plugin`, `source_file`, `cpu`, `total_steps`, `block_count` (+2731 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **14 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **18 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
@@ -2427,13 +2436,13 @@ _Questions this graph is uniquely positioned to answer:_
   _Edge tagged AMBIGUOUS (relation: safety_override) - confidence is low._
 - **What is the exact relationship between `Line 2 (라인2)` and `인터락 미사용 (Interlock Not Used) Button`?**
   _Edge tagged AMBIGUOUS (relation: safety_override) - confidence is low._
-- **Why does `MAIN.md — Step Machine, Mode Control, Lamps` connect `Subsystem Components` to `Community 72`, `Community 57`, `Community 60`, `Core PLC Architecture`?**
-  _High betweenness centrality (0.229) - this node is a cross-community bridge._
-- **Why does `device_map` connect `Community 49` to `Community 384`, `Community 385`, `Community 386`, `Community 387`, `Community 388`, `Community 389`, `Community 390`, `Community 391`, `Community 392`, `Community 393`, `Community 394`, `Community 395`, `Community 396`, `Community 397`, `Community 34`, `Community 37`, `Community 50`, `Community 51`, `Community 52`, `Community 53`, `Community 54`, `Community 331`, `Community 332`, `Community 333`, `Community 334`, `Community 335`, `Community 336`, `Community 337`, `Community 338`, `Community 339`, `Community 340`, `Community 341`, `Community 342`, `Community 343`, `Community 344`, `Community 345`, `Community 346`, `Community 347`, `Community 348`, `Community 349`, `Community 350`, `Community 351`, `Community 352`, `Community 353`, `Community 354`, `Community 355`, `Community 356`, `Community 357`, `Community 358`, `Community 359`, `Community 360`, `Community 361`, `Community 362`, `Community 363`, `Community 364`, `Community 365`, `Community 366`, `Community 367`, `Community 368`, `Community 369`, `Community 370`, `Community 371`, `Community 372`, `Community 373`, `Community 374`, `Community 375`, `Community 376`, `Community 377`, `Community 378`, `Community 379`, `Community 380`, `Community 381`, `Community 382`, `Community 383`?**
-  _High betweenness centrality (0.175) - this node is a cross-community bridge._
-- **Why does `485.md — Self-Holding (Placeholder)` connect `Community 57` to `Community 64`, `Device Map Documentation`, `Subsystem Components`?**
-  _High betweenness centrality (0.152) - this node is a cross-community bridge._
-- **What connects `sessionID`, `state`, `updatedAt` to the rest of the system?**
-  _2626 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `HMI Screen & Machine Controls` be split into smaller, more focused modules?**
+- **Why does `MAIN.md — Step Machine, Mode Control, Lamps` connect `Community 91` to `Community 217`, `Community 263`, `Community 458`, `Community 60`, `Community 246`, `Community 57`, `Community 92`, `Community 446`?**
+  _High betweenness centrality (0.273) - this node is a cross-community bridge._
+- **Why does `Device Map` connect `Community 331` to `Community 384`, `Community 385`, `Community 386`, `Community 387`, `Community 388`, `Community 389`, `Community 390`, `Community 391`, `Community 392`, `Community 393`, `Community 394`, `Community 395`, `Community 396`, `Community 397`, `Community 398`, `Community 278`, `Community 280`, `Community 283`, `Community 287`, `Community 34`, `Community 37`, `Community 293`, `Community 49`, `Community 50`, `Community 51`, `Community 52`, `Community 53`, `Community 54`, `Community 469`, `Community 332`, `Community 333`, `Community 463`, `Community 336`, `Community 337`, `Community 338`, `Community 339`, `Community 340`, `Community 341`, `Community 342`, `Community 343`, `Community 344`, `Community 345`, `Community 466`, `Community 467`, `Community 348`, `Community 349`, `Community 350`, `Community 351`, `Community 353`, `Community 354`, `Community 355`, `Community 356`, `Community 485`, `Community 230`, `Community 359`, `Community 361`, `Community 362`, `Community 365`, `Community 366`, `Community 367`, `Community 369`, `Community 371`, `Community 372`, `Community 373`, `Community 374`, `Community 375`, `Community 376`, `Community 377`, `Community 378`, `Community 379`, `Community 380`, `Community 381`, `Community 382`, `Community 383`?**
+  _High betweenness centrality (0.192) - this node is a cross-community bridge._
+- **Why does `485.md — Self-Holding (Placeholder)` connect `Community 57` to `Community 26`, `Community 91`?**
+  _High betweenness centrality (0.178) - this node is a cross-community bridge._
+- **What connects `@opencode-ai/plugin`, `source_file`, `cpu` to the rest of the system?**
+  _2771 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.05405405405405406 - nodes in this community are weakly interconnected._

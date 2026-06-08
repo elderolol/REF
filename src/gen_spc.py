@@ -1,4 +1,4 @@
-﻿# SPC ??Cycle done accumulation + VAC SPC logging
+# SPC ??Cycle done accumulation + VAC SPC logging
 st = 0; lines = []
 def a(i,d): global st; lines.append(f'"{st}"\t""\t"{i}"\t"{d}"\t""\t""\t""'); st += 1
 def ac(d): lines.append(f'""\t""\t""\t"{d}"\t""\t""\t""')
@@ -52,5 +52,5 @@ a("FMOV", "K0"); ac("D7020"); ac("K200")
 a("FMOV", "K0"); ac("D8020"); ac("K200")
 
 a("END","")
-wr("F:\\WorkSpace\\REF\\src\\spc.csv")
+wr("C:\\WorkSpace\\REF\\src\\spc.csv")
 

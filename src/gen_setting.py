@@ -1,4 +1,4 @@
-# SETTING — Config sync, line count, operating mode, HMI parameters
+# SETTING ??Config sync, line count, operating mode, HMI parameters
 st = 0; lines = []
 def a(i,d): global st; lines.append(f'"{st}"\t""\t"{i}"\t"{d}"\t""\t""\t""'); st += 1
 def ac(d): lines.append(f'""\t""\t""\t"{d}"\t""\t""\t""')
@@ -24,4 +24,4 @@ a("LD","M0"); a("MOV","D26"); ac("D26")   # L2 vac check time
 a("LD","M0"); a("MOV","D28"); ac("D28")   # L2 exhaust time
 
 a("END","")
-wr("F:\\WorkSpace\\REF\\src\\setting.csv")
+wr("C:\\WorkSpace\\REF\\src\\setting.csv")

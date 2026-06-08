@@ -1,7 +1,7 @@
 # REF_DOCUMENT
 
-> **PLC**: QCPU (Q mode) Q03UDV | **Tool**: GX Works2 IL | **HMI**: LS IXP2-1200
-> **Re-planned**: OPERATION_SCENARIO.md (Session 1, 2026-06-05)
+> **PLC**: XGK-CPUE | **Tool**: XG5000 IL | **HMI**: LS IXP2-1200
+> **Re-planned**: OPERATION_SCENARIO.md (Session 1, 2026-06-05) | **XG5000 갱신**: 2026-06-08
 
 ---
 
@@ -14,17 +14,17 @@ Serial operation — one gun active at a time. Gun select determines active line
 
 | | GUN A (L1) | GUN B (L2) | Shared |
 |---|:---:|:---:|:---:|
-| VAC SOL | M60 | M70 | — |
-| STEM SOL | M61 | M71 | — |
-| REFRIG FAST SOL | M62 | M72 | — |
-| REFRIG BASE SOL | M63 | M73 | — |
-| EXHAUST SOL | M64 | M74 | — |
-| OIL FAST SOL | M65 | M75 | — |
-| OIL BASE SOL | M66 | M76 | — |
-| VACUUM PUMP | — | — | M67 |
-| LINE VAC SOL (N/O) | — | — | M68 |
-| BUZZER | — | — | M69 |
-| LAMPS (G/R/Y) | — | — | M77/M78/M79 |
+| VAC SOL | M0003C | M00046 | — |
+| STEM SOL | M0003D | M00047 | — |
+| REFRIG FAST SOL | M0003E | M00048 | — |
+| REFRIG BASE SOL | M0003F | M00049 | — |
+| EXHAUST SOL | M00040 | M0004A | — |
+| OIL FAST SOL | M00041 | M0004B | — |
+| OIL BASE SOL | M00042 | M0004C | — |
+| VACUUM PUMP | — | — | M00043 |
+| LINE VAC SOL (N/O) | — | — | M00044 |
+| BUZZER | — | — | M00045 |
+| LAMPS (G/R/Y) | — | — | M0004D/M0004E/M0004F |
 
 ---
 
@@ -32,21 +32,21 @@ Serial operation — one gun active at a time. Gun select determines active line
 
 | Step | L1 | L2 | L3 | Solenoid Active |
 |------|:--:|:--:|:--:|----------------|
-| IDLE | M10 | M30 | M50 | — |
-| PRECHECK | M11 | M31 | — | interlock, model>0, target>0 |
-| GUN VAC | M12 | M32 | — | VAC SOL, timer only |
-| UNIT VAC | M13 | M33 | — | VAC+STEM SOL, vac≤setting |
-| VAC CHECK | M14 | M34 | — | VAC+STEM+LINE VAC, Δvac check |
-| OIL FAST | — | — | M51 | OIL FAST+BASE, HSC≥fast_stop |
-| OIL BASE | — | — | M52 | OIL BASE, HSC≥target |
-| REFRIG FAST | M15 | M35 | — | FAST+BASE, HSC≥fast_stop |
-| REFRIG BASE | M16 | M36 | — | BASE, HSC≥target |
-| EXHAUST | M17 | M37 | — | EXHAUST SOL, timer |
-| COMPLETE | M18 | M38 | M53 | SPC, result K1→IDLE |
+| IDLE | M0000A | M0001E | M00032 | — |
+| PRECHECK | M0000B | M0001F | — | interlock, model>0, target>0 |
+| GUN VAC | M0000C | M00020 | — | VAC SOL, timer only |
+| UNIT VAC | M0000D | M00021 | — | VAC+STEM SOL, vac≤setting |
+| VAC CHECK | M0000E | M00022 | — | VAC+STEM+LINE VAC, Δvac check |
+| OIL FAST | — | — | M00033 | OIL FAST+BASE, HSC≥fast_stop |
+| OIL BASE | — | — | M00034 | OIL BASE, HSC≥target |
+| REFRIG FAST | M0000F | M00023 | — | FAST+BASE, HSC≥fast_stop |
+| REFRIG BASE | M00010 | M00024 | — | BASE, HSC≥target |
+| EXHAUST | M00011 | M00025 | — | EXHAUST SOL, timer |
+| COMPLETE | M00012 | M00026 | M00035 | SPC, result 1→IDLE |
 
-- **Warmup**: T0 0.5s before every step entry (auto mode only)
+- **Warmup**: T0000 0.5s before every step entry (auto mode only)
 - **Rung order**: COMPLETE→EXHAUST→...→IDLE (release before released)
-- Offset: L1→L2 +20, L1→L3 +40
+- Offset: L1→L2 +20 (hex +0x14), L1→L3 +40 (hex +0x28)
 
 ---
 
@@ -56,45 +56,45 @@ Serial operation — one gun active at a time. Gun select determines active line
 
 | Setting | Value | Flag |
 |---------|:-----:|------|
-| Mode | MANUAL | M200 |
-| Gun | A | M210 |
-| Barcode | Used | M520 |
-| Oil+Refrig | Enabled | M521 |
-| Interlock | Used | M522 |
-| Steps | IDLE | M10/M30/M50 |
+| Mode | MANUAL | M000C8 |
+| Gun | A | M000D2 |
+| Barcode | Used | M00208 |
+| Oil+Refrig | Enabled | M00209 |
+| Interlock | Used | M0020A |
+| Steps | IDLE | M0000A/M0001E/M00032 |
 
 ## Mode Control
 
-- **M402**: AUTO/MANUAL toggle (IDLE only). SET/RST flip-flop
-- **M400/M401**: GUN A/B select (IDLE only)
-- **M415**: OIL+REFRIG enable toggle
-- **M413**: INTERLOCK USE/NOT USE toggle (door bypass)
+- **M00192**: AUTO/MANUAL toggle (IDLE only). SET/RST flip-flop
+- **M00190/M00191**: GUN A/B select (IDLE only)
+- **M0019F**: OIL+REFRIG enable toggle
+- **M0019D**: INTERLOCK USE/NOT USE toggle (door bypass)
 
-## Auto Mode (M201)
+## Auto Mode (M000C9)
 
 ```
-START → [T0 0.5s] → PRECHECK → [T0] → GUN VAC → [T0] → UNIT VAC → [T0]
-→ VAC CHECK → [T0] → (M521&D18>0: OIL FAST→BASE→COMPLETE → [T0])
-→ REFRIG FAST → REFRIG BASE → [T0] → EXHAUST → COMPLETE → IDLE
+START → [T0000 0.5s] → PRECHECK → [T0000] → GUN VAC → [T0000] → UNIT VAC → [T0000]
+→ VAC CHECK → [T0000] → (M00209&D00018>0: OIL FAST→BASE→COMPLETE → [T0000])
+→ REFRIG FAST → REFRIG BASE → [T0000] → EXHAUST → COMPLETE → IDLE
 ```
 
-- Warmup chain (M460-M469): auto mode only, M201 guarded
-- Stopwatch (D244): starts on auto START, stops on IDLE
+- Warmup chain (M001CC-M001D5): auto mode only, M000C9 guarded
+- Stopwatch (D00244): starts on auto START, stops on IDLE
 
-## Manual Mode (M200)
+## Manual Mode (M000C8)
 
 | Button | + START | Step |
 |--------|---------|------|
-| GUN VAC (M403) | — | M12 or M32 |
-| UNIT VAC (M404) | — | M13 or M33 |
-| VAC CHECK (M405) | — | M14 or M34 |
-| REFRIG INJ (M406) | — | M15→M16→EXHAUST→COMPLETE |
-| OIL INJ (M407) | — | M51→M52→M53 |
+| GUN VAC (M00193) | — | M0000C or M00020 |
+| UNIT VAC (M00194) | — | M0000D or M00021 |
+| VAC CHECK (M00195) | — | M0000E or M00022 |
+| REFRIG INJ (M00196) | — | M0000F→M00010→EXHAUST→COMPLETE |
+| OIL INJ (M00197) | — | M00033→M00034→M00035 |
 
 - READY toggle (press again to cancel)
-- Single step only (warmup chain blocked by M201)
-- REFRIG INJ/OIL INJ blocked when barcode used (M520)
-- OIL INJ blocked when M521 OFF
+- Single step only (warmup chain blocked by M000C9)
+- REFRIG INJ/OIL INJ blocked when barcode used (M00208)
+- OIL INJ blocked when M00209 OFF
 
 ---
 
@@ -102,25 +102,25 @@ START → [T0 0.5s] → PRECHECK → [T0] → GUN VAC → [T0] → UNIT VAC → 
 
 | Button | Device | Function |
 |--------|:-----:|----------|
-| GUN A | M400 | Gun select |
-| GUN B | M401 | Gun select |
-| AUTO/MANUAL | M402 | Mode toggle |
-| GUN VACUUM | M403 | Manual function |
-| UNIT VACUUM | M404 | Manual function |
-| VACUUM CHECK | M405 | Manual function |
-| REFRIG INJ | M406 | Manual function |
-| OIL INJ | M407 | Manual function |
-| START | M408 | Initiate |
-| STOP | M409 | Halt → EXHAUST → IDLE |
-| ALARM RESET | M410 | Clear latches + unmute |
-| BUZZER STOP | M411 | Mute buzzer |
-| VAC PUMP ON/OFF | M412 | Toggle vacuum pump |
-| INTERLOCK EN | M413 | Door interlock toggle (M522) |
-| L1 COUNT RESET | M414 | D240 = 0 |
-| OIL+REFRIG EN | M415 | Oil enable toggle (M521) |
-| L2 COUNT RESET | M416 | D242 = 0 |
-| L1 USAGE RESET | M417 | D200-D201 = 0 |
-| L2 USAGE RESET | M418 | D220-D221 = 0 |
+| GUN A | M00190 | Gun select |
+| GUN B | M00191 | Gun select |
+| AUTO/MANUAL | M00192 | Mode toggle |
+| GUN VACUUM | M00193 | Manual function |
+| UNIT VACUUM | M00194 | Manual function |
+| VACUUM CHECK | M00195 | Manual function |
+| REFRIG INJ | M00196 | Manual function |
+| OIL INJ | M00197 | Manual function |
+| START | M00198 | Initiate |
+| STOP | M00199 | Halt → EXHAUST → IDLE |
+| ALARM RESET | M0019A | Clear latches + unmute |
+| BUZZER STOP | M0019B | Mute buzzer |
+| VAC PUMP ON/OFF | M0019C | Toggle vacuum pump |
+| INTERLOCK EN | M0019D | Door interlock toggle (M0020A) |
+| L1 COUNT RESET | M0019E | D00240 = 0 |
+| OIL+REFRIG EN | M0019F | Oil enable toggle (M00209) |
+| L2 COUNT RESET | M001A0 | D00242 = 0 |
+| L1 USAGE RESET | M001A1 | D00200-D00201 = 0 |
+| L2 USAGE RESET | M001A2 | D00220-D00221 = 0 |
 
 ---
 
@@ -130,7 +130,7 @@ START → [T0 0.5s] → PRECHECK → [T0] → GUN VAC → [T0] → UNIT VAC → 
 
 | | GUN A | GUN B |
 |---|:---:|:---:|
-| Base | D300-D524 | D550-D774 |
+| Base | D00300-D00524 | D00550-D00774 |
 | Stride | 9 words | 9 words |
 
 Row layout: `Model# (16) | Refrig Target (32) | Refrig Correction (16) | Refrig Display Corr (16) | Oil Target (32) | Oil Correction (16) | Oil Display Corr (16)`
@@ -138,12 +138,12 @@ Row layout: `Model# (16) | Refrig Target (32) | Refrig Correction (16) | Refrig 
 ## Barcode Flow
 
 ```
-PC → D6980-D6999 (L1) / D7980-D7999 (L2)   ← PC writes barcode
-PLC → BMOV D6980 D7220 K20                  ← Copy to HMI display area
-    → M520=ON: D7001 target → table scan → D0/D32 model#
-    → M520=OFF: user sets D0/D32 directly
-    → D12/D44 (final refrig target), D18/D50 (final oil target)
-Cycle end → FMOV K0 D6980 K20, clear D7000/D7001
+PC → D06980-D06999 (L1) / D07980-D07999 (L2)   ← PC writes barcode
+PLC → BMOV D06980 D07220 20                      ← Copy to HMI display area
+    → M00208=ON: D07001 target → table scan → D00000/D00032 model#
+    → M00208=OFF: user sets D00000/D00032 directly
+    → D00012/D00044 (final refrig target), D00018/D00050 (final oil target)
+Cycle end → FMOV 0 D06980 20, clear D07000/D07001
 ```
 
 ---
@@ -152,10 +152,10 @@ Cycle end → FMOV K0 D6980 K20, clear D7000/D7001
 
 | Action | Trigger | Behavior |
 |--------|---------|----------|
-| STOP | M409 | M450/M451 latch → RST steps → EXHAUST → IDLE |
+| STOP | M00199 | M001C2/M001C3 latch → RST steps → EXHAUST → IDLE |
 | NG Alarm | vac NG/TO/leak | Same as STOP |
-| EMG | M770 N/C OPEN | M452 self-hold → all RST → M410 manual reset |
-| Interlock fail | vac step + M80/M90 OFF | RST step → EXHAUST |
+| EMG | M00302 N/C OPEN | M001C4 self-hold → all RST → M0019A manual reset |
+| Interlock fail | vac step + M00050/M0005A OFF | RST step → EXHAUST |
 
 ---
 
@@ -163,19 +163,24 @@ Cycle end → FMOV K0 D6980 K20, clear D7000/D7001
 
 | Shared | L1 | L2 | L3 Oil |
 |--------|------|------|--------|
-| M300 EMG | M310 GUN TO | M330 GUN TO | M350 OIL TO |
-| M301 DOOR* | M311 UNIT TO | M331 UNIT TO | M351 OVER |
-| M302 BOMBE | M312 VAC LEAK | M332 VAC LEAK | M352 UNDER |
-| M303 PUMP | M313 INJ TO | M333 INJ TO | |
-| | M314 OVER | M334 OVER | |
-| | M315 UNDER | M335 UNDER | |
-| | M316-M320 | M336-M340 | |
+| M0012C EMG | M00136 GUN TO | M0014A GUN TO | M0015E OIL TO |
+| M0012D DOOR* | M00137 UNIT TO | M0014B UNIT TO | M0015F OVER |
+| M0012F PUMP | M00138 VAC LEAK | M0014C VAC LEAK | M00160 UNDER |
+| M00130 HYDRO TRIP | M00139 INJ TO | M0014D INJ TO | |
+| | M0013A OVER | M0014E OVER | |
+| | M0013B UNDER | M0014F UNDER | |
+| | M0013C PRES↑ | M00150 PRES↑ | |
+| | M0013D PRES↓ | M00151 PRES↓ | |
+| | M0013E TEMP NG | M00152 TEMP NG | |
+| | M0013F MODEL=0 | M00153 MODEL=0 | |
+| | M00140 TARGET=0 | M00154 TARGET=0 | |
+| | M00141 BOMBE LOW | M00155 BOMBE LOW | |
 
-\* M301 gated by M522 (interlock enable)
+\* M0012D gated by M0020A (interlock enable)
 
-- All self-holding: `LD trigger OR self ANI M410`
-- Buzzer (M69): any alarm AND NOT M500(mute)
-- Lamps: M77(G=run), M78(R=alarm), M79(Y=idle+!interlock)
+- All self-holding: `LOAD trigger OR self AND NOT M0019A`
+- Buzzer (M00045): any alarm AND NOT M001F4(mute)
+- Lamps: M0004D(G=run), M0004E(R=alarm), M0004F(Y=idle+!interlock)
 
 ---
 
@@ -183,52 +188,52 @@ Cycle end → FMOV K0 D6980 K20, clear D7000/D7001
 
 | Item | L1 | L2 |
 |------|----|----|
-| Cumulative usage | D200-D201 | D220-D221 |
-| Cycle count | D202 | D222 |
-| Cumulative inj amount | D204-D205 | D224-D225 |
-| Total injection count | D240 | D242 |
-| Bombe alarm setting | D210-D211 | D230-D231 |
-| VAC SPC log | D7020-D7219 | D8020-D8219 |
-| Stopwatch | D244 (shared, 0.1sec) | |
+| Cumulative usage | D00200-D00201 | D00220-D00221 |
+| Cycle count | D00202 | D00222 |
+| Cumulative inj amount | D00204-D00205 | D00224-D00225 |
+| Total injection count | D00240 | D00242 |
+| Bombe alarm setting | D00210-D00211 | D00230-D00231 |
+| VAC SPC log | D07020-D07219 | D08020-D08219 |
+| Stopwatch | D00244 (shared, 0.1sec) | |
 
 ---
 
-# 9. D-Register Map (32-bit ready, L1 D0-D31 / L2 D32-D63)
+# 9. D-Register Map (32-bit ready, L1 D00000-D00031 / L2 D00032-D00063)
 
 | Parameter | L1 | L2 | Unit |
 |-----------|:--:|:--:|------|
-| Model# | D0 | D32 | — |
-| Gun vac time | D2 | D34 | sec |
-| Unit vac time | D4 | D36 | sec |
-| Vac check time | D6 | D38 | sec |
-| Exhaust time | D8 | D40 | sec |
-| Refrig fast stop | D10-D11 | D42-D43 | g |
-| Refrig target | D12-D13 | D44-D45 | g |
-| Refrig tolerance | D14 | D46 | g |
-| Oil fast stop | D16-D17 | D48-D49 | g |
-| Oil target | D18-D19 | D50-D51 | g |
-| Oil tolerance | D20 | D52 | g |
-| Unit vac setting | D22 | D54 | Torr |
-| Vac check setting | D24 | D56 | delta |
-| Pressure | D26 | D58 | — |
-| Temperature | D28 | D60 | — |
-| Vacuum | D30-D31 | D62-D63 | Torr |
+| Model# | D00000 | D00032 | — |
+| Gun vac time | D00002 | D00034 | sec |
+| Unit vac time | D00004 | D00036 | sec |
+| Vac check time | D00006 | D00038 | sec |
+| Exhaust time | D00008 | D00040 | sec |
+| Refrig fast stop | D00010-D00011 | D00042-D00043 | g |
+| Refrig target | D00012-D00013 | D00044-D00045 | g |
+| Refrig tolerance | D00014 | D00046 | g |
+| Oil fast stop | D00016-D00017 | D00048-D00049 | g |
+| Oil target | D00018-D00019 | D00050-D00051 | g |
+| Oil tolerance | D00020 | D00052 | g |
+| Unit vac setting | D00022 | D00054 | Torr |
+| Vac check setting | D00024 | D00056 | delta |
+| Pressure | D00026 | D00058 | — |
+| Temperature | D00028 | D00060 | — |
+| Vacuum | D00030-D00031 | D00062-D00063 | Torr |
 
 ---
 
-# 10. File Map (12 CSV)
+# 10. File Map (12 .il)
 
 | File | Content |
 |------|---------|
-| MAIN.csv | Step machine, mode, gun, ready, stop/emg, interlock, lamps, stopwatch |
-| alarm.csv | Alarm latches (shared+L1+L2+L3), buzzer, mute |
-| refinj.csv | Refrig injection (H+L): FAST→BASE→EXHAUST |
-| oilinj.csv | Oil injection (per-gun): FAST→BASE→COMPLETE |
-| gunvac.csv | Gun vacuum: VAC SOL, timer (no vacuum check) |
-| unitvac.csv | Unit vacuum: VAC+STEM SOL, timer, vac≤setting |
-| vacchec.csv | Vacuum check: VAC+STEM+LINE VAC ON, Δvac check |
-| gmes.csv | PC communication + SPC + counters |
-| indexs.csv | Barcode copy + model lookup |
-| ad.csv | Analog EU scaling (placeholder) |
-| idata.csv | I/O mapping (X→M, M→Y), HMI button buffer |
-| setting.csv | Config sync (placeholder for future expansion) |
+| MAIN.il | Step machine, mode, gun, ready, stop/emg, interlock, lamps, stopwatch |
+| alarm.il | Alarm latches (shared+L1+L2+L3), buzzer, mute |
+| refinj.il | Refrig injection (H+L): FAST→BASE→EXHAUST |
+| oilinj.il | Oil injection (per-gun): FAST→BASE→COMPLETE |
+| gunvac.il | Gun vacuum: VAC SOL, timer (no vacuum check) |
+| unitvac.il | Unit vacuum: VAC+STEM SOL, timer, vac≤setting |
+| vacchec.il | Vacuum check: VAC+STEM+LINE VAC ON, Δvac check |
+| gmes.il | PC communication + SPC + counters |
+| indexs.il | Barcode copy + model lookup |
+| ad.il | Analog EU scaling (placeholder) |
+| idata.il | I/O mapping (P→M, M→P), HMI button buffer |
+| setting.il | Config sync (placeholder for future expansion) |

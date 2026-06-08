@@ -95,7 +95,7 @@ a("LD","M612"); a("AND","T0"); a("AND","M211"); a("RST","M222"); a("SET","M34");
 a("LD","M613"); a("AND","T0"); a("AND","M210"); a("RST","M223"); a("SET","M15"); a("RST","M453")
 a("LD","M613"); a("AND","T0"); a("AND","M211"); a("RST","M223"); a("SET","M35"); a("RST","M453")
 # OIL INJ (L3 chain, only if M521 enabled)
-a("LD","M614"); a("AND","T0"); a("AND","M521"); a("RST","M224"); a("SET","M51"); a("RST","M453")
+a("LD","M614"); a("AND","T0"); a("AND","M521"); a("ANI","M304"); a("RST","M224"); a("SET","M51"); a("RST","M453")
 
 # === AUTO START → PRECHECK ===
 al("AUTO START")
@@ -138,9 +138,9 @@ a("ORB","")
 a("SET","M463")
 a("LD","M463"); a("OUT","T0"); ac("K5")
 a("LD","M463"); a("AND","T0"); a("AND","M210"); a("AND","M521"); a("LDD>=","D18"); ac("K1")
-a("SET","M51"); a("RST","M14"); a("RST","M463")
+a("ANI","M304"); a("SET","M51"); a("RST","M14"); a("RST","M463")
 a("LD","M463"); a("AND","T0"); a("AND","M211"); a("AND","M521"); a("LDD>=","D50"); ac("K1")
-a("SET","M51"); a("RST","M34"); a("RST","M463")
+a("ANI","M304"); a("SET","M51"); a("RST","M34"); a("RST","M463")
 a("LD","M463"); a("AND","T0"); a("AND","M210"); a("LDD>=","D18"); ac("K1"); a("ANI","M0")
 a("SET","M15"); a("RST","M14"); a("RST","M463")
 a("LD","M463"); a("AND","T0"); a("AND","M211"); a("LDD>=","D50"); ac("K1"); a("ANI","M0")
@@ -251,7 +251,7 @@ a("LD","M30"); a("MOV","K0"); ac("D32")    # reset L2 model# on IDLE
 # ==========================================
 # STEP MACHINE L3 (M50~M53) — Oil
 # ==========================================
-l3_al = ["300","301","302","303","350","351"]
+l3_al = ["300","301","302","303","304","350","351"]
 al("STEP L3")
 a("LD","M52"); a("AND","M146")            # M146 = OIL BASE OK
 a("OR","M53"); a("ANI","M50"); a("ANI","M450"); a("ANI","M451")
@@ -287,6 +287,7 @@ a("LD","M451"); a("RST","M32"); a("RST","M33"); a("RST","M34"); a("RST","M35"); 
 a("LD","M450"); a("OR","M451")
 a("RST","M51"); a("RST","M52"); a("SET","M53")
 a("RST","M65"); a("RST","M66"); a("RST","M75"); a("RST","M76")
+a("RST","M96"); a("RST","M97")
 
 # === STOP ===
 al("STOP")
@@ -305,7 +306,7 @@ a("LD","M452")
 for i,s in enumerate(all_steps):
     if i>0 and i%8==0: a("LD","M452")
     a("RST",("M"+s))
-all_sols = ["60","61","62","63","64","65","66","68","69","70","71","72","73","74","75","76"]
+all_sols = ["60","61","62","63","64","65","66","68","69","70","71","72","73","74","75","76","96","97"]
 a("LD","M452")
 for i,s in enumerate(all_sols):
     if i>0 and i%8==0: a("LD","M452")
@@ -322,7 +323,7 @@ all_al_l = l1_al + l2_al + l3_al
 for la in all_al_l: a("ANI",("M"+la))
 a("OUT","M77")
 a("LD","M300")
-for b in ["301","302","303","310","311","312","313","314","316","317","318","319","320","330","331","332","333","334","336","337","338","339","340","350","351"]:
+for b in ["301","302","303","304","310","311","312","313","314","316","317","318","319","320","330","331","332","333","334","336","337","338","339","340","350","351"]:
     a("OR",("M"+b))
 a("OUT","M78")
 a("LD","M10"); a("LD","M30"); a("ORB",""); a("ANI","M80"); a("ANI","M90"); a("OUT","M79")
@@ -344,5 +345,23 @@ a("LD","M412"); a("PLS","M620")
 a("LD","M620"); a("ANI","M67"); a("SET","M67")
 a("LD","M620"); a("AND","M67"); a("RST","M67")
 
+# === HYDRO PUMP ===
+al("HYDRO PUMP")
+a("LD","M419"); a("PLS","M623")
+a("LD","M623"); a("ANI","M96"); a("SET","M96"); a("SET","M97")
+a("LD","M623"); a("AND","M96"); a("RST","M96"); a("RST","M97")
+# Auto SET during oil steps (if pump not tripped)
+a("LD","M51"); a("ANI","M304"); a("SET","M96"); a("SET","M97")
+a("LD","M52"); a("ANI","M304"); a("SET","M96"); a("SET","M97")
+
+# === HEATER RELAY ===
+al("HEATER RELAY")
+# Power-on default: Gun A -> relay OFF
+a("LD","M2"); a("RST","M98")
+# Gun A selected -> relay OFF (Gun A heated)
+a("LD","M210"); a("RST","M98")
+# Gun B selected -> relay ON (Gun B heated)
+a("LD","M211"); a("SET","M98")
+
 a("END","")
-wr("F:\\WorkSpace\\REF\\src\\MAIN.csv")
+wr("C:/WorkSpace/2L2GOIL/src\\MAIN.csv")

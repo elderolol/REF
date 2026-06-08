@@ -90,6 +90,9 @@ a("LD","M77"); a("OUT","Y041")   # GREEN lamp
 a("LD","M78"); a("OUT","Y042")   # RED lamp
 a("LD","M79"); a("OUT","Y043")   # YELLOW lamp
 a("LD","M67"); a("OUT","Y044")   # VAC PUMP
+a("LD","M96"); a("OUT","Y045")   # HYDRO PUMP
+a("LD","M97"); a("OUT","Y046")   # OIL LINE SOL
+a("LD","M98"); a("OUT","Y047")   # HEATER RELAY (OFF=Gun A, ON=Gun B)
 a("LD","M68"); a("OUT","Y027")   # LINE VAC SOL (shared, N/O)
 
 al("HMI BUTTON BUFFER")
@@ -114,6 +117,7 @@ a("LD","M415"); a("OUT","M415")   # OIL+REFRIG ENABLE
 a("LD","M416"); a("OUT","M416")   # L2 INJECTION COUNT RESET
 a("LD","M417"); a("OUT","M417")   # L1 USAGE RESET
 a("LD","M418"); a("OUT","M418")   # L2 USAGE RESET
+a("LD","M419"); a("OUT","M419")   # HYDRO PUMP
 
 a("END","")
-wr("F:\\WorkSpace\\REF\\src\\idata.csv")
+wr("C:/WorkSpace/2L2GOIL/src\\idata.csv")

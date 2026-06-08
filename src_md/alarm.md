@@ -1,28 +1,29 @@
 ---
 # REF_self_holding — IL Logic Map
 **CPU:** QCPU (Q mode) Q03UDV
-**Total Steps:** 159
+**Total Steps:** 164
 **Blocks:** 6
-**Generated:** 2026-06-06
+**Generated:** 2026-06-08
 ---
 
 ## Block List
 | # | Name | Steps | Condition Device | Action Count |
 |---|------|-------|-----------------|--------------|
-| 1 | SHARED ALARMS | 1–17 | LDI M770, LDI M771, LDI M772 | 14 |
-| 2 | L1 ALARMS | 19–65 | LD M12, LD M13, LD M109 ... (+4) | 40 |
-| 3 | L2 ALARMS | 67–113 | LD M32, LD M33, LD M125 ... (+4) | 40 |
-| 4 | L3 OIL ALARMS | 115–123 | LD M51, LD M351 | 7 |
-| 5 | BUZZER | 125–156 | LD M300, LD M411, LD M411 | 29 |
-| 6 | ALARM RESET | 158–159 | LD M410 | 1 |
+| 1 | SHARED ALARMS | 1–21 | LDI M770, LDI M771, LDI M772 ... (+1) | 17 |
+| 2 | L1 ALARMS | 23–69 | LD M12, LD M13, LD M109 ... (+4) | 40 |
+| 3 | L2 ALARMS | 71–117 | LD M32, LD M33, LD M125 ... (+4) | 40 |
+| 4 | L3 OIL ALARMS | 119–127 | LD M51, LD M351 | 7 |
+| 5 | BUZZER | 129–161 | LD M300, LD M411, LD M411 | 30 |
+| 6 | ALARM RESET | 163–164 | LD M410 | 1 |
 
 ## Block Detail
 
-### Block 1: SHARED ALARMS (Step 1–17)
+### Block 1: SHARED ALARMS (Step 1–21)
 
 **Trigger Condition:**
 - LDI M770
 - LDI M771
+- LDI M772
 - LDI M772
 
 **Actions:**
@@ -40,8 +41,11 @@
 - OR M303
 - ANI M410
 - OUT M303
+- OR M304
+- ANI M410
+- OUT M304
 
-### Block 2: L1 ALARMS (Step 19–65)
+### Block 2: L1 ALARMS (Step 23–69)
 
 **Trigger Condition:**
 - LD M12
@@ -94,7 +98,7 @@
 - ANI M410
 - OUT M320
 
-### Block 3: L2 ALARMS (Step 67–113)
+### Block 3: L2 ALARMS (Step 71–117)
 
 **Trigger Condition:**
 - LD M32
@@ -147,7 +151,7 @@
 - ANI M410
 - OUT M340
 
-### Block 4: L3 OIL ALARMS (Step 115–123)
+### Block 4: L3 OIL ALARMS (Step 119–127)
 
 **Trigger Condition:**
 - LD M51
@@ -162,7 +166,7 @@
 - ANI M410
 - OUT M351
 
-### Block 5: BUZZER (Step 125–156)
+### Block 5: BUZZER (Step 129–161)
 
 **Trigger Condition:**
 - LD M300
@@ -173,6 +177,7 @@
 - OR M301
 - OR M302
 - OR M303
+- OR M304
 - OR M310
 - OR M311
 - OR M312
@@ -200,7 +205,7 @@
 - SET M500
 - RST M69
 
-### Block 6: ALARM RESET (Step 158–159)
+### Block 6: ALARM RESET (Step 163–164)
 
 **Trigger Condition:**
 - LD M410
@@ -231,6 +236,7 @@
 | M301 | M |  |  | 1 | 2 |
 | M302 | M |  |  | 1 | 2 |
 | M303 | M |  |  | 1 | 2 |
+| M304 | M |  |  | 1 | 2 |
 | M31 | M |  |  |  | 2 |
 | M310 | M |  |  | 1 | 2 |
 | M311 | M |  |  | 1 | 2 |
@@ -256,7 +262,7 @@
 | M340 | M |  |  | 1 | 2 |
 | M350 | M |  |  | 1 | 2 |
 | M351 | M |  |  | 1 | 3 |
-| M410 | M |  |  |  | 27 |
+| M410 | M |  |  |  | 28 |
 | M411 | M |  |  |  | 2 |
 | M500 | M | 1 | 1 |  | 1 |
 | M51 | M |  |  |  | 1 |
@@ -264,7 +270,7 @@
 | M69 | M |  | 1 | 1 |  |
 | M770 | M |  |  |  | 1 |
 | M771 | M |  |  |  | 1 |
-| M772 | M |  |  |  | 1 |
+| M772 | M |  |  |  | 2 |
 | T1 | T |  |  |  | 1 |
 | T13 | T |  |  |  | 1 |
 | T2 | T |  |  |  | 1 |

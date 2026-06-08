@@ -1,4 +1,4 @@
-﻿# VAC CHECK — L1: M14, L2: M34. VAC+STEM SOL ON + LINE VAC SOL(M68) ON
+# VAC CHECK ? L1: M14, L2: M34. VAC+STEM SOL ON + LINE VAC SOL(M68) ON
 # Results: L1 M103(OK), M109(NG/leak)  L2 M119(OK), M125(NG/leak)
 st = 0; lines = []
 def a(i,d): global st; lines.append(f'"{st}"\t""\t"{i}"\t"{d}"\t""\t""\t""'); st += 1
@@ -34,4 +34,4 @@ a("LD","M34"); a("AND","T9"); a("LDD>","D612"); ac("D56")
 a("SET","M125"); a("SET","M332"); a("RST","M34"); a("RST","M70"); a("RST","M71"); a("RST","M68")
 
 a("END","")
-wr("F:\\WorkSpace\\REF\\src\\vacchec.csv")
+wr("C:\\WorkSpace\\REF\\src\\vacchec.csv")
